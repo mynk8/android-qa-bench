@@ -1,0 +1,72 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "due groups"
+  ],
+  "fields": [
+    "group order"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "when grouped by due date descending, later due dates appear above earlier ones",
+    "Pay rent's group is above Buy milk"
+  ],
+  "observed_contains_any": [
+    "grouping by due date descending is wrong",
+    "earlier due dates are shown first"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "later",
+      "descend*",
+      "newest",
+      "latest",
+      "pay rent",
+      "newest-first",
+      "latest first",
+      "reverse chronological"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "group*",
+      "section*",
+      "header*",
+      "pay rent",
+      "buy milk"
+    ],
+    [
+      "earlier",
+      "ascend*",
+      "oldest",
+      "wrong",
+      "first",
+      "above",
+      "top",
+      "buy milk",
+      "same",
+      "order*"
+    ]
+  ],
+  "location_concepts": [
+    "group*",
+    "due*",
+    "section*",
+    "header*",
+    "sort*"
+  ],
+  "anchors": {
+    "elements": [
+      "Pay rent",
+      "Read docs",
+      "Due"
+    ],
+    "observed": []
+  }
+}

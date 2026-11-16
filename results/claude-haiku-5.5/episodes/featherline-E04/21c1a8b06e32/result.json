@@ -1,0 +1,137 @@
+{
+  "run_id": "21c1a8b06e32",
+  "item_id": "featherline-E04",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Plan / Edit group (Group A)",
+      "element": "18",
+      "field": "Weekly schedule dates (repeat every 2 weeks, Mon + Sat)",
+      "symptom_type": "wrong_value",
+      "expected": "With start date Sat Nov 14 and repeat every 2 weeks on Mon and Sat, the upcoming doses are Today (Sat Nov 14), Mon Nov 23, Sat Nov 28. Nov 16 (Mon) is in the off-week and must not appear.",
+      "observed": "Summary says \"Every 2 weeks \u00b7 Mon/Sat \u00b7 12:30 AM\" but the dose strip lists Today, Nov 16 and Nov 28. Nov 16 is included and Nov 23 is missing. The Edit group preview showed the same wrong dates (Today, Nov 16 Mon, Nov 28 Sat).",
+      "observed_quote": "Every 2 weeks \u00b7 Mon/Sat \u00b7 12:30 AM",
+      "steps": [
+        "Plan tab > Add group flow: name 'Group A', add Estradiol valerate (Oral, 2 mg), start date Nov 14 (today), time 12:30 AM, Daily, Save.",
+        "Tap Group A > Edit group > select Weekly.",
+        "Set REPEAT EVERY to 2 weeks.",
+        "Days of week: keep Mon selected and tap Sat so both Mon and Sat are selected.",
+        "Look at the PREVIEW section: shows Today, Nov 16 Mon, Nov 28 Sat.",
+        "Tap Save. On Plan, the group card shows 'Every 2 weeks \u00b7 Mon/Sat \u00b7 12:30 AM' and dose strip Today, Nov 16, Nov 28."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Plan / Add group (Schedule preview)",
+      "element": "23",
+      "field": "Weekly schedule: repeat interval ignored for Monday",
+      "symptom_type": "wrong_value",
+      "expected": "Start Sat Nov 14, Weekly, repeat every 2 weeks, days Mon + Sat. Doses fall on Today (Sat Nov 14), Mon Nov 23, Sat Nov 28. Mon Nov 16 is in the off-week and must not appear.",
+      "observed": "PREVIEW shows Today, Nov 16 Mon, Nov 28 Sat. Nov 16 is included (wrong) and Nov 23 is missing. Plan card for the saved group says \"Every 2 weeks \u00b7 Mon/Sat \u00b7 12:30 AM\" and lists Today, Nov 16, Nov 28 too.",
+      "observed_quote": "Nov 16 Mon",
+      "steps": [
+        "Plan tab > Add group (Add button).",
+        "Tap Weekly in SCHEDULE (start date stays Nov 14 Sat).",
+        "Tap + in REPEAT EVERY so it reads '2 weeks'.",
+        "In DAYS OF WEEK, tap M so both M and S are selected.",
+        "Scroll down to PREVIEW.",
+        "Observe: Today, Nov 16 Mon, Nov 28 Sat. Expected Today, Nov 23 Mon, Nov 28 Sat.",
+        "Save is disabled without a medication, but the preview is already wrong before saving. Reproduced this twice, including a saved group that was edited from 1 week to 2 weeks."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Journal / Timeline (pinned date card)",
+      "element": "2",
+      "field": "Pinned date countdown chip",
+      "symptom_type": "wrong_value",
+      "expected": "For a pinned date that is today (Nov 14), the countdown chip should say something like \"Today\" or \"0 days\". It must not show a range of 7 days.",
+      "observed": "The pinned card \"Start HRT\" (date Nov 14, big label \"Today\") shows the chips \"Since Nov 14\", \"Home\" and \"7 days to 7 days\". The \"7 days to 7 days\" chip gives a range of 7 days when the event is today.",
+      "observed_quote": "7 days to 7 days",
+      "steps": [
+        "Journal tab > Timeline (tap 'Add a date' under TIMELINE, or the timeline card).",
+        "Name it 'Start HRT', keep date Nov 14 (today), leave 'Pin this date' checked, tap Save.",
+        "Back on the Timeline screen, read the PINNED card: the big label reads 'Today' and the chips read 'Since Nov 14', 'Home', '7 days to 7 days'."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0016"
+      ],
+      "present": [
+        "featherline-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/featherline-E04/21c1a8b06e32/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0016": "missed_unreached"
+  },
+  "elapsed_s": 340.139,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "featherline-0016"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0016"
+  ],
+  "missed": [
+    "featherline-0016"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 285,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0016"
+  ],
+  "bug_meta": {
+    "featherline-0016": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

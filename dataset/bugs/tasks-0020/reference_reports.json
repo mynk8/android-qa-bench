@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task list",
+    "element": "group order",
+    "field": "group order",
+    "symptom_type": "wrong_value",
+    "expected": "Buy milk is first and Read docs last, earliest due date first",
+    "observed": "the order is reversed, Read docs is first and Buy milk last",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task list",
+    "element": "something",
+    "field": "group order",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

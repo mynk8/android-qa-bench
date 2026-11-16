@@ -1,0 +1,76 @@
+{
+  "screens": [
+    "clear weight dialog",
+    "body weight sheet"
+  ],
+  "elements": [
+    "dialog",
+    "dialog title",
+    "dialog text"
+  ],
+  "fields": [
+    "wording"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the dialog asks clear your body weight",
+    "the title is clear body weight"
+  ],
+  "observed_contains_any": [
+    "the title has a question mark and the text only says estimates will stop using your weight"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "wrong_text",
+    "inconsistent"
+  ],
+  "expected_concepts": [
+    [
+      "clear your body weight",
+      "clear body weight",
+      "asks",
+      "question",
+      "confirmation",
+      "consistent"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "question mark",
+      "clear body weight?",
+      "your weight",
+      "only says",
+      "doesn't ask",
+      "does not ask",
+      "no question",
+      "statement",
+      "different",
+      "wording",
+      "question missing",
+      "missing",
+      "plain"
+    ]
+  ],
+  "location_concepts": [
+    "dialog",
+    "weight",
+    "clear",
+    "sheet",
+    "body weight",
+    "popup",
+    "pop-up",
+    "confirmation",
+    "modal"
+  ],
+  "anchors": {
+    "elements": [
+      "clear body weight",
+      "estimates will stop",
+      "clear"
+    ],
+    "observed": [
+      "clear body weight?",
+      "estimates will stop using your weight"
+    ]
+  }
+}

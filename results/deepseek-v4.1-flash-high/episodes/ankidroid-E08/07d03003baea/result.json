@@ -1,0 +1,110 @@
+{
+  "run_id": "07d03003baea",
+  "item_id": "ankidroid-E08",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note (Card editor)",
+      "element": "Note type spinner / unsaved-changes dismissal",
+      "field": "Note type / discard confirmation",
+      "symptom_type": "missing",
+      "expected": "After typing note content and switching the note type, pressing Back should show the \"Discard current input?\" confirmation so the unsaved note is not lost silently.",
+      "observed": "Typed \"qa-dismiss\" in Front, switched Type from Basic to \"Basic (and reversed card)\", then pressed Back. The Add screen closed straight to the deck list with no \"Discard current input?\" prompt, silently discarding the typed content. Without switching the note type the same edit does show the \"Discard current input?\" prompt (with Keep editing / Discard), so the model swap suppresses change tracking.",
+      "steps": [
+        "From the deck list tap the Add FAB, then Add note",
+        "Type text into the Front field (e.g. qa-dismiss)",
+        "Tap the Type spinner and choose 'Basic (and reversed card)' (Front text carries over)",
+        "Press Back once (keyboard is already closed)"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E08-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ],
+      "present": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/ankidroid-E08/07d03003baea/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0025": "missed_unreached",
+    "ankidroid-0026": "reported"
+  },
+  "elapsed_s": 1243.168,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "found": [
+    "ankidroid-0026"
+  ],
+  "required": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "missed": [
+    "ankidroid-0025"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 300,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "bug_meta": {
+    "ankidroid-0025": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "ankidroid-0026": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

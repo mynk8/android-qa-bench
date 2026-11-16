@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "timebox settings",
+    "element": "time limit",
+    "field": "time limit",
+    "symptom_type": "not_persisted",
+    "expected": "after switching the timebox off and on again the limit shows 21, the value set before",
+    "observed": "the limit goes back to the default 20 after the timebox was switched off and on",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "timebox settings",
+    "element": "something",
+    "field": "time limit",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

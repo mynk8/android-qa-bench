@@ -1,0 +1,130 @@
+{
+  "bug_id": "minus-0010",
+  "runs": 1,
+  "started": "2026-11-13T20:19:17+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "total_expenses": 1,
+        "spent": "40.00",
+        "seen": [
+          "Food",
+          "1",
+          "Total Expenses",
+          "$1.74"
+        ]
+      },
+      "seconds": 32.4,
+      "screenshot_sha256": "7ab3c824ce2b07549fbd0ce4a8c3f218b46a17f470ad4700e9b4349edac34620",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0010-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "total_expenses": 1,
+        "spent": "40.00",
+        "seen": [
+          "Food",
+          "1",
+          "Total Expenses",
+          "$1.74"
+        ]
+      },
+      "seconds": 27.4,
+      "screenshot_sha256": "4c680fc1f183529c537a2145acb7ab0af53833b73ff2fd527bcc604ad72ca677",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0010-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "total_expenses": 2,
+        "spent": "60.00",
+        "seen": [
+          "Food",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 18.3,
+      "screenshot_sha256": "6611e9c2e96a65ed4db22fb1de272cd79f15df5726a19b8970da6c9a8eef2864",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0010-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "total_expenses": 2,
+        "spent": "60.00",
+        "seen": [
+          "Food",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 27.3,
+      "screenshot_sha256": "0e260dbf338773664cd2e7b3934cf8221ca0cb82bf6544e46148a2a829881fd2",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0010-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "total_expenses": 2,
+        "spent": "60.00",
+        "seen": [
+          "Food",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 25.6,
+      "screenshot_sha256": "e1dd0426adef0bb8bd3d28117267b76c2765867732dd1df5ea71a62cd70751a0",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0010-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "total_expenses": 2,
+        "spent": "60.00",
+        "seen": [
+          "Food",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 20.6,
+      "screenshot_sha256": "f2f1cd64c1c12ab3647194d7892122ce2dc2fe1c9ed86cbd636e329b1b2526a3",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0010-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-13T20:22:41+0530"
+}

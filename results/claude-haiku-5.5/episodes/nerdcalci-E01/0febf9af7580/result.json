@@ -1,0 +1,229 @@
+{
+  "run_id": "0febf9af7580",
+  "item_id": "nerdcalci-E01",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expenses calculation file",
+      "element": "14",
+      "symptom_type": "wrong_value",
+      "expected": "avg of the three expense lines (1200, 340.5, 85.25) = 1625.75 / 3 = 541.92",
+      "observed": "avg shows 812.88, which is the mean of the four values above it including the total line (1625.75 / 2)",
+      "observed_quote": "812.88",
+      "steps": [
+        "Open the Expenses file (rent = 1200, food = 340.5, fuel = 85.25, total, avg)",
+        "Read the value shown for the avg line"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Monthly budget calculation file",
+      "element": "20",
+      "symptom_type": "wrong_value",
+      "expected": "grand_total = 2800.50 (first total) + 49.50 (second total) = 2,850.00",
+      "observed": "grand_total shows 5,700, which is the sum of every line above including the two total lines (double-counting the totals)",
+      "observed_quote": "5,700",
+      "steps": [
+        "Open the Monthly budget file (salary = 2500, bonus = 300.5, total, blank line, gift = 49.5, total, grand_total)",
+        "Read the value shown for grand_total"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Temperatures calculation file",
+      "element": "2",
+      "symptom_type": "wrong_value",
+      "expected": "-5 celsius displays as -5 \u00b0C",
+      "observed": "the result for -5 celsius shows -551.30 \u00b0C; other lines are also wrong (-10 celsius in fahrenheit = -969.34 \u00b0F, expected 14 \u00b0F; -40 fahrenheit in celsius = -550.74 \u00b0C, expected -40 \u00b0C)",
+      "observed_quote": "-551.30 \u00b0C",
+      "steps": [
+        "Open the Temperatures file (-5 celsius; -10 celsius in fahrenheit; -40 fahrenheit in celsius; -65 fahrenheit in celsius)",
+        "Read the result shown for each line"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Temperatures calculation file",
+      "element": "8",
+      "symptom_type": "wrong_value",
+      "expected": "-40 fahrenheit in celsius = -40 \u00b0C",
+      "observed": "-40 fahrenheit in celsius shows -550.74 \u00b0C",
+      "observed_quote": "-550.74 \u00b0C",
+      "steps": [
+        "Open the Temperatures file",
+        "Read the result on the line '-40 fahrenheit in celsius'"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Percentages calculation file",
+      "element": "9",
+      "symptom_type": "wrong_value",
+      "expected": "'disc% of price' evaluates to 36 (15% of 240); 'disc% off price' to 204; 'tax% of 1200' to 102; '10% of 80' to 8 (already correct)",
+      "observed": "'disc% of price', 'disc% off price' and 'tax% of 1200' show an error (Err) instead of a result; tapping the error shows 'Unexpected %'",
+      "observed_quote": "Unexpected %",
+      "steps": [
+        "Open the Percentages file (price = 240; disc = 15; disc% of price; disc% off price; tax = 8.5; tax% of 1200; 10% of 80)",
+        "Read the result column for 'disc% of price'; it shows Err",
+        "Tap the Err indicator; the message reads 'Unexpected %'",
+        "Note 'disc% off price' and 'tax% of 1200' also show Err"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog (opened from Remainders file's More options menu)",
+      "element": "38",
+      "symptom_type": "wrong_value",
+      "expected": "The current name 'Remainders' is preselected when the dialog opens, so typing replaces it (text becomes 'Rx')",
+      "observed": "The name is not selected; typing 'Rx' appended to it, giving 'RemaindersRx' (counter 12/50)",
+      "observed_quote": "RemaindersRx",
+      "steps": [
+        "On the home screen, tap the More options (three dots) on the Remainders file",
+        "Tap Rename",
+        "Without touching the text field, type 'Rx'",
+        "Observe the field shows 'RemaindersRx' instead of 'Rx'"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog (Remainders file)",
+      "element": "38",
+      "symptom_type": "wrong_value",
+      "expected": "When the Rename dialog opens, the current name 'Remainders' is preselected (highlighted), so the first keystroke replaces it and the field would read 'Rx'",
+      "observed": "The dialog opens with 'Remainders' shown but not highlighted, caret at end. Typing 'Rx' without tapping the field appends: the field reads 'RemaindersRx' (counter 12/50). Reproduced 2 of 2 times (once in each open of the dialog)",
+      "observed_quote": "RemaindersRx",
+      "steps": [
+        "Scroll the home list so the 'Remainders' file row is visible (its More options is at the right of the row)",
+        "Tap More options on the 'Remainders' row",
+        "Tap 'Rename' in the menu. The Rename File dialog opens showing 'Remainders' with counter 10/50",
+        "Do not tap the text field. Type 'Rx' (no clearing)",
+        "The field reads 'RemaindersRx' (12/50), not 'Rx'",
+        "Tap Cancel; repeat from step 2 and get the same result"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home (Files list)",
+      "element": "0",
+      "symptom_type": "missing",
+      "expected": "A newly created file that was renamed (now 'QA Test CalcUntitled', modified 02:07 AM) appears in the FILES list on the home screen, at the top since it is the newest",
+      "observed": "The home FILES list still shows only the 9 original files (Expenses first, Percentages last); 'QA Test CalcUntitled' is absent. Search for files does list it under Recent files with 'MODIFIED: 02:07 AM'",
+      "observed_quote": "QA Test CalcUntitled",
+      "steps": [
+        "On the home screen tap the + (New Calculation) button, then New Calculation",
+        "Type '10 * 3' in the first line; result shows 30",
+        "Open More options (top right) > Rename File",
+        "Enter a new name (the field gets 'QA Test CalcUntitled' because the text was appended to 'Untitled'), tap Rename",
+        "Press Back to return to home",
+        "Scroll the FILES list to the top and bottom: the new file is not listed",
+        "Tap Search, the file is listed under Recent files"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ],
+      "present": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/nerdcalci-E01/0febf9af7580/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0001": "reported",
+    "nerdcalci-0002": "reported",
+    "nerdcalci-0008": "reported"
+  },
+  "elapsed_s": 213.353,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "found": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "required": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 2,
+  "reports": 8,
+  "steps": 158,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "bug_meta": {
+    "nerdcalci-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0002": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

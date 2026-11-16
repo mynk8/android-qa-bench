@@ -1,0 +1,178 @@
+{
+  "bug_id": "tasks-0003",
+  "runs": 1,
+  "started": "2026-11-11T01:30:32+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "before": {
+          "_id": 1,
+          "dueDate": 1796896801000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "after": {
+          "_id": 1,
+          "dueDate": 1796896861000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "delta_ms": 60000
+      },
+      "seconds": 36.9,
+      "screenshot_sha256": "52e62125b9c00b2fc7708baa0da7ff841bf24e78dd4b346a2b2891dbfb183ec9",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0003-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "before": {
+          "_id": 1,
+          "dueDate": 1796896801000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "after": {
+          "_id": 1,
+          "dueDate": 1796896921000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "delta_ms": 120000
+      },
+      "seconds": 82.4,
+      "screenshot_sha256": "e22da578eb2c1080e856c971fce48bbbe0749b7f7ccc740fe7dc176d2f60b488",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0003-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "after": [
+          {
+            "_id": 1,
+            "dueDate": 1798113600000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ]
+      },
+      "seconds": 46.8,
+      "screenshot_sha256": "3efa54dfa0fd45ce16f3194f33b85e2c19416c9c6b49e6bad96da14c62e28ffc",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0003-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": {
+          "_id": 1,
+          "dueDate": 1796896801000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "after": {
+          "_id": 1,
+          "dueDate": 1796900401000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "delta_ms": 3600000
+      },
+      "seconds": 45.3,
+      "screenshot_sha256": "6860ebb9da6585a1628ff93196441c412d14ca9e633a95f306d5898a9ca79d43",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0003-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": {
+          "_id": 1,
+          "dueDate": 1796896801000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "after": {
+          "_id": 1,
+          "dueDate": 1796904001000,
+          "completed": 0,
+          "recurrence": "FREQ=HOURLY",
+          "parent": 0
+        },
+        "delta_ms": 7200000
+      },
+      "seconds": 62.1,
+      "screenshot_sha256": "af792031f55056cbd72803f8e8619b3406a0103e6ee7cad9a7a666e0c2d01322",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0003-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "after": [
+          {
+            "_id": 1,
+            "dueDate": 1798113600000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ]
+      },
+      "seconds": 25.2,
+      "screenshot_sha256": "3640c40c2ef5cab718eea1eb7f89e927b0cc19e88decb71f3aff75175ef4a53f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0003-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T01:37:42+0530"
+}

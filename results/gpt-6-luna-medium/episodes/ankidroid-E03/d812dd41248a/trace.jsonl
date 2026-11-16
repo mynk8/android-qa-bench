@@ -1,0 +1,39 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E03-11", "mask": "11", "unfixed": ["ankidroid-0006", "ankidroid-0017"], "present": ["ankidroid-0006", "ankidroid-0017"]}}
+{"event": "brief", "item_id": "ankidroid-E03"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 2101}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "type", "args": {"text": "qa temporary front", "clear": true, "submit": false}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2211}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 433}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 841}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "type", "args": {"text": "qa temporary back", "clear": true, "submit": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 430, "y": 146}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 830, "y": 1231}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 525}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 850, "y": 341}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 850, "y": 1217}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 36, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.83, "notes": "Tested add-note preview with Basic and Basic (and reversed card), including switching Card 1/Card 2 and discarding the unsaved temporary input. Manage note types showed Basic 7 notes and the other listed types 0; inspected Basic and Cloze card template editors and their menus without changing templates. Deck list continued to show French 3 and Spanish 4 through rotation. No reproducible bugs found. Expand/collapse arrows could not be exercised because the starting deck list contains only top-level decks with no subdecks."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0006", "ankidroid-0017"], "unfixed": ["ankidroid-0006", "ankidroid-0017"], "outcome": "wrong_pass"}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "medication editor",
+    "element": "stock",
+    "field": "on-hand count",
+    "symptom_type": "wrong_value",
+    "expected": "logging a retrospective / backfilled dose does not reduce on-hand stock",
+    "observed": "retrospective backfill incorrectly deducts stock",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "medication editor",
+    "element": "something",
+    "field": "on-hand count",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

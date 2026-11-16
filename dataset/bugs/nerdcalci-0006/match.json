@@ -1,0 +1,84 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "temperature result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "25 celsius + 5 celsius shows 30 °C",
+    "adding temperatures gives the expected sum"
+  ],
+  "observed_contains_any": [
+    "adding temperatures shows a wrong value",
+    "25 celsius + 5 celsius shows 303.15 °C"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "30",
+      "15",
+      "2.22",
+      "sum",
+      "add*",
+      "subtract*",
+      "plus",
+      "+",
+      "summ*",
+      "thirty",
+      "adding",
+      "sum*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "wrong",
+      "incorrect",
+      "huge",
+      "large",
+      "far",
+      "off",
+      "nonsens*",
+      "303*",
+      "-258*",
+      "275*",
+      "kelvin",
+      "unexpected",
+      "hundreds",
+      "thousand*",
+      "absurd",
+      "enormous",
+      "yields",
+      "instead",
+      "error"
+    ]
+  ],
+  "location_concepts": [
+    "temperature*",
+    "sums",
+    "calculator",
+    "result",
+    "editor",
+    "line",
+    "celsius"
+  ],
+  "anchors": {
+    "elements": [
+      "25 celsius + 5 celsius",
+      "20 celsius - 5 celsius",
+      "10 celsius + 18 fahrenheit",
+      "celsius +"
+    ],
+    "observed": [
+      "303.15",
+      "-258.15",
+      "527.67"
+    ]
+  }
+}

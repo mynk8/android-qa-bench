@@ -1,0 +1,146 @@
+{
+  "run_id": "a69b6ebee7b6",
+  "item_id": "amaze-E03",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Edit SMB connection dialog (opened from drawer pencil of saved connection)",
+      "element": "Username / Password fields",
+      "symptom_type": "wrong_value",
+      "expected": "With Anonymous checked, the Username and Password fields are greyed out and disabled, as in the new-connection dialog.",
+      "observed": "Reopening a saved anonymous connection shows Anonymous checked, but Username and Password are enabled (not disabled/greyed), unlike the create dialog.",
+      "steps": [
+        "FAB > Cloud Connection > SMB Connection > Enter hostname manually",
+        "Name TestSMB, host 10.0.0.5, tick Anonymous (username/password become disabled), CREATE",
+        "Open drawer, tap the pencil next to TestSMB",
+        "Observe Anonymous is checked but Username * and Password fields are still enabled"
+      ],
+      "observed_quote": "Anonymous",
+      "element_ref": 7,
+      "field": "Anonymous checkbox state vs username/password",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/chkSmbAnonymous",
+        "text": "Anonymous",
+        "class": "android.widget.CheckBox",
+        "bounds": [
+          137,
+          1656,
+          416,
+          1740
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Edit SMB connection dialog",
+      "element": "Username and Password fields in edit dialog",
+      "symptom_type": "wrong_value",
+      "expected": "Anonymous checked means Username and Password are disabled/greyed out, same as in the create dialog.",
+      "observed": "In the edit dialog of a saved anonymous connection, Anonymous is checked but the Username * and Password fields have no disabled state (they are focusable and editable). In the create dialog the same checkbox state marks them disabled. Reproduced twice.",
+      "steps": [
+        "Open FAB > Cloud Connection > SMB Connection > ENTER HOSTNAME MANUALLY",
+        "Enter name TestSMB and host 10.0.0.5, tick Anonymous; the Username and Password fields are disabled",
+        "Tap CREATE",
+        "Open the drawer and tap the pencil next to TestSMB",
+        "The Anonymous box is checked, but Username * and Password are not disabled"
+      ],
+      "observed_quote": "Username *",
+      "element_ref": 5,
+      "field": "usernameET / passwordET enabled state",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/usernameET",
+        "text": "Username *",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1283,
+          943,
+          1401
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "amaze-0011"
+      ],
+      "present": [
+        "amaze-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E03/a69b6ebee7b6/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0011": "missed_unreached"
+  },
+  "elapsed_s": 314.505,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.6,
+    "notes": "Tested: copy/paste with conflicts (Do for all with Skip, a second paste starting unchecked, Rename, Overwrite), renaming a file with \"+\" in its name, sort by size descending (kept across folders), grid/list toggle, adding bookmarks including a duplicate and a same-title/different-path entry, and the SMB dialog Anonymous toggle. One report filed: after creating an anonymous SMB connection, the edit dialog shows Anonymous checked but the username and password fields are not disabled. The developer could not reproduce it from my steps, though I saw it twice. I also saw the folder header read \"0 folders and 0 files\" once, on Alpha, while its list had 1 folder and 1 file; it showed the right count when I re-entered the folder, so I did not report it. Not covered: sort by Last Modified and Type, the \"Only this folder\" sort option, the History and Hidden Files options, rotating during a paste, and deleting a bookmark."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0011"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0011"
+  ],
+  "missed": [
+    "amaze-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 112,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0011"
+  ],
+  "bug_meta": {
+    "amaze-0011": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

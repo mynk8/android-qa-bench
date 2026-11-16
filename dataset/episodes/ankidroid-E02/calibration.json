@@ -1,0 +1,33 @@
+{
+  "episode_id": "ankidroid-E02",
+  "start_build": "ankidroid-E02-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "chosen": "Spanish",
+        "reopened": "Default"
+      },
+      "seconds": 42.3,
+      "screenshot_sha256": "284b588f169608e5df61b1e38b69e9fd231258cb251aa0ad979daded0566a7a7",
+      "bug": "ankidroid-0007",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "deck": "Spanish"
+      },
+      "seconds": 30.1,
+      "screenshot_sha256": "348ee5b82574d28f751acce027f58c72562faf50283a0d9b4ed6c66096cb679f",
+      "bug": "ankidroid-0007",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

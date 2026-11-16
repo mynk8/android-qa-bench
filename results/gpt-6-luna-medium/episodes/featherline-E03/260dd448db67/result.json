@@ -1,0 +1,128 @@
+{
+  "run_id": "260dd448db67",
+  "item_id": "featherline-E03",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add medicine",
+      "element": "Injection preparation strength field",
+      "element_ref": 21,
+      "field": "Amount carry-over when changing preparation form",
+      "symptom_type": "not_persisted",
+      "expected": "The amount entered for Tablet should be carried into the amount field after changing to Injection.",
+      "observed": "After entering 7.25 mg for Tablet and switching to Injection, the injection strength field is empty.",
+      "observed_quote": "Vial strength (mg)",
+      "steps": [
+        "Open Plan > Medicines > Add medicine.",
+        "Select Estradiol and enter 7.25 in Tablet strength (mg).",
+        "Change Preparation form to Injection.",
+        "Scroll to the strength field; it remains empty."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Vial strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1596,
+          1017,
+          1764
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0003",
+        "featherline-0005"
+      ],
+      "present": [
+        "featherline-0003",
+        "featherline-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/featherline-E03/260dd448db67/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0003": "missed_unreached",
+    "featherline-0005": "missed_unreached"
+  },
+  "elapsed_s": 182.636,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept Home cards with an antiandrogen group, all five medicine categories and their available forms, and medication group scheduling. Verified three deliberately nonchronological additions appeared chronologically in the editor, Plan day list, and saved group summary; the group and schedule persisted after rotation. Tablet-to-injection amount concern was submitted but developer could not reproduce it, so no confirmed bug remains. One test medicine and one daily group were created as needed for coverage."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "missed": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 66,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "bug_meta": {
+    "featherline-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0005": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

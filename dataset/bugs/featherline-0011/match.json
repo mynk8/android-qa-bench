@@ -1,0 +1,85 @@
+{
+  "screens": [
+    "medication editor"
+  ],
+  "elements": [
+    "stock"
+  ],
+  "fields": [
+    "on-hand count"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "logging a retrospective / backfilled dose does not reduce on-hand stock",
+    "stock stays at the amount that was set"
+  ],
+  "observed_contains_any": [
+    "retrospective backfill incorrectly deducts stock",
+    "on-hand stock falls after a past dose is logged"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "stock",
+      "on-hand",
+      "on hand",
+      "inventory",
+      "count",
+      "remain*",
+      "left",
+      "supply",
+      "10",
+      "unchanged",
+      "same",
+      "stay*",
+      "not"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "decreas*",
+      "reduc*",
+      "drop*",
+      "fell",
+      "falls",
+      "fall",
+      "lower*",
+      "deduct*",
+      "went down",
+      "goes down",
+      "subtract*",
+      "less",
+      "minus",
+      "7",
+      "seven",
+      "fewer",
+      "lower",
+      "not 10"
+    ]
+  ],
+  "location_concepts": [
+    "stock*",
+    "on hand",
+    "on-hand",
+    "inventory",
+    "supply",
+    "medicine*",
+    "medication*"
+  ],
+  "anchors": {
+    "elements": [
+      "stock",
+      "tablets",
+      "days remaining",
+      "on hand"
+    ],
+    "observed": [
+      "9 / 10 tablets",
+      "13 / 14 tablets",
+      "~8 days remaining",
+      "~12 days remaining"
+    ]
+  }
+}

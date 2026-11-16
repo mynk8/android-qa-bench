@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "bookmarks settings"
+  ],
+  "elements": [
+    "bookmark"
+  ],
+  "fields": [
+    "path"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "a second bookmark to the same path is rejected",
+    "only Docs is listed"
+  ],
+  "observed_contains_any": [
+    "Docs2 is added for the same path",
+    "duplicate bookmark accepted"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "reject*",
+      "not allow*",
+      "only one",
+      "one bookmark",
+      "prevent*",
+      "block*",
+      "already",
+      "once",
+      "single",
+      "duplicate*",
+      "refus*",
+      "error",
+      "warning*",
+      "without",
+      "shortcut*",
+      "identical",
+      "notice",
+      "message",
+      "complain*",
+      "no error",
+      "validat*",
+      "check"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "duplicat*",
+      "twice",
+      "two",
+      "2",
+      "second",
+      "again",
+      "docs2",
+      "added",
+      "both",
+      "same path",
+      "shortcut*",
+      "repeated",
+      "identical",
+      "entries"
+    ]
+  ],
+  "location_concepts": [
+    "bookmark*",
+    "docs*"
+  ],
+  "anchors": {
+    "elements": [
+      "Docs2",
+      "Docs",
+      "bookmark"
+    ],
+    "observed": [
+      "docs2"
+    ]
+  }
+}

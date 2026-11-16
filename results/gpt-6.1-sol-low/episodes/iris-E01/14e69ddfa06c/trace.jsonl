@@ -1,0 +1,249 @@
+{"event": "install", "build": {"n": 1, "build_id": "iris-E01-1", "mask": "1", "unfixed": ["iris-0007"], "present": ["iris-0007"]}}
+{"event": "brief", "item_id": "iris-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 278, "y": 740}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 564}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 876}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 981, "y": 876}}}
+{"event": "agent", "step": 11, "message": {"type": "bug_report", "screen": "Photo details", "element": "Size", "element_ref": 21, "field": "size unit", "symptom_type": "wrong_value", "expected": "Power-of-two values should use MiB: 1.4 MiB and 2.4 MiB (or decimal MB: 1.5 and 2.5).", "observed": "1500000 bytes displays 1.4 MB; 2500000 bytes displays 2.4 MB. Binary calculation retains decimal unit.", "observed_quote": "1.4 MB", "steps": ["Open IrisSeed > big.jpg > Details; read Size.", "Use Previous to huge.jpg: 2.4 MB.", "Use Next to big.jpg: 1.4 MB repeats."], "anchor_node": {"text": "1.4 MB", "class": "android.widget.TextView", "bounds": [870, 1701, 990, 1754]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["iris-0007"], "per_bug": {"iris-0007": "anchored"}}
+{"event": "hit", "bugs": ["iris-0007"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "type", "args": {"text": "2020-02-29 12:34", "clear": true, "submit": false}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "type", "args": {"text": "2020-02-29 12:34", "clear": true, "submit": false}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 29, "message": {"type": "bug_report", "screen": "EXIF & Metadata Editor / Origin", "element": "Captured", "element_ref": 8, "field": "capture date", "symptom_type": "not_persisted", "expected": "Saved capture date 2020-02-29 12:34 persists on reopening and appears in details.", "observed": "After Save and reopening Origin, Captured is empty; details has no capture date. Repeated twice.", "observed_quote": "Captured · yyyy-MM-dd HH:mm", "steps": ["Open big.jpg Details > Edit metadata & EXIF > Origin.", "Enter 2020-02-29 12:34 in Captured, dismiss keyboard and Save.", "Reopen editor > Origin: field empty.", "Repeat same save and reopen: still empty."], "anchor_node": {"class": "android.widget.EditText", "contains": ["Captured · yyyy-MM-dd HH:mm", "Set Current Time"], "bounds": [63, 627, 1017, 858]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 522}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1505}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "type", "args": {"text": "QA café 日本語", "clear": true, "submit": false}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1505}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "type", "args": {"text": "QA title !", "clear": true, "submit": false}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 627, "y": 2180}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 876, "y": 754}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 711}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "type", "args": {"text": "2020-02-29 12:34:00", "clear": true, "submit": false}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1505}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "type", "args": {"text": "QA test", "clear": true, "submit": false}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "type", "args": {"text": "2020:02:29 12:34:00", "clear": true, "submit": false}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1401}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "type", "args": {"text": "QA photo !", "clear": true, "submit": false}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 1348}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1401}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "type", "args": {"text": "huge", "clear": true, "submit": false}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 1348}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1401}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "type", "args": {"text": "big", "clear": true, "submit": false}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 1348}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 200}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "type", "args": {"text": "ZebraQA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 1343}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 803, "y": 740}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "type", "args": {"text": "AlphaQA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 1343}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2150}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 876, "y": 754}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2150}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 876, "y": 754}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 116, "message": {"type": "bug_report", "screen": "Photo details", "element": "Capture date row", "element_ref": 14, "field": "capture date", "symptom_type": "missing", "expected": "After saving Captured with Set Current Time, details should show that capture date from EXIF and reopening Origin should retain it.", "observed": "Details shows Added and Modified but no capture date after saving; reopening Origin shows an empty Captured field. Reproduced using Set Current Time twice, as well as typed dates.", "steps": ["Open original big.jpg (now renamed huge (1big.jpg) in ZebraQA).", "Details > Edit metadata & EXIF > Origin > Set Current Time > Save.", "Details lacks capture date.", "Reopen Origin: Captured empty.", "Repeat Set Current Time > Save: capture date still absent."], "anchor_node": {"text": "File Information", "class": "android.widget.TextView", "bounds": [164, 1181, 471, 1244]}}}
+{"event": "scored", "report_n": 3, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1349}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "key", "args": {"key": "CTRL+A"}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 749}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "type", "args": {"text": "big", "clear": false, "submit": false}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 1348}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 200}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 420}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "type", "args": {"text": "IrisSeed", "clear": true, "submit": false}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 1343}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 540}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 598, "y": 1869}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "type", "args": {"text": "alphaQA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 1343}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 540}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1869}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 350}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 1176}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 706, "y": 1359}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "type", "args": {"text": "IrisSeed", "clear": true, "submit": false}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 1343}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1505}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "type", "args": {"text": "Draft cancel", "clear": true, "submit": false}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1148}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1505}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "tap_xy", "args": {"x": 627, "y": 2180}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 350}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 797, "y": 982}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 420}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 615, "y": 1343}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 540}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 227, "message": {"type": "bug_report", "screen": "Albums", "element": "IrisSeed album cards", "element_ref": 4, "field": "album grouping", "symptom_type": "duplicated", "expected": "After moving both originals back to /Pictures/IrisSeed, one IrisSeed album with 2 items.", "observed": "Two IrisSeed albums, each 1 items: big.jpg and huge.jpg. Persists leaving and returning. Same duplicate destinations also in Copy to Album.", "observed_quote": "IrisSeed", "steps": ["From IrisSeed move big.jpg to new ZebraQA and huge.jpg to new AlphaQA.", "Move huge.jpg back to IrisSeed using New album (empty albums are not listed).", "Move big.jpg back with Move to Album > existing IrisSeed.", "Open Albums: two IrisSeed cards each 1 items.", "Switch Media then Albums: duplicates remain."], "anchor_node": {"class": "android.view.View", "contains": ["big.jpg", "IrisSeed", "1 items"], "bounds": [32, 436, 525, 1045]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 278, "y": 740}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 355}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 803, "y": 740}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 238, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.82, "notes": "Swept albums/photo details via Albums and Media; both seeded sizes, previous/next boundaries; metadata save/reopen, empty title, cancel/Revert, capture-date inputs and Set Current Time; rename unusual name, duplicate collision, empty disabled, reversal; move new/existing albums, alphabetical destinations, cancel/repetition/persistence; portrait/landscape. Confirmed/logged binary size values mislabeled MB. Filed capture-date persistence/details absence (including button-only reproduction) and duplicate IrisSeed album grouping after reverse moves; developer could not reproduce those. Original filenames and /Pictures/IrisSeed paths verified for both photos; temporary copy deleted and test title cleared. Two IrisSeed cards remain as reported; capture-date testing changed big.jpg's displayed date."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["iris-0007"], "unfixed": ["iris-0007"], "outcome": "success"}

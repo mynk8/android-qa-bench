@@ -1,0 +1,139 @@
+{
+  "episode_id": "nerdcalci-E03",
+  "start_build": "nerdcalci-E03-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:45",
+          "7:45 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h -30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d -16 h -30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 15.5,
+      "screenshot_sha256": "257aa32143903e79b67f8b1e287b3eabd5f59571badca79b32b6386d71480303",
+      "bug": "nerdcalci-0005",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:46",
+          "7:46 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h -30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d -16 h -30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 11.1,
+      "screenshot_sha256": "42fdf3d84c89b34cda6c0e48952cd9248d790565b2bd448124e1b8d255e2c548",
+      "bug": "nerdcalci-0005",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:46",
+          "7:46 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "25 celsius + 5 celsius",
+          "303.15 \u00b0C",
+          "2",
+          "20 celsius - 5 celsius",
+          "-258.15 \u00b0C",
+          "3",
+          "10 celsius + 18 fahrenheit",
+          "527.67 \u00b0F",
+          "Back",
+          "Temperature sums",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 16.3,
+      "screenshot_sha256": "6bcdced7a143a7bde04dcceaf941713a7feeb14ae4a72f82133d24b790986bfc",
+      "bug": "nerdcalci-0006",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:46",
+          "7:46 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "-5 celsius",
+          "-5 \u00b0C",
+          "2",
+          "-10 celsius in fahrenheit",
+          "14 \u00b0F",
+          "3",
+          "-40 fahrenheit in celsius",
+          "-40 \u00b0C",
+          "4",
+          "-65 fahrenheit in celsius",
+          "-53.89 \u00b0C",
+          "Back",
+          "Temperatures",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 10.9,
+      "screenshot_sha256": "4d6c938fff3b823f688f3b5691ae5db0f8c1054a143ea7785f217cde2388d2c7",
+      "bug": "nerdcalci-0006",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

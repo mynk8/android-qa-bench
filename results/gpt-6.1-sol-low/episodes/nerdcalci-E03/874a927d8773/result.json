@@ -1,0 +1,178 @@
+{
+  "run_id": "874a927d8773",
+  "item_id": "nerdcalci-E03",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Temperature sums",
+      "element": "Temperature arithmetic results",
+      "element_ref": 2,
+      "field": "result",
+      "symptom_type": "wrong_value",
+      "expected": "25 celsius + 5 celsius = 30 \u00b0C; 20 celsius - 5 celsius = 15 \u00b0C. Mixed units should be converted consistently before arithmetic.",
+      "observed": "Results include 303.15 \u00b0C, -258.15 \u00b0C, and 527.67 \u00b0F, indicating absolute-scale offsets leak into arithmetic.",
+      "observed_quote": "303.15 \u00b0C",
+      "steps": [
+        "Open seeded Temperature sums.",
+        "Read all three results.",
+        "Return home and reopen; results repeat."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "303.15 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          349
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Time differences",
+      "element": "Negative duration results",
+      "element_ref": 2,
+      "symptom_type": "wrong_value",
+      "expected": "A negative duration should have a single leading minus sign for the whole duration, e.g. -3 h 30 min and -1 d 16 h 30 min.",
+      "observed": "Minus polarity is repeated for each component; forward duration displays normally.",
+      "observed_quote": "-3 h -30 min",
+      "steps": [
+        "Open Time differences and compare first and third reversed intervals.",
+        "Leave and reopen; negative components each retain their own minus sign."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "-3 h -30 min"
+        ],
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Expenses",
+      "element": "food result",
+      "element_ref": 5,
+      "field": "Result precision formatting",
+      "symptom_type": "wrong_value",
+      "expected": "Precision limits maximum decimals; 340.5 should stay 340.5 without added insignificant zeroes, consistent with integer results remaining unpadded.",
+      "observed": "Fractional results are padded to selected precision: food shows 340.50 at 2 places and 340.50000 at 5, while rent stays 1,200.",
+      "observed_quote": "340.50",
+      "steps": [
+        "Set Calculator result precision to 5 and open Expenses; food shows 340.50000.",
+        "Set precision back to 2; food shows 340.50.",
+        "Leave and reopen Expenses; padding repeats."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "340.50"
+        ],
+        "bounds": [
+          797,
+          330,
+          1048,
+          437
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "nerdcalci-0005",
+        "nerdcalci-0006"
+      ],
+      "present": [
+        "nerdcalci-0005",
+        "nerdcalci-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/nerdcalci-E03/874a927d8773/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0005": "reported",
+    "nerdcalci-0006": "reported"
+  },
+  "elapsed_s": 407.297,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "found": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "required": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.6666666666666666,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "bug_meta": {
+    "nerdcalci-0005": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

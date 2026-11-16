@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "deck picker",
+    "element": "expand arrow",
+    "field": "state",
+    "symptom_type": "no_effect",
+    "expected": "the arrow flips to collapse after expanding",
+    "observed": "the arrow stays the same",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "deck picker",
+    "element": "something",
+    "field": "state",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

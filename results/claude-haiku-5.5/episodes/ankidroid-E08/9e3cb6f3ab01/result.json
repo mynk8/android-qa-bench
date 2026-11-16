@@ -1,0 +1,119 @@
+{
+  "run_id": "9e3cb6f3ab01",
+  "item_id": "ankidroid-E08",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note (Add screen)",
+      "element": "37",
+      "field": "Front / note type",
+      "symptom_type": "no_effect",
+      "expected": "After typing in Front and changing the note type, pressing Back (navigate up) should show the \"Discard current input?\" prompt, the same as when no note type was changed, so typed text is not lost silently.",
+      "observed": "After changing the note type from Basic to \"Basic (and reversed card)\", pressing Back closed the Add screen immediately with no \"Discard current input?\" prompt; the typed text \"zebra\" was lost. Without the model swap, the same Back press shows \"Discard current input?\".",
+      "observed_quote": "Discard current input?",
+      "steps": [
+        "From deck list, tap Add (FAB) then Add note.",
+        "In Front field type 'zebra'.",
+        "Tap the note type spinner and choose 'Basic (and reversed card)'.",
+        "Tap Navigate up (back arrow) at top left.",
+        "Observe: screen closes with no discard prompt; zebra is lost.",
+        "Control: tap Add, type 'yak' in Front without changing type, tap Navigate up: 'Discard current input?' appears."
+      ],
+      "expected_dummy": "x"
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E08-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ],
+      "present": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/ankidroid-E08/9e3cb6f3ab01/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0025": "missed_unreached",
+    "ankidroid-0026": "reported"
+  },
+  "elapsed_s": 355.555,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.55,
+    "notes": "Filed 1 bug (confirmed and logged): Add note, changing the note type after typing into Front and then pressing Back closes the screen with no \"Discard current input?\" prompt and the typed text is lost. A control without the swap does prompt. Typing after the swap does prompt, so the baseline appears to be reset on swap. Checked and found no defects: filtered deck creation from Spanish (4 cards pulled, Spanish shows 0), criteria dropdown (11 entries, \"Relative overdueness\" persists after rebuild and reopen), limit 0 shows the upstream no-match error, deck options New cards: This deck / Preset / Today only values persist after save and reopen, Cancel and Discard behave, rotation keeps unsaved input, the preset change reaches Spanish, a deck override (This deck 2, Today only 1) shows in the deck list counts, and a note save clears the editor with no false prompt. Note edit: removing a tag persists. Not covered: Edit-note note-type swap, the second filter in the filtered deck builder, and exhaustive verification that the criteria list matches the scheduler."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "found": [
+    "ankidroid-0026"
+  ],
+  "required": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "missed": [
+    "ankidroid-0025"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 274,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "bug_meta": {
+    "ankidroid-0025": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "ankidroid-0026": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "run_id": "d429684cac05",
+  "item_id": "featherline-E04",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Settings > Body weight editor",
+      "element": "Body weight row",
+      "symptom_type": "wrong_value",
+      "expected": "Invalid/implausible input like \"155.1e2\" is rejected (or validated to a sane weight range)",
+      "observed": "Scientific-notation text was accepted and saved as an absurd weight of 15510 lb",
+      "observed_quote": "15510 lb",
+      "element_ref": 1,
+      "steps": [
+        "Settings > Body weight",
+        "Switch unit to lb",
+        "Type 1e2 at end of field (155.1e2)",
+        "Tap Save",
+        "Row shows 15510 lb"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Body weight",
+          "15510 lb"
+        ],
+        "bounds": [
+          42,
+          352,
+          1038,
+          520
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Body weight editor",
+      "element": "Body weight row",
+      "symptom_type": "wrong_value",
+      "expected": "Non-numeric text like \"1e2\" is rejected as invalid input",
+      "observed": "\"1e2\" was accepted and saved as 100 lb (scientific notation parsed as a number)",
+      "observed_quote": "100 lb",
+      "element_ref": 1,
+      "steps": [
+        "Settings > Body weight",
+        "Type 1e2 in Weight field (field contains exactly '1e2')",
+        "Tap Save",
+        "Row shows 100 lb"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Body weight",
+          "100 lb"
+        ],
+        "bounds": [
+          42,
+          352,
+          1038,
+          520
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Add group > Schedule preview",
+      "element": "Preview entry Nov 16 Mon",
+      "symptom_type": "wrong_value",
+      "expected": "With Weekly, repeat every 2 weeks, Mon+Fri, starting Fri Nov 13, preview should skip the off-week: Today (Nov 13), Nov 23 Mon, Nov 27 Fri",
+      "observed": "Preview shows Today, Nov 16 Mon, Nov 27 Fri \u2014 Nov 16 falls in the skipped week",
+      "observed_quote": "Nov 16 Mon",
+      "steps": [
+        "Plan > Add (new group)",
+        "Scroll to Schedule, select Weekly",
+        "Tap Increase interval to 2 weeks",
+        "Select M in addition to F (default today)",
+        "Look at Preview"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0016"
+      ],
+      "present": [
+        "featherline-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/featherline-E04/d429684cac05/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0016": "missed_unreached"
+  },
+  "elapsed_s": 134.787,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.3,
+    "notes": "Swept the Settings body-weight editor, a Journal timeline entry and the group editor schedule preview. I did not test Journal paging with many entries, group save/reopen, or rotation. I filed 3 reports and the developer replied \"could not reproduce\" to each, so none are confirmed. (1) Body weight accepted \"1e2\" and saved it as 100 lb. (2) An earlier attempt saved 15510 lb. (3) The weekly every-2-weeks preview showed Nov 16 Mon, which falls in the skipped week."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0016"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0016"
+  ],
+  "missed": [
+    "featherline-0016"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 43,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0016"
+  ],
+  "bug_meta": {
+    "featherline-0016": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

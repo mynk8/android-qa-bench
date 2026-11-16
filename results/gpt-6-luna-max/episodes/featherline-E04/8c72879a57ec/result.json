@@ -1,0 +1,80 @@
+{
+  "run_id": "8c72879a57ec",
+  "item_id": "featherline-E04",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0016"
+      ],
+      "present": [
+        "featherline-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/featherline-E04/8c72879a57ec/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0016": "missed_unreached"
+  },
+  "elapsed_s": 1426.594,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0016"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0016"
+  ],
+  "missed": [
+    "featherline-0016"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 300,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0016"
+  ],
+  "bug_meta": {
+    "featherline-0016": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

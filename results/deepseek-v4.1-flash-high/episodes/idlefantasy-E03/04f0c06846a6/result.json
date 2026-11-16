@@ -1,0 +1,187 @@
+{
+  "run_id": "04f0c06846a6",
+  "item_id": "idlefantasy-E03",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell (Sell Old Gear / per-item trade-in)",
+      "element": "Bronze Axe row and error toast in item list",
+      "field": "Per-item trade-in quantity with \"Keep one of each item\" enabled",
+      "symptom_type": "wrong_value",
+      "expected": "With \"Keep one of each item\" ON, the spare copy of an equipped stack should still be sellable: Bronze Axe (x2 inventory, 1 equipped) should open a trade-in panel for 1 axe at 25 coins, just as Sell Old Gear lists \"Bronze Axe x1 25\". Likewise Iron Sword (x3 inventory, 1 equipped) should offer 2 swords (124 coins), matching Sell Old Gear's \"Iron Sword x2 124\".",
+      "observed": "Tapping the Bronze Axe row in the sell list with the keeper toggle ON shows only the toast \"Bronze Axe is equipped. Unequip it first to sell.\" and no trade-in panel, even though there is a spare axe and Sell Old Gear offers Bronze Axe x1. In the same state, the Iron Sword trade-in panel only offers 1 sword (\"You'll receive 62 coins\") while Sell Old Gear offers 2 (124 coins) - the per-item panel double-subtracts the equipped copy after reserving the keeper.",
+      "steps": [
+        "Open Shop and switch to the Sell tab",
+        "Turn ON 'Keep one of each item'",
+        "Tap Sell Old Gear: it lists Bronze Axe x1 (25) and Iron Sword x2 (124)",
+        "Cancel, search 'Bronze Axe' and tap the Bronze Axe row (x2 in inventory, equipped): a toast says 'Bronze Axe is equipped. Unequip it first to sell.' and no panel opens",
+        "Search 'Iron Sword' and tap its row (x3 in inventory, equipped): the panel offers only 1 sword / 62 coins"
+      ],
+      "element_ref": 0,
+      "observed_quote": "Bronze Axe is equipped. Unequip it first to sell.",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Bronze Axe is equipped. Unequip it first to sell.",
+          "Shop"
+        ],
+        "bounds": [
+          42,
+          75,
+          1037,
+          201
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Combat Gear equipment list (COMBAT GEAR section)",
+      "element_ref": 11,
+      "expected": "In landscape the Combat Gear screen should remain usable: the Head/Body/Legs/Boots/Cape/Ring/Necklace/Shield slots and the Equip Best Gear button should stay visible or the content should scroll, as it does in portrait.",
+      "observed": "After rotating to landscape, only the COMBAT GEAR header is drawn just above the bottom navigation; all eight gear slot rows (Head, Body, Legs, Boots, Cape, Ring, Necklace, Shield) and the Equip Best Gear button are cut off below the bottom nav and cannot be reached (swiping up does not scroll). The portrait layout shows all of them.",
+      "screen": "Combat > Gear (View Combat Gear)",
+      "steps": [
+        "From Home open Profile > Gear",
+        "Tap 'View Combat Gear'",
+        "Rotate the device to landscape",
+        "Observe the COMBAT GEAR heading at the bottom of the content with no slot rows visible",
+        "Try to swipe up over the content area - the screen does not scroll"
+      ],
+      "symptom_type": "cut_off",
+      "observed_quote": "COMBAT GEAR",
+      "anchor_node": {
+        "text": "COMBAT GEAR",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          843,
+          249,
+          870
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Town section and town destination cards",
+      "element_ref": 8,
+      "expected": "In landscape the Home screen should stay usable - all Town destinations (Shop, Inn, Guild Hall, Church, Builder's Workshop, Slayer Master, Carnival, Grand Monument, My House), the Gloomharvest event and the session panel should remain reachable, either by fitting or by scrolling.",
+      "observed": "After rotating to landscape on the Home screen, only the top row of the Town grid is partially drawn right at the bottom navigation bar; the labels are cut off, and the second and third Town rows, Gloomharvest and the 'No Active Session' panel are not rendered at all. Swiping up does not scroll, so the Shop and the other town destinations cannot be opened. The Coins value is also clipped at the right edge by the system nav bar.",
+      "screen": "Home (landscape)",
+      "steps": [
+        "Open the app on the Home screen in portrait",
+        "Rotate the device to landscape",
+        "Observe the Town panel: only the tops of the first row of destination cards are visible above the bottom nav",
+        "Try to swipe up over the page - nothing scrolls and the lower Town rows/event/session cannot be reached"
+      ],
+      "symptom_type": "cut_off",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Town"
+        ],
+        "bounds": [
+          74,
+          716,
+          2326,
+          842
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ],
+      "present": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/idlefantasy-E03/04f0c06846a6/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0004": "reported",
+    "idlefantasy-0006": "missed_unreached"
+  },
+  "elapsed_s": 1038.105,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.78,
+    "notes": "Swept Shop (Buy/Sell, search/filters/sorts, keeper toggle + persistence, Sell Junk and Sell Old Gear previews & actual bulk sale, per-item trade-in, Recent bulk sales), Gear (gathering tools, slot choosers, equip/unequip, Equip Best Gear/Tools, per-style loadouts, stat updates) and Bestiary (Enemies/Bosses, All/Missing, A\u2013Z/By Location, multi-location grouping, detail sheets). One confirmed shop bug: with Keep one of each item ON, the per-item trade-in panel double-subtracts the equipped copy (Iron Sword offers 1 instead of 2; Bronze Axe is refused with \"Bronze Axe is equipped. Unequip it first to sell.\" even though Sell Old Gear offers Bronze Axe x1) \u2014 logged. Bulk preview totals matched line items and actual payouts (Sell Junk preview 468 -> \"Sold junk for 468 coins\"; Sell Old Gear total 5416 matched all rows incl. hidden Steel Full Helmet 218). Gear slot chooser ranking was correct (req level ascending: Head 20 then 30; Body 30/40/45/50/50/60 with Runite Chainbody before Runite Platebody; Cape Agility before Mercantile). Equip/unequip persisted across leave/return and stats updated correctly (DEF 75/155/191). Bestiary grouping by location correctly listed multi-location creatures under each location. Two landscape reports (Combat Gear and Home content clipped, no scrolling) were filed but the developer could not reproduce either, so I left them unconfirmed; on this device landscape consistently clips content below the bottom nav. Data changed during testing: bulk junk sale (Cowhide 14->1, Feather 60->1, Wool 7->1), sold then rebought 1 Log (Logs back to 30), all equipment/loadouts restored to the starting state, keeper toggle left OFF, shop search/sort reset."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "found": [
+    "idlefantasy-0004"
+  ],
+  "required": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "missed": [
+    "idlefantasy-0006"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 251,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "bug_meta": {
+    "idlefantasy-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "bug_id": "idlefantasy-0009",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "missing",
+  "fix_date": "2026-09-01",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_combat": [
+        {
+          "desc": "Combat"
+        },
+        {
+          "text": "Combat"
+        }
+      ],
+      "skills_tab": [
+        {
+          "text": "Skills"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0009-buggy",
+    "fixed": "idlefantasy-0009-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0009.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "The no-session branch of CombatScreen stops passing combatPrestigeBonus to CombatSkillsTab, so the flat prestige bonus text is not drawn."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

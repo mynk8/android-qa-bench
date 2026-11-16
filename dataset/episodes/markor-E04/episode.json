@@ -1,0 +1,73 @@
+{
+  "episode_id": "markor-E04",
+  "app_id": "markor",
+  "bugs": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "seed_id": "notebook_basic",
+  "builds": {
+    "000": "markor-E04-000",
+    "001": "markor-E04-001",
+    "010": "markor-E04-010",
+    "011": "markor-E04-011",
+    "100": "markor-E04-100",
+    "101": "markor-E04-101",
+    "110": "markor-E04-110",
+    "111": "markor-E04-111"
+  },
+  "observable": {
+    "000": {
+      "markor-0013": false,
+      "markor-0014": false,
+      "markor-0019": false
+    },
+    "001": {
+      "markor-0013": false,
+      "markor-0014": false,
+      "markor-0019": true
+    },
+    "010": {
+      "markor-0013": false,
+      "markor-0014": true,
+      "markor-0019": false
+    },
+    "011": {
+      "markor-0013": false,
+      "markor-0014": true,
+      "markor-0019": true
+    },
+    "100": {
+      "markor-0013": true,
+      "markor-0014": false,
+      "markor-0019": false
+    },
+    "101": {
+      "markor-0013": true,
+      "markor-0014": false,
+      "markor-0019": true
+    },
+    "110": {
+      "markor-0013": true,
+      "markor-0014": true,
+      "markor-0019": false
+    },
+    "111": {
+      "markor-0013": true,
+      "markor-0014": true,
+      "markor-0019": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

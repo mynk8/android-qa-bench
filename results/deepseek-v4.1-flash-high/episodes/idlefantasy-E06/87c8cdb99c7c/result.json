@@ -1,0 +1,212 @@
+{
+  "run_id": "87c8cdb99c7c",
+  "item_id": "idlefantasy-E06",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile > Gear > \"View Combat Gear\" link \u2192 Combat screen",
+      "element": "Combat screen landing tab (header shows \"DUNGEONS\", \"Dungeons\" tab selected)",
+      "field": "destination section",
+      "symptom_type": "wrong_navigation",
+      "expected": "Tapping \"View Combat Gear\" on the Profile > Gear section should open the Combat screen with the Gear section selected.",
+      "observed": "Tapping \"View Combat Gear\" opens the Combat screen on the Dungeons section instead (\"Dungeons\" tab selected / \"DUNGEONS\" header shown). Reproduced twice.",
+      "steps": [
+        "Open Profile from the bottom navigation",
+        "Tap Gear in the profile side list",
+        "Tap the \"View Combat Gear\" link",
+        "Observe the Combat screen opens on the Dungeons tab, not Gear",
+        "Repeat steps 1-3 to reproduce"
+      ],
+      "element_ref": 0,
+      "observed_quote": "DUNGEONS",
+      "anchor_node": {
+        "text": "Dungeons",
+        "class": "android.widget.TextView",
+        "bounds": [
+          98,
+          267,
+          263,
+          320
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Fletching > Plank > crafting batch dialog (same batch dialog used by Smithing/Crafting)",
+      "element": "Experience readout under the quantity controls (\\\"+4200 XP total\\\")",
+      "field": "XP total readout",
+      "symptom_type": "wrong_value",
+      "expected": "Large XP totals should be grouped with a thousands separator, e.g. \"+4,200 XP total\", consistent with XP elsewhere in the app (\"+1,080 XP\" on the Mining screen, \"4,418 / 4,470 XP\" on Skills).",
+      "observed": "The batch dialog's XP readout omits the thousands separator: it shows \"+4200 XP total\". Also reproduced with Arrow Shafts: 210 logs shows \"+1050 XP total\" instead of \"+1,050 XP total\".",
+      "steps": [
+        "Open the Shop and buy 180 Logs (inventory becomes 210 Logs)",
+        "Go to Skills > Fletching",
+        "Open the Plank recipe (uses 1 Log per craft)",
+        "Leave the quantity at its Max value of 210",
+        "Observe the XP readout reading \"+4200 XP total\" instead of \"+4,200 XP total\"",
+        "Open Arrow Shafts with the same quantity to see \"+1050 XP total\" instead of \"+1,050 XP total\""
+      ],
+      "element_ref": 19,
+      "observed_quote": "+4200 XP total",
+      "anchor_node": {
+        "text": "+4200 XP total",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1905,
+          303,
+          1948
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Fletching > Plank > batch dialog (screenshot-verified; same shared batch dialog as Smithing/Crafting)",
+      "element": "XP readout line below the quantity buttons, currently \"+4200 XP total\"",
+      "field": "XP total readout formatting",
+      "symptom_type": "wrong_value",
+      "expected": "XP totals of 1,000 or more should use the same grouped formatting as the rest of the app: \"+4,200 XP total\" (compare Mining ore rows showing \"+1,080 XP\", and Smithing XP \"4,418 / 4,470 XP\").",
+      "observed": "The batch dialog renders the total without a thousands separator: \"+4200 XP total\". Reproduced on this build twice: Plank with 210 logs shows \"+4200 XP total\", and Arrow Shafts with 210 logs shows \"+1050 XP total\". Screenshot taken separately confirms the on-screen text has no comma.",
+      "steps": [
+        "Open Shop and buy 180 Logs (Logs inventory becomes 210; costs 1,260 coins)",
+        "Go to Skills > Fletching",
+        "Tap the Plank row (1 Log per craft, x30 output)",
+        "The dialog opens with quantity preset to Max = 210",
+        "Read the line under the -100/-10/+10/+100 buttons: it shows \"+4200 XP total\"",
+        "For a second case, open Arrow Shafts (also uses 1 Log per craft) at quantity 210; it shows \"+1050 XP total\""
+      ],
+      "element_ref": 19,
+      "observed_quote": "+4200 XP total",
+      "anchor_node": {
+        "text": "+4200 XP total",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1905,
+          303,
+          1948
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Smithing > Bronze Bar > crafting batch dialog",
+      "element": "XP total readout below the quantity controls (\"+18 XP total\")",
+      "field": "XP total readout",
+      "symptom_type": "wrong_value",
+      "expected": "The total should not be truncated: the Bronze Bar recipe awards 6.2 XP per bar (the dialog itself shows \"+155 XP total\" for 25 bars = 25 \u00d7 6.2), so a quantity of 3 is 18.6 XP. The readout should show \"+18.6 XP total\" (or, if whole numbers are intended, round to \"+19 XP total\").",
+      "observed": "The readout drops the fraction: quantity 3 shows \"+18 XP total\" (18.6 actual). Quantity 2 shows \"+12 XP total\" (12.4 actual) and quantity 4 shows \"+24 XP total\" (24.8 actual). Quantities 1/13 are also truncated (6 vs 6.2; 80 vs 80.6).",
+      "steps": [
+        "Go to Skills > Smithing",
+        "Tap the Bronze Bar row to open the batch dialog",
+        "Tap the '1' quantity shortcut, then press the Increase arrow twice to set quantity to 3",
+        "Read the XP total line: it shows \"+18 XP total\"",
+        "Set quantity to 2 or 4 to see \"+12 XP total\" and \"+24 XP total\" (12.4 and 24.8 exact)"
+      ],
+      "element_ref": 22,
+      "observed_quote": "+18 XP total",
+      "anchor_node": {
+        "text": "+18 XP total",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1246,
+          261,
+          1289
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ],
+      "present": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/idlefantasy-E06/87c8cdb99c7c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0011": "missed_unreached",
+    "idlefantasy-0012": "reported"
+  },
+  "elapsed_s": 1112.703,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "found": [
+    "idlefantasy-0012"
+  ],
+  "required": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "missed": [
+    "idlefantasy-0011"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "bug_meta": {
+    "idlefantasy-0011": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0012": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

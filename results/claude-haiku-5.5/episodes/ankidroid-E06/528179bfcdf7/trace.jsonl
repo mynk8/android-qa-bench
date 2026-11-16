@@ -1,0 +1,150 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E06-111", "mask": "111", "unfixed": ["ankidroid-0021", "ankidroid-0022", "ankidroid-0030"], "present": ["ankidroid-0021", "ankidroid-0022", "ankidroid-0030"]}}
+{"event": "brief", "item_id": "ankidroid-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 52, "y": 261}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 730}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 295, "y": 279}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1029}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1205}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "type", "args": {"text": "-1", "clear": true, "submit": false}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 821}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "type", "args": {"text": "1.5", "clear": true, "submit": false}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 821}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "type", "args": {"text": "99999999999", "clear": true, "submit": false}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 821}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "type", "args": {"text": "36501", "clear": true, "submit": false}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 778, "y": 546}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 273, "y": 844}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "type", "args": {"text": "5", "clear": true, "submit": false}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 848}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "type", "args": {"text": "2", "clear": true, "submit": false}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 807, "y": 844}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "type", "args": {"text": "9", "clear": true, "submit": false}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 273, "y": 844}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "type", "args": {"text": "12", "clear": true, "submit": false}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 273, "y": 844}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "type", "args": {"text": "3", "clear": true, "submit": false}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 1165}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 433}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 685}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 45, "message": {"type": "bug_report", "screen": "Add note", "element": "42", "element_ref": 42, "field": "Type (note_type_spinner)", "symptom_type": "not_persisted", "expected": "Note type switched in the Add note picker is stored to the collection straight away, so reopening Add shows the chosen type.", "observed": "After switching Type to \"Basic (type in the answer)\" and leaving Add with Back, reopening Add from the card browser shows Type \"Basic\" again. Reproduced twice.", "observed_quote": "Spinner contains \"Basic\"", "steps": ["Open Card browser (deck Spanish, 4 cards shown).", "Tap the Add button in the toolbar.", "Tap the Type spinner and choose 'Basic (and reversed card)' (or 'Basic (type in the answer)').", "Press Back without saving to leave Add.", "Tap the Add button in the Card browser again.", "Observe Type shows 'Basic', not the type chosen before."], "anchor_node": {"id": "com.ichi2.anki:id/note_type_spinner", "class": "android.widget.Spinner", "contains": ["Basic"], "bounds": [147, 244, 1067, 370]}}}
+{"event": "scored", "report_n": 1, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0021": "unverified_quote", "ankidroid-0022": "unverified_quote", "ankidroid-0030": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 777}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 925, "y": 917}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "type", "args": {"text": "Spanish::Verbs", "clear": true, "submit": false}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "type", "args": {"text": "::", "clear": true, "submit": false}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 641, "y": 981}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "type", "args": {"text": " ", "clear": true, "submit": false}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 925, "y": 917}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "type", "args": {"text": "::", "clear": true, "submit": false}}}
+{"event": "agent", "step": 66, "message": {"type": "bug_report", "screen": "Create deck dialog (opened from Change deck, Move card)", "element": "39", "element_ref": 39, "field": "Name (dialog_text_input)", "symptom_type": "wrong_value", "expected": "A deck name made only of '::' separators is not a valid deck name, so Create stays disabled, as it does for an empty name.", "observed": "With the name field containing \"::\", the Create button is enabled. An empty name disables Create.", "observed_quote": "Create", "steps": ["Open Card browser (deck Spanish). Long-press card 'comer' to select it.", "Tap More options, then 'Change deck'.", "Tap the Add button in the deck picker to open 'Create deck'.", "Observe the Create button is disabled with an empty Name field.", "Type '::' into the Name field.", "Observe Create becomes enabled."], "anchor_node": {"id": "android:id/button1", "text": "Create", "class": "android.widget.Button", "bounds": [752, 918, 926, 1044]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0021": "observed_value", "ankidroid-0022": "location", "ankidroid-0030": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 641, "y": 981}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 836, "y": 1402}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1029}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 821}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "type", "args": {"text": "0", "clear": true, "submit": false}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 675, "y": 1196}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2211}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 675, "y": 2211}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 730}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 295, "y": 111}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 805, "y": 1912}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "type", "args": {"text": "   ", "clear": true, "submit": false}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "type", "args": {"text": "Spanish::Verbs", "clear": true, "submit": false}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 981}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 497, "y": 146}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "type", "args": {"text": "deck:Spanish -deck:Spanish::*", "clear": true, "submit": true}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 508, "y": 146}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "type", "args": {"text": "deck:Spanish", "clear": true, "submit": true}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 869, "y": 2190}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 841}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "type", "args": {"text": "to eat x", "clear": true, "submit": false}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 805, "y": 1912}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "type", "args": {"text": "::", "clear": true, "submit": false}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 981}}}
+{"event": "agent", "step": 129, "message": {"type": "bug_report", "screen": "Create deck dialog (from deck list FAB menu)", "element": "7", "element_ref": 7, "field": "Name (dialog_text_input)", "symptom_type": "wrong_value", "expected": "A name made only of '::' separators is invalid: Create stays disabled, as for an empty or blank name, and no deck is created.", "observed": "Name '::' leaves Create enabled. Tapping Create shows 'Deck created' and a new deck named \"blank\" appears in the deck list.", "observed_quote": "blank", "steps": ["On the deck list, tap the Add (FAB) button, then 'Create deck'.", "Type '::' into the Name field. Create is enabled (for comparison, a blank or spaces-only Name keeps Create disabled).", "Tap Create.", "Observe the snackbar 'Deck created' and a new deck named 'blank' in the deck list."], "anchor_node": {"id": "com.ichi2.anki:id/deck_layout", "class": "android.widget.RelativeLayout", "contains": ["blank", "0", "0", "0"], "bounds": [0, 231, 1080, 358]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["ankidroid-0021"], "per_bug": {"ankidroid-0021": "ok", "ankidroid-0022": "location", "ankidroid-0030": "expected_value"}}
+{"event": "hit", "bugs": ["ankidroid-0021"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 811}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 138, "message": {"type": "bug_report", "screen": "Add note", "element": "42", "element_ref": 42, "field": "Type (note_type_spinner) and Deck (note_deck_name)", "symptom_type": "not_persisted", "expected": "The note type picked in Add is stored straight away: the next time Add is opened it shows the most recent choice. The Deck shown in Add is the real deck the note goes to.", "observed": "Type choices are not reliably kept. Sequence: (1) choose 'Basic (type in the answer)', Back, reopen Add: shows 'Basic'. (2) reopen Add again: shows 'Basic (type in the answer)', i.e. the earlier choice. (3) choose 'Cloze', Back, reopen: shows 'Cloze'. Also Add shows Deck 'blank::blank' after a deck named 'blank' was created from the '::' input.", "observed_quote": "Spinner contains \"Cloze\"", "steps": ["Open Card browser with deck 'All decks'. Tap the Add button in the toolbar.", "Tap Type and choose 'Basic (type in the answer)'. Press Back without saving.", "Tap the Add button in the Card browser again. Observe Type is 'Basic'.", "Tap Add again (without changing anything). Observe Type is now 'Basic (type in the answer)'.", "Tap Type, choose 'Cloze', press Back, then tap Add again. Observe Type shows 'Cloze'."], "anchor_node": {"id": "com.ichi2.anki:id/note_type_spinner", "class": "android.widget.Spinner", "contains": ["Cloze"], "bounds": [147, 244, 1067, 370]}}}
+{"event": "scored", "report_n": 4, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0021": "unverified_quote", "ankidroid-0022": "unverified_quote", "ankidroid-0030": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 140, "message": null}

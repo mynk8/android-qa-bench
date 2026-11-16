@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "note editor",
+    "element": "discard changes dialog",
+    "field": "unsaved changes warning",
+    "symptom_type": "missing",
+    "expected": "pressing back after switching the note type asks whether to discard the typed text",
+    "observed": "the editor closes silently, no discard dialog appears and the typed text is lost",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "note editor",
+    "element": "something",
+    "field": "unsaved changes warning",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "run_id": "c70753172cf8",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/amaze-E01/c70753172cf8/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "missed_unreached",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 89.85,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.35,
+    "notes": "Checked folder contents, toggled grid/list, inspected sort choices, and inspected selection actions. Device session ended before copy/paste/rename or bookmark add/order/persistence could be exercised; no reproducible defect was established."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [
+    "amaze-0004"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 24,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "bug_id": "amaze-0005",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "duplicated",
+  "fix_date": "2023-08-18",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "rename": [
+        {
+          "text": "Rename"
+        }
+      ],
+      "rename_field": [
+        {
+          "id": "com.amaze.filemanager:id/singleedittext_input"
+        },
+        {
+          "text": "report+final.txt"
+        },
+        {
+          "text": "notes.txt"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "SAVE"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "text": "CREATE"
+        }
+      ],
+      "copy": [
+        {
+          "desc": "Copy"
+        },
+        {
+          "text": "Copy"
+        }
+      ],
+      "paste": [
+        {
+          "desc": "Paste"
+        },
+        {
+          "text": "Paste"
+        },
+        {
+          "id": "com.amaze.filemanager:id/paste"
+        }
+      ],
+      "conflict_rename": [
+        {
+          "text": "Rename"
+        },
+        {
+          "text": "RENAME"
+        },
+        {
+          "text": "KEEP BOTH"
+        }
+      ],
+      "sort_by": [
+        {
+          "text": "Sort By"
+        },
+        {
+          "text": "Sort by"
+        },
+        {
+          "text": "Sort"
+        }
+      ],
+      "none_on_top": [
+        {
+          "text": "None On Top"
+        },
+        {
+          "text": "None on top"
+        }
+      ],
+      "folders_on_top": [
+        {
+          "text": "Folders On Top"
+        },
+        {
+          "text": "Folders on top"
+        }
+      ],
+      "delete": [
+        {
+          "desc": "Delete"
+        },
+        {
+          "text": "Delete"
+        }
+      ],
+      "delete_confirm": [
+        {
+          "text": "DELETE"
+        },
+        {
+          "text": "Delete"
+        }
+      ],
+      "drawer": [
+        {
+          "desc": "Navigate up"
+        },
+        {
+          "desc": "Open navigation drawer"
+        },
+        {
+          "desc": "Open drawer"
+        }
+      ],
+      "images": [
+        {
+          "text": "Images"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        }
+      ],
+      "bookmarks_pref": [
+        {
+          "text": "Bookmarks"
+        }
+      ],
+      "add": [
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Add"
+        },
+        {
+          "text": "ADD"
+        }
+      ],
+      "name_field": [
+        {
+          "text": "Name"
+        },
+        {
+          "id": "com.amaze.filemanager:id/text1"
+        }
+      ],
+      "path_field": [
+        {
+          "text": "Path"
+        },
+        {
+          "id": "com.amaze.filemanager:id/text2"
+        }
+      ],
+      "search": [
+        {
+          "desc": "Search"
+        }
+      ],
+      "search_field": [
+        {
+          "id": "com.amaze.filemanager:id/search_edit_text"
+        },
+        {
+          "text": "Search"
+        }
+      ],
+      "deep_search": [
+        {
+          "text": "Try Indexed Search!"
+        },
+        {
+          "text": "Try indexed search"
+        }
+      ],
+      "add_connection": [
+        {
+          "text": "SMB Connection"
+        },
+        {
+          "text": "Cloud Connection"
+        },
+        {
+          "text": "New Cloud Connection"
+        },
+        {
+          "desc": "Add"
+        }
+      ],
+      "smb": [
+        {
+          "text": "SMB Connection"
+        },
+        {
+          "text": "SMB"
+        }
+      ],
+      "extract": [
+        {
+          "text": "Extract"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0005-buggy",
+    "fixed": "amaze-0005-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "hardness": {
+    "steps_to_trigger": 4,
+    "needs_state_persistence": false,
+    "symptom_distance": "other_screen",
+    "visual_salience": "medium"
+  },
+  "hard_slice": true,
+  "head_port": {
+    "patch": "private/forwardport/amaze-0005.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "Create the renamed directory with the 4-arg HybridFile(mode,newPath,newName,true) constructor, which appends the name again, so mkdirs creates Alpha(1)/Alpha(1) nested inside the new copy."
+  }
+}

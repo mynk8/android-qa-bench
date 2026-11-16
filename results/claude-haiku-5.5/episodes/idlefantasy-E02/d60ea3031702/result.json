@@ -1,0 +1,135 @@
+{
+  "run_id": "d60ea3031702",
+  "item_id": "idlefantasy-E02",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Quests (Crafting Skills tab)",
+      "element": "2",
+      "symptom_type": "missing",
+      "expected": "Smithing I is listed in the Crafting Skills tab with a \"Completed\" marker, since the Smithing I quest is completed on this save (Gathering tab correctly shows Mining I, Fishing I and Woodcutting I as Completed).",
+      "observed": "The Crafting Skills tab lists Construction I, Cooking (Fish/Beef/Chicken/Mutton) I, Crafting I, Firemaking I, Fletching I, Herblore I and Prayer I, ending at \"Bury 500 bones\". There is no Smithing I row and no \"Completed\" marker anywhere on that tab.",
+      "observed_quote": "Crafting Skills",
+      "steps": [
+        "Start on Home with Aldric's save (Smithing I completed).",
+        "Tap the Quests tab in the bottom navigation.",
+        "Tap the 'Gathering' tab: Fishing I, Mining I and Woodcutting I show 'Completed' (correct).",
+        "Tap the 'Crafting Skills' tab.",
+        "Scroll to the end of the list.",
+        "Observe: no Smithing I row and no Completed row appears on this tab."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Guild Hall > Mining Guild quest board",
+      "element": "11",
+      "symptom_type": "wrong_value",
+      "field": "Iron Quota completion status",
+      "expected": "Iron Quota shows a \"Completed\" marker, as the save has it completed (with Copper Run, which does show \"Completed\"). Its requirement line should not hide the completed state.",
+      "observed": "The Iron Quota row shows \"Requires Guild Level 1\" and no \"Completed\" marker, while the Copper Run row above it shows \"Completed\". The Fishing Guild board's Shrimp Haul correctly shows \"Completed\".",
+      "observed_quote": "Requires Guild Level 1",
+      "steps": [
+        "Start from Home with the save where Copper Run, Iron Quota and Shrimp Haul are completed.",
+        "Tap Guild Hall in the Town grid.",
+        "Tap the Mining Guild row.",
+        "Observe the Copper Run row: it shows 'Completed'.",
+        "Observe the Iron Quota row directly below: it shows 'Requires Guild Level 1' and no 'Completed' marker.",
+        "Go back, tap the Fishing Guild row, and observe Shrimp Haul shows 'Completed' (correct)."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ],
+      "present": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/idlefantasy-E02/d60ea3031702/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0003": "missed_unreached",
+    "idlefantasy-0005": "missed_unreached"
+  },
+  "elapsed_s": 264.492,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Coverage: Shop Buy (Logs sheet: quantity +10 total 77 coins, Max = 366841 / 2.5M, Cancel leaves coins and stock unchanged); Shop Sell tab (Sell Old Gear candidate list and total checked with Keep-one off and on; Sell Junk list checked with Keep-one off and on, totals match rows; Keep-one toggle state persists after leaving and re-entering the shop; toggle restored to off at end); search field on Sell tab; Sell Junk recipe check (Cooking, Fletching, Crafting recipes do not use Feather, Cowhide, Wool, Pumpkin or Tomato). Quest log: all six tabs, Completed markers on Gathering (Fishing I, Mining I, Woodcutting I), Hide completed toggle, Go to Skill navigation, rotation to landscape and back, reaching the quest log by the nav bar. Guild Hall boards checked for Copper Run / Shrimp Haul.\nUnresolved, not signed as passing: (1) Smithing I, listed as completed in the precondition, does not appear in any quest tab; (2) Iron Quota on the Mining Guild board shows 'Requires Guild Level 1' with no Completed marker, while the precondition lists it as completed. Both were filed; the developer could not reproduce either with the steps given, so they may be a mismatch between the test save and the precondition rather than a build defect. Landscape: 'Go to Skill' labels run to the right edge beside the system nav bar; not filed as it may be the emulator nav overlay."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "missed": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 150,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "bug_meta": {
+    "idlefantasy-0003": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "medication list",
+    "element": "medication card supporting line",
+    "field": "route",
+    "symptom_type": "wrong_value",
+    "expected": "the supporting line starts with Custom",
+    "observed": "the supporting line starts with Oral",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "medication list",
+    "element": "something",
+    "field": "route",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "screens": [
+    "shop",
+    "sell old gear",
+    "sell tab"
+  ],
+  "elements": [
+    "sell old gear",
+    "agility cape",
+    "skill cape",
+    "cape"
+  ],
+  "fields": [
+    "old gear list",
+    "agility cape",
+    "skill cape",
+    "cape",
+    "item list"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the agility cape is not offered in sell old gear",
+    "skill capes are excluded"
+  ],
+  "observed_contains_any": [
+    "sell old gear lists the agility cape",
+    "the skill cape is offered for sale"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "excluded",
+      "exclud*",
+      "absent",
+      "isn't",
+      "shouldn't",
+      "should not",
+      "without"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "agility cape",
+      "cape",
+      "skill cape"
+    ],
+    [
+      "list*",
+      "includ*",
+      "offer*",
+      "shown",
+      "show*",
+      "appears",
+      "appear*",
+      "sell*"
+    ]
+  ],
+  "location_concepts": [
+    "shop",
+    "sell*",
+    "old gear",
+    "cape*"
+  ],
+  "anchors": {
+    "elements": [
+      "Sell Old Gear",
+      "Agility Cape",
+      "Mercantile Cape"
+    ],
+    "observed": [
+      "agility cape",
+      "mercantile cape"
+    ]
+  }
+}

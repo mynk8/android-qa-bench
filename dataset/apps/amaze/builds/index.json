@@ -1,0 +1,443 @@
+{
+  "amaze-0003-buggy": {
+    "sha256": "d46c60118ac3b5e753aa73fd02bb36e3507cb1630449873af77cc614ddb8aedc",
+    "bugs_present": [
+      "amaze-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0003-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0004-buggy": {
+    "sha256": "6a11a3ce433e13b849c620086c61571c3198f0ca1a891a8118ca6bbaa17688cd",
+    "bugs_present": [
+      "amaze-0004"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0004-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0005-buggy": {
+    "sha256": "331427ff5674d79686b7234c0991accd5861acb2f2ac17efa267fa4289b76b7e",
+    "bugs_present": [
+      "amaze-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0005-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0007-buggy": {
+    "sha256": "6e3f01eea959a268dd94a3eaabedc145981413d0976f63bddfbd81c3eb0c6fe2",
+    "bugs_present": [
+      "amaze-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0007-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0008-buggy": {
+    "sha256": "4b29bee8885fff298584607f1e479b9e6fa4e54918b2befa33f0640f2cb34d3c",
+    "bugs_present": [
+      "amaze-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0008-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0011-buggy": {
+    "sha256": "8a074477bf4a41b66e6b6339c9f3141300899cd9e33a7c0e52a741d596861815",
+    "bugs_present": [
+      "amaze-0011"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0011-fixed": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E01-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E01-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E01-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0004"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E01-11": {
+    "sha256": "6a11a3ce433e13b849c620086c61571c3198f0ca1a891a8118ca6bbaa17688cd",
+    "bugs_present": [
+      "amaze-0004",
+      "amaze-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E02-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E02-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E02-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E02-11": {
+    "sha256": "0df0a2320896593b14584f3904bde0a80b8937f1a55a38046e5d6579f627f4dd",
+    "bugs_present": [
+      "amaze-0007",
+      "amaze-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E03-0": {
+    "sha256": "45667604ee105db094063f5fdbac13e80b4b52334021155ad9820103fb839ed4",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "amaze-0003-fixed",
+    "tier": "full"
+  },
+  "amaze-E03-1": {
+    "sha256": "8a074477bf4a41b66e6b6339c9f3141300899cd9e33a7c0e52a741d596861815",
+    "bugs_present": [
+      "amaze-0011"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "amaze-0011-buggy",
+    "tier": "core"
+  },
+  "amaze-0013-buggy": {
+    "sha256": "f179798782e4dc4f114938729b6e148421a68656e558951c1511f6560f419580",
+    "bugs_present": [
+      "amaze-0013"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0013-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0014-buggy": {
+    "sha256": "b663cf485304fd0358b7937e6f92e47b90fec3485dea2d2bb600bda73d34fc8d",
+    "bugs_present": [
+      "amaze-0014"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0014-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0015-buggy": {
+    "sha256": "61d3ba7dab5613b072a7dbeaff4f9d1e569275c841ddc686d971376700073d69",
+    "bugs_present": [
+      "amaze-0015"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0015-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0016-buggy": {
+    "sha256": "e1181ad9cd532ac941c6f9f1d13a1d679e467fca040bc86299fd64690619f66c",
+    "bugs_present": [
+      "amaze-0016"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0016-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0017-buggy": {
+    "sha256": "0122b75dd1e8001a44463ee0d9d24f967e690c32469128d18359436c8bf3b710",
+    "bugs_present": [
+      "amaze-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0017-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0018-buggy": {
+    "sha256": "8db755bf3088f16d6edc85be70f5e79160e7459c711e8aac5e507e26f9fcdd25",
+    "bugs_present": [
+      "amaze-0018"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0018-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0019-buggy": {
+    "sha256": "acc239b10e9bd882bc6d5b2d4bc87f18c15dcd760fa35d82fd154df8dd193e7f",
+    "bugs_present": [
+      "amaze-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-0019-fixed": {
+    "sha256": "3408fff931023f5abaa0dc19a3097c914c8a5be2902294e36f50bab661a4172f",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E04-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E04-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0015"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E04-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0013"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E04-11": {
+    "sha256": "82e7865a4d27601c1abe5870191edc0d550f37608b2331195cc4fa299c94103a",
+    "bugs_present": [
+      "amaze-0013",
+      "amaze-0015"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E05-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E05-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E05-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0014"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E05-11": {
+    "sha256": "09b8623493dfde4f358136412ca74fdd556d4984519c42351b7e05a1c9ddafa1",
+    "bugs_present": [
+      "amaze-0014",
+      "amaze-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "amaze-E06-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0018",
+      "amaze-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0017",
+      "amaze-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "amaze-0017",
+      "amaze-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "amaze-E06-111": {
+    "sha256": "e3fa6ed9327ef493bd4b6df79982d0cc444e9968f9b4467339e7164eea924486",
+    "bugs_present": [
+      "amaze-0017",
+      "amaze-0018",
+      "amaze-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

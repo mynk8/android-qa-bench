@@ -1,0 +1,81 @@
+{
+  "screens": [
+    "combat",
+    "combat skills",
+    "skills tab"
+  ],
+  "elements": [
+    "prestige bonus",
+    "attack",
+    "hitpoints",
+    "prestige",
+    "skill row*"
+  ],
+  "fields": [
+    "prestige bonus",
+    "+9 prestige",
+    "+4 prestige",
+    "bonus"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "attack shows +9 prestige and hitpoints +4 prestige on the combat skills tab",
+    "the prestige bonus is shown"
+  ],
+  "observed_contains_any": [
+    "the combat skills tab shows no prestige bonus",
+    "the prestige bonus is missing"
+  ],
+  "symptom_types": [
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "+9 prestige",
+      "+4 prestige",
+      "prestige bonus",
+      "prestige"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "missing",
+      "not",
+      "no",
+      "absent",
+      "isn't",
+      "doesn't",
+      "don't",
+      "without",
+      "never",
+      "can't",
+      "cannot",
+      "not shown",
+      "not displayed",
+      "nowhere",
+      "only gear"
+    ],
+    [
+      "prestige",
+      "+9",
+      "+4",
+      "attack",
+      "hitpoints"
+    ]
+  ],
+  "location_concepts": [
+    "combat",
+    "skills",
+    "prestige",
+    "attack",
+    "hitpoints"
+  ],
+  "anchors": {
+    "elements": [
+      "Attack",
+      "Hitpoints",
+      "Prestige"
+    ],
+    "observed": []
+  }
+}

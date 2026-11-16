@@ -1,0 +1,75 @@
+{
+  "screens": [
+    "discard dialog",
+    "group editor"
+  ],
+  "elements": [
+    "dialog",
+    "dismiss button",
+    "dialog title",
+    "dialog text"
+  ],
+  "fields": [
+    "wording"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the dialog asks discard your unsaved changes with cancel and discard",
+    "the dismiss button reads cancel"
+  ],
+  "observed_contains_any": [
+    "the dismiss button reads keep editing",
+    "the dialog says your unsaved changes will be lost"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "wrong_text",
+    "inconsistent"
+  ],
+  "expected_concepts": [
+    [
+      "cancel",
+      "discard your unsaved changes",
+      "discard changes",
+      "confirmation",
+      "shared",
+      "other dialogs",
+      "consistent"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "keep editing",
+      "will be lost",
+      "discard changes?",
+      "question mark",
+      "different",
+      "wording",
+      "instead of cancel",
+      "not cancel",
+      "missing",
+      "absent",
+      "lacks",
+      "label missing",
+      "no cancel"
+    ]
+  ],
+  "location_concepts": [
+    "dialog",
+    "discard",
+    "unsaved",
+    "editor",
+    "group"
+  ],
+  "anchors": {
+    "elements": [
+      "discard changes",
+      "keep editing",
+      "discard"
+    ],
+    "observed": [
+      "keep editing",
+      "unsaved changes will be lost"
+    ]
+  }
+}

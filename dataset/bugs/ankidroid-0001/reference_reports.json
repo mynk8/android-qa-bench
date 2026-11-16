@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "card browser",
+    "element": "tags dialog",
+    "field": "verb",
+    "symptom_type": "wrong_value",
+    "expected": "verb stays only on comer",
+    "observed": "verb is shown fully checked and gets added to mesa",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "card browser",
+    "element": "something",
+    "field": "verb",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

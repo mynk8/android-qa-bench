@@ -1,0 +1,43 @@
+{
+  "episode_id": "minus-E02",
+  "start_build": "minus-E02-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Transport",
+            "amount": "40.00",
+            "category": "Food"
+          }
+        ]
+      },
+      "seconds": 49.1,
+      "screenshot_sha256": "bb44dd3df898316f192264ef18e74202ef761d88f6d986219ec184be98ce0d59",
+      "bug": "minus-0008",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Rent",
+            "category": "Food"
+          }
+        ]
+      },
+      "seconds": 19.4,
+      "screenshot_sha256": "b6e3d7ca142771622c47ba11bf7b010fa45923e613e60061b0e9c6ff9e970d41",
+      "bug": "minus-0008",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

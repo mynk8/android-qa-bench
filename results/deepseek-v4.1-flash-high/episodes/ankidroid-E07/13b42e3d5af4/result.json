@@ -1,0 +1,188 @@
+{
+  "run_id": "13b42e3d5af4",
+  "item_id": "ankidroid-E07",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Toolbar header subtitle (toolbar_content)",
+      "field": "cards-shown subtitle",
+      "symptom_type": "missing",
+      "expected": "The card browser header keeps its subtitle after the screen is recreated by a rotation: \"Spanish\" with subtitle \"4 cards shown\".",
+      "observed": "After rotating the device (landscape then back to portrait), the card browser header shows only \"Spanish\"; the \"4 cards shown\" subtitle is gone. It was present before rotating.",
+      "steps": [
+        "Open the drawer and tap Card browser",
+        "Note the header shows 'Spanish' with subtitle '4 cards shown'",
+        "Rotate the device to landscape",
+        "Rotate back to portrait",
+        "Observe the header now shows only 'Spanish' with no card-count subtitle"
+      ],
+      "element_ref": 1,
+      "observed_quote": "Spanish",
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "\"Search all decks\" snackbar action button",
+      "element_ref": 9,
+      "expected": "Tapping \"Search all decks\" should run the current query (tag:verb) across all decks and display the matching card (comer), i.e. \"1 card shown\".",
+      "observed": "After selecting the French deck filter and searching \"tag:verb\" (which shows \"No cards found in deck \u2018French\u2019\"), tapping \"Search all decks\" leaves the result list completely empty. The deck filter is still French (collapsing the search shows \"French | 3 cards shown\"), so the matching card comer in the Spanish deck is never shown. Searching directly with the \"All decks\" filter + \"tag:verb\" correctly shows comer.",
+      "screen": "Card browser",
+      "steps": [
+        "Open Card browser",
+        "Set the deck filter to French",
+        "Tap Search, type tag:verb, submit the search",
+        "Snackbar shows 'No cards found in deck \u2018French\u2019'",
+        "Tap the 'Search all decks' snackbar action",
+        "Observe the result list is empty and the deck filter still French"
+      ],
+      "symptom_type": "no_effect",
+      "observed_quote": "Search all decks",
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/snackbar_action",
+        "text": "Search all decks",
+        "class": "android.widget.Button",
+        "bounds": [
+          701,
+          2127,
+          1038,
+          2253
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "\"Search all decks\" snackbar action button",
+      "element_ref": 9,
+      "expected": "The deck filter should switch to all decks and the matching card from another deck should be listed (searching \"comer\" should show the Spanish card comer, \"1 card shown\").",
+      "observed": "Tapping the visible \"Search all decks\" snackbar action does nothing. The search view stays on the French deck with query \"comer\", the card list becomes empty, and after collapsing the search the header still reads \"French | 3 cards shown\" (filter unchanged). No result is shown even though comer exists in Spanish. Reproduced 4 times, with both \"comer\" and \"tag:verb\". Searching with the filter explicitly set to \"All decks\" does return comer, so the cross-deck search itself works.",
+      "screen": "Card browser",
+      "steps": [
+        "Open Card browser",
+        "Tap the header and set the deck filter to French (header shows 'French' / '3 cards shown')",
+        "Tap the Search icon and type 'comer'",
+        "Press the keyboard 'Search' key -> snackbar shows 'No cards found in deck \u2018French\u2019' with a 'Search all decks' action",
+        "Tap the 'Search all decks' action while the snackbar is visible",
+        "Observe the card list is empty and no card is found",
+        "Tap the Collapse arrow -> header still shows 'French | 3 cards shown', so the action had no effect",
+        "Control: set filter to 'All decks' and search 'comer' -> comer is found"
+      ],
+      "symptom_type": "no_effect",
+      "observed_quote": "Search all decks",
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/snackbar_action",
+        "text": "Search all decks",
+        "class": "android.widget.Button",
+        "bounds": [
+          701,
+          2127,
+          1038,
+          2253
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E07-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ],
+      "present": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/ankidroid-E07/13b42e3d5af4/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0023": "missed_unreached",
+    "ankidroid-0024": "reported"
+  },
+  "elapsed_s": 1361.532,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "found": [
+    "ankidroid-0024"
+  ],
+  "required": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "missed": [
+    "ankidroid-0023"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "bug_meta": {
+    "ankidroid-0023": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0024": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

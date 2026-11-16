@@ -1,0 +1,12 @@
+{
+  "db_name": "database",
+  "sql": [
+    "DELETE FROM tags;",
+    "DELETE FROM tagdata;",
+    "DELETE FROM alarms;",
+    "DELETE FROM tasks;",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Weekly review', ((CAST(strftime('%s','now','start of day','+30 days','+12 hours') AS INTEGER))*1000), 0, '', 'FREQ=WEEKLY;INTERVAL=2', 0, 0, 0, 0, 0, 3, 1, 'seed-1', 0, 0, 0, 0, 0, 0);"
+  ],
+  "id": "repeat_ok",
+  "preconditions": "The list contains one task, Weekly review, due in 30 days and set to repeat every 2 weeks."
+}

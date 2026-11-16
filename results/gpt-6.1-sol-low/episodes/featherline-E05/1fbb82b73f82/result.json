@@ -1,0 +1,96 @@
+{
+  "run_id": "1fbb82b73f82",
+  "item_id": "featherline-E05",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0018",
+        "featherline-0019"
+      ],
+      "present": [
+        "featherline-0018",
+        "featherline-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/featherline-E05/1fbb82b73f82/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0018": "missed_unreached",
+    "featherline-0019": "missed_unreached"
+  },
+  "elapsed_s": 436.42,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Completed screen-only sweep from fresh-install empty states. Exercised medicine validation (empty/zero strength), populated and empty category headings, custom category archive, multiple medicines in one category, selection via group and manual-record routes, and rotation. Exercised daily/weekly scheduling, interval changes, multiple daily times, first-dose date/time changes and same-value confirmation, cancellation/discard, save/reopen, rotation, night-owl reversal and 03:00 versus 04:00 boundary with preview/Home/Plan consistency. Exercised journal empty save, note creation/edit/save/delete, delete cancellation, repeated tab switches, rotation, and timeline date creation/persistence. No reproducible app defects found; no reports filed. Non-ASCII text entry was limited by device tool input failure, so it was not counted as an app defect."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "missed": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 183,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "bug_meta": {
+    "featherline-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

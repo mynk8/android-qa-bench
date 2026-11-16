@@ -1,0 +1,85 @@
+{
+  "run_id": "3390cc42f995",
+  "item_id": "amaze-E03",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "amaze-0011"
+      ],
+      "present": [
+        "amaze-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/amaze-E03/3390cc42f995/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0011": "missed_unreached"
+  },
+  "elapsed_s": 107.063,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.25,
+    "notes": "Partial sweep only: verified starting directory contents and same-folder copy/paste conflict Rename creates notes (1). Sorting dialog exposed Name/Last Modified/Size/Type and ascending/descending controls. Could not access Settings/bookmarks or SMB from the reachable navigation, and did not complete rename, directory options, or network/bookmark testing. No reproducible defect confirmed; clipboard-created copy remains as test data."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0011"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0011"
+  ],
+  "missed": [
+    "amaze-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 27,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0011"
+  ],
+  "bug_meta": {
+    "amaze-0011": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

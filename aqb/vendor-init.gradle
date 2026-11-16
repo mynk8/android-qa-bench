@@ -1,0 +1,17 @@
+// aqb: build old commits whose dependencies have rotted.
+//  1. local Maven repo work/m2 with artifacts rebuilt from source (work/vendor/README.md)
+//  2. version substitutions for artifacts that are gone, from aqb/substitutions.json
+// Applied only to apps listed in aqb/build.py VENDOR_APPS; recorded in the build manifest.
+import groovy.json.JsonSlurper
+def m2 = new File(System.getProperty("aqb.m2") ?: "work/m2").toURI()
+def subsFile = new File(System.getProperty("aqb.subs") ?: "aqb/substitutions.json")
+def subs = subsFile.exists() ? new JsonSlurper().parse(subsFile).findAll { k, v -> !k.startsWith("_") } : [:]
+allprojects {
+    buildscript { repositories { maven { url m2 } } }
+    repositories { maven { url m2 } }
+    configurations.all {
+        resolutionStrategy.dependencySubstitution {
+            subs.each { from, to -> substitute module(from) using module(to) }
+        }
+    }
+}

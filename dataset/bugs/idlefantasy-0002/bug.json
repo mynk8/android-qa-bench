@@ -1,0 +1,64 @@
+{
+  "bug_id": "idlefantasy-0002",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-07-11",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "shop": [
+        {
+          "text": "Shop"
+        }
+      ],
+      "sell_tab": [
+        {
+          "text": "Sell"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0002-buggy",
+    "fixed": "idlefantasy-0002-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0002.patch",
+    "confidence": "high",
+    "lines_changed": 5,
+    "approach": "sellPriceFor clamps the sell price to the undiscounted list price minus one instead of the discounted buy price minus one, so Copper Ore sells for 4 (buy 3) and Stone for 6 (buy 6)."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

@@ -1,0 +1,219 @@
+{
+  "run_id": "c269814e8802",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Amaze File Manager folder listing at /storage/emulated/0/AndroidQA/Amaze",
+      "element": "Folder count in the current directory listing",
+      "element_ref": 6,
+      "field": "Paste conflict: RENAME",
+      "symptom_type": "no_effect",
+      "expected": "Choosing RENAME when pasting a copied folder into a directory containing the same name should create a renamed copy containing the source folder's readme.txt.",
+      "observed": "After choosing RENAME for a copied Alpha folder, the listing still contains only Alpha and Beta, with no renamed copy. The same result occurred twice and remained after navigating away and reopening the directory.",
+      "observed_quote": "2 folders and 4 files",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Long-press Alpha and choose Copy.",
+        "Tap PASTE in the snackbar to paste into the same directory.",
+        "In the Paste conflict dialog for Alpha, choose RENAME.",
+        "Observe that the directory listing still reports 2 folders and 4 files.",
+        "Repeat the copy, paste, and RENAME steps; navigate away and reopen Amaze, and confirm the renamed folder is still absent."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "2 folders and 4 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze File Manager directory view at /storage/emulated/0/AndroidQA/Amaze",
+      "element": "View toggle in the More options menu, which offers Grid View while the directory is displayed as a list",
+      "element_ref": 2,
+      "field": "Grid view preference after rotation",
+      "symptom_type": "not_persisted",
+      "expected": "After switching this folder to Grid View, rotating to landscape and back to portrait should restore Grid View for the same folder.",
+      "observed": "Amaze changed to a list after rotating to landscape and remained a list after returning to portrait; the menu then offered Grid View.",
+      "observed_quote": "Grid View",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze, choose Grid View from More options.",
+        "Rotate the device to landscape.",
+        "Rotate back to portrait without changing folders.",
+        "Observe that Amaze is displayed in list layout and More options offers Grid View.",
+        "Repeat the Grid View selection and rotation sequence; the same list layout returns."
+      ],
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Grid View"
+        ],
+        "bounds": [
+          555,
+          325,
+          1070,
+          451
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze File Manager navigation drawer",
+      "element": "The drawer bookmark list showing Alpha before Beta",
+      "element_ref": 13,
+      "field": "Bookmark insertion order",
+      "symptom_type": "wrong_value",
+      "expected": "Bookmarks should appear in the order they were added. Beta was retained while Alpha was deleted and re-added, so Beta should appear before Alpha.",
+      "observed": "The drawer shows Alpha first and Beta second after Alpha was re-added later than Beta.",
+      "observed_quote": "Alpha",
+      "steps": [
+        "Add the Alpha folder to bookmarks.",
+        "Add the Beta folder to bookmarks.",
+        "Open Modify Bookmark for Alpha and delete the Alpha bookmark.",
+        "Add Alpha to bookmarks again while Beta remains bookmarked.",
+        "Open the navigation drawer and inspect the bookmark entries; Alpha appears before Beta."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Alpha"
+        ],
+        "bounds": [
+          0,
+          725,
+          798,
+          851
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze File Manager navigation drawer on Quick access",
+      "element": "Drawer bookmark entries; Alpha is displayed above Beta",
+      "element_ref": 13,
+      "field": "Bookmark insertion order",
+      "symptom_type": "wrong_value",
+      "expected": "With no bookmarks initially, adding Beta first and Alpha second should display Beta before Alpha in the drawer.",
+      "observed": "After adding Beta first and Alpha second, the drawer displays Alpha before Beta.",
+      "observed_quote": "Alpha",
+      "steps": [
+        "Remove the Alpha and Beta bookmarks so the drawer has no bookmarks.",
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Long-press Beta, open its Properties menu, and choose Add to Bookmarks.",
+        "Long-press Alpha, open its Properties menu, and choose Add to Bookmarks.",
+        "Open Quick access, open the navigation drawer, and inspect the bookmark list; Alpha appears before Beta."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Alpha"
+        ],
+        "bounds": [
+          0,
+          725,
+          798,
+          851
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E01/c269814e8802/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "reported",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 1623.023,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept copy/paste, file and folder renaming, sorting, per-folder list/grid views, and drawer bookmarks. Confirmed report logged: pasting a folder into a directory with the same name and choosing RENAME creates no copy. Normal folder and file copies, recursive contents, file conflict rename, rename validation, sorting modes, bookmark navigation, add/remove/cancel, and duplicate-add behavior passed. Starting contents are restored to 2 folders and 4 files, test copies are removed, and bookmarks are cleared. I observed grid mode change to list after rotation, but the developer could not reproduce that report; bookmark ordering appeared newest-added first in the opposite-order run."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [
+    "amaze-0004"
+  ],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 209,
+  "precision": 0.25,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  }
+}

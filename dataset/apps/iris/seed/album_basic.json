@@ -1,0 +1,17 @@
+{
+  "delete_external": [
+    "Pictures/IrisSeed"
+  ],
+  "fixtures": [
+    {
+      "path": "Pictures/IrisSeed/big.jpg",
+      "fixture": "fixtures/big.jpg"
+    },
+    {
+      "path": "Pictures/IrisSeed/huge.jpg",
+      "fixture": "fixtures/huge.jpg"
+    }
+  ],
+  "id": "album_basic",
+  "preconditions": "The gallery has an album IrisSeed with two photos: big.jpg (exactly 1,500,000 bytes) and huge.jpg (exactly 2,500,000 bytes)."
+}

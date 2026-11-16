@@ -1,0 +1,152 @@
+{
+  "run_id": "e8398211c3a7",
+  "item_id": "markor-E03",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Favourites (via Go to > Favourites)",
+      "element": "Favourites file list / empty hint",
+      "field": "Quick-access marking (Favourite)",
+      "symptom_type": "missing",
+      "expected": "A file marked as Favourite should stay marked after it is renamed, so its new name is still listed in the Favourites quick-access folder.",
+      "observed": "After marking Indent2.md as Favourite (it is listed under Favourites) and renaming it to Indent2x.md in the file browser, the Favourites list is empty (shows the empty hint). Renaming the file back to Indent2.md makes the favourite appear again, so the mark is still stored against the old path and was not updated by the rename.",
+      "steps": [
+        "In Files, long-press Indent2.md and tap Favourite.",
+        "Tap Go to > Favourites and confirm Indent2.md is listed.",
+        "Go back to the Documents folder, long-press Indent2.md, tap Rename, change the name to Indent2x.md and tap OK.",
+        "Tap Go to > Favourites: the list is now empty (empty hint shown) even though the file was favourited before the rename.",
+        "Rename Indent2x.md back to Indent2.md and open Go to > Favourites again: Indent2.md reappears, confirming the mark was left on the old path."
+      ],
+      "element_ref": 7,
+      "observed_quote": "\u00af\\_(\u30c4)_/\u00af",
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/empty_hint",
+        "text": "\u00af\\_(\u30c4)_/\u00af",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          992,
+          1080,
+          1344
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Undo button (action_undo) in editor toolbar",
+      "element_ref": 1,
+      "expected": "After typing text into a newly created (initially empty) document, the editor's step-back control (Undo) should become enabled and a tap should undo the typed change.",
+      "observed": "The document now contains \"abc\", but Undo and Redo stay disabled (greyed out). Tapping Undo has no effect and the text remains \"abc\". The tracker only starts working after leaving and reopening the document.",
+      "observed_quote": "abc",
+      "screen": "Editor, newly created empty file QAUndo.md",
+      "steps": [
+        "In Files, tap the + button and create a new empty Markdown file (QAUndo.md).",
+        "Type 'abc' into the empty editor.",
+        "Close the keyboard and wait; the Undo (and Redo) toolbar buttons remain disabled even though the document has unsaved content.",
+        "Tap Undo: nothing happens, 'abc' is still there, so the change cannot be stepped back.",
+        "Leave the file and reopen it: because it now loads with content, Undo becomes usable."
+      ],
+      "symptom_type": "no_effect",
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/action_undo",
+        "desc": "Undo",
+        "class": "android.widget.Button",
+        "bounds": [
+          450,
+          73,
+          555,
+          199
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0002",
+        "markor-0009"
+      ],
+      "present": [
+        "markor-0002",
+        "markor-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/markor-E03/e8398211c3a7/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0002": "reported",
+    "markor-0009": "reported"
+  },
+  "elapsed_s": 1149.98,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "found": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "required": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 300,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "bug_meta": {
+    "markor-0002": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0009": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

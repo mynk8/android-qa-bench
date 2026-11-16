@@ -1,0 +1,87 @@
+{
+  "screens": [
+    "card browser",
+    "set due date dialog",
+    "reschedule popup",
+    "reschedule"
+  ],
+  "elements": [
+    "days input",
+    "show cards in field"
+  ],
+  "fields": [
+    "days"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the days field stops at five digits and shows 12345",
+    "extra digits are ignored"
+  ],
+  "observed_contains_any": [
+    "the days field shows all of 1234567",
+    "any number of digits can be typed"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "five",
+      "5 digits",
+      "12345",
+      "limit*",
+      "max*",
+      "stops",
+      "ignored",
+      "capped",
+      "truncat*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "1234567",
+      "all digits",
+      "seven",
+      "7 digits",
+      "any number",
+      "unlimited",
+      "no limit",
+      "too long",
+      "accepts",
+      "more than five",
+      "extra digits",
+      "no cap",
+      "uncapped",
+      "long number",
+      "no max*",
+      "accepted",
+      "not limited",
+      "not capped"
+    ]
+  ],
+  "location_concepts": [
+    "set due date",
+    "due date",
+    "card browser",
+    "dialog",
+    "days",
+    "reschedule*",
+    "due*",
+    "number box",
+    "popup",
+    "digit*"
+  ],
+  "anchors": {
+    "elements": [
+      "days",
+      "show cards in",
+      "field"
+    ],
+    "observed": [
+      "1234567",
+      "99999999",
+      "/\\d{6,}/"
+    ]
+  }
+}

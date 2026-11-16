@@ -1,0 +1,14 @@
+{
+  "case_id": "ankidroid-0023-faulty-unspec",
+  "bug_id": "ankidroid-0023",
+  "_build_id": "ankidroid-0023-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "decks_basic",
+  "agent_input": "agent_input.md"
+}

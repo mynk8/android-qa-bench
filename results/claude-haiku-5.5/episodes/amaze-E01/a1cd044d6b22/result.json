@@ -1,0 +1,175 @@
+{
+  "run_id": "a1cd044d6b22",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - bookmarks list",
+      "element": "42",
+      "symptom_type": "wrong_value",
+      "expected": "Bookmarks are listed in the order they were added (new bookmark after earlier ones, or at a consistent position by add time). Alarms, added last, should not jump ahead of AndroidQA, which was added first.",
+      "observed": "Bookmarks are listed alphabetically: \"Alarms\" (added last) appears above \"AndroidQA\" (added first), and both are above the default DCIM, Download, Movies, Music, Pictures. Adding AndroidQA moved it to the top of the list, above DCIM, ahead of the default entries.",
+      "observed_quote": "Alarms",
+      "steps": [
+        "Open AndroidQA/Amaze's parent: on the storage root (/storage/emulated/0), open the row menu (three dots) of AndroidQA and choose 'Add to Bookmarks'; the toast 'Bookmarks Added' appears.",
+        "Open the navigation drawer; AndroidQA is at the top above DCIM, Download, Movies, Music, Pictures.",
+        "Open the row menu of Alarms on the storage root and choose 'Add to Bookmarks'.",
+        "Open the navigation drawer again.",
+        "Observe: the list is Alarms, AndroidQA, DCIM, Download, Movies, Music, Pictures - alphabetical, not in order of addition (Alarms was added last but is first)."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - bookmarks list",
+      "element": "48",
+      "symptom_type": "wrong_value",
+      "expected": "Bookmarks are ordered by when they were added. A bookmark added most recently (Audiobooks, added last) should appear at the position its add time dictates (consistently at the end, or at the top, for every add), not in alphabetical position between AndroidQA and DCIM.",
+      "observed": "The drawer lists bookmarks alphabetically: Alarms, AndroidQA, Audiobooks, DCIM, Download, Movies, Music, Pictures. Audiobooks, added last, was placed between AndroidQA and DCIM (alphabetical), and Alarms, added after AndroidQA, went to the top.",
+      "observed_quote": "Audiobooks",
+      "steps": [
+        "On the storage root (/storage/emulated/0), tap the three dots (Properties) on the AndroidQA row, choose 'Add to Bookmarks'. Toast 'Bookmarks Added'.",
+        "Tap the three dots on the Alarms row, choose 'Add to Bookmarks'.",
+        "Tap the three dots on the Audiobooks row, choose 'Add to Bookmarks' (latest addition).",
+        "Open the navigation drawer.",
+        "Observe the bookmark list: Alarms, AndroidQA, Audiobooks, DCIM, Download, Movies, Music, Pictures. Audiobooks (added last) is in alphabetical position, not at the end or start by add time."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Paste conflict dialog - folder paste into Beta",
+      "element": "6",
+      "symptom_type": "missing",
+      "expected": "Choosing RENAME for a pasted folder that conflicts with an existing folder creates a renamed copy of the pasted folder (with its contents) in Beta, so the Beta folder shows a second folder alongside Alpha, e.g. \"2 folders and 2 files\".",
+      "observed": "After pasting the Alpha folder into Beta (which already contains Alpha) and choosing RENAME, the Beta screen still shows only one folder, \"Alpha\", and the count is unchanged: \"1 folders and 2 files\". No renamed copy of Alpha appears, even after leaving and re-entering Beta. Beta's modified time changed, but no new entry is listed.",
+      "observed_quote": "1 folders and 2 files",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze. Long-press the Alpha folder, tap Copy.",
+        "Open the Beta folder (it already contains Alpha, notes.txt and readme.txt). Tap PASTE in the bottom bar.",
+        "The dialog 'File with same name already exists' shows 'Alpha'. Tap RENAME.",
+        "Wait 2 seconds, then press Back and re-open Beta.",
+        "Observe Beta lists only 'Alpha', 'notes.txt' and 'readme.txt' and the header reads '1 folders and 2 files'. No renamed copy of Alpha exists."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze folder view (AndroidQA/Amaze)",
+      "element": "8",
+      "symptom_type": "not_persisted",
+      "expected": "The folder keeps its Grid View choice through device rotation. Rotating the screen only changes orientation, so the folder stays in grid view.",
+      "observed": "In /storage/emulated/0/AndroidQA/Amaze the grid view was active (menu showed \"List View\"). After rotating the device to landscape and back to portrait, the folder changed to list view (rows with \"Nov 13 | 10:19 PM\" and sizes), and the More menu shows \"Grid View\". Reproduced twice: after I set Grid View again and rotated, it reverted to list.",
+      "observed_quote": "Grid View",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze. It is in grid view (tiles for Alpha, Beta, notes.txt, etc.; More menu shows 'List View').",
+        "Tap More options (three dots) and tap 'Sort' then 'Sort By' > Size > ASCENDING (optional).",
+        "Rotate the device to landscape, then back to portrait.",
+        "Observe: the folder is now in list view (rows with dates and sizes). Open More options: it shows 'Grid View'.",
+        "Tap More options > 'Grid View' to set grid again, rotate landscape then portrait: the folder returns to list view again."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - bookmarks after device rotation",
+      "element": "3",
+      "symptom_type": "not_persisted",
+      "expected": "A bookmark added with 'Add to Bookmarks' stays in the drawer after the device is rotated (landscape and back to portrait). Rotation only changes the layout.",
+      "observed": "Bookmarks added earlier disappeared after rotation. Before rotating, the drawer listed \"Beta\" above DCIM, Download, Movies, Music, Pictures. After rotating landscape and back to portrait, the drawer lists only DCIM, Download, Movies, Music, Pictures; \"Beta\" (and the earlier added AndroidQA, Alarms and Audiobooks) are gone. Adding \"Android\" right before the rotation showed it in the drawer, but I could not reopen the drawer after the rotation to confirm it survived.",
+      "observed_quote": "Beta",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze (or the storage root). Open the row menu (three dots) of a folder, e.g. Beta, and tap 'Add to Bookmarks'. Toast 'Bookmarks Added'.",
+        "Open the navigation drawer: the new bookmark is listed at the top (e.g. Beta above DCIM, Download, Movies, Music, Pictures).",
+        "Rotate the device to landscape, then back to portrait.",
+        "Open the navigation drawer again.",
+        "Observe: the added bookmark is gone; only DCIM, Download, Movies, Music, Pictures remain."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/amaze-E01/a1cd044d6b22/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "reported",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 465.944,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [
+    "amaze-0004"
+  ],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 290,
+  "precision": 0.2,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  }
+}

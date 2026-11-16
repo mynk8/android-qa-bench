@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "reposition dialog",
+    "element": "queue limits label",
+    "field": "queue bottom",
+    "symptom_type": "wrong_value",
+    "expected": "the two lines read Queue top and Queue bottom",
+    "observed": "both lines read Queue top, the Queue bottom label is missing",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "reposition dialog",
+    "element": "something",
+    "field": "queue bottom",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

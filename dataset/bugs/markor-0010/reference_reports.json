@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "search and replace",
+    "element": "replace",
+    "field": "regex capture",
+    "symptom_type": "wrong_value",
+    "expected": "the match is replaced by the captured text, giving cat",
+    "observed": "the literal text $1 is inserted",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "search and replace",
+    "element": "something",
+    "field": "regex capture",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

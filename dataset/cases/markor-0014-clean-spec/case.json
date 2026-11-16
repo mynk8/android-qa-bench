@@ -1,0 +1,14 @@
+{
+  "case_id": "markor-0014-clean-spec",
+  "bug_id": "markor-0014",
+  "_build_id": "markor-0014-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "notebook_basic",
+  "agent_input": "agent_input.md"
+}

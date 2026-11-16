@@ -1,0 +1,75 @@
+{
+  "screens": [
+    "timebox settings",
+    "settings"
+  ],
+  "elements": [
+    "time limit",
+    "use timebox switch"
+  ],
+  "fields": [
+    "time limit"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "the time limit is 21 after re-enabling, the value set before disabling",
+    "the customised limit is restored"
+  ],
+  "observed_contains_any": [
+    "the time limit goes back to 20 after re-enabling",
+    "the customised limit was lost"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "21",
+      "restored",
+      "remember*",
+      "kept",
+      "same",
+      "previous",
+      "custom*",
+      "set before",
+      "keep*",
+      "saved value"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "20",
+      "default",
+      "reset*",
+      "back to",
+      "lost",
+      "forgot*",
+      "reverts",
+      "reverted",
+      "snaps back",
+      "factory",
+      "original",
+      "not kept",
+      "not remember*",
+      "not restored",
+      "not saved"
+    ]
+  ],
+  "location_concepts": [
+    "timebox",
+    "settings",
+    "time limit",
+    "reviewing"
+  ],
+  "anchors": {
+    "elements": [
+      "time limit",
+      "use timebox",
+      "timebox"
+    ],
+    "observed": [
+      "/\\b20\\b/"
+    ]
+  }
+}

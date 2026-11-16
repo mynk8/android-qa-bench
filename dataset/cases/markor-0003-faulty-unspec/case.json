@@ -1,0 +1,14 @@
+{
+  "case_id": "markor-0003-faulty-unspec",
+  "bug_id": "markor-0003",
+  "_build_id": "markor-0003-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "notebook_basic",
+  "agent_input": "agent_input.md"
+}

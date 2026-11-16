@@ -1,0 +1,206 @@
+{
+  "run_id": "95ab5c4e7fca",
+  "item_id": "ankidroid-E08",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Filtered deck builder",
+      "element": "Error dialog",
+      "element_ref": 1,
+      "field": "Cards selected by",
+      "symptom_type": "no_effect",
+      "expected": "Build a filtered deck containing comer.",
+      "observed": "Relative overdueness with deck:Spanish tag:verb fails with DbError and ambiguous column name: data. Repeated twice.",
+      "observed_quote": "Error",
+      "steps": [
+        "Create filtered deck",
+        "Set filter to deck:Spanish tag:verb",
+        "Select Relative overdueness",
+        "Tap Build",
+        "Dismiss error and repeat Build"
+      ],
+      "anchor_node": {
+        "id": "android:id/message",
+        "text": "DbError { info: \"SqlInputError { error: Error { code: Unknown, extended_code: 1 }, msg: \\\"ambiguous column name: data\\\", sql: \\\"insert into search_cids select c.id from cards c, notes n where c.nid=n.id and (((c.did in (select id from decks where name regexp ?1) or (c.odid != 0 and c.odid in (select id from decks where name regexp ?1))) and n.tags regexp ?) and not c.queue = -1 and not c.queue in (-2,-3) and not c.odid != 0) order by extract_fsrs_relative_retrievability(data, case when odue !=0 then odue else due end, ivl, 5, 1794801600, 1794742431) asc, fnvhash(c.id, c.mod) limit 100\\\", offset: 347 }\", kind: Other }",
+        "class": "android.widget.TextView",
+        "bounds": [
+          91,
+          785,
+          989,
+          1525
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Filtered deck builder",
+      "element": "Cards selected by: Ascending retrievability / error dialog",
+      "element_ref": 1,
+      "symptom_type": "no_effect",
+      "expected": "Rebuild the matching one-card filtered deck successfully.",
+      "observed": "Ascending retrievability repeatedly fails with SQL syntax error near comma; generated SQL includes order by , fnvhash(c.id, c.mod).",
+      "steps": [
+        "From deck list Add > Create filtered deck",
+        "Search deck:Spanish tag:verb, limit 100, Random, default switches",
+        "Build successfully",
+        "Open filtered deck overview > Study options",
+        "Select Ascending retrievability",
+        "Rebuild; dismiss Error; wait; Rebuild again"
+      ],
+      "observed_quote": "Error",
+      "anchor_node": {
+        "id": "android:id/message",
+        "text": "DbError { info: \"SqlInputError { error: Error { code: Unknown, extended_code: 1 }, msg: \\\"near \\\\\\\",\\\\\\\": syntax error\\\", sql: \\\"insert into search_cids select c.id from cards c, notes n where c.nid=n.id and (((c.did in (select id from decks where name regexp ?1) or (c.odid != 0 and c.odid in (select id from decks where name regexp ?1))) and n.tags regexp ?) and not c.queue = -1 and not c.queue in (-2,-3) and not c.odid != 0) order by , fnvhash(c.id, c.mod) limit 100\\\", offset: 310 }\", kind: Other }",
+        "class": "android.widget.TextView",
+        "bounds": [
+          91,
+          838,
+          989,
+          1472
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Add note",
+      "element": "Navigate up / unsaved changes confirmation",
+      "symptom_type": "missing",
+      "expected": "Warn before discarding the unsaved text entered before a model swap.",
+      "observed": "Entering QA unsaved under Basic, changing model, and leaving closes editor without confirmation and loses text. Reproduced with Cloze + Back and Basic (and reversed card) + Navigate up.",
+      "steps": [
+        "Card browser > Add",
+        "Hide keyboard; enter QA unsaved in Front; hide keyboard",
+        "Change Type from Basic to Cloze (or Basic (and reversed card))",
+        "Without further edits, press Back or Navigate up",
+        "Editor closes immediately; reopen Add to see empty fields"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Filtered deck builder",
+      "element": "Descending retrievability",
+      "field": "Cards selected by",
+      "element_ref": 1,
+      "symptom_type": "no_effect",
+      "expected": "Build/rebuild a filtered deck with matching French cards.",
+      "observed": "Descending retrievability fails with SQL syntax error near comma. Reproduced with both deck:Spanish tag:verb and deck:French, limit 100; the generated SQL has order by , fnvhash(c.id, c.mod). Ascending retrievability has the same failure, as previously reported.",
+      "observed_quote": "Error",
+      "steps": [
+        "Open existing filtered deck options",
+        "Disable second filter",
+        "Set search to deck:French and limit to 100",
+        "Select Descending retrievability",
+        "Tap Rebuild; Error dialog appears",
+        "Previously repeated same criterion with deck:Spanish tag:verb and obtained same syntax error"
+      ],
+      "anchor_node": {
+        "id": "android:id/message",
+        "text": "DbError { info: \"SqlInputError { error: Error { code: Unknown, extended_code: 1 }, msg: \\\"near \\\\\\\",\\\\\\\": syntax error\\\", sql: \\\"insert into search_cids select c.id from cards c where (((c.did in (select id from decks where name regexp ?1) or (c.odid != 0 and c.odid in (select id from decks where name regexp ?1)))) and not c.queue = -1 and not c.queue in (-2,-3) and not c.odid != 0) order by , fnvhash(c.id, c.mod) limit 100\\\", offset: 266 }\", kind: Other }",
+        "class": "android.widget.TextView",
+        "bounds": [
+          91,
+          865,
+          989,
+          1446
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E08-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ],
+      "present": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E08/95ab5c4e7fca/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0025": "missed_unreached",
+    "ankidroid-0026": "reported"
+  },
+  "elapsed_s": 588.927,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.87,
+    "notes": "Swept filtered decks (all 11 criteria visible in both dropdowns, Random tagged search, two filters, newest French selection, limit 1/0, no matches, persistence, cancellation, rotation, empty reversal), adding/editing (empty validation, model swaps, dismissal, saved edit persistence, tags, temporary note creation and Undo), deck options (shared preset daily limit 2/0, persistence and rotation, restored 20). Confirmed/logged unsaved text silently lost after model swap. Filed repeated SQL errors for Relative overdueness and ascending/descending retrievability; developer could not reproduce. Original comer/to eat restored; French 3 and Spanish 4 cards returned, temporary note undone; empty Filtered Deck 11:33 remains."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "found": [
+    "ankidroid-0026"
+  ],
+  "required": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "missed": [
+    "ankidroid-0025"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 250,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "bug_meta": {
+    "ankidroid-0025": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "ankidroid-0026": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

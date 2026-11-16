@@ -1,0 +1,74 @@
+{
+  "screens": [
+    "note editor",
+    "add note"
+  ],
+  "elements": [
+    "back",
+    "discard changes dialog"
+  ],
+  "fields": [
+    "unsaved changes warning"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "a dialog asks whether to discard the typed text",
+    "going back after switching note type warns about unsaved text"
+  ],
+  "observed_contains_any": [
+    "the editor closes without any warning and the text is lost",
+    "no discard changes dialog appears"
+  ],
+  "symptom_types": [
+    "missing",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "discard",
+      "warning",
+      "dialog",
+      "prompt",
+      "confirm*",
+      "unsaved",
+      "asks"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "no dialog",
+      "no warning",
+      "no prompt",
+      "without",
+      "silently",
+      "closes",
+      "closed",
+      "no discard",
+      "lost",
+      "missing",
+      "silent*",
+      "straight",
+      "directly",
+      "immediate*",
+      "exits",
+      "left",
+      "quietly",
+      "no confirm*",
+      "vanishes"
+    ]
+  ],
+  "location_concepts": [
+    "note editor",
+    "add note",
+    "editor",
+    "discard"
+  ],
+  "anchors": {
+    "elements": [
+      "back",
+      "navigate up",
+      "discard"
+    ],
+    "observed": []
+  }
+}

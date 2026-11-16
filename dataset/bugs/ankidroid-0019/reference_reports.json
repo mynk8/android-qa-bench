@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "card browser",
+    "element": "deck",
+    "field": "selected deck",
+    "symptom_type": "wrong_value",
+    "expected": "the browser opens on deck Spanish",
+    "observed": "the browser shows French, the deck browsed before",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "card browser",
+    "element": "something",
+    "field": "selected deck",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

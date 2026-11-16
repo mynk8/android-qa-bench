@@ -1,0 +1,44 @@
+{
+  "episode_id": "markor-E05",
+  "app_id": "markor",
+  "bugs": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "seed_id": "notebook_basic",
+  "builds": {
+    "00": "markor-E05-00",
+    "01": "markor-E05-01",
+    "10": "markor-E05-10",
+    "11": "markor-E05-11"
+  },
+  "observable": {
+    "00": {
+      "markor-0015": false,
+      "markor-0016": false
+    },
+    "01": {
+      "markor-0015": false,
+      "markor-0016": true
+    },
+    "10": {
+      "markor-0015": true,
+      "markor-0016": false
+    },
+    "11": {
+      "markor-0015": true,
+      "markor-0016": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

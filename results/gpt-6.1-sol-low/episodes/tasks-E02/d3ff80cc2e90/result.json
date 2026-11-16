@@ -1,0 +1,118 @@
+{
+  "run_id": "d3ff80cc2e90",
+  "item_id": "tasks-E02",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Manual subtasks under Pack for trip",
+      "element_ref": 11,
+      "field": "Subtask ordering",
+      "symptom_type": "no_effect",
+      "expected": "With Subtasks set to My order, reversing the global sorting direction reverses nested manual order.",
+      "observed": "Print tickets stays above Charge phone in both Ascending and Descending; top-level same-date tasks do change order.",
+      "observed_quote": "Print tickets",
+      "steps": [
+        "Open Sort; verify Subtasks = My order.",
+        "Switch Sorting direction from Ascending to Descending and close sheet.",
+        "Observe Print tickets above Charge phone.",
+        "Switch to Ascending, close, then repeat Descending; nested order never changes."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Print tickets"
+        ],
+        "bounds": [
+          53,
+          945,
+          1080,
+          1097
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "tasks-0002"
+      ],
+      "present": [
+        "tasks-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/tasks-E02/d3ff80cc2e90/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0002": "reported"
+  },
+  "elapsed_s": 453.509,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept task list, global and per-list sorting, manual and title subtask order, collapse/expand, editor save/reopen/discard, empty title and unusual notes, rotation and navigation via parent/list. Checked existing monthly, hourly, 2-week and daily count=1 recurrence loading, cancel/OK and recurrence completion (hour/month/2-week advance; count=1 completes), with undo/restoration. One reproduced bug confirmed: manual nested order does not follow global direction. Test titles, notes, dates and global sorting settings restored."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "tasks-0002"
+  ],
+  "found": [
+    "tasks-0002"
+  ],
+  "required": [
+    "tasks-0002"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 205,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "tasks-0002"
+  ],
+  "bug_meta": {
+    "tasks-0002": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

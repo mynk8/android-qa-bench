@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="32.0" y="44.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="600" >Did the Agent Test What Changed?</text>
+<text x="32.0" y="70.0" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >Of the 92 release-note lines hiding a regression: how many the agent opened, exercised (6+ actions), and caught.</text>
+<text x="32.0" y="522.0" font-size="11" fill="#898781" text-anchor="start" font-weight="400" >Source: AQB episode suite, 51 episodes per model (9 Android apps, 91 planted regressions).</text>
+<rect x="32" y="94" width="12" height="12" rx="3" fill="#86b6ef"/>
+<text x="50.0" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Reached</text>
+<rect x="120.19999999999999" y="94" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="138.2" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Exercised</text>
+<rect x="221.6" y="94" width="12" height="12" rx="3" fill="#104281"/>
+<text x="239.6" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Caught</text>
+<line x1="72.0" y1="444.0" x2="928.0" y2="444.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="62.0" y="448.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0%</text>
+<line x1="72.0" y1="380.8" x2="928.0" y2="380.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="384.8" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >20%</text>
+<line x1="72.0" y1="317.6" x2="928.0" y2="317.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="321.6" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >40%</text>
+<line x1="72.0" y1="254.4" x2="928.0" y2="254.4" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="258.4" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >60%</text>
+<line x1="72.0" y1="191.2" x2="928.0" y2="191.2" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="195.2" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >80%</text>
+<line x1="72.0" y1="128.0" x2="928.0" y2="128.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="132.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >100%</text>
+<path d="M95.3,444.0 L95.3,180.1 Q95.3,176.1 99.3,176.1 L121.3,176.1 Q125.3,176.1 125.3,180.1 L125.3,444.0 Z" fill="#86b6ef"><title>Claude Sonnet 5.5 (medium): Reached 78/92 (85%)</title></path>
+<path d="M127.3,444.0 L127.3,296.9 Q127.3,292.9 131.3,292.9 L153.3,292.9 Q157.3,292.9 157.3,296.9 L157.3,444.0 Z" fill="#2a78d6"><title>Claude Sonnet 5.5 (medium): Exercised 44/92 (48%)</title></path>
+<path d="M159.3,444.0 L159.3,303.7 Q159.3,299.7 163.3,299.7 L185.3,299.7 Q189.3,299.7 189.3,303.7 L189.3,444.0 Z" fill="#104281"><title>Claude Sonnet 5.5 (medium): Caught 42/92 (46%)</title></path>
+<text x="143.3" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >Claude Sonnet 5.5</text>
+<text x="143.3" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >medium</text>
+<text x="174.3" y="293.7" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >42</text>
+<path d="M238.0,444.0 L238.0,145.7 Q238.0,141.7 242.0,141.7 L264.0,141.7 Q268.0,141.7 268.0,145.7 L268.0,444.0 Z" fill="#86b6ef"><title>GPT-6.1 Sol (low): Reached 88/92 (96%)</title></path>
+<path d="M270.0,444.0 L270.0,214.4 Q270.0,210.4 274.0,210.4 L296.0,210.4 Q300.0,210.4 300.0,214.4 L300.0,444.0 Z" fill="#2a78d6"><title>GPT-6.1 Sol (low): Exercised 68/92 (74%)</title></path>
+<path d="M302.0,444.0 L302.0,262.5 Q302.0,258.5 306.0,258.5 L328.0,258.5 Q332.0,258.5 332.0,262.5 L332.0,444.0 Z" fill="#104281"><title>GPT-6.1 Sol (low): Caught 54/92 (59%)</title></path>
+<text x="286.0" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >GPT-6.1 Sol</text>
+<text x="286.0" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >low</text>
+<text x="317.0" y="252.5" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >54</text>
+<path d="M380.7,444.0 L380.7,162.9 Q380.7,158.9 384.7,158.9 L406.7,158.9 Q410.7,158.9 410.7,162.9 L410.7,444.0 Z" fill="#86b6ef"><title>Claude Haiku 5.5: Reached 83/92 (90%)</title></path>
+<path d="M412.7,444.0 L412.7,200.7 Q412.7,196.7 416.7,196.7 L438.7,196.7 Q442.7,196.7 442.7,200.7 L442.7,444.0 Z" fill="#2a78d6"><title>Claude Haiku 5.5: Exercised 72/92 (78%)</title></path>
+<path d="M444.7,444.0 L444.7,314.0 Q444.7,310.0 448.7,310.0 L470.7,310.0 Q474.7,310.0 474.7,314.0 L474.7,444.0 Z" fill="#104281"><title>Claude Haiku 5.5: Caught 39/92 (42%)</title></path>
+<text x="428.7" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >Claude Haiku 5.5</text>
+<text x="428.7" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" ></text>
+<text x="459.7" y="304.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >39</text>
+<path d="M523.3,444.0 L523.3,166.3 Q523.3,162.3 527.3,162.3 L549.3,162.3 Q553.3,162.3 553.3,166.3 L553.3,444.0 Z" fill="#86b6ef"><title>GPT-6 Luna (max): Reached 82/92 (89%)</title></path>
+<path d="M555.3,444.0 L555.3,221.3 Q555.3,217.3 559.3,217.3 L581.3,217.3 Q585.3,217.3 585.3,221.3 L585.3,444.0 Z" fill="#2a78d6"><title>GPT-6 Luna (max): Exercised 66/92 (72%)</title></path>
+<path d="M587.3,444.0 L587.3,341.5 Q587.3,337.5 591.3,337.5 L613.3,337.5 Q617.3,337.5 617.3,341.5 L617.3,444.0 Z" fill="#104281"><title>GPT-6 Luna (max): Caught 31/92 (34%)</title></path>
+<text x="571.3" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >GPT-6 Luna</text>
+<text x="571.3" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >max</text>
+<text x="602.3" y="331.5" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >31</text>
+<path d="M666.0,444.0 L666.0,149.2 Q666.0,145.2 670.0,145.2 L692.0,145.2 Q696.0,145.2 696.0,149.2 L696.0,444.0 Z" fill="#86b6ef"><title>DeepSeek V4.1 Flash (high): Reached 87/92 (95%)</title></path>
+<path d="M698.0,444.0 L698.0,176.7 Q698.0,172.7 702.0,172.7 L724.0,172.7 Q728.0,172.7 728.0,176.7 L728.0,444.0 Z" fill="#2a78d6"><title>DeepSeek V4.1 Flash (high): Exercised 79/92 (86%)</title></path>
+<path d="M730.0,444.0 L730.0,290.0 Q730.0,286.0 734.0,286.0 L756.0,286.0 Q760.0,286.0 760.0,290.0 L760.0,444.0 Z" fill="#104281"><title>DeepSeek V4.1 Flash (high): Caught 46/92 (50%)</title></path>
+<text x="714.0" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >DeepSeek V4.1 Flash</text>
+<text x="714.0" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >high</text>
+<text x="745.0" y="280.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >46</text>
+<path d="M808.7,444.0 L808.7,214.4 Q808.7,210.4 812.7,210.4 L834.7,210.4 Q838.7,210.4 838.7,214.4 L838.7,444.0 Z" fill="#86b6ef"><title>GPT-6 Luna (medium): Reached 68/92 (74%)</title></path>
+<path d="M840.7,444.0 L840.7,355.3 Q840.7,351.3 844.7,351.3 L866.7,351.3 Q870.7,351.3 870.7,355.3 L870.7,444.0 Z" fill="#2a78d6"><title>GPT-6 Luna (medium): Exercised 27/92 (29%)</title></path>
+<path d="M872.7,444.0 L872.7,399.9 Q872.7,395.9 876.7,395.9 L898.7,395.9 Q902.7,395.9 902.7,399.9 L902.7,444.0 Z" fill="#104281"><title>GPT-6 Luna (medium): Caught 14/92 (15%)</title></path>
+<text x="856.7" y="466.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="500" >GPT-6 Luna</text>
+<text x="856.7" y="484.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >medium</text>
+<text x="887.7" y="389.9" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="600" >14</text>
+</svg>

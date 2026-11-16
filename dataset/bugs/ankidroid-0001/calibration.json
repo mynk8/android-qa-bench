@@ -1,0 +1,103 @@
+{
+  "bug_id": "ankidroid-0001",
+  "runs": 1,
+  "started": "2026-11-11T02:08:35+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer",
+          "mesa"
+        ]
+      },
+      "seconds": 33.4,
+      "screenshot_sha256": "234e7429fdd5a0380d243bfed4a7b220b3325c3542b0d64b02b289cceadab752",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0001-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer",
+          "hola",
+          "mesa"
+        ]
+      },
+      "seconds": 53.4,
+      "screenshot_sha256": "bc5e3f6fc1ad061956faae2d2f684bb58947404addd19ecdabe8742da4b88b66",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0001-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer"
+        ]
+      },
+      "seconds": 62.4,
+      "screenshot_sha256": "6d7f53b89ac689175a2d93b5078f11ed8c7718949feef091ee79fffbd0cabeb2",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0001-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer"
+        ]
+      },
+      "seconds": 97.5,
+      "screenshot_sha256": "ca3aa80e8f218adf9d1da415f72289ad6e0506e600e85e8b2bbbaa9981f332e9",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0001-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer"
+        ]
+      },
+      "seconds": 86.1,
+      "screenshot_sha256": "6857e68d2c008fc0fa7fb43e0a9356c19a7358c6d1392c6ef39d58b816a36b64",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0001-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer"
+        ]
+      },
+      "seconds": 38.5,
+      "screenshot_sha256": "33e39c8a91ad51adb9d39ef8e71b776f3a155c178e7a471bc2b0ca1e5f90af87",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0001-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T02:15:50+0530"
+}

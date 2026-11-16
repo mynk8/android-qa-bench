@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task list",
+    "element": "Water plants",
+    "field": "due date",
+    "symptom_type": "wrong_value",
+    "expected": "the next due time moves forward by one hour",
+    "observed": "the due time moves forward by only one minute instead of one hour",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task list",
+    "element": "something",
+    "field": "due date",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

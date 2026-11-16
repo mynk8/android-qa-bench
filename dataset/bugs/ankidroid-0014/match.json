@@ -1,0 +1,104 @@
+{
+  "screens": [
+    "deck picker"
+  ],
+  "elements": [
+    "expand arrow",
+    "chevron",
+    "caret",
+    "expander",
+    "arrow"
+  ],
+  "fields": [
+    "state"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the arrow flips to collapse after expanding",
+    "expander shows the new state"
+  ],
+  "observed_contains_any": [
+    "the arrow stays the same",
+    "expander does not change"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "collaps*",
+      "flip*",
+      "rotat*",
+      "point*",
+      "chang*",
+      "up",
+      "down",
+      "toggle*",
+      "update*",
+      "indicat*",
+      "opposite",
+      "revers*",
+      "turn*",
+      "direction",
+      "orient*",
+      "swap*",
+      "invert*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "expand*",
+      "identical",
+      "looks the same",
+      "pointing",
+      "keeps pointing"
+    ]
+  ],
+  "location_concepts": [
+    "deck list",
+    "deck picker",
+    "deck*",
+    "arrow*",
+    "expand*",
+    "collaps*",
+    "subdeck*",
+    "chevron*",
+    "caret*",
+    "expander*"
+  ],
+  "anchors": {
+    "elements": [
+      "expand",
+      "collapse",
+      "arrow",
+      "deck"
+    ],
+    "observed": []
+  }
+}

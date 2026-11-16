@@ -1,0 +1,130 @@
+{
+  "run_id": "16670cb021c9",
+  "item_id": "featherline-E05",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Plan > Add group (schedule preview)",
+      "element": "15",
+      "symptom_type": "wrong_value",
+      "field": "PREVIEW",
+      "expected": "With night owl mode on and times of day at 8:30 PM, the preview still lists today's 8:30 PM dose (Today, then Tomorrow). Night owl only shifts doses before 04:00, so it should not affect an 8:30 PM dose.",
+      "observed": "With night owl mode off the preview shows \"8:30 PM Today\" and \"8:30 PM Tomorrow\". Turning night owl on drops the Today entry: the preview becomes \"8:30 PM Tomorrow\" and \"8:30 PM Nov 15 Sun\". Reproduced twice. Start date Nov 14, current time 12:09.",
+      "observed_quote": "Tomorrow",
+      "steps": [
+        "Plan tab > Add group (Nov 14 start date, start time left at default and changed to 6:08 PM).",
+        "Add medication Estradiol valerate (Oral, 1 mg) to the group.",
+        "Set the Times of day entry to 8:30 PM.",
+        "With Night owl mode off, observe PREVIEW: 8:30 PM Today, 8:30 PM Tomorrow.",
+        "Turn Night owl mode on: PREVIEW shows 8:30 PM Tomorrow and 8:30 PM Nov 15 Sun; today's dose is gone.",
+        "Turn Night owl mode off again: Today entry returns."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home",
+      "element": "16",
+      "symptom_type": "wrong_value",
+      "field": "TODAY schedule",
+      "expected": "Home and Plan agree on today's doses. Plan's Nov 14 (SAT \u00b7 TODAY) card lists the Estradiol valerate 8:30 PM dose (0/1), so Home should list it under TODAY, or Plan should not show it there.",
+      "observed": "Home under \"TODAY / NOV 14 SAT\" shows \"Nothing scheduled today.\" and the 8:30 PM dose appears only under \"TOMORROW\". Plan on the same day (Nov 14) shows the Estradiol valerate Oral \u00b7 1 mg 8:30 PM entry with \"0/1\".",
+      "observed_quote": "Nothing scheduled today.",
+      "steps": [
+        "Fresh install, no medications. Settings not changed.",
+        "Plan > Medicines > Add medicine: Estradiol valerate, Tablet, 1 mg. Save.",
+        "Plan > Add (group): add Estradiol valerate (Oral, 1 mg), start date Nov 14 (default), start time 6:08 PM, daily, times of day 8:30 PM, Night owl mode ON. Save.",
+        "Plan tab: Nov 14 SAT \u00b7 TODAY shows the 8:30 PM Estradiol valerate entry with 0/1.",
+        "Tap Home tab: TODAY NOV 14 SAT says 'Nothing scheduled today.'; TOMORROW lists the 8:30 PM dose."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0018",
+        "featherline-0019"
+      ],
+      "present": [
+        "featherline-0018",
+        "featherline-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/featherline-E05/16670cb021c9/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0018": "missed_unreached",
+    "featherline-0019": "missed_unreached"
+  },
+  "elapsed_s": 428.984,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "missed": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "bug_meta": {
+    "featherline-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

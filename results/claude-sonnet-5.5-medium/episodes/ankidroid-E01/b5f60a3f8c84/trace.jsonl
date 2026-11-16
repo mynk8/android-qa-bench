@@ -1,0 +1,34 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E01-11", "mask": "11", "unfixed": ["ankidroid-0001", "ankidroid-0019"], "present": ["ankidroid-0001", "ankidroid-0019"]}}
+{"event": "brief", "item_id": "ankidroid-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1300}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 556}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 687}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "bug_report", "screen": "Card browser > Edit tags dialog", "element": "verb tag checkbox", "symptom_type": "wrong_value", "expected": "With comer (tagged verb) and hola (untagged) selected, the verb checkbox should be indeterminate/partial, since only some selected notes have it", "observed": "The verb checkbox is fully checked, as if both selected notes had the tag", "steps": ["Open Card browser from drawer, choose deck Spanish", "Long-press comer, tap hola to select both", "Menu > Edit tags", "Look at the verb checkbox"], "element_ref": 5, "anchor_node": {"id": "com.ichi2.anki:id/check_box_view", "class": "android.widget.CheckBox", "bounds": [874, 277, 989, 403]}}}
+{"event": "scored", "report_n": 1, "quote_seen": null, "kind": "hit", "bugs": ["ankidroid-0001"], "per_bug": {"ankidroid-0019": "expected_value", "ankidroid-0001": "ok"}}
+{"event": "hit", "bugs": ["ankidroid-0001"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 616, "y": 2132}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 804}}}
+{"event": "agent", "step": 23, "message": {"type": "bug_report", "screen": "Card browser", "element": "deck dropdown in toolbar", "symptom_type": "wrong_value", "expected": "Browse cards from French opens the browser on deck French (3 cards)", "observed": "Browser opens on previously used deck Spanish with 4 cards", "steps": ["Open Card browser, select Spanish, go back to deck list", "Long-press French > Browse cards", "Observe deck dropdown"], "observed_quote": "Spanish", "element_ref": 1, "anchor_node": {"id": "com.ichi2.anki:id/toolbar_content", "class": "android.widget.LinearLayout", "contains": ["Spanish", "4 cards shown"], "bounds": [147, 90, 721, 204]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["ankidroid-0019"], "per_bug": {"ankidroid-0019": "ok", "ankidroid-0001": "location"}}
+{"event": "hit", "bugs": ["ankidroid-0019"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 27, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.4, "notes": "Filed 2 bugs: the tag dialog showed verb fully checked for a mixed selection, and Browse cards from French opened on Spanish. Not covered: the deck list search (no search control appeared with two decks) and the expand/collapse arrows (no parent decks exist). Tag edits were not applied or checked for persistence, and rotation was not tested."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0001", "ankidroid-0019"], "unfixed": ["ankidroid-0001", "ankidroid-0019"], "outcome": "success"}

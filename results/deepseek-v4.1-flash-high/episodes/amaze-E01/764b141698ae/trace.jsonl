@@ -1,0 +1,305 @@
+{"event": "install", "build": {"n": 1, "build_id": "amaze-E01-11", "mask": "11", "unfixed": ["amaze-0004", "amaze-0005"], "present": ["amaze-0004"]}}
+{"event": "brief", "item_id": "amaze-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 753}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 831, "y": 1558}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 388}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1348}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 388}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1096}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 556, "y": 1558}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1335}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 753}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 569}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 543, "y": 1423}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1335}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 753}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 753}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 67, "message": {"type": "bug_report", "screen": "Amaze > Beta (paste conflict dialog)", "element": "Paste conflict dialog RENAME choice; after tapping it the folder list still shows no renamed copy", "field": "Paste conflict > RENAME (folder)", "symptom_type": "no_effect", "expected": "Choosing RENAME when pasting folder Alpha into a folder that already contains Alpha should create a renamed copy (e.g. \"Alpha (1)\") containing readme.txt, incrementing the folder count to 2.", "observed": "Tapping RENAME silently closes the conflict dialog and creates nothing: the destination /AndroidQA/Amaze/Beta still shows \"1 folders and 2 files\" with only the original Alpha folder. Reproduced twice (also when pasting into the same parent). For comparison, RENAME on a FILE conflict (notes.txt) correctly created \"notes (1).txt\".", "steps": ["Open AndroidQA/Amaze", "Long-press folder Alpha and tap Copy", "Open folder Beta (which already contains an Alpha copy)", "Tap PASTE on the snackbar", "In the 'File with same name already exists' dialog tap RENAME", "Observe that no renamed folder appears and the count stays '1 folders and 2 files'"], "element_ref": 6, "observed_quote": "1 folders and 2 files", "anchor_node": {"id": "com.amaze.filemanager:id/pathname", "text": "1 folders and 2 files", "class": "android.widget.TextView", "bounds": [0, 304, 470, 381]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0004"], "per_bug": {"amaze-0004": "ok", "amaze-0005": "expected_value"}}
+{"event": "hit", "bugs": ["amaze-0004"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 569}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 543, "y": 1045}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 760}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "type", "args": {"text": "AlphaQA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 569}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 543, "y": 1045}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "type", "args": {"text": "Alpha", "clear": true, "submit": false}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 680, "y": 1607}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1006}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "type", "args": {"text": "report_final.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 684, "y": 937}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 680, "y": 1151}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1707}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "type", "args": {"text": "dup_notes.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1800}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 569}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 543, "y": 1549}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 680, "y": 569}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1549}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 617}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1198}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 2085}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 116, "message": {"type": "bug_report", "screen": "Amaze Debug drawer (bookmarks section)", "element": "Bookmark entries in the navigation drawer", "field": "Bookmarks drawer ordering", "symptom_type": "wrong_value", "expected": "Bookmark entries in the drawer should be ordered by when they were added (per this build's change). Adding Alpha, then Beta, then Audiobooks, then Alarms should keep that addition sequence (or its reverse), not reorder them.", "observed": "Bookmarks are displayed in alphabetical order, not addition order. I added bookmarks sequentially: Alpha (1st), Beta (2nd), Audiobooks (3rd), Alarms (4th); the drawer shows: Alarms, Alpha, Audiobooks, Beta, DCIM, Download, Movies, Music, Pictures. Audiobooks was added after Beta yet appears before it, and Alarms was added last yet appears first — a pure name sort.", "steps": ["Open the drawer and note existing bookmarks DCIM/Download/Movies/Music/Pictures", "In AndroidQA/Amaze, long-press Alpha > Add to Bookmarks", "Add Beta to bookmarks", "At /storage/emulated/0 add Audiobooks to bookmarks", "Add Alarms to bookmarks", "Open the drawer: entries appear alphabetically (Alarms, Alpha, Audiobooks, Beta, ...) instead of in the order they were added"], "element_ref": 48, "observed_quote": "Audiobooks", "anchor_node": {"class": "androidx.appcompat.widget.LinearLayoutCompat", "contains": ["Nov 14 | 6:33 AM", "Audiobooks"], "bounds": [0, 977, 798, 1103]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "location", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 724, "y": 617}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1730}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 831, "y": 1558}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 129, "message": {"type": "bug_report", "screen": "Amaze Debug navigation drawer, list of bookmark folders", "element": "Bookmark entries between \"Internal Storage\" and \"Quick access\"", "field": "Bookmark ordering (drawer)", "symptom_type": "wrong_value", "expected": "Per the release change, drawer bookmark entries should be ordered by when they were added. Adding bookmarks in the order Alpha -> Beta -> Audiobooks -> Alarms should produce Alpha, Beta, Audiobooks, Alarms (or the exact reverse), not a name sort.", "observed": "The drawer shows the bookmark folders in plain alphabetical order: \"Alarms\", \"Alpha\", \"Audiobooks\", \"Beta\", \"DCIM\", \"Download\", \"Movies\", \"Music\", \"Pictures\". I added Alpha first, Beta second, Audiobooks third and Alarms last, yet Alarms (added last) is at the very top and Audiobooks (added 3rd) sits before Beta (added 2nd), proving the list is sorted by name and not by addition time. Changing the list sort setting (descending) does not change this drawer order. Order survives app reopen. This is reproducible from a fresh drawer each time.", "steps": ["Open AndroidQA/Amaze and long-press Alpha, choose Add to Bookmarks", "Long-press Beta, choose Add to Bookmarks", "Navigate to /storage/emulated/0, long-press Audiobooks, choose Add to Bookmarks", "Long-press Alarms, choose Add to Bookmarks", "Open the navigation drawer", "Observe order is Alarms, Alpha, Audiobooks, Beta, DCIM... i.e. alphabetical, not the Alpha, Beta, Audiobooks, Alarms addition order"], "element_ref": 48, "observed_quote": "Alarms", "anchor_node": {"class": "androidx.appcompat.widget.LinearLayoutCompat", "contains": ["Nov 14 | 6:32 AM", "Audiobooks"], "bounds": [0, 977, 798, 1103]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "spray", "amaze-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 1585}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 556, "y": 1558}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 1967}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 724, "y": 914}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1373}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 2221, "y": 126}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 2500, "y": 700}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 161, "message": {"type": "bug_report", "screen": "Amaze Debug > /storage/emulated/0/AndroidQA/Amaze, More options menu", "element": "More options > view mode toggle (\"Grid View\" item shown while the folder was set to grid)", "field": "Directory view mode per folder (grid/list)", "symptom_type": "not_persisted", "expected": "The grid/list choice stored for this folder path should survive a device rotation, so Amaze stays in Grid View before and after rotating to landscape and back.", "observed": "After setting /AndroidQA/Amaze to Grid View (menu then offered \"List View\" and items rendered as a grid), rotating to landscape and back to portrait resets the folder to List View: items render as full-width rows and the More options menu offers \"Grid View\" again. Reproduced twice. The per-folder grid choice is therefore not persisted across configuration change (rotation).", "steps": ["Navigate to /storage/emulated/0/AndroidQA/Amaze", "Open More options and tap Grid View (items switch to grid; menu then shows List View)", "Rotate device to landscape", "Rotate device back to portrait", "Open More options: it shows Grid View and the files are in list layout, i.e. the saved grid choice was lost"], "element_ref": 2, "observed_quote": "Grid View", "anchor_node": {"class": "android.widget.LinearLayout", "contains": ["Grid View"], "bounds": [555, 325, 1070, 451]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "location", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "key", "args": {"key": "APP_SWITCH"}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1010}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 540, "y": 1010}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 181, "message": {"type": "bug_report", "screen": "Amaze Debug > /storage/emulated/0/AndroidQA/Amaze, More options menu after app restart", "element": "View mode toggle in More options menu (shows \"Grid View\" although this folder was set to grid before restart)", "field": "Directory view mode stored per folder path", "symptom_type": "not_persisted", "expected": "The grid choice stored for /storage/emulated/0/AndroidQA/Amaze should still be applied after closing and reopening the app, so the menu should offer \"List View\" and the folder should render as a grid.", "observed": "Set /AndroidQA/Amaze to Grid View (the menu then offered \"List View\" and items rendered as a grid). Chose More options > Exit, then relaunched the app; the same folder now renders as a list (full-width rows) and More options again offers \"Grid View\", so the per-folder view choice was not persisted. Reproduced twice. On the same restart the header also showed a wrong count, \"4 folders and 10 files\", while the folder contains 2 folders and 5 files.", "steps": ["Navigate to /storage/emulated/0/AndroidQA/Amaze", "More options > Grid View (confirm menu now offers List View; list renders as grid)", "More options > Exit (app returns to launcher)", "Reopen Amaze from launcher", "The folder is back in list layout and More options offers Grid View - the stored grid choice was lost"], "element_ref": 2, "observed_quote": "Grid View", "anchor_node": {"class": "android.widget.LinearLayout", "contains": ["Grid View"], "bounds": [555, 325, 1070, 451]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "location", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 2004}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1198}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 2085}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 228, "message": {"type": "bug_report", "screen": "Amaze Debug > /storage/emulated/0 (root) right after relaunching the app", "element": "Folder count header (id=pathname) under the path bar", "field": "Folder count after app restart", "symptom_type": "wrong_value", "expected": "The header for /storage/emulated/0 should report the real number of folders, i.e. \"14 folders and 0 files\", matching the 14 directories actually listed.", "observed": "After choosing More options > Exit and relaunching the app, the header reports \"28 folders and 0 files\" while /storage/emulated/0 contains only 14 folders (Alarms, Android, AndroidQA, Audiobooks, DCIM, Documents, Download, Movies, Music, Notifications, Pictures, Podcasts, Recordings, Ringtones). The count is exactly doubled. Same happens in a subfolder: /AndroidQA/Amaze shows \"4 folders and 10 files\" on restart while it actually has 2 folders and 5 files. Navigating into a folder and back corrects the count, but every app relaunch restores the doubled count. Reproduced several times.", "steps": ["Navigate to /storage/emulated/0 (header shows 14 folders and 0 files)", "More options > Exit", "Relaunch Amaze", "Header now shows 28 folders and 0 files while the same 14 folders are listed"], "element_ref": 6, "observed_quote": "28 folders and 0 files", "anchor_node": {"id": "com.amaze.filemanager:id/pathname", "text": "28 folders and 0 files", "class": "android.widget.TextView", "bounds": [0, 304, 488, 381]}}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "spray", "amaze-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1242}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "type", "args": {"text": "marker.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 246, "message": {"type": "bug_report", "screen": "Amaze > Beta > Alpha (after Paste conflict > RENAME of folder Alpha)", "element": "Existing Alpha folder receiving the source folder's contents", "field": "Paste conflict RENAME folder copy destination", "symptom_type": "wrong_navigation", "expected": "Choosing RENAME when pasting folder Alpha into a folder that already contains an Alpha should create a separate renamed copy (e.g. \"Alpha (1)\") containing the source's readme.txt, leaving the existing Alpha with only its own marker.txt.", "observed": "No renamed copy is created. Instead the source folder's contents are merged into the existing conflicting folder: after the RENAME, /AndroidQA/Amaze/Beta still reports \"1 folders and 2 files\" (no Alpha (1)), but opening the existing /AndroidQA/Amaze/Beta/Alpha shows both its original marker.txt AND a new readme.txt copied from the source (0 folders and 2 files). So the renamed folder copy's contents are written into the destination's existing folder rather than into a new renamed folder.", "steps": ["In /AndroidQA/Amaze/Beta/Alpha, rename readme.txt to marker.txt so the folder differs from source Alpha", "Go to /AndroidQA/Amaze, long-press folder Alpha and Copy", "Open /AndroidQA/Amaze/Beta (already contains Alpha) and tap PASTE", "In the 'File with same name already exists' dialog tap RENAME", "Observe Beta still shows '1 folders and 2 files' (no renamed folder) and Beta/Alpha now contains marker.txt plus readme.txt copied from the source"], "element_ref": 11, "observed_quote": "readme.txt", "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["readme.txt", "Nov 14 | 6:33 AM", "0 B"], "bounds": [0, 720, 1080, 909]}}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0004"], "per_bug": {"amaze-0004": "ok", "amaze-0005": "observed_value"}}
+{"event": "duplicate", "bugs": ["amaze-0004"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1180}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "tap_xy", "args": {"x": 281, "y": 1432}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 831, "y": 1558}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "tap_xy", "args": {"x": 630, "y": 1398}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 617}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 788}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 617}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 1200}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 892}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 288, "message": {"type": "bug_report", "screen": "Amaze Debug navigation drawer after relaunching the app", "element": "Bookmark folder list in the drawer (first entry after Internal Storage)", "field": "Bookmarks persistence", "symptom_type": "not_persisted", "expected": "A bookmark added via More options (folder context menu) > Add to Bookmarks should still be present in the drawer after closing and reopening the app.", "observed": "Bookmarks added via \"Add to Bookmarks\" are lost when the app is closed and reopened. At /storage/emulated/0 I added a bookmark for folder Alarms; the drawer immediately showed \"Alarms\" above DCIM (verified twice). Then More options > Exit, relaunch Amaze: the drawer again lists only the default bookmarks DCIM, Download, Movies, Music, Pictures - Alarms and all previously added custom bookmarks (AndroidQA, Audiobooks, Amaze) are gone. They are also not merely reordered; they no longer exist in the drawer.", "steps": ["At /storage/emulated/0 tap the three-dot menu of folder Alarms", "Tap Add to Bookmarks", "Open the drawer - Alarms now appears between Internal Storage and DCIM", "More options > Exit (app returns to launcher)", "Relaunch Amaze and open the drawer - the Alarms bookmark is gone, only DCIM/Download/Movies/Music/Pictures remain"], "element_ref": 44, "anchor_node": {"class": "androidx.appcompat.widget.LinearLayoutCompat", "contains": ["Android", "DCIM"], "bounds": [0, 725, 798, 851]}}}
+{"event": "limit", "which": "reports"}

@@ -1,0 +1,5 @@
+{
+  "clear_app_data": true,
+  "id": "plan_empty",
+  "preconditions": "Fresh install with no medications, plans or lab results."
+}

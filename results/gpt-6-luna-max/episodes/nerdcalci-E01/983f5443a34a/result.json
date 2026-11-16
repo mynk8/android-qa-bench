@@ -1,0 +1,225 @@
+{
+  "run_id": "983f5443a34a",
+  "item_id": "nerdcalci-E01",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Monthly budget calculation file",
+      "element": "result for line 6 (total)",
+      "element_ref": 17,
+      "field": "line 6: total",
+      "symptom_type": "wrong_value",
+      "expected": "The total should combine every calculated result above it, so this total is 5,650.50 (2,500 + 300.50 + 2,800.50 + 49.50).",
+      "observed": "It shows only the most recent value, 49.50, even though earlier calculated rows and the earlier total are above it.",
+      "observed_quote": "49.50",
+      "steps": [
+        "From the home screen, open Monthly budget.",
+        "Read the result on the second total line (line 6).",
+        "Return to the home screen and reopen Monthly budget; the same value remains."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "49.50"
+        ],
+        "bounds": [
+          797,
+          758,
+          1048,
+          865
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Temperatures calculation file",
+      "element": "result for line 1",
+      "element_ref": 2,
+      "field": "line 1: -5 celsius",
+      "symptom_type": "wrong_value",
+      "expected": "-5 celsius should display -5.00 \u00b0C.",
+      "observed": "The result is -551.30 \u00b0C. Reopening the file reproduces the same value; the negative conversion rows are also incorrect.",
+      "observed_quote": "-551.30 \u00b0C",
+      "steps": [
+        "From the home screen, open Temperatures.",
+        "Read the result next to the first expression, -5 celsius.",
+        "Return to the home screen and reopen Temperatures; line 1 still shows -551.30 \u00b0C."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "-551.30 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          252,
+          1048,
+          378
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Percentages calculation file",
+      "element": "result for line 3 (disc% of price)",
+      "element_ref": 8,
+      "field": "percentage expression using a variable, including disc% of price, disc% off price, and tax% of 1200",
+      "symptom_type": "wrong_value",
+      "expected": "These valid expressions should evaluate: disc% of price = 36, disc% off price = 204, and tax% of 1200 = 102.",
+      "observed": "Each variable-based percentage expression returns Err (the error detail for the first says Unexpected %); the numeric-literal form 10% of 80 evaluates to 8.",
+      "observed_quote": "Err",
+      "steps": [
+        "From the home screen, open Percentages.",
+        "Compare the results for disc% of price, disc% off price, and tax% of 1200 with the numeric form 10% of 80.",
+        "Return to the home screen and reopen Percentages; the same three expressions still show Err."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          437,
+          1048,
+          544
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog",
+      "element": "name input field",
+      "element_ref": 38,
+      "field": "file name selection on dialog open",
+      "symptom_type": "missing",
+      "expected": "When the rename dialog opens, the entire current file name should be selected so typing a replacement immediately replaces it.",
+      "observed": "The dialog shows the current name with an insertion caret at the end and no selected text; typing a replacement does not replace the whole name.",
+      "observed_quote": "Untitled",
+      "steps": [
+        "Open the newly created Untitled calculation file.",
+        "Tap the file name in the toolbar to open Rename File.",
+        "Observe the focused input: the caret is at the end of Untitled and no part of the name is selected."
+      ],
+      "anchor_node": {
+        "text": "Untitled",
+        "class": "android.widget.EditText",
+        "bounds": [
+          183,
+          652,
+          897,
+          799
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ],
+      "present": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/nerdcalci-E01/983f5443a34a/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0001": "missed_unreached",
+    "nerdcalci-0002": "reported",
+    "nerdcalci-0008": "reported"
+  },
+  "elapsed_s": 514.438,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept totals and averages, negative and mixed temperature behavior, percentage syntax (including remainders), and file creation/renaming. Confirmed and logged the negative-temperature result and variable-based percentage parse errors. Rechecked Expenses after restoring its original fuel expression; its values are back to the supplied data. Created QA Scratch to verify create/rename/persistence and removed that test file. Rename length boundary capped at 50 characters; cancel preserved Expenses."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "found": [
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "required": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "missed": [
+    "nerdcalci-0001"
+  ],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 126,
+  "precision": 0.5,
+  "recall": 0.6666666666666666,
+  "unfixed_at_end": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "bug_meta": {
+    "nerdcalci-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0002": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

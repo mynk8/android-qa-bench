@@ -1,0 +1,67 @@
+{
+  "bug_id": "tasks-0019",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "redundant or missing UI",
+  "symptom_type": "duplicated",
+  "fix_date": "2023-07-16",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "sort_icon": [
+        {
+          "desc": "Sort"
+        },
+        {
+          "text": "Sort"
+        }
+      ],
+      "sorting_row": [
+        {
+          "text": "Sorting"
+        }
+      ],
+      "sort_title": [
+        {
+          "text": "By title"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0019-buggy",
+    "fixed": "tasks-0019-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0019.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "Dropped the showAscending condition on the Subtasks row so the order button is always shown."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

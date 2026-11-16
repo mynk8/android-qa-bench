@@ -1,0 +1,65 @@
+{
+  "screens": [
+    "medication list"
+  ],
+  "elements": [
+    "dose summary"
+  ],
+  "fields": [
+    "tablet count"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the summary omits the redundant 1 tablet",
+    "only the mg line is shown"
+  ],
+  "observed_contains_any": [
+    "the summary repeats 1 tablet",
+    "redundant 1 tablet text"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "only",
+      "just",
+      "without",
+      "omit*",
+      "no",
+      "mg",
+      "not show*",
+      "hide*",
+      "drop*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "1 tablet",
+      "tablet*",
+      "redundant",
+      "extra",
+      "repeat*",
+      "also",
+      "duplicat*"
+    ]
+  ],
+  "location_concepts": [
+    "summary",
+    "medication*",
+    "medicine*",
+    "dose*"
+  ],
+  "anchors": {
+    "elements": [
+      "estradiol valerate",
+      "oral",
+      "dose summary",
+      "tablet"
+    ],
+    "observed": [
+      "1 tablets"
+    ]
+  }
+}

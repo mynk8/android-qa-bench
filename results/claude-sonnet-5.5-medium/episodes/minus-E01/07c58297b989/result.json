@@ -1,0 +1,118 @@
+{
+  "run_id": "07c58297b989",
+  "item_id": "minus-E01",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main screen number pad",
+      "element": "Amount display",
+      "symptom_type": "wrong_value",
+      "expected": "A third decimal digit is ignored; the amount stays at $0.99 after typing .999 (or $0.55 after .555)",
+      "observed": "The third decimal digit is rounded into the amount, which changes it. Typing .555 shows $0.56. Typing .999 shows $0.6. The fourth digit is ignored.",
+      "observed_quote": "$0.6",
+      "steps": [
+        "Open the main screen",
+        "Tap '.' then 9, 9, 9",
+        "Amount shows $0.59 after two 9s, then $0.6 after the third"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen number pad",
+      "element": "Amount display",
+      "symptom_type": "wrong_value",
+      "expected": "A third decimal digit is rejected, so the amount stays $0.99 and a fourth tap changes nothing",
+      "observed": "A third decimal digit is accepted and rounded into the amount. .99 becomes $1 after one more 9. Earlier, .55 became $0.56 after another 5. The entered amount silently changes.",
+      "observed_quote": "$1",
+      "steps": [
+        "Clear the amount to $0 with backspace",
+        "Tap '.'",
+        "Tap 9 three times",
+        "Display goes $0.9, $0.99, then $1 (toolbar 'For tomorrow $1.68')"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E01-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0014"
+      ],
+      "present": [
+        "minus-0014"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/minus-E01/07c58297b989/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0014": "missed_unreached"
+  },
+  "elapsed_s": 122.915,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Checked: expense entry (amount 5.5 with Food category), decimal key (a second dot is ignored), budget sheet totals ($65.5 spent, $100 budget, 11 Nov to 04 Dec, 20 days left), the calculation breakdown, and rotation. All of these were consistent. Two things were not settled. I reported that a third decimal digit appears to be accepted and rounded (.999 displays as $1, .555 as $0.56); the developer could not reproduce it from my steps, so I did not pursue it. I did not test the budget sheet totals with a different selected currency, because that would change app data. I also did not confirm what the toolbar should show after a category is applied."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0014"
+  ],
+  "found": [],
+  "required": [
+    "minus-0014"
+  ],
+  "missed": [
+    "minus-0014"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 60,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0014"
+  ],
+  "bug_meta": {
+    "minus-0014": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

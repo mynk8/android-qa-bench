@@ -1,0 +1,67 @@
+{
+  "screens": [
+    "shop",
+    "store",
+    "profile"
+  ],
+  "elements": [
+    "coins",
+    "coin balance",
+    "balance"
+  ],
+  "fields": [
+    "coins",
+    "coin balance",
+    "amount"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the coin balance 2,567,890 is shown as 2.5M",
+    "the balance is floored to one decimal"
+  ],
+  "observed_contains_any": [
+    "the coin balance is shown as 2.6M",
+    "the balance is rounded up"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "2.5m",
+      "2.5 m",
+      "floor*",
+      "truncat*",
+      "rounded down",
+      "round* down",
+      "not round*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "2.6m",
+      "2.6 m",
+      "round* up",
+      "rounded",
+      "higher",
+      "overstat*",
+      "more than"
+    ]
+  ],
+  "location_concepts": [
+    "shop",
+    "coin*",
+    "balance",
+    "profile"
+  ],
+  "anchors": {
+    "elements": [
+      "Coins",
+      "coin balance",
+      "balance"
+    ],
+    "observed": [
+      "2.6m"
+    ]
+  }
+}

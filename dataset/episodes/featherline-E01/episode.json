@@ -1,0 +1,50 @@
+{
+  "episode_id": "featherline-E01",
+  "app_id": "featherline",
+  "bugs": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "seed_id": "plan_empty",
+  "builds": {
+    "00": "featherline-E01-00",
+    "01": "featherline-E01-01",
+    "10": "featherline-E01-10",
+    "11": "featherline-E01-11"
+  },
+  "observable": {
+    "00": {
+      "featherline-0014": false,
+      "featherline-0015": false
+    },
+    "01": {
+      "featherline-0014": false,
+      "featherline-0015": true
+    },
+    "10": {
+      "featherline-0014": true,
+      "featherline-0015": false
+    },
+    "11": {
+      "featherline-0014": true,
+      "featherline-0015": true
+    }
+  },
+  "interactions": [
+    {
+      "a": "featherline-0014",
+      "b": "featherline-0015",
+      "type": "independent"
+    }
+  ],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

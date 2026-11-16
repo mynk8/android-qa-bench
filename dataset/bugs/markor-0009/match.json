@@ -1,0 +1,90 @@
+{
+  "screens": [
+    "file browser"
+  ],
+  "elements": [
+    "favourite",
+    "star",
+    "favourite action",
+    "toolbar"
+  ],
+  "fields": [
+    "star",
+    "favourite state"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "after favouriting in the details dialog the toolbar star shows Notes.md as a favourite and tapping it removes the favourite",
+    "Notes.md is not listed under Favourites"
+  ],
+  "observed_contains_any": [
+    "the toolbar star was not updated and still treats Notes.md as not a favourite",
+    "Notes.md is still listed under Favourites"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "not_persisted",
+    "missing",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "star*",
+      "favourite*",
+      "favorite*",
+      "fav*",
+      "remov*",
+      "unfavourit*",
+      "filled",
+      "toggle*",
+      "in sync",
+      "updat*",
+      "refresh*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "stale",
+      "not updat*",
+      "not refresh*",
+      "out of sync",
+      "not in sync",
+      "outdated",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "outline*",
+      "unfilled",
+      "empty star",
+      "hollow",
+      "not filled",
+      "add*",
+      "not remov*",
+      "didn't remov*",
+      "did not remov*",
+      "doesn't remov*",
+      "does not remov*",
+      "unchanged",
+      "not show*",
+      "wrong state"
+    ]
+  ],
+  "location_concepts": [
+    "favourite*",
+    "favorite*",
+    "star*",
+    "file browser",
+    "file info"
+  ],
+  "anchors": {
+    "elements": [
+      "Notes.md",
+      "Favourites",
+      "Favourite"
+    ],
+    "observed": [
+      "notes.md"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "bug_id": "amaze-0019",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "missing UI",
+  "symptom_type": "missing",
+  "fix_date": "2026-07-09",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "rename": [
+        {
+          "text": "Rename"
+        }
+      ],
+      "rename_field": [
+        {
+          "id": "com.amaze.filemanager:id/singleedittext_input"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0019-buggy",
+    "fixed": "amaze-0019-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0019.patch",
+    "confidence": "medium",
+    "lines_changed": 4,
+    "approach": "Removed the same-name warning branch from the rename dialog validator in MainFragment.rename."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

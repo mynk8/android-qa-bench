@@ -1,0 +1,90 @@
+{
+  "episode_id": "markor-E02",
+  "start_build": "markor-E02-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "$1\n"
+      },
+      "seconds": 42.4,
+      "screenshot_sha256": "60495b3c779798c6529b096da34850a842953892102c51e3f2ca6ab46b80b0d9",
+      "bug": "markor-0010",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "cat\n"
+      },
+      "seconds": 41.6,
+      "screenshot_sha256": "54468363297238214e7638138ec186b7bd8ec4918214fac90dd5d5ae5db0f2b7",
+      "bug": "markor-0010",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "10:25",
+          "10:25\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Money",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Costs 5 and 10",
+          "Rotate",
+          "Open with",
+          "Jump to bottom"
+        ]
+      },
+      "seconds": 22.3,
+      "screenshot_sha256": "e04858afa80aa9835a76fc248bac45be72d1fd423299fe1b370bb41d27efb7c1",
+      "bug": "markor-0007",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Shopping",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Shopping",
+          "Shopping",
+          "Shopping",
+          "\u2022 ",
+          "milk",
+          "\u2022 ",
+          "eggs",
+          "Rotate",
+          "Open with",
+          "Jump to bottom",
+          "10:25",
+          "10:25\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 21.8,
+      "screenshot_sha256": "56ceb08a61b8da65096acc521ae2117f502d33d5b0353b368f9604bf3c19939b",
+      "bug": "markor-0007",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

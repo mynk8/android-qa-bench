@@ -1,0 +1,85 @@
+{
+  "run_id": "ace943b7aab9",
+  "item_id": "ankidroid-E05",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "ankidroid-0008"
+      ],
+      "present": [
+        "ankidroid-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/ankidroid-E05/ace943b7aab9/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0008": "missed_unreached"
+  },
+  "elapsed_s": 232.454,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "I found no bugs and filed no reports. Covered: card browser (cards/notes toggle, per-mode columns, truncate option persistence, tag filter, deck filter, counts), add and edit note (deck chooser order with nested decks, adding a note, editing a back field and a tag, rotation), and the deck list (expand/collapse arrows over 2 and 3 nesting levels, state kept after leaving and returning, counts after adding a note). The one oddity: newly created parent decks start collapsed. The arrows and the visible children agree with each other, so I did not report it. I did not test study/review or deck rename/delete. I added a few test notes and decks (gato, Spanish::Verbs, French::Food, Spanish::Verbs::Irregular) and did not remove them."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0008"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0008"
+  ],
+  "missed": [
+    "ankidroid-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 93,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0008"
+  ],
+  "bug_meta": {
+    "ankidroid-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

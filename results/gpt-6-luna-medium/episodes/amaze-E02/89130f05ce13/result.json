@@ -1,0 +1,96 @@
+{
+  "run_id": "89130f05ce13",
+  "item_id": "amaze-E02",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0007",
+        "amaze-0008"
+      ],
+      "present": [
+        "amaze-0007",
+        "amaze-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/amaze-E02/89130f05ce13/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0007": "missed_unreached",
+    "amaze-0008": "missed_unreached"
+  },
+  "elapsed_s": 134.098,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.83,
+    "notes": "Swept file copy with same-folder paste conflict and source-relative Rename result, file rename dialog prefill/cancel, sort by Type with ascending and directory/file headings, Grid View, bookmark addition and drawer refresh after reopening, and rotation persistence. No reproducible defects found. Test-created notes (1).txt and Alpha bookmark remain."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "missed": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 34,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "bug_meta": {
+    "amaze-0007": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "amaze-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

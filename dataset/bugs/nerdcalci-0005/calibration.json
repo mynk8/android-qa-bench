@@ -1,0 +1,208 @@
+{
+  "bug_id": "nerdcalci-0005",
+  "runs": 1,
+  "started": "2026-11-11T10:53:59+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:24",
+          "5:24 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h -30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d -16 h -30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 17.3,
+      "screenshot_sha256": "024cfbbdcc75f6c41dcb08523c44df15c9885360eabf949e8e20ec0aa336a08b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0005-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:24",
+          "5:24 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h -30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d -16 h -30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 22.9,
+      "screenshot_sha256": "024cfbbdcc75f6c41dcb08523c44df15c9885360eabf949e8e20ec0aa336a08b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0005-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:25",
+          "5:25 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h -30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d -16 h -30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 17.3,
+      "screenshot_sha256": "bf2e3a2be2e0dff0b03b03828a4618c3f477d3647ee90385ead6c88696095ccd",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0005-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:25",
+          "5:25 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h 30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d 16 h 30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 19.5,
+      "screenshot_sha256": "367f71094cd2b295caf7be94efc2606e67ccb8711dad82cc766ff1ca790a9337",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0005-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:25",
+          "5:25 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h 30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d 16 h 30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 19.3,
+      "screenshot_sha256": "367f71094cd2b295caf7be94efc2606e67ccb8711dad82cc766ff1ca790a9337",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0005-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:26",
+          "5:26 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetimeZ(2024 1 1 10 0 0 \"UTC\") to datetimeZ(2024 1 1 6 30 0 \"UTC\")",
+          "-3 h 30 min",
+          "2",
+          "datetimeZ(2024 3 5 9 15 0 \"UTC\") to datetimeZ(2024 3 3 16 45 0 \"UTC\")",
+          "-1 d 16 h 30 min",
+          "3",
+          "datetimeZ(2024 1 1 6 30 0 \"UTC\") to datetimeZ(2024 1 1 10 0 0 \"UTC\")",
+          "3 h 30 min",
+          "Back",
+          "Time differences",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 14.8,
+      "screenshot_sha256": "3ba6e0a02b87eec370bf45e1a7fb7c86b8bd7c485c5a1dc29b2320e556f67e64",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0005-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:56:05+0530"
+}

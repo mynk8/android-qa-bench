@@ -1,0 +1,201 @@
+{"event": "install", "build": {"n": 1, "build_id": "minus-E04-11", "mask": "11", "unfixed": ["minus-0005", "minus-0007"], "present": ["minus-0005", "minus-0007"]}}
+{"event": "brief", "item_id": "minus-E04"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 1675}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 872, "y": 1675}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 1100, "y": 800}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 872, "y": 1675}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 31, "message": {"type": "bug_report", "screen": "Budget sheet > How it's calculated (opened by tapping Calculated amount card)", "element": "Calculated amount card", "symptom_type": "wrong_value", "field": "Spread over what's left of the period (day count)", "expected": "Budget period 11 Nov to 04 Dec with today 14 Nov has 21 days left (14 Nov to 04 Dec inclusive) and the Days remaining shows 20. Daily split uses 21 days ($40 / 21 = $1.9). Weekly/Biweekly should use the same remaining days, e.g. $40 left over 21 days, so weekly = $13.33 or the spread = $100 / 21 x 7 with consistent days.</expected>\n<parameter name=\"observed\">Weekly split breakdown uses \"24 days\" for \"Spread over what's left of the period\" ($100 / 24 days x 7 = $29.17), i.e. it counts elapsed days from 11 Nov, and \"For next week\" uses \"17 days\". Biweekly calculated amount is $58.33 (= $100 / 24 x 14). Daily split uses 21 days, so the three splits disagree on how many days are left.", "observed_quote": "24 days", "steps": ["Start with budget 100, spent 60 (Groceries 40 + Rent 20), period 11 Nov - 04 Dec, today 14 Nov; Days remaining shows 20.", "Tap the budget pill on the main screen to open the Total budget sheet. Split is Daily: Calculated amount $1.9.", "Tap the Weekly chip. Calculated amount shows $29.17.", "Tap the Calculated amount card to open How it's calculated.", "Read 'Spread over what's left of the period': $100 / 24 days x 7 = $29.17. Read 'For next week': $40 / 17 days x 7 = $16.47.", "Switch to Daily: $40 / 21 days = $1.9. Note the different day counts."]}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "spray", "minus-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 32, "message": {"type": "bug_report", "screen": "Budget sheet (Total budget)", "element": "Biweekly chip", "symptom_type": "not_persisted", "field": "How do you want to split the budget? (Daily / Weekly / Biweekly selector)", "expected": "The selected split (Biweekly) stays selected and the calculated amount stays $58.33 after the device is rotated.", "observed": "After tapping Biweekly (checked, Calculated amount $58.33), rotating to landscape and back to portrait resets the selector to Daily (checked) with Calculated amount $1.9.", "observed_quote": "$1.9", "steps": ["Open the budget sheet by tapping the Today $1.9 pill on the main screen. Split is Daily.", "Tap Biweekly. Biweekly is checked and Calculated amount shows $58.33.", "Rotate the device to landscape, then back to portrait.", "Observe: Daily is checked again and Calculated amount shows $1.9.", "Repeated once more with the same result."]}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "expected_value", "minus-0005": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 1675}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 259}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5, "x": 540, "y": 500}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1329}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1869}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 609, "y": 1047}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.6, "x": 540, "y": 600}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1000}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "bug_report", "screen": "Budget sheet > How it's calculated", "element": "Calculated amount card", "symptom_type": "wrong_value", "field": "Left of the total budget / Calculated amount (Daily)", "expected": "After entering a $12.50 Food expense today, Spent is $72.5 and Available is 28%, so the 'Left of the total budget' step should read $100 - $72.5 = $27.5 and the today's daily amount should be recalculated from $27.5 (about $1.31 over 21 days), matching the $27.5 shown in the tomorrow row.</expected>\n<parameter name=\"observed\">Sheet shows Spent $72.5 and Available: 28%, but How it's calculated (Daily) shows 'Left of the total budget $100 - $60 = $40' then 'Spread over what's left of the period $40 / 21 days = $1.9', while the next step reads '$100 - $72.5 = $27.5' and 'For tomorrow $27.5 / 20 days = $1.38'. Today's daily amount ignores the new $12.50 expense, so the sheet is internally inconsistent.</parameter>\n<parameter name=\"observed_quote\">$72.5", "steps": ["With budget 100, spent 60 (Groceries 40 + Rent 20), tap the budget pill, Daily split, Calculated amount $1.9.", "Close the sheet. On the keypad enter 12.5 (tap 1, 2, ., 5), tap the Food chip, and tap the check mark to save.", "Pill now shows 'Daily Amount exceeded / For tomorrow $1.38'.", "Tap the pill to reopen the Total budget sheet. Spent shows $72.5 and Available 28%. Calculated amount still shows $1.9.", "Tap the Calculated amount card to open How it's calculated: 'Left of the total budget $100 - $60 = $40', 'Spread over what's left of the period $40 / 21 days = $1.9'. Then '$100 - $72.5 = $27.5' and 'For tomorrow $27.5 / 20 days = $1.38'."]}}
+{"event": "scored", "report_n": 3, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "spray", "minus-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 300}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 753}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1723}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 265}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 462}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 1675}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 124, "message": {"type": "bug_report", "screen": "Budget sheet > How it's calculated (Weekly)", "element": "Calculated amount card", "symptom_type": "wrong_value", "field": "Left of the total budget (first step, Weekly)", "expected": "All spending so far (Groceries 40 and Rent 20 on 13 Nov, plus Food 12.50 today) falls inside the first week of the period (11 Nov onward), so the first step should subtract the spent amount of $72.5 (or at least not $0), e.g. $100 - $72.5 = $27.5, matching the next step and the Spent tile.</expected>\n<parameter name=\"observed\">Weekly breakdown first step reads \"Left of the total budget $100 - $0 = $100\" while the Spent tile shows $72.5 and the third step reads \"$100 - $72.5 = $27.5\". Weekly Calculated amount stays $29.17 both before and after the $12.50 expense was added, so the weekly figure ignores all spending.", "observed_quote": "$100 - $0 = $100", "steps": ["Starting data: budget 100, period 11 Nov - 04 Dec, today 14 Nov. Spent 60 (Groceries 40 + Rent 20).", "Tap the budget pill, then tap the Weekly chip. Calculated amount is $29.17.", "Tap the Calculated amount card. First step reads 'Left of the total budget $100 - $0 = $100'.", "Close the sheet. Enter 12.5, choose Food, and save (Spent becomes $72.5).", "Reopen the sheet, select Weekly, and open the breakdown. Calculated amount still $29.17. First step still reads '$100 - $0 = $100', while the step below reads '$100 - $72.5 = $27.5'."]}}
+{"event": "scored", "report_n": 4, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "spray", "minus-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 300}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 872, "y": 1675}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 137, "message": {"type": "bug_report", "screen": "Budget sheet (Total budget) - split selector", "element": "Biweekly chip", "symptom_type": "not_persisted", "field": "How do you want to split the budget? (selected Daily / Weekly / Biweekly)", "expected": "Choosing Biweekly keeps Biweekly checked and Calculated amount $58.33 across a device rotation (the selection is held in view-model memory, so it should survive a configuration change).", "observed": "After Biweekly is checked (Calculated amount $58.33), one rotation to landscape and back to portrait makes Daily the checked chip again and the Calculated amount reads $1.9. Reproduced twice.", "observed_quote": "$1.9", "steps": ["Make sure the budget sheet is open (tap the Today / budget pill on the main screen). The split is Daily and Calculated amount shows $1.9.", "Tap the Biweekly chip. Biweekly is checked and Calculated amount shows $58.33.", "Rotate the device to landscape, wait 2 seconds, rotate back to portrait, wait 2 seconds.", "Observe: Daily is checked and Calculated amount shows $1.9. Biweekly is no longer selected."]}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "hit", "bugs": ["minus-0005"], "per_bug": {"minus-0007": "expected_value", "minus-0005": "ok"}}
+{"event": "hit", "bugs": ["minus-0005"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 259}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1329}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1059}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1869}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 152, "message": {"type": "bug_report", "screen": "Main screen - expense number pad", "element": "Amount display (EditText)", "symptom_type": "wrong_value", "field": "Amount entry (leading zeros before an operator)", "expected": "Typing 0, 0, 7 gives $7 (leading zeros dropped, as the display already shows for a plain amount). Typing 0, 0, 7, +, 3 should show $7+3 with the leading zeros dropped, not $007+3.", "observed": "The amount shows \"$007+3\" with two leading zeros kept in the expression, and the result line reads \"= $10\". Plain entry of 0, 0, 7 shows \"$7\", so the zeros are only dropped when no operator is typed.", "observed_quote": "$007+3", "steps": ["On the main screen, clear the amount with the backspace key until empty.", "Tap 0, 0, 7. The amount shows $7 (leading zeros dropped).", "Tap the + key, then 3. The amount shows $007+3 and the result line shows = $10.", "Observe the leading zeros in the expression."]}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "expected_value", "minus-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 300}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3, "x": 540, "y": 870}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 177, "message": {"type": "bug_report", "screen": "Main screen - expense list (portrait)", "element": "Expense list area above the number pad", "symptom_type": "missing", "field": "Today expense list", "expected": "In portrait, the Today section lists the saved Food expense of $12.5 with 'Today' and 'Total: $12.5' above the number pad, as it does in landscape.</expected>\n<parameter name=\"observed\">In portrait the area above the number pad is blank (no Today group, no Food $12.5 row, no 'Total: $12.5'), even though the same screen in landscape shows 'Today', 'Food 01:43 AM $12.5' and 'Total: $12.5' and '13 November $60'. Rotating back to portrait does not show the list either, and the pill reads 'Daily Amount exceeded'.", "observed_quote": "Total: $12.5", "steps": ["Main screen in portrait with the number pad visible; enter 12.5, choose Food and save with the check key.", "Observe the area above the number pad: it is blank, with no Today group or expense row.", "Rotate the device to landscape: the list shows Today, Food 01:43 AM $12.5 and Total: $12.5, plus 13 November $60.", "Rotate back to portrait: the list area is blank again."]}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0007": "spray", "minus-0005": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 185, "message": null}

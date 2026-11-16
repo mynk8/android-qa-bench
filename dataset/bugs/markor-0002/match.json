@@ -1,0 +1,95 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "undo"
+  ],
+  "fields": [
+    "undo history"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "on a newly created file, undo removes the last typed text and redo restores it",
+    "the first undo does not wipe the file or skip the typed text"
+  ],
+  "observed_contains_any": [
+    "undo/redo history is wrong on a newly created file",
+    "undo does not restore the expected text"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "undo*",
+      "redo*",
+      "restor*",
+      "remov*",
+      "last",
+      "typed"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "hello",
+      "undo*",
+      "typed*",
+      "word",
+      "text"
+    ],
+    [
+      "hello stays",
+      "hello still",
+      "still shows hello",
+      "still hello",
+      "stays",
+      "stayed",
+      "still",
+      "remain*",
+      "unchanged",
+      "same",
+      "nothing",
+      "no effect",
+      "does nothing",
+      "did nothing",
+      "not undo*",
+      "not remov*",
+      "didn't undo",
+      "didn't remov*",
+      "did not undo",
+      "did not remov*",
+      "doesn't undo",
+      "doesn't remov*",
+      "does not undo",
+      "does not remov*",
+      "not work*",
+      "doesn't work",
+      "does not work",
+      "didn't work",
+      "did not work",
+      "not restor*",
+      "not empty",
+      "not clear*",
+      "wipe*",
+      "wiped",
+      "blank",
+      "lost",
+      "gone",
+      "skip*"
+    ]
+  ],
+  "location_concepts": [
+    "undo*",
+    "redo*"
+  ],
+  "anchors": {
+    "elements": [
+      "Undo",
+      "highlighting_editor",
+      "hello"
+    ],
+    "observed": []
+  }
+}

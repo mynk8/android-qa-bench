@@ -1,0 +1,183 @@
+{
+  "run_id": "5eaf53a81269",
+  "item_id": "nerdcalci-E04",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Remainders (file opened from home)",
+      "element": "Result column of line 1 (100 % 13)",
+      "field": "Modulo (%) operator results",
+      "symptom_type": "wrong_value",
+      "expected": "Modulo should return the remainder: 100 % 13 = 9, 47 % 20 = 7, 19.5 % 4 = 3.5, and with a = 50, a % 14 = 8 (per Help section \"Modulo: 10 % 3 evaluates to 1\").",
+      "observed": "All modulo lines evaluate to \"Err\" (error popup says \"Unexpected number\"). The parser consumes \"100 %\" as a percent token and then chokes on \"13\", so the % operator no longer works as modulo; only the percentage line 250 + 20% = 300 still works.",
+      "steps": [
+        "Open the Remainders file from the home screen",
+        "Look at line 1: '100 % 13' -> Err",
+        "Look at line 2: '47 % 20' -> Err, line 3: '19.5 % 4' -> Err, line 5: 'a % 14' -> Err",
+        "Tap the Err on line 1: the error tooltip reads 'Unexpected number'"
+      ],
+      "element_ref": 2,
+      "observed_quote": "Err",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Date gaps row subtitle in PINNED section",
+      "element_ref": 1,
+      "expected": "Pinning (or locking) a file is not a content edit, so the MODIFIED timestamp should stay JAN 05, 2026. When unpinned, the file should return to its place among the other JAN 05, 2026 files (newest-first order should not change).",
+      "observed": "After tapping Pin on Date gaps, its MODIFIED timestamp changed from \"JAN 05, 2026\" to the current time \"12:15 PM\". After unpinning such a file it then sorts to the top of ALL FILES (e.g. Number bases, created JAN 06, jumped above newer files after being pinned/unpinned), so the home list order is no longer newest-first. Locking shows the same effect (Temperatures was changed to 12:07 PM just by locking).",
+      "observed_quote": "MODIFIED: 12:15 PM \u2022 CREATED: JAN 05, 2026",
+      "screen": "Home (PINNED section)",
+      "steps": [
+        "On the home screen, note Date gaps subtitle: 'MODIFIED: JAN 05, 2026 \u2022 CREATED: JAN 05, 2026'",
+        "Tap the Date gaps row's More options > Pin",
+        "Scroll to the top: Date gaps now shows 'MODIFIED: 12:15 PM \u2022 CREATED: JAN 05, 2026' even though its content was never edited",
+        "Unpin it: it now sorts to the top of ALL FILES instead of its JAN 05 position"
+      ],
+      "symptom_type": "wrong_value",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Date gaps",
+          "Pinned",
+          "MODIFIED: 12:15 PM \u2022 CREATED: JAN 05, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Time differences row subtitle (top of ALL FILES)",
+      "element_ref": 1,
+      "expected": "Locking only changes the lock flag. The file's content is untouched, so MODIFIED should stay JAN 04, 2026 and the file should keep its position in the date-modified list (it was between Percentages and Remainders, near the bottom).",
+      "observed": "Before locking, Time differences showed \"MODIFIED: JAN 04, 2026 \u2022 CREATED: JAN 04, 2026\" and sat near the bottom of the list. After tapping More options > Lock, its subtitle became \"MODIFIED: 12:21 PM \u2022 CREATED: JAN 04, 2026\" and it jumped to the very top of the list, as if its content had just been edited. (File info also shows a current \"Last modified at\" time.) Pinning has the same effect.",
+      "observed_quote": "MODIFIED: 12:21 PM \u2022 CREATED: JAN 04, 2026",
+      "screen": "Home file list (ALL FILES)",
+      "steps": [
+        "On the home screen, note Time differences: 'MODIFIED: JAN 04, 2026 \u2022 CREATED: JAN 04, 2026' (near the bottom of newest-first list)",
+        "Tap its More options (three-dot) button and choose Lock",
+        "Observe the row now shows 'Locked' and 'MODIFIED: 12:21 PM \u2022 CREATED: JAN 04, 2026'",
+        "Observe the row has jumped to the top of ALL FILES, although its lines are unchanged",
+        "Unlock it again: the MODIFIED value stays at the new time instead of reverting"
+      ],
+      "symptom_type": "wrong_value",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Time differences",
+          "Locked",
+          "MODIFIED: 12:21 PM \u2022 CREATED: JAN 04, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "nerdcalci-0007"
+      ],
+      "present": [
+        "nerdcalci-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/nerdcalci-E04/5eaf53a81269/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0007": "reported"
+  },
+  "elapsed_s": 1264.928,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.72,
+    "notes": "Swept all nine files against the stated starting data. Verified: Expenses total 1,625.75 / avg 541.92; Monthly budget 2,800.50, 49.50, grand_total 2,850 (salary/gift edits propagate correctly); Temperatures and Temperature sums conversions; Number bases; Date gaps; Time differences; Percentages (36, 204, 8.50, 102, 8) including variable edits updating dependent lines immediately. Variables resolve strictly top-to-bottom (forward/undefined references error, re-assignment handled correctly) in both files and scratchpad. Pin keeps files in a PINNED section at the top under every sort order (modified/created/name, asc/desc) and survives rotation/background/rename; unpin removes the section when empty; lock shows \"Locked\", disables rename/delete/clear, blocks edits, survives background/rotation, and is enforced when reopened via search. One confirmed bug filed and logged: modulo (%) is broken in Remainders (100 % 13, 47 % 20, 19.5 % 4, a % 14 all show Err / \"Unexpected number\" instead of 9, 7, 3.5, 8) because a % after an operand is now consumed as a percentage token; 250 + 20% = 300 still correct. One observation reported twice but not accepted by dev: pinning/locking refreshes the file's MODIFIED timestamp, which also moves the file to the top of the date-modified list after unpinning."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "found": [
+    "nerdcalci-0007"
+  ],
+  "required": [
+    "nerdcalci-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 295,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0007"
+  ],
+  "bug_meta": {
+    "nerdcalci-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

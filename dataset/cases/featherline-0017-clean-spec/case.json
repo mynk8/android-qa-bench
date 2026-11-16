@@ -1,0 +1,14 @@
+{
+  "case_id": "featherline-0017-clean-spec",
+  "bug_id": "featherline-0017",
+  "_build_id": "featherline-0017-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "plan_empty",
+  "agent_input": "agent_input.md"
+}

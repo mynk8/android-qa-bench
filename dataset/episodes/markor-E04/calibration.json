@@ -1,0 +1,80 @@
+{
+  "episode_id": "markor-E04",
+  "start_build": "markor-E04-111",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "1. gamma****"
+      },
+      "seconds": 30.2,
+      "screenshot_sha256": "c6c68b627d07f691379bdc559d05fc8764e6ce7b0590dbe701b9b1270a29112a",
+      "bug": "markor-0013",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "- gamma"
+      },
+      "seconds": 25.1,
+      "screenshot_sha256": "77f38131a63f1a8dc09b2d41f395d47ed3a7610d46ec06c8c0fe36bdc9c2f14e",
+      "bug": "markor-0013",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "gamma"
+      },
+      "seconds": 25.6,
+      "screenshot_sha256": "77f38131a63f1a8dc09b2d41f395d47ed3a7610d46ec06c8c0fe36bdc9c2f14e",
+      "bug": "markor-0014",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "> gamma"
+      },
+      "seconds": 34.5,
+      "screenshot_sha256": "ce10e453a1b1fef219a62f97e2bdbfad14db698acf10921ab2a9099f545ca44a",
+      "bug": "markor-0014",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "      gamma"
+      },
+      "seconds": 41.5,
+      "screenshot_sha256": "89f790e3b87c836759393114a6980c520dd796c3232ceddff2f42157518944d9",
+      "bug": "markor-0019",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "    gamma"
+      },
+      "seconds": 27.3,
+      "screenshot_sha256": "35ebb9073830a1354810ee336a4061d1bdcb988943d7cfc04341df385ee6dda8",
+      "bug": "markor-0019",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

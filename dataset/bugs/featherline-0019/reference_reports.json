@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "group editor",
+    "element": "start time row",
+    "field": "start time",
+    "symptom_type": "no_effect",
+    "expected": "after confirming the same start date the start time shows the start of the day",
+    "observed": "the start time still reads Now",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "group editor",
+    "element": "something",
+    "field": "start time",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

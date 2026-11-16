@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "profile achievements tab",
+    "element": "dedicated achievement",
+    "field": "quest count",
+    "symptom_type": "wrong_value",
+    "expected": "dedicated (complete 5 quests) should still be in the missing list because only 4 regular quests are done, guild quests do not count",
+    "observed": "dedicated is not in the missing list, it counts the 3 guild quests as completed quests",
+    "steps": [
+      "Opened Profile, Achievements, tapped Missing.",
+      "Looked for Dedicated."
+    ]
+  },
+  "vague": {
+    "screen": "profile achievements tab",
+    "element": "something",
+    "field": "quest count",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

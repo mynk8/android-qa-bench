@@ -1,0 +1,184 @@
+{
+  "run_id": "70f71f9b4a32",
+  "item_id": "idlefantasy-E05",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Combat > Gear (landscape)",
+      "element": "Combat gear section below the style and weapon stats",
+      "element_ref": 11,
+      "field": "Combat gear and equipment controls",
+      "symptom_type": "cut_off",
+      "expected": "After rotating to landscape, the combat gear rows and equipment controls remain reachable by scrolling or fit above the bottom navigation.",
+      "observed": "The screen stops at the COMBAT GEAR heading; gear rows, food controls and equip button are not visible. Repeated upward swipes leave the content in the same position.",
+      "observed_quote": "COMBAT GEAR",
+      "steps": [
+        "Open Combat from the bottom navigation.",
+        "Open Gear in the combat tab bar.",
+        "Rotate the device to landscape.",
+        "Swipe upward over the gear content twice."
+      ],
+      "anchor_node": {
+        "text": "COMBAT GEAR",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          843,
+          249,
+          870
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Combat > Gear (landscape)",
+      "element": "Combat gear section below the style and weapon stats",
+      "element_ref": 11,
+      "field": "Combat gear and equipment controls",
+      "symptom_type": "cut_off",
+      "expected": "Combat gear rows and controls remain reachable after rotation, either by scrolling or by fitting in the available area.",
+      "observed": "In landscape, the page ends at the COMBAT GEAR heading and the equipment rows are hidden behind/below the bottom navigation. An upward swipe over the content does not move the page. The same gear rows are visible in portrait.",
+      "observed_quote": "COMBAT GEAR",
+      "steps": [
+        "Open Combat from the bottom navigation.",
+        "Open Gear in the Combat tab bar.",
+        "Confirm the equipment rows are visible in portrait.",
+        "Rotate the device to landscape.",
+        "Swipe upward over the content below the weapon row."
+      ],
+      "anchor_node": {
+        "text": "COMBAT GEAR",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          843,
+          249,
+          870
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Pets",
+      "element": "Profile content shown after rotating with Pets selected",
+      "element_ref": 13,
+      "field": "Selected profile tab",
+      "symptom_type": "not_persisted",
+      "expected": "The Pets tab remains selected and the pet catalog stays visible after rotating the device.",
+      "observed": "After selecting Pets and rotating to landscape, the profile switches back to Skills and displays the GATHERING section. Rotating back to portrait also leaves Skills selected.",
+      "observed_quote": "GATHERING",
+      "steps": [
+        "Open Profile from the bottom navigation.",
+        "Select Pets from the profile tab bar.",
+        "Rotate the device to landscape.",
+        "Observe that the page switches to Skills and shows GATHERING."
+      ],
+      "anchor_node": {
+        "text": "GATHERING",
+        "class": "android.widget.TextView",
+        "bounds": [
+          334,
+          519,
+          500,
+          553
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0009",
+        "idlefantasy-0010"
+      ],
+      "present": [
+        "idlefantasy-0009",
+        "idlefantasy-0010"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/idlefantasy-E05/70f71f9b4a32/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0009": "missed_unreached",
+    "idlefantasy-0010": "reported"
+  },
+  "elapsed_s": 459.778,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept Combat (dungeon selection, combat gear/stats, one Farm encounter), Profile navigation, and Pets catalog. Abandoned the test encounter and verified there is no active session; combat XP values remained unchanged. One confirmed report was logged: Profile selection resets from Pets to Skills on rotation. A landscape Combat Gear clipping report was submitted twice but the developer could not reproduce it."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "found": [
+    "idlefantasy-0010"
+  ],
+  "required": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "missed": [
+    "idlefantasy-0009"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 72,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "bug_meta": {
+    "idlefantasy-0009": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0010": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

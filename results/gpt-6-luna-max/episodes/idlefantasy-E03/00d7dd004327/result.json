@@ -1,0 +1,213 @@
+{
+  "run_id": "00d7dd004327",
+  "item_id": "idlefantasy-E03",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell",
+      "element": "Iron Sword row",
+      "element_ref": 31,
+      "field": "per-item trade-in with Keep one of each item enabled",
+      "symptom_type": "no_effect",
+      "expected": "With 2 Iron Swords in inventory, one is reserved as the keeper and the other can still be sold, even though an Iron Sword is equipped.",
+      "observed": "Tapping the Iron Sword row is blocked with an equipped warning. This occurred after selling one from the starting stack of 3; the row still showed 2 in inventory, so one surplus copy remained beyond the keeper.",
+      "observed_quote": "Iron Sword is equipped. Unequip it first to sell.",
+      "steps": [
+        "Open Shop > Sell with an equipped Iron Sword and 3 Iron Swords in inventory.",
+        "Turn on Keep one of each item.",
+        "Tap Iron Sword and sell one copy for 62 coins.",
+        "Verify the row now shows \u00d72 in inventory, then tap it again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Shop",
+          "Iron Sword is equipped. Unequip it first to sell."
+        ],
+        "bounds": [
+          42,
+          75,
+          1037,
+          201
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Guild Hall > Mining Guild > Quests",
+      "element": "Iron Quota status",
+      "element_ref": 14,
+      "field": "completion status",
+      "symptom_type": "wrong_value",
+      "expected": "Iron Quota should be shown as completed; the supplied starting state lists Copper Run, Iron Quota, and Shrimp Haul as completed guild quests.",
+      "observed": "Copper Run is marked Completed, but Iron Quota remains locked and is shown as requiring Guild Level 1. Reopening the Mining Guild board reproduces the same state.",
+      "observed_quote": "Requires Guild Level 1",
+      "steps": [
+        "From Home, expand Town and open Guild Hall.",
+        "Open Mining Guild.",
+        "Compare Copper Run and Iron Quota against the supplied starting state: Copper Run shows Completed, while Iron Quota shows Requires Guild Level 1.",
+        "Return to Guild Hall and reopen Mining Guild; the same status remains."
+      ],
+      "anchor_node": {
+        "text": "Requires Guild Level 1",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          976,
+          349,
+          1010
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Guild Hall > Mining Guild > Quests",
+      "element": "Hide completed switch",
+      "element_ref": 37,
+      "field": "toggle state and completed quest list",
+      "symptom_type": "no_effect",
+      "expected": "Tapping the checked Hide completed switch again should turn it off and restore the completed quests to the board.",
+      "observed": "After Hide completed is enabled and removes Copper Run and Iron Quota from the list, tapping the switch or its label again has no effect: it remains checked and the list still starts at Coal Haul. The filtered state also remains after leaving and reopening Mining Guild.",
+      "observed_quote": "Hide completed",
+      "steps": [
+        "Open Town > Guild Hall > Mining Guild. With Hide completed off, the list starts with Copper Run and Iron Quota.",
+        "Tap Hide completed once; the list updates to start with Coal Haul.",
+        "Tap Hide completed again using the switch, then tap it once more using the label.",
+        "Verify the switch remains checked and Copper Run and Iron Quota do not return; leave and reopen Mining Guild and verify the filtered state remains."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "bounds": [
+          911,
+          84,
+          1048,
+          210
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bestiary > Enemies",
+      "element": "Enemy list below the All/Missing filters",
+      "element_ref": 17,
+      "field": "enemy list visibility in landscape",
+      "symptom_type": "cut_off",
+      "expected": "After rotating to landscape, the sort controls and enemy rows should remain reachable by scrolling.",
+      "observed": "The landscape viewport stops after the All/Missing filters; the A\u2013Z/By Location controls and all enemy rows are below the bottom navigation and never appear after repeated upward swipes in the content area.",
+      "steps": [
+        "Open Profile > Bestiary > Enemies in portrait.",
+        "Rotate the device to landscape.",
+        "Swipe upward several times over the Bestiary content below the encounter progress bar.",
+        "Verify that only All and Missing are visible and no sort controls or enemy rows can be reached."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "All"
+        ],
+        "bounds": [
+          324,
+          743,
+          452,
+          869
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ],
+      "present": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/idlefantasy-E03/00d7dd004327/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0004": "missed_unreached",
+    "idlefantasy-0006": "missed_unreached"
+  },
+  "elapsed_s": 1152.554,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Sweep complete: shop bulk previews and junk-sale confirmation matched (486 coins); keeper-mode old-gear preview was 149 coins; per-item Logs quantity capped at 29 of 30 with keep-one enabled. Gear slot candidates sorted by unlock requirement with title tie-break, and equip/unequip persisted. Bestiary filters, ordering and detail sheets worked in portrait. Mining Guild and landscape Bestiary observations were submitted but the developer returned \u201ccould not reproduce,\u201d so no confirmed reports were logged. Testing sold one Iron Sword for 62 coins and sold junk for 486 coins; shop keeper toggle is off and the device is back in portrait."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "missed": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 185,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "bug_meta": {
+    "idlefantasy-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

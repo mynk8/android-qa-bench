@@ -1,0 +1,236 @@
+{
+  "run_id": "bc0782ea0efc",
+  "item_id": "tasks-E04",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Pack for trip subtask badge",
+      "element_ref": 9,
+      "field": "subtask count",
+      "symptom_type": "wrong_value",
+      "expected": "Badge counts incomplete subtasks (1) regardless of whether completed subtasks are shown.",
+      "observed": "After completing Charge phone, badge remains 2 when completed subtasks are shown; hiding completed subtasks changes it to 1, showing them again returns 2.",
+      "observed_quote": "2",
+      "steps": [
+        "Complete Charge phone under Pack for trip.",
+        "Observe badge 2 with Print tickets incomplete and Charge phone completed.",
+        "Turn off Show completed subtasks: badge 1.",
+        "Turn it back on: badge 2 again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "keyboard_arrow_up",
+          "2"
+        ],
+        "bounds": [
+          147,
+          834,
+          269,
+          932
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks, grouped by due date",
+      "element": "Future date group headers",
+      "element_ref": 6,
+      "field": "scheduled date grouping",
+      "symptom_type": "wrong_value",
+      "expected": "Future tasks are grouped into the appropriate upcoming week/later date buckets rather than separate day headers for every distant date.",
+      "observed": "Buy milk (+5 days), Pack for trip (+10 days), and Pay rent (+20 days) each get exact-date headers. Re-selecting due-date grouping reproduces the same result.",
+      "observed_quote": "Due Wednesday, November 25",
+      "steps": [
+        "Observe starting tasks grouped by due date.",
+        "Switch grouping to None or By start date.",
+        "Switch back to By due date.",
+        "Observe separate headers Due Friday, Due Wednesday, November 25, and Due Saturday, December 5 instead of upcoming date buckets."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/header_row",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Due Wednesday, November 25"
+        ],
+        "bounds": [
+          0,
+          577,
+          1080,
+          724
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task search",
+      "element": "Search result order",
+      "element_ref": 5,
+      "field": "ranking",
+      "symptom_type": "wrong_value",
+      "expected": "Title matches rank ahead of notes-only matches; Read docs and Pay rent should precede Buy milk for re.",
+      "observed": "Query re returns Buy milk (notes 2 litres) first, Pay rent second, Read docs last, following due dates instead of match relevance. Repeating query reproduces.",
+      "observed_quote": "Buy milk",
+      "steps": [
+        "Set sorting By due date ascending.",
+        "Search re.",
+        "Observe Buy milk ahead of title matches Pay rent and Read docs.",
+        "Change query to zz-no-match, then back to re; same order."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Buy milk",
+          "2 litres"
+        ],
+        "bounds": [
+          0,
+          357,
+          1080,
+          577
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task search",
+      "element": "Notes-only result above exact title",
+      "element_ref": 5,
+      "field": "ranking",
+      "symptom_type": "wrong_value",
+      "expected": "Exact title Read docs is first for query Read docs, above Buy milk which only matches notes.",
+      "observed": "Buy milk with notes 2 litres Read docs appears first; exact title Read docs appears second. Repeated query has same result.",
+      "observed_quote": "Buy milk",
+      "steps": [
+        "Set sorting By due date ascending.",
+        "Temporarily edit Buy milk notes to 2 litres Read docs and save.",
+        "Search Read docs: Buy milk precedes Read docs.",
+        "Search zz then Read docs again: same wrong ranking."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Buy milk",
+          "2 litres Read docs"
+        ],
+        "bounds": [
+          0,
+          357,
+          1080,
+          577
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E04-111",
+      "mask": "111",
+      "unfixed": [
+        "tasks-0016",
+        "tasks-0017",
+        "tasks-0021"
+      ],
+      "present": [
+        "tasks-0016",
+        "tasks-0017",
+        "tasks-0021"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/tasks-E04/bc0782ea0efc/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0016": "reported",
+    "tasks-0017": "reported",
+    "tasks-0021": "missed_unreached"
+  },
+  "elapsed_s": 311.006,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Exercised sorting/grouping selection, direction reversal and persistence, subtask completion/reversal, show-completed filtering, collapse/expand, subtask title sorting, notes/URL/case-insensitive/subtask search, empty/no-match/punctuation inputs, navigation and rotation. Confirmed reports: completed subtasks inflate badge; future date grouping loses buckets. Search relevance ranking reported twice (including exact title vs notes-only match); developer could not reproduce. Original notes and task completion states restored; due-date ascending grouping/sorting and My order subtasks left active."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "found": [
+    "tasks-0016",
+    "tasks-0017"
+  ],
+  "required": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "missed": [
+    "tasks-0021"
+  ],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 140,
+  "precision": 0.5,
+  "recall": 0.6666666666666666,
+  "unfixed_at_end": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "bug_meta": {
+    "tasks-0016": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0017": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0021": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

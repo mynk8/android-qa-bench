@@ -1,0 +1,169 @@
+{"event": "install", "build": {"n": 1, "build_id": "amaze-E01-11", "mask": "11", "unfixed": ["amaze-0004", "amaze-0005"], "present": ["amaze-0004"]}}
+{"event": "brief", "item_id": "amaze-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 831, "y": 1558}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 753}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 753}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "bug_report", "screen": "Amaze directory view", "element": "Directory list/grid mode", "element_ref": 8, "field": "per-folder view", "symptom_type": "not_persisted", "expected": "Amaze retains Grid and Alpha retains List independently, including rotation.", "observed": "After setting Amaze Grid and Alpha List, rotating in Alpha resets Amaze to List. Setting Amaze Grid again also makes Alpha open as Grid until rotation. Reproduced twice.", "steps": ["Open AndroidQA/Amaze and select Grid View.", "Open Alpha and select List View.", "Back to Amaze: Grid initially retained.", "Reopen Alpha, rotate landscape then portrait, Back to Amaze: now List.", "Set Amaze Grid again and open Alpha: Alpha now Grid; rotate and return: Amaze List again."], "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["Beta", "Nov 14 | 4:53 PM"], "bounds": [0, 528, 1080, 717]}}}
+{"event": "scored", "report_n": 1, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "location", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1056}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1056}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 39, "message": {"type": "bug_report", "screen": "Amaze paste conflict", "element": "Renamed folder copy", "element_ref": 6, "observed_quote": "2 folders and 4 files", "symptom_type": "missing", "expected": "Rename creates a uniquely named copy of Alpha containing readme.txt.", "observed": "RENAME dismisses conflict but no new folder appears, even after leaving and returning. Repeated twice.", "steps": ["In AndroidQA/Amaze tap Alpha Properties menu > Copy.", "Tap PASTE in same folder.", "Conflict says Alpha; tap RENAME.", "Wait, enter Beta then Back: still only Alpha and Beta.", "Repeat copy/paste/RENAME: same result."], "anchor_node": {"id": "com.amaze.filemanager:id/pathname", "text": "2 folders and 4 files", "class": "android.widget.TextView", "bounds": [0, 304, 470, 381]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0004"], "per_bug": {"amaze-0004": "ok", "amaze-0005": "expected_value"}}
+{"event": "hit", "bugs": ["amaze-0004"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1135}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1581}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 680, "y": 1469}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1135}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1707}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 760}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "type", "args": {"text": "report+renamed.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 236, "y": 1553}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "type", "args": {"text": "report+renamed.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1135}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1455}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1056}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1116}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "type", "args": {"text": "Alpha copy+", "clear": true, "submit": false}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1056}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 78, "message": {"type": "bug_report", "screen": "Copied folder Beta/Alpha", "element": "readme.txt size", "element_ref": 8, "observed_quote": "0 B", "field": "file contents", "symptom_type": "wrong_value", "expected": "Copied Alpha/readme.txt retains source's 13 B contents.", "observed": "Both independent copies of Alpha into Beta contain readme.txt of 0 B. First copy was renamed Alpha copy+; second fresh copy also 0 B.", "steps": ["In Amaze copy Alpha via its Properties menu.", "Open Beta and PASTE.", "Open Beta/Alpha: readme.txt is 0 B (source Alpha/readme.txt was 13 B).", "Rename copied folder to Alpha copy+.", "Return to Amaze, copy original Alpha again, paste into Beta.", "Open new Beta/Alpha: readme.txt again 0 B."], "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["readme.txt", "Nov 14 | 4:53 PM", "0 B"], "bounds": [0, 528, 1080, 717]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0004"], "per_bug": {"amaze-0004": "ok", "amaze-0005": "location"}}
+{"event": "duplicate", "bugs": ["amaze-0004"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1812}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 724, "y": 914}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 688, "y": 1373}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 724, "y": 788}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 688, "y": 1373}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1812}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 99, "message": {"type": "bug_report", "screen": "Navigation drawer bookmarks", "element": "Alpha and Beta bookmark order", "element_ref": 35, "observed_quote": "Alpha", "symptom_type": "wrong_value", "expected": "Beta precedes Alpha because Beta was added first.", "observed": "Drawer lists Alpha above Beta, alphabetically rather than addition order. Deleted both and repeated Beta then Alpha with identical result; screenshot verified.", "steps": ["Starting without bookmarks, in Amaze use Beta menu > Add to Bookmarks.", "Use Alpha menu > Add to Bookmarks.", "Open drawer: Alpha above Beta.", "Delete both using drawer pencil > DELETE.", "Repeat adding Beta then Alpha: Alpha still above Beta."], "anchor_node": {"class": "androidx.appcompat.widget.LinearLayoutCompat", "contains": ["Alpha", "Alpha"], "bounds": [0, 725, 798, 851]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "expected_value", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 788}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 105, "message": {"type": "bug_report", "screen": "Drawer after rotation", "element": "Alpha and Beta bookmarks", "element_ref": 17, "symptom_type": "not_persisted", "expected": "Added bookmarks survive device rotation.", "observed": "Added Alpha and Beta visible before rotation; after landscape and portrait both vanish from drawer.", "steps": ["In Amaze add Beta then Alpha to bookmarks via folder menus.", "Open drawer and verify Alpha and Beta entries.", "Navigate through Alpha bookmark; open drawer.", "Rotate landscape then portrait.", "Open drawer: both added bookmarks are missing."], "anchor_node": {"class": "androidx.appcompat.widget.LinearLayoutCompat", "contains": ["readme.txt", "Internal Storage\n370 GB free of 452 GB"], "bounds": [0, 554, 798, 680]}}}
+{"event": "scored", "report_n": 5, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "expected_value", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 864}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 116, "message": {"type": "bug_report", "screen": "Original folder after paste Rename conflict", "element": "Original readme.txt", "element_ref": 18, "observed_quote": "0 B", "symptom_type": "wrong_value", "field": "source file contents", "expected": "Copy/paste with Rename leaves original folder files intact (Alpha readme 13 B; Beta readme 12 B).", "observed": "Original Alpha/readme.txt became 0 B after same-folder paste Rename. Reproduced with original Beta: readme.txt changed from 12 B to 0 B and its report+renamed.txt from 13 B to 0 B. No renamed copy appears.", "steps": ["In Amaze verify Alpha/readme.txt 13 B.", "Copy Alpha, paste in Amaze, choose RENAME on conflict.", "Reopen original Alpha: readme.txt now 0 B.", "Verify Beta/readme.txt 12 B.", "Copy Beta, paste in Amaze, choose RENAME.", "Reopen original Beta: readme.txt and report+renamed.txt now 0 B."], "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["readme.txt", "Nov 14 | 4:53 PM", "0 B"], "bounds": [0, 1233, 1080, 1422]}}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0004"], "per_bug": {"amaze-0004": "ok", "amaze-0005": "location"}}
+{"event": "duplicate", "bugs": ["amaze-0004"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 388}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1222}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 262}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1180}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 281, "y": 1432}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 556, "y": 1558}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1374}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1626}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "type", "args": {"text": "keep.jpg", "clear": true, "submit": false}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1626}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "type", "args": {"text": "keep.jpg", "clear": true, "submit": false}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 143, "message": {"type": "bug_report", "screen": "Rename existing image name", "element": "photo (1).jpg row", "element_ref": 14, "observed_quote": "photo (1).jpg", "symptom_type": "no_effect", "expected": "When destination keep.jpg exists, show a conflict/error and allow correcting or cancelling rename.", "observed": "SAVE silently closes rename dialog without renaming photo (1).jpg and without explaining existing-name conflict. keep.jpg stays 21.00 kB. Repeated twice.", "steps": ["Copy photo.jpg and paste in same folder; choose RENAME to create photo (1).jpg.", "Open photo (1).jpg menu > Rename.", "Enter keep.jpg and SAVE.", "Dialog closes; original name remains, with no error/conflict.", "Repeat same rename: same silent no effect."], "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["photo (1).jpg", "Nov 14 | 4:53 PM", "20.00 kB"], "bounds": [0, 912, 1080, 1101]}}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0004": "location", "amaze-0005": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 1791}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 180, "y": 1791}}}
+{"event": "agent", "step": 152, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.82, "notes": "Swept file/folder copy-paste and rename, same-directory conflicts, photo Rename conflict, existing-name and empty rename input, unusual '+' names, sorting ascending/descending and size with Only this folder, Files On Top, per-path list/grid navigation and rotation, bookmark add/delete/re-add/order/navigation and rotation. All observed issues reported. Confirmed/logged: folder paste conflict RENAME produces no renamed copy and truncates source contents (developer says subsequent data-loss reports already logged). Developer could not reproduce submitted view rotation persistence, bookmark ordering/persistence, and silent existing-name rename reports. Test artifacts remain within AndroidQA/Amaze: report+final.txt renamed report+renamed.txt; photo (1).jpg; Beta contains test Alpha and Alpha copy+ folders and report+renamed.txt. Original Alpha/readme.txt and Beta/readme.txt were truncated by tested bug. No changes outside test tree."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["amaze-0004"], "unfixed": ["amaze-0004", "amaze-0005"], "outcome": "success"}

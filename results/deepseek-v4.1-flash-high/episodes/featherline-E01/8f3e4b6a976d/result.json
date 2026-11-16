@@ -1,0 +1,308 @@
+{
+  "run_id": "8f3e4b6a976d",
+  "item_id": "featherline-E01",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add medicine",
+      "element": "Preparation type (Ampule) / preparation form picker",
+      "field": "Preparation type",
+      "symptom_type": "missing",
+      "expected": "Selecting a preparation form that has variants should resolve the shown sub-type (Ampule for Injection, Container for Gel) and display that sub-type's dose fields. For Injection it should show the injection strength/concentration and preset doses; for Gel it should show gel concentration and amount.",
+      "observed": "Choosing Injection shows \"Ampule\" already highlighted, but no injection strength/concentration field appears (in the add-record editor the tablet-only \"Application\" Oral/Sublingual and \"Tablets per dose\" controls are shown instead, and saving does nothing). The same happens with Gel: \"Container\" is highlighted but no gel concentration/amount fields appear until a different sub-type is explicitly tapped.",
+      "steps": [
+        "Open Plan > Medicines > Add medicine",
+        "Tap Injection under Preparation form",
+        "Observe Ampule appears selected but no injection dose field is shown (only Display name, then Save)",
+        "Tap Vial: Concentration (mg/mL) appears, proving the subtype has dose fields",
+        "Repeat with Gel: Container appears selected but no Gel concentration/amount fields appear until Sachet or Container is explicitly tapped"
+      ],
+      "element_ref": 22,
+      "observed_quote": "Ampule",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Ampule"
+        ],
+        "bounds": [
+          63,
+          1760,
+          273,
+          1886
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Strength field under Preparation type (Ampule)",
+      "field": "Ampule strength label",
+      "observed": "With Preparation type = Ampule explicitly selected, the strength input is labelled \"Vial strength (mg)\".",
+      "observed_quote": "Vial strength (mg)",
+      "screen": "Add medicine",
+      "steps": [
+        "Open Plan > Medicines > Add medicine",
+        "Choose Preparation form = Injection",
+        "Tap Vial, then tap Ampule",
+        "Look at the strength field under Preparation type"
+      ],
+      "symptom_type": "wrong_value",
+      "expected": "The strength field for the Ampule sub-type should be labelled for an ampule (e.g. \"Ampule strength (mg)\" or a neutral \"Strength (mg)\"), not \"Vial strength (mg)\".",
+      "element_ref": 24,
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Vial strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1906,
+          1017,
+          2074
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Strength input under \"Preparation type\"",
+      "field": "Ampule strength label",
+      "observed": "When Preparation type is switched from Vial to Ampule, the strength input is labelled \"Vial strength (mg)\" even though Ampule is the selected type. Reproduced twice.",
+      "observed_quote": "Vial strength (mg)",
+      "screen": "Add medicine",
+      "steps": [
+        "Open Plan > Medicines > Add medicine",
+        "Preparation form: tap Injection",
+        "Under Preparation type, tap Vial (a 'Concentration (mg/mL)' field appears)",
+        "Now tap Ampule in the same Preparation type row",
+        "Observe the field label is still 'Vial strength (mg)' above the 5 mg / 10 mg presets (screenshot taken)",
+        "Note: if Ampule is tapped without first choosing Vial, no strength field appears at all (separate report)"
+      ],
+      "symptom_type": "wrong_value",
+      "expected": "With Ampule selected, the field should be labelled for ampules (e.g. \"Ampule strength (mg)\" or a neutral \"Strength (mg)\").",
+      "element_ref": 24,
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Vial strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1906,
+          1017,
+          2074
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Strength field in Edit medicine sheet",
+      "field": "Ampule strength label",
+      "observed": "The medicine header says \"Injection \u00b7 Ampule \u00b7 5 mg\", but the Edit medicine sheet labels the editable strength field \"Vial strength (mg)\".",
+      "observed_quote": "Vial strength (mg)",
+      "screen": "Medicine details > Edit medicine",
+      "steps": [
+        "Plan > Medicines > Add medicine",
+        "Category Estradiol, Preparation form Injection, Preparation type Ampule, strength 5 mg, Save",
+        "On Medicine details the header shows 'Injection \u00b7 Ampule \u00b7 5 mg'",
+        "Tap the pencil (Edit medicine) and read the strength field label"
+      ],
+      "symptom_type": "wrong_value",
+      "expected": "For an Ampule medicine the strength field should be labelled for an ampule (e.g. \"Ampule strength (mg)\" or neutral \"Strength (mg)\"), not \"Vial strength (mg)\".",
+      "element_ref": 6,
+      "anchor_node": {
+        "text": "Vial strength (mg)",
+        "class": "android.widget.TextView",
+        "bounds": [
+          105,
+          1880,
+          373,
+          1922
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Medication card dosing subtitle",
+      "field": "Dosing subtitle / tablets per dose wording",
+      "observed": "For a record with 1 tablet per dose the card subtitle reads \"Oral \u00b7 1 tablets \u00b7 2 mg\", using the plural unit with a value of one.",
+      "observed_quote": "Oral \u00b7 1 tablets \u00b7 2 mg",
+      "screen": "Plan (medication cards)",
+      "steps": [
+        "On Home tap the add-record pencil",
+        "Choose the existing Estradiol valerate medicine",
+        "Leave Tablets per dose = 1, Count = 1, tap Save",
+        "Open Plan and read the saved card's subtitle"
+      ],
+      "symptom_type": "wrong_value",
+      "expected": "A single tablet should be shown in the singular, e.g. \"Oral \u00b7 1 tablet \u00b7 2 mg\" (and fraction values should also use an appropriate singular/plural form).",
+      "element_ref": 18,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Oral",
+          "Estradiol valerate",
+          "1:09 PM",
+          "Oral \u00b7 1 tablets \u00b7 2 mg"
+        ],
+        "bounds": [
+          42,
+          1197,
+          1038,
+          1354
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Today medication card list",
+      "field": "Medication cards",
+      "observed": "The header says \"NOV 14 SAT \u00b7 4 MANUAL\" and \"(4)\", but only three medication cards are rendered; the third card is clipped behind the bottom navigation bar and repeated swipe-up gestures do not scroll the Home content, so the fourth card (\"Oral \u00b7 1 tablets \u00b7 2 mg\") cannot be reached.",
+      "observed_quote": "NOV 14 SAT \u00b7 4 MANUAL",
+      "screen": "Home",
+      "steps": [
+        "Create four manual records for today (Tablets per dose 1/2, 1/3, 1/8 and 1)",
+        "Open Home",
+        "See the Today header counting 4 records",
+        "Only 3 cards are present and the third is cut by the bottom navigation area",
+        "Swipe up repeatedly on the Today list: content does not scroll"
+      ],
+      "symptom_type": "cut_off",
+      "expected": "All four Today cards should be visible, either by scrolling the Home content or by keeping the list clear of the bottom navigation bar.",
+      "element_ref": 15,
+      "anchor_node": {
+        "text": "NOV 14 SAT \u00b7 4 MANUAL",
+        "class": "android.widget.TextView",
+        "bounds": [
+          629,
+          1648,
+          1038,
+          1701
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Medication card for the Count=2 / half-tablet record",
+      "field": "Dosing subtitle (tablets per dose/count)",
+      "observed": "A record with Tablets per dose = 1/2 and Count = 2 (total 1 tablet, 2 mg) shows the subtitle \"Oral \u00b7 2 mg\": the tablet amount is missing. By contrast, a Count=3 record with the same 1/2 tablet dose shows \"Oral \u00b7 1.5 tablets \u00b7 3 mg\", and a Count=2 record with 1 tablet per dose shows \"Oral \u00b7 2 tablets \u00b7 4 mg\".",
+      "observed_quote": "Oral \u00b7 2 mg",
+      "screen": "Home (and Plan) medication cards",
+      "steps": [
+        "Home > add-record pencil > choose EV 2mg",
+        "Set Tablets per dose = 1/2 (the midpoint/1-2 marker) and Count = 2, Save",
+        "Read the new card subtitle: 'Oral \u00b7 2 mg' (no tablet amount)",
+        "Compare with a Count=3 / 1/2 tablet record: 'Oral \u00b7 1.5 tablets \u00b7 3 mg'"
+      ],
+      "symptom_type": "missing",
+      "expected": "The 2-dose half-tablet record should include its tablet amount in the subtitle, e.g. \"Oral \u00b7 1 tablet \u00b7 2 mg\", consistent with the other count values.",
+      "element_ref": 12,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Oral",
+          "EV 2mg",
+          "Oral \u00b7 2 mg"
+        ],
+        "bounds": [
+          42,
+          973,
+          1038,
+          1130
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0014",
+        "featherline-0015"
+      ],
+      "present": [
+        "featherline-0014",
+        "featherline-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/featherline-E01/8f3e4b6a976d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0014": "reported",
+    "featherline-0015": "reported"
+  },
+  "elapsed_s": 1463.739,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "found": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "required": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 7,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "bug_meta": {
+    "featherline-0014": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "featherline-0015": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

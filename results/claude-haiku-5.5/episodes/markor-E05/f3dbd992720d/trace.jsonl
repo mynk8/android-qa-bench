@@ -1,0 +1,287 @@
+{"event": "install", "build": {"n": 1, "build_id": "markor-E05-11", "mask": "11", "unfixed": ["markor-0015", "markor-0016"], "present": ["markor-0015", "markor-0016"]}}
+{"event": "brief", "item_id": "markor-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 916}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 769}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 617, "y": 1796}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 617, "y": 1796}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2011}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2011}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 969}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 843}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 969}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 40, "message": {"type": "bug_report", "screen": "File browser - New file dialog", "element": "39", "element_ref": 39, "field": "Extension (new_file_dialog__ext)", "symptom_type": "wrong_value", "expected": "Selecting the todo.txt type sets the extension to \".txt\" (as Plain Text does).", "observed": "With Type = todo.txt, the extension field shows \".todo.txt\". With Type = Plain Text it shows \".txt\".", "observed_quote": ".todo.txt", "steps": ["Tap the + (Create a new file or folder) button in the Documents file browser.", "Tap the Type spinner (currently Markdown).", "Select 'todo.txt'.", "Observe the extension field next to Title shows '.todo.txt'.", "Tap the Type spinner and select 'Plain Text'; the extension shows '.txt'.", "Re-select 'todo.txt'; the extension again shows '.todo.txt'."], "anchor_node": {"id": "net.gsantner.markor:id/new_file_dialog__ext", "text": ".todo.txt", "class": "android.widget.EditText", "bounds": [744, 354, 970, 462]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"markor-0015": "location", "markor-0016": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "bug_report", "screen": "File browser - New file dialog", "element": "2", "element_ref": 2, "field": "Extension (new_file_dialog__ext) after Type = todo.txt", "symptom_type": "wrong_value", "expected": "With Type = todo.txt the extension is \".txt\", same as Plain Text.", "observed": "With Type spinner showing 'todo.txt', the extension field reads '.todo.txt'. Switching the Type to 'Plain Text' shows '.txt'. Switching back to 'todo.txt' shows '.todo.txt' again (reproduced 2x).", "observed_quote": ".todo.txt", "steps": ["In Files (Documents), tap the + FAB to open the new file dialog (Type defaults to Markdown, extension '.md').", "Tap the Type spinner and choose 'todo.txt' from the list.", "Read the extension field beside Title: it shows '.todo.txt'.", "Tap the Type spinner, choose 'Plain Text': extension shows '.txt'.", "Tap the Type spinner, choose 'todo.txt' again: extension shows '.todo.txt'."], "anchor_node": {"id": "net.gsantner.markor:id/new_file_dialog__ext", "text": ".todo.txt", "class": "android.widget.EditText", "bounds": [744, 742, 970, 850]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"markor-0015": "location", "markor-0016": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1105}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 1105}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 737, "y": 1569}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 712}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 2216}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 2216}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 110, "y": 327}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 1701}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 110, "y": 327}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 1701}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 110, "y": 327}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 1441}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 1441}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 93, "message": {"type": "bug_report", "screen": "Editor (Indent.md) - formatting toolbar", "element": "48", "element_ref": 48, "field": "Unordered list action", "symptom_type": "wrong_value", "expected": "Pressing Unordered list on a line that already has a list marker (indented child \"  - child\") does not add a second marker (it should toggle/keep the existing marker, as it does for a non-indented \"- \" line).", "observed": "Line \"  - child\" became \"  - - child\" (text shows \"- item\\n  - - child\"). A non-indented \"- \" line is correctly toggled off by the same action.", "observed_quote": "  - - child", "steps": ["In Files, tap Indent.md (content: '- item' then '  - child').", "Tap in the 'child' line so the cursor is on it (keyboard opens).", "Tap the Unordered list toolbar button (the bullet-list icon, 2nd from the left of the bullet group).", "Observe the line now reads '  - - child'.", "Undo, then tap Unordered list again: result is the same '  - - child'.", "For comparison: on a line with no indent, '- ' with the cursor after it, Unordered list removes the marker correctly."], "anchor_node": {"desc": "Unordered list", "class": "android.widget.ImageView", "bounds": [230, 1389, 345, 1494]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["markor-0015"], "per_bug": {"markor-0015": "anchored", "markor-0016": "expected_value"}}
+{"event": "hit", "bugs": ["markor-0015"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 110, "y": 280}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 1441}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 892}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 945, "y": 2200}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 754}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 882}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2178}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1156}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2178}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 785, "y": 1427}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 135, "y": 2200}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 712}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 600}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 317, "y": 1441}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 200, "y": 327}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1432}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1000, "y": 380}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 317, "y": 1441}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 189, "message": {"type": "bug_report", "screen": "Editor - Unordered list toolbar action (glyph preference)", "element": "48", "element_ref": 48, "field": "Unordered list character setting vs toolbar Unordered list", "symptom_type": "no_effect", "expected": "With Settings > Edit Mode > 'Unordered list character' set to 'Asterisk (*)', the toolbar Unordered list button inserts '* ' on a new line.", "observed": "Setting shows 'Asterisk (*)' checked when reopened, but the toolbar Unordered list button inserted '- ' (dash) on the line.", "observed_quote": "- ", "steps": ["Tap More > Settings > Edit Mode > scroll down > 'Unordered list character'.", "Choose 'Asterisk (*)'. Reopen the dialog: 'Asterisk (*)' is checked (persisted).", "Back out to the file list, open Notes.md (content '# Notes', blank line, 'See [the guide](...)').", "Tap at the end of the 'See' line, press Enter to start a new line.", "Tap the Unordered list toolbar button (bullet-list icon).", "Observe the new line reads '- ' (dash), not '* '."], "anchor_node": {"desc": "Unordered list", "class": "android.widget.ImageView", "bounds": [254, 1389, 381, 1494]}}}
+{"event": "scored", "report_n": 4, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"markor-0015": "unverified_quote", "markor-0016": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 196, "message": {"type": "bug_report", "screen": "Settings > Edit Mode > Unordered list character dialog", "element": "0", "element_ref": 0, "field": "Dialog title", "symptom_type": "wrong_value", "expected": "The dialog opened from the 'Unordered list character' row is titled 'Unordered list character'.", "observed": "The dialog titled 'Theme' lists 'Dash (-)', 'Asterisk (*)', 'Plus (+)'.", "observed_quote": "Theme", "steps": ["Tap More (bottom nav) > Settings.", "Tap 'Edit Mode' (Editor Settings).", "Scroll down to the 'Unordered list character' row (under Miscellaneous/Format area) and tap it.", "Observe the dialog title reads 'Theme' with options Dash (-), Asterisk (*), Plus (+)."], "anchor_node": {"id": "net.gsantner.markor:id/toolbar", "class": "android.view.ViewGroup", "contains": ["Notes"], "bounds": [0, 63, 1080, 210]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"markor-0015": "expected_value", "markor-0016": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2011}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 1095}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 1221}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 1347}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 1473}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "tap_xy", "args": {"x": 737, "y": 1181}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 424}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1288}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 300, "y": 299}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 317, "y": 1441}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 769}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1651}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 617, "y": 1796}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "tap_xy", "args": {"x": 712, "y": 136}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 275, "message": null}

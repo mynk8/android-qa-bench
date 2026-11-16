@@ -1,0 +1,123 @@
+{
+  "run_id": "4b30aca2f476",
+  "item_id": "tasks-E02",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Task list (My Tasks), sort sheet",
+      "element": "15",
+      "field": "Subtask order in manual mode vs global sort direction",
+      "symptom_type": "wrong_value",
+      "expected": "With Subtasks = \"My order\", changing the global Sorting direction from Ascending to Descending should flip the order of the nested subtasks under \"Pack for trip\" (Charge phone and Print tickets swap places).",
+      "observed": "Subtasks stayed in the same order in both directions: \"Print tickets\" is listed above \"Charge phone\" with Sorting = Ascending and again with Sorting = Descending. Sheet showed \"Sorting | By due date | Descending\" and \"Subtasks | My order\" while the order did not change.",
+      "observed_quote": "Print tickets",
+      "steps": [
+        "Open My Tasks; note under 'Due Tuesday, November 24' the subtasks of 'Pack for trip' are 'Print tickets' then 'Charge phone'.",
+        "Tap Sort (menu_sort). Confirm Subtasks shows 'My order' and Sorting shows 'By due date Ascending'. Close the sheet.",
+        "Reopen Sort, tap the Sorting row's 'Ascending' toggle so it reads 'Descending'. Close the sheet.",
+        "Observe the list: 'Print tickets' is still above 'Charge phone'.",
+        "Toggle Sorting back to Ascending and close: order still 'Print tickets' then 'Charge phone'."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Custom recurrence dialog (opened from task editor repeat picker)",
+      "element": "14",
+      "field": "Repeats on (weekday chips)",
+      "symptom_type": "wrong_value",
+      "expected": "Opening Custom\u2026 for \"Weekly review\" (due Monday, December 14, repeats every 2 weeks) should load the existing weekly rule, with the weekday matching the due date (\"M\") selected under \"Repeats on\".",
+      "observed": "The custom dialog shows \"Repeats every 2 weeks\" correctly, but none of the S M T W T F S chips under \"Repeats on\" is selected, even though the task is due Monday. Same dialog for \"Pay rent\" (monthly) and \"Final dose\" (daily) loads its values correctly.",
+      "observed_quote": "Repeats every 2 weeks",
+      "steps": [
+        "Open My Tasks. Tap 'Weekly review' (due Monday, December 14, repeats every 2 weeks) to open the editor.",
+        "Tap the repeat row text 'Repeats every 2 weeks' to open the repeat picker; the 'Repeats every 2 weeks' option is checked.",
+        "Tap 'Custom\u2026'.",
+        "Observe the Custom recurrence dialog: 'Repeats every' = 2, 'weeks'. Under 'Repeats on', no weekday chip (S, M, T, W, T, F, S) is selected, though the due date is Monday.",
+        "Tap Cancel, then back. Nothing was changed."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "tasks-0002"
+      ],
+      "present": [
+        "tasks-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/tasks-E02/4b30aca2f476/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0002": "reported"
+  },
+  "elapsed_s": 270.647,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.45,
+    "notes": "Not a clean pass. One confirmed bug is logged: with Subtasks = \"My order\", flipping the global Sorting direction does not reverse the nested subtasks under \"Pack for trip\" (Print tickets stays above Charge phone in both Ascending and Descending). This is the build's \"nested items in manual mode follow the global direction\" change, so it needs a fix before release.\n\nChecked and looked correct: sort sheet reflects saved list prefs after reopening and across rotation; Sorting picker (By title) reorders groups; subtask sort by title (Asc/Desc) reverses; repeat picker shows the current rule; Custom recurrence loads \"every 2 weeks\", \"every 1 month\", \"every 1 day / after 1 occurrence\" and \"every 1 hour\"; completing Final dose moves it to Completed and Undo restores it; completing Pay rent (monthly) reschedules to Jan 4, 2027; Water plants (hourly) reschedules to 11 AM; Weekly review (2 weeks) reschedules to Dec 28; subtask completion updates the parent count and Undo restores it; rotation in the editor and the list keeps state.\n\nNot reproduced: a report that \"Repeats on\" showed no weekday for the weekly task was reported as not reproducible, so I did not count it as a bug. Not covered: changing repeat values on a saved task, the 0/boundary inputs for the recurrence count, Read docs link handling, the Grouping option, and sorting by priority/start date/last modified/smart sort."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "tasks-0002"
+  ],
+  "found": [
+    "tasks-0002"
+  ],
+  "required": [
+    "tasks-0002"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 198,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "tasks-0002"
+  ],
+  "bug_meta": {
+    "tasks-0002": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

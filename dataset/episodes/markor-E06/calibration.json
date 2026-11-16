@@ -1,0 +1,56 @@
+{
+  "episode_id": "markor-E06",
+  "start_build": "markor-E06-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "x 2026-11-11 Pay rent pri:A\n"
+      },
+      "seconds": 31.6,
+      "screenshot_sha256": "85573211a2ba93f7d27657b8ac8745ad336d08301137905a6873ef2f0d423b79",
+      "bug": "markor-0017",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "x 2026-11-11 Pay rent pri:A\n"
+      },
+      "seconds": 25.9,
+      "screenshot_sha256": "d759e5f5d5a6854b7a0d42113825d8162bcabbf76d16e287d5473ddde91c4a89",
+      "bug": "markor-0017",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "- item\n  - child\n  - \n"
+      },
+      "seconds": 35.1,
+      "screenshot_sha256": "320273ce76b1d4f84cd7b2c27f5ce7de8e34781c3de3c74434be50b1be9f184a",
+      "bug": "markor-0018",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "- item\n  - child\n  - \n"
+      },
+      "seconds": 25.6,
+      "screenshot_sha256": "9cac278d484ff9c14ab12dfaceda085e319aa3f179500607203cdce466ddd293",
+      "bug": "markor-0018",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

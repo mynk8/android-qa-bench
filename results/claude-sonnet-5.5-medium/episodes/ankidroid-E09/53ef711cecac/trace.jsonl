@@ -1,0 +1,67 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E09-11", "mask": "11", "unfixed": ["ankidroid-0027", "ankidroid-0029"], "present": ["ankidroid-0027", "ankidroid-0029"]}}
+{"event": "brief", "item_id": "ankidroid-E09"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 930}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "type", "args": {"text": "Spanish", "clear": true, "submit": false}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 848}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "type", "args": {"text": "spanish", "clear": true, "submit": false}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 613, "y": 981}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 390}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 15, "message": {"type": "bug_report", "screen": "Reposition new cards dialog (Card browser)", "element": "Range hint label", "symptom_type": "wrong_value", "expected": "Second line should read \"Queue bottom: 7\" (top and bottom labels)", "observed": "Both lines say \"Queue top\"", "observed_quote": "Queue top: ⁨1⁩\nQueue top: ⁨7⁩", "element_ref": 1, "steps": ["Open Card browser", "Long-press a card", "More options > Reposition"], "anchor_node": {"id": "com.ichi2.anki:id/queue_limits_label", "text": "Queue top: ⁨1⁩\nQueue top: ⁨7⁩", "class": "android.widget.TextView", "bounds": [144, 379, 351, 473]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["ankidroid-0029"], "per_bug": {"ankidroid-0027": "expected_value", "ankidroid-0029": "anchored"}}
+{"event": "hit", "bugs": ["ankidroid-0029"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 572, "y": 1339}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 390}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 841}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "type", "args": {"text": "hi there", "clear": true, "submit": false}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 478}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 651}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 340}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 637}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 993}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "type", "args": {"text": "1", "clear": true, "submit": true}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 1117}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 637}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 993}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "type", "args": {"text": "1", "clear": true, "submit": false}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 1117}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 559}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 2116}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "type", "args": {"text": "Extra", "clear": true, "submit": false}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1309}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 487}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 993}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "type", "args": {"text": "3", "clear": true, "submit": false}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 1117}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 559}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1056}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "type", "args": {"text": "Verbs", "clear": true, "submit": false}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 981}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 294}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 294}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 421}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 930}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "type", "args": {"text": "French::Verbs", "clear": true, "submit": false}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 613, "y": 981}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "type", "args": {"text": "tag:verb", "clear": true, "submit": true}}}
+{"event": "agent", "step": 62, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.6, "notes": "One bug filed: the Reposition dialog hint showed \"Queue top\" on both lines. Rename clash check, expand/collapse arrows, field reorder (including persistence), card edit and tag search all behaved correctly. I did not test rotation, other note-type operations, or delete/undo flows. Test changes left in the data: a French::Verbs subdeck, an \"Extra\" field on \"Basic (and reversed card)\", a changed Back field on bonjour, and the Basic field order changed."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0027", "ankidroid-0029"], "unfixed": ["ankidroid-0027", "ankidroid-0029"], "outcome": "wrong_pass"}

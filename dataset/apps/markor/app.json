@@ -1,0 +1,44 @@
+{
+  "app_id": "markor",
+  "display_name": "Markor",
+  "repo": "https://github.com/gsantner/markor",
+  "licence": "Apache-2.0",
+  "package": "net.gsantner.markor",
+  "pinned_commit": "7b15e66932f170c0b3f105c522111b0f32d6c73d",
+  "source_type": "mature",
+  "ui": "views",
+  "local_data": "files",
+  "needs_network_or_login": false,
+  "first_run": [
+    [
+      {
+        "text": "NEXT"
+      },
+      {
+        "desc": "NEXT"
+      },
+      {
+        "text": "Next"
+      },
+      {
+        "desc": "Next"
+      }
+    ],
+    [
+      {
+        "text": "DONE"
+      },
+      {
+        "text": "Done"
+      },
+      {
+        "desc": "Done"
+      }
+    ],
+    [
+      {
+        "text": "OK"
+      }
+    ]
+  ]
+}

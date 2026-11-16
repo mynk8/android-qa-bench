@@ -1,0 +1,134 @@
+{
+  "bug_id": "minus-0008",
+  "runs": 1,
+  "started": "2026-11-11T03:15:59+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Transport",
+            "amount": "40.00",
+            "category": "Food"
+          }
+        ]
+      },
+      "seconds": 102.7,
+      "screenshot_sha256": "2d0e1e9b34cc2ec292549f92ab1db817bad966ca0935be8133e2027a27824135",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0008-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "near_max_card": [
+          "$20",
+          "Minimum spent",
+          "09 Nov",
+          "Food",
+          "$40",
+          "Maximum spent",
+          "09 Nov",
+          "Food",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 80.7,
+      "screenshot_sha256": "bcd98f2e99942f78e650088b5746bb6a0cf4dceb3086eda0adfe2c2f7bf0e0cb",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0008-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Rent",
+            "category": "Food"
+          }
+        ]
+      },
+      "seconds": 41.3,
+      "screenshot_sha256": "2801f40f6f1d3f99ea6be8400f01632071b2735734834feebe09b12ce7e35821",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0008-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Transport",
+            "amount": "40.00",
+            "category": "Transport"
+          }
+        ]
+      },
+      "seconds": 62.2,
+      "screenshot_sha256": "a9842848f969e6652edda56e64ab04d114e28e0d962b341a36edd61a3e742046",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0008-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "near_max_card": [
+          "$20",
+          "Minimum spent",
+          "09 Nov",
+          "Food",
+          "$40",
+          "Maximum spent",
+          "09 Nov",
+          "Transport",
+          "2",
+          "Total Expenses",
+          "$2.61"
+        ]
+      },
+      "seconds": 81.2,
+      "screenshot_sha256": "bdc430be883ca4fcc265784ba4e8afb4626a893cf8c1561a692cef432ca40aa9",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0008-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "comment": "Rent",
+            "category": "Food"
+          }
+        ]
+      },
+      "seconds": 38.7,
+      "screenshot_sha256": "892b4af6d0aba8f4dc7283ba10fa9ec7ca023e8d5254d00acdddbfa626b06e4e",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0008-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:25:36+0530"
+}

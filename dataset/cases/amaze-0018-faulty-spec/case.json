@@ -1,0 +1,14 @@
+{
+  "case_id": "amaze-0018-faulty-spec",
+  "bug_id": "amaze-0018",
+  "_build_id": "amaze-0018-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "files_basic",
+  "agent_input": "agent_input.md"
+}

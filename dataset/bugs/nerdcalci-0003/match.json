@@ -1,0 +1,89 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "conversion result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "10 dec in bin shows 0b1010 and 15 dec in hex shows 0xF",
+    "numeral system conversions show the same number in the other base"
+  ],
+  "observed_contains_any": [
+    "the conversion shows a different, larger number",
+    "10 dec in bin shows 0b1100100"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "0xf",
+      "0b1010",
+      "0o100",
+      "0xff",
+      "hex*",
+      "bin*",
+      "octal",
+      "base",
+      "conver*",
+      "correct*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "hex*",
+      "bin*",
+      "oct*",
+      "base",
+      "conver*",
+      "numeral",
+      "0b*",
+      "0x*",
+      "0o*"
+    ],
+    [
+      "wrong",
+      "incorrect",
+      "different",
+      "larger",
+      "bigger",
+      "multipl*",
+      "times",
+      "unexpected",
+      "mismatch*",
+      "0x96",
+      "0b1100100",
+      "0o1200"
+    ]
+  ],
+  "location_concepts": [
+    "number*",
+    "bases",
+    "calculator",
+    "result",
+    "editor",
+    "hex*",
+    "bin*",
+    "oct*",
+    "line"
+  ],
+  "anchors": {
+    "elements": [
+      "15 dec in hex",
+      "10 dec in bin",
+      "64 dec in oct",
+      "255 dec in hex"
+    ],
+    "observed": [
+      "0x96",
+      "0b1100100",
+      "0o1200",
+      "0x9f6"
+    ]
+  }
+}

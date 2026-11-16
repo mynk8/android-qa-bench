@@ -1,0 +1,131 @@
+{
+  "run_id": "a7db3e5624cc",
+  "item_id": "ankidroid-E01",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Browser toolbar deck dropdown",
+      "element_ref": 1,
+      "field": "Starting deck",
+      "symptom_type": "wrong_value",
+      "expected": "Opening Browse cards from the French deck should start with French selected and show its 3 cards.",
+      "observed": "The browser starts on Spanish and shows 4 cards, even though Browse cards was launched from French.",
+      "observed_quote": "Spanish | 4 cards shown",
+      "steps": [
+        "Open the card browser and select Spanish in the deck dropdown.",
+        "Return to Decks.",
+        "Long-press French and choose Browse cards.",
+        "Observe that the browser still shows Spanish with 4 cards shown."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish",
+          "4 cards shown"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ],
+      "present": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/ankidroid-E01/a7db3e5624cc/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0019": "reported",
+    "ankidroid-0001": "missed_unreached"
+  },
+  "elapsed_s": 557.546,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.96,
+    "notes": "Swept deck expansion/collapse persistence, live deck filtering, browser deck selection and launch routes, tag union states, cancellation, and rotation. Filed one confirmed issue: Browse cards launched from French retains Spanish as the starting deck. Temporary empty QA child deck was removed; original note/tag data remains unchanged."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0019",
+    "ankidroid-0001"
+  ],
+  "found": [
+    "ankidroid-0019"
+  ],
+  "required": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "missed": [
+    "ankidroid-0001"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 118,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "bug_meta": {
+    "ankidroid-0019": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "ankidroid-0001": {
+      "family": "display",
+      "hard_slice": true
+    }
+  }
+}

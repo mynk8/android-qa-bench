@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "shop",
+    "element": "coins",
+    "field": "coin balance",
+    "symptom_type": "wrong_value",
+    "expected": "the coin balance of 2,567,890 is shown as 2.5M (floored)",
+    "observed": "the coin balance is shown as 2.6M, rounded up",
+    "steps": [
+      "Opened the Shop from Home.",
+      "Read the Coins value at the top right."
+    ]
+  },
+  "vague": {
+    "screen": "shop",
+    "element": "something",
+    "field": "coin balance",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

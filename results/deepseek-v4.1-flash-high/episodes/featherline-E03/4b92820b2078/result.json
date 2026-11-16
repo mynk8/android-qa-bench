@@ -1,0 +1,181 @@
+{
+  "run_id": "4b92820b2078",
+  "item_id": "featherline-E03",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add medicine (Custom category)",
+      "element": "Capsule strength (mg) amount field / Unit selector",
+      "field": "Tablet/Capsule strength unit",
+      "symptom_type": "wrong_value",
+      "expected": "When the preparation form is changed, every amount field including its selected unit should be carried over, so 50 \u03bcg entered on Tablet stays 50 \u03bcg (unit selector still \u03bcg) on Capsule.",
+      "observed": "After selecting the \u03bcg unit and entering 50 in \"Tablet strength (\u03bcg)\", switching Preparation form to Capsule keeps the number 50 but silently resets the unit to mg, showing \"Capsule strength (mg)\" with 50 mg; switching back to Tablet also shows mg. The user's 50 \u03bcg has become 50 mg (1000x the intended amount).",
+      "steps": [
+        "Open Plan > Medicines > Add medicine",
+        "Select Category: Custom",
+        "Enter Medication name, set Unit to \u03bcg, enter 50 in the strength field (shows 'Tablet strength (\u03bcg)' with value 50)",
+        "Tap the Capsule preparation form",
+        "Observe the amount field: it shows 'Capsule strength (mg)' with value 50 and the mg unit chip selected"
+      ],
+      "element_ref": 15,
+      "observed_quote": "Capsule strength (mg)",
+      "anchor_node": {
+        "text": "Capsule strength (mg)",
+        "class": "android.widget.TextView",
+        "bounds": [
+          105,
+          1069,
+          434,
+          1111
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Amount field unit / Unit selector",
+      "element_ref": 13,
+      "expected": "Changing the preparation form should carry over the amount field including its selected unit: \u03bcg should stay selected, so the field reads \"Capsule strength (\u03bcg)\".",
+      "observed": "With Category Custom and Tablet selected, tapping the \u03bcg unit chip changes the field to \"Tablet strength (\u03bcg)\" and checks \u03bcg. Tapping the Capsule preparation form then resets the Unit selector to mg: the field reads \"Capsule strength (mg)\" with mg checked, so the selected \u03bcg unit is lost when only the preparation form is changed.",
+      "observed_quote": "Capsule strength (mg)",
+      "screen": "Add medicine (Custom category)",
+      "steps": [
+        "Open Plan > Medicines > Add medicine",
+        "Select Category: Custom (Preparation form stays Tablet)",
+        "Tap the \u03bcg Unit chip; the strength field becomes 'Tablet strength (\u03bcg)' with \u03bcg checked",
+        "Tap Preparation form: Capsule",
+        "Observe the amount field: it is 'Capsule strength (mg)' and the mg unit chip is checked"
+      ],
+      "symptom_type": "wrong_value",
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Capsule strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1069,
+          1017,
+          1237
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Vial strength (mg) amount field",
+      "element_ref": 24,
+      "expected": "Changing the preparation form should carry over the entered amount, so the 2 mg entered on Tablet appears in the Injection form's amount field (\"Vial strength (mg)\").",
+      "observed": "With Preparation form Tablet and Tablet strength set to 2 mg, tapping Preparation form Injection shows an empty \"Vial strength (mg)\" field; the amount entered before the form change is not carried over.",
+      "observed_quote": "Vial strength (mg)",
+      "screen": "Add medicine (Estradiol)",
+      "steps": [
+        "Open Plan > Medicines > Add medicine (Estradiol category, Tablet form)",
+        "Tap the 2 mg preset so Tablet strength shows 2",
+        "Tap Preparation form: Injection",
+        "Observe the Injection amount field 'Vial strength (mg)' - it is empty instead of showing the 2 carried over from the Tablet form"
+      ],
+      "symptom_type": "missing",
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Vial strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1906,
+          1017,
+          2074
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0003",
+        "featherline-0005"
+      ],
+      "present": [
+        "featherline-0003",
+        "featherline-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/featherline-E03/4b92820b2078/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0003": "missed_unreached",
+    "featherline-0005": "missed_unreached"
+  },
+  "elapsed_s": 1410.766,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "missed": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "bug_meta": {
+    "featherline-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0005": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

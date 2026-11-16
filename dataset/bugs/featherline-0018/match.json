@@ -1,0 +1,72 @@
+{
+  "screens": [
+    "group editor",
+    "schedule"
+  ],
+  "elements": [
+    "night owl mode",
+    "description"
+  ],
+  "fields": [
+    "time format"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the description shows 4:00 AM like the other times",
+    "the boundary uses the app's time format"
+  ],
+  "observed_contains_any": [
+    "the description shows 04:00 while other times use AM and PM",
+    "the boundary time is in a different format"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "inconsistent"
+  ],
+  "expected_concepts": [
+    [
+      "4:00 am",
+      "am",
+      "pm",
+      "12-hour",
+      "same format",
+      "app's time format",
+      "consistent",
+      "matches",
+      "12 hour",
+      "same style",
+      "same 12 hour"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "04:00",
+      "24-hour",
+      "different format",
+      "inconsistent",
+      "doesn't match",
+      "does not match",
+      "not match*",
+      "leading zero",
+      "mismatch*"
+    ]
+  ],
+  "location_concepts": [
+    "night owl",
+    "schedule",
+    "description",
+    "group",
+    "editor",
+    "time"
+  ],
+  "anchors": {
+    "elements": [
+      "night owl",
+      "count as the previous day",
+      "before"
+    ],
+    "observed": [
+      "04:00"
+    ]
+  }
+}

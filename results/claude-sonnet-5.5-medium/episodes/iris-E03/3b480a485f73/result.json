@@ -1,0 +1,85 @@
+{
+  "run_id": "3b480a485f73",
+  "item_id": "iris-E03",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0012"
+      ],
+      "present": [
+        "iris-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/iris-E03/3b480a485f73/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0012": "missed_unreached"
+  },
+  "elapsed_s": 79.927,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "I found no clear defects, so I filed no reports. In the media tab, the album, the viewer, the details sheet and the trash, sizes showed 1.5 MB and 2.5 MB. Trash order was newest-first on two runs. Restore worked and the item reappeared in Media and in the album. The Media blank state showed \"No photos found\" and no illustration was visible. The album header cover was never visible in the album screen, so the new thumbnail cache is untested. The \"1 items\" label in the album list is a minor wording issue, and I did not report it."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "iris-0012"
+  ],
+  "found": [],
+  "required": [
+    "iris-0012"
+  ],
+  "missed": [
+    "iris-0012"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 35,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "iris-0012"
+  ],
+  "bug_meta": {
+    "iris-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

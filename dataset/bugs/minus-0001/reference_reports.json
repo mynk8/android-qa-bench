@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "history",
+    "element": "swipe actions",
+    "field": "recurrent item",
+    "symptom_type": "missing",
+    "expected": "swiping a recurrent history row reveals edit or delete actions",
+    "observed": "recurrent items are missing swipe actions",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "history",
+    "element": "something",
+    "field": "recurrent item",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

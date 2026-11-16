@@ -1,0 +1,354 @@
+{
+  "run_id": "764b141698ae",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Amaze > Beta (paste conflict dialog)",
+      "element": "Paste conflict dialog RENAME choice; after tapping it the folder list still shows no renamed copy",
+      "field": "Paste conflict > RENAME (folder)",
+      "symptom_type": "no_effect",
+      "expected": "Choosing RENAME when pasting folder Alpha into a folder that already contains Alpha should create a renamed copy (e.g. \"Alpha (1)\") containing readme.txt, incrementing the folder count to 2.",
+      "observed": "Tapping RENAME silently closes the conflict dialog and creates nothing: the destination /AndroidQA/Amaze/Beta still shows \"1 folders and 2 files\" with only the original Alpha folder. Reproduced twice (also when pasting into the same parent). For comparison, RENAME on a FILE conflict (notes.txt) correctly created \"notes (1).txt\".",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Long-press folder Alpha and tap Copy",
+        "Open folder Beta (which already contains an Alpha copy)",
+        "Tap PASTE on the snackbar",
+        "In the 'File with same name already exists' dialog tap RENAME",
+        "Observe that no renamed folder appears and the count stays '1 folders and 2 files'"
+      ],
+      "element_ref": 6,
+      "observed_quote": "1 folders and 2 files",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "1 folders and 2 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug drawer (bookmarks section)",
+      "element": "Bookmark entries in the navigation drawer",
+      "field": "Bookmarks drawer ordering",
+      "symptom_type": "wrong_value",
+      "expected": "Bookmark entries in the drawer should be ordered by when they were added (per this build's change). Adding Alpha, then Beta, then Audiobooks, then Alarms should keep that addition sequence (or its reverse), not reorder them.",
+      "observed": "Bookmarks are displayed in alphabetical order, not addition order. I added bookmarks sequentially: Alpha (1st), Beta (2nd), Audiobooks (3rd), Alarms (4th); the drawer shows: Alarms, Alpha, Audiobooks, Beta, DCIM, Download, Movies, Music, Pictures. Audiobooks was added after Beta yet appears before it, and Alarms was added last yet appears first \u2014 a pure name sort.",
+      "steps": [
+        "Open the drawer and note existing bookmarks DCIM/Download/Movies/Music/Pictures",
+        "In AndroidQA/Amaze, long-press Alpha > Add to Bookmarks",
+        "Add Beta to bookmarks",
+        "At /storage/emulated/0 add Audiobooks to bookmarks",
+        "Add Alarms to bookmarks",
+        "Open the drawer: entries appear alphabetically (Alarms, Alpha, Audiobooks, Beta, ...) instead of in the order they were added"
+      ],
+      "element_ref": 48,
+      "observed_quote": "Audiobooks",
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Nov 14 | 6:33\u202fAM",
+          "Audiobooks"
+        ],
+        "bounds": [
+          0,
+          977,
+          798,
+          1103
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug navigation drawer, list of bookmark folders",
+      "element": "Bookmark entries between \"Internal Storage\" and \"Quick access\"",
+      "field": "Bookmark ordering (drawer)",
+      "symptom_type": "wrong_value",
+      "expected": "Per the release change, drawer bookmark entries should be ordered by when they were added. Adding bookmarks in the order Alpha -> Beta -> Audiobooks -> Alarms should produce Alpha, Beta, Audiobooks, Alarms (or the exact reverse), not a name sort.",
+      "observed": "The drawer shows the bookmark folders in plain alphabetical order: \"Alarms\", \"Alpha\", \"Audiobooks\", \"Beta\", \"DCIM\", \"Download\", \"Movies\", \"Music\", \"Pictures\". I added Alpha first, Beta second, Audiobooks third and Alarms last, yet Alarms (added last) is at the very top and Audiobooks (added 3rd) sits before Beta (added 2nd), proving the list is sorted by name and not by addition time. Changing the list sort setting (descending) does not change this drawer order. Order survives app reopen. This is reproducible from a fresh drawer each time.",
+      "steps": [
+        "Open AndroidQA/Amaze and long-press Alpha, choose Add to Bookmarks",
+        "Long-press Beta, choose Add to Bookmarks",
+        "Navigate to /storage/emulated/0, long-press Audiobooks, choose Add to Bookmarks",
+        "Long-press Alarms, choose Add to Bookmarks",
+        "Open the navigation drawer",
+        "Observe order is Alarms, Alpha, Audiobooks, Beta, DCIM... i.e. alphabetical, not the Alpha, Beta, Audiobooks, Alarms addition order"
+      ],
+      "element_ref": 48,
+      "observed_quote": "Alarms",
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Nov 14 | 6:32\u202fAM",
+          "Audiobooks"
+        ],
+        "bounds": [
+          0,
+          977,
+          798,
+          1103
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug > /storage/emulated/0/AndroidQA/Amaze, More options menu",
+      "element": "More options > view mode toggle (\"Grid View\" item shown while the folder was set to grid)",
+      "field": "Directory view mode per folder (grid/list)",
+      "symptom_type": "not_persisted",
+      "expected": "The grid/list choice stored for this folder path should survive a device rotation, so Amaze stays in Grid View before and after rotating to landscape and back.",
+      "observed": "After setting /AndroidQA/Amaze to Grid View (menu then offered \"List View\" and items rendered as a grid), rotating to landscape and back to portrait resets the folder to List View: items render as full-width rows and the More options menu offers \"Grid View\" again. Reproduced twice. The per-folder grid choice is therefore not persisted across configuration change (rotation).",
+      "steps": [
+        "Navigate to /storage/emulated/0/AndroidQA/Amaze",
+        "Open More options and tap Grid View (items switch to grid; menu then shows List View)",
+        "Rotate device to landscape",
+        "Rotate device back to portrait",
+        "Open More options: it shows Grid View and the files are in list layout, i.e. the saved grid choice was lost"
+      ],
+      "element_ref": 2,
+      "observed_quote": "Grid View",
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Grid View"
+        ],
+        "bounds": [
+          555,
+          325,
+          1070,
+          451
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug > /storage/emulated/0/AndroidQA/Amaze, More options menu after app restart",
+      "element": "View mode toggle in More options menu (shows \"Grid View\" although this folder was set to grid before restart)",
+      "field": "Directory view mode stored per folder path",
+      "symptom_type": "not_persisted",
+      "expected": "The grid choice stored for /storage/emulated/0/AndroidQA/Amaze should still be applied after closing and reopening the app, so the menu should offer \"List View\" and the folder should render as a grid.",
+      "observed": "Set /AndroidQA/Amaze to Grid View (the menu then offered \"List View\" and items rendered as a grid). Chose More options > Exit, then relaunched the app; the same folder now renders as a list (full-width rows) and More options again offers \"Grid View\", so the per-folder view choice was not persisted. Reproduced twice. On the same restart the header also showed a wrong count, \"4 folders and 10 files\", while the folder contains 2 folders and 5 files.",
+      "steps": [
+        "Navigate to /storage/emulated/0/AndroidQA/Amaze",
+        "More options > Grid View (confirm menu now offers List View; list renders as grid)",
+        "More options > Exit (app returns to launcher)",
+        "Reopen Amaze from launcher",
+        "The folder is back in list layout and More options offers Grid View - the stored grid choice was lost"
+      ],
+      "element_ref": 2,
+      "observed_quote": "Grid View",
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Grid View"
+        ],
+        "bounds": [
+          555,
+          325,
+          1070,
+          451
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug > /storage/emulated/0 (root) right after relaunching the app",
+      "element": "Folder count header (id=pathname) under the path bar",
+      "field": "Folder count after app restart",
+      "symptom_type": "wrong_value",
+      "expected": "The header for /storage/emulated/0 should report the real number of folders, i.e. \"14 folders and 0 files\", matching the 14 directories actually listed.",
+      "observed": "After choosing More options > Exit and relaunching the app, the header reports \"28 folders and 0 files\" while /storage/emulated/0 contains only 14 folders (Alarms, Android, AndroidQA, Audiobooks, DCIM, Documents, Download, Movies, Music, Notifications, Pictures, Podcasts, Recordings, Ringtones). The count is exactly doubled. Same happens in a subfolder: /AndroidQA/Amaze shows \"4 folders and 10 files\" on restart while it actually has 2 folders and 5 files. Navigating into a folder and back corrects the count, but every app relaunch restores the doubled count. Reproduced several times.",
+      "steps": [
+        "Navigate to /storage/emulated/0 (header shows 14 folders and 0 files)",
+        "More options > Exit",
+        "Relaunch Amaze",
+        "Header now shows 28 folders and 0 files while the same 14 folders are listed"
+      ],
+      "element_ref": 6,
+      "observed_quote": "28 folders and 0 files",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "28 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          488,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze > Beta > Alpha (after Paste conflict > RENAME of folder Alpha)",
+      "element": "Existing Alpha folder receiving the source folder's contents",
+      "field": "Paste conflict RENAME folder copy destination",
+      "symptom_type": "wrong_navigation",
+      "expected": "Choosing RENAME when pasting folder Alpha into a folder that already contains an Alpha should create a separate renamed copy (e.g. \"Alpha (1)\") containing the source's readme.txt, leaving the existing Alpha with only its own marker.txt.",
+      "observed": "No renamed copy is created. Instead the source folder's contents are merged into the existing conflicting folder: after the RENAME, /AndroidQA/Amaze/Beta still reports \"1 folders and 2 files\" (no Alpha (1)), but opening the existing /AndroidQA/Amaze/Beta/Alpha shows both its original marker.txt AND a new readme.txt copied from the source (0 folders and 2 files). So the renamed folder copy's contents are written into the destination's existing folder rather than into a new renamed folder.",
+      "steps": [
+        "In /AndroidQA/Amaze/Beta/Alpha, rename readme.txt to marker.txt so the folder differs from source Alpha",
+        "Go to /AndroidQA/Amaze, long-press folder Alpha and Copy",
+        "Open /AndroidQA/Amaze/Beta (already contains Alpha) and tap PASTE",
+        "In the 'File with same name already exists' dialog tap RENAME",
+        "Observe Beta still shows '1 folders and 2 files' (no renamed folder) and Beta/Alpha now contains marker.txt plus readme.txt copied from the source"
+      ],
+      "element_ref": 11,
+      "observed_quote": "readme.txt",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "readme.txt",
+          "Nov 14 | 6:33\u202fAM",
+          "0 B"
+        ],
+        "bounds": [
+          0,
+          720,
+          1080,
+          909
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze Debug navigation drawer after relaunching the app",
+      "element": "Bookmark folder list in the drawer (first entry after Internal Storage)",
+      "field": "Bookmarks persistence",
+      "symptom_type": "not_persisted",
+      "expected": "A bookmark added via More options (folder context menu) > Add to Bookmarks should still be present in the drawer after closing and reopening the app.",
+      "observed": "Bookmarks added via \"Add to Bookmarks\" are lost when the app is closed and reopened. At /storage/emulated/0 I added a bookmark for folder Alarms; the drawer immediately showed \"Alarms\" above DCIM (verified twice). Then More options > Exit, relaunch Amaze: the drawer again lists only the default bookmarks DCIM, Download, Movies, Music, Pictures - Alarms and all previously added custom bookmarks (AndroidQA, Audiobooks, Amaze) are gone. They are also not merely reordered; they no longer exist in the drawer.",
+      "steps": [
+        "At /storage/emulated/0 tap the three-dot menu of folder Alarms",
+        "Tap Add to Bookmarks",
+        "Open the drawer - Alarms now appears between Internal Storage and DCIM",
+        "More options > Exit (app returns to launcher)",
+        "Relaunch Amaze and open the drawer - the Alarms bookmark is gone, only DCIM/Download/Movies/Music/Pictures remain"
+      ],
+      "element_ref": 44,
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Android",
+          "DCIM"
+        ],
+        "bounds": [
+          0,
+          725,
+          798,
+          851
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/amaze-E01/764b141698ae/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "reported",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 1258.759,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "report_cap",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [
+    "amaze-0004"
+  ],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 8,
+  "steps": 288,
+  "precision": 0.16666666666666666,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "hit",
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match",
+      "duplicate"
+    ]
+  }
+}

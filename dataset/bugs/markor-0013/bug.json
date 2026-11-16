@@ -1,0 +1,94 @@
+{
+  "bug_id": "markor-0013",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "action has unintended effect",
+  "symptom_type": "wrong_value",
+  "fix_date": "2020-12-05",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "ordered_list": [
+        {
+          "desc": "Ordered list"
+        },
+        {
+          "text": "Ordered list"
+        }
+      ],
+      "unordered_list": [
+        {
+          "desc": "Unordered list"
+        },
+        {
+          "text": "Unordered list"
+        }
+      ],
+      "bold": [
+        {
+          "desc": "Bold"
+        },
+        {
+          "text": "Bold"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0013-buggy",
+    "fixed": "markor-0013-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0013.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "Drop the early return after the ordered-list action so execution falls through to the bold case, which wraps/marks the line with ** as well."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

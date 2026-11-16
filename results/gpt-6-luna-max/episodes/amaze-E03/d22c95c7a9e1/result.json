@@ -1,0 +1,206 @@
+{
+  "run_id": "d22c95c7a9e1",
+  "item_id": "amaze-E03",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "SMB Connection dialog (landscape)",
+      "element": "Lower SMB fields and Anonymous checkbox in the connection form",
+      "element_ref": 4,
+      "field": "Landscape layout / form scrolling",
+      "symptom_type": "cut_off",
+      "expected": "After rotating, the dialog should keep the entire form reachable, including Domain, Username, Password, Anonymous, and IPC signing options.",
+      "observed": "In landscape the dialog shows the connection name, SMB Server Hostname, and a partially clipped Share path field, but omits the remaining fields. Swiping up inside the dialog does not reveal them.",
+      "observed_quote": "Share path",
+      "steps": [
+        "Open New Cloud Connection > SMB Connection > ENTER HOSTNAME MANUALLY in portrait.",
+        "Tap CREATE with the host empty to display validation.",
+        "Rotate to landscape.",
+        "Observe that only the form's top fields and bottom action buttons are available; swipe up inside the dialog and confirm the remaining fields do not appear."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/shareET",
+        "text": "Share path",
+        "class": "android.widget.EditText",
+        "bounds": [
+          732,
+          786,
+          1541,
+          848
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Directory listing (portrait after rotation)",
+      "element": "Directory listing layout",
+      "element_ref": 7,
+      "field": "Grid View preference",
+      "symptom_type": "not_persisted",
+      "expected": "The selected Grid View should remain active after rotating to landscape and back to portrait.",
+      "observed": "The directory changes from card grid to single-column rows on rotation and remains in list layout after returning to portrait. Reproduced on a second rotation cycle.",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Open More options and tap Grid View; verify the items appear as cards.",
+        "Rotate to landscape, then back to portrait.",
+        "Observe that the items are single-column rows instead of the selected card grid."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Alpha",
+          "Nov 15 | 7:26\u202fPM"
+        ],
+        "bounds": [
+          0,
+          399,
+          1080,
+          588
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "SMB Connection dialog after rotation",
+      "element": "SMB Server Hostname validation message",
+      "element_ref": 3,
+      "field": "Host validation state",
+      "symptom_type": "wrong_value",
+      "expected": "A freshly opened form should show no host error until CREATE is pressed with an empty host.",
+      "observed": "After cancelling a prior form that displayed the empty-host error, a newly opened form has no error in portrait, but rotating to landscape displays the old validation message without submitting the new form.",
+      "observed_quote": "Address cannot be empty",
+      "steps": [
+        "Open New Cloud Connection > SMB Connection > ENTER HOSTNAME MANUALLY.",
+        "Leave SMB Server Hostname empty and tap CREATE; observe \u201cAddress cannot be empty\u201d.",
+        "Tap CANCEL to discard the form.",
+        "Open a new manual SMB connection and leave its hostname empty; confirm the error is absent in portrait.",
+        "Rotate to landscape without tapping CREATE; the previous \u201cAddress cannot be empty\u201d message reappears."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/textinput_error",
+        "text": "Address cannot be empty",
+        "class": "android.widget.TextView",
+        "bounds": [
+          742,
+          714,
+          1531,
+          757
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "SMB Connection dialog after rotation back to portrait",
+      "element": "Username field while Anonymous is checked",
+      "element_ref": 43,
+      "field": "Anonymous / username enable state",
+      "symptom_type": "wrong_value",
+      "expected": "When Anonymous is checked, the Username and Password fields should stay disabled after rotation.",
+      "observed": "The Anonymous checkbox remains checked after rotating to landscape and back, but Username is enabled and accepts typed input.",
+      "observed_quote": "qa-user",
+      "steps": [
+        "Open New Cloud Connection > SMB Connection > ENTER HOSTNAME MANUALLY.",
+        "Check Anonymous; verify Username and Password are disabled.",
+        "Rotate to landscape, then back to portrait.",
+        "With Anonymous still checked, tap Username and type \u201cqa-user\u201d; the text is accepted."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/usernameET",
+        "text": "qa-user",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1083,
+          943,
+          1201
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "amaze-0011"
+      ],
+      "present": [
+        "amaze-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E03/d22c95c7a9e1/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0011": "missed_unreached"
+  },
+  "elapsed_s": 1359.574,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Completed the requested copy/paste/rename, sorting and directory view, bookmark, and SMB sweeps. Exercised multi-item paste conflicts with Do for all + Skip, file and folder copy/paste, valid and empty rename input, all sort keys/directions and directory modes, Grid/List, and Only this folder. Tested bookmark persistence, same title at different locations, repeated add, and cleanup. Tested SMB Anonymous enable/disable and rotation. Submitted four observations (grid view on rotation; SMB landscape fields, validation state, and Anonymous state after rotation); developer replies said they could not reproduce them. Removed temporary copies and bookmarks; Trash Bin is empty, and the supplied folder/file names and counts are restored."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0011"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0011"
+  ],
+  "missed": [
+    "amaze-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 248,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0011"
+  ],
+  "bug_meta": {
+    "amaze-0011": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

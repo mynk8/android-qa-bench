@@ -1,0 +1,181 @@
+{
+  "run_id": "e6edbb280894",
+  "item_id": "markor-E04",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Single.md editor",
+      "element": "Ordered list",
+      "element_ref": 8,
+      "symptom_type": "wrong_value",
+      "expected": "Ordered list adds only the enumeration prefix: 1. gamma",
+      "observed": "Tapping Ordered list also inserts four asterisks.",
+      "observed_quote": "1. gamma****",
+      "steps": [
+        "Open Single.md containing gamma without a trailing newline.",
+        "Tap Ordered list.",
+        "Reset content to gamma and repeat; the same extraneous asterisks appear."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "1. gamma****",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          389
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Money.md editor",
+      "element": "Bold hold gesture",
+      "element_ref": 8,
+      "symptom_type": "wrong_value",
+      "expected": "Bold only the selected content line; preserve the trailing newline without adding formatting to the next empty line.",
+      "observed": "Selecting all text ending in newline and holding Bold adds four asterisks on the unselected empty line at the selection endpoint. Reproduced after Undo.",
+      "observed_quote": "**Costs $5 and $10**\n****",
+      "steps": [
+        "Open Money.md with Costs $5 and $10 followed by a newline.",
+        "Long press editor and choose Select all.",
+        "Hold Bold.",
+        "Undo, select all again and hold Bold; the extra **** line returns."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "**Costs $5 and $10**\n****",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          436
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Single.md View Mode",
+      "element": "Indented code block",
+      "symptom_type": "wrong_value",
+      "expected": "Code block displays the literal source indented $5 <tag> & text.",
+      "observed": "Preview adds a visible backslash before the dollar sign, although editor source has no backslash. Seen on two entries into View Mode and in screenshots.",
+      "observed_quote": "indented \\$5 <tag> & text",
+      "steps": [
+        "In Single.md enter a line with four leading spaces followed by indented $5 <tag> & text.",
+        "Enter View Mode and inspect the code block.",
+        "Return to editor to verify the source has $5 without a backslash.",
+        "Enter View Mode again; the code block still shows a backslash before $5."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E04-111",
+      "mask": "111",
+      "unfixed": [
+        "markor-0013",
+        "markor-0014",
+        "markor-0019"
+      ],
+      "present": [
+        "markor-0013",
+        "markor-0014",
+        "markor-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/markor-E04/e6edbb280894/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0013": "reported",
+    "markor-0014": "missed_unreached",
+    "markor-0019": "missed_unreached"
+  },
+  "elapsed_s": 544.088,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept formatting toolbar and preview/view mode using supplied Markdown, todo, single-line, @, currency and nested-list fixtures. Checked code styling visually, repeated mode switches, rotation, undo, width choices/cancel, save/reopen and restored test edits. Confirmed/logged: Ordered list also inserts unwanted ****. Filed two additional reproducible on-device observations (Bold hold adds **** at newline selection endpoint; code preview adds backslash before dollar); developer could not reproduce these. No build update installed."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "found": [
+    "markor-0013"
+  ],
+  "required": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "missed": [
+    "markor-0014",
+    "markor-0019"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 209,
+  "precision": 0.3333333333333333,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "bug_meta": {
+    "markor-0013": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0014": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

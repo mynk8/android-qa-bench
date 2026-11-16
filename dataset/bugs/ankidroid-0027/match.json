@@ -1,0 +1,96 @@
+{
+  "screens": [
+    "deck picker",
+    "rename deck dialog"
+  ],
+  "elements": [
+    "rename button",
+    "deck name field"
+  ],
+  "fields": [
+    "deck name"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the deck is renamed to FRENCH and the list shows FRENCH",
+    "a capitalisation-only rename is accepted"
+  ],
+  "observed_contains_any": [
+    "Rename stays disabled with a deck already exists error",
+    "the deck keeps the name French"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "renamed",
+      "rename*",
+      "FRENCH",
+      "accepted",
+      "changes",
+      "updated",
+      "capital*",
+      "upper",
+      "allowed",
+      "letter case",
+      "case",
+      "permitted",
+      "possible",
+      "works",
+      "succeed*",
+      "no error",
+      "no complaint",
+      "should not complain",
+      "not complain"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "already exists",
+      "exists",
+      "error",
+      "disabled",
+      "greyed",
+      "cannot",
+      "can't",
+      "not renamed",
+      "no effect",
+      "unchanged",
+      "rejected",
+      "stays",
+      "taken",
+      "complain*",
+      "refus*",
+      "duplicate",
+      "name is"
+    ],
+    [
+      "rename*",
+      "deck",
+      "french",
+      "name",
+      "case",
+      "capital*",
+      "upper*"
+    ]
+  ],
+  "location_concepts": [
+    "deck picker",
+    "rename",
+    "rename deck",
+    "deck list",
+    "dialog"
+  ],
+  "anchors": {
+    "elements": [
+      "rename",
+      "deck name",
+      "rename deck"
+    ],
+    "observed": [
+      "name already exists"
+    ]
+  }
+}

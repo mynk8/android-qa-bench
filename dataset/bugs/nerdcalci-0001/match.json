@@ -1,0 +1,106 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "avg result",
+    "grand_total result"
+  ],
+  "fields": [
+    "avg",
+    "grand_total"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the avg line averages only the three amounts above and grand_total counts each amount once",
+    "avg is 541.92 and grand_total is 2,850"
+  ],
+  "observed_contains_any": [
+    "the avg line also counts the total line",
+    "grand_total counts the total lines again"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "avg",
+      "average",
+      "grand_total",
+      "total",
+      "mean",
+      "subtotal",
+      "sum row",
+      "avg*",
+      "average*",
+      "subtotal*"
+    ],
+    [
+      "541.92",
+      "2,850",
+      "2850",
+      "1625.75",
+      "1,625.75",
+      "once",
+      "only",
+      "excluded",
+      "not counted",
+      "not added",
+      "without",
+      "above",
+      "each amount",
+      "three amounts"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "total",
+      "avg",
+      "grand_total",
+      "average",
+      "sum"
+    ],
+    [
+      "counts",
+      "counted",
+      "includes",
+      "included",
+      "adds",
+      "added",
+      "twice",
+      "double*",
+      "again",
+      "too high",
+      "too large",
+      "812.88",
+      "5,700",
+      "5700",
+      "higher",
+      "larger",
+      "inflated"
+    ]
+  ],
+  "location_concepts": [
+    "expenses",
+    "budget",
+    "total",
+    "avg",
+    "average",
+    "grand*",
+    "calculator",
+    "result",
+    "editor"
+  ],
+  "anchors": {
+    "elements": [
+      "avg",
+      "grand_total",
+      "total"
+    ],
+    "observed": [
+      "812.88",
+      "5700",
+      "5,700"
+    ]
+  }
+}

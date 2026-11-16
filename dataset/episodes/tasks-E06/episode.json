@@ -1,0 +1,31 @@
+{
+  "episode_id": "tasks-E06",
+  "app_id": "tasks",
+  "bugs": [
+    "tasks-0020"
+  ],
+  "seed_id": "inbox_basic",
+  "builds": {
+    "0": "tasks-E06-0",
+    "1": "tasks-E06-1"
+  },
+  "observable": {
+    "0": {
+      "tasks-0020": false
+    },
+    "1": {
+      "tasks-0020": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

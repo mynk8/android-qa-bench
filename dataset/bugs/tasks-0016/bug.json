@@ -1,0 +1,48 @@
+{
+  "bug_id": "tasks-0016",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-14",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {}
+  },
+  "builds": {
+    "buggy": "tasks-0016-buggy",
+    "fixed": "tasks-0016-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0016.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "TaskContainer.chipCount returns the total child count, so the list subtask chip keeps showing completed subtasks."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

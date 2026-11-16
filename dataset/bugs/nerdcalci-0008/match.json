@@ -1,0 +1,74 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "percentage result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "disc% of price shows 36 and disc% off price shows 204",
+    "a variable percentage works like a typed percentage"
+  ],
+  "observed_contains_any": [
+    "the lines with a variable percentage show Err",
+    "disc% of price shows Err"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "36",
+      "204",
+      "102",
+      "variable",
+      "disc",
+      "tax",
+      "% of",
+      "% off",
+      "percent*",
+      "named value",
+      "named",
+      "thirty-six",
+      "two hundred"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "err",
+      "error*",
+      "invalid",
+      "fail*",
+      "no result",
+      "wrong",
+      "incorrect",
+      "not calculated",
+      "unexpected",
+      "exception"
+    ]
+  ],
+  "location_concepts": [
+    "percent*",
+    "calculator",
+    "result",
+    "editor",
+    "line",
+    "disc*",
+    "tax*"
+  ],
+  "anchors": {
+    "elements": [
+      "disc% of price",
+      "disc% off price",
+      "tax% of 1200",
+      "Error Info"
+    ],
+    "observed": [
+      "err"
+    ]
+  }
+}

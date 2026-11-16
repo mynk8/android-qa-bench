@@ -1,0 +1,65 @@
+{"event": "install", "build": {"n": 1, "build_id": "tasks-E02-1", "mask": "1", "unfixed": ["tasks-0002"], "present": ["tasks-0002"]}}
+{"event": "brief", "item_id": "tasks-E02"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 593, "y": 653}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 348, "y": 2169}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1261}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1061}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 168}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1882}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1472}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 856}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 856}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 325, "y": 812}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1485}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 818, "y": 2191}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 347, "y": 2169}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 907, "y": 1261}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 29, "message": {"type": "bug_report", "screen": "Task list", "element": "Subtasks under Pack for trip", "element_ref": 11, "field": "manual subtask order with descending direction", "symptom_type": "wrong_value", "expected": "With Subtasks set to My order and global sorting direction set to Descending, nested subtasks should follow the descending direction, placing Charge phone before Print tickets.", "observed": "After switching the global task sorting direction to Descending, the parent task order reversed, but Pack for trip's manual subtasks remain Print tickets followed by Charge phone.", "observed_quote": "Print tickets", "steps": ["Open My Tasks and open the Sort sheet.", "Confirm Subtasks is set to My order.", "Switch Sorting direction from Ascending to Descending.", "Return to the task list and inspect Pack for trip's expanded subtasks."], "anchor_node": {"id": "org.tasks:id/rowBody", "class": "android.widget.RelativeLayout", "contains": ["Print tickets"], "bounds": [53, 945, 1080, 1097]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["tasks-0002"], "per_bug": {"tasks-0002": "ok"}}
+{"event": "hit", "bugs": ["tasks-0002"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 347, "y": 2169}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 897, "y": 1261}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2075}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2075}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1579}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 330, "y": 810}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1549}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 818, "y": 2191}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 257}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1561}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 812}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1549}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 818, "y": 2191}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1713}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 812}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1549}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 818, "y": 2191}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1912}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.4}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 347, "y": 2169}}}
+{"event": "agent", "step": 60, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.92, "notes": "Swept task list, sort/group options, task editor fields, subtasks, and the provided recurrence cases. Confirmed and logged one defect: manual subtasks do not follow descending global sort direction. Restored the list sorting direction to Ascending; no task data was intentionally changed."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["tasks-0002"], "unfixed": ["tasks-0002"], "outcome": "success"}

@@ -1,0 +1,188 @@
+{
+  "run_id": "c0d45349a219",
+  "item_id": "ankidroid-E03",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card preview (Add note > Preview, Cloze note)",
+      "element": "Preview page body / selected card tab",
+      "field": "Card preview pages for cloze note with non-consecutive cloze numbers",
+      "symptom_type": "wrong_value",
+      "expected": "Each preview page should render the card it is labelled with: for Text \"{{c2::dos}} y {{c3::tres}}\", Card 2 should show \"dos y tres\" with cloze 2 hidden (\"[...] y tres\"), and Card 3 should show \"dos y [...]\".",
+      "observed": "The Card 2 tab shows \"No cloze 1 found on card. Please either add a cloze deletion, or use the Empty Cards tool.\", and the Card 3 tab shows \"[...] y tres\" (cloze 2 hidden, i.e. Card 2's content) instead of \"dos y [...]\". The pages appear indexed by page position (0,1 -> cloze 1,2) rather than by the actual card's cloze number. Reproduced with \"{{c1::uno}} y {{c3::tres}}\" too: the \"Card 3\" tab showed \"No cloze 2 found on card. Please either add a cloze deletion, or use the Empty Cards tool.\"",
+      "steps": [
+        "From the deck list tap Add, then Add note.",
+        "Change Type to Cloze.",
+        "Enter the Text field: {{c2::dos}} y {{c3::tres}}.",
+        "Tap Preview in the toolbar.",
+        "Observe the Card 2 tab: it shows \"No cloze 1 found on card. Please either add a cloze deletion, or use the Empty Cards tool.\"",
+        "Tap the Card 3 tab: it shows \"[...] y tres\" (cloze 2 blanked) instead of \"dos y [...]\".",
+        "Repro variant: use text {{c1::uno}} y {{c3::tres}}; the Card 3 tab shows \"No cloze 2 found on card...\"."
+      ],
+      "observed_quote": "No cloze 1 found on card. Please either add a cloze deletion, or use the Empty Cards tool.",
+      "element_ref": 6,
+      "anchor_node": {
+        "text": "No cloze \u20681\u2069 found on card. Please either add a cloze deletion, or use the Empty Cards tool.",
+        "class": "android.widget.TextView",
+        "bounds": [
+          84,
+          280,
+          1000,
+          472
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Note type list rows after clearing the search filter",
+      "element_ref": 38,
+      "expected": "After clearing the search query, the Manage note types list should show every note type again with its name and note count: Basic (7 notes), Basic (and reversed card) (1 note), Basic (optional reversed card), Basic (type in the answer), Cloze and Image Occlusion.",
+      "observed": "After filtering and then clearing the query, the list is corrupted: the \"Basic | 7 notes\" row is missing entirely, and the first visible row shows only \"1 note\" with no note type name (it is the Basic (and reversed card) row, whose title disappeared). The rows with 0 notes render correctly. Closing the search and opening it again restores the full correct list.",
+      "observed_quote": "1 note",
+      "screen": "Manage note types",
+      "steps": [
+        "From the deck list open the overflow menu and tap Manage note types.",
+        "Tap the Search button and type \"reversed\" (the list correctly filters to Basic (and reversed card) 1 note and Basic (optional reversed card) 0 notes).",
+        "Tap the X to clear the query.",
+        "Observe: the plain \"Basic\" / \"7 notes\" row is gone, and the first row shows only \"1 note\" with no note type name.",
+        "Reproduced again by filtering \"cloze\" then clearing: the Basic (and reversed card) row still shows only \"1 note\" and the Basic row stays missing.",
+        "Collapse the search view and open Search again - the list is rebuilt correctly with all six note types and their counts."
+      ],
+      "symptom_type": "missing",
+      "anchor_node": {
+        "class": "android.view.ViewGroup",
+        "contains": [
+          "1 note"
+        ],
+        "bounds": [
+          0,
+          231,
+          1080,
+          350
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Add card type menu entry for a Cloze note type",
+      "element_ref": 0,
+      "expected": "Cloze cards are generated from the cloze deletions in the note, not from extra card templates, so the Card template editor should not offer \"Add card type\" for Cloze (and Image Occlusion) note types - or, if a second card type is allowed, it must actually generate the card that the confirmation promises.",
+      "observed": "The More options menu of the Cloze card template editor offers \"Add card type\". After using it, a \"Card 2\" template exists and the Add-note screen lists \"Cards: Cloze, Card 2\", but the template never produces a card: with 1 existing Cloze note the confirmation claimed \"This will create 1 card. Proceed?\", yet after saving the deck's card count was unchanged, and a newly added cloze note reported \"1 card added\" and got only 1 card while listing 2 card types. The extra template is dead.",
+      "observed_quote": "Add card type",
+      "screen": "Card template editor (Cloze note type) - More options menu",
+      "steps": [
+        "Deck list > overflow menu > Manage note types > Cloze > Edit cards.",
+        "Add a cloze note first (e.g. Text {{c1::qa_cloze}}) so the Cloze type has 1 note.",
+        "In the Cloze card template editor open More options > Add card type. The confirmation says \"This will create 1 card. Proceed?\".",
+        "Accept and press Save; the editor now shows Card types Cloze and Card 2.",
+        "Go back to the deck list: the French deck still shows the same card count, i.e. no card was created for the existing cloze note.",
+        "Add another Cloze note: the editor shows \"Cards: Cloze, Card 2\" but saving reports \"1 card added\" and the deck count rises by only 1.",
+        "The extra Card 2 template never generates any card."
+      ],
+      "symptom_type": "no_effect",
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Add card type"
+        ],
+        "bounds": [
+          555,
+          84,
+          1070,
+          210
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ],
+      "present": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/ankidroid-E03/c0d45349a219/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0006": "reported",
+    "ankidroid-0017": "missed_unreached"
+  },
+  "elapsed_s": 1189.336,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "found": [
+    "ankidroid-0006"
+  ],
+  "required": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "missed": [
+    "ankidroid-0017"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "bug_meta": {
+    "ankidroid-0006": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0017": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

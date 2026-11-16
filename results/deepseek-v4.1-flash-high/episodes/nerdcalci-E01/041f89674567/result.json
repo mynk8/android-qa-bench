@@ -1,0 +1,288 @@
+{
+  "run_id": "041f89674567",
+  "item_id": "nerdcalci-E01",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog (opened from Files list \u2192 Untitled \u2192 More options \u2192 Rename)",
+      "element": "Rename name text field",
+      "field": "file name",
+      "symptom_type": "no_effect",
+      "expected": "When the Rename File dialog opens, the current file name (\"Untitled\") should be preselected so that typing a new name replaces it.",
+      "observed": "The current name is not preselected; pressing a letter key appends to the existing name. Typing \"x\" in the focused field produced \"Untitledx\" (and from the in-file title route it produced \"xUntitled\" when inserting at the caret) instead of replacing the name with \"x\".",
+      "steps": [
+        "On the Files home screen tap the More options menu of the Untitled file",
+        "Choose Rename",
+        "Note the Rename File dialog field shows the current name with no selection highlight",
+        "Tap the 'x' key on the keyboard",
+        "Field becomes 'Untitledx' instead of 'x'"
+      ],
+      "element_ref": 38,
+      "observed_quote": "Untitledx",
+      "anchor_node": {
+        "text": "Untitledx",
+        "class": "android.widget.EditText",
+        "bounds": [
+          183,
+          652,
+          897,
+          799
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog (opened from Expenses file in the Files list: tap file title \"Expenses\")",
+      "element": "Rename File name input field",
+      "field": "file name",
+      "symptom_type": "no_effect",
+      "expected": "The current file name \"Expenses\" should be preselected (highlighted) when the Rename File dialog opens, so pressing Delete or a letter replaces the whole name at once.",
+      "observed": "The name is prefilled but not selected: no selection highlight appears and a single Delete key press removes only the final character, changing \"Expenses\" to \"Expense\". Typing a letter appends to the name (e.g. \"Expensesx\").",
+      "steps": [
+        "Open the Expenses file",
+        "Tap the file title \"Expenses\" at the top to open the Rename File dialog",
+        "Observe the name field: \"Expenses\" is shown with no selection highlight and the caret at the end",
+        "Press the Delete key once",
+        "Field becomes \"Expense\" (only one character deleted) instead of being cleared"
+      ],
+      "element_ref": 38,
+      "observed_quote": "Expense",
+      "anchor_node": {
+        "text": "Expense",
+        "class": "android.widget.EditText",
+        "bounds": [
+          183,
+          652,
+          897,
+          799
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Line 1 result \"-551.30 \u00b0C\" for \"-5 celsius\"",
+      "expected": "The result should be -5 \u00b0C on line 1; other affected lines should be 14 \u00b0F for -10 celsius in fahrenheit, -40 \u00b0C for -40 fahrenheit in celsius and -53.89 \u00b0C for -65 fahrenheit in celsius.",
+      "observed": "Simple temperature conversions return wildly wrong values. \"-5 celsius\" evaluates to \"-551.30 \u00b0C\"; \"-10 celsius in fahrenheit\" to \"-969.34 \u00b0F\"; \"-40 fahrenheit in celsius\" to \"-550.74 \u00b0C\"; \"-65 fahrenheit in celsius\" to \"-564.63 \u00b0C\". (Temperature sums such as 25 celsius + 5 celsius = 30 \u00b0C still work.)",
+      "screen": "Temperatures file",
+      "steps": [
+        "Open the Temperatures file from the Files list",
+        "Read the result column of line 1 (-5 celsius)",
+        "Observe -551.30 \u00b0C instead of -5 \u00b0C",
+        "Check lines 2-4: -10 celsius in fahrenheit shows -969.34 \u00b0F, -40 fahrenheit in celsius shows -550.74 \u00b0C, -65 fahrenheit in celsius shows -564.63 \u00b0C"
+      ],
+      "symptom_type": "wrong_value",
+      "element_ref": 2,
+      "observed_quote": "-551.30 \u00b0C",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "-551.30 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          252,
+          1048,
+          378
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Line 3 result \"Err\" for \"disc% of price\"",
+      "expected": "\"disc% of price\" (disc=15, price=240) should evaluate to 36; \"disc% off price\" should be 204; \"tax% of 1200\" (tax=8.5) should be 102.",
+      "observed": "Percentage forms whose percentage is a variable defined on an earlier line fail with an error result. Lines 3, 4 and 6 show \"Err\": \"disc% of price\", \"disc% off price\" and \"tax% of 1200\". Tapping the error shows \"Unexpected %\". The literal form still works: \"10% of 80\" = 8, and in a test line \"15% of 240\" = 36.",
+      "screen": "Percentages file",
+      "steps": [
+        "Open the Percentages file from the Files list",
+        "Line 2 defines disc = 15, line 1 defines price = 240",
+        "Read line 3 (disc% of price): result column shows Err instead of 36",
+        "Read line 4 (disc% off price): Err instead of 204",
+        "Read line 6 (tax% of 1200 with tax = 8.5): Err instead of 102",
+        "Note line 7 (10% of 80) correctly shows 8, so only the variable-based percentage forms fail"
+      ],
+      "symptom_type": "wrong_value",
+      "element_ref": 8,
+      "observed_quote": "Err",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          437,
+          1048,
+          544
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Line 5 result \"812.88\" for \"avg\"",
+      "expected": "avg on line 5 should average the three expense amounts above it: (1200 + 340.5 + 85.25) / 3 = 541.92.",
+      "observed": "avg returns 812.88, which is the average of 1200, 340.5, 85.25 AND the previous total line's result 1625.75: (1200+340.5+85.25+1625.75)/4 = 812.875. The summary keyword is including the result of the \"total\" line above it, so the average is inflated.",
+      "screen": "Expenses file",
+      "steps": [
+        "Open the Expenses file from the Files list",
+        "Lines 1-3 define rent = 1200, food = 340.5, fuel = 85.25",
+        "Line 4 is total (shows 1,625.75, correct)",
+        "Read line 5 avg: it shows 812.88",
+        "Compute the expected average of the three values: 541.92"
+      ],
+      "symptom_type": "wrong_value",
+      "element_ref": 14,
+      "observed_quote": "812.88",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "812.88"
+        ],
+        "bounds": [
+          797,
+          651,
+          1048,
+          777
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Line 7 result \"5,700\" for \"grand_total\"",
+      "expected": "grand_total should be 2,850 (salary 2,500 + bonus 300.5 + gift 49.5), i.e. the sum of all amounts in the file.",
+      "observed": "grand_total shows 5,700, exactly double the expected 2,850. It sums every line's result including the two \"total\" summary lines: 2500 + 300.5 + 2800.5 (line 3 total) + 49.5 + 49.5 (line 6 total) = 5700.",
+      "screen": "Monthly budget file",
+      "steps": [
+        "Open the Monthly budget file from the Files list",
+        "Lines 1-3: salary = 2500, bonus = 300.5, total (shows 2,800.50)",
+        "Line 4 is blank; line 5 gift = 49.5; line 6 total (shows 49.50)",
+        "Read line 7 grand_total: it shows 5,700",
+        "Expected grand_total = 2500 + 300.5 + 49.5 = 2,850"
+      ],
+      "symptom_type": "wrong_value",
+      "element_ref": 20,
+      "observed_quote": "5,700",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "5,700"
+        ],
+        "bounds": [
+          797,
+          865,
+          1048,
+          991
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ],
+      "present": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/nerdcalci-E01/041f89674567/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0001": "reported",
+    "nerdcalci-0002": "reported",
+    "nerdcalci-0008": "reported"
+  },
+  "elapsed_s": 724.613,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.8,
+    "notes": "Swept the four requested areas on the nine provided files plus temporary files created/renamed/deleted for testing.\n\nConfirmed/logged bugs:\n1) Temperatures: bare negative temperature quantities are wrong (-5 celsius shows -551.30 \u00b0C; -10 celsius in fahrenheit shows -969.34 \u00b0F; -40 fahrenheit in celsius shows -550.74 \u00b0C; -65 fahrenheit in celsius shows -564.63 \u00b0C). Positive values (25 celsius = 25 \u00b0C) and temperature sums (25C+5C=30C, 20C-5C=15C, 10C+18F=2.22C) are correct.\n2) Percentages: variable-based percentage forms fail with \"Err\"/\"Unexpected %\" (disc% of price, disc% off price, tax% of 1200). Literal forms work (10% of 80 = 8; 15% off 240 = 204; 15% of 240 = 36 in a scratch line).\n3) Totals/summaries: avg includes the preceding total result (Expenses avg shows 812.88 instead of 541.92); grand_total double-counts total lines (Monthly budget shows 5,700 instead of 2,850 \u2014 developer said already logged). Verified the same total/avg inclusion on a temporary file (100, 200, avg=150, total=450).\n4) Rename dialog preselect: current name is prefilled but not selected \u2014 typing appends (Expenses \u2192 Expensesx) and one Delete removes only one character (Expenses \u2192 Expense); long-press \"Select all\" does not select the name. Reported twice but the developer could not reproduce, so it is not logged; flagging it as an unverified concern.\n\nOther checks passed: Expenses total 1,625.75; Monthly budget section totals 2,800.50 and 49.50; number bases, date gaps and time differences all correct; remainders correct; rotation preserves data; creating a file with content persists across app restart, empty new files are discarded, rename save/cancel work, empty name disables Rename, deletion works. Test files were removed; the original nine files remain."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "found": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "required": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 6,
+  "steps": 195,
+  "precision": 0.6,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "bug_meta": {
+    "nerdcalci-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0002": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

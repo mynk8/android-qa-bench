@@ -1,0 +1,190 @@
+{
+  "run_id": "e5dcae7608d6",
+  "item_id": "featherline-E02",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Settings > Calibration (test results list)",
+      "element": "Test result card for Nov 13",
+      "symptom_type": "missing",
+      "expected": "Card for a result with Estradiol, Testosterone and Progesterone shows all three (e.g. \"+2 records\" and a Progesterone line with value 2 ng/mL)",
+      "observed": "After saving one result with 3 tests (E2 150 pg/mL, T 30 ng/dL, Progesterone 2 ng/mL), the list card shows E2 plus \"+1 record\" and only the Testosterone line. Progesterone is missing from the card, although it is present when the result is reopened for editing.",
+      "observed_quote": "+1 record",
+      "steps": [
+        "Settings > Calibration > Next > Done",
+        "Tap + (Add test result)",
+        "Enter Estradiol 150, Testosterone 30",
+        "Add result > Progesterone, enter 2",
+        "Save",
+        "Look at the list card for Nov 13, then reopen it"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Calibration (test results list)",
+      "element": "Nov 13 11:17 PM result card",
+      "symptom_type": "missing",
+      "expected": "A result containing Estradiol 120 pg/mL and Prolactin 15 ng/mL shows a Prolactin line under \"+1 record\"",
+      "observed": "The card shows \"120 pg/mL Estradiol\" and a \"+1 record\" chip, but no line for the second test (Prolactin 15 ng/mL). Only Testosterone gets a detail line. Progesterone was also missing from the earlier 3-test card. The values are saved, since they appear when the result is reopened.",
+      "observed_quote": "+1 record",
+      "steps": [
+        "Settings > Calibration > Next > Done",
+        "Tap + (Add test result)",
+        "Remove Testosterone, enter Estradiol 120",
+        "Add result > Prolactin, enter 15",
+        "Save",
+        "Look at the new card in the list: no Prolactin line"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Calibration (test results list)",
+      "element": "Result card Nov 13 11:17 PM (120 pg/mL Estradiol)",
+      "symptom_type": "missing",
+      "expected": "The saved Prolactin 15 ng/mL result is listed on the card, like Testosterone is on the other card",
+      "observed": "Result saved with Estradiol 120 pg/mL and Prolactin 15 ng/mL. The card shows only \"120 pg/mL Estradiol\" and a \"+1 record\" chip, with no Prolactin row or value. Reopening the entry shows Prolactin 15 ng/mL, so the data is stored but not displayed. Same with Progesterone. Only Testosterone gets a detail row. Reproduced twice on a fresh install.",
+      "observed_quote": "120",
+      "element_ref": 5,
+      "steps": [
+        "Settings > Calibration (dismiss intro with Next, Done)",
+        "Tap + Add test result",
+        "Remove Testosterone row, enter Estradiol 120",
+        "Add result > Prolactin, enter 15",
+        "Save",
+        "Compare the list card with the edit screen"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "NOV",
+          "13",
+          "11:17 PM",
+          "120"
+        ],
+        "bounds": [
+          42,
+          947,
+          1038,
+          1147
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Calibration (results list)",
+      "element": "Result card Nov 13 11:17 PM",
+      "element_ref": 8,
+      "symptom_type": "missing",
+      "expected": "The Prolactin 15 ng/mL value, saved in the same result as Estradiol 120, appears as a detail row on the card",
+      "observed": "Card shows Estradiol 120 pg/mL and a \"+1 record\" chip, but the +1 record (Prolactin 15 ng/mL) is not shown. Testosterone does get a row on the other card. The same thing happened to Progesterone. Reopening the entry shows the saved Prolactin value, so the card omits it. Still happens now, with calibration active.",
+      "observed_quote": "120",
+      "steps": [
+        "Settings > Calibration",
+        "Tap + Add test result",
+        "Remove Testosterone row, enter Estradiol 120",
+        "Add result > Prolactin, enter 15, Save",
+        "Look at the card for the saved result in the list"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "NOV",
+          "13",
+          "11:17 PM",
+          "120"
+        ],
+        "bounds": [
+          42,
+          1368,
+          1038,
+          1568
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0011"
+      ],
+      "present": [
+        "featherline-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/featherline-E02/e5dcae7608d6/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0011": "missed_unreached"
+  },
+  "elapsed_s": 292.161,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Tested: medicine editor category pickers (all 5 categories look right), medicine creation (custom and estradiol), group creation, group history generation with a past start date (completed doses show on Plan, History and Home, and the estimate updates), and Calibration (add/edit results, unit switching, target conversion). One open issue: on the Calibration list, a result card shows only the first test, plus Testosterone if present. It omits Prolactin and Progesterone, although the \"+1 record\" chip counts them and the editor shows them as saved. I reported this three times and each time the developer replied \"could not reproduce\", so it stays unconfirmed. I did not try other groups or other history-generation options (missed, hide), weekly schedules, or rotation."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0011"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0011"
+  ],
+  "missed": [
+    "featherline-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 115,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0011"
+  ],
+  "bug_meta": {
+    "featherline-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

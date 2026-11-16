@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "card browser",
+    "element": "subtitle",
+    "field": "card count",
+    "symptom_type": "missing",
+    "expected": "the subtitle still shows the number of cards shown after rotating to landscape",
+    "observed": "the subtitle is blank after rotating, the cards shown count is gone",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "card browser",
+    "element": "something",
+    "field": "card count",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "bug_id": "tasks-0018",
+  "runs": 1,
+  "started": "2026-11-11T12:03:10+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "idx": [
+          9,
+          15,
+          17,
+          6
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Zucchini",
+          "2 litres",
+          "Mon",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Pay rent",
+          "Dec 1",
+          "Read docs",
+          "See https://example.com/guide",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 42.9,
+      "screenshot_sha256": "928664edeaef16491ab15a727b3366cde5b05380184978d2c99405418178edc0",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0018-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "idx": [
+          17,
+          6,
+          9,
+          15
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Buy milk",
+          "2 litres",
+          "Mon",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Pay rent",
+          "Dec 1",
+          "Aardvark",
+          "See https://example.com/guide",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 46.1,
+      "screenshot_sha256": "a48faf93e6fbb80597416b25c0843d3c94adb6c109aa965bb2ba239bb201d990",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0018-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "idx": [
+          7,
+          10,
+          16,
+          18
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Monday",
+          "Zucchini",
+          "2 litres",
+          "Due Saturday, November 21",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Charge phone",
+          "Print tickets",
+          "Due Tuesday, December 1",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 30.1,
+      "screenshot_sha256": "6848bd9ac6afbbe20524bffbfb5f6e4b23b115b1188960ce0e6b25e5906f4d0b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0018-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "idx": [
+          6,
+          12,
+          14,
+          16
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Pay rent",
+          "Dec 1",
+          "Read docs",
+          "See https://example.com/guide",
+          "Zucchini",
+          "2 litres",
+          "Mon",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 41.3,
+      "screenshot_sha256": "d05bd63f0aa33ad7c3b925735278eacf3b076abd0170d14198436927bc888ce1",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0018-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "idx": [
+          6,
+          8,
+          11,
+          17
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Aardvark",
+          "See https://example.com/guide",
+          "Buy milk",
+          "2 litres",
+          "Mon",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Pay rent",
+          "Dec 1",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 37.8,
+      "screenshot_sha256": "46f8a48c22f2b0b846ab8b4a10bef3d9589fc129e84283c5fd84f58de2ff56b7",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0018-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "idx": [
+          7,
+          10,
+          16,
+          18
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Monday",
+          "Zucchini",
+          "2 litres",
+          "Due Saturday, November 21",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Charge phone",
+          "Print tickets",
+          "Due Tuesday, December 1",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 26.6,
+      "screenshot_sha256": "de9e1af2fcda2ca0d9fda56eac5e6af81c3720e7a87637715c8a450164d8232b",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0018-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T12:08:00+0530"
+}

@@ -1,0 +1,44 @@
+{
+  "episode_id": "minus-E07",
+  "start_build": "minus-E07-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "result_amounts": [
+          "20"
+        ],
+        "seen": [
+          "= $20",
+          "="
+        ]
+      },
+      "seconds": 35.4,
+      "screenshot_sha256": "fcfc93f8bf648f92dd6827e49c833bdd25d76480e10c1372e156ab0185ccf3bd",
+      "bug": "minus-0017",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "result_amounts": [
+          "15"
+        ],
+        "seen": [
+          "= $15",
+          "="
+        ]
+      },
+      "seconds": 34.2,
+      "screenshot_sha256": "d8a735a908d4f78c1671fcfd47b0fa8da27545c62a844fe64f7465333a957996",
+      "bug": "minus-0017",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

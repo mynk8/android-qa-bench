@@ -1,0 +1,73 @@
+{
+  "bug_id": "amaze-0017",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "action has unintended effect",
+  "symptom_type": "duplicated",
+  "fix_date": "2026-11-09",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "copy": [
+        {
+          "desc": "Copy"
+        },
+        {
+          "text": "Copy"
+        }
+      ],
+      "paste": [
+        {
+          "desc": "Paste"
+        },
+        {
+          "text": "Paste"
+        },
+        {
+          "id": "com.amaze.filemanager:id/paste"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0017-buggy",
+    "fixed": "amaze-0017-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0017.patch",
+    "confidence": "medium",
+    "lines_changed": 8,
+    "approach": "Moved the destination mkdir in CopyService.copyFiles back before the copy-loop validation, so the rejected recursive copy still creates the destination directory."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

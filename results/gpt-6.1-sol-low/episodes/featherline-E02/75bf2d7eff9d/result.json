@@ -1,0 +1,112 @@
+{
+  "run_id": "75bf2d7eff9d",
+  "item_id": "featherline-E02",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Medicine details / Edit record",
+      "element": "Stock",
+      "element_ref": 5,
+      "field": "Tracked tablet count",
+      "symptom_type": "wrong_value",
+      "expected": "Deleting an erroneous dose record reverses its stock deduction, so removing all three stock-deducting records restores the original 10 tablets.",
+      "observed": "Stock remains 7 / 10 tablets after deleting both generated completed doses and the live dose. Reproduced with generated records on Nov 14 and Nov 13; live deletion behaved the same.",
+      "observed_quote": "7 / 10 tablets",
+      "steps": [
+        "Create Estradiol valerate 2 mg tablet medicine and daily Group 1 starting Nov 13 with past doses completed (Nov 15 current date).",
+        "Enable stock tracking and add 10 tablets.",
+        "Create Group 2 using one tablet daily, starting Nov 13, Mark as completed. Stock decreases to 8.",
+        "Log today's Group 1 dose live. Stock decreases to 7.",
+        "Delete Group 2's Nov 14 completed record, confirming Delete. Reopen medicine: stock stays 7.",
+        "Delete the live dose and Group 2's Nov 13 completed record, confirming each. Reopen medicine: still 7 / 10 tablets."
+      ],
+      "anchor_node": {
+        "text": "7 / 10 tablets",
+        "class": "android.widget.TextView",
+        "bounds": [
+          780,
+          601,
+          996,
+          647
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0011"
+      ],
+      "present": [
+        "featherline-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/featherline-E02/75bf2d7eff9d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0011": "reported"
+  },
+  "elapsed_s": 587.069,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0011"
+  ],
+  "found": [
+    "featherline-0011"
+  ],
+  "required": [
+    "featherline-0011"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 300,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "featherline-0011"
+  ],
+  "bug_meta": {
+    "featherline-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

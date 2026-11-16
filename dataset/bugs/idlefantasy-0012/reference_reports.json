@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "profile gear tab and combat screen",
+    "element": "view combat gear button",
+    "field": "combat tab",
+    "symptom_type": "wrong_navigation",
+    "expected": "view combat gear should open the combat gear tab with the equipment slots head, body, legs",
+    "observed": "it opens the combat dungeons tab instead of the gear tab",
+    "steps": [
+      "Opened Profile, Gear tab, tapped View Combat Gear.",
+      "Looked at the combat tab shown."
+    ]
+  },
+  "vague": {
+    "screen": "profile gear tab and combat screen",
+    "element": "something",
+    "field": "combat tab",
+    "symptom_type": "wrong_navigation",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

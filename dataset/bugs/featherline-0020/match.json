@@ -1,0 +1,66 @@
+{
+  "screens": [
+    "medication list",
+    "group editor"
+  ],
+  "elements": [
+    "medication card",
+    "supporting line",
+    "route label"
+  ],
+  "fields": [
+    "route"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the line starts with custom",
+    "the route reads custom"
+  ],
+  "observed_contains_any": [
+    "the line starts with oral",
+    "the route reads oral"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "wrong_text"
+  ],
+  "expected_concepts": [
+    [
+      "custom",
+      "category",
+      "category word"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "oral",
+      "way it is taken",
+      "taken",
+      "administration",
+      "method",
+      "missing",
+      "absent",
+      "no route",
+      "route missing"
+    ]
+  ],
+  "location_concepts": [
+    "card",
+    "medication*",
+    "medicine*",
+    "route",
+    "supporting",
+    "line",
+    "group"
+  ],
+  "anchors": {
+    "elements": [
+      "oral",
+      "custom",
+      "mg"
+    ],
+    "observed": [
+      "oral"
+    ]
+  }
+}

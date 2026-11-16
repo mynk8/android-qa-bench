@@ -1,0 +1,85 @@
+{
+  "run_id": "3975a88a306d",
+  "item_id": "featherline-E06",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E06-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0020"
+      ],
+      "present": [
+        "featherline-0020"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-b/episodes/featherline-E06/3975a88a306d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0020": "missed_unreached"
+  },
+  "elapsed_s": 164.476,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.78,
+    "notes": "Swept Settings (including the body weight sheet, cancel/empty save, unit toggle, and rotation), medicine creation and edit cancellation, preparation form/category picker states, medication selection, group creation/scheduling, and Plan medication/group cards. No reproducible bugs found. Test data added: Spironolactone 25 mg and daily Group 1; no medication log was saved."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0020"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0020"
+  ],
+  "missed": [
+    "featherline-0020"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 44,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0020"
+  ],
+  "bug_meta": {
+    "featherline-0020": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

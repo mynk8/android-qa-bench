@@ -1,0 +1,88 @@
+{
+  "bug_id": "ankidroid-0006",
+  "runs": 1,
+  "started": "2026-11-11T03:02:26+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "screen": "9:33 9:33\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown. Navigate up Card \u20681\u2069 Card \u20681\u2069 Card \u20683\u2069 Card \u20683\u2069 No cloze \u20682\u2069 found on card. Please either add a cloze deletion, or use the Empty Cards tool. More information More information Show answer"
+      },
+      "seconds": 44.7,
+      "screenshot_sha256": "827c23483b5ce23642f53acf046720e92def213a6ba7c9872c850ba744cce8be",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0006-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "screen": "Navigate up Card \u20682\u2069 Card \u20682\u2069 Card \u20684\u2069 Card \u20684\u2069 [...] and delta Show answer 9:34 9:34\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown."
+      },
+      "seconds": 65.0,
+      "screenshot_sha256": "e16649c59b0f0195b70509515a2847e0aa44c49425cfc4195b2374fdd88682fc",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0006-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "screen": "9:35 9:35\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown. Navigate up Card 1 Card 1 hello Show answer"
+      },
+      "seconds": 27.8,
+      "screenshot_sha256": "e728c75e8c34d6527fd4009846e5b051aa33387483369e9738db4d43475ffad0",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0006-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "screen": "Navigate up Card \u20681\u2069 Card \u20681\u2069 Card \u20683\u2069 Card \u20683\u2069 alpha and [...] Show answer 9:36 9:36\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown."
+      },
+      "seconds": 31.2,
+      "screenshot_sha256": "f71562ec03128a8c26ec8b546865b487e80fb3715cb013aa8a0175a0333dbce7",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0006-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "screen": "Navigate up Card \u20682\u2069 Card \u20682\u2069 Card \u20684\u2069 Card \u20684\u2069 beta and [...] Show answer 9:37 9:37\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown."
+      },
+      "seconds": 31.7,
+      "screenshot_sha256": "68ceadf56e4e129b3aaa816221e1fc69172659e97a28113f24b98c9ae975da3a",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0006-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "screen": "9:37 9:37\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown. Navigate up Card 1 Card 1 hello Show answer"
+      },
+      "seconds": 25.3,
+      "screenshot_sha256": "c05d9537970d6d2e055796502fa6ad0e9b93da1e6d164901852eabf60e296849",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0006-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:07:41+0530"
+}

@@ -1,0 +1,72 @@
+{
+  "bug_id": "idlefantasy-0011",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "missing",
+  "fix_date": "2026-05-29",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_skills": [
+        {
+          "desc": "Skills"
+        },
+        {
+          "text": "Skills"
+        }
+      ],
+      "smithing": [
+        {
+          "text": "Smithing"
+        }
+      ],
+      "bronze_bar": [
+        {
+          "text": "Bronze Bar"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0011-buggy",
+    "fixed": "idlefantasy-0011-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0011.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "CraftQuantityContent prints the flat 'XP total' string again instead of projectedXpLabel, so the level-up preview is not shown for crafted batches."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

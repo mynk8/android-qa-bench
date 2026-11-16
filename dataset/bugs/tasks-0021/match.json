@@ -1,0 +1,62 @@
+{
+  "screens": [
+    "sort sheet",
+    "sort"
+  ],
+  "elements": [
+    "sorting row",
+    "sorting",
+    "sort by"
+  ],
+  "fields": [
+    "sort order",
+    "sorting row"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the Sorting row shows Ascending",
+    "default sort is ascending"
+  ],
+  "observed_contains_any": [
+    "the Sorting row shows Descending",
+    "default sort is descending"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "ascending",
+      "a to z",
+      "default"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "descending",
+      "reversed",
+      "opposite",
+      "wrong",
+      "z to a",
+      "revers*",
+      "backwards",
+      "flipped",
+      "inverted"
+    ]
+  ],
+  "location_concepts": [
+    "sorting*",
+    "sort by",
+    "sort row",
+    "default sort*",
+    "sort direction"
+  ],
+  "anchors": {
+    "elements": [
+      "Sorting",
+      "Sort by",
+      "Ascending"
+    ],
+    "observed": []
+  }
+}

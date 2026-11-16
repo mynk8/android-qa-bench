@@ -1,0 +1,278 @@
+{
+  "bug_id": "ankidroid-0008",
+  "app_id": "ankidroid",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "wrong display",
+  "symptom_type": "wrong_value",
+  "fix_date": "2024-06-01",
+  "seed_id": "decks_basic",
+  "params": {
+    "nav": {
+      "intro_skip": [
+        {
+          "text": "Get started"
+        },
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "drawer": [
+        {
+          "desc": "Open drawer"
+        },
+        {
+          "desc": "Navigate up"
+        },
+        {
+          "desc": "Open navigation drawer"
+        }
+      ],
+      "browser": [
+        {
+          "text": "Card browser"
+        },
+        {
+          "text": "Browse"
+        },
+        {
+          "desc": "Browse"
+        }
+      ],
+      "deck_spinner": [
+        {
+          "id": "com.ichi2.anki:id/toolbar_spinner"
+        },
+        {
+          "text": "All decks"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "edit_tags": [
+        {
+          "text": "Edit tags"
+        },
+        {
+          "desc": "Edit tags"
+        },
+        {
+          "text": "Tags"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Save"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        }
+      ],
+      "search": [
+        {
+          "desc": "Search"
+        },
+        {
+          "id": "com.ichi2.anki:id/search"
+        }
+      ],
+      "search_field": [
+        {
+          "id": "com.ichi2.anki:id/search"
+        },
+        {
+          "text": "Search\u2026"
+        },
+        {
+          "text": "Search"
+        }
+      ],
+      "browse_cards": [
+        {
+          "text": "Browse cards"
+        },
+        {
+          "text": "Browse"
+        }
+      ],
+      "deck_spanish": [
+        {
+          "text": "Spanish"
+        }
+      ],
+      "fab": [
+        {
+          "desc": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "filtered_deck": [
+        {
+          "text": "Create filtered deck"
+        }
+      ],
+      "filter_search": [
+        {
+          "text": "Search"
+        },
+        {
+          "id": "com.ichi2.anki:id/search"
+        }
+      ],
+      "notes_mode": [
+        {
+          "text": "Notes"
+        },
+        {
+          "text": "Toggle cards/notes"
+        }
+      ],
+      "expander": [
+        {
+          "desc": "Expand"
+        },
+        {
+          "desc": "Collapse"
+        }
+      ],
+      "expand": [
+        {
+          "desc": "Expand"
+        }
+      ],
+      "collapse": [
+        {
+          "desc": "Collapse"
+        }
+      ],
+      "manage_note_types": [
+        {
+          "text": "Manage note types"
+        }
+      ],
+      "note_type": [
+        {
+          "text": "Select note type"
+        },
+        {
+          "text": "Note type"
+        },
+        {
+          "desc": "Note type"
+        },
+        {
+          "id": "com.ichi2.anki:id/note_type_spinner"
+        }
+      ],
+      "add_note": [
+        {
+          "desc": "Add note"
+        },
+        {
+          "text": "Add note"
+        },
+        {
+          "desc": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_expand_menu_button"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "add_template": [
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/action_add"
+        }
+      ],
+      "export": [
+        {
+          "text": "Export deck"
+        },
+        {
+          "text": "Export"
+        },
+        {
+          "desc": "Export"
+        }
+      ],
+      "study": [
+        {
+          "text": "Study"
+        },
+        {
+          "desc": "Study"
+        }
+      ],
+      "open_options": [
+        {
+          "text": "Options"
+        }
+      ],
+      "save_dialog": [
+        {
+          "text": "Save"
+        }
+      ],
+      "change_order": [
+        {
+          "text": "Change display order"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "ankidroid-0008-buggy",
+    "fixed": "ankidroid-0008-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/ankidroid-0008.patch",
+    "confidence": "low",
+    "lines_changed": 4,
+    "approach": "SortType.build reads the sort column and direction using the cards-mode config keys even in notes mode, so notes mode does not use its own saved sort order."
+  }
+}

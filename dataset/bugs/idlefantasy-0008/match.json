@@ -1,0 +1,85 @@
+{
+  "screens": [
+    "profile",
+    "achievements",
+    "achievements tab"
+  ],
+  "elements": [
+    "quest achievement*",
+    "dedicated",
+    "quest count",
+    "quests group",
+    "achievement*"
+  ],
+  "fields": [
+    "dedicated",
+    "complete 5 quests",
+    "quest count",
+    "guild quests",
+    "achievement*"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "dedicated should still be missing because only 4 regular quests are done",
+    "guild quests do not count"
+  ],
+  "observed_contains_any": [
+    "dedicated is earned because guild quests are counted",
+    "dedicated is not in the missing list"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "dedicated",
+      "missing",
+      "not earned",
+      "locked",
+      "not unlocked",
+      "4 quests",
+      "four quests",
+      "not counted",
+      "don't count",
+      "do not count",
+      "shouldn't count",
+      "should not count"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "guild",
+      "dedicated",
+      "complete 5 quests",
+      "5 quests"
+    ],
+    [
+      "guild",
+      "counted",
+      "counts",
+      "count*",
+      "unlocked",
+      "earned",
+      "not listed",
+      "missing from",
+      "absent",
+      "included"
+    ]
+  ],
+  "location_concepts": [
+    "achievement*",
+    "profile",
+    "quest*",
+    "dedicated",
+    "missing"
+  ],
+  "anchors": {
+    "elements": [
+      "Achievements",
+      "Dedicated",
+      "Quest Master",
+      "Complete 25 quests"
+    ],
+    "observed": []
+  }
+}

@@ -1,0 +1,591 @@
+[
+ {
+  "bug": "amaze-0011",
+  "ep": "amaze-E03",
+  "family": "interaction",
+  "symptom": "wrong_value",
+  "issta": "functionality does not take effect",
+  "fix": "2026-06-28",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 0,
+   "sol": 44,
+   "haiku": 78,
+   "deepseek": 25
+  },
+  "line": "Bookmarks page in Settings: a new entry is now compared with stored ones on title and location together.",
+  "expected": "a second bookmark to the same path is rejected",
+  "observed": "Docs2 is added for the same path",
+  "screen": "bookmarks settings"
+ },
+ {
+  "bug": "amaze-0015",
+  "ep": "amaze-E04",
+  "family": "interaction",
+  "symptom": "wrong_value",
+  "issta": "action has unintended effect",
+  "fix": "2025-09-02",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 2,
+   "sol": 4,
+   "haiku": 5,
+   "deepseek": 5
+  },
+  "line": "Multi-file overflow menu: the bulk-marking entry is now handled as an on/off toggle of the current state.",
+  "expected": "all items remain selected after choosing Select All a second time",
+  "observed": "choosing Select All again deselects all items and the selection bar closes",
+  "screen": "file list"
+ },
+ {
+  "bug": "amaze-0016",
+  "ep": "amaze-E05",
+  "family": "state",
+  "symptom": "wrong_value",
+  "issta": "UI state lost",
+  "fix": "2025-01-12",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "deepseek"
+  ],
+  "depth": {
+   "sonnet": 1,
+   "sol": 5,
+   "haiku": 2,
+   "deepseek": 2
+  },
+  "line": "Batch overflow menu: the invert-marking entry is now handled entirely inside the list adapter.",
+  "expected": "the selection action bar closes when select inverse leaves nothing selected",
+  "observed": "the selection action bar stays open with 0 selected",
+  "screen": "file list"
+ },
+ {
+  "bug": "amaze-0019",
+  "ep": "amaze-E06",
+  "family": "display",
+  "symptom": "missing",
+  "issta": "missing UI",
+  "fix": "2026-07-09",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "deepseek"
+  ],
+  "depth": {
+   "sonnet": 5,
+   "sol": 21,
+   "haiku": 24,
+   "deepseek": 15
+  },
+  "line": "Retitling prompt: input validation for files and folders is now handled by a consolidated validator.",
+  "expected": "a notice says no changes will be made because the new name matches the old name",
+  "observed": "no notice or warning appears when typing the same name",
+  "screen": "rename dialog"
+ },
+ {
+  "bug": "ankidroid-0007",
+  "ep": "ankidroid-E02",
+  "family": "state",
+  "symptom": "not_persisted",
+  "issta": "data not persisted",
+  "fix": "2024-05-21",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 1,
+   "sol": 4,
+   "haiku": 10,
+   "deepseek": 11
+  },
+  "line": "Add note deck chooser: its initial deck is now loaded from the deck list's current choice.",
+  "expected": "the deck chosen for a new note is remembered the next time the editor opens",
+  "observed": "the deck for new cards is not saved",
+  "screen": "note editor"
+ },
+ {
+  "bug": "ankidroid-0008",
+  "ep": "ankidroid-E05",
+  "family": "display",
+  "symptom": "wrong_value",
+  "issta": "wrong display",
+  "fix": "2024-06-01",
+  "source": "mature_pr",
+  "port_conf": "low",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 10,
+   "sol": 27,
+   "haiku": 13,
+   "deepseek": 40
+  },
+  "line": "Card browser cards/notes toggle: each mode's display settings are now read from one shared place.",
+  "expected": "notes mode uses the notes sort order",
+  "observed": "notes mode uses the cards sort order",
+  "screen": "card browser"
+ },
+ {
+  "bug": "ankidroid-0023",
+  "ep": "ankidroid-E07",
+  "family": "state",
+  "symptom": "not_persisted",
+  "issta": "data not persisted",
+  "fix": "2026-11-03",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "haiku"
+  ],
+  "depth": {
+   "sonnet": 9,
+   "sol": 10,
+   "haiku": 26,
+   "deepseek": 8
+  },
+  "line": "Timebox settings: the minutes field is now resolved from the collection's on/off state when the screen opens.",
+  "expected": "after switching the timebox off and on again the limit shows 21, the value set before",
+  "observed": "the limit goes back to the default 20 after the timebox was switched off and on",
+  "screen": "timebox settings"
+ },
+ {
+  "bug": "ankidroid-0025",
+  "ep": "ankidroid-E08",
+  "family": "display",
+  "symptom": "duplicated",
+  "issta": "redundant or missing UI",
+  "fix": "2026-09-24",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 3,
+   "sol": 58,
+   "haiku": 25,
+   "deepseek": 15
+  },
+  "line": "Filtered deck builder: the criteria dropdown now lists every selection criterion the scheduler offers.",
+  "expected": "the order list has no retrievability options while FSRS is off",
+  "observed": "Retrievability ascending and descending are listed in the order dropdown",
+  "screen": "filtered deck"
+ },
+ {
+  "bug": "ankidroid-0027",
+  "ep": "ankidroid-E09",
+  "family": "interaction",
+  "symptom": "no_effect",
+  "issta": "functionality does not take effect",
+  "fix": "2026-02-21",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [
+   "haiku"
+  ],
+  "depth": {
+   "sonnet": 6,
+   "sol": 15,
+   "haiku": 18,
+   "deepseek": 14
+  },
+  "line": "Deck retitling dialog: the clash check with other decks is now computed by comparing text instead of identifiers.",
+  "expected": "French can be renamed to FRENCH and the deck list shows FRENCH",
+  "observed": "the name field reports that the deck already exists and Rename does nothing",
+  "screen": "rename deck dialog"
+ },
+ {
+  "bug": "ankidroid-0030",
+  "ep": "ankidroid-E06",
+  "family": "interaction",
+  "symptom": "no_effect",
+  "issta": "functionality does not take effect",
+  "fix": "2026-03-14",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 12,
+   "sol": 25,
+   "haiku": 13,
+   "deepseek": 23
+  },
+  "line": "Set due date dialog: the day and range inputs are now handled by a common text-input component.",
+  "expected": "typing 1234567 leaves 12345 in the field because only five digits are allowed",
+  "observed": "the field accepts all seven digits, 1234567",
+  "screen": "set due date dialog"
+ },
+ {
+  "bug": "featherline-0005",
+  "ep": "featherline-E03",
+  "family": "interaction",
+  "symptom": "not_persisted",
+  "issta": "functionality does not take effect",
+  "fix": "2026-05-10",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 36,
+   "sol": 90,
+   "haiku": 46,
+   "deepseek": 121
+  },
+  "line": "Preparation form picker: every amount field is now carried over when the form is changed.",
+  "expected": "switching preparation type and back clears the previous dose value",
+  "observed": "switching back resurrects the previously typed dose value",
+  "screen": "medicine editor"
+ },
+ {
+  "bug": "featherline-0016",
+  "ep": "featherline-E04",
+  "family": "interaction",
+  "symptom": "no_effect",
+  "issta": "wrong or missing data",
+  "fix": "2026-10-19",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 8,
+   "sol": 39,
+   "haiku": 45,
+   "deepseek": 41
+  },
+  "line": "Settings measurement editor: submitted text is now parsed by a single number parser for every input.",
+  "expected": "saving the empty field clears the weight and closes the sheet",
+  "observed": "an error asks for a valid weight and the weight stays",
+  "screen": "body weight sheet"
+ },
+ {
+  "bug": "featherline-0018",
+  "ep": "featherline-E05",
+  "family": "display",
+  "symptom": "wrong_value",
+  "issta": "wrong display",
+  "fix": "2026-10-28",
+  "source": "greenfield_pr",
+  "port_conf": "medium",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 27,
+   "sol": 34,
+   "haiku": 37,
+   "deepseek": 47
+  },
+  "line": "Night owl mode in the group editor: the explanatory caption now builds its cut-off text separately from the remaining values.",
+  "expected": "the description shows 4:00 AM, matching the other times on the screen",
+  "observed": "the description shows 04:00 while the other times use AM and PM",
+  "screen": "group editor"
+ },
+ {
+  "bug": "featherline-0019",
+  "ep": "featherline-E05",
+  "family": "state",
+  "symptom": "no_effect",
+  "issta": "wrong or missing data",
+  "fix": "2026-10-29",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 23,
+   "sol": 27,
+   "haiku": 65,
+   "deepseek": 80
+  },
+  "line": "Group editor first-dose picker: a picked value is now compared with the stored one before it is applied.",
+  "expected": "after confirming the same start date the start time shows the start of the day",
+  "observed": "the start time still reads Now",
+  "screen": "group editor"
+ },
+ {
+  "bug": "idlefantasy-0001",
+  "ep": "idlefantasy-E01",
+  "family": "display",
+  "symptom": "wrong_value",
+  "issta": "wrong or missing data",
+  "fix": "2026-08-19",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [
+   "deepseek"
+  ],
+  "depth": {
+   "sonnet": 13,
+   "sol": 75,
+   "haiku": 99,
+   "deepseek": 111
+  },
+  "line": "Shop header: large gold amounts now use a new short format for millions.",
+  "expected": "the coin balance of 2,567,890 is shown as 2.5M (floored)",
+  "observed": "the coin balance is shown as 2.6M, rounded up",
+  "screen": "shop"
+ },
+ {
+  "bug": "idlefantasy-0005",
+  "ep": "idlefantasy-E02",
+  "family": "state",
+  "symptom": "wrong_value",
+  "issta": "action has unintended effect",
+  "fix": "2026-06-30",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 12,
+   "sol": 55,
+   "haiku": 40,
+   "deepseek": 70
+  },
+  "line": "Bulk clearance for unused materials: which items count as useful is now decided from crafting recipes.",
+  "expected": "farming produce like pumpkin and tomato should not be listed in sell junk",
+  "observed": "sell junk lists pumpkin and tomato as junk to sell",
+  "screen": "shop sell junk"
+ },
+ {
+  "bug": "idlefantasy-0006",
+  "ep": "idlefantasy-E03",
+  "family": "display",
+  "symptom": "wrong_value",
+  "issta": "wrong display",
+  "fix": "2026-09-19",
+  "source": "greenfield_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "luna-med"
+  ],
+  "depth": {
+   "sonnet": 2,
+   "sol": 5,
+   "haiku": 6,
+   "deepseek": 4
+  },
+  "line": "Gear tab slot chooser: candidate items are now ranked by their unlock threshold, with title as the tiebreak.",
+  "expected": "runite chainbody (60) should be listed before adamantite platebody (66), ordered by combined stat bonus",
+  "observed": "runite chainbody is listed after adamantite and slayer platebody, sorted by tier and name instead of stat",
+  "screen": "combat gear tab body picker"
+ },
+ {
+  "bug": "idlefantasy-0008",
+  "ep": "idlefantasy-E04",
+  "family": "state",
+  "symptom": "wrong_value",
+  "issta": "wrong or missing data",
+  "fix": "2026-07-08",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 0,
+   "sol": 2,
+   "haiku": 9,
+   "deepseek": 7
+  },
+  "line": "Profile milestones section: progress toward mission milestones is now computed from all finished progress records.",
+  "expected": "dedicated (complete 5 quests) should still be in the missing list because only 4 regular quests are done, guild quests do not count",
+  "observed": "dedicated is not in the missing list, it counts the 3 guild quests as completed quests",
+  "screen": "profile achievements tab"
+ },
+ {
+  "bug": "idlefantasy-0009",
+  "ep": "idlefantasy-E05",
+  "family": "display",
+  "symptom": "missing",
+  "issta": "wrong or missing data",
+  "fix": "2026-09-01",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 6,
+   "sol": 28,
+   "haiku": 24,
+   "deepseek": 74
+  },
+  "line": "Combat screen stats list: the stats shown outside a fight are now calculated from fewer inputs.",
+  "expected": "the attack row should show +9 prestige and hitpoints +4 prestige",
+  "observed": "no prestige bonus is shown, only the gear bonus is displayed",
+  "screen": "combat skills tab"
+ },
+ {
+  "bug": "iris-0012",
+  "ep": "iris-E03",
+  "family": "display",
+  "symptom": "wrong_value",
+  "issta": "wrong or missing data",
+  "fix": "2026-11-01",
+  "source": "greenfield_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "haiku",
+   "deepseek"
+  ],
+  "depth": {
+   "sonnet": 3,
+   "sol": 8,
+   "haiku": 12,
+   "deepseek": 4
+  },
+  "line": "Media tab blank-state illustration: its caption is now built from one constant string resource.",
+  "expected": "the Videos filter shows the message No videos found",
+  "observed": "the Videos filter shows the message No photos found",
+  "screen": "media tab"
+ },
+ {
+  "bug": "markor-0003",
+  "ep": "markor-E01",
+  "family": "interaction",
+  "symptom": "no_effect",
+  "issta": "functionality does not take effect",
+  "fix": "2024-03-28",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [
+   "deepseek"
+  ],
+  "depth": {
+   "sonnet": 3,
+   "sol": 42,
+   "haiku": 3,
+   "deepseek": 38
+  },
+  "line": "Editor line actions menu: the line-cloning action now computes its insertion point after the line break.",
+  "expected": "the line is duplicated so the file reads gamma, gamma",
+  "observed": "nothing is duplicated",
+  "screen": "editor"
+ },
+ {
+  "bug": "markor-0009",
+  "ep": "markor-E03",
+  "family": "state",
+  "symptom": "wrong_value",
+  "issta": "wrong or missing data",
+  "fix": "2026-08-24",
+  "source": "mature_pr",
+  "port_conf": "medium",
+  "caught_by": [
+   "deepseek",
+   "luna-max"
+  ],
+  "depth": {
+   "sonnet": 10,
+   "sol": 1,
+   "haiku": 55,
+   "deepseek": 36
+  },
+  "line": "File browser quick-access marking: the browser's marks are now kept up to date by its own handlers alone.",
+  "expected": "after favouriting Notes.md in the details dialog, the toolbar star is in sync and tapping it removes the favourite, so Favourites does not list Notes.md",
+  "observed": "the toolbar star was not updated after the dialog, tapping it added the favourite again and Notes.md is still listed under Favourites",
+  "screen": "file browser"
+ },
+ {
+  "bug": "markor-0014",
+  "ep": "markor-E04",
+  "family": "interaction",
+  "symptom": "no_effect",
+  "issta": "functionality does not take effect",
+  "fix": "2024-09-20",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 21,
+   "sol": 133,
+   "haiku": 105,
+   "deepseek": 151
+  },
+  "line": "Strong-emphasis hold gesture: the affected lines are now computed from the start and end of the selection range.",
+  "expected": "long-pressing Bold wraps the line, giving **gamma**",
+  "observed": "nothing happens, the line stays gamma and the app closes",
+  "screen": "editor"
+ },
+ {
+  "bug": "markor-0018",
+  "ep": "markor-E06",
+  "family": "state",
+  "symptom": "not_persisted",
+  "issta": "UI state lost",
+  "fix": "2022-02-20",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 8,
+   "sol": 12,
+   "haiku": 13,
+   "deepseek": 15
+  },
+  "line": "Editor overflow menu typing helpers: their toggles are now applied directly to the open editor session.",
+  "expected": "after reopening the file auto-format is still off and Enter adds no list marker",
+  "observed": "after reopening the file auto-format is on again and Enter adds a '- ' marker",
+  "screen": "editor menu"
+ },
+ {
+  "bug": "markor-0019",
+  "ep": "markor-E04",
+  "family": "state",
+  "symptom": "not_persisted",
+  "issta": "UI state lost",
+  "fix": "2020-12-05",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 0,
+   "sol": 5,
+   "haiku": 0,
+   "deepseek": 4
+  },
+  "line": "Editor tab width dialog: the chosen width is now applied directly to the editor that is open.",
+  "expected": "after reopening the file Indent still adds two spaces, so the line has four spaces",
+  "observed": "after reopening the file Indent adds four spaces, so the line has six spaces",
+  "screen": "editor"
+ },
+ {
+  "bug": "minus-0007",
+  "ep": "minus-E04",
+  "family": "state",
+  "symptom": "not_persisted",
+  "issta": "data not persisted",
+  "fix": "2026-07-07",
+  "source": "greenfield_pr",
+  "port_conf": "high",
+  "caught_by": [],
+  "depth": {
+   "sonnet": 16,
+   "sol": 27,
+   "haiku": 31,
+   "deepseek": 26
+  },
+  "line": "Budget sheet split view selector: the active view is now stored in view-model memory.",
+  "expected": "Weekly is still the selected option after the app is closed and opened again",
+  "observed": "after closing and reopening the app the selection is back to Daily",
+  "screen": "budget sheet"
+ },
+ {
+  "bug": "tasks-0012",
+  "ep": "tasks-E03",
+  "family": "display",
+  "symptom": "duplicated",
+  "issta": "redundant or missing UI",
+  "fix": "2025-03-25",
+  "source": "mature_pr",
+  "port_conf": "high",
+  "caught_by": [
+   "haiku"
+  ],
+  "depth": {
+   "sonnet": 28,
+   "sol": 48,
+   "haiku": 123,
+   "deepseek": 52
+  },
+  "line": "Date badges on task rows: the badge for each date field is now built independently of the others.",
+  "expected": "only one date chip is shown when start and due are the same day",
+  "observed": "a start-date chip duplicates the due date",
+  "screen": "task list"
+ }
+]

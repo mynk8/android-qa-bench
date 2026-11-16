@@ -1,0 +1,40 @@
+# dsh --patch overlay for the Android QA benchmark: expose ONLY the device MCP
+# server's tools, pick the OpenRouter DeepSeek route, and stay unattended.
+# The device MCP row and the per-request output cap are generated per episode by agents/dsh_agent.sh.
+
+# ---- model route: OpenRouter via pi-ai, key from the launch env var name ----
+- id: llm-pi-ai
+  config:
+    providers:
+      openrouter:
+        apiKeyEnv: OPENROUTER_API_KEY
+- id: agent-default-model
+  config:
+    provider: openrouter
+    model: deepseek/deepseek-v4.1-flash
+    # off | low | high | max (catalog thinkingLevelMap). Omitted => effort 'none' is sent.
+    reasoningEffort: high
+
+# ---- remove every built-in model-facing tool ----
+- { id: tool-bash, disabled: true }
+- { id: tool-pwsh, disabled: true }
+- { id: tool-jobs, disabled: true }
+- { id: tool-fs, disabled: true }
+- { id: tool-fs-search, disabled: true }
+- { id: tool-working-directory, disabled: true }
+- { id: tool-skill, disabled: true }
+- { id: tool-agent-team, disabled: true }
+- { id: tool-subagent, disabled: true }
+- { id: tool-subagent-fork, disabled: true }
+- { id: tool-subagent-control, disabled: true }
+- { id: tool-workflow, disabled: true }
+- { id: tool-todo, disabled: true }
+- { id: tool-goal, disabled: true }
+- { id: tool-web, disabled: true }
+- { id: mcp-resources, disabled: true }     # list/read_mcp_resource* tools
+- { id: plan-mode, disabled: true }         # exit_plan_mode tool
+# ---- extra model calls / ambient context we do not want ----
+- { id: session-title-llm, disabled: true } # side LLM call to title the session
+- { id: agent-instructions, disabled: true } # AGENTS.md / CLAUDE.md loading
+- { id: skill-filesystem, disabled: true }  # skill catalog from disk
+

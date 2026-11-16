@@ -1,0 +1,154 @@
+{
+  "run_id": "a0bfdaf9bd22",
+  "item_id": "idlefantasy-E02",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Guild Hall > Mining Guild > Quests",
+      "element": "Iron Quota completion status",
+      "element_ref": 14,
+      "field": "completion status",
+      "symptom_type": "wrong_value",
+      "expected": "Iron Quota is marked Completed, since it is one of the completed guild quests in the starting save.",
+      "observed": "Iron Quota is rendered as locked and says it requires Guild Level 1.",
+      "observed_quote": "Requires Guild Level 1",
+      "steps": [
+        "Open Guild Hall from Home.",
+        "Open Mining Guild.",
+        "View the Quests tab with Hide completed off.",
+        "Check Iron Quota; Copper Run is marked Completed, but Iron Quota shows the level requirement."
+      ],
+      "anchor_node": {
+        "text": "Requires Guild Level 1",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          976,
+          349,
+          1010
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Quests > Gathering",
+      "element": "first quest row",
+      "element_ref": 6,
+      "field": "quest row layout after changing Hide completed",
+      "symptom_type": "cut_off",
+      "expected": "After turning Hide completed off, the top completed row is fully visible with its title, description, status, and Reset control.",
+      "observed": "The first completed row is clipped under the category tabs; only its Completed status and Reset control are visible. Its title and description are missing from the viewport.",
+      "observed_quote": "Completed",
+      "steps": [
+        "Open the Quests tab and select Gathering.",
+        "Confirm Fishing I is fully visible as a completed quest.",
+        "Turn Hide completed on, then turn it off.",
+        "Observe that the restored first row is clipped beneath the category tabs and only its Completed status and Reset control are visible."
+      ],
+      "anchor_node": {
+        "desc": "Completed",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          42,
+          364,
+          89,
+          411
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ],
+      "present": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/idlefantasy-E02/a0bfdaf9bd22/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0003": "missed_unreached",
+    "idlefantasy-0005": "missed_unreached"
+  },
+  "elapsed_s": 1303.681,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.72,
+    "notes": "Swept the shop and quest views through normal navigation and rotation. Verified Keep one of each item persists when the shop is reopened and restored it to off. Reviewed Sell Junk and Sell Old Gear previews with both toggle states and canceled all sale sheets; no sale was committed. Checked completed quest rows and Hide completed behavior in the quest board and guild lists. Filed two reports; the developer could not reproduce either. Coins remain 2.5M and no session is running."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "missed": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 188,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "bug_meta": {
+    "idlefantasy-0003": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "bug_id": "markor-0018",
+  "runs": 1,
+  "started": "2026-11-11T10:59:35+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "- item\n  - child\n  - \n"
+      },
+      "seconds": 63.8,
+      "screenshot_sha256": "21b63c4e74711796f5c1a11123a430d3b1c2fa3694d50161291d79a0e10f4694",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0018-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "- a\n  - deep\n  - \n"
+      },
+      "seconds": 82.2,
+      "screenshot_sha256": "d42442f57abd4e619893e14cf556b1f6a344c8f9aa23722045a245d8ba65e7c1",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0018-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "- item\n  - child\n  - \n"
+      },
+      "seconds": 47.1,
+      "screenshot_sha256": "d56070c67b68bdbdafa5a5a731a2bf3028895c9473b60aa835d1117631a44a5e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0018-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "- item\n  - child\n\n"
+      },
+      "seconds": 68.5,
+      "screenshot_sha256": "1c253619faa91db5cfb3b8c6d78f78c3f2c86a16ac090131c4a14a2161293f2f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0018-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "- a\n  - deep\n\n"
+      },
+      "seconds": 71.6,
+      "screenshot_sha256": "9c7c795c49eedbcf64d863e4db1a19f76682ab92fb20d8998f97ef9d12bf1016",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0018-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "- item\n  - child\n  - \n"
+      },
+      "seconds": 59.0,
+      "screenshot_sha256": "1050f99c9979ee93727ab3e2a3cc5c5994f07737c706b76b4f7ba11bba959be0",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0018-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T11:07:03+0530"
+}

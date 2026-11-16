@@ -1,0 +1,209 @@
+{
+  "run_id": "ff6f9afee336",
+  "item_id": "amaze-E03",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "SMB Connection dialog after rotation",
+      "element": "Username and Password fields",
+      "element_ref": 6,
+      "field": "Anonymous",
+      "symptom_type": "not_persisted",
+      "expected": "While Anonymous remains checked, username and password remain disabled after rotation.",
+      "observed": "After portrait-landscape-portrait rotation, Anonymous stays checked but both credential fields become enabled. Tapping username focuses it and opens the keyboard. Reproduced twice.",
+      "observed_quote": "qa_user",
+      "steps": [
+        "Open + > Cloud Connection > SMB Connection > Enter hostname manually.",
+        "Enter qa_user and qa_pass in credentials, dismiss keyboard.",
+        "Check Anonymous and verify both fields disabled.",
+        "Rotate landscape then portrait.",
+        "Tap Username; it is editable while Anonymous is checked.",
+        "Toggle Anonymous off/on and repeat rotation to reproduce."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/usernameET",
+        "text": "qa_user",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1083,
+          943,
+          1201
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "SMB Connection",
+      "element": "Username editable with Anonymous checked following rotation",
+      "element_ref": 6,
+      "field": "Username",
+      "symptom_type": "wrong_value",
+      "expected": "Anonymous checked must keep credential fields greyed out and prevent editing, including after recreation.",
+      "observed": "Confirmed by actually changing Username from qa_user to edited_while_anonymous while Anonymous remained checked after rotating. Password is also enabled. Empty hostname was left untouched; Address cannot be empty appears following rotation.",
+      "observed_quote": "edited_while_anonymous",
+      "steps": [
+        "In portrait open Cloud Connection > SMB Connection > ENTER HOSTNAME MANUALLY.",
+        "Leave hostname empty; enter username qa_user and password qa_pass; hide keyboard.",
+        "Check Anonymous: credential fields become disabled.",
+        "Rotate to landscape and back to portrait.",
+        "Without toggling Anonymous, tap Username and replace it with edited_while_anonymous.",
+        "Hide keyboard: Anonymous is still checked and new username is shown.",
+        "Repeated off/on then landscape/portrait reproduced the enabled fields."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/usernameET",
+        "text": "edited_while_anonymous",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1283,
+          943,
+          1401
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Paste conflict dialog",
+      "element": "Paste conflict and pending paste controls",
+      "element_ref": 6,
+      "symptom_type": "missing",
+      "expected": "Rotation retains or restores the pending conflict dialog and allows completing the paste.",
+      "observed": "Rotating while the Alpha conflict is open removes both the conflict dialog and the pending paste bar. Destination still shows 1 folders and 1 files. Repeated twice, once with Do for all items checked and once unchecked.",
+      "steps": [
+        "Copy AndroidQA/Amaze/Alpha using its Properties menu > Copy.",
+        "Open Beta, which already contains a copied Alpha folder.",
+        "Tap PASTE to show conflict for Alpha.",
+        "Rotate landscape then portrait without choosing Skip, Overwrite or Rename.",
+        "Observe no conflict dialog or Paste control remains.",
+        "Repeat copy/paste and rotation; same result."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "1 folders and 1 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Edit saved SMB Connection",
+      "element": "Username and Password fields",
+      "element_ref": 5,
+      "field": "Anonymous",
+      "symptom_type": "no_effect",
+      "expected": "Opening a saved anonymous SMB connection initializes username/password as disabled and greyed out.",
+      "observed": "On reopening a saved anonymous connection, Anonymous is checked but credential fields are enabled. Reopened twice; typed anonymous_edit_test into Username without unchecking Anonymous.",
+      "observed_quote": "anonymous_edit_test",
+      "steps": [
+        "Create SMB connection for hostname 192.0.2.1 with Anonymous checked.",
+        "Open navigation drawer and tap edit button beside SMB Connection.",
+        "Observe Anonymous checked but Username and Password enabled.",
+        "Cancel and reopen edit to reproduce.",
+        "Type anonymous_edit_test into Username while Anonymous remains checked."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/usernameET",
+        "text": "anonymous_edit_test",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1283,
+          943,
+          1401
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "amaze-0011"
+      ],
+      "present": [
+        "amaze-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/amaze-E03/ff6f9afee336/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0011": "missed_unreached"
+  },
+  "elapsed_s": 594.514,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept file/folder copy-paste and rename with original Alpha/Beta/readme, report+final.txt, notes.txt and photos; tested empty rename, existing target, reversal, repeated paste, same-directory copy, conflict Skip/Rename and Do for all items, rotation. Exercised Name/Size/Type/Last Modified, ascending/descending, folder-only persistence, all directory placement modes, grid/list. Tested bookmark title/location combinations, exact duplicate rejection, edit validation/cancel, delete/cancel, rotation/persistence and sidebar navigation. SMB tested discovery/manual dialog, empty hostname validation, credentials/Anonymous toggling, rotation, save/reopen/delete. Reported disappearing paste conflict after rotation and enabled credentials with Anonymous checked after rotation and saved-connection reopen; developer returned could not reproduce for reports. No reachable SMB server supplied, so successful remote access unverified. Removed test copies/bookmarks/SMB entry, retained starting files and original filenames."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0011"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0011"
+  ],
+  "missed": [
+    "amaze-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 299,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0011"
+  ],
+  "bug_meta": {
+    "amaze-0011": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

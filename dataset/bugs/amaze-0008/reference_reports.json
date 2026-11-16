@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "file list",
+    "element": "section headers",
+    "field": "sort",
+    "symptom_type": "no_effect",
+    "expected": "folders and files are mixed with no Folders or Files headers",
+    "observed": "Folders and Files headers are still shown",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "file list",
+    "element": "something",
+    "field": "sort",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

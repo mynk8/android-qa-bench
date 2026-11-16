@@ -1,0 +1,188 @@
+{"event": "install", "build": {"n": 1, "build_id": "amaze-E05-11", "mask": "11", "unfixed": ["amaze-0014", "amaze-0016"], "present": ["amaze-0014", "amaze-0016"]}}
+{"event": "brief", "item_id": "amaze-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1327}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1818}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 1681}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "type", "args": {"text": "Alpha", "clear": true, "submit": false}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "type", "args": {"text": "Alpha", "clear": true, "submit": false}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 28, "message": {"type": "bug_report", "screen": "New Folder dialog (AndroidQA/Amaze)", "element": "3", "element_ref": 3, "field": "CREATE button / name validation", "symptom_type": "wrong_value", "expected": "Typing a name that already exists in the folder (\"Alpha\") keeps CREATE disabled, since the name is validated while typing.", "observed": "With \"Alpha\" typed, CREATE is enabled. Tapping it shows the toast \"File with same name already exists\" and clears the name field.", "observed_quote": "File with same name already exists", "steps": ["Open AndroidQA/Amaze (contains folders Alpha and Beta).", "Tap the + FAB, then Folder.", "Type 'Alpha' into Enter Name.", "Observe CREATE is enabled (not disabled), unlike an empty field.", "Tap CREATE: toast 'File with same name already exists' appears and the name field is emptied with CREATE disabled."], "anchor_node": {"id": "com.amaze.filemanager:id/md_buttonDefaultPositive", "text": "CREATE", "class": "android.widget.TextView", "bounds": [777, 1262, 974, 1388]}}}
+{"event": "scored", "report_n": 1, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0014": "unverified_quote", "amaze-0016": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1325}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1711}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1711}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 741, "y": 1512}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 435, "y": 290}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "type", "args": {"text": "report", "clear": true, "submit": true}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1327}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1519}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1327}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 292, "y": 136}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 446, "y": 399}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 68, "message": {"type": "bug_report", "screen": "File browser, /storage/emulated/0/AndroidQA/Amaze (multi-select mode)", "element": "33", "element_ref": 33, "field": "selection state after rotation", "symptom_type": "not_persisted", "expected": "After rotating to landscape, the selection (1 item, notes.txt) and the action bar count stay as they were.", "observed": "Before rotation the action bar showed \"1\" with notes.txt selected. After rotating to landscape the action bar shows \"0\", multi-select mode stays open, and no items are highlighted as selected.", "observed_quote": "0", "steps": ["Open AndroidQA/Amaze (Alpha, Beta, keep.jpg, notes.txt, photo.jpg, report+final.txt).", "Long-press notes.txt to enter multi-select (action bar shows 1).", "Open the overflow menu (top-right) and choose Select All, then use the chevron next to the count and choose Select Inverse, leaving only notes.txt selected (count 1).", "Rotate the device to landscape.", "Observe: action bar reads 0, selection mode is still shown, and notes.txt is no longer selected."], "anchor_node": {"class": "android.widget.RelativeLayout", "contains": ["Amaze Debug", "0"], "bounds": [189, 63, 1665, 189]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0014": "location", "amaze-0016": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 985, "y": 1135}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1327}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 80, "message": {"type": "bug_report", "screen": "File browser, /storage/emulated/0/AndroidQA/Amaze (multi-select action bar)", "element": "33", "element_ref": 33, "field": "selection count after rotation", "symptom_type": "not_persisted", "expected": "Rotating keeps the one selected item (notes.txt) selected and the action bar shows \"1\".", "observed": "Portrait: action bar shows \"1\" with notes.txt highlighted. After rotating to landscape the action bar shows \"0\", multi-select mode stays open, and notes.txt is no longer highlighted.", "observed_quote": "Amaze Debug\" | \"0", "steps": ["Open AndroidQA/Amaze in portrait.", "Long-press notes.txt. Action bar shows 1 and notes.txt is highlighted.", "Rotate the device to landscape.", "Observe the action bar shows 0 and no item is highlighted, while the selection bar is still open."], "anchor_node": {"class": "android.widget.RelativeLayout", "contains": ["Amaze Debug", "0"], "bounds": [189, 63, 1665, 189]}}}
+{"event": "scored", "report_n": 3, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0014": "unverified_quote", "amaze-0016": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 1716}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1494}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1686}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 250}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.5, "x": 400, "y": 250}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 280, "y": 2093}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 2093}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1686}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1878}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 741, "y": 1512}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 1681}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "type", "args": {"text": "a/b", "clear": true, "submit": false}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "type", "args": {"text": "Gamma", "clear": true, "submit": false}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 1681}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "type", "args": {"text": "Beta", "clear": true, "submit": false}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 172, "message": {"type": "bug_report", "screen": "New Folder dialog, opened from AndroidQA/Amaze", "element": "40", "element_ref": 40, "field": "CREATE button (name validation while typing)", "symptom_type": "wrong_value", "expected": "When the typed name matches an existing folder in the current folder, the name is flagged while typing and CREATE stays disabled (as it does for an empty or invalid name such as \"a/b\").", "observed": "Folder Beta already exists here. Typing \"Beta\" shows no error and CREATE is enabled (pink, same as CANCEL). Tapping CREATE then shows the toast \"File with same name already exists\". Typing \"a/b\" disables CREATE and shows \"Invalid Name\", so the duplicate case is not validated while typing.", "observed_quote": "CREATE", "steps": ["Open AndroidQA/Amaze, which already contains folders Alpha and Beta.", "Tap the + button, then Folder.", "Type 'Beta' into Enter Name.", "Observe that there is no error and CREATE is enabled.", "Tap CREATE: the toast 'File with same name already exists' appears.", "For comparison, type 'a/b' instead: the 'Invalid Name' error appears and CREATE is disabled."], "anchor_node": {"id": "com.amaze.filemanager:id/md_buttonDefaultPositive", "text": "CREATE", "class": "android.widget.TextView", "bounds": [777, 874, 974, 1000]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0014": "location", "amaze-0016": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "key", "args": {"key": "ESCAPE"}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1325}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 178, "message": null}

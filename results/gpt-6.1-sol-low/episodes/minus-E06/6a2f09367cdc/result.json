@@ -1,0 +1,303 @@
+{
+  "run_id": "6a2f09367cdc",
+  "item_id": "minus-E06",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main expense entry",
+      "element": "Backspace keypad key",
+      "element_ref": 19,
+      "field": "amount",
+      "symptom_type": "no_effect",
+      "expected": "Backspace removes the last entered digit, changing 1.23 to 1.2.",
+      "observed": "Repeated taps on the backspace key leave the amount unchanged.",
+      "observed_quote": "$1.23",
+      "steps": [
+        "Enter 1, decimal point, 2, 3 on the main keypad.",
+        "Tap the yellow backspace key.",
+        "Tap it again; amount remains $1.23."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Editor action"
+        ],
+        "bounds": [
+          799,
+          1202,
+          1035,
+          1456
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Expense history",
+      "element": "Date section headers",
+      "element_ref": 9,
+      "symptom_type": "no_effect",
+      "expected": "All date sections can stay collapsed when the last open section is collapsed.",
+      "observed": "Collapsing the final open section immediately reopens Today. Reproduced twice.",
+      "observed_quote": "Collapse",
+      "steps": [
+        "Open history by dragging the main panel handle down.",
+        "Expand 13 November.",
+        "Collapse Today.",
+        "Collapse 13 November; Today automatically reopens.",
+        "Collapse Today again; it stays open."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "Today"
+        ],
+        "bounds": [
+          42,
+          426,
+          1038,
+          541
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet",
+      "element": "Spent and Available summary",
+      "element_ref": 4,
+      "field": "Spent",
+      "symptom_type": "wrong_value",
+      "expected": "Spent $60 and Available 40%, from Groceries $40 and the single Rent occurrence $20.",
+      "observed": "Spent is $80 and Available is 20%; recurring Rent appears counted twice. History shows $60 and Analytics showed $61.2 when the temporary $1.2 test expense existed. Reopening reproduces.",
+      "observed_quote": "$80",
+      "steps": [
+        "With the initial Groceries $40 and recurring Rent $20, open the budget sheet.",
+        "Observe $80 spent, 20% available.",
+        "Close and reopen the sheet; totals are still wrong.",
+        "Compare history's 13 November total of $60."
+      ],
+      "anchor_node": {
+        "text": "$80",
+        "class": "android.widget.TextView",
+        "bounds": [
+          465,
+          454,
+          618,
+          533
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet",
+      "element": "Available percentage summary row",
+      "element_ref": 6,
+      "symptom_type": "wrong_value",
+      "expected": "Available: 40% because actual expenses total $60 out of $100.",
+      "observed": "Available percentage is 20% and spent is $80, while history and Analytics show $60. The recurring $20 template is included in addition to the paid occurrence.",
+      "observed_quote": "Available: 20%",
+      "steps": [
+        "Start with $100 budget, yesterday Groceries $40 and monthly Rent $20.",
+        "Tap Today budget pill on main screen.",
+        "Read Available: 20%.",
+        "Dismiss by tapping outside the sheet, reopen, and observe the same percentage.",
+        "Open Analytics and compare Total Spent 60; history also has only Groceries $40 and Rent $20."
+      ],
+      "anchor_node": {
+        "text": "Available: 20%",
+        "class": "android.widget.TextView",
+        "bounds": [
+          105,
+          1052,
+          334,
+          1099
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen",
+      "element": "Amount while entering a new category",
+      "element_ref": 3,
+      "field": "amount",
+      "symptom_type": "wrong_value",
+      "expected": "Typing QA456 in New category edits only the category name; amount remains empty.",
+      "observed": "Typing digits in the focused New category field closes category editing and enters those digits into the expense amount. Also reproduced with QA Test & 123.",
+      "observed_quote": "$456",
+      "steps": [
+        "Enable Settings > Extra features > Save categories on their own.",
+        "Return to idle main screen.",
+        "Tap New category.",
+        "Type QA456 into the focused category text field.",
+        "Observe amount becomes $456 instead of remaining empty."
+      ],
+      "anchor_node": {
+        "text": "$456",
+        "class": "android.widget.EditText",
+        "bounds": [
+          42,
+          455,
+          1038,
+          770
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main expense entry",
+      "element": "Amount keypad fractional input",
+      "element_ref": 3,
+      "field": "amount",
+      "symptom_type": "no_effect",
+      "expected": "After entering 1.23, extra fractional digits are rejected; one backspace should change visible amount to 1.2.",
+      "observed": "The keypad accepts an invisible third fractional digit. Entering 1.234 displays $1.23; backspace leaves $1.23 unchanged because it deletes the hidden 4. Reproduced in both category modes.",
+      "observed_quote": "$1.23",
+      "steps": [
+        "Clear main amount.",
+        "Tap 1, decimal point, 2, 3, 4.",
+        "Amount still displays $1.23.",
+        "Tap backspace once: display remains $1.23.",
+        "Tap backspace again: display becomes $1.2.",
+        "Clear and repeat the sequence."
+      ],
+      "anchor_node": {
+        "text": "$1.23",
+        "class": "android.widget.EditText",
+        "bounds": [
+          42,
+          455,
+          1038,
+          770
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics",
+      "element": "Categories tab selection",
+      "element_ref": 4,
+      "symptom_type": "not_persisted",
+      "expected": "Categories remains the selected tab after device rotation.",
+      "observed": "Selecting Categories then rotating resets the selected tab to Trend. Reproduced on two rotation cycles.",
+      "observed_quote": "Trend",
+      "steps": [
+        "Open Analytics.",
+        "Tap Categories.",
+        "Rotate to landscape; Trend is selected again.",
+        "Rotate portrait and repeat; selection is lost again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Categories"
+        ],
+        "bounds": [
+          540,
+          457,
+          985,
+          583
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0018",
+        "minus-0019"
+      ],
+      "present": [
+        "minus-0018",
+        "minus-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/minus-E06/6a2f09367cdc/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0018": "reported",
+    "minus-0019": "missed_unreached"
+  },
+  "elapsed_s": 750.596,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.7,
+    "notes": "Swept main expense input/save, history edit/delete/undo and section toggles, budget sheet totals/split modes/edit cancellation, category creation/list selection/sorting/deletion/persistence, navigation and rotation. History final-section collapse bug confirmed and logged. Budget Spent $80 versus actual $60, hidden fractional keypad/backspace behavior, category numeric typing, and Analytics rotation selection loss were reported but developer could not reproduce. Removed temporary expenses/categories; original Groceries $40, recurring Rent $20, Food/Transport and $100 period preserved; experimental switches restored. Separate category management route was not identifiable; tested available inline, popup, and grid category controls."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "found": [
+    "minus-0018"
+  ],
+  "required": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "missed": [
+    "minus-0019"
+  ],
+  "true_positives": 1,
+  "false_positives": 6,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 7,
+  "steps": 299,
+  "precision": 0.14285714285714285,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "bug_meta": {
+    "minus-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "bug_id": "iris-0007",
+  "app_id": "iris",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-10-08",
+  "seed_id": "album_basic",
+  "params": {
+    "nav": {
+      "album": [
+        {
+          "text": "IrisSeed"
+        },
+        {
+          "desc": "IrisSeed"
+        }
+      ],
+      "open_big": [
+        {
+          "desc": "big.jpg"
+        },
+        {
+          "text": "big.jpg"
+        }
+      ],
+      "open_huge": [
+        {
+          "desc": "huge.jpg"
+        },
+        {
+          "text": "huge.jpg"
+        }
+      ],
+      "details": [
+        {
+          "desc": "Details"
+        },
+        {
+          "desc": "Info"
+        },
+        {
+          "text": "Details"
+        },
+        {
+          "desc": "More options"
+        }
+      ],
+      "details_item": [
+        {
+          "text": "Details"
+        },
+        {
+          "text": "Info"
+        }
+      ],
+      "rename": [
+        {
+          "text": "Rename"
+        },
+        {
+          "desc": "Rename"
+        }
+      ],
+      "title_field": [
+        {
+          "text": "Title"
+        },
+        {
+          "text": "Sunset"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Save"
+        }
+      ],
+      "new_album": [
+        {
+          "text": "New album"
+        },
+        {
+          "text": "Create new album"
+        },
+        {
+          "text": "Create"
+        }
+      ],
+      "move": [
+        {
+          "text": "Move to album"
+        },
+        {
+          "text": "Move to Album"
+        },
+        {
+          "desc": "Move"
+        }
+      ],
+      "album_name": [
+        {
+          "text": "Album name"
+        },
+        {
+          "text": "Name"
+        }
+      ],
+      "albums_tab": [
+        {
+          "text": "Albums"
+        },
+        {
+          "desc": "Albums"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "iris-0007-buggy",
+    "fixed": "iris-0007-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "hardness": {
+    "steps_to_trigger": 2,
+    "needs_state_persistence": false,
+    "symptom_distance": "other_screen",
+    "visual_salience": "low"
+  },
+  "hard_slice": true,
+  "head_port": {
+    "patch": "private/forwardport/iris-0007.patch",
+    "confidence": "high",
+    "lines_changed": 6,
+    "approach": "PhotoDetailsSheet.formatFileSize restored to binary (1024-based) thresholds/divisors, so 1,500,000 bytes shows 1.4 MB instead of 1.5 MB."
+  }
+}

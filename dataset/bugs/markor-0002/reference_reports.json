@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor",
+    "element": "undo",
+    "field": "undo history",
+    "symptom_type": "wrong_value",
+    "expected": "on a newly created file, undo removes the last typed text and redo restores it",
+    "observed": "after Undo the text hello is still shown, undo has no effect",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor",
+    "element": "something",
+    "field": "undo history",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

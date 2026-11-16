@@ -1,0 +1,128 @@
+{
+  "run_id": "dc670dd06cd1",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Folder properties dialog",
+      "element": "Properties dialog for folder Alpha",
+      "element_ref": 6,
+      "field": "Dialog state across rotation",
+      "symptom_type": "no_effect",
+      "expected": "The properties dialog should remain open with the folder name, size, and date after rotating the device.",
+      "observed": "Rotating from portrait to landscape dismissed the Properties dialog and returned to the folder list.",
+      "observed_quote": "2 folders and 4 files",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Open Alpha's row menu and select Properties.",
+        "Rotate the device to landscape.",
+        "Observe that the dialog is gone and the folder listing is shown."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "DCIM"
+        ],
+        "bounds": [
+          0,
+          645,
+          656,
+          771
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/amaze-E04/dc670dd06cd1/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "missed_unreached",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 123.312,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.84,
+    "notes": "Swept drawer storage and category navigation, multi-file selection including Select All/Deselect All reversal, and file/folder properties including folder async size/date and file hashes. No reproducible defects confirmed; the properties dialog rotation observation was rejected by developer as unreproducible."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 32,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

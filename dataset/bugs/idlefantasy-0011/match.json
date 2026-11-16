@@ -1,0 +1,77 @@
+{
+  "screens": [
+    "skills",
+    "smithing",
+    "bronze bar",
+    "craft",
+    "quantity"
+  ],
+  "elements": [
+    "xp line",
+    "xp preview",
+    "level preview",
+    "xp total",
+    "projected level"
+  ],
+  "fields": [
+    "xp",
+    "level 20",
+    "projected level",
+    "level up",
+    "xp preview"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the xp line shows → level 20",
+    "a level-up preview is shown"
+  ],
+  "observed_contains_any": [
+    "only the xp total is shown, no level",
+    "the level preview is missing"
+  ],
+  "symptom_types": [
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "level 20",
+      "level up",
+      "new level",
+      "projected level",
+      "reach*",
+      "→"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "only",
+      "just",
+      "total",
+      "no level",
+      "missing",
+      "not",
+      "without",
+      "doesn't",
+      "never",
+      "xp total",
+      "only xp"
+    ]
+  ],
+  "location_concepts": [
+    "smithing",
+    "bronze bar",
+    "xp",
+    "quantity",
+    "craft*"
+  ],
+  "anchors": {
+    "elements": [
+      "+155 XP",
+      "XP total",
+      "Quest targets"
+    ],
+    "observed": [
+      "+155 xp total"
+    ]
+  }
+}

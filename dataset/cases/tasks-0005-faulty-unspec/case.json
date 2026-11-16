@@ -1,0 +1,14 @@
+{
+  "case_id": "tasks-0005-faulty-unspec",
+  "bug_id": "tasks-0005",
+  "_build_id": "tasks-0005-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "repeat_last",
+  "agent_input": "agent_input.md"
+}

@@ -1,0 +1,17 @@
+{
+  "db_name": "minus_budget.db",
+  "sql": [
+    "DELETE FROM transactions;",
+    "DELETE FROM queued_transactions;",
+    "DELETE FROM paid_recurrent_occurrences;",
+    "DELETE FROM category;",
+    "DELETE FROM budget_settings;",
+    "INSERT INTO category (name, isHidden, usageCount, createdAt) VALUES ('Food', 0, 0, 0);",
+    "INSERT INTO category (name, isHidden, usageCount, createdAt) VALUES ('Transport', 0, 0, 0);",
+    "INSERT INTO budget_settings (id, totalBudget, period, startDate, endDate, currencyCode, daysInPeriod, rollOverEnabled, rollOverCarryForward, remainingBudgetStrategy, splitMode) VALUES (1, '100.00', 'MONTHLY', ((CAST(strftime('%s','now','start of day','-3 days') AS INTEGER))*1000), ((CAST(strftime('%s','now','start of day','+20 days') AS INTEGER))*1000), 'USD', 24, 0, 0, 'ASK_ALWAYS', 'DYNAMIC');",
+    "INSERT INTO transactions (amount, comment, note, date, createdAt, periodId, isRecurrent, categoryId, isCredit, isCreditPaid, isAdjustment) SELECT '40.00', 'Groceries', '', ((CAST(strftime('%s','now','start of day','-1 days','+12 hours') AS INTEGER))*1000), ((CAST(strftime('%s','now','start of day','-1 days','+12 hours') AS INTEGER))*1000), 0, 0, id, 0, 0, 0 FROM category WHERE name='Food';",
+    "INSERT INTO transactions (amount, comment, note, date, createdAt, periodId, isRecurrent, recurrentFrequency, categoryId, isCredit, isCreditPaid, isAdjustment) SELECT '20.00', 'Rent', '', ((CAST(strftime('%s','now','start of day','-1 days','+12 hours') AS INTEGER))*1000), ((CAST(strftime('%s','now','start of day','-1 days','+12 hours') AS INTEGER))*1000), 0, 1, 'MONTHLY', id, 0, 0, 0 FROM category WHERE name='Food';"
+  ],
+  "id": "budget_basic",
+  "preconditions": "The current budget period started 3 days ago and ends in 20 days, with a budget of 100.00 USD. Yesterday there was a one-off Groceries expense of 40.00 (Food) and a recurring monthly Rent expense of 20.00 (Food). Categories Food and Transport exist."
+}

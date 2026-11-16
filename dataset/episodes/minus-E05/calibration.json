@@ -1,0 +1,75 @@
+{
+  "episode_id": "minus-E05",
+  "start_build": "minus-E05-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "2:36",
+          "2:36\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Today",
+          "$2.86",
+          "Analytics",
+          "Settings",
+          "7",
+          "8",
+          "9",
+          "4",
+          "5",
+          "6",
+          "1",
+          "2",
+          "3",
+          ".",
+          "0",
+          "Editor action",
+          "Editor action"
+        ]
+      },
+      "seconds": 32.4,
+      "screenshot_sha256": "8e9203c728a02a6cb48cd8ec978eb835bf7046ed91a4bcdd5537b02919963fbb",
+      "bug": "minus-0001",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "2:36",
+          "2:36\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "10 Nov",
+          "24 days",
+          "03 Dec",
+          "Collapse",
+          "12 November",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $20",
+          "Show subscriptions outside of the period",
+          "Groceries deleted",
+          "UNDO"
+        ]
+      },
+      "seconds": 18.8,
+      "screenshot_sha256": "3996224b581ed6700747c2ffe9de5889a10bc2a1ce2d2a941833c01f58f5e0f3",
+      "bug": "minus-0001",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

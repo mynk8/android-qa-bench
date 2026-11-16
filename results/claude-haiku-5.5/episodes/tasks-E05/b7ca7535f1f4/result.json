@@ -1,0 +1,195 @@
+{
+  "run_id": "b7ca7535f1f4",
+  "item_id": "tasks-E05",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Task list \u2013 sort sheet and list order",
+      "element": "4",
+      "element_ref": 4,
+      "field": "Sorting direction (By title)",
+      "symptom_type": "wrong_value",
+      "expected": "With Sorting = By title and direction Descending, tasks are listed Z\u2192A (Read docs, Pay rent, Pack for trip, Buy milk). Switching to Ascending lists A\u2192Z.",
+      "observed": "With Sorting = \"By title\", the list is Buy milk, Pack for trip, Pay rent, Read docs (A\u2192Z) whether the direction is Descending or Ascending; the direction toggle has no effect on the order.",
+      "observed_quote": "Sorting | By title | Descending",
+      "steps": [
+        "On My Tasks, with Grouping set to None, tap the Sort button in the bottom bar.",
+        "Set Sorting to By title (tap 'By title' in the picker). The row reads 'Sorting | By title | Ascending'.",
+        "Tap the direction control on the Sorting row so it reads 'Descending'. Close the sheet.",
+        "Observe list order: Buy milk, Pack for trip (with subtasks), Pay rent, Read docs (A\u2192Z).",
+        "Reopen Sort, toggle Sorting direction to 'Ascending', close the sheet. The order is still Buy milk, Pack for trip, Pay rent, Read docs."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Dismiss"
+        ],
+        "bounds": [
+          495,
+          590,
+          692,
+          716
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks \u2013 Sort sheet (Sorting = By title) and task list order",
+      "element": "24",
+      "element_ref": 3,
+      "field": "Sorting direction when Sorting = By title",
+      "symptom_type": "wrong_value",
+      "expected": "Sorting \"By title\" with direction Descending lists tasks Z\u2192A: Read docs, Pay rent, Pack for trip, Buy milk. Ascending lists A\u2192Z: Buy milk, Pack for trip, Pay rent, Read docs.",
+      "observed": "With Sorting \"By title\", both Ascending and Descending list tasks A\u2192Z: Buy milk, Pack for trip (with subtasks), Pay rent, Read docs. The direction change has no effect on the order. Still reproduces after closing and rotating the screen. For comparison, By due date with Ascending gives the same order and was not tested in Descending.",
+      "observed_quote": "Sorting | By title | Descending",
+      "steps": [
+        "Start from My Tasks with Grouping = None (Sort sheet > Grouping > None).",
+        "Tap Sort in the bottom bar. Tap the 'By title' option under Sorting. The Sorting row reads 'By title | Ascending'. Close the sheet. Observe order: Buy milk, Pack for trip, Pay rent, Read docs.",
+        "Reopen Sort, tap the Sorting direction control so it reads 'Descending' (row: 'Sorting | By title | Descending'). Close the sheet.",
+        "Observe order: still Buy milk, Pack for trip, Pay rent, Read docs (A to Z), not Z to A.",
+        "Rotate to landscape and back to portrait. Order is still A to Z.",
+        "Toggle the direction back to Ascending: the order remains A to Z as well."
+      ],
+      "anchor_node": {
+        "text": "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+        "class": "android.widget.TextView",
+        "bounds": [
+          105,
+          441,
+          975,
+          547
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks \u2013 task list row notes",
+      "element": "20",
+      "element_ref": 20,
+      "field": "Task notes (link detection)",
+      "symptom_type": "wrong_value",
+      "expected": "The web link in the note of 'Read docs' is detected and shown as a tappable link (link styling, e.g. underlined/blue) when the note is displayed in the task list.",
+      "observed": "The note 'See https://example.com/guide' is rendered as plain grey text with no link styling and no way to open it from the list; tapping the row opens the editor instead.",
+      "observed_quote": "See https://example.com/guide",
+      "steps": [
+        "On My Tasks, scroll to the 'No due date' group.",
+        "Look at 'Read docs': its note 'See https://example.com/guide' shows in plain grey text with no underline or link colour.",
+        "Tap the link text. The task editor opens instead of a link being opened.",
+        "Open the task: the Notes field shows 'See https://example.com/guide' as plain text with no link styling."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Read docs",
+          "See https://example.com/guide"
+        ],
+        "bounds": [
+          0,
+          1717,
+          1080,
+          1937
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "tasks-0018",
+        "tasks-0019"
+      ],
+      "present": [
+        "tasks-0018",
+        "tasks-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/tasks-E05/b7ca7535f1f4/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0018": "missed_unreached",
+    "tasks-0019": "missed_unreached"
+  },
+  "elapsed_s": 177.084,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "found": [
+    "tasks-0018"
+  ],
+  "required": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "missed": [
+    "tasks-0019"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 110,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "bug_meta": {
+    "tasks-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "tasks-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "hit",
+      "duplicate",
+      "no_match"
+    ]
+  }
+}

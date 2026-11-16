@@ -1,0 +1,89 @@
+{
+  "episode_id": "tasks-E01",
+  "app_id": "tasks",
+  "bugs": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "seed_id": "inbox_full",
+  "builds": {
+    "000": "tasks-E01-000",
+    "001": "tasks-E01-001",
+    "010": "tasks-E01-010",
+    "011": "tasks-E01-011",
+    "100": "tasks-E01-100",
+    "101": "tasks-E01-101",
+    "110": "tasks-E01-110",
+    "111": "tasks-E01-111"
+  },
+  "observable": {
+    "000": {
+      "tasks-0005": false,
+      "tasks-0007": false,
+      "tasks-0009": false
+    },
+    "001": {
+      "tasks-0005": false,
+      "tasks-0007": false,
+      "tasks-0009": true
+    },
+    "010": {
+      "tasks-0005": false,
+      "tasks-0007": true,
+      "tasks-0009": false
+    },
+    "011": {
+      "tasks-0005": false,
+      "tasks-0007": true,
+      "tasks-0009": true
+    },
+    "100": {
+      "tasks-0005": true,
+      "tasks-0007": false,
+      "tasks-0009": false
+    },
+    "101": {
+      "tasks-0005": true,
+      "tasks-0007": false,
+      "tasks-0009": true
+    },
+    "110": {
+      "tasks-0005": true,
+      "tasks-0007": true,
+      "tasks-0009": false
+    },
+    "111": {
+      "tasks-0005": true,
+      "tasks-0007": true,
+      "tasks-0009": true
+    }
+  },
+  "interactions": [
+    {
+      "a": "tasks-0005",
+      "b": "tasks-0007",
+      "type": "independent"
+    },
+    {
+      "a": "tasks-0005",
+      "b": "tasks-0009",
+      "type": "independent"
+    },
+    {
+      "a": "tasks-0007",
+      "b": "tasks-0009",
+      "type": "independent"
+    }
+  ],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "bug_id": "tasks-0021",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2023-06-02",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "sort_icon": [
+        {
+          "desc": "Sort"
+        },
+        {
+          "text": "Sort"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0021-buggy",
+    "fixed": "tasks-0021-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0021.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "The default for the sort order preference is descending, so the Sort sheet shows Descending on first use."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

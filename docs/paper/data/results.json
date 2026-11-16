@@ -1,0 +1,1332 @@
+[
+ {
+  "key": "sonnet",
+  "label": "Claude Sonnet 5.5",
+  "setting": "medium",
+  "provider": "Anthropic",
+  "agent": "Claude Code",
+  "runs": [
+   "results/claude-sonnet-5.5-medium"
+  ],
+  "aa_index": 31,
+  "outcomes": {
+   "success": 9,
+   "wrong_pass": 42
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 1.0,
+    "correct_signoff": 0.235,
+    "false_signoff": 0.765,
+    "gave_up": 0.0,
+    "cut_off": 0.0,
+    "report_cap": 0.0
+   },
+   "stopping_with_mixed": {
+    "signed_off": 1.0,
+    "correct_signoff": 0.235,
+    "false_signoff": 0.765,
+    "gave_up": 0.0,
+    "cut_off": 0.0,
+    "report_cap": 0.0
+   },
+   "no_signoff_reasons": {},
+   "episode_score": 0.39,
+   "episode_score_ci95": [
+    0.289,
+    0.5
+   ],
+   "catch_credit": 0.502,
+   "sign_off_rate": 1.0,
+   "finished_rate": 1.0,
+   "hit_rate": 0.647,
+   "hit_rate_ci95": [
+    0.51,
+    0.764
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 42,
+   "reports_credited": 42,
+   "false_reports": 53,
+   "bug_f1": 0.452,
+   "bug_f1_ci95": [
+    0.349,
+    0.551
+   ],
+   "bug_recall": 0.462,
+   "bug_recall_ci95": [
+    0.363,
+    0.557
+   ],
+   "report_precision": 0.442,
+   "report_precision_ci95": [
+    0.33,
+    0.566
+   ],
+   "solve_rate": 0.235,
+   "solve_rate_ci95": [
+    0.14,
+    0.368
+   ],
+   "pass_at_1": 0.235,
+   "pass_hat_1": 0.235,
+   "false_signoff_rate": 0.765,
+   "no_signoff_runs": 0,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 27.48,
+   "cost_usd_per_episode": 0.5387,
+   "cost_episodes_logged": 51,
+   "usd_per_bug_found": 0.65,
+   "steps_mean": 66.7,
+   "seconds_mean": 171.4
+  },
+  "by_family": {
+   "display": {
+    "found": "18/35",
+    "recall": 0.514,
+    "ci95": [
+     0.356,
+     0.67
+    ]
+   },
+   "interaction": {
+    "found": "7/19",
+    "recall": 0.368,
+    "ci95": [
+     0.191,
+     0.59
+    ]
+   },
+   "state": {
+    "found": "17/37",
+    "recall": 0.459,
+    "ci95": [
+     0.31,
+     0.616
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "3/11",
+    "recall": 0.273,
+    "ci95": [
+     0.097,
+     0.566
+    ]
+   },
+   "ankidroid": {
+    "found": "8/15",
+    "recall": 0.533,
+    "ci95": [
+     0.301,
+     0.752
+    ]
+   },
+   "featherline": {
+    "found": "4/9",
+    "recall": 0.444,
+    "ci95": [
+     0.189,
+     0.733
+    ]
+   },
+   "idlefantasy": {
+    "found": "3/12",
+    "recall": 0.25,
+    "ci95": [
+     0.089,
+     0.532
+    ]
+   },
+   "iris": {
+    "found": "0/3",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.562
+    ]
+   },
+   "markor": {
+    "found": "8/13",
+    "recall": 0.615,
+    "ci95": [
+     0.355,
+     0.823
+    ]
+   },
+   "minus": {
+    "found": "3/8",
+    "recall": 0.375,
+    "ci95": [
+     0.137,
+     0.694
+    ]
+   },
+   "nerdcalci": {
+    "found": "7/8",
+    "recall": 0.875,
+    "ci95": [
+     0.529,
+     0.978
+    ]
+   },
+   "tasks": {
+    "found": "6/12",
+    "recall": 0.5,
+    "ci95": [
+     0.254,
+     0.746
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "17/33",
+    "recall": 0.515,
+    "ci95": [
+     0.352,
+     0.675
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "25/58",
+    "recall": 0.431,
+    "ci95": [
+     0.312,
+     0.559
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 78,
+    "worked": 44,
+    "caught": 42,
+    "miss_ignored": 6,
+    "miss_shallow": 19,
+    "miss_tested_not_noticed": 25
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 85,
+    "worked": 56
+   }
+  }
+ },
+ {
+  "key": "sol",
+  "label": "GPT-6.1 Sol",
+  "setting": "low",
+  "provider": "OpenAI",
+  "agent": "Codex CLI",
+  "runs": [
+   "results/gpt-6.1-sol-low"
+  ],
+  "aa_index": 35,
+  "outcomes": {
+   "success": 14,
+   "wrong_pass": 29,
+   "timeout": 7,
+   "no_signoff": 1
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 0.843,
+    "correct_signoff": 0.294,
+    "false_signoff": 0.549,
+    "gave_up": 0.02,
+    "cut_off": 0.137,
+    "report_cap": 0.0
+   },
+   "stopping_with_mixed": {
+    "signed_off": 0.843,
+    "correct_signoff": 0.294,
+    "false_signoff": 0.549,
+    "gave_up": 0.02,
+    "cut_off": 0.137,
+    "report_cap": 0.0
+   },
+   "no_signoff_reasons": {
+    "unfinished": 1
+   },
+   "episode_score": 0.289,
+   "episode_score_ci95": [
+    0.219,
+    0.358
+   ],
+   "catch_credit": 0.657,
+   "sign_off_rate": 0.843,
+   "finished_rate": 0.863,
+   "hit_rate": 0.804,
+   "hit_rate_ci95": [
+    0.675,
+    0.89
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 54,
+   "reports_credited": 54,
+   "false_reports": 105,
+   "bug_f1": 0.432,
+   "bug_f1_ci95": [
+    0.365,
+    0.496
+   ],
+   "bug_recall": 0.593,
+   "bug_recall_ci95": [
+    0.5,
+    0.685
+   ],
+   "report_precision": 0.34,
+   "report_precision_ci95": [
+    0.283,
+    0.403
+   ],
+   "solve_rate": 0.294,
+   "solve_rate_ci95": [
+    0.187,
+    0.43
+   ],
+   "pass_at_1": 0.294,
+   "pass_hat_1": 0.294,
+   "false_signoff_rate": 0.651,
+   "no_signoff_runs": 1,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 33.1,
+   "cost_usd_per_episode": 0.649,
+   "cost_episodes_logged": 51,
+   "usd_per_bug_found": 0.61,
+   "steps_mean": 201.5,
+   "seconds_mean": 442.8
+  },
+  "by_family": {
+   "display": {
+    "found": "22/35",
+    "recall": 0.629,
+    "ci95": [
+     0.463,
+     0.768
+    ]
+   },
+   "interaction": {
+    "found": "11/19",
+    "recall": 0.579,
+    "ci95": [
+     0.363,
+     0.769
+    ]
+   },
+   "state": {
+    "found": "21/37",
+    "recall": 0.568,
+    "ci95": [
+     0.409,
+     0.713
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "6/11",
+    "recall": 0.545,
+    "ci95": [
+     0.28,
+     0.787
+    ]
+   },
+   "ankidroid": {
+    "found": "7/15",
+    "recall": 0.467,
+    "ci95": [
+     0.248,
+     0.699
+    ]
+   },
+   "featherline": {
+    "found": "2/9",
+    "recall": 0.222,
+    "ci95": [
+     0.063,
+     0.547
+    ]
+   },
+   "idlefantasy": {
+    "found": "7/12",
+    "recall": 0.583,
+    "ci95": [
+     0.32,
+     0.807
+    ]
+   },
+   "iris": {
+    "found": "2/3",
+    "recall": 0.667,
+    "ci95": [
+     0.208,
+     0.939
+    ]
+   },
+   "markor": {
+    "found": "7/13",
+    "recall": 0.538,
+    "ci95": [
+     0.291,
+     0.768
+    ]
+   },
+   "minus": {
+    "found": "6/8",
+    "recall": 0.75,
+    "ci95": [
+     0.409,
+     0.929
+    ]
+   },
+   "nerdcalci": {
+    "found": "8/8",
+    "recall": 1.0,
+    "ci95": [
+     0.676,
+     1.0
+    ]
+   },
+   "tasks": {
+    "found": "9/12",
+    "recall": 0.75,
+    "ci95": [
+     0.468,
+     0.911
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "19/33",
+    "recall": 0.576,
+    "ci95": [
+     0.408,
+     0.728
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "35/58",
+    "recall": 0.603,
+    "ci95": [
+     0.475,
+     0.719
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 88,
+    "worked": 68,
+    "caught": 54,
+    "miss_ignored": 0,
+    "miss_shallow": 9,
+    "miss_tested_not_noticed": 29
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 92,
+    "worked": 85
+   }
+  }
+ },
+ {
+  "key": "haiku",
+  "label": "Claude Haiku 5.5",
+  "setting": "default",
+  "provider": "Anthropic",
+  "agent": "Claude Code",
+  "runs": [
+   "results/claude-haiku-5.5"
+  ],
+  "aa_index": null,
+  "outcomes": {
+   "no_signoff": 21,
+   "timeout": 11,
+   "wrong_pass": 12,
+   "success": 7
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 0.431,
+    "correct_signoff": 0.176,
+    "false_signoff": 0.255,
+    "gave_up": 0.353,
+    "cut_off": 0.216,
+    "report_cap": 0.0
+   },
+   "stopping_with_mixed": {
+    "signed_off": 0.667,
+    "correct_signoff": 0.235,
+    "false_signoff": 0.431,
+    "gave_up": 0.118,
+    "cut_off": 0.216,
+    "report_cap": 0.0
+   },
+   "no_signoff_reasons": {
+    "unfinished": 6,
+    "mixed": 12,
+    "blocked": 3
+   },
+   "episode_score": 0.237,
+   "episode_score_ci95": [
+    0.16,
+    0.319
+   ],
+   "catch_credit": 0.471,
+   "sign_off_rate": 0.373,
+   "finished_rate": 0.784,
+   "hit_rate": 0.569,
+   "hit_rate_ci95": [
+    0.433,
+    0.695
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 39,
+   "reports_credited": 39,
+   "false_reports": 102,
+   "bug_f1": 0.336,
+   "bug_f1_ci95": [
+    0.244,
+    0.425
+   ],
+   "bug_recall": 0.429,
+   "bug_recall_ci95": [
+    0.311,
+    0.539
+   ],
+   "report_precision": 0.277,
+   "report_precision_ci95": [
+    0.198,
+    0.364
+   ],
+   "solve_rate": 0.137,
+   "solve_rate_ci95": [
+    0.068,
+    0.257
+   ],
+   "pass_at_1": 0.137,
+   "pass_hat_1": 0.137,
+   "false_signoff_rate": 0.632,
+   "no_signoff_runs": 21,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 32.5,
+   "cost_usd_per_episode": 0.6372,
+   "cost_episodes_logged": 51,
+   "usd_per_bug_found": 0.83,
+   "steps_mean": 216.6,
+   "seconds_mean": 330.9
+  },
+  "by_family": {
+   "display": {
+    "found": "17/35",
+    "recall": 0.486,
+    "ci95": [
+     0.33,
+     0.644
+    ]
+   },
+   "interaction": {
+    "found": "8/19",
+    "recall": 0.421,
+    "ci95": [
+     0.231,
+     0.637
+    ]
+   },
+   "state": {
+    "found": "14/37",
+    "recall": 0.378,
+    "ci95": [
+     0.241,
+     0.539
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "3/11",
+    "recall": 0.273,
+    "ci95": [
+     0.097,
+     0.566
+    ]
+   },
+   "ankidroid": {
+    "found": "6/15",
+    "recall": 0.4,
+    "ci95": [
+     0.198,
+     0.643
+    ]
+   },
+   "featherline": {
+    "found": "1/9",
+    "recall": 0.111,
+    "ci95": [
+     0.02,
+     0.435
+    ]
+   },
+   "idlefantasy": {
+    "found": "3/12",
+    "recall": 0.25,
+    "ci95": [
+     0.089,
+     0.532
+    ]
+   },
+   "iris": {
+    "found": "2/3",
+    "recall": 0.667,
+    "ci95": [
+     0.208,
+     0.939
+    ]
+   },
+   "markor": {
+    "found": "7/13",
+    "recall": 0.538,
+    "ci95": [
+     0.291,
+     0.768
+    ]
+   },
+   "minus": {
+    "found": "4/8",
+    "recall": 0.5,
+    "ci95": [
+     0.215,
+     0.785
+    ]
+   },
+   "nerdcalci": {
+    "found": "8/8",
+    "recall": 1.0,
+    "ci95": [
+     0.676,
+     1.0
+    ]
+   },
+   "tasks": {
+    "found": "5/12",
+    "recall": 0.417,
+    "ci95": [
+     0.193,
+     0.68
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "14/33",
+    "recall": 0.424,
+    "ci95": [
+     0.272,
+     0.592
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "25/58",
+    "recall": 0.431,
+    "ci95": [
+     0.312,
+     0.559
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 83,
+    "worked": 72,
+    "caught": 39,
+    "miss_ignored": 4,
+    "miss_shallow": 6,
+    "miss_tested_not_noticed": 43
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 87,
+    "worked": 81
+   }
+  }
+ },
+ {
+  "key": "luna-max",
+  "label": "GPT-6 Luna",
+  "setting": "max",
+  "provider": "OpenAI",
+  "agent": "Codex CLI",
+  "runs": [
+   "results/gpt-6-luna-max"
+  ],
+  "aa_index": 28,
+  "outcomes": {
+   "success": 6,
+   "wrong_pass": 43,
+   "timeout": 2
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 0.961,
+    "correct_signoff": 0.118,
+    "false_signoff": 0.843,
+    "gave_up": 0.0,
+    "cut_off": 0.02,
+    "report_cap": 0.02
+   },
+   "stopping_with_mixed": {
+    "signed_off": 0.961,
+    "correct_signoff": 0.118,
+    "false_signoff": 0.843,
+    "gave_up": 0.0,
+    "cut_off": 0.02,
+    "report_cap": 0.02
+   },
+   "no_signoff_reasons": {},
+   "episode_score": 0.209,
+   "episode_score_ci95": [
+    0.134,
+    0.291
+   ],
+   "catch_credit": 0.35,
+   "sign_off_rate": 0.961,
+   "finished_rate": 0.961,
+   "hit_rate": 0.471,
+   "hit_rate_ci95": [
+    0.341,
+    0.605
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 31,
+   "reports_credited": 31,
+   "false_reports": 96,
+   "bug_f1": 0.284,
+   "bug_f1_ci95": [
+    0.195,
+    0.376
+   ],
+   "bug_recall": 0.341,
+   "bug_recall_ci95": [
+    0.239,
+    0.44
+   ],
+   "report_precision": 0.244,
+   "report_precision_ci95": [
+    0.162,
+    0.333
+   ],
+   "solve_rate": 0.118,
+   "solve_rate_ci95": [
+    0.055,
+    0.234
+   ],
+   "pass_at_1": 0.118,
+   "pass_hat_1": 0.118,
+   "false_signoff_rate": 0.878,
+   "no_signoff_runs": 0,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 7.81,
+   "cost_usd_per_episode": 0.1562,
+   "cost_episodes_logged": 50,
+   "usd_per_bug_found": null,
+   "steps_mean": 165.9,
+   "seconds_mean": 961.0
+  },
+  "by_family": {
+   "display": {
+    "found": "12/35",
+    "recall": 0.343,
+    "ci95": [
+     0.208,
+     0.508
+    ]
+   },
+   "interaction": {
+    "found": "6/19",
+    "recall": 0.316,
+    "ci95": [
+     0.154,
+     0.54
+    ]
+   },
+   "state": {
+    "found": "13/37",
+    "recall": 0.351,
+    "ci95": [
+     0.218,
+     0.512
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "5/11",
+    "recall": 0.455,
+    "ci95": [
+     0.213,
+     0.72
+    ]
+   },
+   "ankidroid": {
+    "found": "6/15",
+    "recall": 0.4,
+    "ci95": [
+     0.198,
+     0.643
+    ]
+   },
+   "featherline": {
+    "found": "0/9",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.299
+    ]
+   },
+   "idlefantasy": {
+    "found": "3/12",
+    "recall": 0.25,
+    "ci95": [
+     0.089,
+     0.532
+    ]
+   },
+   "iris": {
+    "found": "0/3",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.562
+    ]
+   },
+   "markor": {
+    "found": "6/13",
+    "recall": 0.462,
+    "ci95": [
+     0.232,
+     0.709
+    ]
+   },
+   "minus": {
+    "found": "1/8",
+    "recall": 0.125,
+    "ci95": [
+     0.022,
+     0.471
+    ]
+   },
+   "nerdcalci": {
+    "found": "6/8",
+    "recall": 0.75,
+    "ci95": [
+     0.409,
+     0.929
+    ]
+   },
+   "tasks": {
+    "found": "4/12",
+    "recall": 0.333,
+    "ci95": [
+     0.138,
+     0.609
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "14/33",
+    "recall": 0.424,
+    "ci95": [
+     0.272,
+     0.592
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "17/58",
+    "recall": 0.293,
+    "ci95": [
+     0.192,
+     0.42
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 82,
+    "worked": 66,
+    "caught": 31,
+    "miss_ignored": 5,
+    "miss_shallow": 10,
+    "miss_tested_not_noticed": 46
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 89,
+    "worked": 77
+   }
+  }
+ },
+ {
+  "key": "deepseek",
+  "label": "DeepSeek V4.1 Flash",
+  "setting": "high",
+  "provider": "DeepSeek",
+  "agent": "DeepSeek Harness",
+  "runs": [
+   "results/deepseek-v4.1-flash-high"
+  ],
+  "aa_index": null,
+  "outcomes": {
+   "timeout": 42,
+   "wrong_pass": 3,
+   "success": 6
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 0.176,
+    "correct_signoff": 0.118,
+    "false_signoff": 0.059,
+    "gave_up": 0.0,
+    "cut_off": 0.784,
+    "report_cap": 0.039
+   },
+   "stopping_with_mixed": {
+    "signed_off": 0.176,
+    "correct_signoff": 0.118,
+    "false_signoff": 0.059,
+    "gave_up": 0.0,
+    "cut_off": 0.784,
+    "report_cap": 0.039
+   },
+   "no_signoff_reasons": {},
+   "episode_score": 0.183,
+   "episode_score_ci95": [
+    0.121,
+    0.251
+   ],
+   "catch_credit": 0.541,
+   "sign_off_rate": 0.176,
+   "finished_rate": 0.176,
+   "hit_rate": 0.686,
+   "hit_rate_ci95": [
+    0.55,
+    0.797
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 46,
+   "reports_credited": 46,
+   "false_reports": 89,
+   "bug_f1": 0.407,
+   "bug_f1_ci95": [
+    0.329,
+    0.481
+   ],
+   "bug_recall": 0.505,
+   "bug_recall_ci95": [
+    0.4,
+    0.604
+   ],
+   "report_precision": 0.341,
+   "report_precision_ci95": [
+    0.271,
+    0.415
+   ],
+   "solve_rate": 0.118,
+   "solve_rate_ci95": [
+    0.055,
+    0.234
+   ],
+   "pass_at_1": 0.118,
+   "pass_hat_1": 0.118,
+   "false_signoff_rate": 0.333,
+   "no_signoff_runs": 0,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 3.13,
+   "cost_usd_per_episode": 0.0614,
+   "cost_episodes_logged": 51,
+   "usd_per_bug_found": 0.07,
+   "steps_mean": 293.8,
+   "seconds_mean": 1244.2
+  },
+  "by_family": {
+   "display": {
+    "found": "19/35",
+    "recall": 0.543,
+    "ci95": [
+     0.382,
+     0.695
+    ]
+   },
+   "interaction": {
+    "found": "8/19",
+    "recall": 0.421,
+    "ci95": [
+     0.231,
+     0.637
+    ]
+   },
+   "state": {
+    "found": "19/37",
+    "recall": 0.514,
+    "ci95": [
+     0.359,
+     0.666
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "7/11",
+    "recall": 0.636,
+    "ci95": [
+     0.354,
+     0.848
+    ]
+   },
+   "ankidroid": {
+    "found": "6/15",
+    "recall": 0.4,
+    "ci95": [
+     0.198,
+     0.643
+    ]
+   },
+   "featherline": {
+    "found": "3/9",
+    "recall": 0.333,
+    "ci95": [
+     0.121,
+     0.646
+    ]
+   },
+   "idlefantasy": {
+    "found": "6/12",
+    "recall": 0.5,
+    "ci95": [
+     0.254,
+     0.746
+    ]
+   },
+   "iris": {
+    "found": "2/3",
+    "recall": 0.667,
+    "ci95": [
+     0.208,
+     0.939
+    ]
+   },
+   "markor": {
+    "found": "9/13",
+    "recall": 0.692,
+    "ci95": [
+     0.424,
+     0.873
+    ]
+   },
+   "minus": {
+    "found": "2/8",
+    "recall": 0.25,
+    "ci95": [
+     0.071,
+     0.591
+    ]
+   },
+   "nerdcalci": {
+    "found": "7/8",
+    "recall": 0.875,
+    "ci95": [
+     0.529,
+     0.978
+    ]
+   },
+   "tasks": {
+    "found": "4/12",
+    "recall": 0.333,
+    "ci95": [
+     0.138,
+     0.609
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "16/33",
+    "recall": 0.485,
+    "ci95": [
+     0.325,
+     0.648
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "30/58",
+    "recall": 0.517,
+    "ci95": [
+     0.392,
+     0.641
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 87,
+    "worked": 79,
+    "caught": 46,
+    "miss_ignored": 0,
+    "miss_shallow": 3,
+    "miss_tested_not_noticed": 43
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 92,
+    "worked": 87
+   }
+  }
+ },
+ {
+  "key": "luna-med",
+  "label": "GPT-6 Luna",
+  "setting": "medium",
+  "provider": "OpenAI",
+  "agent": "Codex CLI",
+  "runs": [
+   "results/gpt-6-luna-medium"
+  ],
+  "aa_index": 18,
+  "outcomes": {
+   "wrong_pass": 46,
+   "no_signoff": 3,
+   "success": 2
+  },
+  "episodes": {
+   "stopping": {
+    "signed_off": 0.941,
+    "correct_signoff": 0.039,
+    "false_signoff": 0.902,
+    "gave_up": 0.059,
+    "cut_off": 0.0,
+    "report_cap": 0.0
+   },
+   "stopping_with_mixed": {
+    "signed_off": 0.941,
+    "correct_signoff": 0.039,
+    "false_signoff": 0.902,
+    "gave_up": 0.059,
+    "cut_off": 0.0,
+    "report_cap": 0.0
+   },
+   "no_signoff_reasons": {
+    "unfinished": 2,
+    "other": 1
+   },
+   "episode_score": 0.144,
+   "episode_score_ci95": [
+    0.072,
+    0.22
+   ],
+   "catch_credit": 0.181,
+   "sign_off_rate": 0.941,
+   "finished_rate": 1.0,
+   "hit_rate": 0.255,
+   "hit_rate_ci95": [
+    0.155,
+    0.389
+   ],
+   "runs": 51,
+   "episodes": 51,
+   "bugs_present": 91,
+   "bugs_found": 14,
+   "reports_credited": 14,
+   "false_reports": 14,
+   "bug_f1": 0.235,
+   "bug_f1_ci95": [
+    0.139,
+    0.331
+   ],
+   "bug_recall": 0.154,
+   "bug_recall_ci95": [
+    0.086,
+    0.232
+   ],
+   "report_precision": 0.5,
+   "report_precision_ci95": [
+    0.345,
+    0.676
+   ],
+   "solve_rate": 0.039,
+   "solve_rate_ci95": [
+    0.011,
+    0.132
+   ],
+   "pass_at_1": 0.039,
+   "pass_hat_1": 0.039,
+   "false_signoff_rate": 0.958,
+   "no_signoff_runs": 3,
+   "doom_loop_runs": 0,
+   "infra_errors": 0,
+   "cost_usd": 0.78,
+   "cost_usd_per_episode": 0.0152,
+   "cost_episodes_logged": 51,
+   "usd_per_bug_found": 0.06,
+   "steps_mean": 39.0,
+   "seconds_mean": 134.7
+  },
+  "by_family": {
+   "display": {
+    "found": "9/35",
+    "recall": 0.257,
+    "ci95": [
+     0.142,
+     0.421
+    ]
+   },
+   "interaction": {
+    "found": "2/19",
+    "recall": 0.105,
+    "ci95": [
+     0.029,
+     0.314
+    ]
+   },
+   "state": {
+    "found": "3/37",
+    "recall": 0.081,
+    "ci95": [
+     0.028,
+     0.213
+    ]
+   }
+  },
+  "by_app": {
+   "amaze": {
+    "found": "0/11",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.259
+    ]
+   },
+   "ankidroid": {
+    "found": "0/15",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.204
+    ]
+   },
+   "featherline": {
+    "found": "0/9",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.299
+    ]
+   },
+   "idlefantasy": {
+    "found": "5/12",
+    "recall": 0.417,
+    "ci95": [
+     0.193,
+     0.68
+    ]
+   },
+   "iris": {
+    "found": "0/3",
+    "recall": 0.0,
+    "ci95": [
+     0.0,
+     0.562
+    ]
+   },
+   "markor": {
+    "found": "2/13",
+    "recall": 0.154,
+    "ci95": [
+     0.043,
+     0.422
+    ]
+   },
+   "minus": {
+    "found": "1/8",
+    "recall": 0.125,
+    "ci95": [
+     0.022,
+     0.471
+    ]
+   },
+   "nerdcalci": {
+    "found": "5/8",
+    "recall": 0.625,
+    "ci95": [
+     0.306,
+     0.863
+    ]
+   },
+   "tasks": {
+    "found": "1/12",
+    "recall": 0.083,
+    "ci95": [
+     0.015,
+     0.354
+    ]
+   }
+  },
+  "by_contamination": {
+   "older (fixed < 2026)": {
+    "found": "3/33",
+    "recall": 0.091,
+    "ci95": [
+     0.031,
+     0.236
+    ]
+   },
+   "recent (fixed >= 2026-01-01)": {
+    "found": "11/58",
+    "recall": 0.19,
+    "ci95": [
+     0.109,
+     0.309
+    ]
+   }
+  },
+  "coverage": {
+   "real": {
+    "lines": 92,
+    "reached": 68,
+    "worked": 27,
+    "caught": 14,
+    "miss_ignored": 20,
+    "miss_shallow": 35,
+    "miss_tested_not_noticed": 23
+   },
+   "decoy": {
+    "lines": 93,
+    "reached": 76,
+    "worked": 30
+   }
+  }
+ }
+]

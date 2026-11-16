@@ -1,0 +1,14 @@
+{
+  "case_id": "ankidroid-0027-clean-unspec",
+  "bug_id": "ankidroid-0027",
+  "_build_id": "ankidroid-0027-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "decks_basic",
+  "agent_input": "agent_input.md"
+}

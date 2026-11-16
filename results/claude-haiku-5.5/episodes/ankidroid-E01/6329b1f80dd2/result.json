@@ -1,0 +1,185 @@
+{
+  "run_id": "6329b1f80dd2",
+  "item_id": "ankidroid-E01",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser \u2013 Tags dialog (Edit tags, 2 rows selected)",
+      "element": "5",
+      "element_ref": 5,
+      "field": "verb tag checkbox",
+      "symptom_type": "wrong_value",
+      "observed_quote": "verb",
+      "expected": "With comer (tagged verb) and mesa (no tags) selected, the 'verb' checkbox should show a partial/indeterminate state, since only some of the selected notes have it. Checking it would then add verb to all selected notes.",
+      "observed": "The 'verb' checkbox shows a full check mark, as if all selected notes had the tag. With mesa alone selected, the same checkbox is correctly unchecked, so the checked state comes from the union of tags across the selection rather than from how many selected notes have the tag.",
+      "steps": [
+        "Open Card browser from the drawer; it opens on deck Spanish.",
+        "Long-press 'comer' (tagged verb) to enter selection mode; tap 'mesa' to select it. Two rows are checked.",
+        "Tap the More options menu, then 'Edit tags'.",
+        "Observe the 'verb' checkbox: it is fully checked.",
+        "Cancel. Deselect 'comer' so only 'mesa' is selected, then open Edit tags: 'verb' is unchecked (correct).",
+        "Cancel. Reselect 'comer', then open Edit tags with comer and mesa selected: 'verb' is fully checked again."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/check_box_view",
+        "class": "android.widget.CheckBox",
+        "bounds": [
+          874,
+          277,
+          989,
+          403
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Card browser \u2013 deck picker 'Filter decks' box",
+      "element": "37",
+      "element_ref": 37,
+      "field": "Filter decks text box",
+      "symptom_type": "wrong_value",
+      "observed_quote": "%%",
+      "expected": "After typing a single '%' into the Filter decks box, the box shows '%' and the list is filtered on '%' (no deck matches, so only the no-match state or no decks are shown).",
+      "observed": "The box shows '%%' after one '%' was typed (reproduced twice, after clearing). Plain letters like 'S', 'Sx' and 'spanish' echo correctly, so the doubling is specific to '%'.",
+      "steps": [
+        "Open Card browser from the drawer and tap the deck name in the toolbar to open the deck picker.",
+        "Tap the 'Filter decks' search box.",
+        "Type '%' (single character).",
+        "Observe the box shows '%%'.",
+        "Tap the clear (X) button, then type '%' again: the box shows '%%' again."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/search_src_text",
+        "text": "%%",
+        "class": "android.widget.AutoCompleteTextView",
+        "bounds": [
+          259,
+          633,
+          736,
+          728
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Card browser (opened via deck context menu 'Browse cards')",
+      "element": "1",
+      "element_ref": 1,
+      "field": "deck dropdown (starting deck)",
+      "symptom_type": "wrong_value",
+      "observed_quote": "Spanish",
+      "expected": "Launching 'Browse cards' from the French deck should open the card browser on French (3 cards: bonjour, chat, pain), since the launching screen explicitly requests French.",
+      "observed": "The browser opened on Spanish with '4 cards shown' (agua, comer, hola, mesa). Its previously saved browser state (Spanish) won over the request from the French deck's 'Browse cards' action. Launching 'Browse cards' from Spanish, when the saved state was French, correctly opened Spanish, so the saved state is taking priority over the request.",
+      "steps": [
+        "From the drawer, open Card browser and select deck Spanish (or leave it on Spanish).",
+        "Go back to the deck list and long-press French. The menu shows 'Browse cards'.",
+        "Tap 'Browse cards'. The browser opens on Spanish with '4 cards shown' and rows agua, comer, hola, mesa.",
+        "Expected: browser opens on French with 3 cards (bonjour, chat, pain)."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish",
+          "4 cards shown"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ],
+      "present": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/ankidroid-E01/6329b1f80dd2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0019": "reported",
+    "ankidroid-0001": "reported"
+  },
+  "elapsed_s": 250.381,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "ankidroid-0019",
+    "ankidroid-0001"
+  ],
+  "found": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "required": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 149,
+  "precision": 0.6666666666666666,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "bug_meta": {
+    "ankidroid-0019": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "ankidroid-0001": {
+      "family": "display",
+      "hard_slice": true
+    }
+  }
+}

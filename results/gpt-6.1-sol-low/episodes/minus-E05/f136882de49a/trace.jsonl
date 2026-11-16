@@ -1,0 +1,173 @@
+{"event": "install", "build": {"n": 1, "build_id": "minus-E05-1", "mask": "1", "unfixed": ["minus-0001"], "present": ["minus-0001"]}}
+{"event": "brief", "item_id": "minus-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 239, "y": 861}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "left", "distance": 0.5}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.6, "x": 540, "y": 600}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 280, "y": 965}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 547}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 553}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 280, "y": 965}}}
+{"event": "agent", "step": 25, "message": {"type": "bug_report", "screen": "Expense history", "element": "Date section heading", "element_ref": 6, "field": "date", "symptom_type": "missing", "expected": "Heading includes weekday, e.g. Friday, 13 November.", "observed": "Heading shows only 13 November, without the weekday. Reopening and collapsing/expanding reproduces.", "observed_quote": "13 November", "steps": ["Open Analytics.", "Scroll to Total Expenses and tap it.", "Inspect date heading for initial expenses.", "Close and reopen history; collapse and expand heading."], "anchor_node": {"class": "android.view.View", "contains": ["Collapse", "13 November"], "bounds": [42, 490, 1038, 605]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0001": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 686}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 1020}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 469, "y": 149}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1517}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 797, "y": 2002}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 972, "y": 149}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 212, "y": 1348}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 469, "y": 149}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8, "x": 540, "y": 850}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 870}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.5}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 870}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 133, "y": 1113}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 997}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1132}}}
+{"event": "agent", "step": 51, "message": {"type": "bug_report", "screen": "Expense history", "element": "Upcoming Rent row", "element_ref": 14, "symptom_type": "no_effect", "expected": "Tapping upcoming recurring Rent opens its details/actions so it can be managed.", "observed": "Upcoming Rent is plain text; tapping title or row does nothing, unlike the paid Rent row. Reproduced after hiding and showing upcoming subscriptions.", "observed_quote": "Rent", "steps": ["On calculator swipe down starting on keypad to open expense history.", "Tap Show subscriptions outside of the period.", "Tap upcoming Rent below Hide subscriptions outside of the period.", "Hide/show subscriptions and tap upcoming Rent again."], "anchor_node": {"text": "Rent", "class": "android.widget.TextView", "bounds": [84, 1083, 182, 1143]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["minus-0001"], "per_bug": {"minus-0001": "ok"}}
+{"event": "hit", "bugs": ["minus-0001"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 52, "message": {"type": "bug_report", "screen": "Expense history", "element": "Upcoming Rent due date", "element_ref": 15, "symptom_type": "missing", "expected": "Upcoming monthly Rent shows its next due date (13 December), distinguishable from the paid November 13 occurrence.", "observed": "Upcoming row shows only Rent, Recurrent expense — 12:00 PM and $20; no due date. Subscriptions screen identifies next due date as Dec 13. Reproduced by hide/show.", "observed_quote": "Recurrent expense — 12:00 PM", "steps": ["Swipe down on calculator keypad to open history.", "Tap Show subscriptions outside of the period.", "Inspect upcoming Rent.", "Hide and show subscriptions again."], "anchor_node": {"text": "Recurrent expense — 12:00 PM", "class": "android.widget.TextView", "bounds": [84, 1143, 542, 1182]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0001": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 53, "message": {"type": "bug_report", "screen": "Expense history", "element": "Date section heading", "element_ref": 9, "symptom_type": "wrong_value", "expected": "Section date retains calendar date and includes weekday (Friday for 13 November 2026).", "observed": "Main history heading is 13 November without weekday, also seen in Analytics Total Expenses sheet.", "observed_quote": "13 November", "steps": ["From calculator swipe down starting in keypad (around x540 y1300).", "Inspect heading above Groceries and paid Rent.", "Collapse and expand date section; heading still lacks weekday."], "anchor_node": {"class": "android.view.View", "contains": ["Collapse", "13 November"], "bounds": [42, 426, 1038, 541]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0001": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 469, "y": 212}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "type", "args": {"text": "90", "clear": true, "submit": false}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 950, "y": 1478}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 544}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "type", "args": {"text": "90", "clear": true, "submit": false}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8, "x": 540, "y": 1600}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 1846}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 583, "y": 347}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 918, "y": 1200}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 903, "y": 1831}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 582, "y": 347}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 792, "y": 1200}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 903, "y": 1831}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 796}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 601, "y": 796}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 787, "y": 1274}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 317, "y": 520}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 291, "y": 1310}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1883}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1343}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1071}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1392}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 790}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 795}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 469, "y": 212}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1289}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9}}}
+{"event": "agent", "step": 147, "message": {"type": "bug_report", "screen": "Analytics", "element": "Savings card recurring expense breakdown", "element_ref": 11, "field": "Recurring expenses", "symptom_type": "wrong_value", "expected": "Paying the $20 recurring Rent retains it in recurring spending: $20 (20%), with one-time Groceries $40 (40%).", "observed": "After Mark as paid on Rent, recurring spending becomes $0 (0%) and one-time becomes $60 (60%), although monthly Rent still exists in upcoming history. Reopening Analytics reproduces.", "observed_quote": "$0 (0%)", "steps": ["Starting with initial Groceries $40 and recurring Rent $20, open history by swiping down on keypad.", "Expand Rent and tap Mark as paid.", "Open Analytics and scroll to Savings recommendation.", "Leave and reopen Analytics; inspect recurring versus one-time breakdown."], "anchor_node": {"text": "$0 (0%)", "class": "android.widget.TextView", "bounds": [843, 1747, 985, 1800]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0001": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 773, "y": 956}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 2126}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 160, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.78, "notes": "Swept history via main calculator gesture and Analytics Total Expenses; recurring subscription details/configuration and Mark as paid; analytics totals, category/trend and time controls, savings split changes, persistence, reversals and rotation. Confirmed/logged upcoming history Rent row has no tap actions. Also filed observed missing weekday/date information and paid recurring classification issues; developer could not reproduce those. Restored Groceries amount/date and Balanced savings split. Mark-as-paid test left Rent paid today; deletion was undone, next monthly Rent remains in upcoming. All observed issues reported."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["minus-0001"], "unfixed": ["minus-0001"], "outcome": "success"}

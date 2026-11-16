@@ -1,0 +1,74 @@
+{"event": "install", "build": {"n": 1, "build_id": "amaze-E04-11", "mask": "11", "unfixed": ["amaze-0013", "amaze-0015"], "present": ["amaze-0013", "amaze-0015"]}}
+{"event": "brief", "item_id": "amaze-E04"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1368}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1730}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 814}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1560}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1730}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1135}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1135}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 94, "y": 1327}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 1715}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 1716}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1494}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1833}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 617}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1006}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1752}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1620}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 399, "y": 788}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 1590}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 2093}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 250, "y": 617}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.2, "x": 540, "y": 250}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3, "x": 540, "y": 800}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1026}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1368}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1730}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1135}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.6, "x": 10, "y": 1000}}}
+{"event": "agent", "step": 71, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.5, "notes": "I found no defects in the three areas, so I filed no reports. Navigation drawer: storage, bookmarks and category views (Images, Quick access, Audio) all worked. A bookmark added for Alpha showed up in the drawer and opened the right folder. The add-folder button hid in category views and came back on return to a folder. Multi-file overflow: the Select All / Deselect All toggle worked for no, partial and full selection, in a normal folder and in the Images view. Properties dialogs: file and folder sizes were correct, e.g. AndroidQA showed 41.05 kB, matching the file sizes. I did not test the Hide action, because it changes data. The debug build raised a LeakCanary notice, \"Found 3 retained objects grouped as 2 distinct leaks (2 new)\", which I did not investigate."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["amaze-0013", "amaze-0015"], "unfixed": ["amaze-0013", "amaze-0015"], "outcome": "wrong_pass"}

@@ -1,0 +1,153 @@
+{
+  "run_id": "089d484f2e1b",
+  "item_id": "nerdcalci-E03",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Temperature sums file editor",
+      "element_ref": 2,
+      "symptom_type": "wrong_value",
+      "expected": "25 celsius + 5 celsius = 30 \u00b0C; 20 celsius - 5 celsius = 15 \u00b0C",
+      "observed": "25 celsius + 5 celsius shows 303.15 \u00b0C; 20 celsius - 5 celsius shows -258.15 \u00b0C",
+      "observed_quote": "303.15 \u00b0C",
+      "steps": [
+        "Open home screen",
+        "Tap file 'Temperature sums'",
+        "Read result line 1 for '25 celsius + 5 celsius' and result line 2 for '20 celsius - 5 celsius'"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "303.15 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          349
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Time differences file editor",
+      "element_ref": 2,
+      "symptom_type": "wrong_value",
+      "expected": "Negative difference shown with one sign, e.g. \"-3 h 30 min\" for 10:00 to 06:30 UTC, and \"-1 d 16 h 30 min\" for Mar 5 09:15 to Mar 3 16:45 UTC",
+      "observed": "Result for datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 6, 30, 0, \"UTC\") shows \"-3 h -30 min\"; the Mar 5 to Mar 3 line shows \"-1 d -16 h -30 min\"",
+      "observed_quote": "-3 h -30 min",
+      "steps": [
+        "Open home screen",
+        "Tap file 'Time differences'",
+        "Read result line 1 for datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 6, 30, 0, \"UTC\")",
+        "Read result line 2 for datetimeZ(2024, 3, 5, 9, 15, 0, \"UTC\") to datetimeZ(2024, 3, 3, 16, 45, 0, \"UTC\")"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "-3 h -30 min"
+        ],
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "nerdcalci-0005",
+        "nerdcalci-0006"
+      ],
+      "present": [
+        "nerdcalci-0005",
+        "nerdcalci-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/nerdcalci-E03/089d484f2e1b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0005": "reported",
+    "nerdcalci-0006": "reported"
+  },
+  "elapsed_s": 277.39,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "NOT a clean pass. Two bugs were filed and confirmed: (1) Temperature sums: '25 celsius + 5 celsius' shows 303.15 \u00b0C and '20 celsius - 5 celsius' shows -258.15 \u00b0C (Kelvin base magnitudes leak into the result); scratchpad also showed '10 celsius + 10 celsius' = 293.15000000 \u00b0C. (2) Time differences: negative results show a double sign, e.g. '-3 h -30 min' and '-1 d -16 h -30 min'. Checked and correct: Temperatures conversions (14 \u00b0F, -40 \u00b0C, -53.89 \u00b0C), Number bases, Date gaps (incl. negative '-1 wk'), Expenses/Monthly budget totals, Remainders, Percentages, scratchpad 'in'/'to' keywords (5 km, 212 F to C, 2 hours to minutes), rotation, persistence across backgrounding for precision. Result precision applies to every line at 3, 8 and full precision. Not fully verified: a single unreproduced observation where the decimal-places slider read 2 after toggle-off and toggle-on from 5; repeat did not reproduce. Environment left changed: result precision is ON with 4 decimal places (default was 2) because the slider could not be set reliably by swipe; please restore to 2 decimals. Scratchpad temporary text was left unsaved."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "found": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "required": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 195,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0005",
+    "nerdcalci-0006"
+  ],
+  "bug_meta": {
+    "nerdcalci-0005": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

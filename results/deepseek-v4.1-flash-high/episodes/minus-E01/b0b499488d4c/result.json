@@ -1,0 +1,171 @@
+{
+  "run_id": "b0b499488d4c",
+  "item_id": "minus-E01",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main screen (Today) \u2014 expense entry keypad / category row",
+      "element": "Category field confirm (check) button in the category row above the number pad",
+      "field": "expense save / category chip",
+      "symptom_type": "duplicated",
+      "expected": "Confirming a custom category in the category field once should apply the category and save the entered expense once (one \u20ac0.10 Test2 entry).",
+      "observed": "One tap on the check button created two identical expenses: two \"Test2\" entries of \u20ac0.1 at 07:05 AM, and Today's Total became \u20ac0.7 (\u20ac0.5 existing + \u20ac0.1 + \u20ac0.1) instead of \u20ac0.6. The same happened earlier with a custom \"Gifts\" category (two \u20ac0.3 entries from one tap).",
+      "steps": [
+        "Enter an amount on the main screen keypad (e.g., tap . then 1 to get \u20ac0.1).",
+        "Tap the Category field in the chip row above the number pad.",
+        "Type a custom category name (e.g., Test2) in the focused field.",
+        "Tap the green check button at the right end of the category field once.",
+        "Drag the bottom sheet down to open Today's expense list and observe."
+      ],
+      "element_ref": 11,
+      "observed_quote": "Test2",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Test2",
+          "07:05 AM",
+          "\u20ac0.1"
+        ],
+        "bounds": [
+          42,
+          709,
+          1038,
+          872
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen (Today) \u2014 amount display + number pad",
+      "element": "Amount field above the number pad",
+      "field": "amount entry / decimal separator state",
+      "symptom_type": "wrong_value",
+      "expected": "After deleting the digits of a decimal amount until the field reads $0, the pending decimal separator should either stay visible (e.g. $0.) or be cleared, so that entering 5 afterwards starts from zero and shows $5.",
+      "observed": "Enter 0.5, tap the X (delete) key once: the field shows \"$0\", but the decimal separator is still active. Tapping 5 then produces \"$0.5\" instead of \"$5\". Further deletions are needed before whole-dollar entry works, and the display never indicates the pending decimal separator.",
+      "steps": [
+        "On the main screen keypad tap . then 5 to enter $0.5.",
+        "Tap the yellow X (delete) key once; the amount field shows $0.",
+        "Tap 5 on the number pad.",
+        "The field becomes $0.5 again (fractional entry still active) instead of $5."
+      ],
+      "element_ref": 3,
+      "observed_quote": "$0",
+      "anchor_node": {
+        "text": "$0.5",
+        "class": "android.widget.EditText",
+        "bounds": [
+          42,
+          455,
+          1038,
+          770
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen (Today) \u2014 amount entry keypad",
+      "element": "Amount display (EditText \"$0\") above the number pad",
+      "field": "amount entry / decimal separator",
+      "symptom_type": "wrong_value",
+      "expected": "When the amount display reads exactly \"$0\" (no decimal separator shown), typing 5 should give $5. If the app instead keeps fractional entry active, the display should show the pending separator, e.g. \"$0.\".",
+      "observed": "Exact sequence on this build: tap 0, tap ., tap 5 \u2192 amount display \"$0.5\". Tap the yellow X once \u2192 amount display changes to \"$0\" (toolbar remaining goes back to \"$1.9\"). Now tap 5 \u2192 the amount display becomes \"$0.5\" again and the toolbar remaining drops to \"$1.4\", i.e. the invisible decimal separator is still active while the field shows plain \"$0\".",
+      "steps": [
+        "With an empty amount, tap 0, then the decimal key '.', then 5. The amount field shows $0.5.",
+        "Tap the yellow X (delete) key exactly once. The amount field now shows $0 and the budget pill shows $1.9.",
+        "Tap 5 on the number pad. The field shows $0.5 (not $5) and the budget pill shows $1.4.",
+        "Repeatable: do the same after typing 0.12 and deleting back to $0; the next digit is still treated as a decimal."
+      ],
+      "element_ref": 3,
+      "observed_quote": "$0",
+      "anchor_node": {
+        "text": "$0.5",
+        "class": "android.widget.EditText",
+        "bounds": [
+          42,
+          455,
+          1038,
+          770
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E01-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0014"
+      ],
+      "present": [
+        "minus-0014"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/minus-E01/b0b499488d4c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0014": "reported"
+  },
+  "elapsed_s": 1602.128,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "minus-0014"
+  ],
+  "found": [
+    "minus-0014"
+  ],
+  "required": [
+    "minus-0014"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "minus-0014"
+  ],
+  "bug_meta": {
+    "minus-0014": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

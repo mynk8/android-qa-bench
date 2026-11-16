@@ -1,0 +1,69 @@
+{
+  "bug_id": "iris-0011",
+  "app_id": "iris",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "not_persisted",
+  "fix_date": "2026-11-01",
+  "seed_id": "album_basic",
+  "params": {
+    "nav": {
+      "filter_btn": [
+        {
+          "desc": "Filter"
+        }
+      ],
+      "opt_media": [
+        {
+          "text": "Media ("
+        }
+      ],
+      "opt_photos": [
+        {
+          "text": "Photos ("
+        }
+      ],
+      "opt_videos": [
+        {
+          "text": "Videos ("
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "iris-0011-buggy",
+    "fixed": "iris-0011-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/iris-0011.patch",
+    "confidence": "high",
+    "lines_changed": 4,
+    "approach": "GalleryScaffold keeps the Media tab filter in a local remember state (starting at All) instead of the stored setting, so a chosen Photos or Videos filter is lost when the app restarts."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

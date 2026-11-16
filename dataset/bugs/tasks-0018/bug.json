@@ -1,0 +1,77 @@
+{
+  "bug_id": "tasks-0018",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2023-05-19",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "sort_icon": [
+        {
+          "desc": "Sort"
+        },
+        {
+          "text": "Sort"
+        }
+      ],
+      "group_row": [
+        {
+          "text": "Grouping"
+        }
+      ],
+      "group_none": [
+        {
+          "text": "None"
+        }
+      ],
+      "sorting_row": [
+        {
+          "text": "Sorting"
+        }
+      ],
+      "sort_title": [
+        {
+          "text": "By title"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0018-buggy",
+    "fixed": "tasks-0018-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0018.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "orderSelectForSortTypeRecursive returns a constant for SORT_ALPHA, so the primary sort key is identical for every task."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

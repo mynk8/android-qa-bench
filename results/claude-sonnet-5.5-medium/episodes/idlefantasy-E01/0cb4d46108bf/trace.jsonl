@@ -1,0 +1,36 @@
+{"event": "install", "build": {"n": 1, "build_id": "idlefantasy-E01-11", "mask": "11", "unfixed": ["idlefantasy-0001", "idlefantasy-0002"], "present": ["idlefantasy-0001", "idlefantasy-0002"]}}
+{"event": "brief", "item_id": "idlefantasy-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 2169}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 294}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 743, "y": 1083}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 197, "y": 789}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 767, "y": 1285}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 516}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1557}}}
+{"event": "agent", "step": 33, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.5, "notes": "Checked the shop Buy and Sell tabs, Keep-one toggle persistence (still on after leaving and reopening the shop), the Sell Junk and Sell Old Gear sheets (payouts matched per-item prices), the header \"2.6M\" coin format, and the Skills and Combat skill tiles. Tile levels agree with the preconditions and the total level of 720. I did not find a separate \"Trade-in\" tab, so the per-item payout cap was only checked through the Sell sheets. I did not test rotation or the Mercantile Trade Routes."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["idlefantasy-0001", "idlefantasy-0002"], "unfixed": ["idlefantasy-0001", "idlefantasy-0002"], "outcome": "wrong_pass"}

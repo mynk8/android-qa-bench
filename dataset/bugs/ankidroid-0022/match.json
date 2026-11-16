@@ -1,0 +1,84 @@
+{
+  "screens": [
+    "note editor",
+    "add note"
+  ],
+  "elements": [
+    "note type spinner"
+  ],
+  "fields": [
+    "note type"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "Add note opens on Basic, because no note was saved with Cloze",
+    "the note type chosen but not saved is not remembered"
+  ],
+  "observed_contains_any": [
+    "Add note opens on Cloze after it was only chosen",
+    "the note type was remembered without saving a note"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "basic",
+      "default",
+      "original",
+      "not remembered",
+      "not saved",
+      "unchanged",
+      "reset*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "cloze",
+      "note type",
+      "type",
+      "abandoned",
+      "abandon*"
+    ],
+    [
+      "remember*",
+      "persist*",
+      "kept",
+      "still",
+      "sticks",
+      "stays",
+      "previous",
+      "chosen",
+      "selected",
+      "without saving",
+      "unsaved",
+      "no note was saved",
+      "no note",
+      "abandon*",
+      "though",
+      "after leaving",
+      "opens on",
+      "around",
+      "sticks around",
+      "sticky",
+      "cloze"
+    ]
+  ],
+  "location_concepts": [
+    "note editor",
+    "add note",
+    "note type",
+    "editor"
+  ],
+  "anchors": {
+    "elements": [
+      "note type",
+      "type:",
+      "spinner"
+    ],
+    "observed": [
+      "cloze"
+    ]
+  }
+}

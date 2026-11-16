@@ -1,0 +1,313 @@
+{"event": "install", "build": {"n": 1, "build_id": "amaze-E06-111", "mask": "111", "unfixed": ["amaze-0017", "amaze-0018", "amaze-0019"], "present": ["amaze-0017", "amaze-0018", "amaze-0019"]}}
+{"event": "brief", "item_id": "amaze-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1681}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "type", "args": {"text": "QA_TestFolder", "clear": true, "submit": false}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "type", "args": {"text": "bad/name", "clear": true, "submit": false}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "type", "args": {"text": "..", "clear": true, "submit": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "type", "args": {"text": "QA_TestFolder", "clear": true, "submit": true}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "type", "args": {"text": "QA_TestFolder", "clear": true, "submit": false}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 897, "y": 1823}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 760}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "type", "args": {"text": "QA_TestFile.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "type", "args": {"text": ".txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "type", "args": {"text": "readme", "clear": true, "submit": false}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 162}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 162}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 99, "y": 162}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1903}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1284}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "type", "args": {"text": "keep.jpg", "clear": true, "submit": false}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "type", "args": {"text": "bad/name", "clear": true, "submit": false}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 767}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "type", "args": {"text": "QA_Renamed.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2095}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2095}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 2095}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 868, "y": 1398}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1198}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1006}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 660, "y": 136}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 2095}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1711}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1218}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 795}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "type", "args": {"text": "abc123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 661}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "type", "args": {"text": "abc", "clear": true, "submit": false}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 661}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "type", "args": {"text": "abc123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 684, "y": 1370}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1711}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1218}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 795}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "type", "args": {"text": "secret", "clear": true, "submit": false}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 661}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "type", "args": {"text": "secret", "clear": true, "submit": false}}}
+{"event": "agent", "step": 104, "message": {"type": "bug_report", "screen": "Encrypt dialog (opened from a file's context menu → Encrypt)", "element": "\"Password doesn't match\" error label under the Password field", "field": "Password / Repeat password comparison", "symptom_type": "wrong_value", "expected": "When the two passphrases are identical, no \"Password doesn't match\" error should be shown under either field (the comparison runs on every keystroke in either input).", "observed": "Both Password and Repeat password fields contain the same value \"secret\" and the OK button is enabled, yet the red \"Password doesn't match\" error is still displayed under the Password field.", "steps": ["In /storage/emulated/0/AndroidQA/Amaze tap the 3-dot menu of notes.txt and choose Encrypt.", "Type a passphrase (e.g. secret) into the Password field; 'Password doesn't match' appears because Repeat password is empty.", "Type the identical passphrase 'secret' into the Repeat password field.", "Observe: OK becomes enabled, but the stale 'Password doesn't match' error remains under the Password field."], "element_ref": 35, "observed_quote": "Password doesn't match", "anchor_node": {"id": "com.amaze.filemanager:id/textinput_error", "text": "Password doesn't match", "class": "android.widget.TextView", "bounds": [147, 557, 933, 600]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0018"], "per_bug": {"amaze-0017": "location", "amaze-0018": "anchored", "amaze-0019": "observed_value"}}
+{"event": "hit", "bugs": ["amaze-0018"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 684, "y": 1370}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1198}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1581}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "type", "args": {"text": "QA.Folder", "clear": true, "submit": false}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "type", "args": {"text": "QA.", "clear": true, "submit": false}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "type", "args": {"text": ".hidden", "clear": true, "submit": false}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 794}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "type", "args": {"text": ".hidden", "clear": true, "submit": false}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 684, "y": 937}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 897, "y": 1823}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "type", "args": {"text": "QA_Renamed.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1383}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 897, "y": 1823}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1123}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "type", "args": {"text": "QA_Renamed.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1383}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1681}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "type", "args": {"text": "QA_TestFolder", "clear": true, "submit": false}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 137, "message": {"type": "bug_report", "screen": "New Folder dialog (FAB → Folder) in /storage/emulated/0/AndroidQA/Amaze", "element": "Name input and CREATE button of the New Folder / New File dialog", "field": "Folder/file name validation (duplicate existing name)", "symptom_type": "no_effect", "expected": "When the entered name already exists in the current folder, pressing CREATE should show an explicit validation error (e.g. \"already exists\") or a conflict dialog, and keep the typed name so the user can correct it.", "observed": "Pressing CREATE with the existing name QA_TestFolder silently does nothing: the dialog resets to a blank \"Enter Name\" field with CREATE disabled and no error message is shown. Same happens for New File with an existing file name (dialog resets to the default \".txt\").", "steps": ["In /storage/emulated/0/AndroidQA/Amaze tap the FAB → Folder.", "Type the name of an existing folder, e.g. QA_TestFolder, and tap CREATE.", "Observe the dialog reopens/resets to an empty 'Enter Name' with no error and no new folder is created (list still shows the same 4 folders).", "Repeat with FAB → File, enter existing QA_Renamed.txt, tap CREATE: dialog resets to '.txt' with no error."], "element_ref": 1, "observed_quote": "Enter Name", "anchor_node": {"id": "com.amaze.filemanager:id/singleedittext_input", "text": "Enter Name", "class": "android.widget.EditText", "bounds": [137, 1123, 943, 1241]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0019"], "per_bug": {"amaze-0017": "location", "amaze-0018": "expected_value", "amaze-0019": "ok"}}
+{"event": "hit", "bugs": ["amaze-0019"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 1325}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "type", "args": {"text": "txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "type", "args": {"text": "t", "clear": true, "submit": false}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "type", "args": {"text": "zzz", "clear": true, "submit": false}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 162}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 99, "y": 162}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2095}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3, "x": 540, "y": 1600}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1795}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1302}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 795}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "type", "args": {"text": "test123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 661}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "type", "args": {"text": "test123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1370}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.25, "x": 540, "y": 1700}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1795}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1302}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "type", "args": {"text": "wrongpass", "clear": true, "submit": false}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 990}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1795}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1302}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "type", "args": {"text": "test123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 990}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1603}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 984}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "type", "args": {"text": "QA_Orig.txt", "clear": true, "submit": false}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1945}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1452}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "type", "args": {"text": "test123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 990}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 856}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 856}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 859}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 192, "message": {"type": "bug_report", "screen": "File list inside /storage/emulated/0/AndroidQA/Amaze/QA_TestFolder (1) after Cut+Paste of the containing folder into itself", "element": "Nested folder row \"QA_TestFolder (1)\" created inside the folder being moved", "field": "Move between folders — destination must not be inside the source folder", "symptom_type": "wrong_value", "expected": "Moving a folder into its own subdirectory should be rejected with an error message (e.g. \"Cannot move a folder into itself\") and the file system should be left unchanged.", "observed": "Cutting QA_TestFolder (1), entering that same folder and pressing PASTE creates an empty nested folder also named \"QA_TestFolder (1)\" inside it instead of refusing the operation. Parent now reports \"1 folders and 1 files\" with the bogus nested folder.", "steps": ["In /storage/emulated/0/AndroidQA/Amaze long-press folder QA_TestFolder (1) and tap Cut.", "Open QA_TestFolder (1) (the move source itself).", "Tap PASTE in the snackbar.", "Observe an empty folder 'QA_TestFolder (1)' is created inside QA_TestFolder (1) instead of the move being rejected."], "element_ref": 8, "observed_quote": "QA_TestFolder (1)", "anchor_node": {"id": "com.amaze.filemanager:id/second", "class": "android.widget.RelativeLayout", "contains": ["QA_TestFolder (1)", "Nov 14 | 8:26 AM"], "bounds": [0, 528, 1080, 717]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["amaze-0017"], "per_bug": {"amaze-0017": "ok", "amaze-0018": "location", "amaze-0019": "observed_value"}}
+{"event": "hit", "bugs": ["amaze-0017"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.2, "x": 540, "y": 1800}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1987}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 912, "y": 136}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.4, "x": 540, "y": 1000}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "tap_xy", "args": {"x": 942, "y": 2146}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 200, "y": 1398}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2095}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 209, "message": {"type": "bug_report", "screen": "File list /storage/emulated/0/AndroidQA/Amaze (portrait)", "element": "Floating action button (pink + button) overlapping the 3-dot Properties button of the QA_Orig.txt row", "field": "Row context menu (Properties) hit target / layout overlap", "symptom_type": "overlap", "expected": "Tapping the 3-dot Properties button of a list row should open that file's context menu (Open with / Cut / Copy / Delete / Rename / Encrypt / Properties / Compress / Share). The FAB should not cover any row's menu button (the list should have enough bottom padding).", "observed": "The floating action button visually covers the 3-dot Properties button of the last visible row (QA_Orig.txt). Tapping that 3-dot opens the FAB's New Folder/File/Cloud Connection menu instead of the file's context menu. The same happens for report+final.txt when it sits at that position.", "steps": ["Open /storage/emulated/0/AndroidQA/Amaze in portrait.", "Scroll so a file row (e.g. QA_Orig.txt) is at the bottom of the list, with the pink FAB overlapping its 3-dot button.", "Tap that row's 3-dot Properties button.", "Observe the FAB's Folder/File/Cloud Connection menu opens instead of the file context menu."], "element_ref": 32, "observed_quote": "QA_Orig.txt", "anchor_node": {"id": "com.amaze.filemanager:id/properties", "desc": "Properties", "class": "android.widget.ImageButton", "bounds": [933, 2043, 1038, 2148]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0017": "location", "amaze-0018": "location", "amaze-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2095}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2060}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2010}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 2254}}}
+{"event": "agent", "step": 217, "message": {"type": "bug_report", "screen": "File list /storage/emulated/0/AndroidQA/Amaze (portrait, toolbars visible)", "element": "Pink FAB (+) overlaps row Properties (3-dot) buttons at the bottom of the list — QA_Orig.txt / QA_Renamed.txt rows", "field": "Layout overlap: FAB hit area vs row Properties button", "symptom_type": "overlap", "expected": "Each row's Properties (3-dot) button must be tappable and open that file's context menu. The FAB must be offset above enough bottom padding so no row's menu button is underneath it.", "observed": "The pink FAB (+) sits directly on top of the Properties (3-dot) buttons of the bottom rows. Tapping the QA_Orig.txt Properties button (accessibility center x=985, y=2095) or the QA_Renamed.txt one (x=985, y=2254) opens the FAB's Folder/File/Cloud Connection menu instead of the file context menu. Only long-press opens file operations, so the 3-dot menu is effectively unreachable for those rows.", "steps": ["Open /storage/emulated/0/AndroidQA/Amaze (portrait) so Alpha..QA_Renamed.txt are visible and the pink + FAB is bottom-right.", "Find the QA_Orig.txt row and its 3-dot Properties button (screen ~x=985,y=2095); the FAB circle overlaps this button.", "Tap exactly on that 3-dot / at (985,2095).", "Observe the FAB expands showing Folder/File/Cloud Connection instead of opening the file's Open with/Cut/Copy/Delete/Rename/Encrypt/Properties list.", "Reproduced identically on the QA_Renamed.txt row's 3-dot at (985,2254)."], "element_ref": 28, "observed_quote": "QA_Orig.txt", "anchor_node": {"id": "com.amaze.filemanager:id/properties", "desc": "Properties", "class": "android.widget.ImageButton", "bounds": [933, 2043, 1038, 2148]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"amaze-0017": "location", "amaze-0018": "location", "amaze-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.2, "x": 540, "y": 1500}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 1738}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1245}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 795}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "type", "args": {"text": "aaa", "clear": true, "submit": false}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 661}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "type", "args": {"text": "aaa", "clear": true, "submit": false}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 487}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "type", "args": {"text": "aaab", "clear": true, "submit": false}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 688}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "type", "args": {"text": "aa", "clear": true, "submit": false}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 684, "y": 1397}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1738}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 680, "y": 1469}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 799}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1545}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1730}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 991}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1485}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 1325}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1681}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "type", "args": {"text": "   ", "clear": true, "submit": false}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "tap_xy", "args": {"x": 207, "y": 964}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 162}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "type", "args": {"text": "Orig", "clear": true, "submit": false}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 162}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 99, "y": 162}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 991}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 853}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1711}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 1711}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 990}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 288, "message": {"type": "action", "name": "tap_xy", "args": {"x": 958, "y": 2152}}}
+{"event": "agent", "step": 289, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1681}}}
+{"event": "agent", "step": 290, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 291, "message": {"type": "action", "name": "type", "args": {"text": "TmpDel", "clear": true, "submit": false}}}
+{"event": "agent", "step": 292, "message": {"type": "action", "name": "tap_xy", "args": {"x": 875, "y": 937}}}
+{"event": "agent", "step": 293, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 814}}}
+{"event": "agent", "step": 294, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 136}}}
+{"event": "agent", "step": 295, "message": {"type": "action", "name": "tap_xy", "args": {"x": 877, "y": 1469}}}
+{"event": "agent", "step": 296, "message": {"type": "action", "name": "tap_xy", "args": {"x": 985, "y": 622}}}
+{"event": "agent", "step": 297, "message": {"type": "action", "name": "tap_xy", "args": {"x": 822, "y": 1116}}}
+{"event": "agent", "step": 298, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 299, "message": {"type": "action", "name": "type", "args": {"text": "BetaQA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 300, "message": {"type": "action", "name": "tap_xy", "args": {"x": 879, "y": 937}}}
+{"event": "limit", "which": "steps"}

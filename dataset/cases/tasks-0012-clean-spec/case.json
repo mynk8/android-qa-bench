@@ -1,0 +1,14 @@
+{
+  "case_id": "tasks-0012-clean-spec",
+  "bug_id": "tasks-0012",
+  "_build_id": "tasks-0012-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "inbox_basic",
+  "agent_input": "agent_input.md"
+}

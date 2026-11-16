@@ -1,0 +1,160 @@
+{
+  "run_id": "38e55458cc7c",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "File list AndroidQA/Amaze",
+      "element": "Folder list after paste with Rename",
+      "symptom_type": "no_effect",
+      "expected": "Renamed copy of folder Alpha (e.g. Alpha (1)) appears in AndroidQA/Amaze with its contents",
+      "observed": "After copying Alpha and pasting in the same folder, choosing RENAME in the conflict dialog creates no new folder. List still shows 2 folders and 4 files, even after leaving and re-entering. Reproduced twice.",
+      "observed_quote": "2 folders and 4 files",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Long-press Alpha, tap Copy",
+        "Tap PASTE",
+        "In the conflict dialog tap RENAME",
+        "Leave and re-enter the folder: no renamed copy exists"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Directory view (Alpha)",
+      "element": "Grid View option / folder layout",
+      "symptom_type": "wrong_value",
+      "expected": "Grid choice applies only to AndroidQA/Amaze; subfolder Alpha (never set) stays in list view",
+      "observed": "After setting Grid View in AndroidQA/Amaze, opening its subfolder Alpha also shows grid. Parent AndroidQA and root remain list, so the setting leaks to child folders.",
+      "observed_quote": "/storage/emulated/0/AndroidQA/Amaze/Alpha",
+      "steps": [
+        "Open AndroidQA/Amaze (list view)",
+        "Menu > Grid View",
+        "Tap folder Alpha",
+        "Alpha shows grid; AndroidQA and root show list"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Directory view (Beta and Alpha)",
+      "element": "Grid View option / folder layout",
+      "symptom_type": "wrong_value",
+      "expected": "Grid applies only to the folder where it was chosen (AndroidQA/Amaze); subfolders Alpha and Beta stay in list view as they were never changed",
+      "observed": "Fresh repro: Amaze set to Grid View. Opening Beta (and earlier Alpha) shows grid tiles without any toggle there. Parent AndroidQA and root show list. Subfolders inherit the parent's grid choice.",
+      "observed_quote": "/storage/emulated/0/AndroidQA/Amaze/Beta",
+      "steps": [
+        "Open AndroidQA/Amaze in list view",
+        "Menu (three dots) > Grid View",
+        "Tap Beta (or Alpha) - shown as grid",
+        "Go Home and open AndroidQA - list view"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer bookmarks",
+      "element": "Bookmark entries order",
+      "symptom_type": "wrong_value",
+      "expected": "Bookmarks ordered by add time: Beta (added first) then Alpha (re-added later)",
+      "observed": "Drawer lists Alpha above Beta even though Alpha was deleted and re-added after Beta (looks alphabetical)",
+      "observed_quote": "Alpha",
+      "steps": [
+        "Add Alpha, then Beta to bookmarks via item menu",
+        "In drawer, tap Alpha bookmark's button > DELETE",
+        "Add Alpha to bookmarks again",
+        "Open drawer: Alpha is listed before Beta"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E01/38e55458cc7c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "reported",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 226.693,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "One bug confirmed and logged: Rename in the paste conflict dialog creates no renamed folder copy. I filed two more that the developer could not reproduce. Per-folder view mode: Alpha and Beta showed grid after only Amaze was switched to grid. Bookmark order: Alpha was re-added after Beta but listed above it. Plain folder copy, file rename, sorting by size ascending and descending, and bookmark add, delete and open all behaved correctly. Not tested: rotation, Name/Date/Type sort, and \"Only this folder\" sort."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [
+    "amaze-0004"
+  ],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 83,
+  "precision": 0.25,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  }
+}

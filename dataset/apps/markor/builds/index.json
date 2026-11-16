@@ -1,0 +1,479 @@
+{
+  "markor-0001-buggy": {
+    "sha256": "e758f8a1980b33a396e9b184cd8e84abc0726e14876927d5ebc881c0464467a2",
+    "bugs_present": [
+      "markor-0001"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0001-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0002-buggy": {
+    "sha256": "16214ff81ebeb4de0cb66ef8dd905ee72740d7cb93d794180b46ba27805d096e",
+    "bugs_present": [
+      "markor-0002"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0002-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0003-buggy": {
+    "sha256": "82830147910238ae232209f5229704e2722766fd90e19f74887b7113c0d49d3f",
+    "bugs_present": [
+      "markor-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0003-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0007-buggy": {
+    "sha256": "046109b93879d3c25737d3f9f251d01423b8db151e8ef836afc2d3c4e5573c4f",
+    "bugs_present": [
+      "markor-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0007-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0009-buggy": {
+    "sha256": "749654b757b275f1fc21f36fb5cd824c809fb68bee53bf387e6db95e39096faf",
+    "bugs_present": [
+      "markor-0009"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0009-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0010-buggy": {
+    "sha256": "0e17da4ce349121ab3694e7a3bcb891a8bb22969c268cc3ad2216ec23835bc16",
+    "bugs_present": [
+      "markor-0010"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0010-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0011-buggy": {
+    "sha256": "7246bbd1bdc8f43b309445d22e924950556b95be7ae3e16acb383e65c7cd7b7f",
+    "bugs_present": [
+      "markor-0011"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0011-fixed": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E01-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E01-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0003"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E01-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E01-11": {
+    "sha256": "c8a78b87a0a5dadb75376b46bb539e4cd689cbf6630790dd9709d03cea378fc9",
+    "bugs_present": [
+      "markor-0001",
+      "markor-0003"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E02-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E02-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E02-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0010"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E02-11": {
+    "sha256": "c4976b96cb85427c005601082cff4ce4f926e1f99e902bb3f3097bad117efd06",
+    "bugs_present": [
+      "markor-0010",
+      "markor-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E03-00": {
+    "sha256": "f888879c9b0f34887a49b49b462cbe2df8eacf624151a3828ee359481b8be2fb",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "markor-0001-fixed",
+    "tier": "full"
+  },
+  "markor-E03-01": {
+    "sha256": "182e23ad6861076578c2a0415e88d0f4c7513b0bbd9ec60d2d2436da9e675fa2",
+    "bugs_present": [
+      "markor-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "markor-0009-buggy",
+    "tier": "full"
+  },
+  "markor-E03-10": {
+    "sha256": "16214ff81ebeb4de0cb66ef8dd905ee72740d7cb93d794180b46ba27805d096e",
+    "bugs_present": [
+      "markor-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "markor-0002-buggy",
+    "tier": "full"
+  },
+  "markor-E03-11": {
+    "sha256": "de7bcae7f6754f0baadf5b04c8c314c5618ff97cfd4c7ffcfa23952238e1cf3d",
+    "bugs_present": [
+      "markor-0002",
+      "markor-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0013-buggy": {
+    "sha256": "803d30e9bccc3e40b6c2403cde249d2fb4fd5b0c78257f9d96958cc71d99cde0",
+    "bugs_present": [
+      "markor-0013"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0013-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0014-buggy": {
+    "sha256": "30338ee67921f9cd383810103b8513f8f6cfd1f0ede787eea4c79b9efdf3e840",
+    "bugs_present": [
+      "markor-0014"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0014-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0015-buggy": {
+    "sha256": "40b2407d0d75c8a2a1abac6a4c3bbaf67b1392acad19ad84dffa4828d33920fd",
+    "bugs_present": [
+      "markor-0015"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0015-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0016-buggy": {
+    "sha256": "af04d7fc0d1925efa6617ea78676d40a3856f9cfe2745979809f54fe60951245",
+    "bugs_present": [
+      "markor-0016"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0016-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0017-buggy": {
+    "sha256": "bcada94bdc50217bf77773f961f4f0b8cf56af795746d8f19c87e8e36b9ca747",
+    "bugs_present": [
+      "markor-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0017-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0018-buggy": {
+    "sha256": "aa5b6bdb180780857cd3bc9780b77dc000c6f117f3560010735562302bd8abaf",
+    "bugs_present": [
+      "markor-0018"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0018-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0019-buggy": {
+    "sha256": "769e24948b2f732f9bbe2246671bfb3fab6e0ead9d184abf99d23d64545e5d18",
+    "bugs_present": [
+      "markor-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-0019-fixed": {
+    "sha256": "c919b7fff1659a342b74f51ad025d06190bbf5b4cefb5b4563cdf9cbbe73486e",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E04-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0014"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0014",
+      "markor-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0013"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0013",
+      "markor-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0013",
+      "markor-0014"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E04-111": {
+    "sha256": "c255c0b8b5205b73006b51ce3d093a1c92e3d8572b337dd43dddb33956ff6dc6",
+    "bugs_present": [
+      "markor-0013",
+      "markor-0014",
+      "markor-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E05-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E05-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E05-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0015"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E05-11": {
+    "sha256": "bfea82b8073a4db2baba430feafe121679e683d26f393abc2c9af8998dee4feb",
+    "bugs_present": [
+      "markor-0015",
+      "markor-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "markor-E06-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E06-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E06-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "markor-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "markor-E06-11": {
+    "sha256": "73f46977b2075ab0f64ac3491ecb99b4e1cf266dc189251ec9f78e351430b875",
+    "bugs_present": [
+      "markor-0017",
+      "markor-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

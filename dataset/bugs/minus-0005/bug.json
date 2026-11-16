@@ -1,0 +1,372 @@
+{
+  "bug_id": "minus-0005",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "no_effect",
+  "fix_date": "2026-07-02",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "key_1": [
+        {
+          "text": "1"
+        }
+      ],
+      "key_2": [
+        {
+          "text": "2"
+        }
+      ],
+      "comment_tag": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": "Category"
+        },
+        {
+          "desc": "Edit category"
+        }
+      ],
+      "comment_field": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "comment_check": [
+        {
+          "desc": "Done"
+        },
+        {
+          "desc": "Apply"
+        },
+        {
+          "desc": "Confirm"
+        }
+      ],
+      "save_expense": [
+        {
+          "desc": "Save"
+        },
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Apply"
+        }
+      ],
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "analytics": [
+        {
+          "desc": "Analytics"
+        },
+        {
+          "text": "Analytics"
+        }
+      ],
+      "income_toggle": [
+        {
+          "desc": "Income"
+        },
+        {
+          "text": "+"
+        }
+      ],
+      "key_3": [
+        {
+          "text": "3"
+        }
+      ],
+      "key_0": [
+        {
+          "text": "0"
+        }
+      ],
+      "history": [
+        {
+          "text": "History"
+        },
+        {
+          "desc": "History"
+        }
+      ],
+      "groceries": [
+        {
+          "text": "Groceries"
+        }
+      ],
+      "rent": [
+        {
+          "text": "Rent"
+        }
+      ],
+      "category_row": [
+        {
+          "text": "Category"
+        },
+        {
+          "text": "Food"
+        }
+      ],
+      "category_transport": [
+        {
+          "text": "Transport"
+        }
+      ],
+      "category_food": [
+        {
+          "text": "Food"
+        }
+      ],
+      "save": [
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Save"
+        },
+        {
+          "text": "Done"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        },
+        {
+          "desc": "Settings"
+        }
+      ],
+      "currency": [
+        {
+          "text": "Currency"
+        },
+        {
+          "text": "USD"
+        }
+      ],
+      "currency_eur": [
+        {
+          "text": "EUR"
+        },
+        {
+          "text": "Euro"
+        }
+      ],
+      "currency_usd": [
+        {
+          "text": "USD"
+        },
+        {
+          "text": "US Dollar"
+        }
+      ],
+      "split": [
+        {
+          "text": "Budget split"
+        },
+        {
+          "text": "Daily amount"
+        },
+        {
+          "text": "Split"
+        },
+        {
+          "text": "Split mode"
+        }
+      ],
+      "split_equal": [
+        {
+          "text": "Split equally"
+        },
+        {
+          "text": "Equal"
+        },
+        {
+          "text": "Even"
+        },
+        {
+          "text": "FIXED"
+        },
+        {
+          "text": "Fixed"
+        }
+      ],
+      "split_dynamic": [
+        {
+          "text": "Rebalanced daily"
+        },
+        {
+          "text": "Dynamic"
+        },
+        {
+          "text": "DYNAMIC"
+        }
+      ],
+      "period": [
+        {
+          "text": "Period"
+        }
+      ],
+      "period_weekly": [
+        {
+          "text": "Weekly"
+        },
+        {
+          "text": "This week"
+        }
+      ],
+      "period_monthly": [
+        {
+          "text": "Monthly"
+        },
+        {
+          "text": "This month"
+        }
+      ],
+      "budget_pill": [
+        {
+          "text": "Today"
+        },
+        {
+          "text": "This week"
+        },
+        {
+          "text": "This biweekly"
+        },
+        {
+          "text": "This month"
+        },
+        {
+          "text": "Budget amount exceeded"
+        },
+        {
+          "text": "Weekly Amount exceeded"
+        },
+        {
+          "text": "Biweekly Amount exceeded"
+        },
+        {
+          "text": "Amount exceeded"
+        }
+      ],
+      "edit_budget": [
+        {
+          "desc": "Edit Budget"
+        },
+        {
+          "text": "Edit Budget"
+        }
+      ],
+      "next": [
+        {
+          "text": "Next"
+        },
+        {
+          "desc": "Next"
+        }
+      ],
+      "apply": [
+        {
+          "text": "Apply"
+        },
+        {
+          "desc": "Apply"
+        }
+      ],
+      "split_saved_later": [
+        {
+          "text": "Saved for later"
+        }
+      ],
+      "split_same": [
+        {
+          "text": "Same every day"
+        }
+      ],
+      "chip_weekly": [
+        {
+          "text": "Weekly"
+        }
+      ],
+      "chip_biweekly": [
+        {
+          "text": "Biweekly"
+        }
+      ],
+      "show_out_of_period": [
+        {
+          "text": "Show subscriptions outside of the period"
+        }
+      ],
+      "numpad_apply": [
+        {
+          "desc": "Editor action"
+        }
+      ],
+      "dialog_exit": [
+        {
+          "text": "Tap to exit"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0005-buggy",
+    "fixed": "minus-0005-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/minus-0005.patch",
+    "confidence": "high",
+    "lines_changed": 5,
+    "approach": "Stop passing onPeriodSelected into MainScreenActions in MainScreen so it falls back to the default no-op; choosing Weekly/Monthly no longer updates selected view period."
+  }
+}

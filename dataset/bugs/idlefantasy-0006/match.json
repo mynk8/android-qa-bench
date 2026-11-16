@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "combat gear",
+    "gear tab",
+    "equip picker",
+    "picker",
+    "combat"
+  ],
+  "elements": [
+    "body",
+    "body slot",
+    "picker",
+    "equipment picker",
+    "armour list",
+    "armor list",
+    "list order"
+  ],
+  "fields": [
+    "order",
+    "sort*",
+    "sorting",
+    "body armour",
+    "body armor",
+    "platebody",
+    "chainbody"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "runite chainbody is listed before adamantite platebody ordered by stat bonus",
+    "the picker is ordered by combined stat bonus"
+  ],
+  "observed_contains_any": [
+    "runite chainbody is listed after adamantite platebody",
+    "the picker is sorted by level requirement then name"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "chainbody",
+      "runite chainbody",
+      "stat*",
+      "order*",
+      "sort*",
+      "lowest",
+      "weakest",
+      "ascending",
+      "before adamantite"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "after",
+      "below",
+      "later",
+      "wrong order",
+      "out of order",
+      "not sorted",
+      "unsorted",
+      "tier",
+      "requirement*",
+      "name",
+      "alphabet*"
+    ]
+  ],
+  "location_concepts": [
+    "combat",
+    "gear",
+    "picker",
+    "body",
+    "order*",
+    "sort*"
+  ],
+  "anchors": {
+    "elements": [
+      "Choose Body",
+      "Runite Chainbody",
+      "Adamantite Platebody"
+    ],
+    "observed": []
+  }
+}

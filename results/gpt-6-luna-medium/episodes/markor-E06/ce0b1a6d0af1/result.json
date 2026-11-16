@@ -1,0 +1,96 @@
+{
+  "run_id": "ce0b1a6d0af1",
+  "item_id": "markor-E06",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0017",
+        "markor-0018"
+      ],
+      "present": [
+        "markor-0017",
+        "markor-0018"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-c/episodes/markor-E06/ce0b1a6d0af1/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0017": "missed_unreached",
+    "markor-0018": "missed_unreached"
+  },
+  "elapsed_s": 118.626,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Tested todo.txt mark done and reversal (prefix x 2026-11-16), editor font preview, file settings, search/replace replacing milk with bread and undoing, and rotation with editor contents intact. No reproducible defects found; changes to Shopping.md were undone."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "found": [],
+  "required": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "missed": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 43,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "bug_meta": {
+    "markor-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0018": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

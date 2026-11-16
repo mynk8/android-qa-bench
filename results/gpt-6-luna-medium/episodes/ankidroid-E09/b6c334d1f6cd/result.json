@@ -1,0 +1,96 @@
+{
+  "run_id": "b6c334d1f6cd",
+  "item_id": "ankidroid-E09",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E09-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ],
+      "present": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/ankidroid-E09/b6c334d1f6cd/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0027": "missed_unreached",
+    "ankidroid-0029": "missed_unreached"
+  },
+  "elapsed_s": 155.225,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.79,
+    "notes": "Swept deck management via deck row actions and verified a duplicate-name rename is blocked with \u201cName already exists\u201d; cancellation preserved names. Browsed and edited the Spanish comer note, verified its verb tag and card ordering, saved without changing content, and rotated the browser with its rows intact. In note type management, verified Basic\u2019s seven-note count, inspected card templates and field actions, reordered Front and Back, left and reopened the field screen to confirm the order persisted, then restored the original order. No reproducible defects found."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "missed": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 47,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "bug_meta": {
+    "ankidroid-0027": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "ankidroid-0029": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

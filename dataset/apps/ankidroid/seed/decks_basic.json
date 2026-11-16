@@ -1,0 +1,15 @@
+{
+  "delete_external": [
+    "AnkiDroid/collection.anki2-wal",
+    "AnkiDroid/collection.anki2-shm"
+  ],
+  "fixtures": [
+    {
+      "path": "AnkiDroid/collection.anki2",
+      "fixture": "fixtures/collection.anki2"
+    }
+  ],
+  "db_name": "collection.anki2",
+  "id": "decks_basic",
+  "preconditions": "Deck Spanish has 4 Basic notes: comer (tagged verb), mesa, hola and agua. Deck French has 3 Basic notes: bonjour, pain and chat. No other tags exist."
+}

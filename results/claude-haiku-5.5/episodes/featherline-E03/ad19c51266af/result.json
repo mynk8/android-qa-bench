@@ -1,0 +1,129 @@
+{
+  "run_id": "ad19c51266af",
+  "item_id": "featherline-E03",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Plan > Medicines > Add medicine (bottom sheet)",
+      "element": "18",
+      "field": "Tablet strength (mg) -> Patch total amount",
+      "symptom_type": "not_persisted",
+      "expected": "Changing preparation form carries every amount field over: the 2 mg typed in Tablet strength should appear in the Patch \"Total amount in patch (mg)\" field (and likewise for Injection vial strength).",
+      "observed": "With Tablet strength \"2\" entered, tapping Patch shows an empty \"Total amount in patch (mg)\" field. Tapping Injection likewise showed an empty \"Vial strength (mg)\" field. Only when switching back to Tablet does the \"2\" reappear, so the value is kept per form, not carried over to the new form.",
+      "observed_quote": "Total amount in patch (mg)",
+      "steps": [
+        "Plan tab > Medicines > Add medicine.",
+        "Category Estradiol, Preparation form Tablet (default). Tap the '2 mg' preset so Tablet strength shows 2 mg.",
+        "Tap Patch in Preparation form.",
+        "Observe: 'Total amount in patch (mg)' is empty; the 2 mg is not carried over.",
+        "Tap Tablet again: strength shows 2 again (per-form memory, not carry-over)."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Plan > Group 1 > Edit group (Times of day section)",
+      "element": "17",
+      "field": "Times of day list ordering after editing a time",
+      "symptom_type": "wrong_value",
+      "expected": "Reminder times in the group editor stay in chronological order as soon as a time is edited: after changing 6:58 AM to 11:58 AM, the list should read 8:00 AM -> 10:00 AM, then 11:58 AM, then 9:58 PM (i.e. 10:00 AM row before the 11:58 AM row).",
+      "observed": "The edited row keeps its original slot. Rows read \"6:58 AM \u2192 11:58 AM\", then \"8:00 AM \u2192 10:00 AM\", then \"9:58 PM\", so 11:58 AM is listed above 10:00 AM. The same happened earlier when 12:00 AM was changed to 8:00 AM and sat above 6:58 AM. The order is only corrected after Save and reopening.",
+      "observed_quote": "6:58 AM \u2192 11:58 AM",
+      "steps": [
+        "Plan tab, tap an existing group (Group 1) with times 6:58 AM, 8:00 AM, 9:58 PM to open Edit group.",
+        "Scroll to TIMES OF DAY. Tap the first time row (6:58 AM).",
+        "In the Select Time dialog, set hour 11 (AM, minutes stay 58) and tap OK.",
+        "Observe the list: first row reads '6:58 AM \u2192 11:58 AM' and is still first, above '8:00 AM \u2192 10:00 AM'.",
+        "Tap Save, reopen the group: the saved list is now chronological (6:58 AM, 8:00 AM / 10:00 AM, 9:58 PM)."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0003",
+        "featherline-0005"
+      ],
+      "present": [
+        "featherline-0003",
+        "featherline-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/featherline-E03/ad19c51266af/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0003": "missed_unreached",
+    "featherline-0005": "missed_unreached"
+  },
+  "elapsed_s": 351.397,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "missed": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 233,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0003",
+    "featherline-0005"
+  ],
+  "bug_meta": {
+    "featherline-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0005": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

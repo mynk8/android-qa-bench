@@ -1,0 +1,148 @@
+{
+  "bug_id": "featherline-0022",
+  "runs": 1,
+  "started": "2026-11-11T10:27:44+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Clear body weight?",
+          "Estimates will stop using your weight.",
+          "Clear",
+          "Cancel",
+          "4:58",
+          "4:58\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 24.2,
+      "screenshot_sha256": "96a9d5773738ce92ff4cc5b30aeb981f88dbb44d1faf73ef180b285fc479ce0a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0022-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Clear body weight?",
+          "Estimates will stop using your weight.",
+          "Clear",
+          "Cancel",
+          "4:58",
+          "4:58\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 26.9,
+      "screenshot_sha256": "d0fbb8c22f3cb8c091bc2567255be390b8102e26eb0aff39a5cfcd8774bedeb7",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0022-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Clear body weight?",
+          "Estimates will stop using your weight.",
+          "Clear",
+          "Cancel",
+          "4:59",
+          "4:59\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 25.9,
+      "screenshot_sha256": "f6cd32402f7c202b5bd76b0d6383f81f651d68178cefd0d5a95ccf0d31d99793",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0022-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "4:59",
+          "4:59\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Clear body weight",
+          "Clear your body weight? Estimates will stop using it.",
+          "Clear",
+          "Cancel"
+        ]
+      },
+      "seconds": 25.7,
+      "screenshot_sha256": "c3d81e018a3c1ed93a9d56a88df9cba96db652f594b01417d4d6049d5855bddd",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0022-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Clear body weight",
+          "Clear your body weight? Estimates will stop using it.",
+          "Clear",
+          "Cancel",
+          "5:00",
+          "5:00\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 25.9,
+      "screenshot_sha256": "6d8cb582c0c94abc85a66fe2af5a8491748cb9753c3efca3e68a4fe50d9fa648",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0022-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Clear body weight",
+          "Clear your body weight? Estimates will stop using it.",
+          "Clear",
+          "Cancel",
+          "5:00",
+          "5:00\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 24.8,
+      "screenshot_sha256": "3d1bad4dbeb1f41a5c875fd89b6b585bf89e4c8a2f0c588149051ecac787d859",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0022-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:30:38+0530"
+}

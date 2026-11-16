@@ -1,0 +1,191 @@
+{
+  "run_id": "6e1e9a3283a4",
+  "item_id": "featherline-E05",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Edit group",
+      "element": "TIME row in SCHEDULE section (Weekly mode)",
+      "field": "Weekly dose time",
+      "symptom_type": "wrong_value",
+      "expected": "After picking a new dose time the TIME field should show only the newly picked time (e.g. \"10:00 AM\"), matching the PREVIEW, and the old time should be replaced.",
+      "observed": "The TIME field shows both the old and the new time joined by an arrow: \"8:00 AM \u2192 10:00 AM\", while PREVIEW only schedules the new 10:00 AM dose.",
+      "observed_quote": "8:00 AM \u2192 10:00 AM",
+      "element_ref": 19,
+      "steps": [
+        "Open Plan tab and tap the 'Group 1' card to open Edit group",
+        "Switch SCHEDULE to Weekly",
+        "Tap the TIME row (showed 8:00 AM) to open the time picker",
+        "Pick 10 o'clock AM and press OK",
+        "Observe the TIME row now reads '8:00 AM \u2192 10:00 AM' although PREVIEW lists only 10:00 AM",
+        "Repeat with other values (7:00 AM -> 9:00 AM, 9:00 AM -> 8:00 AM) to confirm the stale value is kept alongside the new one"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "TIME",
+          "8:00 AM",
+          "10:00 AM"
+        ],
+        "bounds": [
+          42,
+          1312,
+          1038,
+          1595
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "TIME row in SCHEDULE (Weekly)",
+      "expected": "After picking a new weekly dose time the TIME field should show only the picked time (e.g. \"11:00 AM\"), replacing the old value, and match PREVIEW.",
+      "observed": "The TIME field keeps the previously saved time and appends the picked one with an arrow: \"8:00 AM \u2192 11:00 AM\". PREVIEW and the saved Plan card only use 11:00 AM, so the first time shown is stale.",
+      "observed_quote": "8:00 AM \u2192 11:00 AM",
+      "element_ref": 24,
+      "screen": "Edit group",
+      "steps": [
+        "Precondition: a group already exists and was saved with a Weekly schedule (Plan card 'Group 1' reads 'Every week \u00b7 Mon \u00b7 8:00 AM').",
+        "On the Plan tab tap the 'Group 1' card to open Edit group (Schedule mode is Weekly).",
+        "Tap the TIME row that shows '8:00 AM'.",
+        "In the Select Time dialog choose 11 o'clock AM and press OK.",
+        "The TIME row now reads '8:00 AM \u2192 11:00 AM' instead of just '11:00 AM'.",
+        "Note: this does NOT happen when creating a brand new group in Weekly mode (the picker replaces the default time there); it reproduces when editing an already saved group."
+      ],
+      "symptom_type": "wrong_value",
+      "field": "Weekly dose time (TIME row)",
+      "anchor_node": {
+        "text": "Plan",
+        "class": "android.widget.TextView",
+        "bounds": [
+          384,
+          2203,
+          451,
+          2245
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "TIME row in SCHEDULE section (Weekly mode)",
+      "element_ref": 20,
+      "expected": "The TIME row should show a single time - the one just picked (10:30 AM) - matching the PREVIEW (\"10:30 AM Today\", \"10:30 AM Nov 21 Sat\"). The previously stored 9:30 AM should be replaced.",
+      "observed": "The TIME row shows the old saved time and the new picked time joined by an arrow: \"9:30 AM \u2192 10:30 AM\". The PREVIEW below shows only 10:30 AM, so 9:30 AM is a stale leftover value in the field.",
+      "observed_quote": "9:30 AM \u2192 10:30 AM",
+      "screen": "Edit group",
+      "steps": [
+        "Precondition: group exists and is SAVED. On Plan, the saved card reads 'Group 2 | Every week \u00b7 Sat \u00b7 9:30 AM'.",
+        "Tap that saved Group 2 card to open 'Edit group' (SCHEDULE = Weekly).",
+        "Tap the TIME row (reads '9:30 AM').",
+        "In the Select Time dialog choose 10 o'clock, leave 30 minutes, tap OK.",
+        "The TIME row now reads '9:30 AM \u2192 10:30 AM' while PREVIEW reads '10:30 AM Today' and '10:30 AM Nov 21 Sat'.",
+        "It reproduces on every edit of a saved group (also seen 8:00 AM -> 11:00 AM). It does NOT show on a brand-new unsaved group, so the group must be saved and reopened first."
+      ],
+      "symptom_type": "wrong_value",
+      "field": "Weekly dose time",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "TIME",
+          "9:30 AM",
+          "10:30 AM"
+        ],
+        "bounds": [
+          42,
+          1441,
+          1038,
+          1724
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0018",
+        "featherline-0019"
+      ],
+      "present": [
+        "featherline-0018",
+        "featherline-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/featherline-E05/6e1e9a3283a4/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0018": "missed_unreached",
+    "featherline-0019": "missed_unreached"
+  },
+  "elapsed_s": 1112.943,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "missed": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "bug_meta": {
+    "featherline-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "run_id": "437d9692511d",
+  "item_id": "ankidroid-E06",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Deck list / Create subdeck dialog",
+      "element": "Subdeck row created under Spanish",
+      "field": "Subdeck name validation",
+      "symptom_type": "wrong_value",
+      "expected": "A whitespace-only name should be treated like an empty name: the Create button should stay disabled and no deck should be created (name should be trimmed before validation).",
+      "observed": "Typing only spaces (\" \") enables the Create button, and pressing it creates a bogus subdeck shown as \"blank\" (\"Spanish::blank\").",
+      "observed_quote": "blank",
+      "element_ref": 12,
+      "steps": [
+        "On the deck list, long-press the deck Spanish",
+        "Tap Create subdeck",
+        "Leave the Name field empty and note Create is disabled",
+        "Type a single space (or several spaces)",
+        "Observe the Create button becomes enabled",
+        "Tap Create and observe a new subdeck row appears under Spanish named \"blank\" (deck title Spanish::blank)"
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/deck_layout",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "blank",
+          "0",
+          "0",
+          "0"
+        ],
+        "bounds": [
+          0,
+          484,
+          1080,
+          610
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Type note-model spinner on Add note screen",
+      "element_ref": 42,
+      "expected": "After switching the note model in the Add note picker, the choice should be stored immediately, so the next time Add note is opened it should still show the newly chosen model (e.g. Cloze).",
+      "observed": "Switching the Type picker to Cloze (or Basic (and reversed card)) and leaving the Add note screen is not persisted: reopening Add note shows \"Basic\" again, so the switch was never stored to the collection.",
+      "observed_quote": "Basic",
+      "screen": "Add note screen (opened from Card browser toolbar Add)",
+      "steps": [
+        "Open the Card browser and tap the Add button in the toolbar",
+        "Tap the Type: spinner and select Cloze (the screen shows Type: Cloze and Cards: Cloze)",
+        "Leave the Add note screen with the back button",
+        "Open Add note again (Card browser toolbar Add)",
+        "Observe the Type spinner is back to Basic instead of the Cloze model just chosen"
+      ],
+      "symptom_type": "not_persisted",
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/note_type_spinner",
+        "class": "android.widget.Spinner",
+        "contains": [
+          "Basic"
+        ],
+        "bounds": [
+          147,
+          244,
+          1067,
+          370
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Statistics deck title vs Today statistics",
+      "element_ref": 10,
+      "expected": "After choosing the deck French in the statistics deck picker and selecting the \"deck\" mode, the screen should show French statistics (French has no reviews today, so Today should say no cards studied, Card Counts total should be 3).",
+      "observed": "The title bar shows \"French\" and the deck mode is selected, but the statistics shown are for the Spanish deck: \"Studied 7 cards in 46.16 seconds today (6.59s/card)\" and Card Counts total 4 (French has 3 cards and none studied today).",
+      "observed_quote": "Studied \u2068\u20687\u2069 cards\u2069 \u2068in \u206846.16\u2069 seconds\u2069 today (\u20686.59\u2069s/card)",
+      "screen": "Statistics screen (deck statistics)",
+      "symptom_type": "wrong_value",
+      "steps": [
+        "Open Card browser for Spanish and open Statistics from the drawer (title Spanish, deck mode, search deck:current)",
+        "Tap the collection radio button (search clears, whole-collection stats shown)",
+        "Tap the deck name in the title bar and choose French from the deck picker",
+        "Observe title becomes French, search becomes deck:\"French\", but the collection radio is still selected",
+        "Tap the deck radio button (search becomes deck:current)",
+        "Observe the page now displays Spanish statistics (Studied 7 cards today, Card Counts total 4) while the title still says French"
+      ],
+      "anchor_node": {
+        "text": "Studied \u2068\u20687\u2069 cards\u2069 \u2068in \u206846.16\u2069 seconds\u2069 today (\u20686.59\u2069s/card)",
+        "class": "android.widget.TextView",
+        "bounds": [
+          68,
+          383,
+          992,
+          433
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ],
+      "present": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/ankidroid-E06/437d9692511d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0021": "reported",
+    "ankidroid-0022": "missed_unreached",
+    "ankidroid-0030": "missed_unreached"
+  },
+  "elapsed_s": 1334.999,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "found": [
+    "ankidroid-0021"
+  ],
+  "required": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "missed": [
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "bug_meta": {
+    "ankidroid-0021": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0022": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0030": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

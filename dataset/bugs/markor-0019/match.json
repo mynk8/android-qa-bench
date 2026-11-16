@@ -1,0 +1,74 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "indent"
+  ],
+  "fields": [
+    "indent size"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "the second indent adds two spaces again, giving four spaces",
+    "the chosen indent size is remembered for the file"
+  ],
+  "observed_contains_any": [
+    "the second indent adds four spaces, giving six",
+    "the indent size went back to the default"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "two",
+      "2",
+      "four",
+      "4",
+      "remember*",
+      "persist*",
+      "kept",
+      "keeps",
+      "same size",
+      "chosen",
+      "selected",
+      "stay*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "six",
+      "6",
+      "default",
+      "reset",
+      "back to",
+      "forgot*",
+      "lost",
+      "not remembered",
+      "not kept",
+      "not saved",
+      "too many",
+      "more spaces",
+      "wider",
+      "larger",
+      "bigger",
+      "reset*",
+      "resets"
+    ]
+  ],
+  "location_concepts": [
+    "indent*",
+    "size",
+    "reopen*"
+  ],
+  "anchors": {
+    "elements": [
+      "gamma",
+      "highlighting_editor",
+      "Indent"
+    ],
+    "observed": []
+  }
+}

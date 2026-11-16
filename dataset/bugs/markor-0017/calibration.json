@@ -1,0 +1,90 @@
+{
+  "bug_id": "markor-0017",
+  "runs": 1,
+  "started": "2026-11-11T10:46:34+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "x 2026-11-11 Pay rent pri:A\n"
+      },
+      "seconds": 70.0,
+      "screenshot_sha256": "cef9fe9969985b918dcc26a1f9ec4eebc7c06c36af91039678fd9b508e7c5b2c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0017-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "first": "x 2026-11-11 Pay rent pri:A\n",
+        "second": "(A) Pay rent\n"
+      },
+      "seconds": 76.7,
+      "screenshot_sha256": "24dd79090f3bd0b68c11f269d5a18979d8cc6621148baa4dc3acfc9bce24a147",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0017-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "x 2026-11-11 Pay rent pri:A\n"
+      },
+      "seconds": 61.4,
+      "screenshot_sha256": "9c9adaa7a8b3bf9d1e1488f138aa97f9fe5ca7cda08e3f61ea3f6b956747941d",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0017-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "x Pay rent pri:A\n"
+      },
+      "seconds": 39.5,
+      "screenshot_sha256": "341b90bd5ab7addfcf6a9dda16edf44f38146d1e193ddd06b907c78cc676dd53",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0017-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "first": "x Pay rent pri:A\n",
+        "second": "(A) Pay rent\n"
+      },
+      "seconds": 64.6,
+      "screenshot_sha256": "d001f64b44ed1d8a5d267d31c77a4269f918b96e1b2808454ceaf891dfc5b749",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0017-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "x 2026-11-11 Pay rent pri:A\n"
+      },
+      "seconds": 25.8,
+      "screenshot_sha256": "6da49461a349d78f808e66ace1679702445042120d75f9e12f65a408d632b341",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0017-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:52:53+0530"
+}

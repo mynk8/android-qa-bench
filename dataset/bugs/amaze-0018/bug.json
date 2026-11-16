@@ -1,0 +1,64 @@
+{
+  "bug_id": "amaze-0018",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "wrong display",
+  "symptom_type": "wrong_value",
+  "fix_date": "2024-12-27",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "encrypt": [
+        {
+          "text": "Encrypt"
+        }
+      ],
+      "pw_field": [
+        {
+          "id": "com.amaze.filemanager:id/edit_text_dialog_encrypt_password"
+        }
+      ],
+      "pw_confirm": [
+        {
+          "id": "com.amaze.filemanager:id/edit_text_dialog_encrypt_password_confirm"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0018-buggy",
+    "fixed": "amaze-0018-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0018.patch",
+    "confidence": "medium",
+    "lines_changed": 20,
+    "approach": "Restored the original password-field validator in EncryptAuthenticateDialog: any value different from the other field (including empty) is a mismatch error."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

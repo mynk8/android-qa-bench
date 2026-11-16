@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "note editor",
+    "element": "cloze cards",
+    "field": "ordinal",
+    "symptom_type": "wrong_value",
+    "expected": "a note with cloze 1 and cloze 3 produces cards with ordinals 0 and 2",
+    "observed": "the cloze ordinal is wrong when a cloze number is missing",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "note editor",
+    "element": "something",
+    "field": "ordinal",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

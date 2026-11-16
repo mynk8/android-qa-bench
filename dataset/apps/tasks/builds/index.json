@@ -1,0 +1,462 @@
+{
+  "tasks-0002-buggy": {
+    "sha256": "03a7483ad382f6668092b2376027124768cb89beb4746762698df5718063a0ca",
+    "bugs_present": [
+      "tasks-0002"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0002-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0003-buggy": {
+    "sha256": "0be2f7b1fd144a046aacd7698689342566b9f4843a7cf171256a64c88724d901",
+    "bugs_present": [
+      "tasks-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0003-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0005-buggy": {
+    "sha256": "28b55cb1a866fbe8a8dc04840bb76bda21b4fbeed06c80d3319e95e2ad30a0c8",
+    "bugs_present": [
+      "tasks-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0005-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0007-buggy": {
+    "sha256": "af94a660e811d6df18beaa45af3cc57135e8d0440568e84aa271a69808da2be2",
+    "bugs_present": [
+      "tasks-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0007-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0008-buggy": {
+    "sha256": "d88b4ba45d232a7f9ce880e8af29f35639d1ea77f2ae713b4a23a11376176cfc",
+    "bugs_present": [
+      "tasks-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0008-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0009-buggy": {
+    "sha256": "3eb634ff8f1f485aab08e7c8aa9cf2b214645e670aec42c3063b0f0aea7f6d31",
+    "bugs_present": [
+      "tasks-0009"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0009-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0012-buggy": {
+    "sha256": "6ef104bb653d906785a1951e1d836c2f244cf2b280d30ffc57c5578c4820a764",
+    "bugs_present": [
+      "tasks-0012"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0012-fixed": {
+    "sha256": "671a85735b234b2d9a1bc273b33c32964f5538dd0bb4a351f15b77c56c0495b4",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E01-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0007",
+      "tasks-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0005",
+      "tasks-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0005",
+      "tasks-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E01-111": {
+    "sha256": "2a0e40a50078e1a51e8fc54a1ea5e3c3bb7c0febd6614fdc3b0c04aae6996488",
+    "bugs_present": [
+      "tasks-0005",
+      "tasks-0007",
+      "tasks-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E03-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E03-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0012"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E03-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E03-11": {
+    "sha256": "bbf47cdea2ab959707986677bb71194d3208d7915f109bea847e9b710e54c2ec",
+    "bugs_present": [
+      "tasks-0008",
+      "tasks-0012"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0016-buggy": {
+    "sha256": "f7514c6d9a99376ac284b24f0073461acce6977423220cc433d11c153364e651",
+    "bugs_present": [
+      "tasks-0016"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0016-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0017-buggy": {
+    "sha256": "1504e48c357faca5374d9fc5ea2307eabba6fba200e8750c15e709d200b77264",
+    "bugs_present": [
+      "tasks-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0017-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0018-buggy": {
+    "sha256": "8b44a3f7b459466cdb9b69d835dd3a6dd442b98130bd01aa969b81d19e4a1713",
+    "bugs_present": [
+      "tasks-0018"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0018-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0019-buggy": {
+    "sha256": "7a9dc4ecf2ab5304ec48e0b1ff69ee2a7f154f78cf03613eed108bf68af0f086",
+    "bugs_present": [
+      "tasks-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0019-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0020-buggy": {
+    "sha256": "944bd8e8d80b3a190706c6f8d44b124e6a2702cdb30d360e86ebada9a618b3ba",
+    "bugs_present": [
+      "tasks-0020"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0020-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0021-buggy": {
+    "sha256": "4c6eb6cb7f371e08c95d38e636d15749692d8563e4c301f11c987ec9560315ca",
+    "bugs_present": [
+      "tasks-0021"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-0021-fixed": {
+    "sha256": "5fa7c7225512c9df53115d0f4a5320f68d9f7621ac7bbd6c5d868fcc699bd387",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E04-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0021"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0017",
+      "tasks-0021"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0016",
+      "tasks-0021"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0016",
+      "tasks-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E04-111": {
+    "sha256": "635857879cff13c024a0e0265eff1eda0d551509c1172ec114eac272ae1fd274",
+    "bugs_present": [
+      "tasks-0016",
+      "tasks-0017",
+      "tasks-0021"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E05-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E05-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E05-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "tasks-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E05-11": {
+    "sha256": "a8f598eab009fc62761944a215af2bb4bcd17c97be0455098440836c5d2e9a85",
+    "bugs_present": [
+      "tasks-0018",
+      "tasks-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E06-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E06-1": {
+    "sha256": "944bd8e8d80b3a190706c6f8d44b124e6a2702cdb30d360e86ebada9a618b3ba",
+    "bugs_present": [
+      "tasks-0020"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "tasks-E02-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "tasks-E02-1": {
+    "sha256": "0b209793a9b222740ebb3f5907acb0043440d51f2f4c2736d5361ba58e7b4b49",
+    "bugs_present": [
+      "tasks-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

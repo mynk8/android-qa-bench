@@ -1,0 +1,157 @@
+{
+  "run_id": "d68bb740794e",
+  "item_id": "markor-E05",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Markdown editor",
+      "element": "Editor text after tapping the Unordered list toolbar action",
+      "element_ref": 8,
+      "field": "Unordered list character",
+      "symptom_type": "wrong_value",
+      "expected": "With Unordered list character set to Asterisk (*), tapping Unordered list on an empty line should insert '* '.",
+      "observed": "It inserts '- ' instead. Reproduced twice after selecting Asterisk in Edit Mode settings and reopening the editor.",
+      "observed_quote": "- item\n  - child\n- ",
+      "steps": [
+        "Open More > Settings > Edit Mode > Unordered list character.",
+        "Select Asterisk (*) and leave Settings.",
+        "Open Indent.md from Files; its contents are '- item' and an indented '- child'.",
+        "Tap the empty line after the list, then tap the Unordered list toolbar button.",
+        "Observe that the new line contains '- ' instead of '* '. Repeat after toggling the first insertion off."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "- item\n  - child\n- ",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Markdown editor",
+      "element": "Editor text after tapping the Unordered list toolbar action on the indented child item",
+      "element_ref": 45,
+      "field": "Existing unordered list marker detection",
+      "symptom_type": "duplicated",
+      "expected": "The action should recognize the existing indented '- ' marker and toggle it off, as it does for the unindented '- item' line.",
+      "observed": "It adds another '- ' marker to the indented child line on each tap, producing '  - - - child' after two taps.",
+      "observed_quote": "- item\n  - - - child\n",
+      "steps": [
+        "Open Indent.md, containing '- item' and an indented '  - child'.",
+        "Place the cursor in 'child'.",
+        "Tap the Unordered list toolbar action twice.",
+        "Observe the existing marker is not detected and repeated markers are added."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "- item\n  - - - child\n",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          189,
+          2274,
+          375
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0015",
+        "markor-0016"
+      ],
+      "present": [
+        "markor-0015",
+        "markor-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/markor-E05/d68bb740794e/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0015": "reported",
+    "markor-0016": "reported"
+  },
+  "elapsed_s": 868.739,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.92,
+    "notes": "Completed the formatting toolbar, editor settings, and file browser sweep. Filed and received confirmation for two editor bugs: unordered list ignores the selected Asterisk glyph on a blank line, and repeated unordered-list taps duplicate markers on indented list items. Reversed temporary editor edits, canceled the new-file dialog, restored the unordered-list preference to Dash and file sorting to Name, and confirmed the original files remain listed."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "found": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "required": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 181,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "bug_meta": {
+    "markor-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0016": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

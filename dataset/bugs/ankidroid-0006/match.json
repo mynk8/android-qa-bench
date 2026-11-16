@@ -1,0 +1,111 @@
+{
+  "screens": [
+    "note editor",
+    "preview",
+    "card preview",
+    "add note"
+  ],
+  "elements": [
+    "cloze cards",
+    "card 3 tab",
+    "card 3",
+    "cloze 3 tab",
+    "tab",
+    "tabs",
+    "preview"
+  ],
+  "fields": [
+    "ordinal",
+    "text",
+    "cloze"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the preview has a tab for cloze 1 and a tab for cloze 3, each showing its own card",
+    "cloze 3 gets its own card when cloze 2 is missing"
+  ],
+  "observed_contains_any": [
+    "the cloze 3 tab shows an error instead of its card",
+    "the card for cloze 3 is not found"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "missing",
+    "no_effect",
+    "wrong_navigation"
+  ],
+  "expected_concepts": [
+    [
+      "cloze 3",
+      "cloze3",
+      "c3",
+      "card 3",
+      "gamma",
+      "skip*",
+      "gap",
+      "missing cloze",
+      "no cloze 2",
+      "without cloze 2",
+      "1 and 3",
+      "two tabs",
+      "two cards",
+      "each tab",
+      "own card",
+      "tab*",
+      "preview",
+      "ordinal*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "error*",
+      "no cloze",
+      "not found",
+      "empty",
+      "blank",
+      "nothing",
+      "missing",
+      "wrong",
+      "incorrect",
+      "instead",
+      "ordinal*",
+      "shift*",
+      "renumber*",
+      "mismatch*",
+      "gap",
+      "only",
+      "second",
+      "number*",
+      "card 2",
+      "2",
+      "not shown",
+      "doesn't show",
+      "does not show",
+      "fails",
+      "failed"
+    ]
+  ],
+  "location_concepts": [
+    "preview*",
+    "tab*",
+    "ordinal*",
+    "note editor",
+    "add note",
+    "cloze 3",
+    "c3",
+    "card 3",
+    "cloze cards"
+  ],
+  "anchors": {
+    "elements": [
+      "card 3",
+      "cloze",
+      "tab",
+      "preview"
+    ],
+    "observed": [
+      "no cloze",
+      "not found"
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "run_id": "61419a6da69b",
+  "item_id": "amaze-E02",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Directory view /AndroidQA/Amaze",
+      "element": "Section headings in file list",
+      "symptom_type": "wrong_value",
+      "expected": "Headings should match the items under them. Folder Alpha should sit under a \"Folders\" heading, or the list should not label it as a file.",
+      "observed": "With Directory Sort Mode \"None On Top\" and Sort By Last Modified descending, the list shows \"Folders\" (Gamma, Beta), then \"Files\" (the files). Folder Alpha is listed last, under the \"Files\" heading with no heading of its own. With Name or Size sort in the same mode, folders stayed grouped on top under \"Folders\".",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "More options > Sort > Directory Sort Mode > None On Top",
+        "More options > Sort > Sort By > Last Modified > DESCENDING",
+        "Look at the headings and where Alpha appears"
+      ],
+      "observed_quote": "Files"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer (landscape, permanent drawer)",
+      "element": "Bookmark entries in drawer",
+      "symptom_type": "missing",
+      "expected": "The drawer lists all bookmarks (Alpha, Beta, DCIM, Download, Movies, Music, Pictures), as the portrait drawer does after rotating back.",
+      "observed": "After rotating to landscape, the drawer shows only DCIM, Download, Movies and Music. The Alpha and Beta bookmarks added earlier are missing, though they show in the portrait drawer.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Add Alpha and Beta to bookmarks via each folder's three-dot menu > Add to Bookmarks",
+        "Open the drawer in portrait and confirm Alpha and Beta are listed",
+        "Rotate the device to landscape",
+        "Look at the bookmark list in the drawer"
+      ],
+      "observed_quote": "DCIM"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer bookmarks",
+      "element": "Bookmark entries in drawer (Alpha, Beta)",
+      "symptom_type": "not_persisted",
+      "expected": "Bookmarks added through \"Add to Bookmarks\" stay in the drawer after rotating and after reopening the drawer.",
+      "observed": "Bookmarks show in the drawer straight after adding them. After rotating the device, they are gone for good. The drawer lists only DCIM, Download, Movies, Music and Pictures, in landscape and again in portrait. I reproduced this twice: first with Alpha and Beta, then after re-adding both.",
+      "steps": [
+        "Open AndroidQA/Amaze in portrait",
+        "Tap the three-dot menu on Alpha > Add to Bookmarks; do the same for Beta",
+        "Swipe the drawer open: Alpha and Beta are listed",
+        "Rotate to landscape (and back to portrait)",
+        "Check the drawer bookmarks: Alpha and Beta are gone"
+      ],
+      "observed_quote": "DCIM"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer bookmarks (after rotation)",
+      "element": "Bookmark entry \"Alpha\" in drawer",
+      "symptom_type": "not_persisted",
+      "expected": "A bookmark added with \"Add to Bookmarks\" stays in the drawer list after the device is rotated.",
+      "observed": "A bookmark I added (Alpha) shows in the drawer. It still shows after closing and reopening the drawer. After rotating to landscape, the drawer lists only DCIM, Download, Movies and Music, and Alpha is gone. It stays gone back in portrait. Reproduced 3 times. In each case the added bookmark was lost, and the built-in ones stayed.",
+      "steps": [
+        "Open AndroidQA/Amaze in portrait with no custom bookmarks",
+        "Alpha three-dot menu > Add to Bookmarks",
+        "Open the drawer: Alpha is listed. Close it, reopen it: Alpha is still listed",
+        "Rotate to landscape",
+        "Look at the drawer: Alpha is missing. Rotate back to portrait and open the drawer: still missing"
+      ],
+      "observed_quote": "DCIM"
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0007",
+        "amaze-0008"
+      ],
+      "present": [
+        "amaze-0007",
+        "amaze-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E02/61419a6da69b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0007": "missed_unreached",
+    "amaze-0008": "missed_unreached"
+  },
+  "elapsed_s": 338.19,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "I tested rename (full name prefilled), copy and paste with Rename for a file, a file with \"+\" in its name, and a folder, and sorting by Name, Size, Type and Last Modified. I also tested the directory sort modes, grid view, rotation, and adding, editing and deleting bookmarks. All three reports got \"could not reproduce\", so none are logged. (1) A bookmark added from the three-dot menu showed in the drawer, but disappeared after rotating the device. I saw this three times. The built-in bookmarks (DCIM, Download and so on) stayed. (2) With \"None On Top\" and Last Modified descending, folder Alpha was listed under the \"Files\" heading. Nothing else I tried looked wrong, but I did not test cut/move paste or the Hidden Files option."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "found": [
+    "amaze-0008"
+  ],
+  "required": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "missed": [
+    "amaze-0007"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 115,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "bug_meta": {
+    "amaze-0007": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "amaze-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "hit",
+      "no_match",
+      "no_match",
+      "no_match"
+    ]
+  }
+}

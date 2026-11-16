@@ -1,0 +1,89 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "Water plants"
+  ],
+  "fields": [
+    "due date"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the next due time moves forward by one hour",
+    "due one hour later"
+  ],
+  "observed_contains_any": [
+    "the due time stays the same",
+    "due time does not advance"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "hour",
+      "later",
+      "advanc*",
+      "next",
+      "forward",
+      "moves"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "stuck",
+      "minute*",
+      "1 minute",
+      "one minute",
+      "only",
+      "instead",
+      "short",
+      "too little",
+      "wrong time",
+      "wrong due",
+      "not an hour",
+      "less"
+    ]
+  ],
+  "location_concepts": [
+    "due*",
+    "repeat*",
+    "recurr*",
+    "water plants"
+  ],
+  "anchors": {
+    "elements": [
+      "Water plants",
+      "Due",
+      "Repeat"
+    ],
+    "observed": []
+  }
+}

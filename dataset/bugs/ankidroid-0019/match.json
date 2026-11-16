@@ -1,0 +1,81 @@
+{
+  "screens": [
+    "card browser"
+  ],
+  "elements": [
+    "deck filter",
+    "deck selection",
+    "deck selector",
+    "browser deck",
+    "deck picker"
+  ],
+  "fields": [
+    "selected deck",
+    "current deck",
+    "chosen deck",
+    "deck filter"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the browser opens on deck Spanish",
+    "Spanish cards are listed"
+  ],
+  "observed_contains_any": [
+    "the browser shows French, the deck browsed before",
+    "wrong deck selected in the browser"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "wrong_navigation"
+  ],
+  "expected_concepts": [
+    [
+      "spanish",
+      "selected deck",
+      "current deck",
+      "chosen deck",
+      "deck"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "deck*",
+      "french",
+      "spanish"
+    ],
+    [
+      "french",
+      "previous",
+      "old",
+      "last",
+      "other",
+      "wrong",
+      "different",
+      "stale",
+      "earlier",
+      "previous*",
+      "before",
+      "visited",
+      "prior",
+      "former"
+    ]
+  ],
+  "location_concepts": [
+    "card browser",
+    "browser",
+    "browse*",
+    "card list"
+  ],
+  "anchors": {
+    "elements": [
+      "french",
+      "spanish",
+      "deck",
+      "cards shown"
+    ],
+    "observed": [
+      "3 cards shown",
+      "french"
+    ]
+  }
+}

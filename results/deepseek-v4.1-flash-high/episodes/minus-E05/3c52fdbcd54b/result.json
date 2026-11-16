@@ -1,0 +1,204 @@
+{
+  "run_id": "3c52fdbcd54b",
+  "item_id": "minus-E05",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expense history (main screen history list)",
+      "element": "Date section header for 13 November expenses",
+      "field": "section heading text",
+      "symptom_type": "missing",
+      "expected": "The date section heading should be formatted with the weekday name, e.g. \"Friday, 13 November\" (today is Saturday 14 November, so 13 November is Friday).",
+      "observed": "The section heading only shows the day and month (\"13 November\") with no weekday name.",
+      "observed_quote": "13 November",
+      "element_ref": 9,
+      "steps": [
+        "From the Today screen, open the expense history list (swipe the bottom sheet into the history position).",
+        "Look at the date section header above the Groceries ($40) and Rent ($20) entries.",
+        "The header reads only \"13 November\" - no weekday name is shown, even though this build was changed to format section headings with the weekday name.",
+        "Collapse and re-expand the section; the heading still reads \"13 November\" with no weekday."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "13 November"
+        ],
+        "bounds": [
+          42,
+          426,
+          1038,
+          541
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Expense history date section headings",
+      "element_ref": 15,
+      "expected": "Section headings should be formatted with the weekday name, e.g. \"Friday, 13 November\" and \"Wednesday, 11 November\".",
+      "observed": "Date section headings show only day + month with no weekday name: \"13 November\" and \"11 November\".",
+      "observed_quote": "11 November",
+      "screen": "Expense history list (bottom sheet on the Today screen)",
+      "steps": [
+        "From the Today (keypad) screen, drag the sheet up then down until the expense history list is shown (list shows total budget card and date sections).",
+        "Look at the date section headers: expenses dated 13 November are under a header that reads exactly \"13 November\" - no weekday name.",
+        "Also select a date inside the date picker: it confirms 13 Nov 2026 is \"Friday, November 13, 2026\", so the header should read \"Friday, 13 November\".",
+        "Move an expense to 11 November (expand Coffee > Edit > Change date > 11 November > save). The history then shows a second header reading exactly \"11 November\" - again without the weekday (11 Nov 2026 is Wednesday per the same date picker).",
+        "Both section headers omit the weekday, so the new weekday-name formatting is not applied anywhere in the history list."
+      ],
+      "symptom_type": "missing",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "11 November"
+        ],
+        "bounds": [
+          42,
+          1224,
+          1038,
+          1339
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Upcoming recurring payment row in the history list's \"subscriptions outside of the period\" section",
+      "element_ref": 18,
+      "expected": "Each upcoming recurring payment entry should show when it is due (its scheduled date, e.g. \"13 Dec\" for Rent and \"14 Dec\" for SkipTest/GymSub), because these entries are outside any date section and therefore the date is not shown anywhere else.",
+      "observed": "The upcoming recurring entries only show a time-of-day (\"Recurrent expense \u2014 12:00 PM\", \"Recurrent expense \u2014 08:14 AM\", \"Recurrent expense \u2014 08:10 AM\") with no due date. The Subscriptions screen shows these three are due on different dates (Rent Dec 13, SkipTest Dec 14, GymSub Dec 14), but the history entries give no date, so they look like they are all due at those times today.",
+      "observed_quote": "Recurrent expense \u2014 12:00 PM",
+      "screen": "Expense history list (Today screen > history sheet, \"Show subscriptions outside of the period\")",
+      "steps": [
+        "Open the expense history list from the Today screen.",
+        "Tap \"Show subscriptions outside of the period\" to reveal the upcoming recurring payments.",
+        "Observe the entries: Rent / \"Recurrent expense \u2014 12:00 PM\" / $20, SkipTest / \"Recurrent expense \u2014 08:14 AM\" / $2, GymSub / \"Recurrent expense \u2014 08:10 AM\" / $3.",
+        "None of the entries shows a due date - only the time. Compare with Analytics > Subscriptions (tap the \"1 Recurrent Expense\" card), which lists Rent as due \"In 4 weeks (Dec 13)\" and SkipTest/GymSub as due \"In 4 weeks (Dec 14)\".",
+        "So in the history's subscriptions section the user cannot tell when each upcoming recurring payment will actually be charged."
+      ],
+      "symptom_type": "missing",
+      "anchor_node": {
+        "text": "Recurrent expense \u2014 12:00 PM",
+        "class": "android.widget.TextView",
+        "bounds": [
+          84,
+          1521,
+          542,
+          1560
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "History date section heading for the 12 November group",
+      "element_ref": 16,
+      "expected": "Per the change in this build, date section headings should be formatted with the weekday name. 12 November 2026 is a Thursday (confirmed by the app's own date picker: \"Thursday, November 12, 2026\"), so the heading should read something like \"Thursday, 12 November\" / \"Thu, 12 Nov\".",
+      "observed": "The section heading shows only \"12 November\" - the weekday name is missing. The same is true for the 13 November section (\"13 November\", which the date picker confirms is Friday, November 13, 2026). No history section heading anywhere on the screen contains a weekday name.",
+      "observed_quote": "12 November",
+      "screen": "Expense history list (Today screen, bottom sheet pulled into the history position)",
+      "steps": [
+        "Open the expense history list: from the Today/keypad screen drag the bottom sheet into the history position (the list starts with the $100 Total budget card, 11 Nov -> 04 Dec).",
+        "The list has date section headings. The first is \"Today\", then \"13 November\" (Groceries $40), then \"12 November\" (Coffee $5).",
+        "Read the 12 November heading: it is exactly \"12 November\" with no weekday name before it.",
+        "Cross-check the weekday with the app's own date picker: expand the Coffee entry, tap Edit, tap \"Change date\" - the picker labels the day as \"Thursday, November 12, 2026\" (and 13 Nov as \"Friday, November 13, 2026\").",
+        "Therefore the new weekday-name formatting is not applied to any history section heading; they show day+month only."
+      ],
+      "symptom_type": "missing",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Expand",
+          "12 November",
+          "$5"
+        ],
+        "bounds": [
+          42,
+          1392,
+          1038,
+          1489
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0001"
+      ],
+      "present": [
+        "minus-0001"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/minus-E05/3c52fdbcd54b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0001": "missed_unreached"
+  },
+  "elapsed_s": 1367.068,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "minus-0001"
+  ],
+  "found": [],
+  "required": [
+    "minus-0001"
+  ],
+  "missed": [
+    "minus-0001"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0001"
+  ],
+  "bug_meta": {
+    "minus-0001": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

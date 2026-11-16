@@ -1,0 +1,68 @@
+{
+  "episode_id": "iris-E03",
+  "start_build": "iris-E03-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "no_videos_message": false,
+        "no_photos_message": true,
+        "texts": [
+          "No photos found",
+          "Videos",
+          "Search",
+          "Filter",
+          "Videos",
+          "Settings",
+          "Videos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:26",
+          "2:26\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "9740471b40a41e1270e3e209fe3b1f0d5c1a1572600dbbc81517005b8804b90d",
+      "bug": "iris-0012",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "listed": true,
+        "grid_has_photos": false,
+        "texts": [
+          "No photos found",
+          "Photos",
+          "Search",
+          "Filter",
+          "Photos",
+          "Settings",
+          "Photos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:26",
+          "2:26\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 21.7,
+      "screenshot_sha256": "5f49ee385d8462af7a4b28e1a00c4b6efd11610cada8bfb7b040426d76c437f7",
+      "bug": "iris-0012",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

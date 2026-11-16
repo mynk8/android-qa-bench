@@ -1,0 +1,75 @@
+{
+  "screens": [
+    "medicine editor"
+  ],
+  "elements": [
+    "dose form"
+  ],
+  "fields": [
+    "preparation"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the gel dose form appears with a default preparation",
+    "gel fields are shown"
+  ],
+  "observed_contains_any": [
+    "the dose form stays empty after choosing Gel",
+    "no gel fields rendered"
+  ],
+  "symptom_types": [
+    "missing",
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "gel",
+      "field*",
+      "form",
+      "shown",
+      "appear*",
+      "default",
+      "preparation"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "empty",
+      "blank",
+      "no field*",
+      "disappear*",
+      "gone"
+    ]
+  ],
+  "location_concepts": [
+    "gel",
+    "dose*",
+    "preparation*",
+    "medicine*",
+    "medication*"
+  ],
+  "anchors": {
+    "elements": [
+      "gel",
+      "dose form",
+      "preparation form"
+    ],
+    "observed": []
+  }
+}

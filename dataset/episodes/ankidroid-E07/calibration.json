@@ -1,0 +1,107 @@
+{
+  "episode_id": "ankidroid-E07",
+  "start_build": "ankidroid-E07-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "20",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing",
+          "7:38",
+          "7:38\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 26.7,
+      "screenshot_sha256": "dfa686e797564a9eae2c50e29485f310afe826e1813ab14d07090d0f3ec57b1f",
+      "bug": "ankidroid-0023",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:38",
+          "7:38\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "21",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 22.1,
+      "screenshot_sha256": "afac09f3058aff7ab289f4df5df692335ea9bee54485b9d98087dab426caa6ab",
+      "bug": "ankidroid-0023",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "before": [
+          "0 cards shown"
+        ],
+        "after": []
+      },
+      "seconds": 21.8,
+      "screenshot_sha256": "90ee866b1b429032e76d9c4607cceff9f67d64bb0ecbc34ca33966f689b39dd6",
+      "bug": "ankidroid-0024",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:39",
+          "7:39\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "Default",
+          "0 cards shown",
+          "Add",
+          "Search",
+          "More options",
+          "Sort Field",
+          "Card Type",
+          "Due",
+          "Deck"
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "905778d50084177226e04e9de0c29ce0c1df020299199fe52baa37d4cb43b9ba",
+      "bug": "ankidroid-0024",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

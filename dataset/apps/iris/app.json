@@ -1,0 +1,12 @@
+{
+  "app_id": "iris",
+  "display_name": "Iris Gallery",
+  "repo": "https://github.com/MohamadOday/iris-gallery",
+  "licence": "Apache-2.0",
+  "package": "com.iris.gallery",
+  "pinned_commit": "72f1b33636378fa13404d18b747fc6f21faf886b",
+  "source_type": "greenfield",
+  "ui": "compose",
+  "local_data": "files",
+  "needs_network_or_login": false
+}

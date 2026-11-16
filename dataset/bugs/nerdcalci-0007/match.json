@@ -1,0 +1,76 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "modulo result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "100 % 13 shows 9",
+    "the % operator gives the remainder"
+  ],
+  "observed_contains_any": [
+    "the modulo lines show Err",
+    "100 % 13 shows Err"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "9",
+      "7",
+      "3.5",
+      "remainder*",
+      "modulo",
+      "mod",
+      "100 % 13",
+      "47 % 20",
+      "19.5 % 4",
+      "a % 14",
+      "hundred divided",
+      "divided",
+      "remainder",
+      "nine"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "err",
+      "error*",
+      "invalid",
+      "fail*",
+      "no result",
+      "wrong",
+      "incorrect",
+      "not calculated",
+      "unexpected",
+      "exception"
+    ]
+  ],
+  "location_concepts": [
+    "remainder*",
+    "modulo",
+    "calculator",
+    "result",
+    "editor",
+    "line",
+    "%"
+  ],
+  "anchors": {
+    "elements": [
+      "100 % 13",
+      "47 % 20",
+      "19.5 % 4",
+      "a % 14",
+      "Error Info"
+    ],
+    "observed": [
+      "err"
+    ]
+  }
+}

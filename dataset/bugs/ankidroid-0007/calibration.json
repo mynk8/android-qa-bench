@@ -1,0 +1,90 @@
+{
+  "bug_id": "ankidroid-0007",
+  "runs": 1,
+  "started": "2026-11-13T19:50:05+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "chosen": "Spanish",
+        "reopened": "Default"
+      },
+      "seconds": 46.7,
+      "screenshot_sha256": "5b68db74288264d01abd3f10d91ada6733654d135edce9071254036e9c2fa3c8",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0007-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "deck": "Default"
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "5b68db74288264d01abd3f10d91ada6733654d135edce9071254036e9c2fa3c8",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0007-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "deck": "Spanish"
+      },
+      "seconds": 32.7,
+      "screenshot_sha256": "9bac5a52fbb75f96dc2b92fa83202d9c8fba83faa36f09699bb10e35365fea5f",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0007-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "chosen": "Spanish",
+        "reopened": "Spanish"
+      },
+      "seconds": 43.6,
+      "screenshot_sha256": "50fb6914c8f3da05a2ffe1c2b07a3e13a453fedf9bec095ae4d7a847efd51c68",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0007-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "deck": "French"
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "f5dd524b051afb58ab44d12a931ff5bd6667514bb2d718937c73109039c80a6e",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0007-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "deck": "Spanish"
+      },
+      "seconds": 32.2,
+      "screenshot_sha256": "2bd478210216328de9d29021f3bf87a4d2151ef99d7b27548a41efd88df3d0ec",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0007-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-13T19:54:38+0530"
+}

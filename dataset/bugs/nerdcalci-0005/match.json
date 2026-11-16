@@ -1,0 +1,88 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "duration result"
+  ],
+  "fields": [
+    "duration"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "a negative duration shows one minus sign, -3 h 30 min",
+    "-1 d 16 h 30 min"
+  ],
+  "observed_contains_any": [
+    "a negative duration shows a minus sign on every part, -3 h -30 min",
+    "the minutes also have a minus sign"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "-3 h 30 min",
+      "-1 d 16 h 30 min",
+      "one minus",
+      "single minus",
+      "single",
+      "leading",
+      "one leading minus",
+      "leading minus",
+      "one sign",
+      "single sign",
+      "one minus sign"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "negative",
+      "minus",
+      "duration*",
+      "interval*",
+      "-3",
+      "-30",
+      "-16",
+      "sign*",
+      "repeated",
+      "in front of"
+    ],
+    [
+      "every",
+      "each",
+      "both",
+      "also",
+      "twice",
+      "repeated",
+      "second",
+      "minutes",
+      "-30",
+      "-16",
+      "-3 h -30",
+      "wrong",
+      "incorrect"
+    ]
+  ],
+  "location_concepts": [
+    "time*",
+    "difference*",
+    "duration*",
+    "calculator",
+    "result",
+    "editor",
+    "line",
+    "interval*"
+  ],
+  "anchors": {
+    "elements": [
+      "datetimez(2024 1 1 10",
+      "datetimez(2024 3 5 9",
+      "to datetimez"
+    ],
+    "observed": [
+      "-3 h -30 min",
+      "-1 d -16 h -30 min"
+    ]
+  }
+}

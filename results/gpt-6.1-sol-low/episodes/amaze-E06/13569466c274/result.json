@@ -1,0 +1,187 @@
+{
+  "run_id": "13569466c274",
+  "item_id": "amaze-E06",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Encrypt dialog",
+      "element": "Password mismatch error",
+      "element_ref": 2,
+      "field": "Password / Repeat password",
+      "symptom_type": "wrong_value",
+      "expected": "Mismatch error clears when both passphrases match.",
+      "observed": "Both fields contain qaPass2 and OK is enabled, but the password field still displays a mismatch error. Reproduced with qaPass1 and qaPass2.",
+      "observed_quote": "Password doesn't match",
+      "steps": [
+        "Open Encrypt for notes+qa.txt.",
+        "Type qaPass1 into Password, then qaPass1 into Repeat password.",
+        "Observe stale mismatch error despite matching values.",
+        "Change Password to qaPass2, then Repeat password to qaPass2.",
+        "Observe same stale error."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/textinput_error",
+        "text": "Password doesn't match",
+        "class": "android.widget.TextView",
+        "bounds": [
+          147,
+          892,
+          933,
+          935
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "New File dialog",
+      "element": "New File dialog and filename input",
+      "symptom_type": "not_persisted",
+      "expected": "Dialog and entered filename survive rotation.",
+      "observed": "Rotating to landscape dismisses New File and loses scratch+1.txt without creation. Reproduced twice.",
+      "steps": [
+        "Open QA Scratch, tap + then File.",
+        "Enter scratch+1.txt and hide keyboard.",
+        "Rotate portrait to landscape.",
+        "Return to portrait and repeat; dialog disappears again."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Folder listing after Copy/Paste",
+      "element": "Unexpected child QA Scratch",
+      "element_ref": 8,
+      "observed_quote": "QA Scratch",
+      "symptom_type": "wrong_value",
+      "expected": "Copying a folder into itself is rejected without creating any destination folder.",
+      "observed": "Pasting QA Scratch into itself creates an empty child QA Scratch instead of leaving the directory unchanged. Deleted the empty child and reproduced.",
+      "steps": [
+        "In AndroidQA/Amaze create QA Scratch and put a test file or folder inside.",
+        "Use QA Scratch row menu > Copy.",
+        "Open QA Scratch and tap PASTE.",
+        "Observe a new QA Scratch child; opening it shows No Files.",
+        "Delete the empty child, return to Amaze, and repeat Copy into itself; empty child reappears."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "QA Scratch",
+          "Nov 14 | 10:04\u202fPM"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ],
+      "present": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/amaze-E06/13569466c274/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0017": "reported",
+    "amaze-0018": "reported",
+    "amaze-0019": "missed_unreached"
+  },
+  "elapsed_s": 422.35,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept file/folder rename, copy, move, deletion and cancellation; creation of files/folders with empty/invalid/unusual names; immediate-folder searches with multiple matches, query replacement, no matches, '+' literal, and subfolder scope. Checked persistence and rotation. Confirmed reports: stale encryption mismatch error after matching passphrases; self-copy creates empty child directory. Also reported New File dialog loss on rotation, reproduced twice on device but developer could not reproduce. Original fixture names/counts/sizes restored; test folder and file removed; Alpha/Beta readmes preserved."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "found": [
+    "amaze-0017",
+    "amaze-0018"
+  ],
+  "required": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "missed": [
+    "amaze-0019"
+  ],
+  "true_positives": 2,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 215,
+  "precision": 0.6666666666666666,
+  "recall": 0.6666666666666666,
+  "unfixed_at_end": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "bug_meta": {
+    "amaze-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

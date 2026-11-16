@@ -1,0 +1,19 @@
+{
+  "app_id": "tasks",
+  "display_name": "Tasks.org",
+  "repo": "https://github.com/tasks/tasks",
+  "licence": "GPL-3.0",
+  "package": "org.tasks",
+  "pinned_commit": "ac8439f5e679e46d2c15c702242fef274a20683f",
+  "source_type": "mature",
+  "ui": "views",
+  "local_data": "sqlite",
+  "needs_network_or_login": false,
+  "first_run": [
+    [
+      {
+        "text": "Continue without sync"
+      }
+    ]
+  ]
+}

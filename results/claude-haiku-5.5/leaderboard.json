@@ -1,0 +1,240 @@
+{
+ "runs": [
+  "results/claude-haiku-5.5"
+ ],
+ "headline_episode_bug_f1": 0.336,
+ "episodes": {
+  "stopping": {
+   "signed_off": 0.431,
+   "correct_signoff": 0.176,
+   "false_signoff": 0.255,
+   "gave_up": 0.353,
+   "cut_off": 0.216,
+   "report_cap": 0.0
+  },
+  "stopping_with_mixed": {
+   "signed_off": 0.667,
+   "correct_signoff": 0.235,
+   "false_signoff": 0.431,
+   "gave_up": 0.118,
+   "cut_off": 0.216,
+   "report_cap": 0.0
+  },
+  "no_signoff_reasons": {
+   "unfinished": 6,
+   "mixed": 12,
+   "blocked": 3
+  },
+  "episode_score": 0.237,
+  "episode_score_ci95": [
+   0.16,
+   0.319
+  ],
+  "catch_credit": 0.471,
+  "sign_off_rate": 0.373,
+  "finished_rate": 0.784,
+  "hit_rate": 0.569,
+  "hit_rate_ci95": [
+   0.433,
+   0.695
+  ],
+  "runs": 51,
+  "episodes": 51,
+  "bugs_present": 91,
+  "bugs_found": 39,
+  "reports_credited": 39,
+  "false_reports": 102,
+  "bug_f1": 0.336,
+  "bug_f1_ci95": [
+   0.244,
+   0.425
+  ],
+  "bug_recall": 0.429,
+  "bug_recall_ci95": [
+   0.311,
+   0.539
+  ],
+  "report_precision": 0.277,
+  "report_precision_ci95": [
+   0.198,
+   0.364
+  ],
+  "solve_rate": 0.137,
+  "solve_rate_ci95": [
+   0.068,
+   0.257
+  ],
+  "pass_at_1": 0.137,
+  "pass_hat_1": 0.137,
+  "false_signoff_rate": 0.632,
+  "no_signoff_runs": 21,
+  "doom_loop_runs": 0,
+  "infra_errors": 0,
+  "cost_usd": 32.5,
+  "cost_usd_per_episode": 0.6372,
+  "cost_episodes_logged": 51,
+  "usd_per_bug_found": 0.83,
+  "steps_mean": 216.6,
+  "seconds_mean": 330.9
+ },
+ "cases": {
+  "unspec": {
+   "runs": 0,
+   "balanced_accuracy": null,
+   "faulty_found": "0/0",
+   "faulty_found_ci95": null,
+   "faulty_fail_but_unlocalized": 0,
+   "clean_passed": "0/0",
+   "clean_passed_ci95": null,
+   "cost_usd": 0
+  },
+  "spec": {
+   "runs": 0,
+   "balanced_accuracy": null,
+   "faulty_found": "0/0",
+   "faulty_found_ci95": null,
+   "faulty_fail_but_unlocalized": 0,
+   "clean_passed": "0/0",
+   "clean_passed_ci95": null,
+   "cost_usd": 0
+  }
+ },
+ "episode_bug_recall_by_contamination": {
+  "older (fixed < 2026)": {
+   "found": "14/33",
+   "recall": 0.424,
+   "ci95": [
+    0.272,
+    0.592
+   ]
+  },
+  "recent (fixed >= 2026-01-01)": {
+   "found": "25/58",
+   "recall": 0.431,
+   "ci95": [
+    0.312,
+    0.559
+   ]
+  }
+ },
+ "episode_bug_recall_by_app": {
+  "amaze": {
+   "found": "3/11",
+   "recall": 0.273,
+   "ci95": [
+    0.097,
+    0.566
+   ]
+  },
+  "ankidroid": {
+   "found": "6/15",
+   "recall": 0.4,
+   "ci95": [
+    0.198,
+    0.643
+   ]
+  },
+  "featherline": {
+   "found": "1/9",
+   "recall": 0.111,
+   "ci95": [
+    0.02,
+    0.435
+   ]
+  },
+  "idlefantasy": {
+   "found": "3/12",
+   "recall": 0.25,
+   "ci95": [
+    0.089,
+    0.532
+   ]
+  },
+  "iris": {
+   "found": "2/3",
+   "recall": 0.667,
+   "ci95": [
+    0.208,
+    0.939
+   ]
+  },
+  "markor": {
+   "found": "7/13",
+   "recall": 0.538,
+   "ci95": [
+    0.291,
+    0.768
+   ]
+  },
+  "minus": {
+   "found": "4/8",
+   "recall": 0.5,
+   "ci95": [
+    0.215,
+    0.785
+   ]
+  },
+  "nerdcalci": {
+   "found": "8/8",
+   "recall": 1.0,
+   "ci95": [
+    0.676,
+    1.0
+   ]
+  },
+  "tasks": {
+   "found": "5/12",
+   "recall": 0.417,
+   "ci95": [
+    0.193,
+    0.68
+   ]
+  }
+ },
+ "episode_bug_recall_by_family": {
+  "display": {
+   "found": "17/35",
+   "recall": 0.486,
+   "ci95": [
+    0.33,
+    0.644
+   ]
+  },
+  "interaction": {
+   "found": "8/19",
+   "recall": 0.421,
+   "ci95": [
+    0.231,
+    0.637
+   ]
+  },
+  "state": {
+   "found": "14/37",
+   "recall": 0.378,
+   "ci95": [
+    0.241,
+    0.539
+   ]
+  }
+ },
+ "case_faulty_found_by_contamination": {
+  "older": "0/0",
+  "recent": "0/0"
+ },
+ "changelog_coverage": {
+  "real": {
+   "lines": 92,
+   "reached": 83,
+   "worked": 72,
+   "caught": 39,
+   "miss_ignored": 4,
+   "miss_shallow": 6,
+   "miss_tested_not_noticed": 43
+  },
+  "decoy": {
+   "lines": 93,
+   "reached": 87,
+   "worked": 81
+  }
+ }
+}

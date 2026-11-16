@@ -1,0 +1,80 @@
+{
+  "bug_id": "idlefantasy-0010",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "UI state lost",
+  "symptom_type": "not_persisted",
+  "fix_date": "2026-08-18",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_home": [
+        {
+          "desc": "Home"
+        },
+        {
+          "text": "Home"
+        }
+      ],
+      "nav_profile": [
+        {
+          "desc": "Profile"
+        },
+        {
+          "text": "Profile"
+        }
+      ],
+      "bonuses_tab": [
+        {
+          "text": "Bonuses"
+        }
+      ],
+      "ach_tab": [
+        {
+          "text": "Achievements"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0010-buggy",
+    "fixed": "idlefantasy-0010-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0010.patch",
+    "confidence": "medium",
+    "lines_changed": 4,
+    "approach": "The Profile tab index is plain remember state again and the Profile bottom-bar item no longer restores its saved state, so leaving and returning resets the tab to the first one."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

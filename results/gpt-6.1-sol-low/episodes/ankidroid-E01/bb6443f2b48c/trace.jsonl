@@ -1,0 +1,144 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E01-11", "mask": "11", "unfixed": ["ankidroid-0001", "ankidroid-0019"], "present": ["ankidroid-0001", "ankidroid-0019"]}}
+{"event": "brief", "item_id": "ankidroid-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1300}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 978, "y": 294}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 146}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 932, "y": 2112}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 804}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1300}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 804}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 804}}}
+{"event": "agent", "step": 25, "message": {"type": "bug_report", "screen": "Card browser", "element": "Deck dropdown", "element_ref": 1, "field": "Starting deck", "symptom_type": "wrong_navigation", "expected": "Browse cards on French opens French and its 3 cards, overriding the previously selected browser deck.", "observed": "Spanish and its 4 cards appear instead; reproduced twice.", "observed_quote": "Spanish", "steps": ["In card browser select Spanish from the deck dropdown.", "Back to deck list; long press French and choose Browse cards.", "Observe Spanish and 4 cards shown.", "Back and repeat French > Browse cards; Spanish still appears."], "anchor_node": {"id": "com.ichi2.anki:id/toolbar_content", "class": "android.widget.LinearLayout", "contains": ["Spanish", "4 cards shown"], "bounds": [147, 90, 721, 204]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0019": "observed_value", "ankidroid-0001": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 556}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 818}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 826, "y": 2132}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 572, "y": 1674}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 720, "y": 1701}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 720, "y": 1866}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 572, "y": 1287}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 616, "y": 2132}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 777}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 818}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 826, "y": 2132}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 61, "message": {"type": "bug_report", "screen": "Card browser tag dialog / Edit note", "element": "mesa tags", "element_ref": 17, "field": "Tags", "symptom_type": "wrong_value", "expected": "Opening bulk Edit tags and confirming without edits preserves comer's verb tag and mesa's empty tags; mixed membership must not be treated as applying to all.", "observed": "verb is shown checked for the mixed selection and Confirm adds verb to previously untagged mesa. Reproduced after undo.", "observed_quote": "Tags: verb", "steps": ["Spanish contains comer tagged verb and untagged mesa.", "Long press comer, then tap mesa to select both.", "More options > Edit tags; verb is visually fully checked.", "Tap Confirm without changing any checkbox.", "Open mesa in editor: Tags: verb.", "Back, More options > Undo Update Note, and repeat: mesa again gains verb."], "anchor_node": {"id": "com.ichi2.anki:id/CardEditorTagButton", "text": "Tags: verb", "class": "android.widget.Button", "bounds": [13, 942, 1067, 1068]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["ankidroid-0001"], "per_bug": {"ankidroid-0019": "expected_value", "ankidroid-0001": "ok"}}
+{"event": "hit", "bugs": ["ankidroid-0001"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 777}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1056}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "type", "args": {"text": "QA child", "clear": true, "submit": false}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 641, "y": 981}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1056}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "type", "args": {"text": "QA child", "clear": true, "submit": false}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 981}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "key", "args": {"key": "HOME"}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 2221, "y": 146}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 901}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 624, "y": 441}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "type", "args": {"text": "toolbar", "clear": true, "submit": false}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1581}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "key", "args": {"key": "SEARCH"}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 282, "y": 118}}}
+{"event": "agent", "step": 109, "message": {"type": "bug_report", "screen": "Deck list", "element": "Toolbar deck search action", "element_ref": 4, "symptom_type": "missing", "expected": "The deck list toolbar exposes deck search so decks can be filtered as each character is typed.", "observed": "Toolbar exposes only Sync and More options; overflow contains check/backup/restore/note types/import/export (and undo when available). No deck search is available in portrait or landscape, including after leaving and returning.", "steps": ["Open deck list containing French and Spanish.", "Inspect toolbar and More options for deck search.", "Rotate landscape and inspect toolbar and overflow again.", "Return portrait, leave to Settings and back: still no deck search action."], "anchor_node": {"desc": "More options", "class": "android.widget.ImageView", "bounds": [975, 83, 1080, 209]}}}
+{"event": "scored", "report_n": 3, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0019": "location", "ankidroid-0001": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 547}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1812}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 804}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 452}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 818}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 931, "y": 340}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1480, "y": 938}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 525}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 931, "y": 340}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 2132}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 147}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 135, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.78, "notes": "Exercised deck expand/collapse, reversal, navigation, background/foreground and rotation using temporary Spanish::QA child, then deleted only that empty test deck. Browser Spanish/French counts and cards checked through drawer and deck context routes, dropdown persistence and rotation checked. Mixed tag selection no-edit Confirm incorrectly adds verb to mesa: reproduced after undo, confirmed/logged; undone again and verified mesa Tags empty, tag filter returns only comer. Cancel after toggle/rotation preserved original tags. Reported stale browser deck overriding explicit French launch and absent deck-list search; developer could not reproduce those reports. Deck-search typing tests could not be reached because toolbar/overflow offered no search in either orientation. All observed issues reported; original seven notes and original tags retained."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0001", "ankidroid-0019"], "unfixed": ["ankidroid-0001", "ankidroid-0019"], "outcome": "wrong_pass"}

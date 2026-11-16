@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "calculator",
+    "element": "conversion result",
+    "field": "result",
+    "symptom_type": "wrong_value",
+    "expected": "10 dec in bin shows 0b1010 and 64 dec in oct shows 0o100",
+    "observed": "10 dec in bin shows 0b1100100 and 15 dec in hex shows 0x96, a different larger number",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "calculator",
+    "element": "something",
+    "field": "result",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

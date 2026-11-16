@@ -1,0 +1,186 @@
+{
+  "run_id": "93ea7691dc6f",
+  "item_id": "markor-E03",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "File browser \u2014 Favourites",
+      "element": "Indent.md entry in the favourites list",
+      "element_ref": 8,
+      "field": "Favourite list refresh after unmarking",
+      "symptom_type": "wrong_value",
+      "expected": "Unmarking Indent.md should remove it from the Favourites list immediately.",
+      "observed": "After tapping the remove-favourite action, Indent.md remained displayed in the selected Favourites list. It disappeared only after navigating out of Favourites and returning.",
+      "observed_quote": "Indent.md",
+      "steps": [
+        "Open the notebook folder and long-press Indent.md.",
+        "Tap Favourite to mark it, then open Go to \u2192 Favourites.",
+        "Long-press Indent.md in Favourites and tap the remove-favourite action.",
+        "Observe that Indent.md is still listed; navigate out and back to confirm it is then gone."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/fab_add_new_item",
+        "desc": "Create a new file or folder",
+        "class": "com.google.android.material.floatingactionbutton.FloatingActionButton",
+        "bounds": [
+          891,
+          1938,
+          1038,
+          2085
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor \u2014 Search and replace",
+      "element": "Search field and its option controls",
+      "element_ref": 14,
+      "field": "Search/replace option placement",
+      "symptom_type": "wrong_value",
+      "expected": "Search options such as Match Case, Match Whole Word, and Use Regular Expression should be placed above the Search input; Preserve Case should be above the Replace input.",
+      "observed": "The option controls are positioned in the same horizontal rows as the Search and Replace inputs, to their right, in both portrait and landscape.",
+      "observed_quote": "Search",
+      "steps": [
+        "Open Regex2.md in the editor and tap Search.",
+        "Enable Find/Replace with Toggle Find/Replace.",
+        "Observe the Search options on the same row to the right of the Search field and Preserve Case on the same row to the right of Replace.",
+        "Rotate to landscape and confirm the options remain beside the fields."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/searchEditText",
+        "text": "Search",
+        "class": "android.widget.EditText",
+        "bounds": [
+          28,
+          294,
+          812,
+          420
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File browser \u2014 Sort by dialog",
+      "element": "MIME type sort option",
+      "element_ref": 5,
+      "field": "Selected sort criterion after toggling Folder local",
+      "symptom_type": "wrong_value",
+      "expected": "Turning Folder local off should only change that checkbox and leave Name selected as the sort criterion.",
+      "observed": "Turning Folder local off also selected MIME type and deselected Name.",
+      "observed_quote": "MIME type",
+      "steps": [
+        "Open the notebook folder with Name selected in Sort by.",
+        "Open Sort by and enable Folder local.",
+        "Tap the Folder local checkbox again to disable it.",
+        "Observe that MIME type becomes selected and Name is no longer selected."
+      ],
+      "anchor_node": {
+        "id": "android:id/text1",
+        "text": "MIME type",
+        "class": "android.widget.CheckedTextView",
+        "bounds": [
+          162,
+          1147,
+          918,
+          1273
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0002",
+        "markor-0009"
+      ],
+      "present": [
+        "markor-0002",
+        "markor-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/markor-E03/93ea7691dc6f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0002": "missed_unreached",
+    "markor-0009": "reported"
+  },
+  "elapsed_s": 947.356,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.92,
+    "notes": "Completed the browser/sort, editor/search-replace, and view-mode sweep. One confirmed report: unmarking an item in Favourites leaves it displayed until leaving and re-entering. Two candidate reports (search-option placement and Folder local changing the selected sort) were filed; developer could not reproduce them. Search/replace edits were undone; Money.md was restored to its original text and saved. Single.md and Regex2.md are back to their original contents; no test files were created. Sort options were returned to Name, Folder first, with Folder local, Reverse order, and .dotfiles off."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "found": [
+    "markor-0009"
+  ],
+  "required": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "missed": [
+    "markor-0002"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 173,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "bug_meta": {
+    "markor-0002": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0009": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

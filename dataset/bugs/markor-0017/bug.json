@@ -1,0 +1,78 @@
+{
+  "bug_id": "markor-0017",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "no_effect",
+  "fix_date": "2020-08-30",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "toggle_done": [
+        {
+          "desc": "Toggle done"
+        },
+        {
+          "text": "Toggle done"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0017-buggy",
+    "fixed": "markor-0017-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0017.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "Toggle-done always builds the done mark with today's date instead of consulting the completion-date setting."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "shop sell tab",
+    "element": "iron sword sell sheet",
+    "field": "quantity",
+    "symptom_type": "wrong_value",
+    "expected": "with keep one of each on the sheet should offer 2 iron swords for 124 coins because the equipped one is the kept copy",
+    "observed": "the sheet offers only 1 iron sword for 62 coins, one extra copy is kept back",
+    "steps": [
+      "Turned on Keep one of each item.",
+      "Tapped Iron Sword in the Sell tab and read the sheet."
+    ]
+  },
+  "vague": {
+    "screen": "shop sell tab",
+    "element": "something",
+    "field": "quantity",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

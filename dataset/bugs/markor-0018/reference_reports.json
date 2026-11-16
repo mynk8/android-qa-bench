@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor menu",
+    "element": "auto-format",
+    "field": "auto-format state",
+    "symptom_type": "not_persisted",
+    "expected": "after reopening the file auto-format is still off and Enter adds no list marker",
+    "observed": "after reopening the file auto-format is on again and Enter adds a '- ' marker",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor menu",
+    "element": "something",
+    "field": "auto-format state",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

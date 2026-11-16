@@ -1,0 +1,272 @@
+{
+  "run_id": "0c046fea18e9",
+  "item_id": "amaze-E05",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "New Folder dialog in /storage/emulated/0/AndroidQA/Amaze",
+      "element": "New Folder name field / CREATE button",
+      "element_ref": 1,
+      "field": "Duplicate folder name validation",
+      "symptom_type": "missing",
+      "expected": "An existing folder name such as Alpha should be rejected before creation, or the dialog should explain that the name already exists and keep the entered value.",
+      "observed": "CREATE was enabled for the existing name Alpha. After tapping it, the dialog stayed open with an empty name and disabled CREATE, while the folder list still showed only Alpha and Beta. No duplicate-name error or explanation appeared.",
+      "observed_quote": "Enter Name",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze, where Alpha already exists.",
+        "Open the New Folder dialog.",
+        "Type Alpha; CREATE becomes enabled.",
+        "Tap CREATE.",
+        "Observe that the prompt resets to an empty field without feedback and no folder is added."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/singleedittext_input",
+        "text": "Enter Name",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1123,
+          943,
+          1241
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "New Folder dialog at /storage/emulated/0/AndroidQA/Amaze",
+      "element": "New Folder name field",
+      "element_ref": 1,
+      "field": "Existing folder name",
+      "symptom_type": "no_effect",
+      "expected": "Submitting the existing folder name Alpha should explain that the name is already in use and preserve the entered value for correction.",
+      "observed": "After CREATE is tapped for Alpha, the dialog remains open but the name field is cleared and CREATE is disabled. No error appears and the folder count remains unchanged.",
+      "observed_quote": "Enter Name",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze. Confirm Alpha is listed.",
+        "Tap the + button, then Folder to open New Folder.",
+        "Type Alpha. CREATE becomes enabled.",
+        "Hide the keyboard with BACK, leaving the dialog open.",
+        "Tap CREATE.",
+        "The same dialog is blank with CREATE disabled, and no new folder or explanatory error appears."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/singleedittext_input",
+        "text": "Enter Name",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1123,
+          943,
+          1241
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Paste conflict dialog in /storage/emulated/0/AndroidQA/Amaze",
+      "element": "RENAME button on Paste conflict dialog",
+      "field": "Copying a folder into its current directory",
+      "symptom_type": "no_effect",
+      "expected": "Choosing RENAME for the duplicate name should copy the folder under a different name, or present a rename field.",
+      "observed": "The conflict dialog closes after RENAME is tapped. The listing remains at 3 folders and 4 files, with no renamed copy and no explanation.",
+      "observed_quote": "3 folders and 4 files",
+      "steps": [
+        "Create a temporary empty folder QA-temp and rename it QA-temp2 in /storage/emulated/0/AndroidQA/Amaze.",
+        "Open QA-temp2's item menu and choose Copy.",
+        "Tap PASTE in the copy snackbar while still in the same directory.",
+        "The Paste dialog says 'File with same name already exists' and shows RENAME.",
+        "Tap RENAME.",
+        "Observe the dialog close while the folder count stays at 3 and no second QA-temp2 folder appears."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "/storage/emulated/0/AndroidQA/Amaze folder list after paste conflict",
+      "element": "Folder count and newly pasted folder rows",
+      "element_ref": 5,
+      "field": "List refresh after copy using RENAME",
+      "symptom_type": "wrong_value",
+      "expected": "After choosing RENAME and the paste completes, the folder count and list should immediately include the copied folder.",
+      "observed": "The RENAME operation completes, but the screen still shows 6 folders and 4 files and no new QA-temp copy. Leaving the folder and reopening it refreshes the list and shows the extra copy.",
+      "observed_quote": "6 folders and 4 files",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze, use a disposable empty QA-temp folder.",
+        "Open QA-temp's item menu and choose Copy.",
+        "Tap PASTE while remaining in the same directory.",
+        "At 'File with same name already exists', tap RENAME.",
+        "Immediately observe that the directory still reports 6 folders and 4 files and no new QA-temp row.",
+        "Navigate up to /storage/emulated/0/AndroidQA and reopen Amaze; the folder count refreshes to 7 and a QA-temp copy appears."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/fullpath",
+        "text": "/storage/emulated/0/AndroidQA/Amaze",
+        "class": "android.widget.TextView",
+        "bounds": [
+          189,
+          241,
+          1037,
+          304
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Recent files drawer category",
+      "element": "Recent files count summary",
+      "element_ref": 6,
+      "field": "Folder and file count",
+      "symptom_type": "wrong_value",
+      "expected": "The summary should report the six visible recent files, or another count consistent with the visible list.",
+      "observed": "The screen shows 0 folders and 0 files while six file rows are visible: keep.jpg, photo.jpg, notes.txt, report+final.txt, and two readme.txt entries.",
+      "observed_quote": "0 folders and 0 files",
+      "steps": [
+        "Open the navigation drawer from the Amaze folder.",
+        "Choose Recent files.",
+        "Observe the count summary above the list and compare it with the six visible file rows.",
+        "Leave via the drawer and open Recent files again; the same mismatch remains."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "0 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze directory listing after editing QA-large.txt",
+      "element": "QA-large.txt file row",
+      "element_ref": 24,
+      "field": "Displayed file size after save",
+      "symptom_type": "wrong_value",
+      "expected": "After saving the editor content and returning to the folder, the file row should show the saved size (300 B).",
+      "observed": "The folder row still shows 0 B after save and return, although Properties reports 300 B (300 bytes). Navigating away and reopening the folder refreshes the row to 300 B.",
+      "observed_quote": "0 B",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze, create QA-large.txt.",
+        "Open it in Amaze Text Editor, enter text, and tap Save.",
+        "Return to the folder listing; QA-large.txt still shows 0 B.",
+        "Open the row's Properties and verify it says 300 B (300 bytes).",
+        "Navigate up to /storage/emulated/0/AndroidQA and reopen Amaze; the row updates to 300 B."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "QA-large.txt",
+          "Nov 15 | 8:02\u202fPM",
+          "300 B"
+        ],
+        "bounds": [
+          0,
+          1617,
+          1080,
+          1806
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0014",
+        "amaze-0016"
+      ],
+      "present": [
+        "amaze-0014",
+        "amaze-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E05/0c046fea18e9/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0014": "missed_unreached",
+    "amaze-0016": "missed_unreached"
+  },
+  "elapsed_s": 1675.457,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.87,
+    "notes": "Swept drawer destinations (including media categories and empty Quick access), folder actions, and text previews. Images and Documents item Properties showed the prepared AndroidQA/Amaze location. New folder validation rejected blank/whitespace, slash, and '..'; selection inversion worked and reversed correctly. Tested rename, copy conflict, delete cancel/confirm, and restored the prepared folder to 2 folders and 4 files. Previewed notes.txt, report+final.txt, both readmes, and a temporary 4.35 KB multi-line text file; scrolling to its end marker, search, rotation, and reopening worked. Reports were submitted for duplicate-name prompt behavior, stale folder/list size refresh, and the Recent files count mismatch; developer replied 'could not reproduce' to each. Temporary QA files and folders were removed."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "missed": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "true_positives": 0,
+  "false_positives": 6,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 289,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "bug_meta": {
+    "amaze-0014": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0016": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

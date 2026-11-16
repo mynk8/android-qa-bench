@@ -1,0 +1,199 @@
+{
+  "run_id": "8c6ddcd61ed6",
+  "item_id": "minus-E04",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet",
+      "element": "Split view selector",
+      "element_ref": 15,
+      "field": "active split view",
+      "symptom_type": "not_persisted",
+      "expected": "After selecting Biweekly and rotating the device, Biweekly should remain the active split view and the calculated amount should remain $58.33.",
+      "observed": "The selector returned to Daily after rotating landscape and back to portrait, and the calculated amount returned to $1.9.",
+      "observed_quote": "Daily",
+      "steps": [
+        "Open the main screen budget pill.",
+        "Select Biweekly in the budget sheet; verify the calculated amount shows $58.33.",
+        "Rotate to landscape, then rotate back to portrait.",
+        "Observe the split selector and calculated amount."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "bounds": [
+          42,
+          1612,
+          370,
+          1738
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen expense history",
+      "element": "UNDO snackbar action",
+      "element_ref": 15,
+      "field": "undo deleted expense",
+      "symptom_type": "no_effect",
+      "expected": "Tapping UNDO after deleting the test Transport expense should restore the $0.01 Transport row and leave the amount entry empty.",
+      "observed": "The Transport row remained deleted. The tap instead opened the expense amount entry with $3, as if the keypad's 3 key had been pressed.",
+      "observed_quote": "$3",
+      "steps": [
+        "On the main screen, enter $0.01, select Transport, and save.",
+        "Tap the Transport $0.01 row and choose Delete.",
+        "While the snackbar's UNDO action is visible, tap UNDO.",
+        "Check the history and amount entry."
+      ],
+      "anchor_node": {
+        "text": "$3",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1401,
+          205,
+          2358,
+          464
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen expense history",
+      "element": "UNDO snackbar action",
+      "symptom_type": "missing",
+      "expected": "Tapping UNDO after deleting the test Transport expense should restore the Transport $1 row in today's history.",
+      "observed": "After tapping UNDO, today's row remained absent; the history showed only the 14 November group.",
+      "steps": [
+        "In portrait, enter $1 on the main screen, select Transport, and save.",
+        "Swipe down to open the expense history and tap today's Transport $1 row.",
+        "Choose Delete.",
+        "Tap UNDO in the snackbar.",
+        "Check today's expense history."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen number pad",
+      "element": "Bottom keypad row",
+      "element_ref": 25,
+      "field": "bottom row visibility",
+      "symptom_type": "cut_off",
+      "expected": "In landscape, the decimal, 0, and equals keys should remain fully visible and tappable.",
+      "observed": "The bottom row is clipped by the bottom edge of the screen; the 0 key is only partly visible.",
+      "observed_quote": "0",
+      "steps": [
+        "Open the main screen in portrait with the number pad visible.",
+        "Rotate the device to landscape.",
+        "Inspect the bottom row of the number pad."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "0"
+        ],
+        "bounds": [
+          1614,
+          963,
+          2019,
+          1080
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0005",
+        "minus-0007"
+      ],
+      "present": [
+        "minus-0005",
+        "minus-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/minus-E04/8c6ddcd61ed6/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0007": "missed_unreached",
+    "minus-0005": "reported"
+  },
+  "elapsed_s": 1013.207,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept the budget sheet and edit/settings flow, split choices and breakdown, main budget pill calculations, expense keypad input and reversal, categories, recurrence toggle, and portrait/landscape behavior. Verified the original 14 November expenses are still Groceries $40 and recurring Rent $20 (total $60); all test entries and budget drafts were cleared. One confirmed issue was logged: the split selector resets to Daily after rotation. The UNDO behavior and landscape keypad clipping observations were submitted, but the developer could not reproduce them."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0007",
+    "minus-0005"
+  ],
+  "found": [
+    "minus-0005"
+  ],
+  "required": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "missed": [
+    "minus-0007"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 169,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "bug_meta": {
+    "minus-0007": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

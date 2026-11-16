@@ -1,0 +1,14 @@
+{
+  "case_id": "nerdcalci-0007-clean-unspec",
+  "bug_id": "nerdcalci-0007",
+  "_build_id": "nerdcalci-0007-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "calci_basic",
+  "agent_input": "agent_input.md"
+}

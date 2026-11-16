@@ -1,0 +1,62 @@
+{
+  "episode_id": "tasks-E02",
+  "start_build": "tasks-E02-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "charge": 19,
+        "print": 18
+      },
+      "seconds": 18.5,
+      "screenshot_sha256": "16210f180e53f0f9160617b659664f809bdca73e41acebea3a0ff4e40ad4709a",
+      "bug": "tasks-0002",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "2:27",
+          "2:27\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Wednesday",
+          "Buy milk",
+          "2 litres",
+          "Due Monday, November 23",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Print tickets",
+          "Charge phone",
+          "Due Thursday, December 3",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 15.2,
+      "screenshot_sha256": "16210f180e53f0f9160617b659664f809bdca73e41acebea3a0ff4e40ad4709a",
+      "bug": "tasks-0002",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

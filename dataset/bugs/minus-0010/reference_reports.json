@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "analytics",
+    "element": "total spent",
+    "field": "amount",
+    "symptom_type": "wrong_value",
+    "expected": "analytics total spent is 60 including the paid recurring rent",
+    "observed": "total spent shows 40",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "analytics",
+    "element": "something",
+    "field": "amount",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "bug_id": "idlefantasy-0006",
+  "runs": 1,
+  "started": "2026-11-11T11:21:09+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "order": [
+          "Choose Body",
+          "Mithril Platebody",
+          "Adamantite Platebody",
+          "Slayer Platebody",
+          "Runite Chainbody",
+          "Runite Platebody",
+          "Gilded Platebody"
+        ]
+      },
+      "seconds": 30.3,
+      "screenshot_sha256": "485798c2bdc3be2708c30d89d4529a27826a6d5f3a1d2f991ca8753a47c5eafe",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "idlefantasy-0006-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "order": [
+          "Steel Full Helmet",
+          "Mithril Med Helmet"
+        ]
+      },
+      "seconds": 26.6,
+      "screenshot_sha256": "dc810db0e58706c5c24d364deb18415095ea95b1673b278a113a3759a772a9d6",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "idlefantasy-0006-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Close sheet",
+          "Drag handle",
+          "Choose Weapon (Atk)",
+          "Bronze Dagger (Atk)",
+          "Atk +5  \u2022  Str +4",
+          "Equip",
+          "Iron Sword (Atk)",
+          "Atk +10  \u2022  Str +9  \u2022  Req lv. 10 Attack",
+          "Equip",
+          "5:53",
+          "5:53\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 27.4,
+      "screenshot_sha256": "484269762d074558e7d49545a80619f6a9391ab4140613eac21a916c059c375c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "idlefantasy-0006-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "order": [
+          "Choose Body",
+          "Mithril Platebody",
+          "Runite Chainbody",
+          "Adamantite Platebody",
+          "Slayer Platebody",
+          "Runite Platebody",
+          "Gilded Platebody"
+        ]
+      },
+      "seconds": 21.7,
+      "screenshot_sha256": "12c2cf486fc9e1a477b7200cc906cb5f24fcec47e1dc9664ace74feef7d06287",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "idlefantasy-0006-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "order": [
+          "Mithril Med Helmet",
+          "Steel Full Helmet"
+        ]
+      },
+      "seconds": 27.3,
+      "screenshot_sha256": "0af8a2d5eb3aa44cf205c9036e0e92a1dbc8d6103bc9dfcca1013a893df8cf1a",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "idlefantasy-0006-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Close sheet",
+          "Drag handle",
+          "Choose Weapon (Atk)",
+          "Bronze Dagger (Atk)",
+          "Atk +5  \u2022  Str +4",
+          "Equip",
+          "Iron Sword (Atk)",
+          "Atk +10  \u2022  Str +9  \u2022  Req lv. 10 Attack",
+          "Equip",
+          "5:54",
+          "5:54\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 31.9,
+      "screenshot_sha256": "ca3d623e48659a9745d0d198c9c21edb62dd0dc21bc8fbc62efe699e3e8a4295",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "idlefantasy-0006-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T11:24:47+0530"
+}

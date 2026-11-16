@@ -1,0 +1,85 @@
+{
+  "run_id": "83d789271aa3",
+  "item_id": "featherline-E02",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0011"
+      ],
+      "present": [
+        "featherline-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/featherline-E02/83d789271aa3/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0011": "missed_unreached"
+  },
+  "elapsed_s": 289.491,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept medication categories and custom medicine creation, group scheduling, past-dose generation/history consistency, saved state and navigation. Swept Calibration result creation, all listed test analytes and unit options, saved value/unit persistence, and deletion back to the empty state. No reproducible defects found. Test-created medicine, group, and dose history remain because the group has related records and becomes archive-only."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0011"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0011"
+  ],
+  "missed": [
+    "featherline-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 81,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0011"
+  ],
+  "bug_meta": {
+    "featherline-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

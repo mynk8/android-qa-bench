@@ -1,0 +1,143 @@
+{
+  "run_id": "e117cf0ee0bb",
+  "item_id": "tasks-E02",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Custom recurrence dialog (landscape)",
+      "element": "Ends options",
+      "element_ref": 6,
+      "field": "After occurrence ending condition",
+      "symptom_type": "cut_off",
+      "expected": "The existing \u201cAfter 1 occurrence\u201d end option and its selected state should remain visible and accessible after rotating to landscape.",
+      "observed": "In portrait, \u201cAfter 1 occurrence\u201d is present and selected. After rotation to landscape, the dialog only exposes \u201cNever\u201d and \u201cOn\u201d; the \u201cAfter occurrence\u201d option and its count field disappear. Rotating back to portrait restores them.",
+      "steps": [
+        "Open Final dose from the task list.",
+        "Open its repeat rule and choose Custom\u2026",
+        "Verify the dialog shows the daily interval and the selected After 1 occurrence ending condition.",
+        "Rotate the device to landscape."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "On",
+          "Jan 15, 2027"
+        ],
+        "bounds": [
+          0,
+          796,
+          2274,
+          922
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Custom recurrence dialog in landscape",
+      "element": "Ends section",
+      "element_ref": 3,
+      "field": "After occurrence end option",
+      "symptom_type": "missing",
+      "expected": "The custom recurrence dialog should show all end conditions, including the selected After 1 occurrence option and its count field.",
+      "observed": "After rotating Final dose\u2019s custom recurrence dialog to landscape, the end section only exposes Never and On. The selected After 1 occurrence option and count field disappear; they return when rotated to portrait.",
+      "steps": [
+        "Open Final dose in portrait and tap its Repeats daily, occurs 1 time setting.",
+        "Choose Custom\u2026 and confirm After is selected with a count of 1.",
+        "Rotate the device to landscape."
+      ],
+      "anchor_node": {
+        "text": "Ends",
+        "class": "android.widget.TextView",
+        "bounds": [
+          53,
+          562,
+          126,
+          604
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "tasks-0002"
+      ],
+      "present": [
+        "tasks-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/tasks-E02/e117cf0ee0bb/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0002": "missed_unreached"
+  },
+  "elapsed_s": 755.963,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.84,
+    "notes": "Swept task list, sorting (including per-list settings), editor fields, subtasks, and all seeded repeat rules. Restored the initial sort, language, and per-list sorting settings; task data remains unchanged. I submitted two reports about the custom recurrence dialog\u2019s After option disappearing in landscape; both developer replies said the issue could not be reproduced."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "tasks-0002"
+  ],
+  "found": [],
+  "required": [
+    "tasks-0002"
+  ],
+  "missed": [
+    "tasks-0002"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 149,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "tasks-0002"
+  ],
+  "bug_meta": {
+    "tasks-0002": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

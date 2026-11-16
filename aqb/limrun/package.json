@@ -1,0 +1,9 @@
+{
+  "name": "aqb-limrun",
+  "private": true,
+  "type": "module",
+  "description": "Holds a Limrun Android instance and its adb tunnel for the Android QA benchmark",
+  "dependencies": {
+    "@limrun/api": "0.70.2"
+  }
+}

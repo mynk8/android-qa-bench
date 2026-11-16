@@ -1,0 +1,84 @@
+{
+  "screens": [
+    "card browser",
+    "reposition dialog"
+  ],
+  "elements": [
+    "queue limits label"
+  ],
+  "fields": [
+    "queue bottom"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the dialog shows Queue top and Queue bottom",
+    "the second line is labelled Queue bottom"
+  ],
+  "observed_contains_any": [
+    "the dialog shows Queue top twice",
+    "no Queue bottom label, both lines say Queue top"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "queue bottom",
+      "bottom",
+      "second line",
+      "labelled",
+      "labeled",
+      "differ*",
+      "distinct",
+      "different",
+      "first and last",
+      "last position",
+      "caption*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "queue top",
+      "top",
+      "twice",
+      "both lines",
+      "duplicate*",
+      "same label",
+      "wrong label",
+      "absent",
+      "missing",
+      "no queue bottom",
+      "not shown",
+      "no bottom",
+      "lacks",
+      "same caption"
+    ],
+    [
+      "bottom",
+      "label*",
+      "line",
+      "queue",
+      "caption*",
+      "text",
+      "last",
+      "position*"
+    ]
+  ],
+  "location_concepts": [
+    "reposition",
+    "card browser",
+    "dialog",
+    "browser"
+  ],
+  "anchors": {
+    "elements": [
+      "queue limits",
+      "reposition",
+      "queue top",
+      "queue bottom"
+    ],
+    "observed": [
+      "/queue top.*queue top/"
+    ]
+  }
+}

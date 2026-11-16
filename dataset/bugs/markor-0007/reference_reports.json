@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "view mode",
+    "element": "dollar text",
+    "field": "rendering",
+    "symptom_type": "wrong_value",
+    "expected": "the text Costs $5 and $10 is shown literally",
+    "observed": "part of the text between dollar signs is rendered as math or disappears",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "view mode",
+    "element": "something",
+    "field": "rendering",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

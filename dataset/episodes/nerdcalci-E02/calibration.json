@@ -1,0 +1,139 @@
+{
+  "episode_id": "nerdcalci-E02",
+  "start_build": "nerdcalci-E02-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:44",
+          "7:44 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "15 dec in hex",
+          "0x96",
+          "2",
+          "10 dec in bin",
+          "0b1100100",
+          "3",
+          "64 dec in oct",
+          "0o1200",
+          "4",
+          "255 dec in hex",
+          "0x9F6",
+          "Back",
+          "Number bases",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 17.0,
+      "screenshot_sha256": "6e3d037488d0ff93e35c58168f9197c3a4829f935db0e4471913da81eefb0247",
+      "bug": "nerdcalci-0003",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:45",
+          "7:45 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 10.5,
+      "screenshot_sha256": "f0fb68125b19a0b376e519450292f6e019c91c4454f26cc8bbab692ac95eca32",
+      "bug": "nerdcalci-0003",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:45",
+          "7:45 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 15.5,
+      "screenshot_sha256": "f0fb68125b19a0b376e519450292f6e019c91c4454f26cc8bbab692ac95eca32",
+      "bug": "nerdcalci-0004",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:45",
+          "7:45 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 10.3,
+      "screenshot_sha256": "f0fb68125b19a0b376e519450292f6e019c91c4454f26cc8bbab692ac95eca32",
+      "bug": "nerdcalci-0004",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

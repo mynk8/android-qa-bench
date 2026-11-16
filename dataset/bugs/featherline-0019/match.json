@@ -1,0 +1,78 @@
+{
+  "screens": [
+    "group editor",
+    "schedule",
+    "date picker"
+  ],
+  "elements": [
+    "start time row",
+    "start date row"
+  ],
+  "fields": [
+    "start time"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the start time changes from now to the start of the day",
+    "the start time shows a time"
+  ],
+  "observed_contains_any": [
+    "the start time still reads now",
+    "nothing changes after confirming the same date"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "start of the day",
+      "whole day",
+      "midnight",
+      "12:00 am",
+      "a time",
+      "changes",
+      "no longer",
+      "not now",
+      "00:00",
+      "4:00",
+      "start of day",
+      "beginning",
+      "day's start",
+      "begin* of the day"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "still",
+      "now",
+      "unchanged",
+      "no change",
+      "nothing",
+      "same",
+      "stays",
+      "remains",
+      "didn't change",
+      "does not change",
+      "doesn't change"
+    ]
+  ],
+  "location_concepts": [
+    "start time",
+    "start date",
+    "schedule",
+    "date picker",
+    "group",
+    "editor"
+  ],
+  "anchors": {
+    "elements": [
+      "start time",
+      "start date",
+      "now"
+    ],
+    "observed": [
+      "/\\bnow\\b/"
+    ]
+  }
+}

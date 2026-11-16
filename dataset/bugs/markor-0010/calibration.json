@@ -1,0 +1,88 @@
+{
+  "bug_id": "markor-0010",
+  "runs": 1,
+  "started": "2026-11-11T03:09:38+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "$1\n"
+      },
+      "seconds": 40.6,
+      "screenshot_sha256": "6b3f7535cb97b5da316565ea47ef0a123250f7baea6ab83b6d3d69bd82a88527",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0010-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "cat@home $1\n"
+      },
+      "seconds": 40.5,
+      "screenshot_sha256": "f63a201144c7db6ce6b4c48c657ebd4f714f8113ff03306656386311ba45417b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0010-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "cat\n"
+      },
+      "seconds": 49.0,
+      "screenshot_sha256": "eaa37adb5756242b70efe253d114cdef2c2bbf26011a751bf6ca5dc15e79059b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0010-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "cat\n"
+      },
+      "seconds": 41.9,
+      "screenshot_sha256": "85c057dfbe6ff5a0ffed367033c88030d8a0e23d66983561693f5b4cc47f7cdb",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0010-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "cat@home dog\n"
+      },
+      "seconds": 38.5,
+      "screenshot_sha256": "0d89ca598820fbfca3e4afb9c8c1d8214941a3b6724fb9a54bef02213663ebca",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0010-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "cat\n"
+      },
+      "seconds": 42.2,
+      "screenshot_sha256": "2c77f2fc6b7fd2eb2a8ba083779da1dc154c72f5a9d0d6843044c8306f63a34d",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0010-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:14:33+0530"
+}

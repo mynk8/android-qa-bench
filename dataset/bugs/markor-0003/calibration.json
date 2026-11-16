@@ -1,0 +1,130 @@
+{
+  "bug_id": "markor-0003",
+  "runs": 1,
+  "started": "2026-11-11T03:17:25+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "content": "gamma"
+      },
+      "seconds": 48.1,
+      "screenshot_sha256": "50f7fdbb8e8f85ac95e6d7d0b27686c371f8e6ff67611fbd7b8a30f66874da11",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0003-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "9:48",
+          "9:48\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Single",
+          "Undo",
+          "Redo",
+          "Save",
+          "View Mode",
+          "Search",
+          "More options",
+          "gamma",
+          "Rotate",
+          "Ordered list",
+          "Unordered list",
+          "Special Key",
+          "Date and time",
+          "Bold",
+          "Inline code"
+        ]
+      },
+      "seconds": 33.7,
+      "screenshot_sha256": "cc4e6cddfbf3371bbaadd4001905d6d0f9a7c38f2596cebad00788de2dc5eb6b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0003-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "gamma"
+      },
+      "seconds": 27.0,
+      "screenshot_sha256": "10fd6d74d80262afab727f18c4e35aeec78784128e55cf3465f3951526802811",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0003-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "content": "gamma\ngamma"
+      },
+      "seconds": 31.8,
+      "screenshot_sha256": "7f0b715963254ebd40b2bb1e5c4513461e85f524e31d9d7abe213ff2920ea479",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0003-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "Single",
+          "Undo",
+          "Redo",
+          "Save",
+          "View Mode",
+          "Search",
+          "More options",
+          "gamma\ngamma",
+          "Rotate",
+          "Ordered list",
+          "Unordered list",
+          "Special Key",
+          "Date and time",
+          "Bold",
+          "Inline code",
+          "Heading 3",
+          "Horizontal line",
+          "Heading 1",
+          "9:51",
+          "9:51\u202fPM"
+        ]
+      },
+      "seconds": 51.2,
+      "screenshot_sha256": "b5cb6ec51310f31976328a585de5886116b7ccbb7070bfc5924c2c07126fcf31",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0003-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "content": "gamma"
+      },
+      "seconds": 26.4,
+      "screenshot_sha256": "5e2ccac2e9d9bc40e328b80daf5cf886a98e2e72522a5b6629ec3d9cd5d5fc79",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0003-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:21:53+0530"
+}

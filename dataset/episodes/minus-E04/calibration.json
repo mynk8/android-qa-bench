@@ -1,0 +1,72 @@
+{
+  "episode_id": "minus-E04",
+  "start_build": "minus-E04-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "29.17",
+        "after_restart": "1.90",
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 31.6,
+      "screenshot_sha256": "1a4c1947589187ec15ca764b8d1e85ea865587314f5f0007439956b53a49dc42",
+      "bug": "minus-0007",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "weekly": "29.17"
+      },
+      "seconds": 21.5,
+      "screenshot_sha256": "eb5b22ddb70cd7556aeafcd5114459013b116f35bb9ebd2cde0eb688e26d6459",
+      "bug": "minus-0007",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "29.17",
+        "after_reopen": "1.90",
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 27.2,
+      "screenshot_sha256": "82ee1807dfd4d05fc5fc0f3b91a937895be257bf972bf64fcfa9aa4639f6af49",
+      "bug": "minus-0005",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "weekly": "29.17"
+      },
+      "seconds": 21.6,
+      "screenshot_sha256": "4de8cf784d1b145e6dfb0c7115ce89b3bcda6354d4af337ec897ef0031ce001f",
+      "bug": "minus-0005",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

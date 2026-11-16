@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="32.0" y="44.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="600" >How Each Episode Ended</text>
+<text x="32.0" y="70.0" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >Share of 51 episodes. A sign-off is correct only when every planted regression was reported.</text>
+<text x="32.0" y="482.0" font-size="11" fill="#898781" text-anchor="start" font-weight="400" >Source: AQB episode suite, 51 episodes per model (9 Android apps, 91 planted regressions).</text>
+<rect x="32" y="94" width="12" height="12" rx="3" fill="#0ca30c"/>
+<text x="50.0" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Correct sign-off</text>
+<rect x="179.6" y="94" width="12" height="12" rx="3" fill="#d03b3b"/>
+<text x="197.6" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Signed off, bugs missed</text>
+<rect x="373.4" y="94" width="12" height="12" rx="3" fill="#fab219"/>
+<text x="391.4" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Stopped without sign-off</text>
+<rect x="573.8" y="94" width="12" height="12" rx="3" fill="#898781"/>
+<text x="591.8" y="104.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Cut off at action cap</text>
+<text x="236.0" y="150.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >Claude Sonnet 5.5 (medium)</text>
+<rect x="250.0" y="128" width="155.4" height="34" rx="3" fill="#0ca30c"><title>Claude Sonnet 5.5 (medium): Correct sign-off 24%</title></rect>
+<text x="258.0" y="150.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >24%</text>
+<rect x="407.4" y="128" width="510.5" height="34" rx="3" fill="#d03b3b"><title>Claude Sonnet 5.5 (medium): Signed off, bugs missed 76%</title></rect>
+<text x="415.4" y="150.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >76%</text>
+<text x="236.0" y="198.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >GPT-6.1 Sol (low)</text>
+<rect x="250.0" y="176" width="195.0" height="34" rx="3" fill="#0ca30c"><title>GPT-6.1 Sol (low): Correct sign-off 29%</title></rect>
+<text x="258.0" y="198.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >29%</text>
+<rect x="447.0" y="176" width="365.8" height="34" rx="3" fill="#d03b3b"><title>GPT-6.1 Sol (low): Signed off, bugs missed 55%</title></rect>
+<text x="455.0" y="198.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >55%</text>
+<rect x="814.8" y="176" width="11.4" height="34" rx="3" fill="#fab219"><title>GPT-6.1 Sol (low): Stopped without sign-off 2%</title></rect>
+<rect x="828.2" y="176" width="89.8" height="34" rx="3" fill="#898781"><title>GPT-6.1 Sol (low): Cut off at action cap 14%</title></rect>
+<text x="836.2" y="198.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >14%</text>
+<text x="236.0" y="246.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >Claude Haiku 5.5</text>
+<rect x="250.0" y="224" width="115.9" height="34" rx="3" fill="#0ca30c"><title>Claude Haiku 5.5: Correct sign-off 18%</title></rect>
+<text x="258.0" y="246.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >18%</text>
+<rect x="367.9" y="224" width="168.8" height="34" rx="3" fill="#d03b3b"><title>Claude Haiku 5.5: Signed off, bugs missed 26%</title></rect>
+<text x="375.9" y="246.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >26%</text>
+<rect x="538.8" y="224" width="234.5" height="34" rx="3" fill="#fab219"><title>Claude Haiku 5.5: Stopped without sign-off 35%</title></rect>
+<text x="546.8" y="246.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600" >35%</text>
+<rect x="775.3" y="224" width="142.7" height="34" rx="3" fill="#898781"><title>Claude Haiku 5.5: Cut off at action cap 22%</title></rect>
+<text x="783.3" y="246.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >22%</text>
+<text x="236.0" y="294.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >GPT-6 Luna (max)</text>
+<rect x="250.0" y="272" width="77.1" height="34" rx="3" fill="#0ca30c"><title>GPT-6 Luna (max): Correct sign-off 12%</title></rect>
+<text x="258.0" y="294.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >12%</text>
+<rect x="329.1" y="272" width="562.8" height="34" rx="3" fill="#d03b3b"><title>GPT-6 Luna (max): Signed off, bugs missed 84%</title></rect>
+<text x="337.1" y="294.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >84%</text>
+<rect x="893.9" y="272" width="24.1" height="34" rx="3" fill="#898781"><title>GPT-6 Luna (max): Cut off at action cap 4%</title></rect>
+<text x="236.0" y="342.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >DeepSeek V4.1 Flash (high)</text>
+<rect x="250.0" y="320" width="77.1" height="34" rx="3" fill="#0ca30c"><title>DeepSeek V4.1 Flash (high): Correct sign-off 12%</title></rect>
+<text x="258.0" y="342.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >12%</text>
+<rect x="329.1" y="320" width="37.5" height="34" rx="3" fill="#d03b3b"><title>DeepSeek V4.1 Flash (high): Signed off, bugs missed 6%</title></rect>
+<rect x="368.6" y="320" width="550.1" height="34" rx="3" fill="#898781"><title>DeepSeek V4.1 Flash (high): Cut off at action cap 82%</title></rect>
+<text x="376.6" y="342.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >82%</text>
+<text x="236.0" y="390.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >GPT-6 Luna (medium)</text>
+<rect x="250.0" y="368" width="24.1" height="34" rx="3" fill="#0ca30c"><title>GPT-6 Luna (medium): Correct sign-off 4%</title></rect>
+<rect x="276.1" y="368" width="602.3" height="34" rx="3" fill="#d03b3b"><title>GPT-6 Luna (medium): Signed off, bugs missed 90%</title></rect>
+<text x="284.1" y="390.0" font-size="12" fill="#ffffff" text-anchor="start" font-weight="600" >90%</text>
+<rect x="880.5" y="368" width="37.5" height="34" rx="3" fill="#fab219"><title>GPT-6 Luna (medium): Stopped without sign-off 6%</title></rect>
+</svg>

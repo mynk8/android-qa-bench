@@ -1,0 +1,101 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "Final dose"
+  ],
+  "fields": [
+    "completed"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the task is completed and leaves the list",
+    "task ends and stays completed"
+  ],
+  "observed_contains_any": [
+    "the task comes back uncompleted",
+    "task stays in the list unchecked"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "complet*",
+      "done",
+      "checked",
+      "gone",
+      "leave*",
+      "disappear*",
+      "removed",
+      "hidden",
+      "finished",
+      "ends",
+      "end"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "final dose",
+      "repeat*",
+      "recurr*",
+      "complet*",
+      "occurrence*",
+      "check*",
+      "uncomplet*",
+      "uncheck*",
+      "task",
+      "open",
+      "item",
+      "entry",
+      "task",
+      "open",
+      "item",
+      "entry"
+    ],
+    [
+      "back",
+      "again",
+      "reappear*",
+      "uncheck*",
+      "uncomplet*",
+      "still",
+      "stays",
+      "remain*",
+      "returns",
+      "comes back",
+      "new",
+      "not complet*",
+      "reset*",
+      "re-appear*",
+      "another",
+      "pops",
+      "pop*",
+      "right back",
+      "open",
+      "pops",
+      "pop*",
+      "right back",
+      "open"
+    ]
+  ],
+  "location_concepts": [
+    "final dose",
+    "repeat*",
+    "recurr*",
+    "complet*",
+    "checkbox",
+    "check*"
+  ],
+  "anchors": {
+    "elements": [
+      "Final dose",
+      "Complete",
+      "My Tasks"
+    ],
+    "observed": []
+  }
+}

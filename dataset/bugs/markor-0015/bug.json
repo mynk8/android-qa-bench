@@ -1,0 +1,78 @@
+{
+  "bug_id": "markor-0015",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2020-03-26",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "unordered_list": [
+        {
+          "desc": "Unordered list"
+        },
+        {
+          "text": "Unordered list"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0015-buggy",
+    "fixed": "markor-0015-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0015.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "Anchor the unordered-list prefix pattern at the line start with no leading-whitespace group, so indented items are not seen as list items by the list actions."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

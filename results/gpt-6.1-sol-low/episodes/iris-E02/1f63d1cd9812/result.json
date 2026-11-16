@@ -1,0 +1,181 @@
+{
+  "run_id": "1f63d1cd9812",
+  "item_id": "iris-E02",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "IrisSeed album cards",
+      "element_ref": 5,
+      "field": "album grouping",
+      "symptom_type": "duplicated",
+      "expected": "Restoring big.jpg returns it to the original IrisSeed album, showing one album with two items.",
+      "observed": "After trashing and restoring big.jpg, two IrisSeed cards each show 1 items. Opening the original shows only huge.jpg. The split persists after revisiting and rotation.",
+      "observed_quote": "IrisSeed",
+      "steps": [
+        "Open IrisSeed containing big.jpg and huge.jpg.",
+        "Open big.jpg and Delete (moves to Trash).",
+        "Open Library > Trash > big.jpg > Restore selected.",
+        "Return to Albums: two IrisSeed cards appear, each with 1 items.",
+        "Open original IrisSeed, rotate and return: split remains."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          436,
+          1049,
+          1044
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Media",
+      "element": "Content-type filter",
+      "element_ref": 5,
+      "field": "chosen content type",
+      "symptom_type": "not_persisted",
+      "expected": "The chosen Photos or Videos filter remains selected after leaving and reopening the app.",
+      "observed": "Selecting Photos, exiting with Back and reopening resets to Media. Reproduced with Videos as well.",
+      "observed_quote": "Media",
+      "steps": [
+        "In Media open Filter and select Photos.",
+        "Press Back to exit the app, then reopen it. Observe Media selected.",
+        "Repeat selecting Videos, exit with Back and reopen. Media selected again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Filter",
+          "Media"
+        ],
+        "bounds": [
+          818,
+          85,
+          944,
+          211
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "IrisSeed item count",
+      "element_ref": 4,
+      "field": "count label",
+      "symptom_type": "wrong_value",
+      "expected": "A one-item album reads '1 item'.",
+      "observed": "The album count reads '1 items'. Repeated after returning to Albums and reopening the app.",
+      "observed_quote": "1 items",
+      "steps": [
+        "Open IrisSeed and move big.jpg to Trash, leaving huge.jpg.",
+        "Return to Albums and read the IrisSeed count.",
+        "Leave and return; the singular count still says 1 items."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "huge.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0011"
+      ],
+      "present": [
+        "iris-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/iris-E02/1f63d1cd9812/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0011": "reported"
+  },
+  "elapsed_s": 290.149,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.76,
+    "notes": "Exercised Media/Photos/Videos filters, navigation, exit/reopen persistence, album browsing/count changes and trash/restore reversal, photo details for seeded 1.5 MB and 2.5 MB files, favorites add/remove repeated from album and Media routes, empty and matching/unusual search, and portrait/landscape. Confirmed/logged: Media content-type choice resets on exit/reopen. Also reported restored album split and singular count wording; developer could not reproduce those. All observed issues reported. huge.jpg favorite state restored to off. big.jpg restore showed success but subsequently disappeared after app reopen; restoration anomaly included in album report."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "iris-0011"
+  ],
+  "found": [
+    "iris-0011"
+  ],
+  "required": [
+    "iris-0011"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 128,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "iris-0011"
+  ],
+  "bug_meta": {
+    "iris-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

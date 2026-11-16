@@ -1,0 +1,184 @@
+{
+  "bug_id": "ankidroid-0023",
+  "runs": 1,
+  "started": "2026-11-11T10:39:00+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:09",
+          "5:09\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "20",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 34.5,
+      "screenshot_sha256": "805f721d8e4cc6f7919932a927c85273650a4c112e382981e8f416a3c05c9564",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0023-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:10",
+          "5:10\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "20",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 33.6,
+      "screenshot_sha256": "062c3d9b687ebf4fb195d39cf991810b86e080c1dbd207b5c14f143c1d66bc20",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0023-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:10",
+          "5:10\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "21",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 25.1,
+      "screenshot_sha256": "242e18011dfecd1dbe77cbf3a431ebc2ec28516400efbf6c84b9b698b3fabc6b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0023-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "21",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing",
+          "5:11",
+          "5:11\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 33.2,
+      "screenshot_sha256": "c20252294472bdb27bc064dad454f8c9973edc7a58d4c4812527f452fd4fc1f0",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0023-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:11",
+          "5:11\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "22",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 29.7,
+      "screenshot_sha256": "90aefa0ed4b0466a23d4a7da8fd2e4ed3919d4bbf8c6604ea466a31808aa7e7d",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0023-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:12",
+          "5:12\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Use timebox",
+          "Use timebox",
+          "Time limit",
+          "-",
+          "21",
+          "mins",
+          "+",
+          "Timeboxing divides your study into shorter sessions to help you stay focused. When the time limit is reached, you'll see how many cards you studied and can choose to take a break or continue.",
+          "Navigate up",
+          "Timeboxing"
+        ]
+      },
+      "seconds": 22.1,
+      "screenshot_sha256": "01c695c0f0d0e5b67f72158c63897bf94016115ff2c4eaee947858dde60d0506",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0023-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:42:18+0530"
+}

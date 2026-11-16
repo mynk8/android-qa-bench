@@ -1,0 +1,46 @@
+{"event": "install", "build": {"n": 1, "build_id": "markor-E06-11", "mask": "11", "unfixed": ["markor-0017", "markor-0018"], "present": ["markor-0017", "markor-0018"]}}
+{"event": "brief", "item_id": "markor-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 405, "y": 2200}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 172, "y": 2069}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 172, "y": 2069}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 712, "y": 136}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 135, "y": 2200}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 945, "y": 2200}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 754}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 882}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 306}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 785, "y": 2150}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 135, "y": 2200}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1432}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 388}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 136}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 136}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 59, "y": 262}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 340, "y": 378}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 393, "y": 504}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "type", "args": {"text": "bread", "clear": true, "submit": false}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1020, "y": 503}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 136}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1080, "y": 1022}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1696, "y": 126}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 43, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.82, "notes": "Tested todo.txt mark done and reversal (prefix x 2026-11-16), editor font preview, file settings, search/replace replacing milk with bread and undoing, and rotation with editor contents intact. No reproducible defects found; changes to Shopping.md were undone."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["markor-0017", "markor-0018"], "unfixed": ["markor-0017", "markor-0018"], "outcome": "wrong_pass"}

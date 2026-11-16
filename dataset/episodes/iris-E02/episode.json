@@ -1,0 +1,31 @@
+{
+  "episode_id": "iris-E02",
+  "app_id": "iris",
+  "bugs": [
+    "iris-0011"
+  ],
+  "seed_id": "album_basic",
+  "builds": {
+    "0": "iris-E02-0",
+    "1": "iris-E02-1"
+  },
+  "observable": {
+    "0": {
+      "iris-0011": false
+    },
+    "1": {
+      "iris-0011": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

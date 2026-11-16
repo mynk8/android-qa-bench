@@ -1,0 +1,86 @@
+{
+  "screens": [
+    "media tab",
+    "media",
+    "main",
+    "gallery"
+  ],
+  "elements": [
+    "filter",
+    "bottom navigation label"
+  ],
+  "fields": [
+    "media filter"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "the Photos filter is still active after restarting the app",
+    "the first navigation item still reads Photos"
+  ],
+  "observed_contains_any": [
+    "after restarting the app the filter is back to Media",
+    "the first navigation item reads Media again"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "photos",
+      "still",
+      "remain*",
+      "persist*",
+      "kept",
+      "saved",
+      "remember*",
+      "forgot*",
+      "lost",
+      "relaunch*",
+      "restart*",
+      "cold start",
+      "chosen",
+      "selected",
+      "limiter",
+      "filter"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "media",
+      "reset*",
+      "back to",
+      "default",
+      "all",
+      "lost",
+      "not saved",
+      "not kept",
+      "not remembered",
+      "forgot*",
+      "reverted",
+      "revert*",
+      "generic",
+      "original",
+      "fallback",
+      "title",
+      "label"
+    ]
+  ],
+  "location_concepts": [
+    "media",
+    "filter",
+    "tab",
+    "navigation",
+    "bottom"
+  ],
+  "anchors": {
+    "elements": [
+      "Media",
+      "Filter",
+      "Photos"
+    ],
+    "observed": [
+      "media"
+    ]
+  }
+}

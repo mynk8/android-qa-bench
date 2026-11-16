@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "settings search"
+  ],
+  "elements": [
+    "search results"
+  ],
+  "fields": [
+    "Set due date"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "searching set due shows the Set due date setting",
+    "result for set due date"
+  ],
+  "observed_contains_any": [
+    "no result for set due date",
+    "the setting cannot be found by search"
+  ],
+  "symptom_types": [
+    "missing",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "set due date",
+      "due date",
+      "set due",
+      "binding",
+      "found",
+      "finds"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "empty",
+      "no result*",
+      "not found",
+      "not listed",
+      "not shown",
+      "absent",
+      "different",
+      "unrelated",
+      "wrong",
+      "other",
+      "instead",
+      "irrelevant"
+    ]
+  ],
+  "location_concepts": [
+    "setting*",
+    "preference*",
+    "search*",
+    "magnifier",
+    "lookup",
+    "query"
+  ],
+  "anchors": {
+    "elements": [
+      "search",
+      "set due date",
+      "settings"
+    ],
+    "observed": [
+      "no results"
+    ]
+  }
+}

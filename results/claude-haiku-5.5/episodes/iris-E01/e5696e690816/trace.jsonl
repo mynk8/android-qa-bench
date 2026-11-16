@@ -1,0 +1,161 @@
+{"event": "install", "build": {"n": 1, "build_id": "iris-E01-1", "mask": "1", "unfixed": ["iris-0007"], "present": ["iris-0007"]}}
+{"event": "brief", "item_id": "iris-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 278, "y": 740}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 564}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 876}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1401}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "type", "args": {"text": "huge_renamed", "clear": true, "submit": false}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 749}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "type", "args": {"text": "huge_renamed", "clear": true, "submit": false}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "key", "args": {"key": "MOVE_END"}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 589, "y": 960}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 1401}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1137}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "key", "args": {"key": "MOVE_END"}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "type", "args": {"text": "_r", "clear": false, "submit": false}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 960}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 200}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 41, "message": {"type": "bug_report", "screen": "Albums tab (All)", "element_ref": 4, "symptom_type": "wrong_value", "field": "album list: IrisSeed item count / album count", "expected": "One album \"IrisSeed\" with 2 items (big.jpg, huge_r.jpg) after renaming huge.jpg to huge_r.jpg.", "observed": "IrisSeed now appears as two separate album tiles, each \"IrisSeed\" with \"1 items\"; the IrisSeed album view shows only big.jpg.", "observed_quote": "IrisSeed", "steps": ["Start with album IrisSeed holding big.jpg and huge.jpg (Albums shows one tile 'IrisSeed', 2 items).", "Tap the IrisSeed tile, tap huge.jpg, tap the Details icon.", "Tap Rename, change the name to huge_r, tap Rename. Sheet shows File name huge_r.jpg.", "Close the sheet, tap Back to return to the IrisSeed album: only big.jpg is shown.", "Tap Back to the Albums tab: two tiles are listed, both 'IrisSeed' with '1 items'."], "anchor_node": {"class": "android.view.View", "contains": ["huge_r.jpg", "IrisSeed", "1 items"], "bounds": [32, 436, 525, 1045]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 678, "y": 2169}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 48, "message": {"type": "bug_report", "screen": "Albums tab (All)", "element_ref": 4, "symptom_type": "duplicated", "field": "album list: IrisSeed tiles", "expected": "One album tile \"IrisSeed\" with \"2 items\" (the album still holds both photos after the rename).", "observed": "After renaming huge.jpg to huge_r.jpg, the Albums tab shows two tiles both labelled \"IrisSeed\" with \"1 items\" each (huge_r.jpg tile and big.jpg tile). This persists after switching Media/Favorites/Albums tabs. Opening the IrisSeed album shows only big.jpg.", "observed_quote": "1 items", "steps": ["Precondition: Albums tab shows one tile 'IrisSeed' with '2 items'.", "Open IrisSeed, tap huge.jpg, tap Details (top-right icon).", "In File information tap Rename, clear the name, type huge_r, tap Rename. File name now shows huge_r.jpg.", "Tap the close control on the sheet, then Back to the Albums tab.", "Observe: two 'IrisSeed' tiles with '1 items' each. Switch to Media and back to Albums: still two tiles."], "anchor_node": {"class": "android.view.View", "contains": ["huge_r.jpg", "IrisSeed", "1 items"], "bounds": [32, 436, 525, 1045]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 564}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 540}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "type", "args": {"text": "2019-03-05 10:20", "clear": true, "submit": false}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 1405}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 350}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2163}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 610}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 83, "message": {"type": "bug_report", "screen": "EXIF & Metadata Editor (Origin tab), opened from photo Details for big.jpg", "element_ref": 8, "symptom_type": "not_persisted", "field": "Captured (capture date)", "expected": "Captured shows 2019-03-05 10:20 after Save, and the photo Details sheet shows that as the capture date (EXIF-based).", "observed": "After typing 2019-03-05 10:20 and tapping Save, the sheet closes. Reopening Edit metadata & EXIF > Origin shows the Captured field empty again, and the Details sheet still lists only Added and Modified (November 14, 2026 · 2:34 AM), with no capture date.", "observed_quote": "Captured · yyyy-MM-dd HH:mm", "steps": ["Open album IrisSeed (Albums tab), tap big.jpg, tap the Details icon (top right).", "Tap 'Edit metadata & EXIF', then tap the Origin tab.", "Tap the Captured field, type 2019-03-05 10:20, tap Save. Sheet returns to Details.", "Tap 'Edit metadata & EXIF' again, tap Origin: Captured is empty.", "Details sheet has no capture-date row; header still shows 'November 14 · 2:34 AM'."], "anchor_node": {"class": "android.widget.EditText", "contains": ["Captured · yyyy-MM-dd HH:mm", "Set Current Time"], "bounds": [63, 627, 1017, 858]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 876, "y": 754}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 882, "y": 2180}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 519, "y": 1316}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 92, "message": {"type": "bug_report", "screen": "EXIF & Metadata Editor (Origin tab) for big.jpg", "element_ref": 8, "symptom_type": "not_persisted", "field": "Captured (capture date)", "expected": "After Save, reopening Origin shows the saved Captured value, and the Details sheet reports the EXIF capture date.", "observed": "Failed twice. (1) Typed 2019-03-05 10:20, Save: reopen shows Captured empty. (2) Set Current Time gave 2026-11-14 02:36:45, Save: reopen shows Captured empty again. Details sheet never shows a capture-date row; it only lists Added and Modified.", "observed_quote": "Captured · yyyy-MM-dd HH:mm", "steps": ["Open album IrisSeed, tap big.jpg, tap Details icon.", "Tap 'Edit metadata & EXIF', tap Origin tab.", "Tap 'Set Current Time' (Captured shows 2026-11-14 02:36:45), tap Save; sheet returns to Details.", "Tap 'Edit metadata & EXIF', tap Origin: Captured is empty.", "Repeat with typed value 2019-03-05 10:20: also empty after reopen."], "anchor_node": {"class": "android.widget.EditText", "contains": ["Captured · yyyy-MM-dd HH:mm", "Set Current Time"], "bounds": [63, 627, 1017, 858]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 63}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 627, "y": 2180}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 350}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 420}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "type", "args": {"text": "Zulu", "clear": true, "submit": false}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 615, "y": 955}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "type", "args": {"text": "Zulu", "clear": true, "submit": false}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 955}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 420}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 283, "y": 964}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 744}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "type", "args": {"text": "Alpha", "clear": true, "submit": false}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 811, "y": 955}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 804, "y": 294}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 540}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 482, "y": 1869}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 136, "message": {"type": "bug_report", "screen": "Photo viewer (IrisSeed, opened from album)", "element_ref": 2, "symptom_type": "wrong_value", "field": "viewer title (position · name)", "expected": "After renaming huge.jpg to huge_r.jpg, the viewer title reads \"1 of 2 · huge_r.jpg\" (same as the filmstrip and File name in Details).", "observed": "Title reads \"1 of 2 · huge\" while the filmstrip thumbnail is huge_r.jpg and the Details File name is huge_r.jpg. Before the rename the title was \"2 of 2 · big.jpg\" (file name with extension).", "observed_quote": "1 of 2 · huge", "steps": ["Open album IrisSeed, tap huge.jpg, tap Details, tap Rename, enter huge_r, tap Rename. File name shows huge_r.jpg.", "Close the sheet. Viewer title shows '1 of 2 · huge'.", "Swipe or tap the big.jpg thumbnail and back: title shows '2 of 2 · big.jpg' (with extension) for unrenamed photo, so renamed title is inconsistent."], "anchor_node": {"text": "1 of 2 · huge", "class": "android.widget.TextView", "bounds": [168, 158, 360, 200]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0007": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 871, "y": 148}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 200}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 314}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 149, "message": null}

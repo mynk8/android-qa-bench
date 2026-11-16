@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor",
+    "element": "toggle done",
+    "field": "completion date",
+    "symptom_type": "no_effect",
+    "expected": "with the setting off the task reads 'x Pay rent pri:A' without a date",
+    "observed": "a date is inserted after the x even though the setting is off",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor",
+    "element": "something",
+    "field": "completion date",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

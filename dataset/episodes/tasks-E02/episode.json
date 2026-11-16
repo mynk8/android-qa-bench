@@ -1,0 +1,34 @@
+{
+  "episode_id": "tasks-E02",
+  "app_id": "tasks",
+  "bugs": [
+    "tasks-0002"
+  ],
+  "seed_id": "inbox_full",
+  "builds": {
+    "0": "tasks-E02-0",
+    "1": "tasks-E02-1"
+  },
+  "observable": {
+    "0": {
+      "tasks-0002": false
+    },
+    "1": {
+      "tasks-0002": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "notes": [
+    "2026-11-13 audit: tasks-0011 dropped (not observable in the UI)"
+  ],
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

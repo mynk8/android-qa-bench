@@ -1,0 +1,172 @@
+{
+  "run_id": "70aa0d5ad8bd",
+  "item_id": "amaze-E06",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Encrypt dialog",
+      "element": "Password mismatch validation",
+      "element_ref": 35,
+      "field": "Password / Repeat password",
+      "symptom_type": "wrong_value",
+      "expected": "When the Password and Repeat password values match, the \u201cPassword doesn't match\u201d error should disappear and the dialog should show a valid matching state.",
+      "observed": "Both password inputs contain Abc124 and the OK button is enabled, but the mismatch error remains visible.",
+      "observed_quote": "Password doesn't match",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze, open the notes.txt item menu and choose Encrypt.",
+        "Enter Abc123 in Password.",
+        "Enter Abc123 in Repeat password; observe that the mismatch error remains even though both values match.",
+        "Change Password to Abc124, then change Repeat password to Abc124.",
+        "Observe that both fields contain Abc124 and OK is enabled, while \u201cPassword doesn't match\u201d is still displayed."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/textinput_error",
+        "text": "Password doesn't match",
+        "class": "android.widget.TextView",
+        "bounds": [
+          147,
+          557,
+          933,
+          600
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename folder after rotation",
+      "element": "Beta folder row; the Rename dialog and draft are missing",
+      "element_ref": 26,
+      "field": "Rename input",
+      "symptom_type": "missing",
+      "expected": "Rotating the device should keep the Rename dialog open with the unsaved name Beta Temp, or otherwise preserve the draft so the rename can continue.",
+      "observed": "Rotating from portrait to landscape closes the Rename dialog and discards the typed Beta Temp draft; the app returns to the folder listing with Beta unchanged.",
+      "observed_quote": "Beta",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze, open the Beta folder's item menu and choose Rename.",
+        "Replace Beta with Beta Temp, leaving the Rename dialog unsaved.",
+        "Rotate the device from portrait to landscape.",
+        "Observe that the Rename dialog is gone, the directory listing is shown, and Beta remains unchanged. Repeating the same steps produces the same result."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Beta",
+          "Nov 15 | 8:20\u202fPM"
+        ],
+        "bounds": [
+          656,
+          699,
+          2274,
+          888
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ],
+      "present": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E06/70aa0d5ad8bd/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0017": "missed_unreached",
+    "amaze-0018": "reported",
+    "amaze-0019": "missed_unreached"
+  },
+  "elapsed_s": 662.051,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.94,
+    "notes": "Completed the requested sweep. Confirmed encryption mismatch message remains visible when both passphrase fields match; report was logged. Also reported loss of an unsaved rename draft on rotation; developer could not reproduce. Tested folder/file creation, rename validation for files and folders, copy and move for files and folders, paste conflict skip, deletion and cancellation, direct and deep search using the supplied data, navigation persistence, and rotation. Removed temporary QA artifacts and restored the original AndroidQA/Amaze listing (2 folders and 4 files); app left in portrait."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "found": [
+    "amaze-0018"
+  ],
+  "required": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "missed": [
+    "amaze-0017",
+    "amaze-0019"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 163,
+  "precision": 0.5,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "bug_meta": {
+    "amaze-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

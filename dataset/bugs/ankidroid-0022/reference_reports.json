@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "note editor",
+    "element": "note type spinner",
+    "field": "note type",
+    "symptom_type": "wrong_value",
+    "expected": "Add note opens on Basic because the Cloze choice was never saved",
+    "observed": "Add note opens on Cloze, remembered although no note was saved",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "note editor",
+    "element": "something",
+    "field": "note type",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

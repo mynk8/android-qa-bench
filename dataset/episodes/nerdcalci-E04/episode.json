@@ -1,0 +1,31 @@
+{
+  "episode_id": "nerdcalci-E04",
+  "app_id": "nerdcalci",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "seed_id": "calci_basic",
+  "builds": {
+    "0": "nerdcalci-E04-0",
+    "1": "nerdcalci-E04-1"
+  },
+  "observable": {
+    "0": {
+      "nerdcalci-0007": false
+    },
+    "1": {
+      "nerdcalci-0007": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

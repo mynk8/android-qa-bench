@@ -1,0 +1,73 @@
+{
+  "episode_id": "amaze-E06",
+  "app_id": "amaze",
+  "bugs": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "seed_id": "files_basic",
+  "builds": {
+    "000": "amaze-E06-000",
+    "001": "amaze-E06-001",
+    "010": "amaze-E06-010",
+    "011": "amaze-E06-011",
+    "100": "amaze-E06-100",
+    "101": "amaze-E06-101",
+    "110": "amaze-E06-110",
+    "111": "amaze-E06-111"
+  },
+  "observable": {
+    "000": {
+      "amaze-0017": false,
+      "amaze-0018": false,
+      "amaze-0019": false
+    },
+    "001": {
+      "amaze-0017": false,
+      "amaze-0018": false,
+      "amaze-0019": true
+    },
+    "010": {
+      "amaze-0017": false,
+      "amaze-0018": true,
+      "amaze-0019": false
+    },
+    "011": {
+      "amaze-0017": false,
+      "amaze-0018": true,
+      "amaze-0019": true
+    },
+    "100": {
+      "amaze-0017": true,
+      "amaze-0018": false,
+      "amaze-0019": false
+    },
+    "101": {
+      "amaze-0017": true,
+      "amaze-0018": false,
+      "amaze-0019": true
+    },
+    "110": {
+      "amaze-0017": true,
+      "amaze-0018": true,
+      "amaze-0019": false
+    },
+    "111": {
+      "amaze-0017": true,
+      "amaze-0018": true,
+      "amaze-0019": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

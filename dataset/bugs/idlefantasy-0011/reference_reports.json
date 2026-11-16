@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "skills smithing bronze bar quantity page",
+    "element": "xp line",
+    "field": "level preview",
+    "symptom_type": "missing",
+    "expected": "the xp line should show the batch xp followed by a level 20 projection",
+    "observed": "the xp line only shows the xp total and no level 20 projection",
+    "steps": [
+      "Opened Skills, Smithing, Bronze Bar.",
+      "Read the XP line below the quantity."
+    ]
+  },
+  "vague": {
+    "screen": "skills smithing bronze bar quantity page",
+    "element": "something",
+    "field": "level preview",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

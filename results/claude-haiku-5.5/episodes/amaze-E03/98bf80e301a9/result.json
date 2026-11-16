@@ -1,0 +1,101 @@
+{
+  "run_id": "98bf80e301a9",
+  "item_id": "amaze-E03",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Folder browser /storage/emulated/0/AndroidQA/Amaze (More options menu)",
+      "element": "Grid View menu item / folder list",
+      "symptom_type": "not_persisted",
+      "expected": "After choosing Grid View, the folder contents stay in grid layout across device rotation (and the menu keeps offering List View).",
+      "observed": "After Grid View was chosen (Alpha and Beta shown side by side), rotating to landscape showed the folders as single-row list items, and the menu offered \"Grid View\" again. Choosing Grid View in landscape and rotating back to portrait again returned the list layout.",
+      "observed_quote": "Grid View",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze in Amaze File Manager (portrait).",
+        "Tap More options (top-right) > Grid View. Folders Alpha and Beta and files appear in a grid (side by side).",
+        "Rotate the device to landscape.",
+        "Observe: folders and files are in single-column list rows; More options menu shows 'Grid View'.",
+        "Tap More options > Grid View in landscape; grid appears.",
+        "Rotate the device back to portrait.",
+        "Observe: list rows again (Alpha, then Beta stacked), More options shows 'Grid View'."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "amaze-0011"
+      ],
+      "present": [
+        "amaze-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/amaze-E03/98bf80e301a9/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0011": "missed_unreached"
+  },
+  "elapsed_s": 386.009,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "amaze-0011"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0011"
+  ],
+  "missed": [
+    "amaze-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0011"
+  ],
+  "bug_meta": {
+    "amaze-0011": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

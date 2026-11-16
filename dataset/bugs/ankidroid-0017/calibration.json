@@ -1,0 +1,104 @@
+{
+  "bug_id": "ankidroid-0017",
+  "runs": 1,
+  "started": "2026-11-11T03:07:41+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "menu_offered_add": true,
+        "extra_template": true,
+        "screen": "Navigate up Card types Cloze Save Preview More options Cloze Cloze Card 2 Card 2 {{cloze:Text}}<br>\n{{Back Extra}} Front Front Back Back Styling Styling 9:39 9:39\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown."
+      },
+      "seconds": 43.5,
+      "screenshot_sha256": "f4ddabcb7ac139c23f30e6d1b1ddfec5795549f99075ac973bcb7ec3619a6be3",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0017-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "offered": [
+          true,
+          true
+        ],
+        "extra_template": true,
+        "stored_templates": "sql-error: OperationalError",
+        "screen": "9:39 9:39\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown. Navigate up Card types Cloze Save Preview More options Cloze Cloze Card 2 Card 2 Card 3 Card 3 {{cloze:Text}}<br>\n{{Back Extra}} Front Front Back Back Styling Styling"
+      },
+      "seconds": 35.8,
+      "screenshot_sha256": "91338f7806da6b3d8155bc7ca31b4f888073d8ba4c915aa7e34227c98f048078",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0017-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "menu_offered_add": true
+      },
+      "seconds": 21.6,
+      "screenshot_sha256": "a006b8587e6796fffc349abc1e0f1bd86820e9397966d3b454ef9a10d20f8483",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0017-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "menu_offered_add": false,
+        "extra_template": false,
+        "screen": "9:40 9:40\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown. Navigate up Card types Cloze Save Preview More options Cloze Cloze {{cloze:Text}} Front Front Back Back Styling Styling"
+      },
+      "seconds": 28.5,
+      "screenshot_sha256": "202b4959d67ece66ec76d6ff61ba9a5042b77df5382ef22ab61942ae2f7ed2f6",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0017-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "offered": [
+          false,
+          false
+        ],
+        "extra_template": false,
+        "stored_templates": "sql-error: OperationalError",
+        "screen": "Navigate up Card types Cloze Save Preview More options Cloze Cloze {{cloze:Text}} Front Front Back Back Styling Styling 9:41 9:41\u202fPM Android System notification:  Wifi signal full. Battery percentage unknown."
+      },
+      "seconds": 32.0,
+      "screenshot_sha256": "781b0740ffce2f8ed972aedca626069555f1f79a55aa584e899c058bf7a1868f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0017-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "menu_offered_add": true
+      },
+      "seconds": 29.5,
+      "screenshot_sha256": "452a61dbfcc3085fb64a1cc910fefaecbc0a912c6a61038f6fc26d2b6d2b4d03",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0017-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:11:39+0530"
+}

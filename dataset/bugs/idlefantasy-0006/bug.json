@@ -1,0 +1,82 @@
+{
+  "bug_id": "idlefantasy-0006",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong display",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-09-19",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_combat": [
+        {
+          "desc": "Combat"
+        },
+        {
+          "text": "Combat"
+        }
+      ],
+      "gear_tab": [
+        {
+          "text": "Gear"
+        }
+      ],
+      "slot_body": [
+        {
+          "text": "Body"
+        }
+      ],
+      "slot_head": [
+        {
+          "text": "Head"
+        }
+      ],
+      "slot_weapon": [
+        {
+          "text": "Weapon (Atk)"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0006-buggy",
+    "fixed": "idlefantasy-0006-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0006.patch",
+    "confidence": "medium",
+    "lines_changed": 13,
+    "approach": "EquipPickerSheet orders candidates by the highest level requirement and then name, as before the stat-based ordering, so Runite Chainbody (req 50) lands after Slayer Platebody (req 45) and Steel Full Helmet before Mithril Med Helmet."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

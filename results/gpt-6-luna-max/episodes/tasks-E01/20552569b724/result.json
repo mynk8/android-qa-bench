@@ -1,0 +1,200 @@
+{
+  "run_id": "20552569b724",
+  "item_id": "tasks-E01",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Task editor",
+      "element": "Editor screen",
+      "field": "screen rotation",
+      "symptom_type": "wrong_navigation",
+      "expected": "Rotating the device while editing Pay rent should keep the task editor open in landscape with the task fields available.",
+      "observed": "The editor closes and the app returns to the QA Filter task list when the device is rotated to landscape. Reproduced twice.",
+      "steps": [
+        "Open the QA Filter list.",
+        "Tap Pay rent to open its editor.",
+        "Rotate the device to landscape.",
+        "Observe that the task list is shown instead of the editor."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list",
+      "element": "Repeating task completion snackbar",
+      "element_ref": 29,
+      "field": "repeat occurrence limit",
+      "symptom_type": "wrong_value",
+      "expected": "Final dose is configured to occur 1 time, so completing its only occurrence should leave it completed with no further due date in the active list.",
+      "observed": "After marking Final dose complete, it reopens as an active task with the same December 15 due date; the app reports it was rescheduled for that same date.",
+      "observed_quote": "Final dose rescheduled for December 15",
+      "steps": [
+        "Open Final dose in the task editor and verify it says Repeats daily, occurs 1 time.",
+        "Return to the task list.",
+        "Mark Final dose complete.",
+        "Observe the snackbar and the still active Final dose row due December 15."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/snackbar_text",
+        "text": "Final dose rescheduled for December 15",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1907,
+          865,
+          2032
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list",
+      "element": "Final dose reschedule snackbar",
+      "element_ref": 33,
+      "field": "daily recurrence next due date",
+      "symptom_type": "wrong_value",
+      "expected": "For a daily repeat anchored to the due date, completion must advance to the next daily occurrence (or finish if the one-occurrence limit is exhausted); it must not reschedule to the same December 15 date.",
+      "observed": "Completing Final dose reports a reschedule for December 15 again, and its list row remains under Due Tuesday, December 15. The editor still shows Repeats daily, occurs 1 time and Repeats from due date.",
+      "observed_quote": "Final dose rescheduled for December 15",
+      "steps": [
+        "Open Final dose and verify its due date is Tuesday, December 15 and its repeat is daily, occurs 1 time, from due date.",
+        "Return to the task list.",
+        "Mark Final dose complete.",
+        "Observe that it is rescheduled for the same December 15 date instead of advancing to the next daily occurrence or ending."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/snackbar_text",
+        "text": "Final dose rescheduled for December 15",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1907,
+          865,
+          2032
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list search",
+      "element": "Search screen navigation",
+      "field": "system Back",
+      "symptom_type": "wrong_navigation",
+      "expected": "After returning from a task editor to an active search, system Back should collapse search to the task list while keeping Tasks.org in the foreground.",
+      "observed": "From the search result with the keyboard hidden, system Back exits Tasks.org to the Android launcher instead of returning to the task list.",
+      "steps": [
+        "Open the active QA Filter list.",
+        "Search for guide and open the Read docs result.",
+        "Press system Back to return from the editor to the search result; the keyboard is hidden and search remains active.",
+        "Press system Back again.",
+        "Observe that the Android launcher opens instead of the task list."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ],
+      "present": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/tasks-E01/20552569b724/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0005": "reported",
+    "tasks-0007": "reported",
+    "tasks-0009": "reported"
+  },
+  "elapsed_s": 663.035,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.95,
+    "notes": "Swept the task list, task name and notes search, editor, filter return path, subtasks, and monthly/hourly/biweekly/finite repeating tasks. Confirmed and logged three issues: editor exits on rotation; Final dose reschedules to the same date; system Back exits to launcher from search after returning from an editor. Removed the temporary QA filter and restored the tested task states."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "found": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "required": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 116,
+  "precision": 0.75,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "bug_meta": {
+    "tasks-0005": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "tasks-0007": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "tasks-0009": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

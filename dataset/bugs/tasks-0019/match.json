@@ -1,0 +1,66 @@
+{
+  "screens": [
+    "sort sheet",
+    "sort"
+  ],
+  "elements": [
+    "subtasks row",
+    "order button"
+  ],
+  "fields": [
+    "subtask order"
+  ],
+  "symptom_type": "duplicated",
+  "expected_contains_any": [
+    "Subtasks row has no ascending or descending button",
+    "My order has no direction"
+  ],
+  "observed_contains_any": [
+    "Subtasks row shows a Descending button",
+    "an order button is shown for My order"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "no",
+      "not",
+      "without",
+      "hidden",
+      "absent",
+      "missing",
+      "shouldn*",
+      "only"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "button",
+      "ascending",
+      "descending",
+      "order",
+      "direction",
+      "shown",
+      "extra",
+      "visible",
+      "present"
+    ]
+  ],
+  "location_concepts": [
+    "subtask*",
+    "sort*",
+    "order*",
+    "button*",
+    "row*"
+  ],
+  "anchors": {
+    "elements": [
+      "Subtasks",
+      "Descending",
+      "Ascending"
+    ],
+    "observed": []
+  }
+}

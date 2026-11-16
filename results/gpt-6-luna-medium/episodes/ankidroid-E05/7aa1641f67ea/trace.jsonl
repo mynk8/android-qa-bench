@@ -1,0 +1,26 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E05-1", "mask": "1", "unfixed": ["ankidroid-0008"], "present": ["ankidroid-0008"]}}
+{"event": "brief", "item_id": "ankidroid-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 433}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 836, "y": 1402}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 478}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 478}}}
+{"event": "agent", "step": 23, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.55, "notes": "Checked browser listing and its menu/filter entry points, browser deck chooser, add-note deck chooser (French and Spanish listed), home deck counts/navigation, and rotation on deck list. No reproducible defect established. Add/edit note flow was opened but no note was saved; cards/notes display toggle and individual deck collapse controls were not located/exercised."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0008"], "unfixed": ["ankidroid-0008"], "outcome": "wrong_pass"}

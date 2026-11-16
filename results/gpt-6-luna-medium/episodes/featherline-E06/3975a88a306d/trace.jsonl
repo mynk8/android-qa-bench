@@ -1,0 +1,47 @@
+{"event": "install", "build": {"n": 1, "build_id": "featherline-E06-1", "mask": "1", "unfixed": ["featherline-0020"], "present": ["featherline-0020"]}}
+{"event": "brief", "item_id": "featherline-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 905, "y": 2189}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 436}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 955, "y": 1740}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 801, "y": 955}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 174, "y": 2189}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 417, "y": 2189}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 417, "y": 2189}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 148}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 505}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 464, "y": 797}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 449, "y": 444}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1975}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 364, "y": 1717}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1975}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 944, "y": 352}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1775}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "type", "args": {"text": "Spironolactone QA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 918, "y": 1618}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1222}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 805}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 430}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2149}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 966, "y": 148}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1249}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 789}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 918, "y": 1278}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 905, "y": 2189}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 368}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 778, "y": 2149}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 417, "y": 2189}}}
+{"event": "agent", "step": 44, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.78, "notes": "Swept Settings (including the body weight sheet, cancel/empty save, unit toggle, and rotation), medicine creation and edit cancellation, preparation form/category picker states, medication selection, group creation/scheduling, and Plan medication/group cards. No reproducible bugs found. Test data added: Spironolactone 25 mg and daily Group 1; no medication log was saved."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["featherline-0020"], "unfixed": ["featherline-0020"], "outcome": "wrong_pass"}

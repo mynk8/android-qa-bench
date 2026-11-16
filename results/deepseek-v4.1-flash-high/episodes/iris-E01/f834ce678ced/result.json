@@ -1,0 +1,235 @@
+{
+  "run_id": "f834ce678ced",
+  "item_id": "iris-E01",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "IrisSeed album cards",
+      "field": "album list",
+      "symptom_type": "duplicated",
+      "expected": "A single IrisSeed album containing both big.jpg and huge.jpg (2 items), as shown in Library > Folder View > Pictures > IrisSeed.",
+      "observed": "The Albums tab shows two separate cards both labeled \"IrisSeed\", each with \"1 items\": one covered by big.jpg and one covered by hughugeQ.jpg (formerly huge.jpg). The album has been split into two duplicate albums.",
+      "steps": [
+        "Open Albums tab; IrisSeed shows one card with 2 items.",
+        "Open big.jpg > Details > Edit metadata & EXIF, set a Title and a Captured date, Save.",
+        "In Details tap Rename, rename big.jpg to bigQA.jpg, then return to Albums tab.",
+        "Albums tab now shows two IrisSeed cards ('big.jpg | IrisSeed | 1 items' and 'huge.jpg | IrisSeed | 1 items').",
+        "Rename bigQA.jpg back to big.jpg: the duplicate IrisSeed cards persist even after leaving and returning to the tab."
+      ],
+      "element_ref": 4,
+      "observed_quote": "IrisSeed",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "Beta album card",
+      "field": "album list",
+      "symptom_type": "duplicated",
+      "expected": "One Beta album card showing \"2 items\", matching Library > Folder View > Pictures > Beta, which reports Beta with 2 items.",
+      "observed": "The Albums tab shows the Beta album twice, each card labeled \"Beta\" with \"1 items\" (covers big.jpg and hughugeQ.jpg), instead of one Beta album with 2 items.",
+      "steps": [
+        "Open a photo (hughugeQ.jpg) > More selection actions > Copy to album > New album, create album named Beta.",
+        "Open another photo (big.jpg) > More selection actions > Move to album, select Beta.",
+        "Return to the Albums tab. Beta is displayed as two separate cards, each '1 items'.",
+        "Compare with Library > Folder View > Pictures: there is a single Beta folder with 2 items."
+      ],
+      "element_ref": 4,
+      "observed_quote": "Beta",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "Beta",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor > Origin",
+      "element": "Captured field",
+      "field": "Captured",
+      "symptom_type": "not_persisted",
+      "expected": "After entering a capture date (e.g. 2021-05-06 07:08) and tapping Save, reopening Edit metadata & EXIF > Origin should show that capture date in the Captured field.",
+      "observed": "The Captured field is empty again after Save and reopen - it only shows the placeholder \"Captured \u00b7 yyyy-MM-dd HH:mm\". A Title entered in the same save (T2) persists, so the save itself works; the capture date specifically is lost.",
+      "steps": [
+        "Open a photo (big.jpg) > Details > Edit metadata & EXIF > Origin.",
+        "Tap the Captured field and enter 2021-05-06 07:08 (or tap Set Current Time).",
+        "Tap Save, then tap Edit metadata & EXIF again and open Origin.",
+        "The Captured field is empty again; the typed date does not persist."
+      ],
+      "element_ref": 8,
+      "observed_quote": "Captured \u00b7 yyyy-MM-dd HH:mm",
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Captured \u00b7 yyyy-MM-dd HH:mm",
+          "Set Current Time"
+        ],
+        "bounds": [
+          63,
+          627,
+          1017,
+          858
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor",
+      "element": "Title field",
+      "field": "Title",
+      "symptom_type": "not_persisted",
+      "expected": "After saving Title \"WAIT\" and reopening the photo later, the Title should still be WAIT (viewer title bar \"1 of 1 \u00b7 WAIT\", Details sheet showing Title WAIT, editor prefilled with WAIT).",
+      "observed": "The Title is shown right after Save, but once the photo is left and reopened the edit is gone: the title bar shows \"1 of 1 \u00b7 hughugeQ.jpg\", the Details sheet has no Description/Title section, and the editor's Title field is empty (placeholder \"Title\").",
+      "steps": [
+        "Open the Zulu album and open hughugeQ.jpg.",
+        "Details > Edit metadata & EXIF > Description, type Title 'WAIT', tap Save.",
+        "Details/sheet shows Title WAIT; close the viewer, go to Albums, reopen Zulu and open the photo again.",
+        "The Title is gone: title bar reads '1 of 1 \u00b7 hughugeQ.jpg' and the editor's Title field is empty."
+      ],
+      "element_ref": 9,
+      "observed_quote": "Title",
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Title"
+        ],
+        "bounds": [
+          63,
+          1421,
+          1017,
+          1589
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Photo Details sheet (Details)",
+      "element": "Image Properties section",
+      "field": "Capture date",
+      "symptom_type": "missing",
+      "expected": "The photo details sheet should show the capture date read from the photo's EXIF metadata (for this photo the viewer header shows the EXIF capture date/time \"November 14 \u00b7 11:39 AM\").",
+      "observed": "The Details sheet has no capture-date row at all. Under \"Image Properties\" it only lists Resolution \"64 \u00d7 48 (0.0 MP)\", and under \"File Information\" only File name, Added, Modified, Type, Size, URL and Path. The EXIF capture date is never shown in the details sheet.",
+      "steps": [
+        "Open big.jpg in the viewer and tap Details.",
+        "Note the sheet shows only Resolution under Image Properties - there is no capture date.",
+        "Tap Edit metadata & EXIF > Origin, tap Set Current Time, then Save.",
+        "The viewer header updates to 'November 14 \u00b7 11:39 AM' (the EXIF capture date), but reopening Details still shows no capture date row."
+      ],
+      "element_ref": 4,
+      "anchor_node": {
+        "text": "Image Properties",
+        "class": "android.widget.TextView",
+        "bounds": [
+          164,
+          980,
+          500,
+          1043
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E01-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0007"
+      ],
+      "present": [
+        "iris-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/iris-E01/f834ce678ced/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0007": "missed_unreached"
+  },
+  "elapsed_s": 1388.268,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "iris-0007"
+  ],
+  "found": [],
+  "required": [
+    "iris-0007"
+  ],
+  "missed": [
+    "iris-0007"
+  ],
+  "true_positives": 0,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "iris-0007"
+  ],
+  "bug_meta": {
+    "iris-0007": {
+      "family": "display",
+      "hard_slice": true
+    }
+  }
+}

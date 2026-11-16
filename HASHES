@@ -1,0 +1,14 @@
+{
+  "BOT_BRIEF.md": "426b177644e1feecb8a494c01ab91b0654f187e01d88796ea1ebc100135e4ce1",
+  "dataset_tools/device_api.py": "658d32d8c5f2453adab50d30249742cfd81f8bf2693a4aef1f6b4efb8ebd5a34",
+  "dataset_tools/validate_dataset.py": "3a467fa5026e61faeb0dfd316955902de5bed4aef1c67596bc43915af4022efc",
+  "dataset_tools/matcher.py": "64437b58912ebe2871d787689f38c01bd2f0efda448edf6ac55b05bbc3977330",
+  "dataset/manifest.json": "49e87e7d41221498fc7d0b6c3cf8ec0e88b189e73b78c7608e1f24047dc96286",
+  "tools/eval_lib.py": "a2c56209504172697deed947b2529433c898d637ed104bd7d9c9f9fd02efe9bf",
+  "tools/run_eval.py": "76f72f35b1e5577021b81e1a4209d904799f998a12b40637ad75de841e6d2a88",
+  "tools/case_eval.py": "0795fa4ace1c0b1978d54c4480faaf1ecb9a3c01453d9b039d204c9ea2481bb3",
+  "tools/score.py": "21113edbc6723658df481b381828703c83faac09a2e607fcdc10548c80a14b92",
+  "tools/dummy_agent.py": "291c8b3bf854ec0542dc3c2b1cfc2764bac765f34f183c707d77e8b4d49d8bbb",
+  "contract_device_api_expected": "658d32d8c5f2453adab50d30249742cfd81f8bf2693a4aef1f6b4efb8ebd5a34",
+  "device_api_ok": true
+}

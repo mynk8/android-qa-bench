@@ -1,0 +1,303 @@
+{"event": "install", "build": {"n": 1, "build_id": "minus-E06-11", "mask": "11", "unfixed": ["minus-0018", "minus-0019"], "present": ["minus-0018", "minus-0019"]}}
+{"event": "brief", "item_id": "minus-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1329}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1869}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1329}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1329}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 609, "y": 1047}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5, "x": 540, "y": 600}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.6, "x": 540, "y": 500}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4, "x": 540, "y": 1140}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4, "x": 540, "y": 600}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 400}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 137, "message": {"type": "bug_report", "screen": "Main screen (expense entry + history sheet)", "element": "Expense history bottom sheet (above the number pad)", "element_ref": 0, "symptom_type": "missing", "expected": "After saving a $10.05 Food expense from the main screen, today's expense appears in the history sheet above the keypad, and the \"Today\" total pill shows the day's total.", "observed": "The history sheet above the keypad is empty (no rows, no date header) both before and after saving. The \"Today $0.95\" pill that was shown at launch disappeared after saving. Analytics meanwhile reports Total Spent $70.05 with Food $10.05 today, so the entry was stored but is not shown in the history sheet.", "observed_quote": "Daily Amount exceeded", "steps": ["Launch app; main screen shows 'Today $0.95' pill and a blank history sheet above the keypad", "Enter 10.05 on keypad (keys 1, 0, ., 0, 5)", "Tap the Food category chip", "Tap the green check button", "Observe: history sheet still blank; 'Today $0.95' pill replaced by 'Daily Amount exceeded' banner", "Open Analytics: Total Spent shows $70.05 and Categories shows Food for Nov 14"], "anchor_node": {"class": "android.view.View", "contains": ["Daily Amount exceeded", "For tomorrow ", "$", "0"], "bounds": [0, 63, 1080, 903]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3, "x": 540, "y": 870}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 147, "message": {"type": "bug_report", "screen": "Budget sheet (Total budget)", "element": "Spent amount in the Total budget card", "element_ref": 4, "symptom_type": "wrong_value", "expected": "Spent should equal the sum of this period's expenses shown in Analytics: $70.05 (Groceries 40.00 + Rent 20.00 once + today's 10.05). The recurring Rent template should be counted once.", "observed": "Budget sheet shows Spent $90.05 and Available 10%. Analytics for the same period shows Total Spent $70.05. The \"How it's calculated\" dialog then shows $100 - $80 = $20 in the first block and $100 - $90.05 = $9.95 in the second, so the budget sheet's spent total is inconsistent with itself and with Analytics.", "observed_quote": "$90.05", "steps": ["Precondition data: Groceries 40.00 yesterday, Rent 20.00 recurring monthly, budget 100.00 for period 11 Nov - 04 Dec", "On main screen enter 10.05, choose Food, tap check to save", "Open Analytics: Total Spent shows $70.05", "Open budget sheet by tapping the orange budget banner: Spent shows $90.05 and Available 10%", "Tap 'Calculated amount' ($0.95): breakdown shows $100 - $80 = $20 at top and $100 - $90.05 = $9.95 lower down"], "anchor_error": "no element 4 in the latest observation"}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["minus-0019"], "per_bug": {"minus-0018": "location", "minus-0019": "ok"}}
+{"event": "hit", "bugs": ["minus-0019"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2085}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1400}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "tap_xy", "args": {"x": 400, "y": 1231}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1046}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "type", "args": {"text": "50", "clear": true, "submit": false}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 574, "y": 1080}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "tap_xy", "args": {"x": 400, "y": 1231}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1046}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "type", "args": {"text": "50", "clear": true, "submit": false}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 1080}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 997, "y": 148}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 670}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 787, "y": 1310}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 217, "message": {"type": "bug_report", "screen": "Budget sheet > How it's calculated dialog", "element": "Calculated amount card ($0.95) and its breakdown dialog", "element_ref": 19, "symptom_type": "wrong_value", "expected": "The daily calculation uses the same spent figure the sheet shows ($90.05), so the top line should read $100 - $90.05 = $9.95 and the daily amount should be $9.95 / 20 days = $0.50, matching the \"For tomorrow\" line.", "observed": "Calculated amount is $0.95, and the dialog's first block reads \"$100 - $80 = $20\" then \"$20 / 21 days = $0.95\". The next block reads \"$100 - $90.05 = $9.95\" and \"For tomorrow $9.95 / 20 days = $0.5\". The same dialog therefore uses two different spent totals ($80 and $90.05), and the headline daily amount is based on the stale $80.", "observed_quote": "$100 - $80 = $20", "steps": ["Enter 10.05 on main keypad, choose Food, tap check (budget spent becomes $90.05)", "Tap the orange budget banner to open the budget sheet: Spent $90.05, Calculated amount $0.95", "Tap 'Calculated amount' to open 'How it's calculated'", "Read the first block: $100 - $80 = $20, / 21 days = $0.95", "Read the third block: $100 - $90.05 = $9.95, For tomorrow $9.95 / 20 days = $0.5"], "anchor_error": "no element 19 in the latest observation"}}
+{"event": "scored", "report_n": 3, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "unverified_quote", "minus-0019": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 231, "message": {"type": "bug_report", "screen": "Main screen expense history sheet (portrait)", "element": "Expense history sheet above the keypad", "element_ref": 0, "symptom_type": "missing", "expected": "In portrait the history sheet shows the same content as in landscape: a \"Today\" section with the Food $10.05 row and its \"Total: $10.05\", plus the \"13 November $60\" section.", "observed": "In portrait the sheet above the keypad is empty: no \"Today\" header, no Food row, no date sections. After rotating to landscape the same sheet shows \"Today\", \"Food 01:52 AM $10.05\", \"Total: $10.05\" and \"13 November $60\". Rotating back to portrait empties it again.", "observed_quote": "Total: $10.05", "steps": ["With one Food expense of 10.05 saved today, portrait main screen shows an empty history sheet", "Rotate device to landscape: sheet shows 'Today', 'Food 01:52 AM $10.05', 'Total: $10.05' and '13 November $60'", "Rotate back to portrait: sheet is empty again", "Relaunch app in portrait: sheet still empty"], "anchor_node": {"class": "android.view.View", "contains": ["Daily Amount exceeded", "For tomorrow ", "$", "0"], "bounds": [0, 63, 1080, 903]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 730, "y": 768}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "tap_xy", "args": {"x": 730, "y": 559}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "tap_xy", "args": {"x": 538, "y": 893}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "tap_xy", "args": {"x": 730, "y": 1019}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1046, "y": 665}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1046, "y": 665}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 1019}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "tap_xy", "args": {"x": 730, "y": 1019}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "tap_xy", "args": {"x": 626, "y": 779}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 1019}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 1000}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "tap_xy", "args": {"x": 730, "y": 320}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "type", "args": {"text": "10.05", "clear": true, "submit": false}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1296, "y": 997}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 902}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 4.0}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1046, "y": 665}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "tap_xy", "args": {"x": 626, "y": 779}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "tap_xy", "args": {"x": 659, "y": 149}}}
+{"event": "agent", "step": 288, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 5.0}}}
+{"event": "agent", "step": 289, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 290, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 291, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 292, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 293, "message": null}

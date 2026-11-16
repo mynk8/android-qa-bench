@@ -1,0 +1,184 @@
+{
+  "bug_id": "markor-0007",
+  "runs": 1,
+  "started": "2026-11-11T01:42:26+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Money",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Costs 5 and 10",
+          "Rotate",
+          "Open with",
+          "Jump to bottom",
+          "8:12",
+          "8:12\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 21.7,
+      "screenshot_sha256": "4a4e7c3e76d7485ca45f7e47820628eb4c6df2ad60b413c58fac681b7a4f11f4",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0007-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "8:13",
+          "8:13\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Money",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Costs 5 and 10",
+          "Rotate",
+          "Open with",
+          "Jump to bottom"
+        ]
+      },
+      "seconds": 27.3,
+      "screenshot_sha256": "7e9e842425a06a28d3b3f06c09cad485d13d25e51c179de2e19e29fc4a228715",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0007-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Shopping",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Shopping",
+          "Shopping",
+          "Shopping",
+          "\u2022 ",
+          "milk",
+          "\u2022 ",
+          "eggs",
+          "Rotate",
+          "Open with",
+          "Jump to bottom",
+          "8:13",
+          "8:13\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 23.5,
+      "screenshot_sha256": "3e388a26b8565c2c7df6a54d6059b2e541ea5c1d5b2cedeb62adfa836a9d5b9a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "markor-0007-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "8:14",
+          "8:14\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Money",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Costs $5 and $10",
+          "Rotate",
+          "Open with",
+          "Jump to bottom"
+        ]
+      },
+      "seconds": 24.7,
+      "screenshot_sha256": "0ce7a0f7025eb09fb263f8c15b59b7410f52fc33690f4aee494295cf958d730f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0007-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Money",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Costs $5 and $10",
+          "Rotate",
+          "Open with",
+          "Jump to bottom",
+          "8:14",
+          "8:14\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "0ce7a0f7025eb09fb263f8c15b59b7410f52fc33690f4aee494295cf958d730f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0007-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "8:15",
+          "8:15\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Shopping",
+          "Edit Mode",
+          "Search",
+          "More options",
+          "Shopping",
+          "Shopping",
+          "Shopping",
+          "\u2022 ",
+          "milk",
+          "\u2022 ",
+          "eggs",
+          "Rotate",
+          "Open with",
+          "Jump to bottom"
+        ]
+      },
+      "seconds": 21.9,
+      "screenshot_sha256": "a69a4f362a8975e9ae4acb1bb70a4964e21aa506807ffc8e41b52139ca3a72ba",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "markor-0007-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T01:45:18+0530"
+}

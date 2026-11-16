@@ -1,0 +1,263 @@
+{
+  "run_id": "fd9d1e6da220",
+  "item_id": "idlefantasy-E02",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Quests \u2014 Gathering and Crafting Skills",
+      "element": "Incomplete quest rows",
+      "element_ref": 5,
+      "field": "progress",
+      "symptom_type": "missing",
+      "expected": "Incomplete quests show current/target progress and a progress bar.",
+      "observed": "Incomplete permanent quest rows show only title, objective and Go to Skill, with no progress. Daily rows do show progress. Reproduced by switching categories and returning.",
+      "steps": [
+        "Open Quests > Gathering; inspect Fishing II and Mining II.",
+        "Switch to Crafting Skills; inspect Construction I and Cooking quests.",
+        "Return between categories; progress remains absent."
+      ],
+      "anchor_node": {
+        "text": "Construction I",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          396,
+          829,
+          445
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear",
+      "element": "Eligibility preview",
+      "element_ref": 24,
+      "observed_quote": "Runite Platebody",
+      "symptom_type": "wrong_value",
+      "expected": "Only genuinely outdated equipment qualifies; preserve best usable gear per slot and special-purpose capes.",
+      "observed": "Preview includes every unequipped armor piece including Runite Platebody, both helmets, Gilded and Slayer platebodies and Agility/Mercantile capes despite no superior replacements in their slots. Reopening reproduces.",
+      "steps": [
+        "With starting inventory and Keep one off, open Shop > Sell > Sell Old Gear.",
+        "Scroll preview to bottom: Runite Platebody, Slayer Platebody and Steel Full Helmet are selected.",
+        "Cancel then reopen and scroll; same candidates recur."
+      ],
+      "anchor_node": {
+        "text": "Runite Platebody",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          1720,
+          843,
+          1763
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Junk",
+      "element": "Material candidates",
+      "element_ref": 3,
+      "observed_quote": "Cowhide",
+      "symptom_type": "wrong_value",
+      "expected": "Preserve useful crafting inputs, including materials used indirectly through processing and non-crafting uses.",
+      "observed": "Sell Junk selects Cowhide x14, Feather x60 and Wool x7 along with Pumpkin and Tomato. Cowhide and Wool are processing inputs and feathers are useful for arrows; these should not be unused junk.",
+      "steps": [
+        "Starting inventory, Keep one off, open Shop > Sell > Sell Junk.",
+        "Observe Cowhide, Feather and Wool in sale preview.",
+        "Cancel and reopen; all three remain selected."
+      ],
+      "anchor_node": {
+        "text": "Cowhide",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          1544,
+          873,
+          1587
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Quest log",
+      "element": "Reset on completed quest",
+      "element_ref": 30,
+      "observed_quote": "Reset",
+      "symptom_type": "wrong_value",
+      "expected": "The player's completed permanent quests remain completed; quest log should not expose developer/debug reset actions.",
+      "observed": "Every completed permanent quest has a Reset button. Tapping Fishing I Reset immediately cleared its completion and removed Fishing II with no confirmation. Smithing I also exposes Reset.",
+      "steps": [
+        "Open Quests > Gathering with initial completed Fishing I, Mining I and Woodcutting I.",
+        "Observe Reset below each Completed label.",
+        "Tap Fishing I Reset: completion disappears and Fishing II vanishes.",
+        "Open Crafting Skills and scroll to Smithing I; Reset appears there too."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Reset"
+        ],
+        "bounds": [
+          42,
+          1685,
+          201,
+          1811
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Quests > Gathering",
+      "element": "Quest reward details",
+      "element_ref": 5,
+      "field": "rewards",
+      "symptom_type": "missing",
+      "expected": "Quest log rows show the rewards/bonuses for completing each quest so players can see what they earned or will earn.",
+      "observed": "Gathering and Crafting Skills permanent quest rows omit all reward information: only name, Go to Skill, objective, and Completed/Reset on completed rows are visible. No coin, XP or permanent bonus details are shown.",
+      "steps": [
+        "Open Quests > Gathering.",
+        "Inspect completed Mining I and Woodcutting I and incomplete Mining II.",
+        "Switch to Crafting Skills and inspect Smithing I, then return to Gathering; rewards remain absent."
+      ],
+      "anchor_node": {
+        "text": "Fishing I",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          396,
+          829,
+          445
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear",
+      "element": "Bulk preview and result",
+      "element_ref": 0,
+      "observed_quote": "Sold old equipment for 0 coins",
+      "symptom_type": "wrong_value",
+      "expected": "Unsellable skill capes are excluded from old-gear candidates and total; preview matches actual sale.",
+      "observed": "After selling other gear, preview still offers Agility Cape \u00d71 (6) and Mercantile Cape \u00d71 (6), Total 12. Sell All reports 0 coins and both capes remain. Repeated the cape-only sale twice. Initial preview was 5,428 but history records 5,416.",
+      "steps": [
+        "Set Keep one off and open Sell Old Gear.",
+        "Preview includes Agility Cape and Mercantile Cape; confirm sale.",
+        "Open Sell Old Gear again: capes only, Total 12.",
+        "Confirm Sell All: Sold old equipment for 0 coins; capes remain.",
+        "Repeat: same 12 preview and 0 result."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Sold old equipment for 0 coins",
+          "Shop"
+        ],
+        "bounds": [
+          42,
+          75,
+          1037,
+          201
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ],
+      "present": [
+        "idlefantasy-0003",
+        "idlefantasy-0005"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/idlefantasy-E02/fd9d1e6da220/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0003": "reported",
+    "idlefantasy-0005": "missed_unreached"
+  },
+  "elapsed_s": 358.573,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept shop buy/sell dialogs, bulk previews/cancel/confirm/repeat, history, keep-one on/off persistence, search/filter/sort, quantity boundaries and rotation; quest categories, completed filtering/reversal, navigation, skill quest board and rotation. Confirmed and logged old-gear preview including unsellable skill capes (12 preview / 0 actual); other submitted concerns not reproduced by developer. Tests changed inventory through bulk sales and reset Fishing I through its visible Reset action; no sessions started."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "found": [
+    "idlefantasy-0003"
+  ],
+  "required": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "missed": [
+    "idlefantasy-0005"
+  ],
+  "true_positives": 1,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 154,
+  "precision": 0.16666666666666666,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0003",
+    "idlefantasy-0005"
+  ],
+  "bug_meta": {
+    "idlefantasy-0003": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

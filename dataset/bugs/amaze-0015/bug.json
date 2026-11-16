@@ -1,0 +1,64 @@
+{
+  "bug_id": "amaze-0015",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "action has unintended effect",
+  "symptom_type": "wrong_value",
+  "fix_date": "2025-09-02",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "count": [
+        {
+          "id": "com.amaze.filemanager:id/item_count"
+        }
+      ],
+      "select_all": [
+        {
+          "text": "Select All"
+        }
+      ],
+      "select_inverse": [
+        {
+          "text": "Select Inverse"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0015-buggy",
+    "fixed": "amaze-0015-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0015.patch",
+    "confidence": "high",
+    "lines_changed": 11,
+    "approach": "SelectionPopupMenu select_all calls toggleChecked(!areAllChecked(...)) again, so a second Select All clears the selection instead of keeping it."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

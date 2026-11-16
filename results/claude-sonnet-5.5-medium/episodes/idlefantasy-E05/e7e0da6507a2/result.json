@@ -1,0 +1,157 @@
+{
+  "run_id": "e7e0da6507a2",
+  "item_id": "idlefantasy-E05",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile",
+      "element": "Profile side tab bar (Skills/Inventory/Gear/Pets...)",
+      "symptom_type": "not_persisted",
+      "expected": "Selected tab (Pets) stays selected after rotating the device",
+      "observed": "After rotating to landscape the Profile screen reset to the Skills tab; the Pets selection was lost",
+      "steps": [
+        "Open Profile tab",
+        "Tap Pets in the left tab list",
+        "Rotate device to landscape",
+        "Profile shows Skills tab instead of Pets"
+      ],
+      "observed_quote": "Skills"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Combat > Gear",
+      "element": "Stats summary line",
+      "symptom_type": "wrong_value",
+      "expected": "With Ranged (or Magic) style selected and no weapon, ATK/STR derive from Ranged/Magic level 40 (plus bonuses), not from Attack 70/Strength 70",
+      "observed": "Ranged and Magic styles show the same melee-derived stats as Attack style minus the sword: ATK 79, STR 70 (Attack level 70 + 9 prestige; Strength 70)",
+      "observed_quote": "ATK 79  STR 70  DEF 75",
+      "steps": [
+        "Open Combat tab, Gear sub-tab",
+        "Tap Ranged style (also Magic)",
+        "Stats line shows ATK 79 STR 70 DEF 75 despite Ranged/Magic level 40"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Pets",
+      "element": "Pet list",
+      "symptom_type": "missing",
+      "expected": "The list scrolls and shows all 30 pets",
+      "observed": "Header says 30 pets, but only 7 are listed (Dragon Whelp to Tangleroot). Swiping up doesn't scroll, so the other pets can't be reached.",
+      "observed_quote": "0 / 30 obtained",
+      "steps": [
+        "Open Profile",
+        "Tap Pets",
+        "Swipe up on the list",
+        "List stays at 7 pets, last is Tangleroot"
+      ],
+      "element_ref": 20,
+      "anchor_node": {
+        "text": "0 / 30 obtained",
+        "class": "android.widget.TextView",
+        "bounds": [
+          334,
+          527,
+          543,
+          546
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0009",
+        "idlefantasy-0010"
+      ],
+      "present": [
+        "idlefantasy-0009",
+        "idlefantasy-0010"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/idlefantasy-E05/e7e0da6507a2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0009": "missed_unreached",
+    "idlefantasy-0010": "reported"
+  },
+  "elapsed_s": 73.481,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "One bug was confirmed: the Profile tab selection resets to Skills when the device is rotated. Two other reports were not reproduced by the developer. The first was Ranged/Magic stats on the combat Gear screen that look melee-derived. The second was a pets list that shows 7 of 30 and doesn't scroll. I didn't test the Pets tab beyond that, and I didn't test combat sessions."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "found": [
+    "idlefantasy-0010"
+  ],
+  "required": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "missed": [
+    "idlefantasy-0009"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 22,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "bug_meta": {
+    "idlefantasy-0009": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0010": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "run_id": "c5dd737b4fd0",
+  "item_id": "minus-E06",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet",
+      "element": "Spent amount in budget summary",
+      "element_ref": 4,
+      "field": "Spent",
+      "symptom_type": "wrong_value",
+      "expected": "Spent should reflect actual expenses in the current period. The one-off Groceries expense is $40; the recurring Rent template is not an additional $40 expense unless an occurrence has been recorded.",
+      "observed": "Budget summary shows $80 spent, double the $40 one-off expense, while the $20 recurring monthly Rent template is part of the configured entries.",
+      "observed_quote": "$80\nSpent",
+      "steps": [
+        "Open the main screen with the provided budget and expenses.",
+        "Tap the budget summary at the top of the main screen.",
+        "Read the Spent amount."
+      ],
+      "anchor_node": {
+        "text": "$80",
+        "class": "android.widget.TextView",
+        "bounds": [
+          105,
+          910,
+          258,
+          989
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0018",
+        "minus-0019"
+      ],
+      "present": [
+        "minus-0018",
+        "minus-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-c/episodes/minus-E06/c5dd737b4fd0/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0018": "missed_unreached",
+    "minus-0019": "missed_unreached"
+  },
+  "elapsed_s": 56.192,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.1,
+    "notes": ""
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "found": [],
+  "required": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "missed": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 12,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "bug_meta": {
+    "minus-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

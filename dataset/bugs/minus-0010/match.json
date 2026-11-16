@@ -1,0 +1,89 @@
+{
+  "screens": [
+    "analytics"
+  ],
+  "elements": [
+    "total spent",
+    "total expenses",
+    "spent card"
+  ],
+  "fields": [
+    "amount"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "analytics total spent is 60 including the paid recurring rent",
+    "recurring expense included"
+  ],
+  "observed_contains_any": [
+    "total spent shows 40",
+    "recurring expense omitted"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "60",
+      "60.00",
+      "total expenses",
+      "spent",
+      "total spent",
+      "2",
+      "sum",
+      "spending",
+      "excludes",
+      "exclud*"
+    ],
+    [
+      "rent",
+      "recurr*",
+      "includ*",
+      "charge*",
+      "60",
+      "60.00",
+      "total expenses",
+      "spent",
+      "expenses 2",
+      "repeat*",
+      "subscription*",
+      "payment*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "40",
+      "40.00",
+      "exclud*",
+      "omit*",
+      "missing",
+      "without",
+      "not includ*",
+      "left out",
+      "ignor*",
+      "only",
+      "1",
+      "one",
+      "short",
+      "subscription*",
+      "repeating",
+      "less"
+    ]
+  ],
+  "location_concepts": [
+    "analytics",
+    "total spent",
+    "total"
+  ],
+  "anchors": {
+    "elements": [
+      "Total Expenses",
+      "$1.74",
+      "Total spent"
+    ],
+    "observed": [
+      "$1.74"
+    ]
+  }
+}

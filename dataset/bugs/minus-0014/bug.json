@@ -1,0 +1,234 @@
+{
+  "bug_id": "minus-0014",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "interaction",
+  "issta_class": "action has unintended effect",
+  "symptom_type": "no_effect",
+  "fix_date": "2026-08-13",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "key_1": [
+        {
+          "text": "1"
+        }
+      ],
+      "key_2": [
+        {
+          "text": "2"
+        }
+      ],
+      "comment_tag": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": "Category"
+        },
+        {
+          "desc": "Edit category"
+        }
+      ],
+      "comment_field": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "comment_check": [
+        {
+          "desc": "Done"
+        },
+        {
+          "desc": "Apply"
+        },
+        {
+          "desc": "Confirm"
+        }
+      ],
+      "save_expense": [
+        {
+          "desc": "Editor action"
+        },
+        {
+          "desc": "Save"
+        },
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Apply"
+        }
+      ],
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "analytics": [
+        {
+          "desc": "Analytics"
+        },
+        {
+          "text": "Analytics"
+        }
+      ],
+      "income_toggle": [
+        {
+          "desc": "Income"
+        },
+        {
+          "text": "+"
+        }
+      ],
+      "key_3": [
+        {
+          "text": "3"
+        }
+      ],
+      "key_0": [
+        {
+          "text": "0"
+        }
+      ],
+      "split": [
+        {
+          "text": "Budget split"
+        },
+        {
+          "text": "Daily amount"
+        },
+        {
+          "text": "Split"
+        }
+      ],
+      "split_equal": [
+        {
+          "text": "Split equally"
+        },
+        {
+          "text": "Equal"
+        }
+      ],
+      "split_dynamic": [
+        {
+          "text": "Rebalanced daily"
+        },
+        {
+          "text": "Dynamic"
+        }
+      ],
+      "currency": [
+        {
+          "text": "Currency"
+        }
+      ],
+      "currency_eur": [
+        {
+          "text": "EUR"
+        }
+      ],
+      "currency_usd": [
+        {
+          "text": "USD"
+        }
+      ],
+      "period": [
+        {
+          "text": "Period"
+        }
+      ],
+      "period_weekly": [
+        {
+          "text": "Weekly"
+        },
+        {
+          "text": "This week"
+        }
+      ],
+      "period_monthly": [
+        {
+          "text": "Monthly"
+        },
+        {
+          "text": "This month"
+        }
+      ],
+      "history": [
+        {
+          "text": "History"
+        },
+        {
+          "desc": "History"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        },
+        {
+          "desc": "Settings"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0014-buggy",
+    "fixed": "minus-0014-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "hardness": {
+    "steps_to_trigger": 4,
+    "needs_state_persistence": true,
+    "symptom_distance": "other_screen",
+    "visual_salience": "low"
+  },
+  "hard_slice": true,
+  "head_port": {
+    "patch": "private/forwardport/minus-0014.patch",
+    "confidence": "high",
+    "lines_changed": 12,
+    "approach": "Re-add an onSaveExpense callback to EditableCategoryTag (and CategoryToolbar) and wire the Editor's onApply into it, so confirming the comment tag with the check mark closes the editor and also saves the expense."
+  }
+}

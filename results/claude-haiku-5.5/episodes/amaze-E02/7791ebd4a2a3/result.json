@@ -1,0 +1,206 @@
+{
+  "run_id": "7791ebd4a2a3",
+  "item_id": "amaze-E02",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - Bookmarks",
+      "element": "Bookmark row \"Alpha\" in the drawer (LinearLayoutCompat, 399,788)",
+      "element_ref": 38,
+      "field": "Bookmark entry for folder Alpha",
+      "symptom_type": "wrong_navigation",
+      "expected": "After folder Amaze/Alpha is renamed to Alpha2, the bookmark either follows the folder (shows \"Alpha2\" and opens /AndroidQA/Amaze/Alpha2) or is updated/removed. It should not point to a path that no longer exists.",
+      "observed": "Drawer still lists bookmark \"Alpha\" after the rename; tapping it opens /storage/emulated/0/AndroidQA/Amaze/Alpha, which shows \"0 folders and 0 files\" and \"No Files\" (the folder is now Alpha2).",
+      "observed_quote": "Alpha",
+      "steps": [
+        "Open AndroidQA/Amaze. On folder Alpha, open its Properties (three dots) menu and tap 'Add to Bookmarks'.",
+        "Open the navigation drawer; the bookmark 'Alpha' is listed.",
+        "Back out to AndroidQA/Amaze, open Alpha's menu and tap Rename; change the name to 'Alpha2' and tap SAVE. The list now shows 'Alpha2'.",
+        "Open the navigation drawer. The bookmark still reads 'Alpha'.",
+        "Tap the 'Alpha' bookmark. The path shows /storage/emulated/0/AndroidQA/Amaze/Alpha and the screen shows 'No Files' with '0 folders and 0 files'."
+      ],
+      "anchor_error": "no element 38 in the latest observation"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Folder list - AndroidQA/Amaze",
+      "element": "Folder row \"Alpha\" (modified 10:30 PM)",
+      "element_ref": 8,
+      "field": "Stale bookmark side effect",
+      "symptom_type": "wrong_value",
+      "expected": "Opening a bookmark whose folder no longer exists should not create a folder. Amaze/Alpha was renamed to Alpha2, so Amaze should still contain only Alpha2 (plus Beta and the files).",
+      "observed": "After tapping the stale 'Alpha' bookmark (path Amaze/Alpha, which had been renamed to Alpha2), the folder list for AndroidQA/Amaze now shows a new folder 'Alpha' modified 'Nov 13 | 10:30 PM' alongside 'Alpha2', and the header reads '3 folders and 5 files'.",
+      "observed_quote": "Nov 13 | 10:30 PM",
+      "steps": [
+        "Open AndroidQA/Amaze. Long-press/menu on folder Alpha; tap 'Add to Bookmarks'. Open the drawer and confirm 'Alpha' is listed.",
+        "Rename folder Alpha to 'Alpha2' (menu > Rename > SAVE). The folder list shows 'Alpha2'.",
+        "Open the drawer. The bookmark still reads 'Alpha'. Tap it.",
+        "The screen shows /storage/emulated/0/AndroidQA/Amaze/Alpha with '0 folders and 0 files' and 'No Files'.",
+        "Go up to AndroidQA/Amaze. The list now contains a new folder 'Alpha' dated Nov 13 | 10:30 PM, next to 'Alpha2'."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Alpha",
+          "Nov 13 | 10:30\u202fPM"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - Bookmarks",
+      "element": "Bookmark list in the drawer (first entry after Internal Storage is DCIM)",
+      "element_ref": 6,
+      "field": "User bookmarks",
+      "symptom_type": "not_persisted",
+      "expected": "Bookmarks added via 'Add to Bookmarks' (Amaze, Alpha, Beta) stay listed in the drawer, above the default entries, across rotation and when the drawer is reopened.",
+      "observed": "After the bookmarks 'Amaze', 'Alpha' were added and listed, rotating the device to landscape and back made them disappear: the drawer lists only Internal Storage, DCIM, Download, Movies, Music, Pictures. Adding Beta then showed the toast 'Bookmarks Added', but reopening the drawer still lists only the defaults, with no Beta.",
+      "observed_quote": "Bookmarks Added",
+      "steps": [
+        "Open AndroidQA/Amaze. On folder Alpha, open its menu (three dots) and tap 'Add to Bookmarks'. Open the drawer: 'Alpha' is listed.",
+        "Rotate the device to landscape, then back to portrait.",
+        "Open the drawer. The 'Alpha' bookmark is gone; only Internal Storage, DCIM, Download, Movies, Music, Pictures and the Quick access / Recent / Images / Videos / Audio / Documents / APKs entries remain.",
+        "Open AndroidQA/Amaze, open Beta's menu (three dots), tap 'Add to Bookmarks'. The toast 'Bookmarks Added' appears.",
+        "Open the drawer. 'Beta' is not listed."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "3 folders and 5 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer - Bookmarks (after device rotation)",
+      "element": "Drawer bookmark list (first entry after Internal Storage is now DCIM; 'Beta' is gone)",
+      "element_ref": 6,
+      "field": "User-added bookmarks",
+      "symptom_type": "not_persisted",
+      "expected": "A bookmark added with 'Add to Bookmarks' stays in the drawer after the device is rotated. The drawer keeps listing 'Beta' above DCIM.",
+      "observed": "Before rotation the drawer listed 'Beta' above DCIM. After rotating to landscape, the drawer starts with DCIM and 'Beta' is gone. Earlier bookmarks ('Alpha', 'QA Amaze') were also lost after a rotation.",
+      "observed_quote": "Bookmarks Added",
+      "steps": [
+        "In portrait, open AndroidQA/Amaze and open the menu (three dots) of folder Beta. Tap 'Add to Bookmarks' (toast 'Bookmarks Added').",
+        "Open the navigation drawer (Navigate up until the drawer opens). 'Beta' is listed above DCIM.",
+        "Close the drawer and rotate the device to landscape.",
+        "The drawer panel now lists Internal Storage, DCIM, Download, Movies, Music, Pictures. 'Beta' is missing."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "DCIM"
+        ],
+        "bounds": [
+          0,
+          645,
+          656,
+          771
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0007",
+        "amaze-0008"
+      ],
+      "present": [
+        "amaze-0007",
+        "amaze-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/amaze-E02/7791ebd4a2a3/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0007": "missed_unreached",
+    "amaze-0008": "missed_unreached"
+  },
+  "elapsed_s": 408.394,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "missed": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 239,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "bug_meta": {
+    "amaze-0007": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "amaze-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

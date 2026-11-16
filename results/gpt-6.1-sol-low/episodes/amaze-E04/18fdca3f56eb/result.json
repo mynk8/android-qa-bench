@@ -1,0 +1,159 @@
+{
+  "run_id": "18fdca3f56eb",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Internal storage after Images category",
+      "element": "Create floating action button",
+      "symptom_type": "missing",
+      "expected": "Restore the create button when returning to a writable storage folder.",
+      "observed": "After leaving Images with Home, the create button remains absent in internal storage and nested folders. Rotation restores it; reproduced twice.",
+      "steps": [
+        "Open drawer and choose Images.",
+        "Tap toolbar Home.",
+        "Open AndroidQA/Amaze; observe missing create button.",
+        "Rotate landscape then portrait; button returns.",
+        "Repeat Images > Home; button disappears again."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Folder properties",
+      "element": "Properties dialog",
+      "symptom_type": "missing",
+      "expected": "Keep the properties dialog and its computed folder details open across rotation.",
+      "observed": "Rotating dismisses the Properties dialog and returns to the file list. Reproduced with Beta and Alpha.",
+      "steps": [
+        "Open AndroidQA/Amaze.",
+        "Open Beta row menu > Properties.",
+        "Rotate to landscape: dialog disappears.",
+        "Return portrait and repeat with Alpha: same result."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Images category",
+      "element": "Current view/path",
+      "element_ref": 5,
+      "field": "fullpath",
+      "symptom_type": "wrong_navigation",
+      "expected": "Remain in Images with the two photos after rotation; preserve selection when active.",
+      "observed": "Rotation switches Images to internal storage. With photo.jpg selected it also leaves selection mode showing 0. Reproduced again without selection.",
+      "observed_quote": "/storage/emulated/0",
+      "steps": [
+        "In portrait open drawer > Images; keep.jpg and photo.jpg appear.",
+        "Select photo.jpg and rotate landscape then portrait; view becomes internal storage with selection count 0.",
+        "Exit selection, open drawer > Images again.",
+        "Rotate landscape then portrait without selection; again shows /storage/emulated/0."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/fullpath",
+        "text": "/storage/emulated/0",
+        "class": "android.widget.TextView",
+        "bounds": [
+          189,
+          241,
+          626,
+          304
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/amaze-E04/18fdca3f56eb/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "reported",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 350.148,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Exercised drawer category entry/exit (Images and empty APKs), Home/Back/storage/bookmark routes, repeated drawer opens, bookmark creation/navigation/removal and empty-name validation; multiple selection, Select All/Deselect All repetition, partial deselection/reselection, hide/unhide and delete-confirmation cancellation; file/folder properties, plus-sign filename, folder sizes compared with readmes, media-hide persistence/reversal, and rotation. Confirmed/logged missing create FAB after Images > Home. Also filed observed dialog loss and category/selection loss on rotation; developer could not reproduce those. All original six entries and nested readmes retained; hidden-file settings reversed and temporary bookmark removed."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [
+    "amaze-0013"
+  ],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0015"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 147,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

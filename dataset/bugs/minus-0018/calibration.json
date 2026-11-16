@@ -1,0 +1,213 @@
+{
+  "bug_id": "minus-0018",
+  "runs": 1,
+  "started": "2026-11-11T10:18:55+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "groceries_before": true,
+        "groceries_after": true,
+        "texts": [
+          "4:49",
+          "4:49\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Groceries",
+          "12:00 PM",
+          "$40",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $60",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 28.5,
+      "screenshot_sha256": "fc4963388610c846e07de8f1d01fbd4f5ce9415689052a62ff4b7180fd5476d5",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0018-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "rent_before": true,
+        "rent_after": true,
+        "texts": [
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $20",
+          "Expand",
+          "09 November",
+          "$40",
+          "Show subscriptions outside of the period",
+          "4:50",
+          "4:50\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 32.6,
+      "screenshot_sha256": "62106fd11fe7b78fc20421d79ff67bfc6409e203e9302dc34d2c17fd7314afca",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0018-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "4:50",
+          "4:50\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Groceries",
+          "12:00 PM",
+          "$40",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $60",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 20.1,
+      "screenshot_sha256": "e8f69c9b7355fedcad42bd5fd03fbf462ac592cda7b890d87f6f8278605b7c87",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0018-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "groceries_before": true,
+        "groceries_after": false,
+        "texts": [
+          "4:51",
+          "4:51\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Expand",
+          "10 November",
+          "$60",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 25.9,
+      "screenshot_sha256": "25503cde84c2228e1a679a4b9505ce9ce94a7953745091df9a5682a14894e719",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0018-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "rent_before": true,
+        "rent_after": false,
+        "texts": [
+          "4:51",
+          "4:51\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Expand",
+          "10 November",
+          "$20",
+          "Expand",
+          "09 November",
+          "$40",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 34.4,
+      "screenshot_sha256": "4f2c032aa1eb0422a96fd19b6cd3ffb5c4a40a04ec64ca48671c6585f5dfd44f",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0018-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "4:52",
+          "4:52\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Groceries",
+          "12:00 PM",
+          "$40",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $60",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 22.0,
+      "screenshot_sha256": "7a4824d26a696601abd1c292b1a5f80bdf42fe38a615ffd389810e1b02dc099c",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0018-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:22:12+0530"
+}

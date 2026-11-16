@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task list",
+    "element": "date chip",
+    "field": "start date",
+    "symptom_type": "duplicated",
+    "expected": "only one date chip is shown when start and due are the same day",
+    "observed": "a start-date chip duplicates the due date",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task list",
+    "element": "something",
+    "field": "start date",
+    "symptom_type": "duplicated",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

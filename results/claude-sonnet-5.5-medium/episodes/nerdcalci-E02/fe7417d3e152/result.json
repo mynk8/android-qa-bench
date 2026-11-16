@@ -1,0 +1,150 @@
+{
+  "run_id": "fe7417d3e152",
+  "item_id": "nerdcalci-E02",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Number bases file",
+      "element": "result of line 1",
+      "symptom_type": "wrong_value",
+      "expected": "15 dec in hex = 0xF; 10 dec in bin = 0b1010; 64 dec in oct = 0o100; 255 dec in hex = 0xFF",
+      "observed": "Results are 0x96, 0b1100100, 0o1200, 0x9F6 (value multiplied by 10 for dec, i.e. scaled by radix)",
+      "observed_quote": "0x96",
+      "element_ref": 2,
+      "steps": [
+        "Open Number bases file",
+        "Look at result of '15 dec in hex'"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "0x96"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Date gaps file",
+      "element": "result of line 1",
+      "symptom_type": "wrong_value",
+      "expected": "45 y 2 mo 18 d 20 h 17 min 9 s (line 2: 4 y 5 mo 14 d 11 h 25 min 30 s)",
+      "observed": "Day component is one too high in datetime ranges: 19 d and 15 d",
+      "observed_quote": "45 y 2 mo 19 d 20 h 17 min 9 s",
+      "element_ref": 3,
+      "steps": [
+        "Open Date gaps file",
+        "Check results of lines 1 and 2"
+      ],
+      "anchor_node": {
+        "text": "45 y 2 mo 19 d 20 h 17 min 9 s",
+        "class": "android.widget.TextView",
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ],
+      "present": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/nerdcalci-E02/fe7417d3e152/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0003": "reported",
+    "nerdcalci-0004": "reported"
+  },
+  "elapsed_s": 81.118,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.7,
+    "notes": "I filed two bugs. Number base conversions return values scaled by the radix, for example 15 dec in hex shows 0x96. Datetime ranges in Date gaps show a day count that is one too high. I checked the other files and they looked right: Temperatures, Temperature sums, Time differences, Remainders, Percentages, Expenses, Monthly budget and the home list order. I did not test rotation or state persistence."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "found": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "required": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 24,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "bug_meta": {
+    "nerdcalci-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0004": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "episode_id": "amaze-E02",
+  "start_build": "amaze-E02-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 46.0,
+      "screenshot_sha256": "f0e20a2a8ec3a57c9963ae5286fb5300830f70331cf5f8b68072917392895bf2",
+      "bug": "amaze-0007",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 33.9,
+      "screenshot_sha256": "a87c7435e87733f49eb52f82841339c48a5c90beae2ab11abedb505d063e376c",
+      "bug": "amaze-0007",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "headers": [
+          "folders",
+          "files"
+        ],
+        "texts": [
+          "10:38",
+          "10:38\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "/storage/emulated/0/AndroidQA/Amaze",
+          "2 folders and 4 files",
+          "Folders",
+          "Alpha",
+          "Nov 10 | 10:37\u202fPM",
+          "Properties",
+          "Beta",
+          "Nov 10 | 10:37\u202fPM",
+          "Properties",
+          "Files",
+          "icon",
+          "keep.jpg",
+          "Nov 10 | 10:38\u202fPM",
+          "21.00 kB",
+          "Properties",
+          "notes.txt",
+          "Nov 10 | 10:38\u202fPM",
+          "15 B",
+          "Properties",
+          "icon",
+          "photo.jpg",
+          "Nov 10 | 10:38\u202fPM",
+          "20.00 kB",
+          "Properties",
+          "report+final.txt",
+          "Nov 10 | 10:38\u202fPM",
+          "13 B",
+          "Properties"
+        ]
+      },
+      "seconds": 26.2,
+      "screenshot_sha256": "fcfed9786f9ead5b3fe626614ff6abff5a540ccaa64042c99593dcb8a4ac99ef",
+      "bug": "amaze-0008",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "10:38",
+          "10:38\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "/storage/emulated/0/AndroidQA/Amaze",
+          "2 folders and 4 files",
+          "Folders",
+          "Alpha",
+          "Nov 10 | 10:38\u202fPM",
+          "Properties",
+          "Beta",
+          "Nov 10 | 10:38\u202fPM",
+          "Properties",
+          "Files",
+          "icon",
+          "keep.jpg",
+          "Nov 10 | 10:38\u202fPM",
+          "21.00 kB",
+          "Properties",
+          "notes.txt",
+          "Nov 10 | 10:38\u202fPM",
+          "15 B",
+          "Properties",
+          "icon",
+          "photo.jpg",
+          "Nov 10 | 10:38\u202fPM",
+          "20.00 kB",
+          "Properties",
+          "report+final.txt",
+          "Nov 10 | 10:38\u202fPM",
+          "13 B",
+          "Properties"
+        ]
+      },
+      "seconds": 27.2,
+      "screenshot_sha256": "89beca0e3f4e7c79d4faf44a986863c12277deaa7e377040fff1b312bed9cc2d",
+      "bug": "amaze-0008",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

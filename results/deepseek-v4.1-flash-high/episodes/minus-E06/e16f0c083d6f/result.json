@@ -1,0 +1,128 @@
+{
+  "run_id": "e16f0c083d6f",
+  "item_id": "minus-E06",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet (opened from home screen budget pill)",
+      "element": "Spent amount / Available percentage summary card",
+      "field": "Spent",
+      "symptom_type": "wrong_value",
+      "expected": "Spent should be $66 (the sum of the actual expenses: $40 Groceries + $20 Rent + $6 test expense), so Available should be 34%, matching Analytics (Total Spent $66, Available: 34%) and the expense history totals.",
+      "observed": "Budget sheet summary shows Spent $86 and Available: 14%, which is $20 more than the actual expenses. The recurring Rent expense ($20, already listed once in expense history on 13 November) appears to be counted twice because the recurring template is also included in the summary entries. Analytics shows Total Spent $66 / Available: 34% and the history shows the three real expenses only ($40 + $20 + $6).",
+      "steps": [
+        "On the home screen tap the budget pill (\"Today / For tomorrow\") to open the budget sheet",
+        "Read the summary card: it shows Spent $86 and Available: 14%",
+        "Go to Analytics: the same period shows Total Spent $66 and Available: 34%",
+        "Open Analytics > Total Expenses: history lists only Groceries $40, Rent $20 (recurrent) and the $6 Food expense",
+        "Reopen the budget sheet from the home pill: Spent is still $86 instead of $66 (the $20 recurring Rent template is double counted)"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet (opened by tapping the budget pill on the home screen)",
+      "element": "Spent summary card (amount + Available %)",
+      "field": "Spent / Available",
+      "symptom_type": "wrong_value",
+      "expected": "Spent should be $60.00 and Available should be 40% for the current period: the only in-period entries are Groceries $40 + Rent $20 (expense history Total: $60; Analytics Total Spent $60 / Available: 40%).",
+      "observed": "Budget sheet spends shows $80 and Available: 20% \u2014 $20 too high. The recurring Rent template ($20) is being counted in addition to the real Rent entry. In the home-screen history pane, the Rent $20 entry is inside the period (Total: $60) and, when 'Show subscriptions outside of the period' is enabled, a second Rent $20 subscription is listed outside the period \u2014 the budget summary is counting that recurring template/outside-period subscription as spent.",
+      "steps": [
+        "On the home screen, tap the budget pill (\"Today\" / \"$0.95\") to open the budget sheet",
+        "Read the orange summary card: it shows \"$80\" over \"Spent\" and \"Available: 20%\"",
+        "Open Analytics: the current period shows Total Spent 60 and (scrolled down) Available: 40%",
+        "Open Analytics > Total Expenses: history lists Groceries $40 (13 November) and Rent $20 (recurrent, 13 November), Total: $60",
+        "Rotate to landscape on the home screen and enable \"Show subscriptions outside of the period\": a second Rent $20 subscription appears below Total: $60, outside the period",
+        "Reopen the budget sheet: Spent is still $80 instead of $60, so the recurring template/outside-period subscription is included in the period summary"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0018",
+        "minus-0019"
+      ],
+      "present": [
+        "minus-0018",
+        "minus-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/minus-E06/e16f0c083d6f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0018": "missed_unreached",
+    "minus-0019": "missed_unreached"
+  },
+  "elapsed_s": 1479.79,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "found": [],
+  "required": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "missed": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "bug_meta": {
+    "minus-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

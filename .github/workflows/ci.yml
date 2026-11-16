@@ -1,0 +1,32 @@
+name: ci
+on:
+  push:
+    branches: [release/episodes-v4.1]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Unit tests
+        run: python3 -m unittest tools.tests.test_eval tools.tests.test_matcher tools.tests.test_fast tools.tests.test_mcp tools.tests.test_audit_fixes
+      - name: Leak scan
+        run: python3 tools/leak_scan.py
+      - name: No local home paths in released files
+        run: python3 tools/scrub_paths.py | grep -q "would scrub 0 path"
+      - name: Rescore check reproduces stored results
+        run: |
+          for r in results/*/; do python3 tools/rescore_episodes.py "${r%/}" --check | tail -1 | grep -q ": 0 episode(s) differ"; done
+      - name: Paper numbers reproduce from stored runs
+        run: |
+          python3 docs/paper/data/collect.py
+          python3 docs/paper/data/analysis.py
+          python3 docs/paper/data/stats_extra.py
+          python3 docs/paper/data/hard_core.py > /dev/null
+          python3 docs/paper/data/write_results_md.py
+          git diff --exit-code docs/paper/data docs/RESULTS.md

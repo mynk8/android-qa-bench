@@ -1,0 +1,148 @@
+{
+  "bug_id": "tasks-0021",
+  "runs": 1,
+  "started": "2026-11-11T12:14:35+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 23.4,
+      "screenshot_sha256": "899396c883051fb8fdc163b53f6ad6021fff5361336900da275f7a21e5621d0e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0021-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "899396c883051fb8fdc163b53f6ad6021fff5361336900da275f7a21e5621d0e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0021-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 22.1,
+      "screenshot_sha256": "3096f777efa98da1ab7eeb06ab1c466b32d78d476582e53bb743fbc86a657448",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0021-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Ascending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 22.7,
+      "screenshot_sha256": "39c15bbb40d443bbbd356b5aa9f86eb51937cf3ddedc826c2accaf4ae26e7a8c",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0021-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Ascending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 27.6,
+      "screenshot_sha256": "ada2074dfea7d7f41826d12a23ad6d6792bc1c3f13b402b9a16065652341bdae",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0021-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Ascending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 20.9,
+      "screenshot_sha256": "738ca86c0bc9d2b8e68ec3fba66ecb4c8e6cfa4528da45e032f475409d51e100",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0021-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T12:17:29+0530"
+}

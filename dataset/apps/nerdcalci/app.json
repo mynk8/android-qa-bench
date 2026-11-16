@@ -1,0 +1,13 @@
+{
+  "app_id": "nerdcalci",
+  "display_name": "NerdCalci",
+  "repo": "https://github.com/vishaltelangre/NerdCalci",
+  "licence": "GPL-3.0",
+  "package": "com.vishaltelangre.nerdcalci",
+  "pinned_commit": "ca6acaa94f445041edd8869fc9330f4e940a1263",
+  "source_type": "greenfield",
+  "ui": "compose",
+  "local_data": "room",
+  "needs_network_or_login": false,
+  "first_run": []
+}

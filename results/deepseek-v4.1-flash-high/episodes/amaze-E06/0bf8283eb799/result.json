@@ -1,0 +1,253 @@
+{
+  "run_id": "0bf8283eb799",
+  "item_id": "amaze-E06",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Encrypt dialog (opened from a file's context menu \u2192 Encrypt)",
+      "element": "\"Password doesn't match\" error label under the Password field",
+      "field": "Password / Repeat password comparison",
+      "symptom_type": "wrong_value",
+      "expected": "When the two passphrases are identical, no \"Password doesn't match\" error should be shown under either field (the comparison runs on every keystroke in either input).",
+      "observed": "Both Password and Repeat password fields contain the same value \"secret\" and the OK button is enabled, yet the red \"Password doesn't match\" error is still displayed under the Password field.",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze tap the 3-dot menu of notes.txt and choose Encrypt.",
+        "Type a passphrase (e.g. secret) into the Password field; 'Password doesn't match' appears because Repeat password is empty.",
+        "Type the identical passphrase 'secret' into the Repeat password field.",
+        "Observe: OK becomes enabled, but the stale 'Password doesn't match' error remains under the Password field."
+      ],
+      "element_ref": 35,
+      "observed_quote": "Password doesn't match",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/textinput_error",
+        "text": "Password doesn't match",
+        "class": "android.widget.TextView",
+        "bounds": [
+          147,
+          557,
+          933,
+          600
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "New Folder dialog (FAB \u2192 Folder) in /storage/emulated/0/AndroidQA/Amaze",
+      "element": "Name input and CREATE button of the New Folder / New File dialog",
+      "field": "Folder/file name validation (duplicate existing name)",
+      "symptom_type": "no_effect",
+      "expected": "When the entered name already exists in the current folder, pressing CREATE should show an explicit validation error (e.g. \"already exists\") or a conflict dialog, and keep the typed name so the user can correct it.",
+      "observed": "Pressing CREATE with the existing name QA_TestFolder silently does nothing: the dialog resets to a blank \"Enter Name\" field with CREATE disabled and no error message is shown. Same happens for New File with an existing file name (dialog resets to the default \".txt\").",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze tap the FAB \u2192 Folder.",
+        "Type the name of an existing folder, e.g. QA_TestFolder, and tap CREATE.",
+        "Observe the dialog reopens/resets to an empty 'Enter Name' with no error and no new folder is created (list still shows the same 4 folders).",
+        "Repeat with FAB \u2192 File, enter existing QA_Renamed.txt, tap CREATE: dialog resets to '.txt' with no error."
+      ],
+      "element_ref": 1,
+      "observed_quote": "Enter Name",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/singleedittext_input",
+        "text": "Enter Name",
+        "class": "android.widget.EditText",
+        "bounds": [
+          137,
+          1123,
+          943,
+          1241
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File list inside /storage/emulated/0/AndroidQA/Amaze/QA_TestFolder (1) after Cut+Paste of the containing folder into itself",
+      "element": "Nested folder row \"QA_TestFolder (1)\" created inside the folder being moved",
+      "field": "Move between folders \u2014 destination must not be inside the source folder",
+      "symptom_type": "wrong_value",
+      "expected": "Moving a folder into its own subdirectory should be rejected with an error message (e.g. \"Cannot move a folder into itself\") and the file system should be left unchanged.",
+      "observed": "Cutting QA_TestFolder (1), entering that same folder and pressing PASTE creates an empty nested folder also named \"QA_TestFolder (1)\" inside it instead of refusing the operation. Parent now reports \"1 folders and 1 files\" with the bogus nested folder.",
+      "steps": [
+        "In /storage/emulated/0/AndroidQA/Amaze long-press folder QA_TestFolder (1) and tap Cut.",
+        "Open QA_TestFolder (1) (the move source itself).",
+        "Tap PASTE in the snackbar.",
+        "Observe an empty folder 'QA_TestFolder (1)' is created inside QA_TestFolder (1) instead of the move being rejected."
+      ],
+      "element_ref": 8,
+      "observed_quote": "QA_TestFolder (1)",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "QA_TestFolder (1)",
+          "Nov 14 | 8:26\u202fAM"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File list /storage/emulated/0/AndroidQA/Amaze (portrait)",
+      "element": "Floating action button (pink + button) overlapping the 3-dot Properties button of the QA_Orig.txt row",
+      "field": "Row context menu (Properties) hit target / layout overlap",
+      "symptom_type": "overlap",
+      "expected": "Tapping the 3-dot Properties button of a list row should open that file's context menu (Open with / Cut / Copy / Delete / Rename / Encrypt / Properties / Compress / Share). The FAB should not cover any row's menu button (the list should have enough bottom padding).",
+      "observed": "The floating action button visually covers the 3-dot Properties button of the last visible row (QA_Orig.txt). Tapping that 3-dot opens the FAB's New Folder/File/Cloud Connection menu instead of the file's context menu. The same happens for report+final.txt when it sits at that position.",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze in portrait.",
+        "Scroll so a file row (e.g. QA_Orig.txt) is at the bottom of the list, with the pink FAB overlapping its 3-dot button.",
+        "Tap that row's 3-dot Properties button.",
+        "Observe the FAB's Folder/File/Cloud Connection menu opens instead of the file context menu."
+      ],
+      "element_ref": 32,
+      "observed_quote": "QA_Orig.txt",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/properties",
+        "desc": "Properties",
+        "class": "android.widget.ImageButton",
+        "bounds": [
+          933,
+          2043,
+          1038,
+          2148
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File list /storage/emulated/0/AndroidQA/Amaze (portrait, toolbars visible)",
+      "element": "Pink FAB (+) overlaps row Properties (3-dot) buttons at the bottom of the list \u2014 QA_Orig.txt / QA_Renamed.txt rows",
+      "field": "Layout overlap: FAB hit area vs row Properties button",
+      "symptom_type": "overlap",
+      "expected": "Each row's Properties (3-dot) button must be tappable and open that file's context menu. The FAB must be offset above enough bottom padding so no row's menu button is underneath it.",
+      "observed": "The pink FAB (+) sits directly on top of the Properties (3-dot) buttons of the bottom rows. Tapping the QA_Orig.txt Properties button (accessibility center x=985, y=2095) or the QA_Renamed.txt one (x=985, y=2254) opens the FAB's Folder/File/Cloud Connection menu instead of the file context menu. Only long-press opens file operations, so the 3-dot menu is effectively unreachable for those rows.",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze (portrait) so Alpha..QA_Renamed.txt are visible and the pink + FAB is bottom-right.",
+        "Find the QA_Orig.txt row and its 3-dot Properties button (screen ~x=985,y=2095); the FAB circle overlaps this button.",
+        "Tap exactly on that 3-dot / at (985,2095).",
+        "Observe the FAB expands showing Folder/File/Cloud Connection instead of opening the file's Open with/Cut/Copy/Delete/Rename/Encrypt/Properties list.",
+        "Reproduced identically on the QA_Renamed.txt row's 3-dot at (985,2254)."
+      ],
+      "element_ref": 28,
+      "observed_quote": "QA_Orig.txt",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/properties",
+        "desc": "Properties",
+        "class": "android.widget.ImageButton",
+        "bounds": [
+          933,
+          2043,
+          1038,
+          2148
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ],
+      "present": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/amaze-E06/0bf8283eb799/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0017": "reported",
+    "amaze-0018": "reported",
+    "amaze-0019": "reported"
+  },
+  "elapsed_s": 1013.029,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "found": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "required": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 300,
+  "precision": 0.6,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "bug_meta": {
+    "amaze-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

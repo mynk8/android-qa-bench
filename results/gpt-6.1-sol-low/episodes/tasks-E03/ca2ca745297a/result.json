@@ -1,0 +1,161 @@
+{
+  "run_id": "ca2ca745297a",
+  "item_id": "tasks-E03",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Pay rent group header",
+      "element_ref": 5,
+      "field": "Due date grouping",
+      "symptom_type": "missing",
+      "expected": "Pay rent due December 5 has its own Due Saturday, December 5 header, separate from No due date.",
+      "observed": "In descending due-date grouping Pay rent appears beneath No due date alongside Read docs, with no December 5 header or visible date.",
+      "steps": [
+        "Use starting tasks.",
+        "Open Sort and set Grouping By due date, Descending.",
+        "Close sheet: Pay rent follows Read docs under No due date.",
+        "Toggle grouping Ascending then Descending and close; issue repeats."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Pay rent"
+        ],
+        "bounds": [
+          0,
+          577,
+          1080,
+          729
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks \u2014 due date grouping descending",
+      "element": "No due date section includes dated Pay rent",
+      "element_ref": 2,
+      "field": "group boundary",
+      "symptom_type": "wrong_value",
+      "expected": "Read docs alone under No due date; Pay rent under Due Saturday, December 5.",
+      "observed": "Screenshot confirms No due date header, then Read docs, then Pay rent with no intervening header and no date badge. Pay rent editor confirms Saturday, December 5. Ascending grouping displays its correct header.",
+      "observed_quote": "No due date",
+      "steps": [
+        "Starting data on November 15, 2026: Pay rent due December 5; Read docs no date.",
+        "Tap bottom Sort. Set Sorting By due date Ascending.",
+        "Set Grouping By due date, then tap its separate Ascending control to Descending; leave Sorting Ascending.",
+        "Close sheet. Pay rent is visually within No due date section.",
+        "Switch Grouping Ascending and back Descending; reproduced repeatedly, including after restoring Pay rent December 5."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/header_row",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "No due date"
+        ],
+        "bounds": [
+          0,
+          210,
+          1080,
+          357
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "tasks-0008",
+        "tasks-0012"
+      ],
+      "present": [
+        "tasks-0008",
+        "tasks-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/tasks-E03/ca2ca745297a/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0008": "reported",
+    "tasks-0012": "missed_unreached"
+  },
+  "elapsed_s": 350.913,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept due-date and title sorting both directions, grouping reversal/persistence, row notes/date badges, editor custom preference time shortcut and date combinations, nested subtasks with collapse/expand and rotation, monthly recurrence/custom boundary and completion/Undo. Confirmed logged bug: descending due-date grouping merges first dated task Pay rent into No due date section and hides its date. All found issues reported. Restored original due dates, removed QA grandchild, restored Morning 9 AM and ascending due-date grouping/sort."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "found": [
+    "tasks-0008"
+  ],
+  "required": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "missed": [
+    "tasks-0012"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 164,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "bug_meta": {
+    "tasks-0008": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

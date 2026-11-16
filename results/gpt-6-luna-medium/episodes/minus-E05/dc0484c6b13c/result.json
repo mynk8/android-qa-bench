@@ -1,0 +1,113 @@
+{
+  "run_id": "dc0484c6b13c",
+  "item_id": "minus-E05",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expense history list",
+      "element": "Date section heading",
+      "element_ref": 7,
+      "field": "section date heading",
+      "symptom_type": "wrong_value",
+      "expected": "Date section heading includes the weekday name, such as Sunday, 15 November.",
+      "observed": "The section heading shows only the date, without a weekday.",
+      "observed_quote": "15 November",
+      "steps": [
+        "Open the app's expense history list from the current budget view.",
+        "Inspect the date section containing Groceries and recurring Rent."
+      ],
+      "anchor_node": {
+        "text": "Savings",
+        "class": "android.widget.TextView",
+        "bounds": [
+          53,
+          1710,
+          232,
+          1763
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0001"
+      ],
+      "present": [
+        "minus-0001"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-c/episodes/minus-E05/dc0484c6b13c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0001": "missed_unreached"
+  },
+  "elapsed_s": 70.59,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.75,
+    "notes": "Inspected analytics totals and category/expense summaries; history showed Groceries $40 and recurring Rent $20 totaling $60, and settings/rotation navigation was exercised. Attempted a date-heading report for \u201c15 November\u201d, but developer could not reproduce it; no confirmed bugs remain logged."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0001"
+  ],
+  "found": [],
+  "required": [
+    "minus-0001"
+  ],
+  "missed": [
+    "minus-0001"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 19,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0001"
+  ],
+  "bug_meta": {
+    "minus-0001": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

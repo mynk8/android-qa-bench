@@ -1,0 +1,110 @@
+{
+  "episode_id": "minus-E06",
+  "start_build": "minus-E06-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "groceries_before": true,
+        "groceries_after": true,
+        "texts": [
+          "7:55",
+          "7:55\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Groceries",
+          "12:00 PM",
+          "$40",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $60",
+          "Show subscriptions outside of the period"
+        ]
+      },
+      "seconds": 24.1,
+      "screenshot_sha256": "6e6a176c149693727991e71feccf6d6a289a1b402e3be52a310e3a97c5ecc7c2",
+      "bug": "minus-0018",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "24 days",
+          "01 Dec",
+          "Collapse",
+          "10 November",
+          "Groceries",
+          "12:00 PM",
+          "$40",
+          "Rent",
+          "Recurrent expense \u2014 12:00 PM",
+          "$20",
+          "Total: $60",
+          "Show subscriptions outside of the period",
+          "7:55",
+          "7:55\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 18.5,
+      "screenshot_sha256": "2068b4d44179c3c21c1a610f2488b35a792323dd92af96eb430dc0f552981009",
+      "bug": "minus-0018",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "calculated_amount": 0.95,
+        "seen": [
+          "Calculated amount",
+          "$0.95",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 17.1,
+      "screenshot_sha256": "1a5c3b57daa10c5e9afa13a58d629a86c732641479c6180532b3ae15e2f39647",
+      "bug": "minus-0019",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "calculated_amount": 0.95,
+        "seen": [
+          "Calculated amount",
+          "$0.95",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 17.0,
+      "screenshot_sha256": "0d28508fc352320faffa58e13f5b21db67946251c6253b9381bc629a6aa1e8c0",
+      "bug": "minus-0019",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

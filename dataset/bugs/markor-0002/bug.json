@@ -1,0 +1,308 @@
+{
+  "bug_id": "markor-0002",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "data lost after operation",
+  "symptom_type": "wrong_value",
+  "fix_date": "2023-05-24",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "sort": [
+        {
+          "desc": "Sort by"
+        },
+        {
+          "text": "Sort by"
+        },
+        {
+          "desc": "Sort"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "folder_first": [
+        {
+          "text": "Folder first"
+        },
+        {
+          "text": "Folders first"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "duplicate_line": [
+        {
+          "text": "Duplicate lines"
+        },
+        {
+          "desc": "Duplicate lines"
+        },
+        {
+          "desc": "Duplicate line(s)"
+        },
+        {
+          "desc": "Duplicate line"
+        }
+      ],
+      "search_replace": [
+        {
+          "text": "Search / Replace"
+        },
+        {
+          "text": "Search and replace"
+        },
+        {
+          "text": "Search & replace"
+        },
+        {
+          "desc": "Search and replace"
+        }
+      ],
+      "find_field": [
+        {
+          "text": "Search"
+        },
+        {
+          "text": "Find"
+        },
+        {
+          "id": "net.gsantner.markor:id/search_input"
+        }
+      ],
+      "replace_field": [
+        {
+          "text": "Replace"
+        },
+        {
+          "text": "Replace with"
+        },
+        {
+          "id": "net.gsantner.markor:id/replace_input"
+        }
+      ],
+      "regex_toggle": [
+        {
+          "text": "Regex"
+        },
+        {
+          "text": "Use regex"
+        },
+        {
+          "desc": "Regex"
+        }
+      ],
+      "replace_one": [
+        {
+          "text": "Replace"
+        },
+        {
+          "text": "REPLACE"
+        }
+      ],
+      "replace_all": [
+        {
+          "text": "Replace all"
+        },
+        {
+          "text": "REPLACE ALL"
+        }
+      ],
+      "view_mode": [
+        {
+          "desc": "View"
+        },
+        {
+          "id": "net.gsantner.markor:id/action_preview"
+        }
+      ],
+      "file_info": [
+        {
+          "text": "Info"
+        },
+        {
+          "text": "More info"
+        },
+        {
+          "text": "File info"
+        }
+      ],
+      "favourite_box": [
+        {
+          "text": "Favourite"
+        },
+        {
+          "text": "Favorite"
+        }
+      ],
+      "favourites_view": [
+        {
+          "text": "Favourites"
+        },
+        {
+          "text": "Favorites"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        }
+      ],
+      "cursor_line_start": [
+        {
+          "desc": "Line Start (Home)"
+        },
+        {
+          "desc": "Home"
+        },
+        {
+          "desc": "Move to line start"
+        }
+      ],
+      "enter_key": [
+        {
+          "desc": "New line"
+        },
+        {
+          "desc": "Enter"
+        }
+      ],
+      "new_file": [
+        {
+          "text": "Create a new file or folder"
+        },
+        {
+          "desc": "New file"
+        },
+        {
+          "text": "New file"
+        },
+        {
+          "desc": "Create"
+        },
+        {
+          "id": "fab"
+        }
+      ],
+      "filename_field": [
+        {
+          "text": "Name"
+        },
+        {
+          "text": "File name"
+        },
+        {
+          "id": "document__dialog_new_filename"
+        }
+      ],
+      "type_markdown": [
+        {
+          "text": "Markdown"
+        },
+        {
+          "text": "Plain text"
+        }
+      ],
+      "create": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Create"
+        },
+        {
+          "text": "Ok"
+        }
+      ],
+      "undo": [
+        {
+          "desc": "Undo"
+        },
+        {
+          "text": "Undo"
+        }
+      ],
+      "redo": [
+        {
+          "desc": "Redo"
+        },
+        {
+          "text": "Redo"
+        }
+      ],
+      "folders_first": [
+        {
+          "text": "Folder first"
+        },
+        {
+          "text": "Folders first"
+        }
+      ],
+      "use_regex": [
+        {
+          "text": "Regex"
+        },
+        {
+          "text": "Regex search"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0002-buggy",
+    "fixed": "markor-0002-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0002.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "Attach the undo/redo helper to the editor only when the editor has content, so a new empty file has no working undo stack."
+  }
+}

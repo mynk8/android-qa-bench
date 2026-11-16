@@ -1,0 +1,157 @@
+{
+  "run_id": "209e1bb386f7",
+  "item_id": "ankidroid-E09",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser - Reposition new cards dialog",
+      "element": "1",
+      "element_ref": 1,
+      "symptom_type": "wrong_value",
+      "field": "queue_limits_label (range hint)",
+      "expected": "Range hint shows the top and bottom of the new-card queue, e.g. \"Queue top: 1\" and \"Queue bottom: 7\" (second line labelled as bottom, not top).",
+      "observed": "Both lines of the range hint read \"Queue top\": \"Queue top: 1\" then \"Queue top: 7\". The second line uses the top label for the maximum position.",
+      "observed_quote": "Queue top: \u20687\u2069",
+      "steps": [
+        "Open the drawer and tap Card browser.",
+        "Tap search, type deck:* and submit; tap 'Search all decks' if prompted. 7 cards shown.",
+        "Long-press the card 'comer' to select it.",
+        "Tap More options (top right) > Reposition.",
+        "Read the hint above the Start position field: it shows 'Queue top: 1' and 'Queue top: 7'."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_title",
+        "text": "1",
+        "class": "android.widget.TextView",
+        "bounds": [
+          147,
+          111,
+          177,
+          182
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Deck list - Rename deck dialog",
+      "element": "textinput_error",
+      "element_ref": 40,
+      "symptom_type": "wrong_value",
+      "field": "dialog_text_input (new deck name)",
+      "expected": "Renaming deck 'Spanish' to 'spanish' (case change of its own name) is allowed; the clash check should skip the deck being renamed, and no other deck is called Spanish.",
+      "observed": "The dialog shows 'Name already exists' and the Rename button is disabled when the deck's own name is retyped in lower case.",
+      "observed_quote": "Name already exists",
+      "steps": [
+        "On the deck list, long-press the 'Spanish' deck.",
+        "Tap 'Rename deck'. The field shows 'Spanish'.",
+        "Clear the field and type 'spanish'.",
+        "Observe: 'Name already exists' appears and Rename is disabled. No other deck has that name."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/textinput_error",
+        "text": "Name already exists",
+        "class": "android.widget.TextView",
+        "bounds": [
+          217,
+          827,
+          863,
+          870
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E09-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ],
+      "present": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/ankidroid-E09/209e1bb386f7/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0027": "reported",
+    "ankidroid-0029": "reported"
+  },
+  "elapsed_s": 296.101,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.55,
+    "notes": "Filed 2 bugs (both confirmed by the developer): (1) Reposition-new-cards hint reads \"Queue top: 1 / Queue top: 7\" (second line should be the bottom label). (2) Renaming deck \"Spanish\" to \"spanish\" shows \"Name already exists\" and disables Rename, though the only matching deck is itself. Checked with no issue: the clash check for other decks (case-insensitive, trailing space), subdeck rename clash, expand/collapse arrow (separate from row tap, state kept after navigation and rotation), create/delete subdeck, Reposition start/step validation, the shift-existing-cards reposition in the browser (positions correct), field reorder in Basic and Image Occlusion (persisted after leaving and re-entering), and deck counts vs browser. Not covered: app restart persistence, the Randomize order option, Edit-note field order after reorder, and the Find/Replace and bulk actions. Test data: I created and then deleted a \"Spanish::Verbs\" subdeck; the Image Occlusion field order was restored; the Spanish deck name is unchanged. Basic note-type field order was restored to Front, Back."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "found": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "required": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 196,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "bug_meta": {
+    "ankidroid-0027": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "ankidroid-0029": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

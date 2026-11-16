@@ -1,0 +1,315 @@
+{"event": "install", "build": {"n": 1, "build_id": "nerdcalci-E02-11", "mask": "11", "unfixed": ["nerdcalci-0003", "nerdcalci-0004"], "present": ["nerdcalci-0003", "nerdcalci-0004"]}}
+{"event": "brief", "item_id": "nerdcalci-E02"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 297}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 520}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 529}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 529}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "type", "args": {"text": "0 celsius in kelvin", "clear": true, "submit": true}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 148}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 557}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 557}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 626, "y": 444}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 390}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 390}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "type", "args": {"text": "10 celsius + 18 fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 529}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 362, "y": 444}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "type", "args": {"text": "0 celsius in kelvin", "clear": false, "submit": false}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 500}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 390}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "type", "args": {"text": "100 celsius in fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 529}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 362, "y": 444}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "type", "args": {"text": "0 kelvin in celsius", "clear": false, "submit": false}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 500}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 653, "y": 390}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "type", "args": {"text": "10 celsius + 18 fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 793}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 34, "message": {"type": "bug_report", "screen": "Number bases file (opened from home screen)", "element": "Result of line 1 \"15 dec in hex\"", "field": "conversion result", "symptom_type": "wrong_value", "expected": "15 dec in hex should show 0xF; 10 dec in bin should show 0b1010; 64 dec in oct should show 0o100; 255 dec in hex should show 0xFF.", "observed": "All decimal values appear multiplied by 10: \"15 dec in hex\" shows \"0x96\" (150), \"10 dec in bin\" shows \"0b1100100\" (100), \"64 dec in oct\" shows \"0o1200\" (640), \"255 dec in hex\" shows \"0x9F6\" (2550). Each looks like the input decimal was scaled by 10 before base conversion.", "steps": ["Open the app home screen", "Open the 'Number bases' file", "Read line 1 '15 dec in hex' — result shows 0x96 instead of 0xF", "Read line 2 '10 dec in bin' — result shows 0b1100100 instead of 0b1010", "Read line 3 '64 dec in oct' — result shows 0o1200 instead of 0o100", "Read line 4 '255 dec in hex' — result shows 0x9F6 instead of 0xFF"], "element_ref": 2, "observed_quote": "0x96", "anchor_node": {"class": "android.view.View", "contains": ["Temperatures", "MODIFIED: JAN 08, 2026 • CREATED: JAN 08, 2026", "More options"], "bounds": [0, 405, 1080, 636]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0003"], "per_bug": {"nerdcalci-0003": "ok", "nerdcalci-0004": "expected_value"}}
+{"event": "hit", "bugs": ["nerdcalci-0003"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "type", "args": {"text": "0xF in dec", "clear": true, "submit": false}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "type", "args": {"text": "15 dec in bin", "clear": true, "submit": false}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 599, "y": 176}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "type", "args": {"text": "15 dec in bin", "clear": false, "submit": false}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 176}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "type", "args": {"text": "15 hex in dec", "clear": false, "submit": false}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 176}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "type", "args": {"text": "date(2024, 1, 31) to date(2024, 3, 1)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 230}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "type", "args": {"text": "date(2024, 2, 29) to date(2025, 2, 28)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 230}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 1, 10, 0, 0) to datetime(2024, 1, 2, 9, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 287}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 15, 10, 0, 0) to datetime(2024, 2, 14, 9, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1339}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 287}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 5, 0, 0, \"America/New_York\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 400}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 287}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 15, 30, 0, \"Asia/Kolkata\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 400}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 287}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 15, 30, 0, \"UTC+05:30\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1612}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1885}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 719}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 992}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 287}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "type", "args": {"text": "1 km in m", "clear": false, "submit": false}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 148}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 163}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "type", "args": {"text": "Temp", "clear": true, "submit": false}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1017, "y": 164}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 163}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "type", "args": {"text": "xyz", "clear": true, "submit": false}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 64, "y": 164}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 621}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 369}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1350}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 818, "y": 1727}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 335, "y": 176}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "type", "args": {"text": "50 fahrenheit + 10 celsius", "clear": false, "submit": false}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 280, "y": 230}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "type", "args": {"text": "100 fahrenheit - 32 fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 362, "y": 230}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "type", "args": {"text": "32 fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 793}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "type", "args": {"text": "32 fahrenheit in kelvin", "clear": true, "submit": false}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 393}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "type", "args": {"text": "1 kelvin in fahrenheit", "clear": true, "submit": false}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 448, "y": 176}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 2, 1, 1, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 287}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "type", "args": {"text": "1 kelvin in fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "tap_xy", "args": {"x": 694, "y": 176}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "type", "args": {"text": "0 celsius + 0 kelvin", "clear": false, "submit": false}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 571, "y": 176}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 3, 1, 1, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 154, "message": {"type": "bug_report", "element": "Result of line 1 \"datetime(1981, 2, 14, 18, 32, 0) to datetime(2026, 5, 3, 14, 49, 9)\"", "element_ref": 3, "expected": "Line 1 should be \"45 y 2 mo 18 d 20 h 17 min 9 s\" and line 2 should be \"4 y 5 mo 14 d 11 h 25 min 30 s\". Since the end time-of-day is earlier than the start time-of-day, one day must be borrowed into the hours (start + result must equal the end timestamp).", "observed": "Line 1 shows \"45 y 2 mo 19 d 20 h 17 min 9 s\" and line 2 shows \"4 y 5 mo 15 d 11 h 25 min 30 s\". The day count is one day too large because it never borrows a day when the end time-of-day is before the start time-of-day. Adding the shown period to the start gives 2026-05-04 14:49:09 instead of the end 2026-05-03 14:49:09. Also reproduced in the scratchpad: datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 3, 1, 1, 0, 0) shows \"1 mo 1 d 2 h\" but the true gap is 1 month 2 h (start + 1 mo 1 d 2 h = Mar 2 01:00, not Mar 1 01:00).", "screen": "Date gaps file (opened from home screen)", "steps": ["Open the app home screen and open the 'Date gaps' file", "Read line 1: start datetime(1981, 2, 14, 18, 32, 0), end datetime(2026, 5, 3, 14, 49, 9)", "Observe the result '45 y 2 mo 19 d 20 h 17 min 9 s'", "Add that period to the start: it lands on 2026-05-04 14:49:09, one day past the end", "Read line 2: '4 y 5 mo 15 d 11 h 25 min 30 s'; same one-day overcount", "Reproduce in scratchpad with datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 3, 1, 1, 0, 0) -> '1 mo 1 d 2 h' (should be 1 mo 2 h)"], "symptom_type": "wrong_value", "observed_quote": "45 y 2 mo 19 d 20 h 17 min 9 s", "anchor_node": {"text": "45 y 2 mo 19 d 20 h 17 min 9 s", "class": "android.widget.TextView", "bounds": [797, 260, 1048, 483]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0003": "spray", "nerdcalci-0004": "spray"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 287}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 11, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 371}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 287}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 12, 0, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 163, "message": {"type": "bug_report", "element": "Result of scratchpad expression \"datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 11, 0, 0)\"", "element_ref": 38, "expected": "The gap is 30 days 23 hours (or \"4 wk 2 d 23 h\"). The result should be one hour LESS than the exact-month gap. When the end time-of-day is earlier than the start time-of-day, one day must be borrowed into the hours so that start + result equals the end timestamp (start + 1 mo 23 h = Feb 2 11:00, one day past the end).", "observed": "\"1 mo 23 h\" is shown. This is internally inconsistent: \"datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 12, 0, 0)\" shows \"1 mo\", but moving the end 1 hour EARLIER (to 11:00) increases the reported gap to \"1 mo 23 h\" instead of decreasing it. The day component is never decremented when the end clock time is before the start clock time.", "screen": "Scratchpad (temporary file)", "steps": ["Open the temporary scratchpad (or any file)", "Enter: datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 12, 0, 0) -> shows '1 mo' (correct)", "Change the end to 11:00: datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 11, 0, 0)", "Observe the result '1 mo 23 h' - the gap grew by 23 h even though the end moved 1 h earlier", "Same root cause in the Date gaps file: line 1 shows '45 y 2 mo 19 d 20 h 17 min 9 s' (start + this = 2026-05-04 14:49:09, one day after the end) and line 2 shows '4 y 5 mo 15 d 11 h 25 min 30 s'"], "symptom_type": "wrong_value", "observed_quote": "1 mo 23 h", "anchor_node": {"class": "android.view.View", "contains": ["1 mo"], "bounds": [797, 260, 1048, 483]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0004"], "per_bug": {"nerdcalci-0003": "expected_value", "nerdcalci-0004": "ok"}}
+{"event": "hit", "bugs": ["nerdcalci-0004"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 621}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 835}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 369}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 961}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "type", "args": {"text": "32 fahrenheit + 32 fahrenheit", "clear": true, "submit": false}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1440}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 373}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 362, "y": 230}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "type", "args": {"text": "35 celsius + 10 fahrenheit", "clear": false, "submit": false}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 446}}}
+{"event": "agent", "step": 194, "message": {"type": "bug_report", "element": "Result of line 3 \"10 celsius + 18 fahrenheit\"", "element_ref": 8, "expected": "68 °F. Per the in-app Help (Settings > Help & feedback > Help > \"10. Unit conversions\"), temperature arithmetic uses the unit from the right-hand side: \"35 °C + 10 degF → 105 °F\". So 10°C (= 50°F) + 18°F = 68 °F, not a Celsius result.", "observed": "\"2.22 °C\" is shown. The engine always converts the right operand into Celsius, adds in Celsius, and displays Celsius instead of converting the left operand into the right-hand unit. Reproduced with the documented example: \"35 celsius + 10 fahrenheit\" shows \"22.78 °C\" (Help says 105 °F), and \"32 fahrenheit + 32 fahrenheit\" shows \"0 °C\" instead of 64 °F.", "screen": "Temperature sums file (opened from home screen)", "steps": ["Open the app home screen and open the 'Temperature sums' file", "Read line 3: '10 celsius + 18 fahrenheit'", "Observe the result '2.22 °C'", "Expected 68 °F because 10°C = 50°F and 50 + 18 = 68, and per Help the result uses the right-hand unit", "Reproduce in scratchpad: '35 celsius + 10 fahrenheit' -> '22.78 °C' (Help example expects 105 °F)", "Reproduce in scratchpad: '32 fahrenheit + 32 fahrenheit' -> '0 °C' (should be 64 °F)"], "symptom_type": "wrong_value", "observed_quote": "2.22 °C", "anchor_node": {"class": "android.view.View", "contains": ["2.22 °C"], "bounds": [797, 466, 1048, 592]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0003": "observed_value", "nerdcalci-0004": "observed_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "tap_xy", "args": {"x": 362, "y": 230}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "type", "args": {"text": "35 degC + 10 degF", "clear": false, "submit": false}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 176}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "type", "args": {"text": "35 degC + 10 degF in degF", "clear": false, "submit": false}}}
+{"event": "agent", "step": 203, "message": {"type": "bug_report", "element": "Result of scratchpad expression \"35 degC + 10 degF in degF\"", "element_ref": 40, "expected": "105 °F. The in-app Help (Settings > Help & feedback > Help > \"10. Unit conversions\") explicitly gives \"35 °C + 10 degF → 105 °F\" and \"35 °C + 10 degF in degC → 40.56 °C\". The left operand must be converted to the right operand's unit (35°C = 95°F) and then 10°F added = 105°F.", "observed": "\"73 °F\" is shown. The engine instead converts the right-hand Fahrenheit value into Celsius (10°F = -12.22°C) and adds it to 35°C, producing 22.78°C (73°F). This happens even with an explicit \"in degF\", so the computed value itself is wrong, not just the displayed unit. Same root cause makes Temperature sums line 3 \"10 celsius + 18 fahrenheit\" show \"2.22 °C\" instead of 68 °F.", "screen": "Scratchpad (temporary file)", "steps": ["Open Settings > Help & feedback > Help > section 10 'Unit conversions' (documents '35 °C + 10 degF → 105 °F')", "Open the temporary scratchpad", "Enter: 35 degC + 10 degF in degF", "Observe the result '73 °F' instead of the documented 105 °F", "Also check Temperature sums line 3 '10 celsius + 18 fahrenheit' -> '2.22 °C' (should be 68 °F)"], "symptom_type": "wrong_value", "observed_quote": "73 °F", "anchor_node": {"class": "android.view.View", "contains": ["73 °F"], "bounds": [797, 252, 1048, 378]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0003"], "per_bug": {"nerdcalci-0003": "ok", "nerdcalci-0004": "expected_value"}}
+{"event": "duplicate", "bugs": ["nerdcalci-0003"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 721}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1371}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1224}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1358}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 908}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1044}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1382}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 843}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 908}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1044}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 892}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "type", "args": {"text": "datetime(2024, 1, 1, 10, 0, 0) in \"Asia/Kolkata\"", "clear": true, "submit": false}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 343}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 530, "y": 230}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 15, 30, 0, \"Asia/Kolkata\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 400}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 287}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\") in \"UTC\"", "clear": false, "submit": false}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 343}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "tap_xy", "args": {"x": 586, "y": 230}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 3, 10, 1, 0, 0, \"America/New_York\") to datetimeZ(2024, 3, 10, 3, 0, 0, \"America/New_York\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 428}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 344}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "type", "args": {"text": "datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\")", "clear": false, "submit": false}}}
+{"event": "agent", "step": 243, "message": {"type": "bug_report", "element": "Result of scratchpad expression 'datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\")'", "element_ref": 38, "expected": "\"5 h 30 min\". 10:00 UTC and 10:00 Asia/Kolkata are different instants (10:00 IST = 04:30 UTC), so the end is 5 h 30 min earlier than the start. The app's own `in` conversion confirms this: `datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\") in \"UTC\"` shows \"Jan 1, 2024, 4:30 AM UTC\".", "observed": "\"0 d\" is shown. The `to` interval ignores the second datetime's timezone: it interprets the end's wall-clock fields in the start datetime's zone (here both treated as UTC). Reverse case also wrong: `datetimeZ(2024,1,1,10,0,0,\"UTC\") to datetimeZ(2024,1,1,15,30,0,\"Asia/Kolkata\")` (the same instant) shows \"5 h 30 min\" instead of 0. Within a single zone DST is handled correctly (1 h across the spring-forward), so only the end operand's zone is dropped.", "screen": "Scratchpad (temporary file)", "steps": ["Open the temporary scratchpad", "Enter: datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\")", "Observe the result '0 d'", "Verify the zones differ: datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\") in \"UTC\" shows 'Jan 1, 2024, 4:30 AM UTC'", "Reverse check: datetimeZ(2024,1,1,10,0,0,\"UTC\") to datetimeZ(2024,1,1,15,30,0,\"Asia/Kolkata\") shows '5 h 30 min' even though both are the same instant"], "symptom_type": "wrong_value", "observed_quote": "0 d", "anchor_node": {"class": "android.view.View", "contains": ["0 d"], "bounds": [797, 260, 1048, 540]}}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0004"], "per_bug": {"nerdcalci-0003": "observed_value", "nerdcalci-0004": "ok"}}
+{"event": "duplicate", "bugs": ["nerdcalci-0004"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 1267}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 363}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 594}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 594}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 594}}}
+{"event": "agent", "step": 258, "message": {"type": "bug_report", "element": "Temperatures file row on the home screen (MODIFIED field)", "element_ref": 1, "expected": "Pinning/unpinning is a list-organisation action and the file content is unchanged, so the row should still read \"MODIFIED: JAN 08, 2026\". The Date modified sort order should be unchanged.", "observed": "After pinning and then unpinning, the row reads \"MODIFIED: 11:40 AM • CREATED: JAN 08, 2026\" instead of the original \"MODIFIED: JAN 08, 2026\". The file jumps to the top of the \"ALL FILES\" list because its modified date was bumped to now by the pin/unpin operation, even though no calculation content was edited. Reproduced twice (11:39 AM and 11:40 AM).", "screen": "Home screen file list", "steps": ["On the home screen note Temperatures shows 'MODIFIED: JAN 08, 2026' in the Date modified order", "Open Temperatures' More options and tap Pin", "Observe the PINNED row now shows 'MODIFIED: 11:40 AM • CREATED: JAN 08, 2026'", "Tap Unpin", "Temperatures now sits at the top of ALL FILES with MODIFIED 11:40 AM, reordering the list even though its content never changed"], "symptom_type": "wrong_value", "observed_quote": "MODIFIED: 11:40 AM", "anchor_node": {"class": "android.view.View", "contains": ["Temperatures", "MODIFIED: 11:40 AM • CREATED: JAN 08, 2026", "More options"], "bounds": [0, 331, 1080, 562]}}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0003": "location", "nerdcalci-0004": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 1780}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "type", "args": {"text": "days between date(2024, 1, 1) and date(2024, 1, 10)", "clear": true, "submit": false}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 343}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 230}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "type", "args": {"text": "hours between datetime(2024, 1, 1, 12, 0, 0) and datetime(2024, 1, 2, 18, 30, 0)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 400}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 287}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "type", "args": {"text": "date(2024, 1, 1) to date(2024, 5, 15)", "clear": false, "submit": false}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 230}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "type", "args": {"text": "10 km + 500 m in km", "clear": false, "submit": false}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 721}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1119}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 725}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "type", "args": {"text": "Temp sums test", "clear": true, "submit": false}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 725}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "tap_xy", "args": {"x": 460, "y": 610}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "tap_xy", "args": {"x": 225, "y": 610}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "type", "args": {"text": "Temp sums test", "clear": false, "submit": false}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "tap_xy", "args": {"x": 589, "y": 974}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 495}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "tap_xy", "args": {"x": 745, "y": 369}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 446}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 288, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2158}}}
+{"event": "agent", "step": 289, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 290, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2158}}}
+{"event": "agent", "step": 291, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 292, "message": {"type": "action", "name": "type", "args": {"text": "1+1", "clear": true, "submit": false}}}
+{"event": "agent", "step": 293, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 294, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 295, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 1224}}}
+{"event": "agent", "step": 296, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1358}}}
+{"event": "agent", "step": 297, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8}}}
+{"event": "agent", "step": 298, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.85, "notes": "Swept all listed areas on the current build.\n\nHome screen file list: all 9 files present and complete; newest-first ordering verified; search (match + no-match, clear), sort by Name / Date modified / Date created both directions, pin/unpin, duplicate, delete, New Calculation (empty draft correctly not saved, file with content appears immediately), File info, cold relaunch (background load), auto-open-on-launch mode, and portrait/landscape rotation all behaved correctly. (One observed quirk: pin/unpin bumped the file's MODIFIED timestamp and reordered the list; the developer said it could not be reproduced, so it was not logged.)\n\nUnit and number conversions: temperature conversions are correct across C/F/K (e.g. -10 C = 14 F, -65 F = -53.89 C, 0 K = -273.15 C, 1 K = -457.87 F, 32 F = 273.15 K); generic unit arithmetic correct (1 km = 1,000 m; 10 km + 500 m in km = 10.50 km). Confirmed and logged: number-base conversions multiply the input by its radix (15 dec in hex -> 0x96 instead of 0xF; 10 dec in bin -> 0b1100100; 64 dec in oct -> 0o1200; 255 dec in hex -> 0x9F6). Temperature arithmetic is also wrong (always adds in Celsius / returns Celsius instead of the right-hand unit: 10 C + 18 F -> 2.22 C instead of 68 F; documented 35 C + 10 degF -> 73 F instead of 105 F) - developer said already logged.\n\nDates and times: Expenses/Monthly budget/Remainders/Percentages all correct. Time differences correct (including negatives). Documented 'days between' / 'hours between' / date 'to' examples correct. Date gaps has a confirmed logged defect: when the end clock time is before the start clock time, the day count is not borrowed, so it is one day too large (Date gaps line 1 shows '45 y 2 mo 19 d 20 h 17 min 9 s' instead of 18 d; scratchpad '1 mo 23 h' instead of 30 d 23 h). Cross-timezone datetimeZ intervals are also wrong (same instant across UTC/Asia/Kolkata reports 5 h 30 min; identical wall times in different zones report 0 d) - developer said already logged.\n\nAll defects found are either confirmed/logged or already known; no other unreported issues found."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["nerdcalci-0003", "nerdcalci-0004"], "unfixed": ["nerdcalci-0003", "nerdcalci-0004"], "outcome": "success"}

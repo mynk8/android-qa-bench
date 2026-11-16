@@ -1,0 +1,125 @@
+{
+  "run_id": "a5787a4da73c",
+  "item_id": "minus-E07",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main amount editor",
+      "element": "Arithmetic result",
+      "element_ref": 4,
+      "field": "amount",
+      "symptom_type": "wrong_value",
+      "expected": "2+3\u00d74 evaluates to 14 using multiplication precedence.",
+      "observed": "Repeated entry of 2+3\u00d74 evaluates to 20, apparently evaluating left to right.",
+      "observed_quote": "= $20",
+      "steps": [
+        "Enter an amount on main screen.",
+        "Replace amount with 2+3*4.",
+        "Observe result 20.",
+        "Replace amount with the same expression and reproduce."
+      ],
+      "anchor_node": {
+        "text": "= $852",
+        "class": "android.widget.EditText",
+        "bounds": [
+          508,
+          514,
+          1038,
+          640
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet",
+      "element": "Android Back navigation",
+      "symptom_type": "wrong_navigation",
+      "expected": "Back dismisses the budget sheet and returns to the main screen.",
+      "observed": "Back exits Minus to the Android launcher while the budget sheet is open; reproduced twice.",
+      "steps": [
+        "From main screen tap Today budget pill.",
+        "Press Android BACK.",
+        "Observe launcher.",
+        "Reopen Minus and repeat."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E07-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0017"
+      ],
+      "present": [
+        "minus-0017"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/minus-E07/a5787a4da73c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0017": "reported"
+  },
+  "elapsed_s": 629.183,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "minus-0017"
+  ],
+  "found": [
+    "minus-0017"
+  ],
+  "required": [
+    "minus-0017"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 236,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "minus-0017"
+  ],
+  "bug_meta": {
+    "minus-0017": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

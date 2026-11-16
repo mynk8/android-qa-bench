@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "home",
+    "element": "due line",
+    "field": "due state",
+    "symptom_type": "wrong_value",
+    "expected": "after the dose is logged, the Due line names the next scheduled dose (tomorrow)",
+    "observed": "the Due line still names the dose that was just logged (today)",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "main screen",
+    "element": "something",
+    "field": "due state",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

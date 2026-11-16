@@ -1,0 +1,117 @@
+{
+  "run_id": "7da231d24fa5",
+  "item_id": "nerdcalci-E04",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Remainders calculation file",
+      "element": "100 % 13",
+      "element_ref": 2,
+      "field": "remainder operator",
+      "symptom_type": "wrong_value",
+      "expected": "100 % 13 should evaluate to 9; 47 % 20 should evaluate to 7; 19.5 % 4 should evaluate to 3.5; a % 14 with a = 50 should evaluate to 8.",
+      "observed": "Each remainder expression displays an error instead of a numeric remainder.",
+      "observed_quote": "Err",
+      "steps": [
+        "Open Remainders from the home screen.",
+        "Observe 100 % 13, 47 % 20, and 19.5 % 4; each displays Err.",
+        "Observe a = 50 followed by a % 14; the latter also displays Err."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "nerdcalci-0007"
+      ],
+      "present": [
+        "nerdcalci-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-c/episodes/nerdcalci-E04/7da231d24fa5/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0007": "reported"
+  },
+  "elapsed_s": 112.61,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.62,
+    "notes": "Reported and developer-confirmed a remainder parsing bug: all five remainder expressions in Remainders show Err. Percentages examples showed expected values. Verified Monthly budget recalculation after editing and restored bonus = 300.5; verified Percentages file lock and unlock. Pin ordering and other listed calculation files were not fully covered."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "found": [
+    "nerdcalci-0007"
+  ],
+  "required": [
+    "nerdcalci-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 29,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0007"
+  ],
+  "bug_meta": {
+    "nerdcalci-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

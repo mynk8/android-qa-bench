@@ -1,0 +1,239 @@
+{
+  "run_id": "68c773d16531",
+  "item_id": "minus-E05",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expense history list",
+      "element": "Date section heading",
+      "element_ref": 6,
+      "field": "Section date heading",
+      "symptom_type": "missing",
+      "expected": "Each expense history date section heading includes the weekday name, for example Saturday, before the date.",
+      "observed": "After reopening the expense history list, the section heading still shows only the date and month, with no weekday name.",
+      "observed_quote": "14 November",
+      "steps": [
+        "Open Analytics from the home screen.",
+        "Scroll to Total Expenses and tap it.",
+        "Observe the expanded date section heading.",
+        "Collapse and reopen the section; the heading remains unchanged."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "14 November"
+        ],
+        "bounds": [
+          42,
+          490,
+          1038,
+          605
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics",
+      "element": "Fixed New budget period button",
+      "element_ref": 61,
+      "field": "Lower summary card layout",
+      "symptom_type": "overlap",
+      "expected": "The New budget period button should not cover the analytics cards; the Spent/Available summary and Recurrent Expense card should remain fully readable.",
+      "observed": "After scrolling to the lower analytics summary, the fixed button overlaps the bottom of the Spent/Available card and the top of the Recurrent Expense card.",
+      "observed_quote": "New budget period",
+      "steps": [
+        "Open Analytics from the home screen in portrait.",
+        "Swipe up to the lower summary cards.",
+        "Observe the fixed New budget period button across the Spent/Available and Recurrent Expense cards."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "New budget period"
+        ],
+        "bounds": [
+          42,
+          1990,
+          1038,
+          2148
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget period expense history sheet",
+      "element": "Expanded date section heading",
+      "element_ref": 6,
+      "field": "Formatted date heading",
+      "symptom_type": "wrong_value",
+      "expected": "The 14 November expense section heading includes its weekday name (Saturday).",
+      "observed": "The expanded section heading contains only the day and month; the weekday is absent.",
+      "observed_quote": "14 November",
+      "steps": [
+        "Use the seeded current budget period (12 Nov through 05 Dec) with Groceries $40 and recurring Rent $20 on 14 Nov.",
+        "From Home, tap Analytics.",
+        "Swipe up to the Total Expenses card showing 2 and tap it to open the budget period expense history sheet.",
+        "Read the expanded section heading above the Groceries and Rent rows."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "14 November"
+        ],
+        "bounds": [
+          42,
+          490,
+          1038,
+          605
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "History",
+      "element": "Date group header",
+      "element_ref": 6,
+      "field": "Date heading",
+      "symptom_type": "missing",
+      "expected": "The date heading for the 14 Nov expenses includes the weekday name Saturday.",
+      "observed": "The heading shown above Groceries and Rent is only the day and month; it omits Saturday.",
+      "observed_quote": "14 November",
+      "steps": [
+        "On the seeded data, open Analytics.",
+        "Swipe up until the card labeled Total Expenses is visible.",
+        "Tap Total Expenses to open the expense history for the current budget period.",
+        "The expanded section above Groceries $40 and Rent $20 reads 14 November."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "14 November"
+        ],
+        "bounds": [
+          42,
+          490,
+          1038,
+          605
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics in landscape",
+      "element": "New budget period button and clipped lower analytics content",
+      "element_ref": 50,
+      "field": "Landscape layout",
+      "symptom_type": "cut_off",
+      "expected": "Analytics should keep its chart controls and lower summary content reachable after rotation.",
+      "observed": "In landscape, the analytics page cannot scroll vertically; the calendar and summary cards extend below the viewport, while the fixed button overlays them.",
+      "observed_quote": "New budget period",
+      "steps": [
+        "Open Analytics in portrait.",
+        "Rotate the device to landscape.",
+        "Swipe up on the analytics page.",
+        "The screen does not scroll; the chart's lower controls and summary content remain beyond the bottom edge and the fixed button crosses the visible content."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "New budget period"
+        ],
+        "bounds": [
+          42,
+          880,
+          2232,
+          1038
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0001"
+      ],
+      "present": [
+        "minus-0001"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/minus-E05/68c773d16531/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0001": "missed_unreached"
+  },
+  "elapsed_s": 759.439,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Tested expense history totals, section expand/collapse and row details; recurring Rent commitment and Dec 14 upcoming payment across Whole period, Weekly and Category views; Analytics trend/category, Days/Week/Biweek/Total, summary values, and rotation. Filed reports for the history weekday heading and Analytics layout concerns; the developer replied \u201ccould not reproduce\u201d to each. No transaction or recurring-payment data was changed."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0001"
+  ],
+  "found": [],
+  "required": [
+    "minus-0001"
+  ],
+  "missed": [
+    "minus-0001"
+  ],
+  "true_positives": 0,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 112,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0001"
+  ],
+  "bug_meta": {
+    "minus-0001": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

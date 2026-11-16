@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "images list",
+    "element": "photo.jpg",
+    "field": "rename",
+    "symptom_type": "no_effect",
+    "expected": "photo.jpg is renamed to photo-renamed.jpg",
+    "observed": "the file keeps its old name and the list is unchanged after renaming in the Images view",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "images list",
+    "element": "something",
+    "field": "rename",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

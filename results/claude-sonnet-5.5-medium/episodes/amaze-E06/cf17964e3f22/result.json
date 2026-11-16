@@ -1,0 +1,159 @@
+{
+  "run_id": "cf17964e3f22",
+  "item_id": "amaze-E06",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Search in AndroidQA/Amaze",
+      "element": "Search results list",
+      "symptom_type": "missing",
+      "expected": "Searching \"readme\" lists readme.txt from Alpha and from Beta; searching \"txt\" also lists both readme.txt files along with notes.txt and report+final.txt.",
+      "observed": "Results for \"readme\" stay empty after waiting. Results for \"txt\" list only notes.txt and report+final.txt, so files in the subfolders are missing.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Tap Search",
+        "Type readme and press Enter",
+        "Wait a few seconds",
+        "Results are empty; Alpha/readme.txt and Beta/readme.txt are not listed"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "New Folder dialog in AndroidQA/Amaze",
+      "element": "Name input / CREATE button",
+      "symptom_type": "wrong_value",
+      "expected": "Typing \"Alpha\" (an existing folder) shows an error such as \"already exists\" and CREATE stays disabled.",
+      "observed": "No error is shown for \"Alpha\" and CREATE is enabled. Tapping CREATE does not create a folder and does not close the dialog. The dialog returns with an empty name field, and there is no explanation.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Tap + then Folder",
+        "Type Alpha",
+        "Observe no error, CREATE enabled",
+        "Tap CREATE"
+      ],
+      "observed_quote": "Alpha"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Encrypt dialog (notes.txt)",
+      "element": "Password field error text",
+      "symptom_type": "wrong_value",
+      "expected": "Once both passwords match, the \"Password doesn't match\" error is cleared, since the fields are re-compared on every keystroke.",
+      "observed": "After typing \"abc\" in Password and then \"abc\" in Repeat password, OK is enabled but the red \"Password doesn't match\" error stays under the Password field.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Tap the three-dot Properties button on notes.txt and choose Encrypt",
+        "Type abc in Password",
+        "Type abc in Repeat password",
+        "Observe the stale error under Password"
+      ],
+      "observed_quote": "Password doesn't match"
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ],
+      "present": [
+        "amaze-0017",
+        "amaze-0018",
+        "amaze-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E06/cf17964e3f22/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0017": "missed_unreached",
+    "amaze-0018": "missed_unreached",
+    "amaze-0019": "missed_unreached"
+  },
+  "elapsed_s": 285.509,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "I did not clear every area. I filed three reports and the developer replied \"could not reproduce\" to each, so none is confirmed. (1) Search in AndroidQA/Amaze: \"readme\" returned no results and \"txt\" omitted the readme.txt files in Alpha and Beta. (2) New Folder and Rename: a name that already exists (\"Alpha\", \"notes.txt\") shows no error and leaves OK/CREATE enabled. (3) Encrypt dialog: \"Password doesn't match\" stays on screen after both fields hold \"abc\". Working as expected: creating a folder, copying a file into a folder, moving a file into a folder, renaming a file, and rejecting \"a/b.jpg\" as an invalid name. Not tested: creating a new file, rotating the screen, copying or moving into a folder that already holds a same-named file, and copying a folder."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "missed": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 84,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0017",
+    "amaze-0018",
+    "amaze-0019"
+  ],
+  "bug_meta": {
+    "amaze-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

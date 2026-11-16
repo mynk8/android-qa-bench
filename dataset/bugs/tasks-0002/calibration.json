@@ -1,0 +1,150 @@
+{
+  "bug_id": "tasks-0002",
+  "runs": 1,
+  "started": "2026-11-11T00:01:15+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "charge": 19,
+        "print": 18
+      },
+      "seconds": 22.7,
+      "screenshot_sha256": "d6284187e6fecaece3e150e6e000f789d715e540aa4141ec2b2aaaa45405f0e8",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0002-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "charge": 19,
+        "print": 18
+      },
+      "seconds": 31.9,
+      "screenshot_sha256": "95928c051347b174807b3ce549b1e9ecc6adda4bc3882aa6f46cfe81144bbebe",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0002-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "6:33",
+          "6:33\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Sunday",
+          "Buy milk",
+          "2 litres",
+          "Due Friday, November 20",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Print tickets",
+          "Charge phone",
+          "Due Monday, November 30",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 23.6,
+      "screenshot_sha256": "b23d730dfe9a4b89631e4535c7f6b341322f0aafaae705cb757e267c6c72802a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0002-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "charge": 18,
+        "print": 19
+      },
+      "seconds": 23.3,
+      "screenshot_sha256": "135a57a56966c10b2a06ef21bde88159f9e8e6a8e5b0b187f345a597395a4e61",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0002-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "charge": 18,
+        "print": 19
+      },
+      "seconds": 34.7,
+      "screenshot_sha256": "40f19702f3ad2999fb50137f546b18ed941ce1abbe895a18e0a4188a45068cbe",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0002-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "6:34",
+          "6:34\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Sunday",
+          "Buy milk",
+          "2 litres",
+          "Due Friday, November 20",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Charge phone",
+          "Print tickets",
+          "Due Monday, November 30",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 23.2,
+      "screenshot_sha256": "07b105eef45e15bb3eb6e4e98942fdf681bd340ca18056fbdf839b1ffac01f57",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0002-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T00:04:52+0530"
+}

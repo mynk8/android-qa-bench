@@ -1,0 +1,14 @@
+{
+  "case_id": "amaze-0016-clean-unspec",
+  "bug_id": "amaze-0016",
+  "_build_id": "amaze-0016-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "files_basic",
+  "agent_input": "agent_input.md"
+}

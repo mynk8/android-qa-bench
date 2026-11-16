@@ -1,0 +1,320 @@
+{
+  "run_id": "fc442de6f66b",
+  "item_id": "amaze-E01",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Amaze directory view",
+      "element": "Directory list/grid mode",
+      "element_ref": 8,
+      "field": "per-folder view",
+      "symptom_type": "not_persisted",
+      "expected": "Amaze retains Grid and Alpha retains List independently, including rotation.",
+      "observed": "After setting Amaze Grid and Alpha List, rotating in Alpha resets Amaze to List. Setting Amaze Grid again also makes Alpha open as Grid until rotation. Reproduced twice.",
+      "steps": [
+        "Open AndroidQA/Amaze and select Grid View.",
+        "Open Alpha and select List View.",
+        "Back to Amaze: Grid initially retained.",
+        "Reopen Alpha, rotate landscape then portrait, Back to Amaze: now List.",
+        "Set Amaze Grid again and open Alpha: Alpha now Grid; rotate and return: Amaze List again."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Beta",
+          "Nov 14 | 4:53\u202fPM"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze paste conflict",
+      "element": "Renamed folder copy",
+      "element_ref": 6,
+      "observed_quote": "2 folders and 4 files",
+      "symptom_type": "missing",
+      "expected": "Rename creates a uniquely named copy of Alpha containing readme.txt.",
+      "observed": "RENAME dismisses conflict but no new folder appears, even after leaving and returning. Repeated twice.",
+      "steps": [
+        "In AndroidQA/Amaze tap Alpha Properties menu > Copy.",
+        "Tap PASTE in same folder.",
+        "Conflict says Alpha; tap RENAME.",
+        "Wait, enter Beta then Back: still only Alpha and Beta.",
+        "Repeat copy/paste/RENAME: same result."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "2 folders and 4 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Copied folder Beta/Alpha",
+      "element": "readme.txt size",
+      "element_ref": 8,
+      "observed_quote": "0 B",
+      "field": "file contents",
+      "symptom_type": "wrong_value",
+      "expected": "Copied Alpha/readme.txt retains source's 13 B contents.",
+      "observed": "Both independent copies of Alpha into Beta contain readme.txt of 0 B. First copy was renamed Alpha copy+; second fresh copy also 0 B.",
+      "steps": [
+        "In Amaze copy Alpha via its Properties menu.",
+        "Open Beta and PASTE.",
+        "Open Beta/Alpha: readme.txt is 0 B (source Alpha/readme.txt was 13 B).",
+        "Rename copied folder to Alpha copy+.",
+        "Return to Amaze, copy original Alpha again, paste into Beta.",
+        "Open new Beta/Alpha: readme.txt again 0 B."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "readme.txt",
+          "Nov 14 | 4:53\u202fPM",
+          "0 B"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer bookmarks",
+      "element": "Alpha and Beta bookmark order",
+      "element_ref": 35,
+      "observed_quote": "Alpha",
+      "symptom_type": "wrong_value",
+      "expected": "Beta precedes Alpha because Beta was added first.",
+      "observed": "Drawer lists Alpha above Beta, alphabetically rather than addition order. Deleted both and repeated Beta then Alpha with identical result; screenshot verified.",
+      "steps": [
+        "Starting without bookmarks, in Amaze use Beta menu > Add to Bookmarks.",
+        "Use Alpha menu > Add to Bookmarks.",
+        "Open drawer: Alpha above Beta.",
+        "Delete both using drawer pencil > DELETE.",
+        "Repeat adding Beta then Alpha: Alpha still above Beta."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Alpha",
+          "Alpha"
+        ],
+        "bounds": [
+          0,
+          725,
+          798,
+          851
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Drawer after rotation",
+      "element": "Alpha and Beta bookmarks",
+      "element_ref": 17,
+      "symptom_type": "not_persisted",
+      "expected": "Added bookmarks survive device rotation.",
+      "observed": "Added Alpha and Beta visible before rotation; after landscape and portrait both vanish from drawer.",
+      "steps": [
+        "In Amaze add Beta then Alpha to bookmarks via folder menus.",
+        "Open drawer and verify Alpha and Beta entries.",
+        "Navigate through Alpha bookmark; open drawer.",
+        "Rotate landscape then portrait.",
+        "Open drawer: both added bookmarks are missing."
+      ],
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "readme.txt",
+          "Internal Storage\n370 GB free of 452 GB"
+        ],
+        "bounds": [
+          0,
+          554,
+          798,
+          680
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Original folder after paste Rename conflict",
+      "element": "Original readme.txt",
+      "element_ref": 18,
+      "observed_quote": "0 B",
+      "symptom_type": "wrong_value",
+      "field": "source file contents",
+      "expected": "Copy/paste with Rename leaves original folder files intact (Alpha readme 13 B; Beta readme 12 B).",
+      "observed": "Original Alpha/readme.txt became 0 B after same-folder paste Rename. Reproduced with original Beta: readme.txt changed from 12 B to 0 B and its report+renamed.txt from 13 B to 0 B. No renamed copy appears.",
+      "steps": [
+        "In Amaze verify Alpha/readme.txt 13 B.",
+        "Copy Alpha, paste in Amaze, choose RENAME on conflict.",
+        "Reopen original Alpha: readme.txt now 0 B.",
+        "Verify Beta/readme.txt 12 B.",
+        "Copy Beta, paste in Amaze, choose RENAME.",
+        "Reopen original Beta: readme.txt and report+renamed.txt now 0 B."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "readme.txt",
+          "Nov 14 | 4:53\u202fPM",
+          "0 B"
+        ],
+        "bounds": [
+          0,
+          1233,
+          1080,
+          1422
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename existing image name",
+      "element": "photo (1).jpg row",
+      "element_ref": 14,
+      "observed_quote": "photo (1).jpg",
+      "symptom_type": "no_effect",
+      "expected": "When destination keep.jpg exists, show a conflict/error and allow correcting or cancelling rename.",
+      "observed": "SAVE silently closes rename dialog without renaming photo (1).jpg and without explaining existing-name conflict. keep.jpg stays 21.00 kB. Repeated twice.",
+      "steps": [
+        "Copy photo.jpg and paste in same folder; choose RENAME to create photo (1).jpg.",
+        "Open photo (1).jpg menu > Rename.",
+        "Enter keep.jpg and SAVE.",
+        "Dialog closes; original name remains, with no error/conflict.",
+        "Repeat same rename: same silent no effect."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "photo (1).jpg",
+          "Nov 14 | 4:53\u202fPM",
+          "20.00 kB"
+        ],
+        "bounds": [
+          0,
+          912,
+          1080,
+          1101
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0004",
+        "amaze-0005"
+      ],
+      "present": [
+        "amaze-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/amaze-E01/fc442de6f66b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0004": "reported",
+    "amaze-0005": "missed_unreached"
+  },
+  "elapsed_s": 378.177,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept file/folder copy-paste and rename, same-directory conflicts, photo Rename conflict, existing-name and empty rename input, unusual '+' names, sorting ascending/descending and size with Only this folder, Files On Top, per-path list/grid navigation and rotation, bookmark add/delete/re-add/order/navigation and rotation. All observed issues reported. Confirmed/logged: folder paste conflict RENAME produces no renamed copy and truncates source contents (developer says subsequent data-loss reports already logged). Developer could not reproduce submitted view rotation persistence, bookmark ordering/persistence, and silent existing-name rename reports. Test artifacts remain within AndroidQA/Amaze: report+final.txt renamed report+renamed.txt; photo (1).jpg; Beta contains test Alpha and Alpha copy+ folders and report+renamed.txt. Original Alpha/readme.txt and Beta/readme.txt were truncated by tested bug. No changes outside test tree."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "found": [
+    "amaze-0004"
+  ],
+  "required": [
+    "amaze-0004"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 2,
+  "reports": 7,
+  "steps": 152,
+  "precision": 0.2,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "bug_meta": {
+    "amaze-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0005": {
+      "family": "state",
+      "hard_slice": true
+    }
+  }
+}

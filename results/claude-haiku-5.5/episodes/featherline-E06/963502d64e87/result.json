@@ -1,0 +1,114 @@
+{
+  "run_id": "963502d64e87",
+  "item_id": "featherline-E06",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Plan > Medicines > Add medicine (Estradiol, Injection)",
+      "element": "24",
+      "element_ref": 24,
+      "field": "Strength field label for Injection / Ampule",
+      "symptom_type": "wrong_value",
+      "expected": "With Preparation type = Ampule selected, the strength field label should describe an ampule (e.g. \"Ampule strength (mg)\"), and only the Vial option should show \"Vial strength\" / concentration wording.",
+      "observed": "With Injection + Ampule selected, the field is labelled \"Vial strength (mg)\" with 5 mg / 10 mg presets. Selecting Vial changes the same field to \"Concentration (mg/mL)\" with 20/40/50/80 mg/mL presets, so the Ampule label is taken from the Vial wording.",
+      "observed_quote": "Vial strength (mg)",
+      "steps": [
+        "Tap Plan tab, then Medicines (top-right icon), then Add medicine.",
+        "Keep Category = Estradiol and Preparation form = Injection.",
+        "Preparation type shows Ampule selected by default.",
+        "Observe the strength field label: it reads 'Vial strength (mg)' with presets 5 mg and 10 mg.",
+        "Tap Vial: the same field now reads 'Concentration (mg/mL)' with presets 20, 40, 50, 80 mg/mL.",
+        "Tap Ampule again: the label reverts to 'Vial strength (mg)'."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Vial strength (mg)"
+        ],
+        "bounds": [
+          63,
+          1906,
+          1017,
+          2074
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E06-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0020"
+      ],
+      "present": [
+        "featherline-0020"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/featherline-E06/963502d64e87/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0020": "missed_unreached"
+  },
+  "elapsed_s": 411.638,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0020"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0020"
+  ],
+  "missed": [
+    "featherline-0020"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0020"
+  ],
+  "bug_meta": {
+    "featherline-0020": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

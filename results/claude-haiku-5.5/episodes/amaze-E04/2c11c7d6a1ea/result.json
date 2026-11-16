@@ -1,0 +1,150 @@
+{
+  "run_id": "2c11c7d6a1ea",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer category view (Documents), rotation",
+      "element": "fullpath TextView (path header)",
+      "symptom_type": "wrong_navigation",
+      "expected": "After rotating the device, the Documents category view stays open with its four files (notes.txt, readme.txt, readme.txt, report+final.txt) and the selection state is kept or cleared cleanly.",
+      "observed": "After rotating from landscape back to portrait, the screen jumped out of the Documents category to the storage root (/storage/emulated/0, \"14 folders and 0 files\") and the action bar was left in selection mode showing \"0\" with no items selected. Reproduced twice.",
+      "observed_quote": "/storage/emulated/0",
+      "steps": [
+        "Open the navigation drawer and tap Documents (category view). Header shows 'Documents' and '0 folders and 4 files'.",
+        "Long-press notes.txt to enter selection mode (count shows 1).",
+        "Rotate the device to landscape.",
+        "Observe: the view has changed to /storage/emulated/0 (14 folders and 0 files) and the action bar shows '0' with no items selected. The Documents category is no longer shown.",
+        "Rotate back to portrait: still at /storage/emulated/0 in selection mode with count 0.",
+        "Repeat with Select All instead of a single long-press: same result (Documents is lost on rotation)."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "File list, selection mode after device rotation",
+      "element": "RelativeLayout contains \"Amaze Debug\" | \"0\" (selection action bar)",
+      "symptom_type": "wrong_value",
+      "expected": "After rotating with one item selected, the selection is kept (count 1, item highlighted) or cleared together with the action bar, so the action bar never shows a count that disagrees with the list.",
+      "observed": "Selection mode stays on with a count of \"0\" and no highlighted row. The overflow menu then offers \"Select All\" as if nothing were selected, and the Alpha row is no longer marked selected. Reproduced several times in /AndroidQA/Amaze, and also seen in the Documents view.",
+      "observed_quote": "0",
+      "steps": [
+        "Open the navigation drawer's storage view and go to AndroidQA, then open the Amaze folder (2 folders and 4 files).",
+        "Long-press Alpha. The action bar shows count 1 and Alpha is highlighted.",
+        "Rotate the device to landscape, then wait 2 seconds.",
+        "Observe: the action bar shows 'Amaze Debug' with count '0', Alpha is no longer highlighted, and selection mode is still active.",
+        "Rotate back to portrait: the action bar still shows count '0' with nothing selected.",
+        "Tap Done (back arrow) to exit selection; the folder is then normal again."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer category view (Documents) after device rotation",
+      "element": "fullpath TextView (\"Documents\" header)",
+      "symptom_type": "wrong_navigation",
+      "expected": "Rotating the device while the Documents category view is open keeps the Documents view (header \"Documents\", \"0 folders and 4 files\"), as it does for a normal folder such as /AndroidQA/Amaze.",
+      "observed": "After rotating to landscape, the screen left the Documents category and jumped to the storage root: the header reads \"/storage/emulated/0\" with \"14 folders and 0 files\". The Documents view is gone. Reproduced on two separate attempts (once with a selection active, once with no selection).",
+      "observed_quote": "/storage/emulated/0",
+      "steps": [
+        "Open the navigation drawer (hamburger icon) and tap Documents. The header shows 'Documents' and '0 folders and 4 files'.",
+        "With nothing selected, rotate the device to landscape and wait 2 seconds.",
+        "Observe: the header reads '/storage/emulated/0' with '14 folders and 0 files'. The Documents category has been left.",
+        "For comparison: open /AndroidQA/Amaze, rotate the device, and the folder path is kept."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/amaze-E04/2c11c7d6a1ea/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "missed_unreached",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 409.734,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Sweep of the drawer, multi-file selection and file/folder properties on the AndroidQA/Amaze data set. Confirmed OK: category views (Images, Documents) list the right files and hide the FAB, which returns on the storage root. Select All / Deselect All label flips correctly (1 of 2 shows Select All, 2 of 2 Deselect All, 5 of 6 Select All, 6 of 6 Deselect All) and Deselect All clears the selection. Properties: Alpha 1 item 13 B, Beta 1 item 12 B, Amaze 6 items 41.05 kB (sums correctly), photo.jpg 20000 bytes with MD5/SHA-256, Hide-from-media checkbox persists and was reverted. Bookmarks: adding Alpha shows it in the drawer, it navigates correctly, and Delete removes it. Drawer storage row reports free space consistent with Properties.\nOpen items: (1) Rotating while a category view is open (Documents) drops the view to /storage/emulated/0 - reported twice, developer could not reproduce. Rotating inside a normal folder keeps the path but leaves a stale selection action bar with count 0. (2) Bookmark rename with an empty name shows \"Path cannot be empty\" on the Name field - wording looks wrong, not filed. Not covered: search, compress, encrypt, and a second storage volume (none present on this device)."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 279,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "bug_id": "amaze-0015",
+  "runs": 1,
+  "started": "2026-11-11T10:15:44+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "after_first": "6",
+        "after_second": null
+      },
+      "seconds": 29.3,
+      "screenshot_sha256": "c802ed6b5f2b706b1bce4fd838a8618f77f65245dc4d7491b1f4957794976215",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0015-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "after_first": "6",
+        "after_second": null
+      },
+      "seconds": 27.8,
+      "screenshot_sha256": "9ad77e1302ddf3c44ffffdb6b375330e7d2a8992f55e057a32a86af0e7c0fb20",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0015-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "start": "1",
+        "after_inverse": "5"
+      },
+      "seconds": 26.3,
+      "screenshot_sha256": "92c96c8c99e3e1a8ae032c9d1e3101e547bbeee25342a2f04844dd8d54d348dd",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0015-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "after_first": "6",
+        "after_second": "6"
+      },
+      "seconds": 29.6,
+      "screenshot_sha256": "45ee6db855205a32d0b5cd658339ac52120cfe0248ac1bb60099a08f1ec0bbdb",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0015-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "after_first": "6",
+        "after_second": "6"
+      },
+      "seconds": 28.3,
+      "screenshot_sha256": "65399677670f03fa3a323a3272e40829d65b60cea392d7f65227009cbd3f142b",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0015-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "start": "1",
+        "after_inverse": "5"
+      },
+      "seconds": 27.8,
+      "screenshot_sha256": "ebf878e82a4ae71a00bbe3c4e09660e773069ef667b7be3a283f719012e56d6d",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0015-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:18:49+0530"
+}

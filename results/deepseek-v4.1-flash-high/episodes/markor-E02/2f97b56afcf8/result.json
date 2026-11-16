@@ -1,0 +1,158 @@
+{
+  "run_id": "2f97b56afcf8",
+  "item_id": "markor-E02",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Money.md \u2014 View Mode",
+      "element": "Document preview text (TextView)",
+      "field": "Rendered Markdown content",
+      "symptom_type": "wrong_value",
+      "expected": "With Markdown > Math disabled, the preview should show the line literally: \"Costs $5 and $10\" \u2014 both dollar signs preserved.",
+      "observed": "The preview displays \"Costs 5 and 10\" \u2014 both '$' characters are silently dropped from the text.",
+      "steps": [
+        "Open Files and tap Money.md (content: 'Costs $5 and $10').",
+        "Go to More > Settings > Markdown and confirm the Math (KaTex) checkbox is OFF.",
+        "Return to Money.md and tap View Mode.",
+        "Observe the rendered line: 'Costs 5 and 10' instead of 'Costs $5 and $10'.",
+        "Reproduced again in a scratch Markdown file containing 'A $x^2$ B and Costs $5 and $10 C' while Math is off: preview shows 'A x^2 B and Costs 5 and 10 C'."
+      ],
+      "element_ref": 4,
+      "observed_quote": "Costs 5 and 10",
+      "anchor_node": {
+        "text": "Costs 5 and 10",
+        "class": "android.widget.TextView",
+        "bounds": [
+          57,
+          270,
+          1026,
+          320
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Regex2.md \u2014 editor, Find/Replace dialog",
+      "element": "Replace (1) button / editor text",
+      "field": "Step-by-step replace with regular expression enabled",
+      "symptom_type": "wrong_value",
+      "expected": "With 'Use Regular Expression' enabled, searching `cat(@home)` and replacing with `$1` via the step-by-step Replace (1) action should substitute the captured group, producing `@home dog@home` \u2014 the same result as 'Replace all'.",
+      "observed": "Replace (1) inserts the replacement as literal text: the editor becomes `$1 dog@home`. Running 'Replace all' with the identical search/replacement and regex enabled produces `@home dog@home`, so the step-by-step path does not match the batch path.",
+      "steps": [
+        "Open Regex2.md (line 'cat@home dog@home') and tap Search.",
+        "Type search text `cat(@home)` and open the replace row.",
+        "Type replacement `$1` and enable 'Use Regular Expression'.",
+        "Tap 'Replace (1)': editor shows `$1 dog@home` (literal $1).",
+        "Close the dialog, tap Undo to restore `cat@home dog@home`.",
+        "Repeat the same search/replacement and tap 'Replace all': editor shows `@home dog@home` (captured group substituted)."
+      ],
+      "element_ref": 26,
+      "observed_quote": "$1 dog@home",
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "@home dog@home\n",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          567,
+          1080,
+          793
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0007",
+        "markor-0010"
+      ],
+      "present": [
+        "markor-0007",
+        "markor-0010"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/markor-E02/2f97b56afcf8/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0010": "reported",
+    "markor-0007": "reported"
+  },
+  "elapsed_s": 932.392,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept all three areas. Confirmed and logged two defects: (1) View Mode drops '$' characters from dollar-pair text (Money.md shows \"Costs 5 and 10\" instead of \"Costs $5 and $10\") even with Markdown Math disabled; reproduced in a scratch file with \"$x^2$\" and \"$5 ... $10\" (scratch file deleted afterwards). (2) With Find/Replace regex enabled, step-by-step Replace (1) inserts \"$1\" literally (\"$1 dog@home\") while Replace all substitutes the capture group (\"@home dog@home\"). Other checks passed: sort by Name/Date with Folder first and Reverse order produced correctly reversed sequences, reverse stayed checked when switching sort key, Cancel discarded pending changes, and sort persisted across navigation; editor move-line-up/down are each a single undo step (including two consecutive moves undone one at a time, and no-op at file top), duplicate line works; search count updates after its debounce; view mode rendered headings, links, nested bullets, escaped markup and the no-trailing-newline Single.md correctly, and rotation preserved editor/view content. Test data restored (QAtmp removed; Notes.md, Regex2.md and Indent2.md back to original content; sort returned to Name ascending / Folder first / Reverse off; Math extension back to its initial off state)."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "markor-0010",
+    "markor-0007"
+  ],
+  "found": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "required": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 270,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "bug_meta": {
+    "markor-0010": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "markor-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

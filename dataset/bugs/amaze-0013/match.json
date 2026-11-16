@@ -1,0 +1,119 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "add button"
+  ],
+  "fields": [
+    "home"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the add button is shown after returning home",
+    "floating add button is visible"
+  ],
+  "observed_contains_any": [
+    "the add button is missing after returning home",
+    "no add button at the bottom right"
+  ],
+  "symptom_types": [
+    "missing",
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "add*",
+      "plus",
+      "fab",
+      "floating*",
+      "button",
+      "+ button",
+      "(+)",
+      "round",
+      "circular",
+      "control",
+      "action button"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "add*",
+      "plus",
+      "fab",
+      "floating*",
+      "button",
+      "+ button",
+      "(+)",
+      "round",
+      "circular",
+      "control",
+      "bottom-right",
+      "action button"
+    ],
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*",
+      "error",
+      "gone",
+      "hidden",
+      "absent",
+      "disappear*"
+    ]
+  ],
+  "location_concepts": [
+    "button*",
+    "fab",
+    "add*",
+    "plus",
+    "+ button",
+    "(+)",
+    "floating",
+    "round",
+    "circular",
+    "control",
+    "images",
+    "drawer",
+    "home"
+  ],
+  "anchors": {
+    "elements": [
+      "fab",
+      "add",
+      "floating"
+    ],
+    "observed": []
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "bug_id": "ankidroid-0026",
+  "runs": 1,
+  "started": "2026-11-11T10:51:29+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": false,
+        "texts": [
+          "5:22",
+          "5:22\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "AnkiDroid",
+          "7 cards due",
+          "Sync",
+          "More options",
+          "French",
+          "Open the deck overview page containing the number of cards to see today.",
+          "3",
+          "Number of new cards to see today in this deck.",
+          "0",
+          "Number of cards in learning in this deck.",
+          "0",
+          "Number of cards due today in this deck.",
+          "Spanish",
+          "Open the deck overview page containing the number of cards to see today.",
+          "4",
+          "Number of new cards to see today in this deck.",
+          "0",
+          "Number of cards in learning in this deck.",
+          "0",
+          "Number of cards due today in this deck.",
+          "Studied \u20680\u2069 cards \u2068in \u20680\u2069 seconds\u2069 today (\u20680\u2069s/card)",
+          "Add",
+          "Add"
+        ]
+      },
+      "seconds": 34.0,
+      "screenshot_sha256": "e76b9c2437bb91923bc87e1748b87fbd78ad2f7a50f55d470e8783f09ce0325e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0026-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": false,
+        "texts": [
+          "5:22",
+          "5:22\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "AnkiDroid",
+          "7 cards due",
+          "Sync",
+          "More options",
+          "French",
+          "Open the deck overview page containing the number of cards to see today.",
+          "3",
+          "Number of new cards to see today in this deck.",
+          "0",
+          "Number of cards in learning in this deck.",
+          "0",
+          "Number of cards due today in this deck.",
+          "Spanish",
+          "Open the deck overview page containing the number of cards to see today.",
+          "4",
+          "Number of new cards to see today in this deck.",
+          "0",
+          "Number of cards in learning in this deck.",
+          "0",
+          "Number of cards due today in this deck.",
+          "Studied \u20680\u2069 cards \u2068in \u20680\u2069 seconds\u2069 today (\u20680\u2069s/card)",
+          "Add",
+          "Add"
+        ]
+      },
+      "seconds": 25.7,
+      "screenshot_sha256": "e76b9c2437bb91923bc87e1748b87fbd78ad2f7a50f55d470e8783f09ce0325e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0026-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": true,
+        "texts": [
+          "5:23",
+          "5:23\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Discard current input?",
+          "Keep editing",
+          "Discard"
+        ]
+      },
+      "seconds": 24.3,
+      "screenshot_sha256": "2fa064834b90978bd745ebbb3f3f70b966fdfe90a5d837cbd0fdf83c7e2ba7bd",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0026-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": true,
+        "texts": [
+          "5:23",
+          "5:23\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Discard current input?",
+          "Keep editing",
+          "Discard"
+        ]
+      },
+      "seconds": 25.8,
+      "screenshot_sha256": "48cad838335e7d715b7a25f2b2024d317acc06189d02d96b83d14536f7448639",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0026-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": true,
+        "texts": [
+          "5:24",
+          "5:24\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Discard current input?",
+          "Keep editing",
+          "Discard"
+        ]
+      },
+      "seconds": 26.1,
+      "screenshot_sha256": "5a32476f06963e096181bd173bec0604a3b8717c1f7b44153fedf00e71b4ad26",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0026-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "discard_prompt": true,
+        "texts": [
+          "5:24",
+          "5:24\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Discard current input?",
+          "Keep editing",
+          "Discard"
+        ]
+      },
+      "seconds": 29.8,
+      "screenshot_sha256": "cc4540d8145237b89f63bdf136f9c9f6f240faf8297798ccf3682e4aacfec2b3",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0026-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:54:56+0530"
+}

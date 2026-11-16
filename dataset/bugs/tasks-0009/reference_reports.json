@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task list",
+    "element": "search",
+    "field": "back",
+    "symptom_type": "wrong_navigation",
+    "expected": "back clears the search and shows the full list",
+    "observed": "back closes the app",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task list",
+    "element": "something",
+    "field": "back",
+    "symptom_type": "wrong_navigation",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

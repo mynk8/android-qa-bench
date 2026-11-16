@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "rename dialog",
+    "element": "name field",
+    "field": "rename",
+    "symptom_type": "missing",
+    "expected": "a notice says no changes will be made because the new name matches the old name",
+    "observed": "no notice or warning appears when typing the same name",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "rename dialog",
+    "element": "something",
+    "field": "rename",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

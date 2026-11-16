@@ -1,0 +1,184 @@
+{
+  "run_id": "0a7221a322b5",
+  "item_id": "iris-E03",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "IrisSeed album cards",
+      "element_ref": 5,
+      "field": "album grouping",
+      "symptom_type": "duplicated",
+      "expected": "Restoring both photos returns the original single IrisSeed album with 2 items.",
+      "observed": "After restoring both original photos, Albums shows two IrisSeed cards with 1 items each. Reopening and rotating preserves the split; opening the first shows only huge.jpg.",
+      "observed_quote": "big.jpg",
+      "steps": [
+        "Start with IrisSeed containing huge.jpg and big.jpg.",
+        "Delete big.jpg from its album viewer, then huge.jpg from Media.",
+        "Open Library > Trash and restore huge.jpg, then restore big.jpg.",
+        "Open Albums: two IrisSeed cards each show 1 items.",
+        "Open the first card, leave and return via Media and Albums, rotate and go back: the two cards remain."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          436,
+          1049,
+          1044
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "Duplicate IrisSeed cards after restoring",
+      "element_ref": 5,
+      "symptom_type": "duplicated",
+      "expected": "One IrisSeed card containing both photos from /storage/emulated/0/Pictures/IrisSeed/.",
+      "observed": "Reproduced a second full delete/restore cycle: two IrisSeed cards remain, each labeled 1 items, first huge.jpg and second big.jpg. The second opens a one-photo album. Details confirms big.jpg remains in the original IrisSeed path.",
+      "observed_quote": "1 items",
+      "steps": [
+        "Media: open big.jpg and tap Delete.",
+        "Media: open remaining huge.jpg and tap Delete.",
+        "Library > Trash shows huge.jpg then big.jpg.",
+        "Tap huge.jpg, tap Restore selected.",
+        "Tap remaining big.jpg, tap Restore selected.",
+        "Tap Albums bottom tab: two IrisSeed cards appear, each 1 items. Reproduced twice; navigate away and back or rotate and they persist."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          436,
+          1049,
+          1044
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "Single-item album count",
+      "element_ref": 4,
+      "field": "item count caption",
+      "symptom_type": "wrong_value",
+      "expected": "A single-photo album says \u201c1 item\u201d.",
+      "observed": "Both single-photo IrisSeed album cards show the plural caption \u201c1 items\u201d; observed after deletion and again after restoration and rotation.",
+      "observed_quote": "1 items",
+      "steps": [
+        "Delete big.jpg from the two-photo IrisSeed album.",
+        "Return to Albums: remaining single-photo album says 1 items.",
+        "Restore photos via Trash and revisit Albums; single-photo cards still say 1 items."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "huge.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0012"
+      ],
+      "present": [
+        "iris-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/iris-E03/0a7221a322b5/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0012": "missed_unreached"
+  },
+  "elapsed_s": 230.851,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept Media, album browsing/covers, and Trash using both seeded photos. Checked empty/populated states, filters/search including unusual input and clearing, details sizes 1.5 MB/2.5 MB, navigation, rotation, repeated delete/restore, newest-trash-first ordering, and cancellation of individual permanent deletion and Empty Trash. Both photos restored; Trash empty; Media shows both. Observed and reported split IrisSeed cards after restoration twice, plus singular count caption '1 items'; developer replied could not reproduce to reports. No permanent deletion performed. Album grouping remains split as reported."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "iris-0012"
+  ],
+  "found": [],
+  "required": [
+    "iris-0012"
+  ],
+  "missed": [
+    "iris-0012"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 100,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "iris-0012"
+  ],
+  "bug_meta": {
+    "iris-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

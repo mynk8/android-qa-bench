@@ -1,0 +1,291 @@
+{
+  "nerdcalci-0001-buggy": {
+    "sha256": "08f1b01c75be39cb4dd36d1dac88b50346d21d37e87a72814b3fa40d840554f7",
+    "bugs_present": [
+      "nerdcalci-0001"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0001-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0002-buggy": {
+    "sha256": "2ccaa354ec4d1a39ad5cfc4a1e214db0cc34aea300745538251c1788212a59c9",
+    "bugs_present": [
+      "nerdcalci-0002"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0002-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0003-buggy": {
+    "sha256": "cc1b2f81b4a5959813e88a8afcd941156a2b403f7ffac4e6dc95693e17ecd612",
+    "bugs_present": [
+      "nerdcalci-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0003-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0004-buggy": {
+    "sha256": "aac9da7982581dc6a7c4cafe6da9997179d3eeac5b45b935d5bc12c643b2adb9",
+    "bugs_present": [
+      "nerdcalci-0004"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0004-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0005-buggy": {
+    "sha256": "335dbb04e15a80340e1259aa714549f09363e5ce8eb7c52c7a2205ad2a866188",
+    "bugs_present": [
+      "nerdcalci-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0005-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0006-buggy": {
+    "sha256": "c6781e2f8a975cbfad5a3469a68dbbe3b3d2d9b9e17753f9190c2502390ca032",
+    "bugs_present": [
+      "nerdcalci-0006"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0006-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0007-buggy": {
+    "sha256": "881949689e6e85597159014f2144e99c6509790847b6955813d3207ce581e149",
+    "bugs_present": [
+      "nerdcalci-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0007-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0008-buggy": {
+    "sha256": "059c476e5c8515c08aa6e57c839dffda588d021d9195f9e0271b4d4f5b6ef6b1",
+    "bugs_present": [
+      "nerdcalci-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-0008-fixed": {
+    "sha256": "372a52a0ac9bfae28812bd024688e16e445643cf233df20696fb88f00de54232",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-E01-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0002",
+      "nerdcalci-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0001",
+      "nerdcalci-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0001",
+      "nerdcalci-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E01-111": {
+    "sha256": "68109cd441be928394784aed7210e40c0bfff01e591c6d7c22049affc1eaf96f",
+    "bugs_present": [
+      "nerdcalci-0001",
+      "nerdcalci-0002",
+      "nerdcalci-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-E02-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E02-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0004"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E02-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0003"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E02-11": {
+    "sha256": "2e9c0889b112d578ddb5933962d7ecef9062184986e94648037483a3257d6b3e",
+    "bugs_present": [
+      "nerdcalci-0003",
+      "nerdcalci-0004"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-E03-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E03-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0006"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E03-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "nerdcalci-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E03-11": {
+    "sha256": "50733b71c2a8ca488670e275a5cb8b7a4ff66c8da70a463b17c02d6fceb4cd6a",
+    "bugs_present": [
+      "nerdcalci-0005",
+      "nerdcalci-0006"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "nerdcalci-E04-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "nerdcalci-E04-1": {
+    "sha256": "e6d79ef91d4732e186d92b4356ebfd91c4c54e2f571b2517ce1b6629938087bf",
+    "bugs_present": [
+      "nerdcalci-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

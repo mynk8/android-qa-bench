@@ -1,0 +1,208 @@
+{
+  "bug_id": "nerdcalci-0004",
+  "runs": 1,
+  "started": "2026-11-11T10:52:23+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:22",
+          "5:22 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "20729892bdd54d8b7bd6e3d10c143dd4d14ecbbddb625d9b4063573daaff834c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0004-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:23",
+          "5:23 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 21.1,
+      "screenshot_sha256": "dd8094718f54cf86f54a002e8eaf0c76aa631b82e6f54a856288910bf79e0371",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0004-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:23",
+          "5:23 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 19 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 15 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 12.5,
+      "screenshot_sha256": "dd8094718f54cf86f54a002e8eaf0c76aa631b82e6f54a856288910bf79e0371",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "nerdcalci-0004-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:23",
+          "5:23 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 18 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 14 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 11.7,
+      "screenshot_sha256": "579f1d48b7a00408e5aae769e67a07189e88cbd19bfe794522bce8684f0c05ab",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0004-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:23",
+          "5:23 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 18 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 14 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 14.9,
+      "screenshot_sha256": "579f1d48b7a00408e5aae769e67a07189e88cbd19bfe794522bce8684f0c05ab",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0004-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:23",
+          "5:23 AM",
+          "Android System notification:",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "1",
+          "datetime(1981 2 14 18 32 0) to datetime(2026 5 3 14 49 9)",
+          "45 y 2 mo 18 d 20 h 17 min 9 s",
+          "2",
+          "datetime(2020 3 10 22 15 0) to datetime(2024 8 25 9 40 30)",
+          "4 y 5 mo 14 d 11 h 25 min 30 s",
+          "3",
+          "date(2024 1 1) to date(2024 1 8)",
+          "1 wk",
+          "Back",
+          "Date gaps",
+          "Undo",
+          "Redo",
+          "More options"
+        ]
+      },
+      "seconds": 11.0,
+      "screenshot_sha256": "579f1d48b7a00408e5aae769e67a07189e88cbd19bfe794522bce8684f0c05ab",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "nerdcalci-0004-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:53:59+0530"
+}

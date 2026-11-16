@@ -1,0 +1,12 @@
+{
+  "db_name": "database",
+  "sql": [
+    "DELETE FROM tags;",
+    "DELETE FROM tagdata;",
+    "DELETE FROM alarms;",
+    "DELETE FROM tasks;",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Water plants', ((CAST(strftime('%s','now','start of day','+30 days','+10 hours') AS INTEGER))*1000 + 1000), 0, '', 'FREQ=HOURLY', 0, 0, 0, 0, 0, 3, 1, 'seed-1', 0, 0, 0, 0, 0, 0);"
+  ],
+  "id": "repeat_hourly",
+  "preconditions": "The list contains one task, Water plants, due in 30 days at 10:00 and set to repeat every hour."
+}

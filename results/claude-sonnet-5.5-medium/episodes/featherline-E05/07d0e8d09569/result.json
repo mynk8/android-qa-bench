@@ -1,0 +1,115 @@
+{
+  "run_id": "07d0e8d09569",
+  "item_id": "featherline-E05",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Edit group",
+      "element": "START TIME row",
+      "symptom_type": "not_persisted",
+      "expected": "After picking an earlier start time (6:50 AM, past schedule = Hide) and saving, reopening the group shows START TIME 6:50 AM",
+      "observed": "The earlier start time is dropped on save; reopening the group shows the current time instead. A later time (11:50 PM) was kept.",
+      "observed_quote": "START TIME | 11:29 PM",
+      "steps": [
+        "Plan > tap existing group (Group 1) to edit",
+        "Tap START TIME, pick 6:50 AM, OK (PAST SCHEDULE appears, Hide selected)",
+        "Tap Save",
+        "Tap the group again to reopen the editor",
+        "START TIME shows the current time (11:29 PM) instead of 6:50 AM; repeated twice"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0018",
+        "featherline-0019"
+      ],
+      "present": [
+        "featherline-0018",
+        "featherline-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/featherline-E05/07d0e8d09569/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0018": "missed_unreached",
+    "featherline-0019": "missed_unreached"
+  },
+  "elapsed_s": 270.844,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Covered group creation and editing, the time pickers, night owl mode, the medicine list with category headers (including archiving), and journal notes and dates with tab switches. One suspected bug is unresolved. In the group editor, an earlier start time (6:26 or 6:50 AM, past schedule set to Hide) was not kept after Save, and the editor showed the current time on reopening. I reproduced this twice. The developer replied 'could not reproduce', so I did not pursue it. A later start time (11:50 PM) was kept. Not checked: the weekly schedule with several times (it showed only the 2:26 AM time), custom night owl cut-off values, lab results, and stock tracking."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "missed": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 104,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "bug_meta": {
+    "featherline-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "ankidroid-0001-buggy": {
+    "sha256": "b20ac51391fc5b1aee99f0fe42ef0c71bfa9467e42dcdbdabf4cfffa07ce1f2a",
+    "bugs_present": [
+      "ankidroid-0001"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0001-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0006-buggy": {
+    "sha256": "e54bf950443415c9c6870862fb8847eab7ffbbba17f53eb264872eeeca28517f",
+    "bugs_present": [
+      "ankidroid-0006"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0006-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0007-buggy": {
+    "sha256": "0dbc43ab5c55f83a930b9a52df49fdf4990703f1da2d179d7ae87a419d4e50d2",
+    "bugs_present": [
+      "ankidroid-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0007-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0008-buggy": {
+    "sha256": "cbd592e1d92fa5769775be4217f6fb76f2a559caa8036d5b7de924c50fe86f35",
+    "bugs_present": [
+      "ankidroid-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0008-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0012-buggy": {
+    "sha256": "db3c03cc2a6c035dd682a465fc382bf00ca16c283771cca32cd320b893d4a63c",
+    "bugs_present": [
+      "ankidroid-0012"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0012-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0014-buggy": {
+    "sha256": "6a8cbc26008f7d79fade3b5ea4fb276b0b06ecfab5a306cec3239d6b0c607c4a",
+    "bugs_present": [
+      "ankidroid-0014"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0014-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0017-buggy": {
+    "sha256": "4e47e910df2f6e20cdeee6dc7831080c196f4f90415309168612c98a23964c4d",
+    "bugs_present": [
+      "ankidroid-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0017-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0019-buggy": {
+    "sha256": "acb82e04db248c246375a0ee16d9247b68f0fea79dd7c4ce5a1fc13e9e00f8c7",
+    "bugs_present": [
+      "ankidroid-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0019-fixed": {
+    "sha256": "f85900dc80ddd1e180b75fb2782b9d05b77d182539b24cd8012208595fccab4c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E01-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E01-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E01-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E01-11": {
+    "sha256": "73ba3e5cfc9738f0e039bdf0922334d286a42564885d562ef043c4b12c6d8228",
+    "bugs_present": [
+      "ankidroid-0019",
+      "ankidroid-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E02-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E02-1": {
+    "sha256": "0dbc43ab5c55f83a930b9a52df49fdf4990703f1da2d179d7ae87a419d4e50d2",
+    "bugs_present": [
+      "ankidroid-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E03-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E03-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E03-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0006"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E03-11": {
+    "sha256": "a3345eca4db5fe6c61ee4fcba8de91a02ad6aa34048433cc5287a5c44e311d06",
+    "bugs_present": [
+      "ankidroid-0006",
+      "ankidroid-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E05-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E05-1": {
+    "sha256": "cbd592e1d92fa5769775be4217f6fb76f2a559caa8036d5b7de924c50fe86f35",
+    "bugs_present": [
+      "ankidroid-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0021-buggy": {
+    "sha256": "860d4b43c8ec1f458c3aa4cef5ec12fb0ff5232752a8850e57e53450eadba4ad",
+    "bugs_present": [
+      "ankidroid-0021"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0021-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0022-buggy": {
+    "sha256": "50c2da8932e4eba83dbf0d89d73ec6d5aac05ac02fd66d045fcd6a49071b2cb3",
+    "bugs_present": [
+      "ankidroid-0022"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0022-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0023-buggy": {
+    "sha256": "0218af024658889016d936476a9e0c99e5099eae203ecb497557e0e7374fae37",
+    "bugs_present": [
+      "ankidroid-0023"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0023-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0024-buggy": {
+    "sha256": "8a234a9bc7bfa3dabc6af835081f013f0dc4401df8b9b4e5c8869498b96b102f",
+    "bugs_present": [
+      "ankidroid-0024"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0024-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0025-buggy": {
+    "sha256": "867a8a1dd15fe0b766df1154657b14f2d17bc50d589e8b68f9331c70f60d4854",
+    "bugs_present": [
+      "ankidroid-0025"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0025-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0026-buggy": {
+    "sha256": "b5fba93bbcfaefc581811c4dc6b3640afef3ffd864092b10e0d609801e704b87",
+    "bugs_present": [
+      "ankidroid-0026"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0026-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0027-buggy": {
+    "sha256": "23706b2cb364900ff1c56b794c5fae3988835d1d67e9a23d80cb6257c3ab98fa",
+    "bugs_present": [
+      "ankidroid-0027"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0027-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0029-buggy": {
+    "sha256": "5b629ab4c7fd2230c3269df073a8b2f1c981265a838dca91c75661ca0a55fc76",
+    "bugs_present": [
+      "ankidroid-0029"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0029-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0030-buggy": {
+    "sha256": "706d54e62bb184507db7f1c8562a3cd8a1beda300cce9cb0e3be30c269099679",
+    "bugs_present": [
+      "ankidroid-0030"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-0030-fixed": {
+    "sha256": "c8427aa258efe41602651db04311eaa896b962bf6bab7a98fb8363bdd6d6ceab",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E06-000": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-001": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0030"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-010": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0022"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-011": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0022",
+      "ankidroid-0030"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-100": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0021"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-101": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0021",
+      "ankidroid-0030"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-110": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0021",
+      "ankidroid-0022"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E06-111": {
+    "sha256": "c80111eecd3e893ae317c9367221676b97e4d510fe969c08e6c94f28c6b3f85e",
+    "bugs_present": [
+      "ankidroid-0021",
+      "ankidroid-0022",
+      "ankidroid-0030"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E07-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E07-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0024"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E07-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0023"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E07-11": {
+    "sha256": "51df66f87e63d24d1be085e174bedd274d4b85e47578ebaf867de53394ee0632",
+    "bugs_present": [
+      "ankidroid-0023",
+      "ankidroid-0024"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E08-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E08-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0026"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E08-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0025"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E08-11": {
+    "sha256": "2d6d90f8a53a47e698a9083c2ae212fbf0b1333c2e41b528eee7e546cee176cf",
+    "bugs_present": [
+      "ankidroid-0025",
+      "ankidroid-0026"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "ankidroid-E09-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E09-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0029"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E09-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "ankidroid-0027"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "ankidroid-E09-11": {
+    "sha256": "8bc72d6b1746ea23d61dacbf9da9a53b222ac86bf42a10144eaa8c9828be8ade",
+    "bugs_present": [
+      "ankidroid-0027",
+      "ankidroid-0029"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

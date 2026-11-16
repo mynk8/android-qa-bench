@@ -1,0 +1,247 @@
+{
+  "run_id": "45e9f2e9c160",
+  "item_id": "markor-E04",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Single.md editor",
+      "element": "Ordered list formatting toolbar button",
+      "field": "Editor contents",
+      "symptom_type": "wrong_value",
+      "expected": "Tapping Ordered list at the end of \"gamma\" should prefix the line with \"1. \" and leave the text as \"1. gamma\" (matching how Unordered list produces \"- gamma\"), without adding bold markup.",
+      "observed": "After tapping Ordered list the line became \"1. gamma****\"; typing X then produced \"1. gamma**X**\", so the button also insert bold markers around the cursor. This differs from the adjacent Unordered list button, which correctly produced \"- gamma\".",
+      "steps": [
+        "Open Single.md in the editor",
+        "Tap the Ordered list toolbar button with the cursor at the end of gamma",
+        "Observe the editor text becomes 1. gamma****",
+        "Type X and observe the text becomes 1. gamma**X**"
+      ],
+      "element_ref": 10,
+      "observed_quote": "1. gamma****",
+      "anchor_node": {
+        "desc": "Ordered list",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          115,
+          2164,
+          230,
+          2269
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Markdown preview (Single.md)",
+      "element": "Copy button inside the code block",
+      "field": "Code block Copy control",
+      "symptom_type": "missing",
+      "expected": "The Copy control in the code block should be visible immediately when preview opens, with a legible icon or label against the new shaded code-block background.",
+      "observed": "On first opening preview, the top-right of the code block shows a blank white circular area with no visible icon or label. The control only becomes visible after tapping that blank area (it then shows a gray background with the Copy label). The blank state is reproducible after leaving and re-entering preview.",
+      "steps": [
+        "Open Single.md and enter a fenced Java code block with content int x = 1;",
+        "Tap View Mode / the eye button",
+        "Wait and inspect the top-right of the code block: the Copy button is invisible",
+        "Tap the blank circular area and observe the Copy button becomes visible",
+        "Return to Edit Mode and then View Mode again: the Copy button is invisible again"
+      ],
+      "element_ref": 8,
+      "anchor_node": {
+        "text": "Copy",
+        "class": "android.widget.Button",
+        "bounds": [
+          892,
+          462,
+          1005,
+          530
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Notes.md editor",
+      "element": "Bold formatting toolbar button (long-press strong-emphasis gesture)",
+      "field": "Editor contents after long-press Bold",
+      "symptom_type": "wrong_value",
+      "expected": "With the three non-empty lines alpha, beta, gamma selected (including the document's trailing newline), long-pressing Bold should emphasize only the affected text lines and leave the trailing empty line empty. No extra **** line should be created.",
+      "observed": "After Select all and long-pressing Bold, the editor became \"**alpha**\\n**beta**\\n**gamma**\\n****\". The extra \"****\" on the trailing empty line is visible below gamma.",
+      "steps": [
+        "Open a Markdown document in the editor",
+        "Replace its contents with alpha, beta and gamma on three lines, ending with a newline",
+        "Long-press a word, then tap Select all so the entire document including the trailing newline is selected",
+        "Long-press the Bold toolbar button",
+        "Observe the extra **** line after gamma"
+      ],
+      "element_ref": 50,
+      "observed_quote": "****",
+      "anchor_node": {
+        "desc": "Bold",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          635,
+          1389,
+          762,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shopping.md editor",
+      "element": "Bold toolbar button (long-press strong-emphasis gesture)",
+      "field": "Editor contents after long-press Bold",
+      "symptom_type": "wrong_value",
+      "expected": "Selecting all of Shopping.md and long-pressing Bold should emphasize only the non-empty text lines. The blank line and the trailing newline should stay empty, so no **** lines should be added.",
+      "observed": "After Select all and a long-press on Bold, the document becomes \"# **Shopping**\\n****\\n- **milk**\\n- **eggs**\\n****\". Two extra **** lines are inserted: one where the original blank line was, and one after the final newline.",
+      "steps": [
+        "Open Shopping.md with its original contents \"# Shopping\", blank line, \"- milk\", \"- eggs\" and a trailing newline",
+        "Long-press a word in the editor",
+        "Tap Select all in the selection menu",
+        "Long-press the Bold formatting-toolbar button",
+        "Observe the blank line and the end of the document now contain ****"
+      ],
+      "element_ref": 50,
+      "observed_quote": "****",
+      "anchor_node": {
+        "desc": "Bold",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          635,
+          1389,
+          762,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Single.md preview mode",
+      "element": "Copy button at the top-right of the fenced code block",
+      "field": "Code block Copy control (initial render)",
+      "symptom_type": "missing",
+      "expected": "The Copy control should be visible immediately whenever a fenced code block is shown in preview, with a readable label or icon on the new shaded code-block background.",
+      "observed": "When the code block first appears, its top-right corner is completely blank: the Copy button is not drawn. The addressable button exists but tapping the blank spot is required before it becomes visible as a gray button labeled Copy/Copied. Leaving and re-entering preview makes it blank again. This reproduces with a minimal fenced block containing only the word code.",
+      "steps": [
+        "Open Single.md in Edit Mode",
+        "Replace contents with a fenced code block containing only the word code",
+        "Tap View Mode",
+        "Wait several seconds: the top-right of the code block has no visible Copy button",
+        "Tap the invisible spot; a visibly styled Copy button appears"
+      ],
+      "element_ref": 5,
+      "anchor_node": {
+        "text": "Copied!",
+        "class": "android.widget.Button",
+        "bounds": [
+          850,
+          273,
+          1005,
+          341
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E04-111",
+      "mask": "111",
+      "unfixed": [
+        "markor-0013",
+        "markor-0014",
+        "markor-0019"
+      ],
+      "present": [
+        "markor-0013",
+        "markor-0014",
+        "markor-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/markor-E04/45e9f2e9c160/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0013": "reported",
+    "markor-0014": "missed_unreached",
+    "markor-0019": "missed_unreached"
+  },
+  "elapsed_s": 1292.427,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "found": [
+    "markor-0013"
+  ],
+  "required": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "missed": [
+    "markor-0014",
+    "markor-0019"
+  ],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 300,
+  "precision": 0.2,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "markor-0013",
+    "markor-0014",
+    "markor-0019"
+  ],
+  "bug_meta": {
+    "markor-0013": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0014": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

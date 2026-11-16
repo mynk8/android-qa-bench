@@ -1,0 +1,82 @@
+{
+  "bug_id": "minus-0019",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-17",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "budget_pill": [
+        {
+          "text": "Today"
+        },
+        {
+          "text": "This week"
+        },
+        {
+          "text": "This biweekly"
+        },
+        {
+          "text": "This month"
+        },
+        {
+          "text": "Daily Amount exceeded"
+        }
+      ],
+      "chip_weekly": [
+        {
+          "text": "Weekly"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0019-buggy",
+    "fixed": "minus-0019-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/minus-0019.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "BudgetStateCalculator.calculateBudgetState keeps recurring template rows in activeTransactions, so a recurring expense is counted once as its template and again as its charge in the period: spent total is inflated and the daily amount drops."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

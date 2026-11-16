@@ -1,0 +1,84 @@
+{
+  "episode_id": "amaze-E03",
+  "start_build": "amaze-E03-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "10:39",
+          "10:39\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Bookmarks",
+          "Show bookmarks",
+          "Bookmarks",
+          "DCIM",
+          "/storage/emulated/0/DCIM",
+          "Download",
+          "/storage/emulated/0/Download",
+          "Movies",
+          "/storage/emulated/0/Movies",
+          "Music",
+          "/storage/emulated/0/Music",
+          "Pictures",
+          "/storage/emulated/0/Pictures",
+          "Docs",
+          "/storage/emulated/0/AndroidQA/Amaze/Alpha",
+          "Docs2",
+          "/storage/emulated/0/AndroidQA/Amaze/Alpha",
+          "Add Item"
+        ]
+      },
+      "seconds": 48.4,
+      "screenshot_sha256": "928d43dfda2acf282d4d1591f4e08ecea763fc919db5db4dcb40ea4f6ac27774",
+      "bug": "amaze-0011",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Navigate up",
+          "Bookmarks",
+          "Show bookmarks",
+          "Bookmarks",
+          "DCIM",
+          "/storage/emulated/0/DCIM",
+          "Download",
+          "/storage/emulated/0/Download",
+          "Movies",
+          "/storage/emulated/0/Movies",
+          "Music",
+          "/storage/emulated/0/Music",
+          "Pictures",
+          "/storage/emulated/0/Pictures",
+          "Docs",
+          "/storage/emulated/0/AndroidQA/Amaze/Alpha",
+          "BetaMark",
+          "/storage/emulated/0/AndroidQA/Amaze/Beta",
+          "Add Item",
+          "10:40",
+          "10:40\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 53.7,
+      "screenshot_sha256": "298c9554f066cb48ca99167957be3790eb7eb81f7b8820230b49ed94714e6555",
+      "bug": "amaze-0011",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

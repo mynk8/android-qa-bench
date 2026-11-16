@@ -1,0 +1,49 @@
+{
+  "delete_external": [
+    "Documents/markor"
+  ],
+  "files": [
+    {
+      "path": "Documents/markor/Shopping.md",
+      "text": "# Shopping\n\n- milk\n- eggs\n"
+    },
+    {
+      "path": "Documents/markor/todo.txt",
+      "text": "(A) Pay rent\n"
+    },
+    {
+      "path": "Documents/markor/Notes.md",
+      "text": "# Notes\n\nSee [the guide](https://example.com/guide)\n"
+    },
+    {
+      "path": "Documents/markor/Single.md",
+      "text": "gamma"
+    },
+    {
+      "path": "Documents/markor/Regex.md",
+      "text": "cat@home\n"
+    },
+    {
+      "path": "Documents/markor/Regex2.md",
+      "text": "cat@home dog@home\n"
+    },
+    {
+      "path": "Documents/markor/Zeta/inside.md",
+      "text": "inside\n"
+    },
+    {
+      "path": "Documents/markor/Money.md",
+      "text": "Costs $5 and $10\n"
+    },
+    {
+      "path": "Documents/markor/Indent.md",
+      "text": "- item\n  - child\n"
+    },
+    {
+      "path": "Documents/markor/Indent2.md",
+      "text": "- a\n  - deep\n"
+    }
+  ],
+  "id": "notebook_basic",
+  "preconditions": "The notebook folder contains Shopping.md, todo.txt, Notes.md, Single.md (one line, 'gamma', with no newline at the end), Regex.md (the line 'cat@home'), Regex2.md (the line 'cat@home dog@home') Money.md (the line 'Costs $5 and $10'), Indent.md ('- item' then '  - child'), Indent2.md ('- a' then '  - deep') and a folder Zeta."
+}

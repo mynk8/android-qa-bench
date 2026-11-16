@@ -1,0 +1,298 @@
+{
+  "minus-0001-buggy": {
+    "sha256": "000e7b0178f3e372ffb99448a663596714ea0edb79c470e8cf425b4feb8cb5db",
+    "bugs_present": [
+      "minus-0001"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0001-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0005-buggy": {
+    "sha256": "fde9d105f377801a07897d6a6240ba2e87732a4eca205f93e3befa6169368835",
+    "bugs_present": [
+      "minus-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0005-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0007-buggy": {
+    "sha256": "840e09e707365865eca8ef45b35de0a41e5dd210acb3286d4707afed140feb22",
+    "bugs_present": [
+      "minus-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0007-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0008-buggy": {
+    "sha256": "74bfe78cc7933cc26d1a4e4870a9fdd12a900583d95b86c29965ed84f6bb33a8",
+    "bugs_present": [
+      "minus-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0008-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0009-buggy": {
+    "sha256": "cf648ac537241d52b723da53bf3d8c7db9a0076d10feeb46e9b201609a7cf80d",
+    "bugs_present": [
+      "minus-0009"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0009-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0010-buggy": {
+    "sha256": "cf25caa49516cd260f07efe422a60eccc164c894142e15bab807df186804ab6c",
+    "bugs_present": [
+      "minus-0010"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0010-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0014-buggy": {
+    "sha256": "8fb6f5139fa663dea7a88552a53dcf23521f85fc71ac8540dcec5a8cb7800b20",
+    "bugs_present": [
+      "minus-0014"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0014-fixed": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-E01-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E01-1": {
+    "sha256": "8fb6f5139fa663dea7a88552a53dcf23521f85fc71ac8540dcec5a8cb7800b20",
+    "bugs_present": [
+      "minus-0014"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-E02-0": {
+    "sha256": "6f52d1085e74c34280f43f05e612db683363c2b845cfc70d5d3f9c102cc4d747",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "minus-0001-fixed",
+    "tier": "full"
+  },
+  "minus-E02-1": {
+    "sha256": "74bfe78cc7933cc26d1a4e4870a9fdd12a900583d95b86c29965ed84f6bb33a8",
+    "bugs_present": [
+      "minus-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "minus-0008-buggy",
+    "tier": "core"
+  },
+  "minus-E04-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E04-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "minus-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E04-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "minus-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E04-11": {
+    "sha256": "689f3a7f9cac892291b3b2bb80a5763cd38fc12074497438021e26442b79724f",
+    "bugs_present": [
+      "minus-0007",
+      "minus-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0017-buggy": {
+    "sha256": "de9c72b98f54eebeafbdf1d8aff4b766d48716271a6c008f888bea9b303d8da7",
+    "bugs_present": [
+      "minus-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0017-fixed": {
+    "sha256": "2a69f32c5528566a6eb570e42ba05b6da6bfb0db09534b9a8c7bfc98c62ea1fd",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0018-buggy": {
+    "sha256": "d12e638e046cc97a8cafe72b80fb7ae61b1d7b289e9f0eb062b482843400feec",
+    "bugs_present": [
+      "minus-0018"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0018-fixed": {
+    "sha256": "2a69f32c5528566a6eb570e42ba05b6da6bfb0db09534b9a8c7bfc98c62ea1fd",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0019-buggy": {
+    "sha256": "c4015a9586e8ac664bf0aeee8588538925cf58b64da998a4aef8bf15e7b26e2f",
+    "bugs_present": [
+      "minus-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-0019-fixed": {
+    "sha256": "2a69f32c5528566a6eb570e42ba05b6da6bfb0db09534b9a8c7bfc98c62ea1fd",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-E06-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E06-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "minus-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E06-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "minus-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E06-11": {
+    "sha256": "92fef45cedf7c29bf3d8092f270a0f0ecff7e89adf9e40a3a63012a78daafcf0",
+    "bugs_present": [
+      "minus-0018",
+      "minus-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-E07-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E07-1": {
+    "sha256": "346fffc19f2b3cbda40f0a15ab710ee2d3c09d49c71f014992791ebfbbbfdff5",
+    "bugs_present": [
+      "minus-0017"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "minus-E05-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "minus-E05-1": {
+    "sha256": "9ff0d8d1a3a2db8a893272eba9cbb8d46ac94153f23e54a3d375bfa14a35c5b6",
+    "bugs_present": [
+      "minus-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

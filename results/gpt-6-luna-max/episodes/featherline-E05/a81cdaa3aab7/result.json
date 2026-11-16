@@ -1,0 +1,155 @@
+{
+  "run_id": "a81cdaa3aab7",
+  "item_id": "featherline-E05",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Medicine details > Edit medicine",
+      "element": "Save button",
+      "element_ref": 9,
+      "field": "Tablet strength (mg)",
+      "symptom_type": "no_effect",
+      "expected": "A zero tablet strength should be rejected with visible validation or Save should be disabled; a medicine strength must be positive.",
+      "observed": "After entering 0 mg and tapping Save, the edit sheet remains open with 0 still entered and no validation message.",
+      "observed_quote": "0",
+      "steps": [
+        "Open Plan > Medicines.",
+        "Open Estradiol valerate and tap Edit medicine.",
+        "Set Tablet strength (mg) to 0.",
+        "Dismiss the numeric keyboard with Done, then tap Save."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Save"
+        ],
+        "bounds": [
+          63,
+          2086,
+          1017,
+          2212
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Journal in landscape",
+      "element": "Today's note card",
+      "element_ref": 5,
+      "field": "Note content",
+      "symptom_type": "overlap",
+      "expected": "After rotating to landscape, the note card should remain visible and tappable without the bottom navigation covering it.",
+      "observed": "The bottom navigation dock overlaps the Today note card. Tapping the note field at the overlapping position has no effect, so the note cannot be opened for editing in landscape.",
+      "observed_quote": "QA sweep: baseline 03:00, group starts tomorrow.",
+      "steps": [
+        "Save a note under Today in Journal.",
+        "Rotate the device to landscape.",
+        "Tap the saved note text where the bottom navigation dock overlaps the card."
+      ],
+      "anchor_node": {
+        "text": "QA sweep: baseline 03:00, group starts tomorrow.",
+        "class": "android.widget.EditText",
+        "bounds": [
+          481,
+          838,
+          1919,
+          964
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0018",
+        "featherline-0019"
+      ],
+      "present": [
+        "featherline-0018",
+        "featherline-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/featherline-E05/a81cdaa3aab7/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0018": "missed_unreached",
+    "featherline-0019": "missed_unreached"
+  },
+  "elapsed_s": 1905.262,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Covered group creation/editing, date and time pickers including repeat selection, daily/weekly scheduling, interval bounds, night owl caption and preview, persistence, cancel/discard, and rotation. Checked medicine list with one populated category and with no active medicines. Saved/edited/cancelled a journal note and verified it remained across tab switches and rotation; tested timeline dates. Deleted test group, note, and timeline date; archived the test medicine. Two reports were attempted, and the developer replied that both could not be reproduced."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "missed": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 225,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0018",
+    "featherline-0019"
+  ],
+  "bug_meta": {
+    "featherline-0018": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "featherline-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

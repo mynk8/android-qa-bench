@@ -1,0 +1,75 @@
+{
+  "screens": [
+    "task edit"
+  ],
+  "elements": [
+    "edit screen"
+  ],
+  "fields": [
+    "visibility"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the edit screen for Buy milk stays open after rotating",
+    "edit screen remains visible"
+  ],
+  "observed_contains_any": [
+    "the edit screen disappears and the task list shows instead",
+    "edit screen vanishes after rotation"
+  ],
+  "symptom_types": [
+    "missing",
+    "wrong_navigation",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "open",
+      "stay*",
+      "remain*",
+      "visible",
+      "still",
+      "keep*",
+      "kept",
+      "shown"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "screen",
+      "editor",
+      "edit*",
+      "page",
+      "view",
+      "dialog",
+      "task list",
+      "list"
+    ],
+    [
+      "disappear*",
+      "close*",
+      "gone",
+      "vanish*",
+      "list",
+      "dismiss*",
+      "exit*",
+      "back to",
+      "returns to",
+      "lost",
+      "kicked"
+    ]
+  ],
+  "location_concepts": [
+    "edit*",
+    "rotat*",
+    "task edit*"
+  ],
+  "anchors": {
+    "elements": [
+      "Buy milk",
+      "Edit",
+      "My Tasks"
+    ],
+    "observed": []
+  }
+}

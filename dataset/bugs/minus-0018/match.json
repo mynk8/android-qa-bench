@@ -1,0 +1,82 @@
+{
+  "screens": [
+    "history",
+    "expense history"
+  ],
+  "elements": [
+    "day heading",
+    "date group"
+  ],
+  "fields": [
+    "collapse"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "tapping the day heading collapses the group and hides the Groceries row",
+    "the heading shows an expand arrow"
+  ],
+  "observed_contains_any": [
+    "tapping the day heading does nothing and the Groceries row stays visible",
+    "the day group cannot be collapsed"
+  ],
+  "symptom_types": [
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "collaps*",
+      "hid*",
+      "hidden",
+      "close*",
+      "expand arrow",
+      "fold*",
+      "toggl*",
+      "expand*",
+      "shrink*",
+      "minimi*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "can't",
+      "cannot",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "nothing",
+      "unchanged",
+      "re-expand*",
+      "reopen*",
+      "expands again",
+      "stay",
+      "on screen",
+      "visible"
+    ]
+  ],
+  "location_concepts": [
+    "day*",
+    "date*",
+    "heading",
+    "header",
+    "group",
+    "section"
+  ],
+  "anchors": {
+    "elements": [
+      "10 November",
+      "Collapse",
+      "Groceries",
+      "Total: $60"
+    ],
+    "observed": [
+      "collapse",
+      "groceries"
+    ]
+  }
+}

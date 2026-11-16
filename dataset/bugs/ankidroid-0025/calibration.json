@@ -1,0 +1,184 @@
+{
+  "bug_id": "ankidroid-0025",
+  "runs": 1,
+  "started": "2026-11-11T10:47:21+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:18",
+          "5:18\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Ascending retrievability",
+          "Descending retrievability",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 33.2,
+      "screenshot_sha256": "0c844533c0f7fa76881a4d2632eece33e17c8a65ab80057577efc92c5f1586b3",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0025-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:18",
+          "5:18\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Ascending retrievability",
+          "Descending retrievability",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 28.3,
+      "screenshot_sha256": "d8a3f264e35dbb7a265cbf4863e03aa7fb13cc95c02d769a0c75f3d909801d5f",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0025-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:19",
+          "5:19\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Ascending retrievability",
+          "Descending retrievability",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 29.9,
+      "screenshot_sha256": "0c27ffe31f7af8a7cd726687f62dbb039fcd6ec4b7af255b3943e4cd136f720a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0025-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:20",
+          "5:20\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 48.3,
+      "screenshot_sha256": "50e6cc202683985530851c86dde979c829b3b9d607e3b21acaf5bd8f5103be16",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0025-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:20",
+          "5:20\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 28.3,
+      "screenshot_sha256": "1adad8fc22e61f31de9b6665c37cc049a5bbf21dce754b59f5ffced98a13d9a5",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0025-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:21",
+          "5:21\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Oldest seen first",
+          "Random",
+          "Increasing intervals",
+          "Decreasing intervals",
+          "Most lapses",
+          "Order added",
+          "Order due",
+          "Latest added first",
+          "Relative overdueness"
+        ]
+      },
+      "seconds": 21.6,
+      "screenshot_sha256": "e82eee6c240f96911186093e0fcb960d475a2326da0e9f412ca8633b874148a0",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0025-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:51:18+0530"
+}

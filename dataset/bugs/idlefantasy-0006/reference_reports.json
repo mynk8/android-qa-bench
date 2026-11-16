@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "combat gear tab body picker",
+    "element": "body slot picker",
+    "field": "order",
+    "symptom_type": "wrong_value",
+    "expected": "runite chainbody (60) should be listed before adamantite platebody (66), ordered by combined stat bonus",
+    "observed": "runite chainbody is listed after adamantite and slayer platebody, sorted by tier and name instead of stat",
+    "steps": [
+      "Opened Combat, Gear tab, tapped Body.",
+      "Read the order of the pieces."
+    ]
+  },
+  "vague": {
+    "screen": "combat gear tab body picker",
+    "element": "something",
+    "field": "order",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

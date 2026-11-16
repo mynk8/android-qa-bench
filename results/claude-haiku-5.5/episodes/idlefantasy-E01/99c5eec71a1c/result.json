@@ -1,0 +1,148 @@
+{
+  "run_id": "99c5eec71a1c",
+  "item_id": "idlefantasy-E01",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear sheet",
+      "element": "Total row of Sell Old Gear sheet (element 34)",
+      "element_ref": 34,
+      "symptom_type": "cut_off",
+      "field": "Sell Old Gear item list",
+      "expected": "All items in the Sell Old Gear list are visible or reachable by scrolling, and the Total equals the sum of the listed rows.",
+      "observed": "With Keep one of each item OFF, the list shows 10 rows and the last row (Slayer Platebody 225) is cut off at the sheet edge; the list does not scroll, so Steel Full Helmet (218) cannot be seen. Visible rows add up to 5,198, but Total shows 5,416 (difference 218 = Steel Full Helmet).",
+      "observed_quote": "5,416",
+      "steps": [
+        "Start: Shop > Sell tab, Keep one of each item OFF, Coins 2.6M.",
+        "Tap Sell Old Gear.",
+        "Observe the sheet: rows Adamantite Platebody 937, Bronze Axe 25, Bronze Dagger 25, Gilded Platebody 300, Iron Sword x2 124, Mithril Med Helmet 437, Mithril Platebody 625, Runite Chainbody 1,250, Runite Platebody 1,250, Slayer Platebody 225 (cut off at bottom).",
+        "Swipe up inside the list to scroll: no movement.",
+        "Total shows 5,416; visible rows sum to 5,198.",
+        "Tap Cancel (nothing sold)."
+      ],
+      "anchor_error": "no element 34 in the latest observation"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell (landscape)",
+      "element": "Keep one of each item toggle, Coins header and Sell Old Gear button at right edge",
+      "element_ref": 6,
+      "symptom_type": "overlap",
+      "field": "Keep one of each item toggle / Coins header",
+      "expected": "In landscape the Shop Sell tab content stays inside the visible app area, so the Keep one of each item toggle, the Coins amount and the right-hand buttons are fully visible and tappable.",
+      "observed": "After rotating to landscape the content runs under the system navigation strip on the right: the Keep one of each item toggle is half-hidden behind the nav buttons, the Coins 2.6M header is clipped at the edge, and the Sell Old Gear button extends past the edge. The same clipping appears on the Skills overview in landscape (XP text clipped at the right edge).",
+      "observed_quote": "Keep one of each item",
+      "steps": [
+        "Start in portrait: Shop > Sell tab (Coins 2.6M, Keep one of each item toggle at right).",
+        "Rotate the device to landscape.",
+        "Observe the right edge: the toggle, Coins 2.6M and Sell Old Gear button run under the system navigation strip.",
+        "Rotate back to portrait: layout is correct again.",
+        "Also on Skills tab in landscape the XP text (e.g. 4,470 / 5,018 XP) reaches the same clipped edge."
+      ],
+      "anchor_node": {
+        "text": "Keep one of each item",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          641,
+          901,
+          684
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ],
+      "present": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/idlefantasy-E01/99c5eec71a1c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0001": "missed_unreached",
+    "idlefantasy-0002": "missed_unreached"
+  },
+  "elapsed_s": 296.258,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Sweep of Shop (Buy, Sell, Sell Junk, Sell Old Gear, Keep-one toggle, search, sorts) and Skills overview (levels/XP, combat tiles, prestige markers, rotation) on the current build. Confirmed OK: Keep-one toggle persists across leaving the Shop and backgrounding the app, and changes Sell Old Gear output; Shop header shows 2.6M for 2,567,890; Skills levels match preconditions and XP table; Total Level 720 agrees with Home and Profile; Price and Quantity sorts are ordered; search filters; Sell Junk totals are correct (486). Two issues filed but NOT reproduced by the developer: (1) Sell Old Gear sheet with keep-one OFF: visible rows sum to 5,198 but Total shows 5,416 (difference 218 = Steel Full Helmet, not visible; list would not scroll for me). (2) In landscape, right-hand content on Shop Sell and Skills runs under the nav strip. Not verified: the trade-in catalogue payout cap (no catalogue figure to compare against on screen; Logs sell 6 vs buy 7 is consistent). Out of scope, noticed: Profile shows [Debug] Set XP buttons on every skill. Skills tab label reads 'Skills (1)' with no active session; meaning unclear."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "missed": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 163,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "bug_meta": {
+    "idlefantasy-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0002": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

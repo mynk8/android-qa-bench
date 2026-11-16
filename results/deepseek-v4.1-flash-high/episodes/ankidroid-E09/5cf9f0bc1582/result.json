@@ -1,0 +1,123 @@
+{
+  "run_id": "5cf9f0bc1582",
+  "item_id": "ankidroid-E09",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser \u2192 overflow menu \u2192 Reposition (Reposition new cards dialog)",
+      "element": "Range hint TextView above the Starting position and Step inputs (id=queue_limits_label)",
+      "field": "range hint above the inputs",
+      "symptom_type": "wrong_value",
+      "expected": "The two-line hint should show the queue range bounds with distinct labels, e.g. \"Queue top: 1\" and \"Queue bottom: 7\" (top bound and bottom bound).",
+      "observed": "The hint shows the same \"Queue top\" label twice with different numbers: \"Queue top: \u20681\u2069\\nQueue top: \u20687\u2069\". The second line should be the bottom bound, not a second \"Queue top\".",
+      "observed_quote": "Queue top: \u20681\u2069\nQueue top: \u20687\u2069",
+      "element_ref": 19,
+      "steps": [
+        "Open the card browser (drawer \u2192 Card browser).",
+        "Select all 4 Spanish cards (overflow \u2192 Select all).",
+        "Open overflow menu \u2192 Reposition.",
+        "Read the hint text displayed above the Starting position / Step inputs."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/queue_limits_label",
+        "text": "Queue top: \u20681\u2069\nQueue top: \u20687\u2069",
+        "class": "android.widget.TextView",
+        "bounds": [
+          144,
+          327,
+          351,
+          421
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E09-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ],
+      "present": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/ankidroid-E09/5cf9f0bc1582/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0027": "missed_unreached",
+    "ankidroid-0029": "reported"
+  },
+  "elapsed_s": 978.214,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "found": [
+    "ankidroid-0029"
+  ],
+  "required": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "missed": [
+    "ankidroid-0027"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 300,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "bug_meta": {
+    "ankidroid-0027": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "ankidroid-0029": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

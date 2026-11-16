@@ -1,0 +1,51 @@
+{
+  "app_id": "iris",
+  "tasks": [
+    {
+      "id": "build_pinned",
+      "status": "done",
+      "note": "core APKs built from the app head (aqb build)"
+    },
+    {
+      "id": "seed_script",
+      "status": "done"
+    },
+    {
+      "id": "mine_candidates",
+      "status": "done"
+    },
+    {
+      "id": "reproduce",
+      "status": "done",
+      "kept": 3,
+      "note": "device-verified"
+    },
+    {
+      "id": "write_checks",
+      "status": "done"
+    },
+    {
+      "id": "calibrate",
+      "status": "done",
+      "note": "all bugs and episodes verified on Limrun (single pass)"
+    },
+    {
+      "id": "match_keys",
+      "status": "done"
+    },
+    {
+      "id": "episodes",
+      "status": "done",
+      "count": 1
+    },
+    {
+      "id": "briefs",
+      "status": "done"
+    },
+    {
+      "id": "human_review",
+      "status": "blocked",
+      "note": "match-key and brief review"
+    }
+  ]
+}

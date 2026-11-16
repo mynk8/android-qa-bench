@@ -1,0 +1,419 @@
+{
+  "bug_id": "featherline-0011",
+  "app_id": "featherline",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-05-27",
+  "seed_id": "plan_empty",
+  "params": {
+    "nav": {
+      "onboarding_skip": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Get started"
+        },
+        {
+          "text": "Continue"
+        }
+      ],
+      "add_medication": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "Add medication"
+        },
+        {
+          "desc": "Add medication"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "new_medicine": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "route_gel": [
+        {
+          "text": "Gel"
+        }
+      ],
+      "route_oral": [
+        {
+          "text": "Oral"
+        }
+      ],
+      "prep_tablet": [
+        {
+          "text": "Tablet"
+        }
+      ],
+      "name_field": [
+        {
+          "text": "Name"
+        },
+        {
+          "text": "Medicine name"
+        }
+      ],
+      "strength_field": [
+        {
+          "text": "Tablet strength (mg)"
+        },
+        {
+          "text": "Tablet strength"
+        }
+      ],
+      "per_dose_field": [
+        {
+          "text": "Tablets per dose"
+        }
+      ],
+      "save": [
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Save"
+        }
+      ],
+      "calibration": [
+        {
+          "text": "Calibration"
+        },
+        {
+          "desc": "Calibration"
+        }
+      ],
+      "e2_field": [
+        {
+          "text": "E2"
+        }
+      ],
+      "ime_next": [
+        {
+          "desc": "Next"
+        }
+      ],
+      "focused_field": [
+        {
+          "text": ""
+        }
+      ],
+      "stock_field": [
+        {
+          "text": "Stock"
+        },
+        {
+          "desc": "Stock"
+        },
+        {
+          "text": "On hand"
+        }
+      ],
+      "add_stock": [
+        {
+          "text": "Add"
+        },
+        {
+          "text": "Add stock"
+        },
+        {
+          "desc": "Add stock"
+        }
+      ],
+      "log_dose": [
+        {
+          "text": "Log now"
+        },
+        {
+          "text": "Quick log"
+        },
+        {
+          "text": "Logged"
+        },
+        {
+          "text": "Log dose"
+        },
+        {
+          "text": "Take"
+        },
+        {
+          "text": "Mark taken"
+        },
+        {
+          "desc": "Log"
+        },
+        {
+          "desc": "Log now"
+        },
+        {
+          "desc": "Quick log"
+        }
+      ],
+      "backfill": [
+        {
+          "text": "Past schedule"
+        },
+        {
+          "text": "Past due"
+        },
+        {
+          "text": "Backfill"
+        },
+        {
+          "text": "Log past dose"
+        },
+        {
+          "text": "Retrospective"
+        },
+        {
+          "text": "Past"
+        },
+        {
+          "desc": "Past schedule"
+        },
+        {
+          "desc": "Past due"
+        }
+      ],
+      "date_row": [
+        {
+          "text": "Date"
+        },
+        {
+          "desc": "Date"
+        }
+      ],
+      "medicine_list": [
+        {
+          "text": "Medications"
+        },
+        {
+          "text": "Plan"
+        },
+        {
+          "text": "Catalogue"
+        }
+      ],
+      "labs": [
+        {
+          "text": "Labs"
+        },
+        {
+          "text": "Test results"
+        },
+        {
+          "text": "Add result"
+        },
+        {
+          "text": "Blood tests"
+        },
+        {
+          "text": "Results"
+        }
+      ],
+      "add_result": [
+        {
+          "text": "Add result"
+        },
+        {
+          "text": "Add"
+        },
+        {
+          "desc": "Add"
+        }
+      ],
+      "result_name": [
+        {
+          "text": "Name"
+        },
+        {
+          "text": "Marker"
+        }
+      ],
+      "result_value": [
+        {
+          "text": "Value"
+        },
+        {
+          "text": "Result"
+        }
+      ],
+      "e2_marker": [
+        {
+          "text": "E2"
+        },
+        {
+          "text": "Estradiol"
+        }
+      ],
+      "prep_patch": [
+        {
+          "text": "Patch"
+        },
+        {
+          "text": "Patch release rate"
+        }
+      ],
+      "onb_start": [
+        {
+          "text": "Get started"
+        }
+      ],
+      "onb_agree": [
+        {
+          "text": "I have read and agree"
+        }
+      ],
+      "onb_skip": [
+        {
+          "text": "Skip"
+        }
+      ],
+      "onb_continue": [
+        {
+          "text": "Continue"
+        }
+      ],
+      "onb_open": [
+        {
+          "text": "Open Featherline"
+        }
+      ],
+      "tab_plan": [
+        {
+          "text": "Plan"
+        },
+        {
+          "desc": "Plan"
+        }
+      ],
+      "tab_home": [
+        {
+          "text": "Home"
+        },
+        {
+          "desc": "Home"
+        }
+      ],
+      "medicines_icon": [
+        {
+          "desc": "Medicines"
+        },
+        {
+          "text": "Medicines"
+        }
+      ],
+      "add_group": [
+        {
+          "text": "Add"
+        }
+      ],
+      "group_add_medication": [
+        {
+          "text": "Add"
+        }
+      ],
+      "add_medicine_btn": [
+        {
+          "text": "Add medicine"
+        }
+      ],
+      "display_name_field": [
+        {
+          "text": "Display name"
+        }
+      ],
+      "start_date_row": [
+        {
+          "text": "Start date"
+        }
+      ],
+      "date_ok": [
+        {
+          "text": "OK"
+        }
+      ],
+      "date_prev_month": [
+        {
+          "desc": "Change to previous month"
+        },
+        {
+          "desc": "Switch to previous month"
+        },
+        {
+          "desc": "previous month"
+        }
+      ],
+      "past_completed": [
+        {
+          "text": "Mark as completed"
+        }
+      ],
+      "stock_enable": [
+        {
+          "text": "Enable stock tracking"
+        }
+      ],
+      "stock_plus10": [
+        {
+          "text": "+10"
+        }
+      ],
+      "stock_plus14": [
+        {
+          "text": "+14"
+        }
+      ],
+      "stock_add": [
+        {
+          "text": "Add"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "featherline-0011-buggy",
+    "fixed": "featherline-0011-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/featherline-0011.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "Group editor 'generate past records' now calls saveNewEntries (deducts stock) instead of saveBackfillEntries."
+  }
+}

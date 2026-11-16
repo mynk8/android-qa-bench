@@ -1,0 +1,77 @@
+{
+  "screens": [
+    "photo details"
+  ],
+  "elements": [
+    "file size"
+  ],
+  "fields": [
+    "size"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the size of big.jpg reads 1.5 MB",
+    "decimal megabytes"
+  ],
+  "observed_contains_any": [
+    "the size reads 1.4 MB",
+    "size shown in binary units"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "1.5",
+      "1.5mb",
+      "decimal",
+      "1,5",
+      "1500",
+      "1.50",
+      "one and a half",
+      "half",
+      "tenth",
+      "too small",
+      "too low",
+      "smaller",
+      "weight",
+      "rounded",
+      "rounding",
+      "1.5 mb"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "1.4",
+      "1.4mb",
+      "1.43",
+      "1,4",
+      "binary",
+      "mib",
+      "1.46",
+      "wrong",
+      "smaller",
+      "1024",
+      "figure",
+      "megabyte*",
+      "instead"
+    ]
+  ],
+  "location_concepts": [
+    "detail*",
+    "size",
+    "info",
+    "photo*",
+    "big.jpg"
+  ],
+  "anchors": {
+    "elements": [
+      "Size",
+      "1.4 MB",
+      "File Information"
+    ],
+    "observed": [
+      "1.4 mb"
+    ]
+  }
+}

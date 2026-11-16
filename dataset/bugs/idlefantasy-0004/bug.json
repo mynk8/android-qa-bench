@@ -1,0 +1,74 @@
+{
+  "bug_id": "idlefantasy-0004",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-17",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "shop": [
+        {
+          "text": "Shop"
+        }
+      ],
+      "sell_tab": [
+        {
+          "text": "Sell"
+        }
+      ],
+      "iron_sword": [
+        {
+          "text": "Iron Sword"
+        }
+      ],
+      "bronze_axe": [
+        {
+          "text": "Bronze Axe"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0004-buggy",
+    "fixed": "idlefantasy-0004-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0004.patch",
+    "confidence": "high",
+    "lines_changed": 3,
+    "approach": "openSell reserves one keeper copy whenever keep-one-of-each is on, even when an equipped copy already counts as the keeper, so the sellable quantity is one lower."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

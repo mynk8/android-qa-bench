@@ -1,0 +1,92 @@
+{
+  "screens": [
+    "profile",
+    "profile tabs",
+    "bonuses"
+  ],
+  "elements": [
+    "profile tab*",
+    "selected tab",
+    "tab",
+    "bonuses tab"
+  ],
+  "fields": [
+    "selected tab",
+    "tab selection",
+    "tab",
+    "bonuses"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "the bonuses tab stays selected after leaving and returning to profile",
+    "the selected profile tab is remembered"
+  ],
+  "observed_contains_any": [
+    "profile returns to the skills tab",
+    "the selected tab resets to the first tab"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "bonuses",
+      "stay*",
+      "still",
+      "remain*",
+      "same tab",
+      "selected",
+      "restor*",
+      "kept",
+      "keeps",
+      "previous tab",
+      "remember*",
+      "not remembered",
+      "persist*",
+      "re-enter",
+      "reenter",
+      "return*",
+      "leave",
+      "last tab",
+      "same page",
+      "viewing",
+      "previous page"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "skills",
+      "first tab",
+      "reset*",
+      "default",
+      "back to",
+      "returns to",
+      "lost",
+      "not remembered",
+      "forgot",
+      "resets",
+      "first page",
+      "always lands",
+      "lands on",
+      "default page",
+      "starts over",
+      "back on"
+    ]
+  ],
+  "location_concepts": [
+    "profile",
+    "tab*",
+    "bonuses",
+    "skills"
+  ],
+  "anchors": {
+    "elements": [
+      "Bonuses",
+      "Skills",
+      "Aldric"
+    ],
+    "observed": []
+  }
+}

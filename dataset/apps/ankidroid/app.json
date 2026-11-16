@@ -1,0 +1,12 @@
+{
+  "app_id": "ankidroid",
+  "display_name": "AnkiDroid",
+  "repo": "https://github.com/ankidroid/Anki-Android",
+  "licence": "GPL-3.0",
+  "package": "com.ichi2.anki",
+  "pinned_commit": "491a0325a604337fb1adda7265932ba88a29176d",
+  "source_type": "mature",
+  "ui": "views",
+  "local_data": "sqlite",
+  "needs_network_or_login": false
+}

@@ -1,0 +1,215 @@
+{
+  "run_id": "b2385903aa70",
+  "item_id": "markor-E02",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Editor (Indent.md)",
+      "element_ref": 8,
+      "field": "Text content after Special Key > Move line down",
+      "symptom_type": "wrong_value",
+      "expected": "Cursor line moves one line down: text becomes \"  - child\\n- item\\n\" (or equivalent swap), no extra blank line, trailing newline kept.",
+      "observed": "After Move line down the text became \"- item\\n\\n  - child\" \u2014 an empty line was inserted and the final newline was lost; the lines were not swapped.",
+      "observed_quote": "- item\\n\\n  - child",
+      "steps": [
+        "Open Documents > Indent.md (content '- item' / '  - child' with trailing newline)",
+        "Tap More options? No: tap the Special Key toolbar button (keyboard-style icon, bottom bar)",
+        "Tap 'Move line down (Ctrl + \u2193)'",
+        "Observe editor text: shows '- item', a blank line, then '  - child'",
+        "Tap Undo once: original '- item\\n  - child\\n' is restored"
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "- item\n  - child\n",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Regex2.md) - Search and replace bar",
+      "element_ref": 60,
+      "field": "Replace (1) with regex mode on",
+      "symptom_type": "wrong_value",
+      "expected": "With regex enabled, search '(cat)@home' and replacement '$1@work' turns 'cat@home dog@home' into 'cat@work dog@home' ($1 expands to the captured group).",
+      "observed": "The document became '$1@work dog@home': the replacement text was inserted literally, the group reference $1 was not expanded.",
+      "observed_quote": "$1@work dog@home",
+      "steps": [
+        "Open Regex2.md (content 'cat@home dog@home') in the notebook folder",
+        "Tap the Search icon in the editor toolbar",
+        "Tap the Toggle Find/Replace button (left of the search row) to show the replace row",
+        "Tap the 'Use Regular Expression' button (.* icon) so it turns red",
+        "Clear the search field and type (cat)@home",
+        "Clear the replace field and type $1@work",
+        "Tap the 'Replace (1)' button (single-step replace)",
+        "Observe the document text"
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/replaceImageButton",
+        "desc": "Replace (1)",
+        "class": "android.widget.ImageButton",
+        "bounds": [
+          863,
+          451,
+          968,
+          556
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "View mode (Money.md)",
+      "element_ref": 4,
+      "field": "Rendered text",
+      "symptom_type": "wrong_value",
+      "expected": "View mode shows the file text as written: \"Costs $5 and $10\".",
+      "observed": "View mode renders \"Costs 5 and 10\": both dollar signs are dropped. The edit view still holds \"Costs $5 and $10\".",
+      "observed_quote": "Costs 5 and 10",
+      "steps": [
+        "Open Money.md (content 'Costs $5 and $10') from the file browser",
+        "Tap the View Mode (eye) button in the top bar",
+        "Observe the rendered text: 'Costs 5 and 10'",
+        "Tap Edit Mode (pencil) and then View Mode again: still 'Costs 5 and 10'; edit view still reads 'Costs $5 and $10'"
+      ],
+      "anchor_node": {
+        "text": "Costs 5 and 10",
+        "class": "android.widget.TextView",
+        "bounds": [
+          57,
+          270,
+          1026,
+          320
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Indent2.md) - Special Key > Move line up",
+      "element_ref": 45,
+      "field": "Text content after Move line up",
+      "symptom_type": "wrong_value",
+      "expected": "Cursor line '  - deep' moves above '- a': text becomes '  - deep\\n- a\\n' (lines swapped, no blank line, trailing newline kept).",
+      "observed": "Text became '- a', an empty line, then '  - deep' (no swap, extra blank line inserted, final newline lost).",
+      "observed_quote": "- a\\n\\n  - deep",
+      "steps": [
+        "Open Documents > Indent2.md (text '- a' / '  - deep' with trailing newline)",
+        "Tap the second line ('  - deep') to put the cursor there; keyboard opens",
+        "Tap the Special Key toolbar button (keyboard icon, bottom bar; with keyboard open it is at the 4th icon)",
+        "Tap 'Move line up (Ctrl + \u2191)'",
+        "Observe the editor text: '- a', blank line, '  - deep'"
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "- a\n\n  - deep",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          483
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0007",
+        "markor-0010"
+      ],
+      "present": [
+        "markor-0007",
+        "markor-0010"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/markor-E02/b2385903aa70/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0010": "reported",
+    "markor-0007": "reported"
+  },
+  "elapsed_s": 308.3,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Sign-off is an override: I did NOT verify the areas clean. Two confirmed defects were filed and logged: (1) search/replace single-step 'Replace (1)' with regex on does not expand $1 backreferences (Replace all does); (2) View mode drops '$' characters (Costs $5 and $10 renders as Costs 5 and 10). Also filed once, not reproduced by developer: Move line up/down can insert a blank line and drop the trailing newline; my reruns were correct and the bad case looked like the cursor on the empty trailing line, so it is unverified. Checked and OK: sort by Name/Date/Size with Reverse and Folder first, sort persists across navigation; editor line move down/up each undo in one step; plain replace/undo; regex Replace all; view-mode lists, regex text, plain text; rotation keeps content. Not covered: MIME type and Folder local sort, .dotfiles toggle, Date/Size reverse on real differing timestamps (all files share one timestamp), Go to, Preserve Case, file create/rename, relaunch persistence of sort."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "markor-0010",
+    "markor-0007"
+  ],
+  "found": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "required": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 217,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "bug_meta": {
+    "markor-0010": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "markor-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

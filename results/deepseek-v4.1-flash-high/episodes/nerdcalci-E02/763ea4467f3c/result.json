@@ -1,0 +1,314 @@
+{
+  "run_id": "763ea4467f3c",
+  "item_id": "nerdcalci-E02",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Number bases file (opened from home screen)",
+      "element": "Result of line 1 \"15 dec in hex\"",
+      "field": "conversion result",
+      "symptom_type": "wrong_value",
+      "expected": "15 dec in hex should show 0xF; 10 dec in bin should show 0b1010; 64 dec in oct should show 0o100; 255 dec in hex should show 0xFF.",
+      "observed": "All decimal values appear multiplied by 10: \"15 dec in hex\" shows \"0x96\" (150), \"10 dec in bin\" shows \"0b1100100\" (100), \"64 dec in oct\" shows \"0o1200\" (640), \"255 dec in hex\" shows \"0x9F6\" (2550). Each looks like the input decimal was scaled by 10 before base conversion.",
+      "steps": [
+        "Open the app home screen",
+        "Open the 'Number bases' file",
+        "Read line 1 '15 dec in hex' \u2014 result shows 0x96 instead of 0xF",
+        "Read line 2 '10 dec in bin' \u2014 result shows 0b1100100 instead of 0b1010",
+        "Read line 3 '64 dec in oct' \u2014 result shows 0o1200 instead of 0o100",
+        "Read line 4 '255 dec in hex' \u2014 result shows 0x9F6 instead of 0xFF"
+      ],
+      "element_ref": 2,
+      "observed_quote": "0x96",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Temperatures",
+          "MODIFIED: JAN 08, 2026 \u2022 CREATED: JAN 08, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          405,
+          1080,
+          636
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Result of line 1 \"datetime(1981, 2, 14, 18, 32, 0) to datetime(2026, 5, 3, 14, 49, 9)\"",
+      "element_ref": 3,
+      "expected": "Line 1 should be \"45 y 2 mo 18 d 20 h 17 min 9 s\" and line 2 should be \"4 y 5 mo 14 d 11 h 25 min 30 s\". Since the end time-of-day is earlier than the start time-of-day, one day must be borrowed into the hours (start + result must equal the end timestamp).",
+      "observed": "Line 1 shows \"45 y 2 mo 19 d 20 h 17 min 9 s\" and line 2 shows \"4 y 5 mo 15 d 11 h 25 min 30 s\". The day count is one day too large because it never borrows a day when the end time-of-day is before the start time-of-day. Adding the shown period to the start gives 2026-05-04 14:49:09 instead of the end 2026-05-03 14:49:09. Also reproduced in the scratchpad: datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 3, 1, 1, 0, 0) shows \"1 mo 1 d 2 h\" but the true gap is 1 month 2 h (start + 1 mo 1 d 2 h = Mar 2 01:00, not Mar 1 01:00).",
+      "screen": "Date gaps file (opened from home screen)",
+      "steps": [
+        "Open the app home screen and open the 'Date gaps' file",
+        "Read line 1: start datetime(1981, 2, 14, 18, 32, 0), end datetime(2026, 5, 3, 14, 49, 9)",
+        "Observe the result '45 y 2 mo 19 d 20 h 17 min 9 s'",
+        "Add that period to the start: it lands on 2026-05-04 14:49:09, one day past the end",
+        "Read line 2: '4 y 5 mo 15 d 11 h 25 min 30 s'; same one-day overcount",
+        "Reproduce in scratchpad with datetime(2024, 1, 31, 23, 0, 0) to datetime(2024, 3, 1, 1, 0, 0) -> '1 mo 1 d 2 h' (should be 1 mo 2 h)"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "45 y 2 mo 19 d 20 h 17 min 9 s",
+      "anchor_node": {
+        "text": "45 y 2 mo 19 d 20 h 17 min 9 s",
+        "class": "android.widget.TextView",
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Result of scratchpad expression \"datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 11, 0, 0)\"",
+      "element_ref": 38,
+      "expected": "The gap is 30 days 23 hours (or \"4 wk 2 d 23 h\"). The result should be one hour LESS than the exact-month gap. When the end time-of-day is earlier than the start time-of-day, one day must be borrowed into the hours so that start + result equals the end timestamp (start + 1 mo 23 h = Feb 2 11:00, one day past the end).",
+      "observed": "\"1 mo 23 h\" is shown. This is internally inconsistent: \"datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 12, 0, 0)\" shows \"1 mo\", but moving the end 1 hour EARLIER (to 11:00) increases the reported gap to \"1 mo 23 h\" instead of decreasing it. The day component is never decremented when the end clock time is before the start clock time.",
+      "screen": "Scratchpad (temporary file)",
+      "steps": [
+        "Open the temporary scratchpad (or any file)",
+        "Enter: datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 12, 0, 0) -> shows '1 mo' (correct)",
+        "Change the end to 11:00: datetime(2024, 1, 1, 12, 0, 0) to datetime(2024, 2, 1, 11, 0, 0)",
+        "Observe the result '1 mo 23 h' - the gap grew by 23 h even though the end moved 1 h earlier",
+        "Same root cause in the Date gaps file: line 1 shows '45 y 2 mo 19 d 20 h 17 min 9 s' (start + this = 2026-05-04 14:49:09, one day after the end) and line 2 shows '4 y 5 mo 15 d 11 h 25 min 30 s'"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "1 mo 23 h",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "1 mo"
+        ],
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Result of line 3 \"10 celsius + 18 fahrenheit\"",
+      "element_ref": 8,
+      "expected": "68 \u00b0F. Per the in-app Help (Settings > Help & feedback > Help > \"10. Unit conversions\"), temperature arithmetic uses the unit from the right-hand side: \"35 \u00b0C + 10 degF \u2192 105 \u00b0F\". So 10\u00b0C (= 50\u00b0F) + 18\u00b0F = 68 \u00b0F, not a Celsius result.",
+      "observed": "\"2.22 \u00b0C\" is shown. The engine always converts the right operand into Celsius, adds in Celsius, and displays Celsius instead of converting the left operand into the right-hand unit. Reproduced with the documented example: \"35 celsius + 10 fahrenheit\" shows \"22.78 \u00b0C\" (Help says 105 \u00b0F), and \"32 fahrenheit + 32 fahrenheit\" shows \"0 \u00b0C\" instead of 64 \u00b0F.",
+      "screen": "Temperature sums file (opened from home screen)",
+      "steps": [
+        "Open the app home screen and open the 'Temperature sums' file",
+        "Read line 3: '10 celsius + 18 fahrenheit'",
+        "Observe the result '2.22 \u00b0C'",
+        "Expected 68 \u00b0F because 10\u00b0C = 50\u00b0F and 50 + 18 = 68, and per Help the result uses the right-hand unit",
+        "Reproduce in scratchpad: '35 celsius + 10 fahrenheit' -> '22.78 \u00b0C' (Help example expects 105 \u00b0F)",
+        "Reproduce in scratchpad: '32 fahrenheit + 32 fahrenheit' -> '0 \u00b0C' (should be 64 \u00b0F)"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "2.22 \u00b0C",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "2.22 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          466,
+          1048,
+          592
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Result of scratchpad expression \"35 degC + 10 degF in degF\"",
+      "element_ref": 40,
+      "expected": "105 \u00b0F. The in-app Help (Settings > Help & feedback > Help > \"10. Unit conversions\") explicitly gives \"35 \u00b0C + 10 degF \u2192 105 \u00b0F\" and \"35 \u00b0C + 10 degF in degC \u2192 40.56 \u00b0C\". The left operand must be converted to the right operand's unit (35\u00b0C = 95\u00b0F) and then 10\u00b0F added = 105\u00b0F.",
+      "observed": "\"73 \u00b0F\" is shown. The engine instead converts the right-hand Fahrenheit value into Celsius (10\u00b0F = -12.22\u00b0C) and adds it to 35\u00b0C, producing 22.78\u00b0C (73\u00b0F). This happens even with an explicit \"in degF\", so the computed value itself is wrong, not just the displayed unit. Same root cause makes Temperature sums line 3 \"10 celsius + 18 fahrenheit\" show \"2.22 \u00b0C\" instead of 68 \u00b0F.",
+      "screen": "Scratchpad (temporary file)",
+      "steps": [
+        "Open Settings > Help & feedback > Help > section 10 'Unit conversions' (documents '35 \u00b0C + 10 degF \u2192 105 \u00b0F')",
+        "Open the temporary scratchpad",
+        "Enter: 35 degC + 10 degF in degF",
+        "Observe the result '73 \u00b0F' instead of the documented 105 \u00b0F",
+        "Also check Temperature sums line 3 '10 celsius + 18 fahrenheit' -> '2.22 \u00b0C' (should be 68 \u00b0F)"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "73 \u00b0F",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "73 \u00b0F"
+        ],
+        "bounds": [
+          797,
+          252,
+          1048,
+          378
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Result of scratchpad expression 'datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\")'",
+      "element_ref": 38,
+      "expected": "\"5 h 30 min\". 10:00 UTC and 10:00 Asia/Kolkata are different instants (10:00 IST = 04:30 UTC), so the end is 5 h 30 min earlier than the start. The app's own `in` conversion confirms this: `datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\") in \"UTC\"` shows \"Jan 1, 2024, 4:30 AM UTC\".",
+      "observed": "\"0 d\" is shown. The `to` interval ignores the second datetime's timezone: it interprets the end's wall-clock fields in the start datetime's zone (here both treated as UTC). Reverse case also wrong: `datetimeZ(2024,1,1,10,0,0,\"UTC\") to datetimeZ(2024,1,1,15,30,0,\"Asia/Kolkata\")` (the same instant) shows \"5 h 30 min\" instead of 0. Within a single zone DST is handled correctly (1 h across the spring-forward), so only the end operand's zone is dropped.",
+      "screen": "Scratchpad (temporary file)",
+      "steps": [
+        "Open the temporary scratchpad",
+        "Enter: datetimeZ(2024, 1, 1, 10, 0, 0, \"UTC\") to datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\")",
+        "Observe the result '0 d'",
+        "Verify the zones differ: datetimeZ(2024, 1, 1, 10, 0, 0, \"Asia/Kolkata\") in \"UTC\" shows 'Jan 1, 2024, 4:30 AM UTC'",
+        "Reverse check: datetimeZ(2024,1,1,10,0,0,\"UTC\") to datetimeZ(2024,1,1,15,30,0,\"Asia/Kolkata\") shows '5 h 30 min' even though both are the same instant"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "0 d",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "0 d"
+        ],
+        "bounds": [
+          797,
+          260,
+          1048,
+          540
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Temperatures file row on the home screen (MODIFIED field)",
+      "element_ref": 1,
+      "expected": "Pinning/unpinning is a list-organisation action and the file content is unchanged, so the row should still read \"MODIFIED: JAN 08, 2026\". The Date modified sort order should be unchanged.",
+      "observed": "After pinning and then unpinning, the row reads \"MODIFIED: 11:40 AM \u2022 CREATED: JAN 08, 2026\" instead of the original \"MODIFIED: JAN 08, 2026\". The file jumps to the top of the \"ALL FILES\" list because its modified date was bumped to now by the pin/unpin operation, even though no calculation content was edited. Reproduced twice (11:39 AM and 11:40 AM).",
+      "screen": "Home screen file list",
+      "steps": [
+        "On the home screen note Temperatures shows 'MODIFIED: JAN 08, 2026' in the Date modified order",
+        "Open Temperatures' More options and tap Pin",
+        "Observe the PINNED row now shows 'MODIFIED: 11:40 AM \u2022 CREATED: JAN 08, 2026'",
+        "Tap Unpin",
+        "Temperatures now sits at the top of ALL FILES with MODIFIED 11:40 AM, reordering the list even though its content never changed"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "MODIFIED: 11:40 AM",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Temperatures",
+          "MODIFIED: 11:40 AM \u2022 CREATED: JAN 08, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ],
+      "present": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/nerdcalci-E02/763ea4467f3c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0003": "reported",
+    "nerdcalci-0004": "reported"
+  },
+  "elapsed_s": 1461.884,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept all listed areas on the current build.\n\nHome screen file list: all 9 files present and complete; newest-first ordering verified; search (match + no-match, clear), sort by Name / Date modified / Date created both directions, pin/unpin, duplicate, delete, New Calculation (empty draft correctly not saved, file with content appears immediately), File info, cold relaunch (background load), auto-open-on-launch mode, and portrait/landscape rotation all behaved correctly. (One observed quirk: pin/unpin bumped the file's MODIFIED timestamp and reordered the list; the developer said it could not be reproduced, so it was not logged.)\n\nUnit and number conversions: temperature conversions are correct across C/F/K (e.g. -10 C = 14 F, -65 F = -53.89 C, 0 K = -273.15 C, 1 K = -457.87 F, 32 F = 273.15 K); generic unit arithmetic correct (1 km = 1,000 m; 10 km + 500 m in km = 10.50 km). Confirmed and logged: number-base conversions multiply the input by its radix (15 dec in hex -> 0x96 instead of 0xF; 10 dec in bin -> 0b1100100; 64 dec in oct -> 0o1200; 255 dec in hex -> 0x9F6). Temperature arithmetic is also wrong (always adds in Celsius / returns Celsius instead of the right-hand unit: 10 C + 18 F -> 2.22 C instead of 68 F; documented 35 C + 10 degF -> 73 F instead of 105 F) - developer said already logged.\n\nDates and times: Expenses/Monthly budget/Remainders/Percentages all correct. Time differences correct (including negatives). Documented 'days between' / 'hours between' / date 'to' examples correct. Date gaps has a confirmed logged defect: when the end clock time is before the start clock time, the day count is not borrowed, so it is one day too large (Date gaps line 1 shows '45 y 2 mo 19 d 20 h 17 min 9 s' instead of 18 d; scratchpad '1 mo 23 h' instead of 30 d 23 h). Cross-timezone datetimeZ intervals are also wrong (same instant across UTC/Asia/Kolkata reports 5 h 30 min; identical wall times in different zones report 0 d) - developer said already logged.\n\nAll defects found are either confirmed/logged or already known; no other unreported issues found."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "found": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "required": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 2,
+  "reports": 7,
+  "steps": 298,
+  "precision": 0.4,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "bug_meta": {
+    "nerdcalci-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0004": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

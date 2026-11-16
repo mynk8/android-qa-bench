@@ -1,0 +1,245 @@
+{
+  "run_id": "ca0fede1fa66",
+  "item_id": "idlefantasy-E03",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear sheet and per-item sell panel",
+      "element": "Iron Sword row (Sell Old Gear sheet) and Sell: Iron Sword quantity control",
+      "element_ref": 20,
+      "field": "Quantity offered for multi-copy gear",
+      "symptom_type": "wrong_value",
+      "expected": "With \"Keep one of each item\" OFF, all unequipped copies are offered: Iron Sword \u00d73 (186 coins) and Bronze Axe \u00d72 (50 coins) in Sell Old Gear; the per-item panel's Max is 3. Only the toggle ON should reserve one copy.",
+      "observed": "With the toggle OFF, Sell Old Gear lists \"Iron Sword \u00d72 124\" and \"Bronze Axe \u00d71 25\", total 5,416. The per-item panel for Iron Sword opens at 2 with Max and + disabled, and Bronze Axe offers no quantity control (max 1). The same rows appear with the toggle ON, so the toggle makes no difference to multi-copy gear. Sell Junk does honour the toggle (Cowhide \u00d714 \u2192 \u00d713 when ON).",
+      "observed_quote": "Iron Sword \u00d72 124",
+      "steps": [
+        "Open Shop, tap Sell tab. Confirm Keep one of each item is OFF.",
+        "Inventory has Iron Sword \u00d73 in inventory (plus one equipped) and Bronze Axe \u00d72 in inventory (plus one equipped).",
+        "Tap Sell Old Gear. Observe Iron Sword \u00d72 (124) and Bronze Axe \u00d71 (25), Total 5,416.",
+        "Tap the Iron Sword row. The sell panel opens at quantity 2; Increase and Max are disabled.",
+        "Turn Keep one of each item ON. Tap Sell Old Gear again: the same Iron Sword \u00d72 and Bronze Axe \u00d71 rows appear, total 149 only if the gear list is filtered, with no change from OFF for these two items."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Enemies"
+        ],
+        "bounds": [
+          292,
+          495,
+          686,
+          621
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bestiary > Bosses tab",
+      "element": "progress header on Bosses tab",
+      "element_ref": 22,
+      "field": "encounter progress counter",
+      "symptom_type": "wrong_value",
+      "expected": "The Bosses tab counts only bosses, so its total matches the number of boss entries listed (about 7-8 here), e.g. \"0 / 8 encountered\".",
+      "observed": "After switching from Enemies to Bosses, the header still reads \"0 / 100 encountered\" (0%), the same total as the Enemies tab, while the Bosses list shows only about 8 entries (Brood Empress, Demon Lord, Gothic Ember, King Black Dragon, Kraken, Obsidian Colossus, Sol Invictus...).",
+      "observed_quote": "0 / 100 encountered",
+      "steps": [
+        "Open Profile, tap Bestiary.",
+        "Note the Enemies tab header: \"0 / 100 encountered\", 0%.",
+        "Tap the Bosses tab.",
+        "Observe the header still reads \"0 / 100 encountered\" and 0%, while the list shows about 8 bosses."
+      ],
+      "anchor_node": {
+        "text": "0 / 100 encountered",
+        "class": "android.widget.TextView",
+        "bounds": [
+          334,
+          653,
+          613,
+          672
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell tab (All filter)",
+      "element": "Bronze Boots row (Armor section)",
+      "element_ref": 24,
+      "field": "inventory count on equipped item",
+      "symptom_type": "wrong_value",
+      "expected": "Bronze Boots row shows \"\u00d71 in inventory\" (Profile > Inventory lists Bronze Boots \u00d71 besides the equipped copy), like the other equipped rows (Bronze Axe \u00d72, Bronze Pickaxe \u00d71, Iron Sword \u00d73 in inventory).",
+      "observed": "In the Sell tab Armor section, the Bronze Boots row reads \"(equipped)\" and \"10 coins ea.\" with no inventory count. Earlier in the same session the row read \"Bronze Boots | (equipped) | \u00d71 in inventory | 10 coins ea.\", and the Profile > Inventory screen lists Bronze Boots \u00d71.",
+      "observed_quote": "Bronze Boots | (equipped) | 10 coins ea.",
+      "steps": [
+        "Open Home > Shop, then the Sell tab.",
+        "Look at the Armor section: Bronze Boots shows \"(equipped)\" and \"10 coins ea.\" with no \"\u00d71 in inventory\".",
+        "Open Profile > Inventory > Armour: Bronze Boots \u00d71 is listed.",
+        "Note: after a Sell Junk sale the same row briefly showed \"\u00d71 in inventory\"; the count then disappeared again on re-entering the Sell tab."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "All"
+        ],
+        "bounds": [
+          335,
+          969,
+          461,
+          1095
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Buy > Buy: Logs quantity panel",
+      "element": "Max button and quantity field (EditText \"366919\")",
+      "element_ref": 5,
+      "field": "Max quantity",
+      "symptom_type": "wrong_value",
+      "expected": "Max is the most Logs the coins can buy: floor(2,567,890 / 7) = 366,841 (cost 2,567,887). Buy must not offer a total above the coins held.",
+      "observed": "Pressing Max fills the quantity with 366919, and the panel shows \"Total cost 2.5M coins\". 366,919 \u00d7 7 = 2,568,433, which is 543 coins more than the 2,567,890 held. The Buy button stays enabled.",
+      "observed_quote": "366919",
+      "steps": [
+        "Starting data: 2,567,890 coins (shown as 2.5M), Logs cost 7 coins each.",
+        "Shop > Buy tab. Tap the Logs row (7 coins each).",
+        "In the Buy: Logs panel, tap Max.",
+        "Observe quantity 366919 and Total cost 2.5M coins. 366,919 \u00d7 7 = 2,568,433 > 2,567,890 held.",
+        "Do not tap Buy (cancelled to avoid driving coins negative)."
+      ],
+      "anchor_node": {
+        "text": "366919",
+        "class": "android.widget.EditText",
+        "bounds": [
+          370,
+          1474,
+          711,
+          1642
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear sheet and per-item sell panel (Keep one of each item OFF)",
+      "element": "Iron Sword row (equipped, \u00d71 in inventory)",
+      "element_ref": 20,
+      "field": "sellable quantity of a single spare copy",
+      "symptom_type": "wrong_value",
+      "expected": "Two items with the same inventory count (\u00d71) and the same toggle state (OFF) should offer the same sellable quantity. Bronze Dagger \u00d71 (not equipped) is offered: 1 sellable, 25 coins. Iron Sword \u00d71 in inventory (equipped copy also owned) should be offered the same way, 1 sellable, 62 coins, and appear in Sell Old Gear.",
+      "observed": "With the toggle OFF, Sell Old Gear lists Bronze Dagger \u00d71 (25) but omits Iron Sword (its only inventory copy is \u00d71 \"in inventory\", plus an equipped copy). The Iron Sword row still shows \"\u00d71 in inventory\" and \"62 coins ea.\". The total is 5,267 with nine rows; Iron Sword contributes nothing. Earlier, Iron Sword \u00d73 and \u00d72 were also reduced by one, so the spare is held back regardless of the toggle.",
+      "observed_quote": "Iron Sword | (equipped) | \u00d71 in inventory | 62 coins ea.",
+      "steps": [
+        "Starting data: Iron Sword equipped; inventory Iron Sword \u00d71 after earlier sales. Keep one of each item is OFF.",
+        "Shop > Sell. Confirm Bronze Dagger shows \"\u00d71 in inventory\" and Iron Sword shows \"(equipped)\" and \"\u00d71 in inventory\".",
+        "Tap Bronze Dagger row: panel \"Sell: Bronze Dagger\" offers 1 (25 coins).",
+        "Tap Sell Old Gear: list has nine rows including Bronze Dagger \u00d71 (25); Iron Sword is absent. Total 5,267.",
+        "Tap the Iron Sword row: no quantity control is offered (0 sellable)."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Iron Sword",
+          "(equipped)",
+          "\u00d71 in inventory",
+          "62 coins ea."
+        ],
+        "bounds": [
+          0,
+          1487,
+          1080,
+          1630
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ],
+      "present": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/idlefantasy-E03/ca0fede1fa66/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0004": "missed_unreached",
+    "idlefantasy-0006": "missed_unreached"
+  },
+  "elapsed_s": 528.057,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "missed": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "true_positives": 0,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 240,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "bug_meta": {
+    "idlefantasy-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

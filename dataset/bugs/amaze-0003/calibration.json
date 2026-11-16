@@ -1,0 +1,202 @@
+{
+  "bug_id": "amaze-0003",
+  "runs": 1,
+  "started": "2026-11-11T04:18:36+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes.txt",
+          "photo.jpg",
+          "report+final.txt",
+          "report-final.txt"
+        ]
+      },
+      "seconds": 34.0,
+      "screenshot_sha256": "729aed60e1eb5ed18ea81b36b3fbeb52897c41235a4431667c54b2916bae032a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0003-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "10:50",
+          "10:50\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "EMULATED",
+          "ANDROIDQA",
+          "AMAZE",
+          "Folders",
+          "Alpha",
+          "Nov 10 | 10:49\u202fPM",
+          "Properties",
+          "Beta",
+          "Nov 10 | 10:49\u202fPM",
+          "Properties",
+          "report-final.txt",
+          "Nov 10 | 10:49\u202fPM",
+          "Properties",
+          "Files",
+          "icon",
+          "keep.jpg",
+          "Nov 10 | 10:49\u202fPM",
+          "21.00 kB",
+          "Properties",
+          "notes.txt",
+          "Nov 10 | 10:49\u202fPM",
+          "15 B",
+          "Properties",
+          "icon",
+          "photo.jpg",
+          "Nov 10 | 10:49\u202fPM",
+          "20.00 kB",
+          "Properties",
+          "report+final.txt",
+          "Nov 10 | 10:49\u202fPM",
+          "13 B",
+          "Properties"
+        ]
+      },
+      "seconds": 39.4,
+      "screenshot_sha256": "e76debd462900a709b3d61818c588981b460c3c5eb5dbc4b253bcd116464dc43",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0003-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes2.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ]
+      },
+      "seconds": 32.9,
+      "screenshot_sha256": "aaa5f1aa3343e8482330c36edea488983a105bedf6fc87350c20de3fb5a135f7",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0003-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes.txt",
+          "photo.jpg",
+          "report-final.txt"
+        ]
+      },
+      "seconds": 29.1,
+      "screenshot_sha256": "1089c1d02dfd52e764fa513aa8781f39c543d6d4bdfd151cdd99444e35cf6c87",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0003-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "EMULATED",
+          "ANDROIDQA",
+          "AMAZE",
+          "Folders",
+          "Alpha",
+          "Nov 10 | 10:51\u202fPM",
+          "Properties",
+          "Beta",
+          "Nov 10 | 10:51\u202fPM",
+          "Properties",
+          "Files",
+          "icon",
+          "keep.jpg",
+          "Nov 10 | 10:51\u202fPM",
+          "21.00 kB",
+          "Properties",
+          "notes.txt",
+          "Nov 10 | 10:51\u202fPM",
+          "15 B",
+          "Properties",
+          "icon",
+          "photo.jpg",
+          "Nov 10 | 10:51\u202fPM",
+          "20.00 kB",
+          "Properties",
+          "report-final.txt",
+          "Nov 10 | 10:51\u202fPM",
+          "13 B",
+          "Properties",
+          "10:52",
+          "10:52\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 39.3,
+      "screenshot_sha256": "0f432cb55970cf0efe19cb566cf850b3b0aed20fc700f5d214065cc559e5d6b4",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0003-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes2.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ]
+      },
+      "seconds": 31.0,
+      "screenshot_sha256": "9b578aa406225f9ef839e05261e4c13d79164347575a5a33cc7ba0a78ff85807",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0003-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T04:22:33+0530"
+}

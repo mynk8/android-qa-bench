@@ -1,0 +1,117 @@
+{
+  "episode_id": "ankidroid-E01",
+  "start_build": "ankidroid-E01-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "9:43",
+          "9:43\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "French",
+          "3 cards shown",
+          "Add",
+          "Search",
+          "More options",
+          "Sort Field",
+          "Card Type",
+          "Due",
+          "Deck",
+          "bonjour",
+          "Card 1",
+          "New #\u20685\u2069",
+          "French",
+          "chat",
+          "Card 1",
+          "New #\u20687\u2069",
+          "French",
+          "pain",
+          "Card 1",
+          "New #\u20686\u2069",
+          "French"
+        ]
+      },
+      "seconds": 30.7,
+      "screenshot_sha256": "cb4e9e0ddbe9bab7e1900e9a2a404daf195ed383e7b3831e9f58934ec56f2ee2",
+      "bug": "ankidroid-0019",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "9:43",
+          "9:43\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "French",
+          "3 cards shown",
+          "Add",
+          "Search",
+          "More options",
+          "Sort Field",
+          "Card Type",
+          "Due",
+          "Deck",
+          "bonjour",
+          "Card 1",
+          "New #\u20685\u2069",
+          "French",
+          "chat",
+          "Card 1",
+          "New #\u20687\u2069",
+          "French",
+          "pain",
+          "Card 1",
+          "New #\u20686\u2069",
+          "French"
+        ]
+      },
+      "seconds": 27.7,
+      "screenshot_sha256": "cb4e9e0ddbe9bab7e1900e9a2a404daf195ed383e7b3831e9f58934ec56f2ee2",
+      "bug": "ankidroid-0019",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer",
+          "mesa"
+        ]
+      },
+      "seconds": 29.6,
+      "screenshot_sha256": "bfd98293c8e38d6d6b3d4d0d71b903dff8625d915f1911dd642ec26d0c6fefeb",
+      "bug": "ankidroid-0001",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "verb_notes": [
+          "comer"
+        ]
+      },
+      "seconds": 35.3,
+      "screenshot_sha256": "4eebd45ac4b624199099f85fd5c3d9dc32fcc7cce6444fab83873f72e7ac456f",
+      "bug": "ankidroid-0001",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

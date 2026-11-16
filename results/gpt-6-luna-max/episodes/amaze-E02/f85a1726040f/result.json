@@ -1,0 +1,222 @@
+{
+  "run_id": "f85a1726040f",
+  "item_id": "amaze-E02",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "AndroidQA/Amaze directory view after rotation",
+      "element": "Directory item layout / view mode",
+      "element_ref": 15,
+      "field": "Grid View",
+      "symptom_type": "not_persisted",
+      "expected": "Grid View remains selected when the device rotates and returns to the directory.",
+      "observed": "The view resets to full-width list rows after rotation. This happened when rotating from grid in portrait to landscape, and again from grid in landscape back to portrait.",
+      "observed_quote": "report+final.txt",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Open the overflow menu and choose Grid View.",
+        "Rotate the device to landscape; the directory is displayed as list rows.",
+        "Choose Grid View in landscape, then rotate back to portrait; the directory again appears as list rows."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "report+final.txt",
+          "Nov 15 | 6:01\u202fPM",
+          "13 B"
+        ],
+        "bounds": [
+          0,
+          1041,
+          1080,
+          1230
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "AndroidQA/Amaze list with Directory Sort Mode set to None On Top",
+      "element": "Beta folder row and its section heading",
+      "element_ref": 24,
+      "field": "List section heading",
+      "symptom_type": "wrong_value",
+      "expected": "When folder and file rows are interleaved by sorting, the section heading above a folder row identifies it as a folder, with the heading repeated when the list returns to folders.",
+      "observed": "The list shows a Folders heading before Alpha, then a Files heading before the file rows, and then Beta appears below those files with no Folders heading. The Beta folder is visually placed in the Files section.",
+      "observed_quote": "Beta",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze with the supplied Alpha and Beta folders and files.",
+        "Copy Alpha/readme.txt and paste it into Beta; choose Rename at the conflict prompt. Beta's modified time updates.",
+        "Set Sort By to Last Modified, ascending.",
+        "Set Directory Sort Mode to None On Top.",
+        "Return to the parent list: Beta appears after the Files heading and file rows, without a Folders heading."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Beta",
+          "Nov 15 | 6:07\u202fPM"
+        ],
+        "bounds": [
+          0,
+          1617,
+          1080,
+          1806
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Paste conflict in AndroidQA/Amaze/Beta",
+      "element": "Beta directory file count",
+      "element_ref": 6,
+      "field": "Paste conflict: Rename",
+      "symptom_type": "no_effect",
+      "expected": "Choosing RENAME repeatedly should create another uniquely named copy, such as readme (2).txt, increasing Beta's file count to 3.",
+      "observed": "After a prior paste created readme (1).txt, repeating the copy and choosing RENAME leaves Beta at two files. The generated-name collision is not advanced and no third copy appears.",
+      "observed_quote": "0 folders and 2 files",
+      "steps": [
+        "Copy Alpha/readme.txt and paste it into Beta, which already contains readme.txt; choose RENAME. The app creates readme (1).txt.",
+        "Copy Alpha/readme.txt again and paste it into Beta.",
+        "At the same-name conflict prompt choose RENAME again.",
+        "Beta still shows only readme.txt and readme (1).txt, with a count of 0 folders and 2 files; no readme (2).txt is created."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "0 folders and 2 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Paste conflict while copying a folder in AndroidQA/Amaze",
+      "element": "Paste conflict message",
+      "element_ref": 1,
+      "field": "Conflict message",
+      "symptom_type": "wrong_value",
+      "expected": "A directory conflict should say that a folder exists, or use neutral wording such as 'Item with same name already exists'.",
+      "observed": "The source and conflicting target are both folders named Alpha, but the dialog labels the conflicting item as a file.",
+      "observed_quote": "File with same name already exists",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Select the Alpha folder and choose Copy.",
+        "Paste into the same directory.",
+        "At the conflict prompt, the name is Alpha and the message says 'File with same name already exists'."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/fileAlreadyExists",
+        "text": "File with same name already exists",
+        "class": "android.widget.TextView",
+        "bounds": [
+          137,
+          1041,
+          943,
+          1104
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0007",
+        "amaze-0008"
+      ],
+      "present": [
+        "amaze-0007",
+        "amaze-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E02/f85a1726040f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0007": "reported",
+    "amaze-0008": "reported"
+  },
+  "elapsed_s": 1560.754,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.92,
+    "notes": "Completed the requested sweep through the current build. Confirmed reports were logged for folder rows appearing below the Files heading under interleaved sorting, and repeated Paste > Rename failing to create a new uniquely named copy. I also reported Grid View resetting after rotation and the folder-conflict dialog wording; the developer could not reproduce those two. Restored the fixture names and file counts, removed the temporary copied folder/file and bookmark, and left the app in portrait list view with Name ascending and Folders On Top."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "found": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "required": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 237,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "bug_meta": {
+    "amaze-0007": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "amaze-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

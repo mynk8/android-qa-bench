@@ -1,0 +1,34 @@
+{
+  "episode_id": "minus-E05",
+  "app_id": "minus",
+  "bugs": [
+    "minus-0001"
+  ],
+  "seed_id": "budget_basic",
+  "builds": {
+    "0": "minus-E05-0",
+    "1": "minus-E05-1"
+  },
+  "observable": {
+    "0": {
+      "minus-0001": false
+    },
+    "1": {
+      "minus-0001": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "notes": [
+    "2026-11-13 audit: minus-0010 is not observable on the seed data"
+  ],
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

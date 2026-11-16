@@ -1,0 +1,65 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "ordered list"
+  ],
+  "fields": [
+    "line content"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the line becomes '1. gamma'",
+    "only the number prefix is added"
+  ],
+  "observed_contains_any": [
+    "bold markers ** are added as well",
+    "the line also gets asterisks"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "1.",
+      "number*",
+      "ordered",
+      "list*",
+      "prefix*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "bold",
+      "**",
+      "asterisk*",
+      "star*",
+      "extra",
+      "also",
+      "additional",
+      "surround*",
+      "marker*",
+      "stray",
+      "unexpected",
+      "four",
+      "1. gamma*",
+      "stars"
+    ]
+  ],
+  "location_concepts": [
+    "ordered list",
+    "single*"
+  ],
+  "anchors": {
+    "elements": [
+      "Ordered list",
+      "gamma",
+      "highlighting_editor"
+    ],
+    "observed": [
+      "gamma****"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "calculator",
+    "element": "temperature result",
+    "field": "result",
+    "symptom_type": "wrong_value",
+    "expected": "25 celsius + 5 celsius shows 30 °C",
+    "observed": "25 celsius + 5 celsius shows 303.15 °C, a wrong value",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "calculator",
+    "element": "something",
+    "field": "result",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "screens": [
+    "shop",
+    "sell junk",
+    "sell tab"
+  ],
+  "elements": [
+    "sell junk",
+    "pumpkin",
+    "tomato",
+    "farming produce",
+    "produce",
+    "crop*"
+  ],
+  "fields": [
+    "junk list",
+    "pumpkin",
+    "tomato",
+    "farming produce",
+    "item list"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "pumpkin and tomato are not offered as junk",
+    "farming produce is protected from sell junk"
+  ],
+  "observed_contains_any": [
+    "sell junk lists pumpkin and tomato",
+    "farming produce appears in the junk list"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "excluded",
+      "exclud*",
+      "absent",
+      "isn't",
+      "shouldn't",
+      "should not",
+      "without",
+      "kept",
+      "protected",
+      "leave out",
+      "left out",
+      "omit*",
+      "skip*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "pumpkin",
+      "tomato",
+      "produce",
+      "crop*",
+      "farming",
+      "pumpkin*",
+      "tomato*",
+      "harvest*",
+      "vegetable*",
+      "veg",
+      "crops",
+      "produce*"
+    ],
+    [
+      "list*",
+      "includ*",
+      "offer*",
+      "shown",
+      "show*",
+      "appears",
+      "appear*",
+      "junk",
+      "sell*"
+    ]
+  ],
+  "location_concepts": [
+    "shop",
+    "sell*",
+    "junk",
+    "pumpkin",
+    "tomato",
+    "produce"
+  ],
+  "anchors": {
+    "elements": [
+      "Sell Junk",
+      "Pumpkin",
+      "Tomato"
+    ],
+    "observed": [
+      "pumpkin",
+      "tomato",
+      "1,020"
+    ]
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "run_id": "d6d7b6c812e3",
+  "item_id": "iris-E01",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Albums tab",
+      "element": "IrisSeed album card",
+      "element_ref": 4,
+      "field": "album grouping and item count",
+      "symptom_type": "duplicated",
+      "expected": "One IrisSeed album card should contain both seeded photos (2 items).",
+      "observed": "The Albums tab shows two IrisSeed cards: one for big.jpg and one for huge.jpg, each with \u201c1 items\u201d.",
+      "observed_quote": "1 items",
+      "steps": [
+        "Open Albums and open the IrisSeed album containing big.jpg and huge.jpg.",
+        "Open big.jpg, open Details, then Edit metadata & EXIF.",
+        "On Origin, enter 2020-01-02 03:04 in Captured and Save.",
+        "Return to Albums. The index shows separate IrisSeed cards for big.jpg and huge.jpg, each with 1 item.",
+        "Open the big.jpg card, return to Albums, and confirm the split remains."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Photo details sheet",
+      "element": "Capture date row",
+      "element_ref": 15,
+      "field": "capture date from EXIF",
+      "symptom_type": "missing",
+      "expected": "After setting an EXIF capture date of 2020-01-02 03:04, the details sheet should show that capture date.",
+      "observed": "The sheet shows only Added and Modified dates (November 15, 2026 \u00b7 8:43 PM and November 15, 2026 \u00b7 8:45 PM); there is no capture date row.",
+      "observed_quote": "November 15, 2026 \u00b7 8:45 PM",
+      "steps": [
+        "Open IrisSeed and open big.jpg.",
+        "Open Details, then Edit metadata & EXIF.",
+        "On Origin, set Captured to 2020-01-02 03:04 and Save.",
+        "Leave the photo and reopen it, then open Details.",
+        "The sheet still shows only Added and Modified; it does not show the EXIF capture date."
+      ],
+      "anchor_node": {
+        "text": "November 15, 2026 \u00b7 8:45 PM",
+        "class": "android.widget.TextView",
+        "bounds": [
+          493,
+          1543,
+          990,
+          1596
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor \u00b7 Origin",
+      "element": "Captured field",
+      "element_ref": 8,
+      "field": "Captured",
+      "symptom_type": "not_persisted",
+      "expected": "The saved capture date 2020-01-02 03:04 should remain in the Captured field when the editor is reopened.",
+      "observed": "After tapping Save and reopening the editor, the Captured field is empty and shows its format placeholder.",
+      "observed_quote": "Captured \u00b7 yyyy-MM-dd HH:mm",
+      "steps": [
+        "Open big.jpg in IrisSeed and open Details > Edit metadata & EXIF > Origin.",
+        "Enter 2020-01-02 03:04 in Captured.",
+        "Tap Save.",
+        "Immediately reopen Edit metadata & EXIF > Origin.",
+        "Captured is blank again."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Captured \u00b7 yyyy-MM-dd HH:mm",
+          "Set Current Time"
+        ],
+        "bounds": [
+          63,
+          627,
+          1017,
+          858
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor \u00b7 Description",
+      "element": "Title field",
+      "element_ref": 9,
+      "field": "Title",
+      "symptom_type": "not_persisted",
+      "expected": "After saving metadata, the title and image description should remain when the photo is reopened.",
+      "observed": "The title and image description are accepted by Save and shown in Details, but after leaving the photo and opening it again both fields are blank.",
+      "observed_quote": "Title",
+      "steps": [
+        "Open huge.jpg in IrisSeed and open Details > Edit metadata & EXIF > Description.",
+        "Enter QA Iris test as Title and QA metadata persists as Image Description, then tap Save.",
+        "Confirm the values appear in Details, then leave the photo to the album grid.",
+        "Reopen huge.jpg from the album and open Details > Edit metadata & EXIF > Description.",
+        "Both fields are blank and show their placeholders."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Title"
+        ],
+        "bounds": [
+          63,
+          1421,
+          1017,
+          1589
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor \u00b7 Origin",
+      "element": "Captured field",
+      "element_ref": 8,
+      "field": "Captured",
+      "symptom_type": "not_persisted",
+      "expected": "The time inserted by Set Current Time should remain in the Captured field after Save and reopening the editor.",
+      "observed": "Set Current Time displayed 2026-11-15 20:56:18 before Save, but the reopened Captured field is blank.",
+      "observed_quote": "Captured \u00b7 yyyy-MM-dd HH:mm",
+      "steps": [
+        "Open huge.jpg > Details > Edit metadata & EXIF > Origin.",
+        "Tap Set Current Time; verify the field displays the generated date and time.",
+        "Tap Save.",
+        "Reopen Edit metadata & EXIF > Origin.",
+        "The Captured field is blank again."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Captured \u00b7 yyyy-MM-dd HH:mm",
+          "Set Current Time"
+        ],
+        "bounds": [
+          63,
+          627,
+          1017,
+          858
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor \u00b7 Camera & Lens",
+      "element": "Camera Model field",
+      "element_ref": 10,
+      "field": "Camera Model",
+      "symptom_type": "not_persisted",
+      "expected": "Camera Model should retain QA Model 123 after Save and reopening the editor.",
+      "observed": "The value QA Model 123 was accepted and Save returned to Details, but the reopened Camera & Lens tab shows an empty Camera Model field.",
+      "observed_quote": "Camera Model",
+      "steps": [
+        "Open huge.jpg > Details > Edit metadata & EXIF > Camera & Lens.",
+        "Enter QA Model 123 in Camera Model and tap Save.",
+        "Reopen Edit metadata & EXIF > Camera & Lens.",
+        "Camera Model is blank again."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Camera Model"
+        ],
+        "bounds": [
+          550,
+          821,
+          1017,
+          989
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E01-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0007"
+      ],
+      "present": [
+        "iris-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/iris-E01/d6d7b6c812e3/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0007": "missed_unreached"
+  },
+  "elapsed_s": 856.054,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "report_cap",
+  "bugs": [
+    "iris-0007"
+  ],
+  "found": [],
+  "required": [
+    "iris-0007"
+  ],
+  "missed": [
+    "iris-0007"
+  ],
+  "true_positives": 0,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 185,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "iris-0007"
+  ],
+  "bug_meta": {
+    "iris-0007": {
+      "family": "display",
+      "hard_slice": true
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match"
+    ]
+  }
+}

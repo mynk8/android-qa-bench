@@ -1,0 +1,237 @@
+{
+  "run_id": "b669d97985fe",
+  "item_id": "iris-E02",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Media tab / bottom navigation bar",
+      "element": "First bottom-navigation tab label (Media tab)",
+      "field": "Tab label / icon",
+      "symptom_type": "wrong_value",
+      "expected": "The first bottom-navigation tab should keep its fixed name \"Media\" (as listed in Settings > Navigation tabs and Default Startup Tab) while switching the content-type chip; the chip should only filter the Media screen's content and title.",
+      "observed": "Selecting the Photos or Videos content-type chip also renames the first bottom-navigation tab: the tab shows \"Photos\" (photo icon) or \"Videos\" (play icon) instead of \"Media\". The changed label/icon persists on other screens too - e.g. while the Favorites tab is active the Media tab is labelled \"Videos\"/\"Photos\".",
+      "steps": [
+        "Open the Media tab.",
+        "Tap the Filter icon (top right) and choose Videos.",
+        "Look at the bottom navigation bar: the first tab is now labelled \"Videos\" with a play icon instead of \"Media\".",
+        "Open the Favorites tab: the first navigation tab still reads \"Videos\".",
+        "Switch the chip back to Photos/Media and the nav label follows the chip (\"Photos\"/\"Media\")."
+      ],
+      "element_ref": 5,
+      "observed_quote": "Videos",
+      "anchor_node": {
+        "text": "Videos",
+        "class": "android.widget.TextView",
+        "bounds": [
+          75,
+          2190,
+          179,
+          2232
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Album grid card for IrisSeed (top-left; duplicate second card top-right)",
+      "element_ref": 4,
+      "expected": "Restoring the photo back into the IrisSeed folder should keep a single \"IrisSeed\" album in the album grid with its item count back to \"2 items\".",
+      "observed": "After deleting one IrisSeed photo to Trash and restoring it, the Albums grid shows two separate album cards both named \"IrisSeed\", each with \"1 items\" (one covered by huge.jpg, one by big.jpg), instead of one album with 2 items. A manual \"Rescan media library\" merges them back into one 2-item album.",
+      "screen": "Albums tab / album grid",
+      "steps": [
+        "Albums tab > open IrisSeed (shows 2 items).",
+        "Open huge.jpg in the viewer and tap Delete (toast: Moved to Trash (kept for 30 days)).",
+        "Go back to the Albums grid: IrisSeed shows 1 items.",
+        "Library > Trash > open huge.jpg > Restore selected (toast: Item restored to gallery).",
+        "Return to the Albums grid: IrisSeed is now listed twice, two cards both labelled \"IrisSeed\" with \"1 items\" each.",
+        "(Settings > Storage & Reset > Rescan media library merges them back into one 2-item album.)"
+      ],
+      "symptom_type": "duplicated",
+      "observed_quote": "IrisSeed",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "huge.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Item-count label under the Zulu album name (same wrong label on every single-item album card)",
+      "element_ref": 7,
+      "expected": "A single-item album should display \"1 item\" (singular), consistent with \"2 items\" for multi-item albums.",
+      "observed": "Single-item album cards display the grammatically wrong count \"1 items\" (Zulu, apple, and the split IrisSeed cards). The Move to Album sheet also shows \"1 items\" when one photo is selected.",
+      "screen": "Albums tab / album grid",
+      "steps": [
+        "Open the Albums tab (Album Item Count is enabled in Settings).",
+        "Look under any album that contains exactly one photo (Zulu, apple): the count reads \"1 items\".",
+        "Albums with two photos read \"2 items\", showing the singular form was not used for 1.",
+        "Also reproduce in the viewer: More > Move to album shows \"1 items\" for a single selected photo."
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "1 items",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "hughugeQ.jpg",
+          "Zulu",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          1087,
+          1049,
+          1695
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Favorite button/state for the restored photo (and the Favorites grid)",
+      "element_ref": 8,
+      "expected": "Restoring a photo that was favorited when it was moved to Trash should bring it back with its favorite state, so it reappears in the Favorites grid and the viewer's action reads \"Favorited\".",
+      "observed": "After deleting a favorited photo to Trash and restoring it, the photo is no longer a favorite: it does not return to the Favorites grid (which still shows only the other favorite) and opening the restored photo shows the action as \"Favorite\" instead of \"Favorited\".",
+      "screen": "Favorites / photo viewer",
+      "steps": [
+        "Favorites contained two photos (big (1).jpg and hughugeQ.jpg).",
+        "Open big (1).jpg from Favorites; the action shows \"Favorited\".",
+        "Tap Delete (toast: Moved to Trash (kept for 30 days)).",
+        "Favorites grid correctly drops to one photo.",
+        "Library > Trash > open big (1).jpg > Restore selected (toast: Item restored to gallery).",
+        "Open Favorites: big (1).jpg is still missing. Open the restored photo from its album: the action reads \"Favorite\", showing the favorite flag was lost."
+      ],
+      "symptom_type": "not_persisted",
+      "observed_quote": "Favorite",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Favorite"
+        ],
+        "bounds": [
+          253,
+          2100,
+          444,
+          2226
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Favorite action/state on the restored photo (and its absence from the Favorites grid)",
+      "element_ref": 16,
+      "expected": "Restoring a favorited photo from Trash should keep it favorited: the Favorites grid should list it again and the viewer action should read \"Favorited\".",
+      "observed": "A photo that was favorited loses its favorite status when deleted to Trash and restored: the restored apple/big.jpg is back in the Media grid but does not reappear in Favorites, and opening it shows the action as \"Favorite\" instead of \"Favorited\".",
+      "screen": "Favorites / photo viewer",
+      "steps": [
+        "Media tab > Photos > open apple/big.jpg (5 of 6) and tap Favorite (action now reads Favorited).",
+        "Open the Favorites tab: the photo is listed together with the other favorite.",
+        "Re-open apple/big.jpg and tap Delete (toast: Moved to Trash (kept for 30 days)); Favorites correctly drops it.",
+        "Library > Trash > open big.jpg > Restore selected (toast: Item restored to gallery).",
+        "Open the Media tab: apple/big.jpg is back in the grid.",
+        "Open the Favorites tab: the restored photo is NOT listed. Open apple/big.jpg in the viewer: the action reads \"Favorite\", i.e. the favorite state was lost."
+      ],
+      "symptom_type": "not_persisted",
+      "observed_quote": "Favorite",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Favorite"
+        ],
+        "bounds": [
+          253,
+          2100,
+          444,
+          2226
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0011"
+      ],
+      "present": [
+        "iris-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/iris-E02/b669d97985fe/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0011": "reported"
+  },
+  "elapsed_s": 1298.916,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "iris-0011"
+  ],
+  "found": [
+    "iris-0011"
+  ],
+  "required": [
+    "iris-0011"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 300,
+  "precision": 0.2,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "iris-0011"
+  ],
+  "bug_meta": {
+    "iris-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "bug_id": "minus-0019",
+  "runs": 1,
+  "started": "2026-11-11T10:25:29+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "calculated_amount": 0.95,
+        "seen": [
+          "Calculated amount",
+          "$0.95",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 25.0,
+      "screenshot_sha256": "9f18e3cabe2b3c3de04117f1bc18bf71e1d9dad2b88d2762d1511484301a6075",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0019-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "available_pct": 0,
+        "seen": [
+          "4:56",
+          "4:56\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Close sheet",
+          "Drag handle",
+          "Total budget",
+          "Edit Budget",
+          "$100",
+          "Spent",
+          "Available: 0%",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "01 Dec",
+          "0.15666668",
+          "20",
+          "Days\nremaining",
+          "How do you want to split the budget?"
+        ]
+      },
+      "seconds": 32.8,
+      "screenshot_sha256": "8948436153c32c072f3bcbb7c364ae4a4140824c95ea07f4a2097268998581dd",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0019-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "calculated_amount": 0.95,
+        "seen": [
+          "Calculated amount",
+          "$0.95",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 18.2,
+      "screenshot_sha256": "4a1951716f94233b3729eebccca17fd43f120f70e9255a41b605255092988276",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0019-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "calculated_amount": 1.9,
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 23.8,
+      "screenshot_sha256": "939b254db91f0372680a8b3346e6e7dffc865a4ce1bc73f9306dc1b807f7a35e",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0019-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "available_pct": 30,
+        "seen": [
+          "4:58",
+          "4:58\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Close sheet",
+          "Drag handle",
+          "Total budget",
+          "Edit Budget",
+          "$70",
+          "Spent",
+          "Available: 30%",
+          "$100",
+          "Total budget",
+          "08 Nov",
+          "01 Dec",
+          "0.15666668",
+          "20",
+          "Days\nremaining",
+          "How do you want to split the budget?"
+        ]
+      },
+      "seconds": 28.4,
+      "screenshot_sha256": "31cc139ba7ac68dd1c3faab51c81440946b738d8866540f84a1ea2b3c681da13",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0019-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "calculated_amount": 1.9,
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 23.1,
+      "screenshot_sha256": "2502119b5c951513f7fba083ad7b2df0be8ca8008a98f98a951f32f6c0a4c8e6",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0019-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:28:33+0530"
+}

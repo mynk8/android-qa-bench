@@ -1,0 +1,212 @@
+{
+  "run_id": "40e47dc0f38a",
+  "item_id": "markor-E06",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Search / Replace dialog",
+      "element": "Search and replacement inputs",
+      "field": "rotation state",
+      "symptom_type": "not_persisted",
+      "expected": "Keep the dialog and entered search/replacement text and Regex state across rotation.",
+      "observed": "Rotating dismisses the dialog and search panel. Reopening shows empty inputs and Regex unchecked, losing the pending replacement.",
+      "element_ref": 1,
+      "observed_quote": "Search for",
+      "steps": [
+        "Open Regex.md, tap Search, Line based search, then REPLACE.",
+        "Enter (cat)@(home) in Search for and $2@$1 in Replace with; enable Regex.",
+        "Hide keyboard, rotate landscape then portrait.",
+        "Reopen Search > Line based search > REPLACE. Inputs are empty and Regex is unchecked.",
+        "Repeated the populated-dialog rotation and observed the same dismissal."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/search_input",
+        "text": "Search for",
+        "class": "android.widget.EditText",
+        "bounds": [
+          68,
+          821,
+          886,
+          939
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Search / Replace",
+      "element": "Replacement field and validation message",
+      "field": "replace_input",
+      "symptom_type": "wrong_value",
+      "expected": "With Regex unchecked, dollar signs in replacement text are literal; replacing $5 with $7 should be enabled and yield Costs $7 and $10.",
+      "observed": "With Regex unchecked, entering $7 as replacement shows a pattern error and disables both replace buttons. Plain replacement 7 restores Matches: 1. Reproduced with $7 and $7\\cash.",
+      "observed_quote": "Search or replace pattern error.",
+      "element_ref": 6,
+      "steps": [
+        "Open Money.md containing Costs $5 and $10.",
+        "Search > Line based search > REPLACE.",
+        "Set search to $5, keep Regex unchecked.",
+        "Set replacement to $7\\cash: pattern error.",
+        "Change replacement to 7: Matches: 1.",
+        "Change replacement to $7: same pattern error and disabled buttons."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/match_count_or_error",
+        "text": "Search or replace pattern error.",
+        "class": "android.widget.TextView",
+        "bounds": [
+          68,
+          1204,
+          1012,
+          1255
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Edit Mode > Font",
+      "element": "Roboto Bold preview",
+      "field": "font preview",
+      "symptom_type": "wrong_value",
+      "expected": "Roboto Bold preview renders in bold weight.",
+      "observed": "Roboto Bold renders at regular weight, visibly thinner than the Roboto Medium preview. Reopening the font dialog reproduces it.",
+      "element_ref": 3,
+      "observed_quote": "Roboto Bold\nsans-serif-bold",
+      "steps": [
+        "More > Settings > Edit Mode > Font.",
+        "Compare Roboto Bold with Roboto Medium and Roboto Black: Bold has regular-weight glyphs.",
+        "Close and reopen Font; same preview weight."
+      ],
+      "anchor_node": {
+        "id": "android:id/text1",
+        "text": "Roboto Bold\nsans-serif-bold",
+        "class": "android.widget.CheckedTextView",
+        "bounds": [
+          162,
+          431,
+          918,
+          557
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "todo.txt editor",
+      "element": "Toggle done / task text",
+      "field": "completion date",
+      "symptom_type": "wrong_value",
+      "expected": "With Add completion date disabled, marking (A) Pay rent done produces x Pay rent pri:A without a completion date.",
+      "observed": "The task gets a completion date despite the persisted Add completion date preference being unchecked. Reproduced from To-Do tab and by reopening todo.txt from Files.",
+      "element_ref": 8,
+      "observed_quote": "x 2026-11-14 Pay rent pri:A",
+      "steps": [
+        "More > Settings > todo.txt > disable Add completion date.",
+        "Open To-Do and toggle (A) Pay rent done: date is inserted.",
+        "Toggle back, return to settings and verify Add completion date remains unchecked.",
+        "Files > todo.txt > Toggle done: date inserted again."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+        "text": "x 2026-11-14 Pay rent pri:A",
+        "class": "android.widget.EditText",
+        "bounds": [
+          1,
+          210,
+          1080,
+          389
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0017",
+        "markor-0018"
+      ],
+      "present": [
+        "markor-0017",
+        "markor-0018"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/markor-E06/40e47dc0f38a/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0017": "reported",
+    "markor-0018": "missed_unreached"
+  },
+  "elapsed_s": 552.745,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "found": [
+    "markor-0017"
+  ],
+  "required": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "missed": [
+    "markor-0018"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "bug_meta": {
+    "markor-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0018": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

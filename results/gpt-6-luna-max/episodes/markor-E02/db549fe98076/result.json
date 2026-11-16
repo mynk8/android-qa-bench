@@ -1,0 +1,155 @@
+{
+  "run_id": "db549fe98076",
+  "item_id": "markor-E02",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Markdown view mode",
+      "element": "Preview text for Money.md",
+      "element_ref": 4,
+      "field": "Rendered Markdown text",
+      "symptom_type": "missing",
+      "expected": "The preview should preserve the dollar signs in the source line `Costs $5 and $10`.",
+      "observed": "The preview renders `Costs 5 and 10`, omitting both dollar signs. Returning to Edit Mode and opening View Mode again reproduces it.",
+      "observed_quote": "Costs 5 and 10",
+      "steps": [
+        "Open Money.md from the notebook folder; the editor shows `Costs $5 and $10`.",
+        "Tap View Mode.",
+        "Return to Edit Mode and tap View Mode again."
+      ],
+      "anchor_node": {
+        "text": "Costs 5 and 10",
+        "class": "android.widget.TextView",
+        "bounds": [
+          57,
+          270,
+          1026,
+          320
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File browser",
+      "element": "Filename order in the file list",
+      "element_ref": 12,
+      "field": "Name sort order",
+      "symptom_type": "wrong_value",
+      "expected": "With Name selected and Reverse order off, filenames should be in ascending alphabetical order: Indent.md before Indent2.md, and Regex.md before Regex2.md.",
+      "observed": "The Name sort list puts Indent2.md before Indent.md and Regex2.md before Regex.md.",
+      "observed_quote": "Indent2.md",
+      "steps": [
+        "Open the notebook folder in Files.",
+        "Open Sort by and select Name.",
+        "Make sure Reverse order is off and apply with OK.",
+        "Inspect the listed filenames: Indent2.md is above Indent.md, and Regex2.md is above Regex.md."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/opoc_filesystem_item__title",
+        "text": "Indent2.md",
+        "class": "android.widget.TextView",
+        "bounds": [
+          158,
+          498,
+          414,
+          565
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0007",
+        "markor-0010"
+      ],
+      "present": [
+        "markor-0007",
+        "markor-0010"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/markor-E02/db549fe98076/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0010": "missed_unreached",
+    "markor-0007": "reported"
+  },
+  "elapsed_s": 1033.048,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.93,
+    "notes": "Swept browser sort keys and toggles, verified reverse stays selected when changing the sort key, and restored browser preferences. Exercised line up/down (including boundary and one-step undo), search/replace with literal dollar replacements and Replace all, and view mode on nested lists, Single.md, Regex.md, and Money.md. Money.md preview drops both dollar signs; the developer confirmed and logged that report. Editing and test-file contents were restored."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0010",
+    "markor-0007"
+  ],
+  "found": [
+    "markor-0007"
+  ],
+  "required": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "missed": [
+    "markor-0010"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 209,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0007",
+    "markor-0010"
+  ],
+  "bug_meta": {
+    "markor-0010": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "markor-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "run_id": "98eb7e6bd393",
+  "item_id": "amaze-E02",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Amaze folder list (/storage/emulated/0/AndroidQA/Amaze)",
+      "element": "\"Folders\" section heading in the directory list",
+      "field": "list section headings",
+      "symptom_type": "missing",
+      "expected": "Section headings should be produced consistently for every sorting choice. With Directory Sort Mode = None On Top and Sort By = Name ascending, the interleaved order is aaa.jpg, Alpha, Beta, keep.jpg, notes.txt, report+final.txt, so after the Folders group the remaining files should get a new \"Files\" heading (Files \u2192 Folders \u2192 Files).",
+      "observed": "List shows a \"Files\" heading with only aaa.jpg, then a \"Folders\" heading with Alpha and Beta, and then keep.jpg, notes.txt, report+final.txt are listed under the \"Folders\" heading with no second \"Files\" heading.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "More options > Sort > Directory Sort Mode > None On Top",
+        "More options > Sort > Sort By > Name > ASCENDING",
+        "Rename photo.jpg to aaa.jpg so the list interleaves a file before the folders (or use any file name that sorts before the folder names)",
+        "Observe the section headings in the list: Files (aaa.jpg), then Folders (Alpha, Beta), then more files with no heading",
+        "Navigate into Alpha and back: the wrong headings persist"
+      ],
+      "element_ref": 11,
+      "observed_quote": "Folders",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/text",
+        "text": "Folders",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          720,
+          1080,
+          846
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze directory view after rotation (landscape)",
+      "element": "File list layout (grid vs list)",
+      "field": "Directory view mode",
+      "symptom_type": "not_persisted",
+      "expected": "The chosen directory view mode should survive a screen rotation: after selecting Grid View in portrait, rotating to landscape (and back) should keep the grid layout, just as grid view is kept when navigating into and out of folders.",
+      "observed": "After selecting Grid View (grid tiles for Alpha/Beta/keep.jpg/aaa.jpg/notes.txt/report+final.txt) and rotating the device, the folder is displayed as a single-column list again (rows with icon, name, date), and the overflow menu offers \"Grid View\", showing the grid setting was lost. Rotating back to portrait also comes back as a list.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "More options > Grid View (file list switches to grid tiles)",
+        "Rotate the device to landscape",
+        "Observe the folder now shows the list layout again; More options > Grid View is offered again",
+        "Rotate back to portrait: still list layout"
+      ],
+      "element_ref": 23,
+      "observed_quote": "Alpha",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Alpha",
+          "Nov 14 | 6:58\u202fAM"
+        ],
+        "bounds": [
+          656,
+          507,
+          2274,
+          696
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Amaze folder list (/storage/emulated/0/AndroidQA/Amaze) - portrait after rotation",
+      "element": "Directory list layout after rotating from grid view",
+      "field": "Directory view mode (grid/list)",
+      "symptom_type": "not_persisted",
+      "expected": "The grid view selection should persist across a configuration change (rotation), the same way it persists when navigating into Alpha and back. After rotating from a grid showing big folder tiles, the list should still be a grid.",
+      "observed": "Grid view is lost on every rotation and the folder reverts to the single-column list (Alpha, Beta, keep.jpg... as rows with icon+name+date). Reproduced three times: portrait grid -> rotate landscape = list; landscape grid -> rotate portrait = list. In landscape the overflow menu shows \"Grid View\" after the rotation, proving the app is back in list mode. The chosen sort order does survive the rotation, only the view mode does not.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "More options > Grid View: folders/files are shown as large grid tiles",
+        "Verify grid survives navigation: open Alpha and press Back - still grid",
+        "Rotate device to landscape: the list is now the single-column list layout (Alpha shown as a row), and More options > Grid View is offered again",
+        "Select Grid View again in landscape (tiles appear), rotate back to portrait: reverts to list again"
+      ],
+      "element_ref": 8,
+      "observed_quote": "Alpha",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Alpha",
+          "Nov 14 | 6:58\u202fAM"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Left drawer bookmarks / AndroidQA/Amaze file list",
+      "element": "Bookmark entry \"Alpha\" in the drawer",
+      "field": "Bookmark target path",
+      "symptom_type": "wrong_navigation",
+      "expected": "Tapping a bookmark whose target folder no longer exists should not write to storage: it should either follow the renamed folder or show an error/empty state without creating a new directory. A bookmark labelled \"Alpha\" should likewise reflect/behave consistently with the renamed folder.",
+      "observed": "After Alpha was renamed to AlphaQA, the drawer bookmark still says \"Alpha\". Tapping it opens /storage/emulated/0/AndroidQA/Amaze/Alpha showing \"0 folders and 0 files\"/\"No Files\", and going Back then shows 3 folders: a newly created empty \"Alpha\" (7:07 AM) next to the real \"AlphaQA\" (6:58 AM) \u2014 the bookmark navigation silently recreated the missing folder on disk. Reproduced twice (first time the recreated Alpha had 7:05 AM).",
+      "steps": [
+        "Open AndroidQA/Amaze and add bookmark for Alpha (folder context menu > Add to Bookmarks), then open the drawer to confirm the Alpha bookmark exists",
+        "Close the drawer and rename Alpha to AlphaQA",
+        "Open the drawer again: bookmark entry still reads Alpha",
+        "Tap the Alpha bookmark: it opens /storage/emulated/0/AndroidQA/Amaze/Alpha and shows 0 folders and 0 files / No Files",
+        "Press Back: Amaze folder now lists 3 folders, including a new empty Alpha (mtime of the moment the bookmark was opened) together with the real AlphaQA folder"
+      ],
+      "element_ref": 35,
+      "observed_quote": "Alpha",
+      "anchor_node": {
+        "class": "androidx.appcompat.widget.LinearLayoutCompat",
+        "contains": [
+          "Beta",
+          "Alpha"
+        ],
+        "bounds": [
+          0,
+          725,
+          798,
+          851
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0007",
+        "amaze-0008"
+      ],
+      "present": [
+        "amaze-0007",
+        "amaze-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/amaze-E02/98eb7e6bd393/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0007": "missed_unreached",
+    "amaze-0008": "reported"
+  },
+  "elapsed_s": 1155.728,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "found": [
+    "amaze-0008"
+  ],
+  "required": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "missed": [
+    "amaze-0007"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "amaze-0007",
+    "amaze-0008"
+  ],
+  "bug_meta": {
+    "amaze-0007": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "amaze-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{"event": "install", "build": {"n": 1, "build_id": "featherline-E01-11", "mask": "11", "unfixed": ["featherline-0014", "featherline-0015"], "present": ["featherline-0014", "featherline-0015"]}}
+{"event": "brief", "item_id": "featherline-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 878, "y": 405}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 905, "y": 2189}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 417, "y": 2189}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1222}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 805}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 505}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 464, "y": 797}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 168, "y": 1823}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 716, "y": 797}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 464, "y": 797}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 17, "message": {"type": "bug_report", "screen": "Add medicine", "element": "Preparation type picker", "element_ref": 22, "field": "Injection preparation type", "symptom_type": "wrong_value", "expected": "No injection subtype should be selected until the user explicitly picks Ampule or Vial.", "observed": "Ampule is already selected when Injection is chosen, without an explicit subtype pick.", "observed_quote": "Ampule", "steps": ["Open Plan and choose Add, then add a medicine.", "Choose Injection as the preparation form.", "Observe the Preparation type options before selecting a subtype.", "Choose Gel, then return to Injection; Ampule is again selected automatically."], "anchor_node": {"class": "android.view.View", "contains": ["Ampule"], "bounds": [63, 1760, 273, 1886]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"featherline-0014": "expected_value", "featherline-0015": "observed_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 918, "y": 243}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 148}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 505}}}
+{"event": "agent", "step": 25, "message": null}

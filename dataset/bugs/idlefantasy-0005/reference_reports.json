@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "shop sell junk",
+    "element": "sell junk list",
+    "field": "pumpkin",
+    "symptom_type": "wrong_value",
+    "expected": "farming produce like pumpkin and tomato should not be listed in sell junk",
+    "observed": "sell junk lists pumpkin and tomato as junk to sell",
+    "steps": [
+      "Opened Shop, Sell tab, Sell Junk.",
+      "Read the list."
+    ]
+  },
+  "vague": {
+    "screen": "shop sell junk",
+    "element": "something",
+    "field": "pumpkin",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

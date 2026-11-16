@@ -1,0 +1,68 @@
+{
+  "screens": [
+    "media tab",
+    "media",
+    "main",
+    "gallery"
+  ],
+  "elements": [
+    "empty message",
+    "empty state"
+  ],
+  "fields": [
+    "message"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the Videos filter shows the message No videos found",
+    "the empty message mentions videos"
+  ],
+  "observed_contains_any": [
+    "the Videos filter shows the message No photos found",
+    "the empty message mentions photos instead of videos"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "no videos",
+      "videos found",
+      "video*",
+      "movie*",
+      "film*",
+      "placeholder",
+      "wrong kind",
+      "media type"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "no photos",
+      "photos found",
+      "photo*",
+      "mentions photos",
+      "picture*",
+      "image*",
+      "wording"
+    ]
+  ],
+  "location_concepts": [
+    "empty*",
+    "message",
+    "placeholder",
+    "blank*",
+    "wording",
+    "text"
+  ],
+  "anchors": {
+    "elements": [
+      "No photos found",
+      "empty",
+      "Videos"
+    ],
+    "observed": [
+      "no photos found"
+    ]
+  }
+}

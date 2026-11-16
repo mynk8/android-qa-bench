@@ -1,0 +1,114 @@
+{
+  "run_id": "f7628d6180a8",
+  "item_id": "ankidroid-E08",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note",
+      "element": "Back navigation after note type swap",
+      "symptom_type": "wrong_value",
+      "expected": "Pressing Back with unsaved text (\"gato\") after switching note type shows the \"Discard current input?\" dialog",
+      "observed": "After switching Basic -> Cloze with \"gato\" typed in the first field, Back closes the Add screen immediately with no discard prompt, losing the input. Without a type swap, the prompt appears correctly.",
+      "steps": [
+        "Long-press deck Spanish > Add",
+        "Type 'gato' in Front",
+        "Tap Type spinner, choose Cloze (field text carried over)",
+        "Press Back"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E08-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ],
+      "present": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/ankidroid-E08/f7628d6180a8/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0025": "missed_unreached",
+    "ankidroid-0026": "reported"
+  },
+  "elapsed_s": 116.607,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "I filed one bug: Back on the Add note screen closes without the discard prompt after a note type swap. The filtered deck criteria dropdown listed all 11 options. The Spanish \"This deck\" new-card limit of 15 persisted, and French stayed at 20. I did not test note editing or saving, the Preset and Today only limit tabs, or rotation, so coverage is incomplete."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "found": [
+    "ankidroid-0026"
+  ],
+  "required": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "missed": [
+    "ankidroid-0025"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 44,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "bug_meta": {
+    "ankidroid-0025": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "ankidroid-0026": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "episode_id": "ankidroid-E09",
+  "app_id": "ankidroid",
+  "bugs": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "seed_id": "decks_basic",
+  "builds": {
+    "00": "ankidroid-E09-00",
+    "01": "ankidroid-E09-01",
+    "10": "ankidroid-E09-10",
+    "11": "ankidroid-E09-11"
+  },
+  "observable": {
+    "00": {
+      "ankidroid-0027": false,
+      "ankidroid-0029": false
+    },
+    "01": {
+      "ankidroid-0027": false,
+      "ankidroid-0029": true
+    },
+    "10": {
+      "ankidroid-0027": true,
+      "ankidroid-0029": false
+    },
+    "11": {
+      "ankidroid-0027": true,
+      "ankidroid-0029": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

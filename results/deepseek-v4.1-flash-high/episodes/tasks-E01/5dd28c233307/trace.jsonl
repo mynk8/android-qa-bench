@@ -1,0 +1,313 @@
+{"event": "install", "build": {"n": 1, "build_id": "tasks-E01-111", "mask": "111", "unfixed": ["tasks-0005", "tasks-0007", "tasks-0009"], "present": ["tasks-0005", "tasks-0007", "tasks-0009"]}}
+{"event": "brief", "item_id": "tasks-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 593, "y": 653}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 834}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "type", "args": {"text": "Test subtask", "clear": true, "submit": false}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "key", "args": {"key": "ENTER"}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "ESCAPE"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1621}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1920}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1939}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 2224}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.25}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1768}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1619}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1616}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1647}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1644}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1647}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "type", "args": {"text": "guide", "clear": true, "submit": false}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.5, "x": 2, "y": 1200}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "type", "args": {"text": "zzzz", "clear": true, "submit": false}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "type", "args": {"text": "litres", "clear": true, "submit": false}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "type", "args": {"text": "guide", "clear": true, "submit": false}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "type", "args": {"text": "Read", "clear": true, "submit": false}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 283}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "type", "args": {"text": "guide", "clear": true, "submit": false}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "type", "args": {"text": "read", "clear": true, "submit": false}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "tap_xy", "args": {"x": 126, "y": 1018}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "type", "args": {"text": "QA badge", "clear": true, "submit": false}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.25}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2052}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 821, "y": 1232}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1900}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 821, "y": 1232}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 360}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "type", "args": {"text": "QA sub", "clear": true, "submit": false}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 999, "y": 2194}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "type", "args": {"text": "QA top", "clear": true, "submit": false}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1900}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 360}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "type", "args": {"text": "QA sub2", "clear": true, "submit": false}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 999, "y": 2194}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 1092}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 126}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "type", "args": {"text": "QA top2", "clear": true, "submit": false}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 1092}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 126}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.2}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 548}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "type", "args": {"text": "QA sub3", "clear": true, "submit": false}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 999, "y": 2194}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1017, "y": 1468}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "type", "args": {"text": "QA top3", "clear": true, "submit": false}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.6}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1158}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 1092}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 889}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 126}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 834}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "type", "args": {"text": "QA sub4", "clear": true, "submit": false}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 999, "y": 2194}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1017, "y": 1468}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4, "x": 500, "y": 600}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "type", "args": {"text": "Buy QA", "clear": true, "submit": false}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 901, "y": 145}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "type", "args": {"text": "Buy milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 141}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 198, "message": {"type": "bug_report", "screen": "Search (task list search)", "element": "Search field / system Back handling", "field": "system Back navigation", "symptom_type": "wrong_navigation", "expected": "Pressing the system Back button while the search screen is open should close search and return to the My Tasks task list.", "observed": "Pressing Back once hides the keyboard but leaves search open; pressing Back again exits Tasks.org to the Android home screen (launcher) instead of returning to the task list. Tapping the on-screen back arrow in the search bar does return to the list, so only the system Back path is broken.", "steps": ["From My Tasks, tap the Search button in the bottom bar", "Type a query such as 'milk'", "Press the system Back button once: the keyboard hides but search stays open", "Press the system Back button again", "Observe: Tasks.org closes to the Android home screen instead of returning to the My Tasks list"], "element_ref": 37, "observed_quote": "milk", "anchor_node": {"id": "org.tasks:id/search_src_text", "text": "milk", "class": "android.widget.AutoCompleteTextView", "bounds": [168, 98, 849, 193]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["tasks-0009"], "per_bug": {"tasks-0005": "location", "tasks-0007": "location", "tasks-0009": "ok"}}
+{"event": "hit", "bugs": ["tasks-0009"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 141}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 2072}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1012, "y": 1200}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.2, "x": 500, "y": 1500}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1706}}}
+{"event": "agent", "step": 204, "message": {"type": "bug_report", "screen": "My Tasks", "element": "Final dose task row / completion snackbar", "field": "repeating task completion", "symptom_type": "no_effect", "expected": "Final dose is configured as 'Repeats daily, occurs 1 time', so completing it should finish the task (it should no longer be rescheduled/reopened).", "observed": "Completing Final dose keeps it in the active list and shows the snackbar 'Final dose rescheduled for December 14' - the due date does not advance, so the task can never be completed.", "steps": ["From My Tasks, tap the Final dose row to open it and confirm it shows 'Repeats daily, occurs 1 time' and due Monday, December 14", "Close the editor and tap Final dose's complete checkbox in the list", "Observe the snackbar 'Final dose rescheduled for December 14' and the task remains in the Due Monday, December 14 group", "Reopen the task: it still shows the same due date and 'Repeats daily, occurs 1 time'"], "element_ref": 33, "observed_quote": "Final dose rescheduled for December 14", "anchor_node": {"id": "org.tasks:id/snackbar_text", "text": "Final dose rescheduled for December 14", "class": "android.widget.TextView", "bounds": [63, 1907, 865, 2032]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"tasks-0005": "observed_value", "tasks-0007": "location", "tasks-0009": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "type", "args": {"text": "QA repeat once", "clear": true, "submit": false}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 639}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 209, "y": 529}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 941, "y": 2202}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 811}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 977}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 856}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 258, "y": 800}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1485}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1030}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "tap_xy", "args": {"x": 983, "y": 2191}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 664, "y": 907}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 69}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 71}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "type", "args": {"text": "QA repeat infinite", "clear": true, "submit": false}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 639}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 209, "y": 529}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 941, "y": 2202}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 811}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 977}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 69}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 2202}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 69}}}
+{"event": "agent", "step": 238, "message": {"type": "bug_report", "screen": "My Tasks", "element": "QA repeat once task row / completion snackbar", "field": "repeating task completion (recurrence exhausted)", "symptom_type": "no_effect", "expected": "A task that repeats daily for only 1 occurrence should be completed by tapping its checkbox: it should leave the active task list and no next occurrence should be scheduled. (A control daily task set to 'Never' end correctly rescheduled from Tomorrow to Monday, November 16.)", "observed": "Tapping complete shows 'QA repeat once rescheduled for tomorrow' and the task stays in the list with the same 'Tomorrow' due date; reopening it still shows 'Repeats daily, occurs 1 time'. The 1-occurrence recurrence never completes.", "steps": ["Tap the + FAB and enter the title 'QA repeat once'", "Set due date to Tomorrow (Sunday, November 15, 2026) and tap OK", "Tap 'Does not repeat', choose 'Every day', then tap the 'Repeats daily' row and choose 'Custom…'", "In Custom recurrence select 'After' with count 1 occurrence, tap OK, and make sure 'Repeats from due date' is selected", "Save the task; it appears under Tomorrow with 'Repeats daily, occurs 1 time'", "Tap the task's complete checkbox in the list", "Observe the snackbar 'QA repeat once rescheduled for tomorrow' and the task remaining in the list (as also seen with the provided Final dose task)"], "element_ref": 34, "observed_quote": "QA repeat once rescheduled for tomorrow", "anchor_node": {"id": "org.tasks:id/snackbar_text", "text": "QA repeat once rescheduled for tomorrow", "class": "android.widget.TextView", "bounds": [63, 1907, 865, 2032]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["tasks-0005"], "per_bug": {"tasks-0005": "ok", "tasks-0007": "location", "tasks-0009": "location"}}
+{"event": "hit", "bugs": ["tasks-0005"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 500, "y": 1500}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.35, "x": 500, "y": 1500}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1948}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1948}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4}}}
+{"event": "agent", "step": 246, "message": {"type": "bug_report", "screen": "My Tasks", "element": "QA sub4 task row (top-level under 'No due date')", "field": "subtask parent assignment", "symptom_type": "not_persisted", "expected": "A subtask added to 'Pack for trip' should stay nested under Pack for trip after another new task is created; Pack for trip's badge should keep counting it.", "observed": "After adding a subtask to Pack for trip (which appeared nested, badge 3) and then creating a new task from the + FAB, the new subtask is no longer nested: it appears as a separate top-level task under 'No due date' with no due date, and Pack for trip's badge drops to 2. Reproduced four times with subtasks named Test subtask, QA sub2, QA sub3 and QA sub4.", "steps": ["Open 'Pack for trip' and tap 'Add subtask'", "Enter 'QA sub4', tap the keyboard Done key, delete the leftover empty subtask row, and tap Save", "Verify QA sub4 is nested under Pack for trip and its badge shows 3", "Tap the + FAB, enter a new task title such as 'QA repeat once', and tap Save", "Observe in My Tasks: Pack for trip's badge is now 2 and QA sub4 is listed as a top-level task in the 'No due date' group"], "element_ref": 23, "observed_quote": "QA sub4", "anchor_node": {"id": "org.tasks:id/rowBody", "class": "android.widget.RelativeLayout", "contains": ["QA sub4"], "bounds": [0, 1622, 1080, 1774]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"tasks-0005": "location", "tasks-0007": "location", "tasks-0009": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1249}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "type", "args": {"text": "QA sub5", "clear": true, "submit": false}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "type", "args": {"text": "QA top5", "clear": true, "submit": false}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.45}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.45}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2089}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "type", "args": {"text": "QA sub6", "clear": true, "submit": false}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 3.0}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "type", "args": {"text": "QA top6", "clear": true, "submit": false}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "tap_xy", "args": {"x": 336, "y": 1757}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1468}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "type", "args": {"text": "QA sub7", "clear": true, "submit": false}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 2169}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "tap_xy", "args": {"x": 614, "y": 295}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "type", "args": {"text": "QA top7", "clear": true, "submit": false}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1066}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.45}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.45}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3}}}
+{"event": "agent", "step": 288, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1978}}}
+{"event": "agent", "step": 289, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 290, "message": {"type": "bug_report", "screen": "My Tasks", "element": "QA sub7 task row under 'No due date'", "field": "subtask parent assignment after creating another task", "symptom_type": "not_persisted", "expected": "QA sub7, added and saved as a subtask of Pack for trip, should remain nested under Pack for trip after an unrelated new task is created. Pack's badge should stay at 3 and Pack's editor should still list QA sub7.", "observed": "Immediately after saving, Pack's editor lists QA sub7 and the badge is 3. After creating a new task ('QA top7') and saving, Pack's badge drops to 2, Pack's editor lists only Charge phone and Print tickets, and QA sub7 appears as a separate top-level task in the 'No due date' group with no due date. The same happened with QA sub2-sub6 and with a subtask named 'Test subtask'.", "steps": ["Open 'Pack for trip' and tap 'Add subtask'", "Type 'QA sub7' and tap Save (keyboard open). Wait a few seconds", "Verify QA sub7 is nested under Pack for trip (badge 3); reopen Pack for trip and confirm QA sub7 is listed as one of its subtasks", "Close the editor and tap the + FAB; create a new task named 'QA top7' and Save", "Reopen 'Pack for trip': the subtask list now contains only Charge phone and Print tickets; the badge is 2", "Scroll to the 'No due date' group: QA sub7 is now a top-level task there instead of a subtask of Pack for trip"], "element_ref": 12, "observed_quote": "QA sub7", "anchor_node": {"id": "org.tasks:id/rowBody", "class": "android.widget.RelativeLayout", "contains": ["QA sub7"], "bounds": [0, 921, 1080, 1073]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"tasks-0005": "location", "tasks-0007": "location", "tasks-0009": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 291, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 292, "message": {"type": "action", "name": "tap_xy", "args": {"x": 126, "y": 575}}}
+{"event": "agent", "step": 293, "message": {"type": "action", "name": "tap_xy", "args": {"x": 126, "y": 575}}}
+{"event": "agent", "step": 294, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 295, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 296, "message": {"type": "action", "name": "tap_xy", "args": {"x": 126, "y": 575}}}
+{"event": "agent", "step": 297, "message": {"type": "action", "name": "tap_xy", "args": {"x": 126, "y": 727}}}
+{"event": "agent", "step": 298, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5}}}
+{"event": "agent", "step": 299, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1001}}}
+{"event": "agent", "step": 300, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "limit", "which": "steps"}

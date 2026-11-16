@@ -1,0 +1,17 @@
+{
+  "db_name": "database",
+  "sql": [
+    "DELETE FROM tags;",
+    "DELETE FROM tagdata;",
+    "DELETE FROM alarms;",
+    "DELETE FROM tasks;",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Buy milk', ((CAST(strftime('%s','now','start of day','+5 days','+12 hours') AS INTEGER))*1000), 0, '2 litres', '', 0, 0, 0, 0, 0, 3, 1, 'seed-1', 0, 0, 0, 0, 0, 0);",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Pack for trip', ((CAST(strftime('%s','now','start of day','+10 days','+12 hours') AS INTEGER))*1000), 0, '', '', 0, 0, 0, 0, 0, 3, 2, 'seed-2', 0, 0, 0, 0, 0, 0);",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Pay rent', ((CAST(strftime('%s','now','start of day','+20 days','+12 hours') AS INTEGER))*1000), 0, '', 'FREQ=MONTHLY;INTERVAL=1', 0, 0, 0, 0, 0, 3, 3, 'seed-3', 0, 0, 0, 0, 0, 0);",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) VALUES ('Read docs', 0, 0, 'See https://example.com/guide', '', 0, 0, 0, 0, 0, 3, 4, 'seed-4', 0, 0, 0, 0, 0, 0);",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) SELECT 'Charge phone', 0, 0, '', '', _id, 0, 0, 0, 0, 3, 5, 'seed-5', 0, 0, 0, 0, 0, 0 FROM tasks WHERE title='Pack for trip';",
+    "INSERT INTO tasks (title, dueDate, hideUntil, notes, recurrence, parent, completed, deleted, created, modified, importance, `order`, remoteId, `estimatedSeconds`, `elapsedSeconds`, `timerStart`, `notificationFlags`, `lastNotified`, `collapsed`) SELECT 'Print tickets', 0, 0, '', '', _id, 0, 0, 0, 0, 3, 6, 'seed-6', 0, 0, 0, 0, 0, 0 FROM tasks WHERE title='Pack for trip';"
+  ],
+  "id": "inbox_basic",
+  "preconditions": "The list contains: Buy milk (due in 5 days, notes '2 litres'); Pack for trip (due in 10 days) with subtasks Charge phone and Print tickets; Pay rent (due in 20 days) repeating monthly; and Read docs (no due date), whose notes contain the link https://example.com/guide."
+}

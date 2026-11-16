@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "sort sheet",
+    "element": "subtasks row",
+    "field": "order button",
+    "symptom_type": "duplicated",
+    "expected": "the Subtasks row set to My order has no ascending or descending button",
+    "observed": "the Subtasks row shows an extra Descending button",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "sort sheet",
+    "element": "something",
+    "field": "order button",
+    "symptom_type": "duplicated",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

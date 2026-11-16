@@ -1,0 +1,192 @@
+{
+  "run_id": "ecb8012b541b",
+  "item_id": "featherline-E01",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add medicine",
+      "element": "Container preparation type",
+      "element_ref": 16,
+      "field": "Preparation type",
+      "symptom_type": "no_effect",
+      "expected": "No subtype selected until explicitly chosen; tapping Container resolves it and displays concentration and amount inputs.",
+      "observed": "Gel initially shows Container checked but no concentration/amount inputs. Tapping Container has no effect and Save silently stays on editor. Switching to Sachet and back reveals Container inputs.",
+      "observed_quote": "Container",
+      "steps": [
+        "Open Add medicine, select Gel.",
+        "Tap Container; inputs remain missing; tap Save, nothing happens.",
+        "Select Sachet then Container; inputs appear.",
+        "Select Tablet then Gel and tap Container again; issue repeats."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Container"
+        ],
+        "bounds": [
+          63,
+          1276,
+          306,
+          1402
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Add medicine",
+      "element": "Gel Container fields",
+      "element_ref": 16,
+      "field": "Preparation type",
+      "symptom_type": "missing",
+      "expected": "Explicitly tapping Container displays Gel concentration (%) and Total gel amount (g).",
+      "observed": "After choosing Gel and explicitly tapping Container, both required fields are absent. Container is shown checked. Selecting Sachet then Container makes the missing fields appear.",
+      "observed_quote": "Container",
+      "steps": [
+        "From fresh Medicines list tap Add medicine.",
+        "Keep category Estradiol.",
+        "Tap preparation form Gel.",
+        "Tap Container under Preparation type.",
+        "Observe no Gel concentration (%) or Total gel amount (g) fields.",
+        "Tap Sachet, then Container: both fields now appear.",
+        "Switch Tablet then Gel and tap Container to reproduce."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Container"
+        ],
+        "bounds": [
+          63,
+          1276,
+          306,
+          1402
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Add medicine",
+      "element": "Ampule preparation type",
+      "element_ref": 22,
+      "field": "Preparation type",
+      "symptom_type": "missing",
+      "expected": "Explicitly selecting Ampule displays its strength input.",
+      "observed": "Injection shows Ampule checked, but no strength input. Tapping Ampule does not reveal it. Vial then Ampule reveals the input. This is also affected by the subtype issue reported for Gel.",
+      "observed_quote": "Ampule",
+      "steps": [
+        "Open Add medicine with Estradiol selected.",
+        "Select Injection, tap Ampule: strength field absent.",
+        "Select Vial then Ampule: strength field appears.",
+        "Select Tablet then Injection and tap Ampule: absence repeats."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Ampule"
+        ],
+        "bounds": [
+          63,
+          1760,
+          273,
+          1886
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0014",
+        "featherline-0015"
+      ],
+      "present": [
+        "featherline-0014",
+        "featherline-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/featherline-E01/ecb8012b541b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0014": "reported",
+    "featherline-0015": "missed_unreached"
+  },
+  "elapsed_s": 275.606,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.83,
+    "notes": "Swept fresh empty state; category choices across Estradiol/Antiandrogen/SERM/GnRHa/Custom; Tablet/Capsule/Injection/Gel/Patch pickers; invalid empty strength; saved medicines/details/list grouping; archive cancellation and archive header removal; add via Plan and manual-record routes with cancellation; list and editor rotation and persisted medicine/group state; quarter/third/two-thirds/three-quarter card subtitles across editor, Plan and Home. Gel Container missing-field/explicit-pick bug confirmed and logged. Also reported reproduced analogous Injection Ampule issue; developer could not reproduce it. All observed bugs reported."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "found": [
+    "featherline-0014"
+  ],
+  "required": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "missed": [
+    "featherline-0015"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 110,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "bug_meta": {
+    "featherline-0014": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "featherline-0015": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

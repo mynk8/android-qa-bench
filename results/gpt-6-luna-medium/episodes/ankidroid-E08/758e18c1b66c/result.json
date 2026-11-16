@@ -1,0 +1,96 @@
+{
+  "run_id": "758e18c1b66c",
+  "item_id": "ankidroid-E08",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E08-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ],
+      "present": [
+        "ankidroid-0025",
+        "ankidroid-0026"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/ankidroid-E08/758e18c1b66c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0025": "missed_unreached",
+    "ankidroid-0026": "missed_unreached"
+  },
+  "elapsed_s": 170.833,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.72,
+    "notes": "Swept filtered deck builder criteria dropdown and build response; add note model switch and unsaved dismissal; deck options daily limits save/reopen and rotation. No reproducible defect found. Returned new cards/day to its original value of 20; starting deck counts remain French 3, Spanish 4."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "missed": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 58,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0025",
+    "ankidroid-0026"
+  ],
+  "bug_meta": {
+    "ankidroid-0025": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "ankidroid-0026": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

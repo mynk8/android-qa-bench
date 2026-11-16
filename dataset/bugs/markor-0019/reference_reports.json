@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor",
+    "element": "indent",
+    "field": "indent size",
+    "symptom_type": "not_persisted",
+    "expected": "after reopening the file Indent still adds two spaces, so the line has four spaces",
+    "observed": "after reopening the file Indent adds four spaces, so the line has six spaces",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor",
+    "element": "something",
+    "field": "indent size",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

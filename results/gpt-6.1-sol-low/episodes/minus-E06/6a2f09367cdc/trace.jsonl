@@ -1,0 +1,316 @@
+{"event": "install", "build": {"n": 1, "build_id": "minus-E06-11", "mask": "11", "unfixed": ["minus-0018", "minus-0019"], "present": ["minus-0018", "minus-0019"]}}
+{"event": "brief", "item_id": "minus-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1599}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1599}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1869}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1869}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1599}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 21, "message": {"type": "bug_report", "screen": "Main expense entry", "element": "Backspace keypad key", "element_ref": 19, "field": "amount", "symptom_type": "no_effect", "expected": "Backspace removes the last entered digit, changing 1.23 to 1.2.", "observed": "Repeated taps on the backspace key leave the amount unchanged.", "observed_quote": "$1.23", "steps": ["Enter 1, decimal point, 2, 3 on the main keypad.", "Tap the yellow backspace key.", "Tap it again; amount remains $1.23."], "anchor_node": {"class": "android.view.View", "contains": ["Editor action"], "bounds": [799, 1202, 1035, 1456]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 383, "y": 1047}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1862}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.6, "x": 500, "y": 650}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "left", "distance": 0.7}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.8, "x": 200, "y": 650}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5, "x": 540, "y": 1140}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 831}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 483}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 588}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 483}}}
+{"event": "agent", "step": 48, "message": {"type": "bug_report", "screen": "Expense history", "element": "Date section headers", "element_ref": 9, "symptom_type": "no_effect", "expected": "All date sections can stay collapsed when the last open section is collapsed.", "observed": "Collapsing the final open section immediately reopens Today. Reproduced twice.", "observed_quote": "Collapse", "steps": ["Open history by dragging the main panel handle down.", "Expand 13 November.", "Collapse Today.", "Collapse 13 November; Today automatically reopens.", "Collapse Today again; it stays open."], "anchor_node": {"class": "android.view.View", "contains": ["Collapse", "Today"], "bounds": [42, 426, 1038, 541]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["minus-0018"], "per_bug": {"minus-0018": "anchored", "minus-0019": "location"}}
+{"event": "hit", "bugs": ["minus-0018"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 306, "y": 956}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1077}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1589}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1590}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 773, "y": 956}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 540, "y": 1900}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8, "x": 540, "y": 2200}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2313}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 540, "y": 2195}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2195}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.4, "x": 540, "y": 1800}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.9, "x": 540, "y": 2100}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1869, "y": 134}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1200, "y": 540}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1869, "y": 134}}}
+{"event": "agent", "step": 73, "message": {"type": "bug_report", "screen": "Budget sheet", "element": "Spent and Available summary", "element_ref": 4, "field": "Spent", "symptom_type": "wrong_value", "expected": "Spent $60 and Available 40%, from Groceries $40 and the single Rent occurrence $20.", "observed": "Spent is $80 and Available is 20%; recurring Rent appears counted twice. History shows $60 and Analytics showed $61.2 when the temporary $1.2 test expense existed. Reopening reproduces.", "observed_quote": "$80", "steps": ["With the initial Groceries $40 and recurring Rent $20, open the budget sheet.", "Observe $80 spent, 20% available.", "Close and reopen the sheet; totals are still wrong.", "Compare history's 13 November total of $60."], "anchor_node": {"text": "$80", "class": "android.widget.TextView", "bounds": [465, 454, 618, 533]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 200, "y": 500}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1501, "y": 918}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "tap_xy", "args": {"x": 2184, "y": 414}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 136, "y": 492}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1658, "y": 520}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2085}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 864, "y": 777}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 142, "y": 1190}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.7, "x": 500, "y": 777}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1321}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1193}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1329}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 864, "y": 1047}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "left", "distance": 0.7, "x": 540, "y": 600}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 600}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "right", "distance": 0.7, "x": 540, "y": 600}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1527}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1321}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1193}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1390}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 747, "y": 1037}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 747, "y": 1037}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "left", "distance": 0.7, "x": 540, "y": 1800}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1527}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 600}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 941, "y": 163}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1200}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "tap_xy", "args": {"x": 748, "y": 1402}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 748, "y": 1402}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 149}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 343, "y": 1047}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 864, "y": 1047}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 149, "y": 1002}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 747, "y": 1707}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 787, "y": 1274}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 70, "y": 700}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 787, "y": 1274}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 558, "y": 622}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 558, "y": 622}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 171, "message": {"type": "bug_report", "screen": "Budget sheet", "element": "Available percentage summary row", "element_ref": 6, "symptom_type": "wrong_value", "expected": "Available: 40% because actual expenses total $60 out of $100.", "observed": "Available percentage is 20% and spent is $80, while history and Analytics show $60. The recurring $20 template is included in addition to the paid occurrence.", "observed_quote": "Available: 20%", "steps": ["Start with $100 budget, yesterday Groceries $40 and monthly Rent $20.", "Tap Today budget pill on main screen.", "Read Available: 20%.", "Dismiss by tapping outside the sheet, reopen, and observe the same percentage.", "Open Analytics and compare Total Spent 60; history also has only Groceries $40 and Rent $20."], "anchor_node": {"text": "Available: 20%", "class": "android.widget.TextView", "bounds": [105, 1052, 334, 1099]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 1675}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 872, "y": 1675}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "tap_xy", "args": {"x": 206, "y": 1675}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 753}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 400}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 300}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1869}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1869}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5, "x": 540, "y": 1140}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 747, "y": 933}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "tap_xy", "args": {"x": 747, "y": 933}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 622}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "tap_xy", "args": {"x": 773, "y": 956}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 2126}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "tap_xy", "args": {"x": 773, "y": 956}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 997}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "tap_xy", "args": {"x": 136, "y": 492}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 819, "y": 777}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "tap_xy", "args": {"x": 944, "y": 1191}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 1059}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "type", "args": {"text": "QA Café & 🚕", "clear": true, "submit": false}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "tap_xy", "args": {"x": 819, "y": 777}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "tap_xy", "args": {"x": 582, "y": 1189}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "type", "args": {"text": "QA Test & 123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 819, "y": 1047}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 582, "y": 1189}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "type", "args": {"text": "QA456", "clear": true, "submit": false}}}
+{"event": "agent", "step": 210, "message": {"type": "bug_report", "screen": "Main screen", "element": "Amount while entering a new category", "element_ref": 3, "field": "amount", "symptom_type": "wrong_value", "expected": "Typing QA456 in New category edits only the category name; amount remains empty.", "observed": "Typing digits in the focused New category field closes category editing and enters those digits into the expense amount. Also reproduced with QA Test & 123.", "observed_quote": "$456", "steps": ["Enable Settings > Extra features > Save categories on their own.", "Return to idle main screen.", "Tap New category.", "Type QA456 into the focused category text field.", "Observe amount becomes $456 instead of remaining empty."], "anchor_node": {"text": "$456", "class": "android.widget.EditText", "bounds": [42, 455, 1038, 770]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 819, "y": 1047}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 582, "y": 1189}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "type", "args": {"text": "QATest", "clear": true, "submit": false}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 944, "y": 1191}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1321}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1193}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 864, "y": 1047}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 414, "y": 2149}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 539, "y": 2139}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1869}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 162, "y": 2139}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "tap_xy", "args": {"x": 414, "y": 1869}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "tap_xy", "args": {"x": 665, "y": 1869}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1599}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "tap_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 241, "message": {"type": "bug_report", "screen": "Main expense entry", "element": "Amount keypad fractional input", "element_ref": 3, "field": "amount", "symptom_type": "no_effect", "expected": "After entering 1.23, extra fractional digits are rejected; one backspace should change visible amount to 1.2.", "observed": "The keypad accepts an invisible third fractional digit. Entering 1.234 displays $1.23; backspace leaves $1.23 unchanged because it deletes the hidden 4. Reproduced in both category modes.", "observed_quote": "$1.23", "steps": ["Clear main amount.", "Tap 1, decimal point, 2, 3, 4.", "Amount still displays $1.23.", "Tap backspace once: display remains $1.23.", "Tap backspace again: display becomes $1.2.", "Clear and repeat the sequence."], "anchor_node": {"text": "$1.23", "class": "android.widget.EditText", "bounds": [42, 455, 1038, 770]}}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1321}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.7}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1193}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1390}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 996}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "tap_xy", "args": {"x": 163, "y": 1869}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "tap_xy", "args": {"x": 611, "y": 1047}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 86, "y": 1047}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "tap_xy", "args": {"x": 119, "y": 1047}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 86, "y": 1047}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "tap_xy", "args": {"x": 119, "y": 1047}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 347, "y": 1047}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "tap_xy", "args": {"x": 460, "y": 1047}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "tap_xy", "args": {"x": 862, "y": 1047}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 862, "y": 1047}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "tap_xy", "args": {"x": 593, "y": 1189}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 795}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 795}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 901}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 500}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 274, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1019}}}
+{"event": "agent", "step": 275, "message": {"type": "action", "name": "tap_xy", "args": {"x": 944, "y": 1191}}}
+{"event": "agent", "step": 276, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 277, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 917, "y": 1329}}}
+{"event": "agent", "step": 278, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 279, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1321}}}
+{"event": "agent", "step": 280, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 996}}}
+{"event": "agent", "step": 281, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 282, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 283, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 284, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 753}}}
+{"event": "agent", "step": 285, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1308}}}
+{"event": "agent", "step": 286, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 287, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 288, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 289, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 400}}}
+{"event": "agent", "step": 290, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 291, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 292, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 300}}}
+{"event": "agent", "step": 293, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 294, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 520}}}
+{"event": "agent", "step": 295, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 296, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 297, "message": {"type": "bug_report", "screen": "Analytics", "element": "Categories tab selection", "element_ref": 4, "symptom_type": "not_persisted", "expected": "Categories remains the selected tab after device rotation.", "observed": "Selecting Categories then rotating resets the selected tab to Trend. Reproduced on two rotation cycles.", "observed_quote": "Trend", "steps": ["Open Analytics.", "Tap Categories.", "Rotate to landscape; Trend is selected again.", "Rotate portrait and repeat; selection is lost again."], "anchor_node": {"class": "android.view.View", "contains": ["Categories"], "bounds": [540, 457, 985, 583]}}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0018": "location", "minus-0019": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 298, "message": {"type": "action", "name": "tap_xy", "args": {"x": 85, "y": 148}}}
+{"event": "agent", "step": 299, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.7, "notes": "Swept main expense input/save, history edit/delete/undo and section toggles, budget sheet totals/split modes/edit cancellation, category creation/list selection/sorting/deletion/persistence, navigation and rotation. History final-section collapse bug confirmed and logged. Budget Spent $80 versus actual $60, hidden fractional keypad/backspace behavior, category numeric typing, and Analytics rotation selection loss were reported but developer could not reproduce. Removed temporary expenses/categories; original Groceries $40, recurring Rent $20, Food/Transport and $100 period preserved; experimental switches restored. Separate category management route was not identifiable; tested available inline, popup, and grid category controls."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["minus-0018", "minus-0019"], "unfixed": ["minus-0018", "minus-0019"], "outcome": "wrong_pass"}

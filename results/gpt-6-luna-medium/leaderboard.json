@@ -1,0 +1,239 @@
+{
+ "runs": [
+  "results/gpt-6-luna-medium"
+ ],
+ "headline_episode_bug_f1": 0.235,
+ "episodes": {
+  "stopping": {
+   "signed_off": 0.941,
+   "correct_signoff": 0.039,
+   "false_signoff": 0.902,
+   "gave_up": 0.059,
+   "cut_off": 0.0,
+   "report_cap": 0.0
+  },
+  "stopping_with_mixed": {
+   "signed_off": 0.941,
+   "correct_signoff": 0.039,
+   "false_signoff": 0.902,
+   "gave_up": 0.059,
+   "cut_off": 0.0,
+   "report_cap": 0.0
+  },
+  "no_signoff_reasons": {
+   "unfinished": 2,
+   "other": 1
+  },
+  "episode_score": 0.144,
+  "episode_score_ci95": [
+   0.072,
+   0.22
+  ],
+  "catch_credit": 0.181,
+  "sign_off_rate": 0.941,
+  "finished_rate": 1.0,
+  "hit_rate": 0.255,
+  "hit_rate_ci95": [
+   0.155,
+   0.389
+  ],
+  "runs": 51,
+  "episodes": 51,
+  "bugs_present": 91,
+  "bugs_found": 14,
+  "reports_credited": 14,
+  "false_reports": 14,
+  "bug_f1": 0.235,
+  "bug_f1_ci95": [
+   0.139,
+   0.331
+  ],
+  "bug_recall": 0.154,
+  "bug_recall_ci95": [
+   0.086,
+   0.232
+  ],
+  "report_precision": 0.5,
+  "report_precision_ci95": [
+   0.345,
+   0.676
+  ],
+  "solve_rate": 0.039,
+  "solve_rate_ci95": [
+   0.011,
+   0.132
+  ],
+  "pass_at_1": 0.039,
+  "pass_hat_1": 0.039,
+  "false_signoff_rate": 0.958,
+  "no_signoff_runs": 3,
+  "doom_loop_runs": 0,
+  "infra_errors": 0,
+  "cost_usd": 0.78,
+  "cost_usd_per_episode": 0.0152,
+  "cost_episodes_logged": 51,
+  "usd_per_bug_found": 0.06,
+  "steps_mean": 39.0,
+  "seconds_mean": 134.7
+ },
+ "cases": {
+  "unspec": {
+   "runs": 0,
+   "balanced_accuracy": null,
+   "faulty_found": "0/0",
+   "faulty_found_ci95": null,
+   "faulty_fail_but_unlocalized": 0,
+   "clean_passed": "0/0",
+   "clean_passed_ci95": null,
+   "cost_usd": 0
+  },
+  "spec": {
+   "runs": 0,
+   "balanced_accuracy": null,
+   "faulty_found": "0/0",
+   "faulty_found_ci95": null,
+   "faulty_fail_but_unlocalized": 0,
+   "clean_passed": "0/0",
+   "clean_passed_ci95": null,
+   "cost_usd": 0
+  }
+ },
+ "episode_bug_recall_by_contamination": {
+  "older (fixed < 2026)": {
+   "found": "3/33",
+   "recall": 0.091,
+   "ci95": [
+    0.031,
+    0.236
+   ]
+  },
+  "recent (fixed >= 2026-01-01)": {
+   "found": "11/58",
+   "recall": 0.19,
+   "ci95": [
+    0.109,
+    0.309
+   ]
+  }
+ },
+ "episode_bug_recall_by_app": {
+  "amaze": {
+   "found": "0/11",
+   "recall": 0.0,
+   "ci95": [
+    0.0,
+    0.259
+   ]
+  },
+  "ankidroid": {
+   "found": "0/15",
+   "recall": 0.0,
+   "ci95": [
+    0.0,
+    0.204
+   ]
+  },
+  "featherline": {
+   "found": "0/9",
+   "recall": 0.0,
+   "ci95": [
+    0.0,
+    0.299
+   ]
+  },
+  "idlefantasy": {
+   "found": "5/12",
+   "recall": 0.417,
+   "ci95": [
+    0.193,
+    0.68
+   ]
+  },
+  "iris": {
+   "found": "0/3",
+   "recall": 0.0,
+   "ci95": [
+    0.0,
+    0.562
+   ]
+  },
+  "markor": {
+   "found": "2/13",
+   "recall": 0.154,
+   "ci95": [
+    0.043,
+    0.422
+   ]
+  },
+  "minus": {
+   "found": "1/8",
+   "recall": 0.125,
+   "ci95": [
+    0.022,
+    0.471
+   ]
+  },
+  "nerdcalci": {
+   "found": "5/8",
+   "recall": 0.625,
+   "ci95": [
+    0.306,
+    0.863
+   ]
+  },
+  "tasks": {
+   "found": "1/12",
+   "recall": 0.083,
+   "ci95": [
+    0.015,
+    0.354
+   ]
+  }
+ },
+ "episode_bug_recall_by_family": {
+  "display": {
+   "found": "9/35",
+   "recall": 0.257,
+   "ci95": [
+    0.142,
+    0.421
+   ]
+  },
+  "interaction": {
+   "found": "2/19",
+   "recall": 0.105,
+   "ci95": [
+    0.029,
+    0.314
+   ]
+  },
+  "state": {
+   "found": "3/37",
+   "recall": 0.081,
+   "ci95": [
+    0.028,
+    0.213
+   ]
+  }
+ },
+ "case_faulty_found_by_contamination": {
+  "older": "0/0",
+  "recent": "0/0"
+ },
+ "changelog_coverage": {
+  "real": {
+   "lines": 92,
+   "reached": 68,
+   "worked": 27,
+   "caught": 14,
+   "miss_ignored": 20,
+   "miss_shallow": 35,
+   "miss_tested_not_noticed": 23
+  },
+  "decoy": {
+   "lines": 93,
+   "reached": 76,
+   "worked": 30
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "file list",
+    "element": "selection action bar",
+    "field": "select inverse",
+    "symptom_type": "wrong_value",
+    "expected": "the selection action bar closes when select inverse leaves nothing selected",
+    "observed": "the selection action bar stays open with 0 selected",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "file list",
+    "element": "something",
+    "field": "select inverse",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

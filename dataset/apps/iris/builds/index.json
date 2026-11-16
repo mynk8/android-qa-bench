@@ -1,0 +1,100 @@
+{
+  "iris-0007-buggy": {
+    "sha256": "acf5898d30f1d892c0fbf92b8b6f8817dc8dd22f54facc4a90967ce0ed89854b",
+    "bugs_present": [
+      "iris-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-0007-fixed": {
+    "sha256": "c24c99feff221616b647dd53cba0e3caa7499567dac8ad51a5fb5d4c0f59d66c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-E01-0": {
+    "sha256": "c24c99feff221616b647dd53cba0e3caa7499567dac8ad51a5fb5d4c0f59d66c",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "iris-0007-fixed",
+    "tier": "full"
+  },
+  "iris-E01-1": {
+    "sha256": "acf5898d30f1d892c0fbf92b8b6f8817dc8dd22f54facc4a90967ce0ed89854b",
+    "bugs_present": [
+      "iris-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "iris-0007-buggy",
+    "tier": "core"
+  },
+  "iris-0011-buggy": {
+    "sha256": "9c242169f06dc950e8b775322acea279c85260407c0506efe05c09516f51816b",
+    "bugs_present": [
+      "iris-0011"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-0011-fixed": {
+    "sha256": "400df78cbf7af26cb23253a826b29950de25957cf35618834da931c73e736b37",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-0012-buggy": {
+    "sha256": "3ec7102f6f3505b48ebb192bef1cdf957041f532d2ff136ebfec95286e4ed980",
+    "bugs_present": [
+      "iris-0012"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-0012-fixed": {
+    "sha256": "400df78cbf7af26cb23253a826b29950de25957cf35618834da931c73e736b37",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-E02-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "iris-E02-1": {
+    "sha256": "9c242169f06dc950e8b775322acea279c85260407c0506efe05c09516f51816b",
+    "bugs_present": [
+      "iris-0011"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "iris-E03-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "iris-E03-1": {
+    "sha256": "3ec7102f6f3505b48ebb192bef1cdf957041f532d2ff136ebfec95286e4ed980",
+    "bugs_present": [
+      "iris-0012"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

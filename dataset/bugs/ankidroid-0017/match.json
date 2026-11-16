@@ -1,0 +1,95 @@
+{
+  "screens": [
+    "card template editor"
+  ],
+  "elements": [
+    "add template",
+    "template",
+    "templates",
+    "card types"
+  ],
+  "fields": [
+    "cloze note type"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "adding a template on a Cloze note type does nothing",
+    "Cloze still has a single template"
+  ],
+  "observed_contains_any": [
+    "a second template is added to the Cloze note type",
+    "Add template changes the Cloze type"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "nothing",
+      "no effect",
+      "not allow*",
+      "disabled",
+      "single",
+      "one template",
+      "only one",
+      "block*",
+      "prevent*",
+      "not possible",
+      "cannot",
+      "can't",
+      "error",
+      "refus*",
+      "not add*",
+      "no new",
+      "single card type",
+      "one card type",
+      "single template",
+      "one card",
+      "one tab",
+      "single tab",
+      "stays at one",
+      "keeps one",
+      "stay* one",
+      "at one",
+      "one only"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "second",
+      "another",
+      "new",
+      "two",
+      "2",
+      "added",
+      "extra",
+      "created",
+      "adds",
+      "another tab",
+      "additional",
+      "offer*",
+      "add card type",
+      "will create"
+    ]
+  ],
+  "location_concepts": [
+    "template*",
+    "card type*",
+    "note type*",
+    "manage note types",
+    "edit cards"
+  ],
+  "anchors": {
+    "elements": [
+      "add template",
+      "card types",
+      "template",
+      "cloze"
+    ],
+    "observed": [
+      "card 2"
+    ]
+  }
+}

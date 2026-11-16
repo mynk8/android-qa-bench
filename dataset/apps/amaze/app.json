@@ -1,0 +1,12 @@
+{
+  "app_id": "amaze",
+  "display_name": "Amaze File Manager",
+  "repo": "https://github.com/TeamAmaze/AmazeFileManager",
+  "licence": "GPL-3.0",
+  "package": "com.amaze.filemanager",
+  "pinned_commit": "d163ba74a529005b7423baf368ca4ea22b38c338",
+  "source_type": "mature",
+  "ui": "views",
+  "local_data": "files",
+  "needs_network_or_login": false
+}

@@ -1,0 +1,261 @@
+{
+  "run_id": "5dd28c233307",
+  "item_id": "tasks-E01",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Search (task list search)",
+      "element": "Search field / system Back handling",
+      "field": "system Back navigation",
+      "symptom_type": "wrong_navigation",
+      "expected": "Pressing the system Back button while the search screen is open should close search and return to the My Tasks task list.",
+      "observed": "Pressing Back once hides the keyboard but leaves search open; pressing Back again exits Tasks.org to the Android home screen (launcher) instead of returning to the task list. Tapping the on-screen back arrow in the search bar does return to the list, so only the system Back path is broken.",
+      "steps": [
+        "From My Tasks, tap the Search button in the bottom bar",
+        "Type a query such as 'milk'",
+        "Press the system Back button once: the keyboard hides but search stays open",
+        "Press the system Back button again",
+        "Observe: Tasks.org closes to the Android home screen instead of returning to the My Tasks list"
+      ],
+      "element_ref": 37,
+      "observed_quote": "milk",
+      "anchor_node": {
+        "id": "org.tasks:id/search_src_text",
+        "text": "milk",
+        "class": "android.widget.AutoCompleteTextView",
+        "bounds": [
+          168,
+          98,
+          849,
+          193
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Final dose task row / completion snackbar",
+      "field": "repeating task completion",
+      "symptom_type": "no_effect",
+      "expected": "Final dose is configured as 'Repeats daily, occurs 1 time', so completing it should finish the task (it should no longer be rescheduled/reopened).",
+      "observed": "Completing Final dose keeps it in the active list and shows the snackbar 'Final dose rescheduled for December 14' - the due date does not advance, so the task can never be completed.",
+      "steps": [
+        "From My Tasks, tap the Final dose row to open it and confirm it shows 'Repeats daily, occurs 1 time' and due Monday, December 14",
+        "Close the editor and tap Final dose's complete checkbox in the list",
+        "Observe the snackbar 'Final dose rescheduled for December 14' and the task remains in the Due Monday, December 14 group",
+        "Reopen the task: it still shows the same due date and 'Repeats daily, occurs 1 time'"
+      ],
+      "element_ref": 33,
+      "observed_quote": "Final dose rescheduled for December 14",
+      "anchor_node": {
+        "id": "org.tasks:id/snackbar_text",
+        "text": "Final dose rescheduled for December 14",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1907,
+          865,
+          2032
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "QA repeat once task row / completion snackbar",
+      "field": "repeating task completion (recurrence exhausted)",
+      "symptom_type": "no_effect",
+      "expected": "A task that repeats daily for only 1 occurrence should be completed by tapping its checkbox: it should leave the active task list and no next occurrence should be scheduled. (A control daily task set to 'Never' end correctly rescheduled from Tomorrow to Monday, November 16.)",
+      "observed": "Tapping complete shows 'QA repeat once rescheduled for tomorrow' and the task stays in the list with the same 'Tomorrow' due date; reopening it still shows 'Repeats daily, occurs 1 time'. The 1-occurrence recurrence never completes.",
+      "steps": [
+        "Tap the + FAB and enter the title 'QA repeat once'",
+        "Set due date to Tomorrow (Sunday, November 15, 2026) and tap OK",
+        "Tap 'Does not repeat', choose 'Every day', then tap the 'Repeats daily' row and choose 'Custom\u2026'",
+        "In Custom recurrence select 'After' with count 1 occurrence, tap OK, and make sure 'Repeats from due date' is selected",
+        "Save the task; it appears under Tomorrow with 'Repeats daily, occurs 1 time'",
+        "Tap the task's complete checkbox in the list",
+        "Observe the snackbar 'QA repeat once rescheduled for tomorrow' and the task remaining in the list (as also seen with the provided Final dose task)"
+      ],
+      "element_ref": 34,
+      "observed_quote": "QA repeat once rescheduled for tomorrow",
+      "anchor_node": {
+        "id": "org.tasks:id/snackbar_text",
+        "text": "QA repeat once rescheduled for tomorrow",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1907,
+          865,
+          2032
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "QA sub4 task row (top-level under 'No due date')",
+      "field": "subtask parent assignment",
+      "symptom_type": "not_persisted",
+      "expected": "A subtask added to 'Pack for trip' should stay nested under Pack for trip after another new task is created; Pack for trip's badge should keep counting it.",
+      "observed": "After adding a subtask to Pack for trip (which appeared nested, badge 3) and then creating a new task from the + FAB, the new subtask is no longer nested: it appears as a separate top-level task under 'No due date' with no due date, and Pack for trip's badge drops to 2. Reproduced four times with subtasks named Test subtask, QA sub2, QA sub3 and QA sub4.",
+      "steps": [
+        "Open 'Pack for trip' and tap 'Add subtask'",
+        "Enter 'QA sub4', tap the keyboard Done key, delete the leftover empty subtask row, and tap Save",
+        "Verify QA sub4 is nested under Pack for trip and its badge shows 3",
+        "Tap the + FAB, enter a new task title such as 'QA repeat once', and tap Save",
+        "Observe in My Tasks: Pack for trip's badge is now 2 and QA sub4 is listed as a top-level task in the 'No due date' group"
+      ],
+      "element_ref": 23,
+      "observed_quote": "QA sub4",
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "QA sub4"
+        ],
+        "bounds": [
+          0,
+          1622,
+          1080,
+          1774
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "QA sub7 task row under 'No due date'",
+      "field": "subtask parent assignment after creating another task",
+      "symptom_type": "not_persisted",
+      "expected": "QA sub7, added and saved as a subtask of Pack for trip, should remain nested under Pack for trip after an unrelated new task is created. Pack's badge should stay at 3 and Pack's editor should still list QA sub7.",
+      "observed": "Immediately after saving, Pack's editor lists QA sub7 and the badge is 3. After creating a new task ('QA top7') and saving, Pack's badge drops to 2, Pack's editor lists only Charge phone and Print tickets, and QA sub7 appears as a separate top-level task in the 'No due date' group with no due date. The same happened with QA sub2-sub6 and with a subtask named 'Test subtask'.",
+      "steps": [
+        "Open 'Pack for trip' and tap 'Add subtask'",
+        "Type 'QA sub7' and tap Save (keyboard open). Wait a few seconds",
+        "Verify QA sub7 is nested under Pack for trip (badge 3); reopen Pack for trip and confirm QA sub7 is listed as one of its subtasks",
+        "Close the editor and tap the + FAB; create a new task named 'QA top7' and Save",
+        "Reopen 'Pack for trip': the subtask list now contains only Charge phone and Print tickets; the badge is 2",
+        "Scroll to the 'No due date' group: QA sub7 is now a top-level task there instead of a subtask of Pack for trip"
+      ],
+      "element_ref": 12,
+      "observed_quote": "QA sub7",
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "QA sub7"
+        ],
+        "bounds": [
+          0,
+          921,
+          1080,
+          1073
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ],
+      "present": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/tasks-E01/5dd28c233307/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0005": "reported",
+    "tasks-0007": "missed_unreached",
+    "tasks-0009": "reported"
+  },
+  "elapsed_s": 1328.08,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "found": [
+    "tasks-0005",
+    "tasks-0009"
+  ],
+  "required": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "missed": [
+    "tasks-0007"
+  ],
+  "true_positives": 2,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 300,
+  "precision": 0.4,
+  "recall": 0.6666666666666666,
+  "unfixed_at_end": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "bug_meta": {
+    "tasks-0005": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "tasks-0007": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "tasks-0009": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "card browser",
+    "element": "sort",
+    "field": "notes mode",
+    "symptom_type": "wrong_value",
+    "expected": "notes mode uses the notes sort order",
+    "observed": "notes mode uses the cards sort order",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "card browser",
+    "element": "something",
+    "field": "notes mode",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

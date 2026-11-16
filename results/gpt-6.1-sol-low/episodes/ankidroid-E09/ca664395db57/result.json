@@ -1,0 +1,157 @@
+{
+  "run_id": "ca664395db57",
+  "item_id": "ankidroid-E09",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser / Reposition new cards",
+      "element": "Queue range hint",
+      "element_ref": 19,
+      "field": "queue_limits_label",
+      "symptom_type": "wrong_value",
+      "expected": "The range distinguishes the queue top (1) from the queue bottom (7).",
+      "observed": "Both bounds are labeled Queue top.",
+      "observed_quote": "Queue top: \u20681\u2069\nQueue top: \u20687\u2069",
+      "steps": [
+        "Browse Spanish cards.",
+        "Select comer, open More options > Reposition.",
+        "Read the range hint.",
+        "Cancel and reopen Reposition; the same incorrect labels recur."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/queue_limits_label",
+        "text": "Queue top: \u20681\u2069\nQueue top: \u20687\u2069",
+        "class": "android.widget.TextView",
+        "bounds": [
+          144,
+          327,
+          351,
+          421
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename deck",
+      "element": "Name collision validation",
+      "element_ref": 40,
+      "field": "New name",
+      "symptom_type": "wrong_value",
+      "expected": "Allow changing only the capitalization of the current deck name; exclude the current deck from clashes.",
+      "observed": "Renaming Spanish to spanish shows a collision with itself and disables Rename. Reproduced after canceling and reopening.",
+      "observed_quote": "Name already exists",
+      "steps": [
+        "Long press Spanish and choose Rename deck.",
+        "Replace Spanish with spanish.",
+        "Observe Name already exists and disabled Rename.",
+        "Cancel, reopen Rename deck, and enter spanish again."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/textinput_error",
+        "text": "Name already exists",
+        "class": "android.widget.TextView",
+        "bounds": [
+          217,
+          827,
+          863,
+          870
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E09-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ],
+      "present": [
+        "ankidroid-0027",
+        "ankidroid-0029"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E09/ca664395db57/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0027": "missed_unreached",
+    "ankidroid-0029": "reported"
+  },
+  "elapsed_s": 543.118,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Swept deck rename validation/persistence/reversal, subdeck creation/deletion and repeated independent expand/collapse; Spanish and French browsing, tag search and missing-tag search, card edit/save/reopen/restore, preview, reposition at zero and undo; Basic field reorder persistence, consecutive reorders with temporary third field, rotation and restoration. Confirmed report: reposition range repeats Queue top for both bounds. Also filed reproducible on-device capitalization-only self-clash report; developer could not reproduce. Temporary subdeck/field removed, original names, card text, positions and 4/3 counts restored."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "found": [
+    "ankidroid-0029"
+  ],
+  "required": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "missed": [
+    "ankidroid-0027"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 168,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0027",
+    "ankidroid-0029"
+  ],
+  "bug_meta": {
+    "ankidroid-0027": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "ankidroid-0029": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

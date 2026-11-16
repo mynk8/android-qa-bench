@@ -1,0 +1,93 @@
+{
+  "screens": [
+    "history"
+  ],
+  "elements": [
+    "swipe actions"
+  ],
+  "fields": [
+    "recurrent item"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "swiping a recurrent history row reveals edit or delete actions",
+    "Rent shows the same swipe actions as a one-off row"
+  ],
+  "observed_contains_any": [
+    "recurrent items are missing swipe actions",
+    "swiping Rent reveals no actions"
+  ],
+  "symptom_types": [
+    "missing",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "edit",
+      "delete",
+      "action*",
+      "swipe*",
+      "option*",
+      "button*",
+      "drag*",
+      "reveal*",
+      "sideways",
+      "gesture*",
+      "slid*",
+      "react*",
+      "finger"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "no action*",
+      "not reveal*",
+      "doesn't reveal",
+      "not show*",
+      "does not"
+    ],
+    [
+      "swip*",
+      "action*",
+      "delet*",
+      "dialog*",
+      "confirm*",
+      "rent",
+      "row",
+      "reveal*",
+      "nothing happen*",
+      "recurr*"
+    ]
+  ],
+  "location_concepts": [
+    "history",
+    "swipe*",
+    "rent",
+    "recurr*",
+    "row"
+  ],
+  "anchors": {
+    "elements": [
+      "Rent",
+      "Gym",
+      "recurrent",
+      "swipe"
+    ],
+    "observed": []
+  }
+}

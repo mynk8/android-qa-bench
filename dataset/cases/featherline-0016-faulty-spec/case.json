@@ -1,0 +1,14 @@
+{
+  "case_id": "featherline-0016-faulty-spec",
+  "bug_id": "featherline-0016",
+  "_build_id": "featherline-0016-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "plan_empty",
+  "agent_input": "agent_input.md"
+}

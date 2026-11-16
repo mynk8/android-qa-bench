@@ -1,0 +1,258 @@
+{
+  "run_id": "3c846895e869",
+  "item_id": "tasks-E05",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Task order",
+      "element_ref": 2,
+      "field": "By title descending",
+      "symptom_type": "no_effect",
+      "expected": "Descending title order: Read docs, Pay rent, Pack for trip, buy milk (children remain under parent).",
+      "observed": "Ascending and descending both leave buy milk, Pack for trip, Pay rent, Read docs in the same order; persists after rotation.",
+      "observed_quote": "buy milk",
+      "steps": [
+        "Set grouping None and sorting By title.",
+        "Toggle Ascending to Descending and close sheet.",
+        "Reopen, toggle back to Ascending then Descending again, close; order remains unchanged.",
+        "Rotate landscape and portrait; order still unchanged."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "buy milk",
+          "2 litres"
+        ],
+        "bounds": [
+          0,
+          210,
+          1080,
+          430
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Sort sheet",
+      "element": "Subtasks My order direction toggle",
+      "element_ref": 6,
+      "field": "Subtasks",
+      "symptom_type": "wrong_value",
+      "expected": "Manual My order should not expose an ascending/descending control.",
+      "observed": "My order exposes a direction control that toggles repeatedly although manual subtask order remains unchanged.",
+      "observed_quote": "Descending",
+      "steps": [
+        "Open Sort, choose Subtasks By title, then return to My order.",
+        "Tap the direction control; it changes Ascending/Descending.",
+        "Close and reopen the sheet, repeat toggling; control remains present for My order."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Descending"
+        ],
+        "bounds": [
+          756,
+          1398,
+          1038,
+          1524
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Read docs note web link",
+      "element_ref": 20,
+      "field": "Notes",
+      "symptom_type": "wrong_navigation",
+      "expected": "Displayed https://example.com/guide is detected as a clickable web link and opens the URL.",
+      "observed": "URL is plain text. Tapping the URL opens the Read docs task editor instead of the web link, reproduced twice.",
+      "observed_quote": "See https://example.com/guide",
+      "steps": [
+        "Locate Read docs in My Tasks.",
+        "Tap the URL text in its displayed note.",
+        "Back to list and tap the URL again; task editor opens again."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Read docs",
+          "See https://example.com/guide"
+        ],
+        "bounds": [
+          0,
+          1695,
+          1080,
+          1915
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks grouped by due date",
+      "element": "Buy milk group heading",
+      "element_ref": 2,
+      "field": "Show full date",
+      "symptom_type": "wrong_value",
+      "expected": "With Show full date enabled, due group heading includes Friday, November 20 consistently with task editor.",
+      "observed": "Heading remains Due Friday while editor displays Friday, November 20. Repeated turning full date off/on does not update heading.",
+      "observed_quote": "Due Friday",
+      "steps": [
+        "With grouping By due date, enable Settings > Date and time > Show full date.",
+        "Return to list: Buy milk heading is Due Friday; open task: date is Friday, November 20.",
+        "Repeat disabling/enabling Show full date and returning; same mismatch."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/header_row",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Due Friday"
+        ],
+        "bounds": [
+          0,
+          210,
+          1080,
+          357
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Pack for trip subtask order",
+      "element_ref": 16,
+      "field": "Subtasks By title Descending",
+      "symptom_type": "no_effect",
+      "expected": "Descending subtask title order shows Print tickets then Charge phone.",
+      "observed": "Charge phone stays before Print tickets even after toggling ascending then descending twice and reopening sort sheet.",
+      "observed_quote": "Charge phone",
+      "steps": [
+        "Open Sort > Subtasks > By title.",
+        "Select Descending, close sheet; Charge phone precedes Print tickets.",
+        "Reopen sheet, toggle Ascending then Descending, close; same unchanged order."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/title",
+        "text": "Charge phone",
+        "class": "android.widget.TextView",
+        "bounds": [
+          200,
+          945,
+          1059,
+          1044
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "tasks-0018",
+        "tasks-0019"
+      ],
+      "present": [
+        "tasks-0018",
+        "tasks-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/tasks-E05/3c846895e869/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0018": "reported",
+    "tasks-0019": "missed_unreached"
+  },
+  "elapsed_s": 572.6,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.86,
+    "notes": "Swept sorting/grouping and task notes/links with starting tasks, direction reversal/repetition, persistence, portrait/landscape, empty/plain/multiple/Markdown notes, link Open/Edit routes, and US/UK date formatting. Title descending order failure confirmed/logged; subtask title ordering and My order direction control reports returned already logged. Link report was not reproduced and resolved by enabling Show links; links then opened correct URLs. Full-date heading concern not reproduced by developer; locale-specific headings verified. Restored original task titles/notes, due-date grouping/sorting, manual subtask setting, language and display preferences."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "found": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "required": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 2,
+  "reports": 5,
+  "steps": 212,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "tasks-0018",
+    "tasks-0019"
+  ],
+  "bug_meta": {
+    "tasks-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "tasks-0019": {
+      "family": "display",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "hit",
+      "hit",
+      "no_match",
+      "no_match",
+      "duplicate"
+    ]
+  }
+}

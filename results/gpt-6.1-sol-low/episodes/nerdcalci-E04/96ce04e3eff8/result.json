@@ -1,0 +1,168 @@
+{
+  "run_id": "96ce04e3eff8",
+  "item_id": "nerdcalci-E04",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Remainders editor",
+      "element": "Results for binary % expressions",
+      "element_ref": 2,
+      "observed_quote": "Err",
+      "symptom_type": "wrong_value",
+      "expected": "100 % 13 = 9; 47 % 20 = 7; 19.5 % 4 = 3.5; a % 14 = 8 when a = 50.",
+      "observed": "All four remainder expressions show Err; 250 + 20% still shows 300.",
+      "steps": [
+        "Open seeded Remainders file.",
+        "Observe Err on all binary % expressions.",
+        "Return home and reopen Remainders; same errors persist."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Calculation editor",
+      "element": "Undo toolbar control",
+      "element_ref": 23,
+      "observed_quote": "Undo",
+      "symptom_type": "no_effect",
+      "expected": "Undo becomes enabled after editing and can restore previous text and calculated results.",
+      "observed": "Undo remains disabled after deleting an assignment and after restoring it; tapping it has no effect. Also observed after edits in Expenses and Monthly budget.",
+      "steps": [
+        "Open Percentages and delete disc = 15 using Delete keys.",
+        "Dismiss keyboard; Undo remains disabled; tap it: assignment stays empty.",
+        "Type disc = 15 into the empty row and dismiss keyboard; Undo remains disabled again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Undo"
+        ],
+        "bounds": [
+          692,
+          85,
+          818,
+          211
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Expenses editor",
+      "element": "Forward variable reference result",
+      "element_ref": 2,
+      "observed_quote": "Err",
+      "symptom_type": "wrong_value",
+      "expected": "Resolve rent = food + fuel using the file's assignments food = 340.5 and fuel = 85.25, giving 425.75.",
+      "observed": "rent = food + fuel shows Err although both variables have valid assignments below. Persists on reopening.",
+      "steps": [
+        "In Expenses replace rent = 1200 with rent = food + fuel.",
+        "Leave food = 340.5 and fuel = 85.25 below it.",
+        "Observe Err, return home and reopen Expenses; Err remains."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "nerdcalci-0007"
+      ],
+      "present": [
+        "nerdcalci-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/nerdcalci-E04/96ce04e3eff8/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0007": "reported"
+  },
+  "elapsed_s": 460.898,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "found": [
+    "nerdcalci-0007"
+  ],
+  "required": [
+    "nerdcalci-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0007"
+  ],
+  "bug_meta": {
+    "nerdcalci-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

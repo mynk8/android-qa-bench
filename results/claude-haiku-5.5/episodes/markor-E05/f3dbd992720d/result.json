@@ -1,0 +1,255 @@
+{
+  "run_id": "f3dbd992720d",
+  "item_id": "markor-E05",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "File browser - New file dialog",
+      "element": "39",
+      "element_ref": 39,
+      "field": "Extension (new_file_dialog__ext)",
+      "symptom_type": "wrong_value",
+      "expected": "Selecting the todo.txt type sets the extension to \".txt\" (as Plain Text does).",
+      "observed": "With Type = todo.txt, the extension field shows \".todo.txt\". With Type = Plain Text it shows \".txt\".",
+      "observed_quote": ".todo.txt",
+      "steps": [
+        "Tap the + (Create a new file or folder) button in the Documents file browser.",
+        "Tap the Type spinner (currently Markdown).",
+        "Select 'todo.txt'.",
+        "Observe the extension field next to Title shows '.todo.txt'.",
+        "Tap the Type spinner and select 'Plain Text'; the extension shows '.txt'.",
+        "Re-select 'todo.txt'; the extension again shows '.todo.txt'."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/new_file_dialog__ext",
+        "text": ".todo.txt",
+        "class": "android.widget.EditText",
+        "bounds": [
+          744,
+          354,
+          970,
+          462
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File browser - New file dialog",
+      "element": "2",
+      "element_ref": 2,
+      "field": "Extension (new_file_dialog__ext) after Type = todo.txt",
+      "symptom_type": "wrong_value",
+      "expected": "With Type = todo.txt the extension is \".txt\", same as Plain Text.",
+      "observed": "With Type spinner showing 'todo.txt', the extension field reads '.todo.txt'. Switching the Type to 'Plain Text' shows '.txt'. Switching back to 'todo.txt' shows '.todo.txt' again (reproduced 2x).",
+      "observed_quote": ".todo.txt",
+      "steps": [
+        "In Files (Documents), tap the + FAB to open the new file dialog (Type defaults to Markdown, extension '.md').",
+        "Tap the Type spinner and choose 'todo.txt' from the list.",
+        "Read the extension field beside Title: it shows '.todo.txt'.",
+        "Tap the Type spinner, choose 'Plain Text': extension shows '.txt'.",
+        "Tap the Type spinner, choose 'todo.txt' again: extension shows '.todo.txt'."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/new_file_dialog__ext",
+        "text": ".todo.txt",
+        "class": "android.widget.EditText",
+        "bounds": [
+          744,
+          742,
+          970,
+          850
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Indent.md) - formatting toolbar",
+      "element": "48",
+      "element_ref": 48,
+      "field": "Unordered list action",
+      "symptom_type": "wrong_value",
+      "expected": "Pressing Unordered list on a line that already has a list marker (indented child \"  - child\") does not add a second marker (it should toggle/keep the existing marker, as it does for a non-indented \"- \" line).",
+      "observed": "Line \"  - child\" became \"  - - child\" (text shows \"- item\\n  - - child\"). A non-indented \"- \" line is correctly toggled off by the same action.",
+      "observed_quote": "  - - child",
+      "steps": [
+        "In Files, tap Indent.md (content: '- item' then '  - child').",
+        "Tap in the 'child' line so the cursor is on it (keyboard opens).",
+        "Tap the Unordered list toolbar button (the bullet-list icon, 2nd from the left of the bullet group).",
+        "Observe the line now reads '  - - child'.",
+        "Undo, then tap Unordered list again: result is the same '  - - child'.",
+        "For comparison: on a line with no indent, '- ' with the cursor after it, Unordered list removes the marker correctly."
+      ],
+      "anchor_node": {
+        "desc": "Unordered list",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          230,
+          1389,
+          345,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor - Unordered list toolbar action (glyph preference)",
+      "element": "48",
+      "element_ref": 48,
+      "field": "Unordered list character setting vs toolbar Unordered list",
+      "symptom_type": "no_effect",
+      "expected": "With Settings > Edit Mode > 'Unordered list character' set to 'Asterisk (*)', the toolbar Unordered list button inserts '* ' on a new line.",
+      "observed": "Setting shows 'Asterisk (*)' checked when reopened, but the toolbar Unordered list button inserted '- ' (dash) on the line.",
+      "observed_quote": "- ",
+      "steps": [
+        "Tap More > Settings > Edit Mode > scroll down > 'Unordered list character'.",
+        "Choose 'Asterisk (*)'. Reopen the dialog: 'Asterisk (*)' is checked (persisted).",
+        "Back out to the file list, open Notes.md (content '# Notes', blank line, 'See [the guide](...)').",
+        "Tap at the end of the 'See' line, press Enter to start a new line.",
+        "Tap the Unordered list toolbar button (bullet-list icon).",
+        "Observe the new line reads '- ' (dash), not '* '."
+      ],
+      "anchor_node": {
+        "desc": "Unordered list",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          254,
+          1389,
+          381,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Edit Mode > Unordered list character dialog",
+      "element": "0",
+      "element_ref": 0,
+      "field": "Dialog title",
+      "symptom_type": "wrong_value",
+      "expected": "The dialog opened from the 'Unordered list character' row is titled 'Unordered list character'.",
+      "observed": "The dialog titled 'Theme' lists 'Dash (-)', 'Asterisk (*)', 'Plus (+)'.",
+      "observed_quote": "Theme",
+      "steps": [
+        "Tap More (bottom nav) > Settings.",
+        "Tap 'Edit Mode' (Editor Settings).",
+        "Scroll down to the 'Unordered list character' row (under Miscellaneous/Format area) and tap it.",
+        "Observe the dialog title reads 'Theme' with options Dash (-), Asterisk (*), Plus (+)."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/toolbar",
+        "class": "android.view.ViewGroup",
+        "contains": [
+          "Notes"
+        ],
+        "bounds": [
+          0,
+          63,
+          1080,
+          210
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0015",
+        "markor-0016"
+      ],
+      "present": [
+        "markor-0015",
+        "markor-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/markor-E05/f3dbd992720d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0015": "reported",
+    "markor-0016": "missed_unreached"
+  },
+  "elapsed_s": 350.262,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "found": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "required": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 275,
+  "precision": 0.2,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "bug_meta": {
+    "markor-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0016": {
+      "family": "state",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "no_match",
+      "no_match",
+      "hit",
+      "hit",
+      "no_match"
+    ]
+  }
+}

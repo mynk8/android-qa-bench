@@ -1,0 +1,14 @@
+{
+  "case_id": "nerdcalci-0002-faulty-unspec",
+  "bug_id": "nerdcalci-0002",
+  "_build_id": "nerdcalci-0002-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "calci_basic",
+  "agent_input": "agent_input.md"
+}

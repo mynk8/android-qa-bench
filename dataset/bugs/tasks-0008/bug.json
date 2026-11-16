@@ -1,0 +1,269 @@
+{
+  "bug_id": "tasks-0008",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "wrong display",
+  "symptom_type": "wrong_value",
+  "fix_date": "2025-03-30",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "complete_first": [
+        {
+          "id": "org.tasks:id/completeBox"
+        },
+        {
+          "desc": "Complete"
+        },
+        {
+          "desc": "Mark complete"
+        }
+      ],
+      "fab_new": [
+        {
+          "desc": "Create new task"
+        },
+        {
+          "desc": "New task"
+        },
+        {
+          "id": "org.tasks:id/fab"
+        }
+      ],
+      "title_field": [
+        {
+          "id": "org.tasks:id/title"
+        },
+        {
+          "text": "Task name"
+        },
+        {
+          "text": "Title"
+        }
+      ],
+      "add_subtask": [
+        {
+          "text": "Subtasks"
+        },
+        {
+          "text": "Add subtask"
+        },
+        {
+          "desc": "Add subtask"
+        }
+      ],
+      "subtask_field": [
+        {
+          "text": "Subtask"
+        },
+        {
+          "id": "org.tasks:id/title_subtask"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "save": [
+        {
+          "desc": "Save"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Done"
+        }
+      ],
+      "search": [
+        {
+          "desc": "Search"
+        },
+        {
+          "id": "org.tasks:id/menu_search"
+        }
+      ],
+      "search_field": [
+        {
+          "id": "org.tasks:id/search_src_text"
+        },
+        {
+          "text": "Search"
+        }
+      ],
+      "repeat_row": [
+        {
+          "text": "Repeats monthly"
+        },
+        {
+          "text": "Monthly"
+        },
+        {
+          "text": "Every month"
+        },
+        {
+          "text": "Does not repeat"
+        }
+      ],
+      "custom": [
+        {
+          "text": "Custom\u2026"
+        },
+        {
+          "text": "Custom..."
+        },
+        {
+          "text": "Custom"
+        }
+      ],
+      "ends_spinner": [
+        {
+          "text": "Never"
+        },
+        {
+          "text": "Ends"
+        },
+        {
+          "id": "org.tasks:id/repeat_until"
+        }
+      ],
+      "ends_after": [
+        {
+          "text": "After"
+        },
+        {
+          "text": "After N occurrences"
+        }
+      ],
+      "ends_never": [
+        {
+          "text": "Never"
+        }
+      ],
+      "count_field": [
+        {
+          "id": "org.tasks:id/repeat_times_value"
+        },
+        {
+          "text": "1"
+        }
+      ],
+      "dialog_ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Ok"
+        },
+        {
+          "text": "Done"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        },
+        {
+          "desc": "More"
+        },
+        {
+          "id": "org.tasks:id/menu_overflow"
+        }
+      ],
+      "group_by": [
+        {
+          "text": "Sort"
+        },
+        {
+          "text": "Group by"
+        },
+        {
+          "text": "Grouping"
+        },
+        {
+          "text": "Group"
+        },
+        {
+          "desc": "Group"
+        }
+      ],
+      "group_due": [
+        {
+          "text": "Due date"
+        },
+        {
+          "text": "Due"
+        },
+        {
+          "text": "By due date"
+        }
+      ],
+      "sort_order": [
+        {
+          "text": "Sort"
+        },
+        {
+          "text": "Sort by"
+        }
+      ],
+      "sort_desc": [
+        {
+          "text": "Descending"
+        },
+        {
+          "text": "Due date, newest first"
+        },
+        {
+          "text": "Z to A"
+        }
+      ],
+      "sort_icon": [
+        {
+          "desc": "Sort"
+        },
+        {
+          "text": "Sort"
+        }
+      ],
+      "group_toggle": [
+        {
+          "text": "Ascending"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0008-buggy",
+    "fixed": "tasks-0008-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0008.patch",
+    "confidence": "low",
+    "lines_changed": 4,
+    "approach": "Reverted section-header condition in SectionedDataSource SORT_DUE branch to the old previous>0 / previous<startOfToday logic."
+  }
+}

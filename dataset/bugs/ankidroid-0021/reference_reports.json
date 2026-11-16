@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "deck picker",
+    "element": "create subdeck dialog",
+    "field": "subdeck name",
+    "symptom_type": "wrong_value",
+    "expected": "a name made of spaces is rejected and no subdeck is created",
+    "observed": "a subdeck named blank was created under Spanish",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "deck picker",
+    "element": "something",
+    "field": "subdeck name",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

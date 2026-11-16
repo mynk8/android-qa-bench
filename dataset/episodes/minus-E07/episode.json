@@ -1,0 +1,31 @@
+{
+  "episode_id": "minus-E07",
+  "app_id": "minus",
+  "bugs": [
+    "minus-0017"
+  ],
+  "seed_id": "budget_basic",
+  "builds": {
+    "0": "minus-E07-0",
+    "1": "minus-E07-1"
+  },
+  "observable": {
+    "0": {
+      "minus-0017": false
+    },
+    "1": {
+      "minus-0017": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

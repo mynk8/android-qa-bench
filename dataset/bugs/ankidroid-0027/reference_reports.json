@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "rename deck dialog",
+    "element": "rename button",
+    "field": "deck name",
+    "symptom_type": "no_effect",
+    "expected": "French can be renamed to FRENCH and the deck list shows FRENCH",
+    "observed": "the name field reports that the deck already exists and Rename does nothing",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "rename deck dialog",
+    "element": "something",
+    "field": "deck name",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

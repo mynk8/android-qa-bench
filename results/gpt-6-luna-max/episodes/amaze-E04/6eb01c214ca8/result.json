@@ -1,0 +1,233 @@
+{
+  "run_id": "6eb01c214ca8",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Recent files category",
+      "element": "File count beneath the Recent files title",
+      "element_ref": 6,
+      "field": "Displayed item count",
+      "symptom_type": "wrong_value",
+      "expected": "The count should match the six file rows displayed in Recent files.",
+      "observed": "The count reads 0 folders and 0 files while six rows are displayed: keep.jpg, photo.jpg, notes.txt, report+final.txt, and two readme.txt entries.",
+      "observed_quote": "0 folders and 0 files",
+      "steps": [
+        "Open the navigation drawer and select Recent files.",
+        "Observe the count beneath the title and the listed rows.",
+        "Open the navigation drawer again, select Recent files a second time, and confirm the same mismatch."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "0 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Folder Properties dialog after rotation",
+      "element": "Alpha folder Properties dialog",
+      "element_ref": 23,
+      "field": "Dialog state",
+      "symptom_type": "missing",
+      "expected": "The Properties dialog should remain open after rotating the device, with its size and date details still available.",
+      "observed": "Rotating from portrait to landscape dismissed the open Properties dialog and returned to the folder list. Reopening Properties before rotating reproduced the dismissal.",
+      "steps": [
+        "Open /storage/emulated/0/AndroidQA/Amaze.",
+        "Open the overflow menu for Alpha and choose Properties.",
+        "Confirm the dialog shows Alpha, its location, size, and date.",
+        "Rotate the device from portrait to landscape.",
+        "Observe that the Properties dialog is gone and the folder list is shown."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Alpha",
+          "Nov 15 | 7:37\u202fPM"
+        ],
+        "bounds": [
+          656,
+          507,
+          2274,
+          696
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer category after device rotation",
+      "element": "Current category path and contents",
+      "element_ref": 20,
+      "field": "Category view state",
+      "symptom_type": "not_persisted",
+      "expected": "The selected APKs category should remain active after rotating the device.",
+      "observed": "Rotating from portrait to landscape leaves the APKs category and opens the internal storage root instead.",
+      "observed_quote": "/storage/emulated/0",
+      "steps": [
+        "In portrait, open the navigation drawer and select APKs.",
+        "Confirm the screen title is APKs and shows No Files.",
+        "Rotate the device to landscape.",
+        "Observe that the app displays /storage/emulated/0 with its folder list instead of the APKs category."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/fullpath",
+        "text": "/storage/emulated/0",
+        "class": "android.widget.TextView",
+        "bounds": [
+          845,
+          215,
+          1282,
+          278
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Recent files drawer category",
+      "element": "Item count beneath the Recent files title",
+      "element_ref": 6,
+      "field": "Displayed file count",
+      "symptom_type": "wrong_value",
+      "expected": "The count should reflect the six file rows displayed in this category.",
+      "observed": "The screen lists keep.jpg, photo.jpg, notes.txt, report+final.txt, and two readme.txt rows, but the count says zero files.",
+      "observed_quote": "0 folders and 0 files",
+      "steps": [
+        "Navigate to /storage/emulated/0/AndroidQA/Amaze, which contains the supplied test files.",
+        "Open the navigation drawer and select Recent files.",
+        "Compare the count beneath Recent files with the visible six rows.",
+        "Navigate away, reopen the drawer, select Recent files again, and confirm the count still reads zero."
+      ],
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "0 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Internal Storage root after leaving Images category",
+      "element": "Floating action button (+) for root file actions",
+      "field": "Root list controls",
+      "symptom_type": "missing",
+      "expected": "Returning to the storage root from Images should restore its floating action button and other root controls.",
+      "observed": "The Images category shows its two photos without a floating action button. After tapping Home, the root folder list returns but the floating action button is still absent.",
+      "steps": [
+        "From the storage root, open the navigation drawer and select Images.",
+        "Confirm the Images list is shown.",
+        "Tap the Home toolbar button to return to /storage/emulated/0.",
+        "Observe that the root folder list is shown without its floating action button."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/amaze-E04/6eb01c214ca8/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "reported",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 637.431,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.84,
+    "notes": "Completed drawer category navigation, multi-file Select All/Deselect All toggle and reversal, and file/folder properties checks. One bug was confirmed and logged: returning from Images with Home leaves the root floating action button missing; selecting Internal Storage in the drawer restores it. Reports for the Recent files count, category state on rotation, and Properties dialog on rotation were returned as not reproducible. Only Internal Storage was available in the drawer, so volume change detection could not be exercised."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [
+    "amaze-0013"
+  ],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0015"
+  ],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 89,
+  "precision": 0.2,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

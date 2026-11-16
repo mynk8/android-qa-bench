@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "note editor"
+  ],
+  "elements": [
+    "deck spinner"
+  ],
+  "fields": [
+    "selected deck",
+    "deck selection",
+    "default deck",
+    "last deck"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "the deck chosen for a new note is remembered the next time the editor opens",
+    "the editor opens on French after a French note was saved"
+  ],
+  "observed_contains_any": [
+    "the deck for new cards is not saved",
+    "the editor falls back to another deck"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "french",
+      "last",
+      "previous",
+      "remember*",
+      "same deck",
+      "chosen",
+      "selected",
+      "used"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "deck*",
+      "french",
+      "spanish"
+    ],
+    [
+      "default",
+      "another",
+      "other",
+      "different",
+      "wrong",
+      "reset*",
+      "revert*",
+      "back to",
+      "forgot*",
+      "not remember*",
+      "not saved",
+      "instead",
+      "not",
+      "other deck",
+      "forgotten",
+      "not remembered"
+    ]
+  ],
+  "location_concepts": [
+    "add note",
+    "note editor",
+    "editor",
+    "deck spinner",
+    "deck dropdown",
+    "spinner",
+    "dropdown"
+  ],
+  "anchors": {
+    "elements": [
+      "deck",
+      "deck spinner",
+      "deck:"
+    ],
+    "observed": [
+      "default"
+    ]
+  }
+}

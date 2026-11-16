@@ -1,0 +1,235 @@
+{
+  "bug_id": "tasks-0007",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "UI state lost",
+  "symptom_type": "missing",
+  "fix_date": "2024-12-25",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "complete_first": [
+        {
+          "id": "org.tasks:id/completeBox"
+        },
+        {
+          "desc": "Complete"
+        },
+        {
+          "desc": "Mark complete"
+        }
+      ],
+      "fab_new": [
+        {
+          "desc": "Create new task"
+        },
+        {
+          "desc": "New task"
+        },
+        {
+          "id": "org.tasks:id/fab"
+        }
+      ],
+      "title_field": [
+        {
+          "id": "org.tasks:id/title"
+        },
+        {
+          "text": "Task name"
+        },
+        {
+          "text": "Title"
+        }
+      ],
+      "add_subtask": [
+        {
+          "text": "Subtasks"
+        },
+        {
+          "text": "Add subtask"
+        },
+        {
+          "desc": "Add subtask"
+        }
+      ],
+      "subtask_field": [
+        {
+          "text": "Subtask"
+        },
+        {
+          "id": "org.tasks:id/title_subtask"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "save": [
+        {
+          "desc": "Save"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Done"
+        }
+      ],
+      "search": [
+        {
+          "desc": "Search"
+        },
+        {
+          "id": "org.tasks:id/menu_search"
+        }
+      ],
+      "search_field": [
+        {
+          "id": "org.tasks:id/search_src_text"
+        },
+        {
+          "text": "Search"
+        }
+      ],
+      "repeat_row": [
+        {
+          "text": "Repeats monthly"
+        },
+        {
+          "text": "Monthly"
+        },
+        {
+          "text": "Every month"
+        },
+        {
+          "text": "Does not repeat"
+        }
+      ],
+      "custom": [
+        {
+          "text": "Custom\u2026"
+        },
+        {
+          "text": "Custom..."
+        },
+        {
+          "text": "Custom"
+        }
+      ],
+      "ends_spinner": [
+        {
+          "text": "Never"
+        },
+        {
+          "text": "Ends"
+        },
+        {
+          "id": "org.tasks:id/repeat_until"
+        }
+      ],
+      "ends_after": [
+        {
+          "text": "After"
+        },
+        {
+          "text": "After N occurrences"
+        }
+      ],
+      "ends_never": [
+        {
+          "text": "Never"
+        }
+      ],
+      "count_field": [
+        {
+          "id": "org.tasks:id/repeat_times_value"
+        },
+        {
+          "text": "1"
+        }
+      ],
+      "dialog_ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Ok"
+        },
+        {
+          "text": "Done"
+        }
+      ],
+      "sort_desc": [
+        {
+          "text": "Descending"
+        },
+        {
+          "text": "Due date, newest first"
+        }
+      ],
+      "group_by": [
+        {
+          "text": "Sort"
+        },
+        {
+          "text": "Group by"
+        },
+        {
+          "text": "Grouping"
+        }
+      ],
+      "group_due": [
+        {
+          "text": "Due date"
+        },
+        {
+          "text": "Due"
+        },
+        {
+          "text": "By due date"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0007-buggy",
+    "fixed": "tasks-0007-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "hardness": {
+    "steps_to_trigger": 3,
+    "needs_state_persistence": true,
+    "symptom_distance": "same_screen",
+    "visual_salience": "high"
+  },
+  "hard_slice": true,
+  "head_port": {
+    "patch": "private/forwardport/tasks-0007.patch",
+    "confidence": "medium",
+    "lines_changed": 3,
+    "approach": "Removed early return in MainActivityViewModel.setFilter so the onCreate handleIntent after rotation calls setFilter(task=null) and clears the open task."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "readme.txt",
+    "file",
+    "file name",
+    "paste"
+  ],
+  "fields": [
+    "new name"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the second pasted copy is named readme(2).txt",
+    "copies are numbered 1 then 2"
+  ],
+  "observed_contains_any": [
+    "the second copy is named readme(1).txt again",
+    "the second paste overwrites the first copy"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "(2)",
+      "2",
+      "second",
+      "number*",
+      "increment*",
+      "both",
+      "suffix*",
+      "counter",
+      "next free",
+      "following",
+      "next",
+      "increas*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "(1)",
+      "1",
+      "overwrit*",
+      "replac*",
+      "same name",
+      "again",
+      "only one",
+      "one copy",
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "reus*",
+      "same label",
+      "instead",
+      "not advance"
+    ]
+  ],
+  "location_concepts": [
+    "readme*",
+    "beta",
+    "paste*",
+    "copy*"
+  ],
+  "anchors": {
+    "elements": [
+      "readme (1).txt",
+      "readme.txt",
+      "Beta"
+    ],
+    "observed": []
+  }
+}

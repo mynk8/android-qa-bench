@@ -1,0 +1,157 @@
+{
+  "run_id": "366f4aec95ac",
+  "item_id": "idlefantasy-E03",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear sheet",
+      "element": "Total",
+      "symptom_type": "wrong_value",
+      "expected": "Total equals the sum of the listed rows (5,198), or all items counted in the total (e.g. Steel Full Helmet) are listed",
+      "observed": "Listed rows sum to 5,198 but Total shows 5,416 (218 difference). Steel Full Helmet x1 is in the inventory but not listed. The list doesn't scroll.",
+      "observed_quote": "5,416",
+      "steps": [
+        "Open Shop",
+        "Tap Sell tab",
+        "Tap Sell Old Gear",
+        "Add up the row prices and compare with Total"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear sheet",
+      "element": "Item list / Total",
+      "symptom_type": "cut_off",
+      "expected": "All items being sold are visible (list scrolls), including Steel Full Helmet x1 alphabetically after Slayer Platebody, so rows add up to Total",
+      "observed": "Rows visible sum to 5,198 but Total is 5,416 (218 missing). The last row (probably Steel Full Helmet) is hidden by the Total row and the list doesn't scroll. Reproduced twice, including after closing and reopening the sheet.",
+      "observed_quote": "5,416",
+      "steps": [
+        "Open Shop > Sell",
+        "Tap Sell Old Gear",
+        "Sum visible rows (5,198) and compare with Total 5,416",
+        "Cancel, reopen: same result"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bestiary > Bosses tab",
+      "element": "Encounter progress header",
+      "symptom_type": "wrong_value",
+      "expected": "Bosses tab shows the boss total, about 7-8 bosses (e.g. \"0 / 8 encountered\")",
+      "observed": "Bosses tab shows the same \"0 / 100 encountered\" as the Enemies tab, though only 7 bosses are listed (Brood Empress to Sol Invictus)",
+      "observed_quote": "0 / 100 encountered",
+      "steps": [
+        "Profile > Bestiary",
+        "Note Enemies tab header 0 / 100",
+        "Tap Bosses tab",
+        "Header still reads 0 / 100 with 7 bosses listed"
+      ],
+      "element_ref": 22,
+      "anchor_node": {
+        "text": "0 / 100 encountered",
+        "class": "android.widget.TextView",
+        "bounds": [
+          334,
+          653,
+          613,
+          672
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ],
+      "present": [
+        "idlefantasy-0004",
+        "idlefantasy-0006"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/idlefantasy-E03/366f4aec95ac/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0004": "missed_unreached",
+    "idlefantasy-0006": "missed_unreached"
+  },
+  "elapsed_s": 171.484,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "I covered the Shop sell tab, gear slot choosers and stat totals, and the Bestiary. Two reports were filed and the developer said \"could not reproduce\" to both. (1) Sell Old Gear total 5,416 vs 5,198 for the visible rows. (2) The Bosses tab header reads \"0 / 100 encountered\", the same as Enemies. Those two may still be real bugs. Everything else I checked was consistent: Sell Junk preview, the Keep one toggle, the Iron Sword trade-in, slot chooser ordering, and ATK/STR/DEF totals. I did not test buying, bulk sales that actually sell, rotation, or the Bestiary after an encounter."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "missed": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 57,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0004",
+    "idlefantasy-0006"
+  ],
+  "bug_meta": {
+    "idlefantasy-0004": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "idlefantasy-0006": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

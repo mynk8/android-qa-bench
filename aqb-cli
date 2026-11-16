@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Android QA Benchmark CLI. See `./aqb --help`.
+D="$(cd "$(dirname "$0")" && pwd)"
+PY="$D/.venv/bin/python"; [ -x "$PY" ] || PY=python3
+exec "$PY" "$D/aqb/cli.py" "$@"

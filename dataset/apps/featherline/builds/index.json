@@ -1,0 +1,333 @@
+{
+  "featherline-0003-buggy": {
+    "sha256": "ffb29964a566f22e0517a7dfb1ba9b935aa41854c0fff5407a8cd70657f5a05a",
+    "bugs_present": [
+      "featherline-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0003-fixed": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0005-buggy": {
+    "sha256": "77cb8bc1a9eb9b3b09ecb15044d3ef1719bdc7d89aa92d8b40b1f8268ac585fa",
+    "bugs_present": [
+      "featherline-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0005-fixed": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0011-buggy": {
+    "sha256": "87b1f258dff9dc9519e87b26fa347d61993d6cf2c46b2d698b4fc830b0f8dc24",
+    "bugs_present": [
+      "featherline-0011"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0011-fixed": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0014-buggy": {
+    "sha256": "993271751eb1b5a9cb516032ae54677f5230c71dc08e57d356933e64fd8a3fcf",
+    "bugs_present": [
+      "featherline-0014"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0014-fixed": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0015-buggy": {
+    "sha256": "51b96d810b83318c728c486508c9fc7f24e216a02a134727a047230da2e17ae3",
+    "bugs_present": [
+      "featherline-0015"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0015-fixed": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-E01-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E01-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0015"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E01-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0014"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E01-11": {
+    "sha256": "2188fe2f26a7fcc8702305a9fe14efcf26ad2eff7b4bf5ce8d1cbffe6846e29c",
+    "bugs_present": [
+      "featherline-0014",
+      "featherline-0015"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-E02-0": {
+    "sha256": "e9d31230d55a66b2adeca5beeefaaeea1adf4cb2b7be49a5461e0e9229e77213",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "featherline-0003-fixed",
+    "tier": "full"
+  },
+  "featherline-E02-1": {
+    "sha256": "87b1f258dff9dc9519e87b26fa347d61993d6cf2c46b2d698b4fc830b0f8dc24",
+    "bugs_present": [
+      "featherline-0011"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "copied_from": "featherline-0011-buggy",
+    "tier": "core"
+  },
+  "featherline-E03-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E03-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E03-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0003"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E03-11": {
+    "sha256": "60342a71edce946c1e4244ef05f4055e37de79b6dbf36260835e844130c1e9d5",
+    "bugs_present": [
+      "featherline-0003",
+      "featherline-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0016-buggy": {
+    "sha256": "0d3d0f5dab1e9195824cb3468a5d6b98609723af5188ba4d05ec2f67b414720b",
+    "bugs_present": [
+      "featherline-0016"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0016-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0017-buggy": {
+    "sha256": "4d365b25258045db52dff64aff0ecda38c06bd04390e0248bb493816cd3cebdd",
+    "bugs_present": [
+      "featherline-0017"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0017-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0018-buggy": {
+    "sha256": "f8528ec3e1009d89a70b49d4b47d0c15d68598edb5d1a8d2c1f876c242184931",
+    "bugs_present": [
+      "featherline-0018"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0018-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0019-buggy": {
+    "sha256": "f187c035e95ac76e2c54dcafaa513693b6f05a65e92260ed5b5e5e914cdc374a",
+    "bugs_present": [
+      "featherline-0019"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0019-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0020-buggy": {
+    "sha256": "01c35f7999ef79179ed7d350ba0ecf9b4387b854f029f2c96f73928e583c69a1",
+    "bugs_present": [
+      "featherline-0020"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0020-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0022-buggy": {
+    "sha256": "83b2a21cfbff0ab4193589e0befa8ad599e2d6cb2174362ba6055e3605ca657d",
+    "bugs_present": [
+      "featherline-0022"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-0022-fixed": {
+    "sha256": "bbafd095ffb14f880c26f86784d7539de37b37fdc8bb8af76723d696fcf746d9",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-E05-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E05-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E05-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "featherline-0018"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E05-11": {
+    "sha256": "cf129f294d7361a738bba9dd20f99a75b07d244f69c84522ef12511d36a2b785",
+    "bugs_present": [
+      "featherline-0018",
+      "featherline-0019"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-E04-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E04-1": {
+    "sha256": "62e8917c11148a157ed0e4b5733370846c1d568984a2944762836c68e09ad0f9",
+    "bugs_present": [
+      "featherline-0016"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "featherline-E06-0": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "featherline-E06-1": {
+    "sha256": "5376a0b9a127fc00e33e640778423008e84e375d69d7aaef7474837b207b54be",
+    "bugs_present": [
+      "featherline-0020"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

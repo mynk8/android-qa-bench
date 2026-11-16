@@ -1,0 +1,184 @@
+{
+  "run_id": "f2a50a5eb9dd",
+  "item_id": "markor-E03",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "File browser - Favourites (Go to > Favourites)",
+      "element": "empty_hint",
+      "element_ref": 7,
+      "symptom_type": "not_persisted",
+      "field": "Favourite mark after rename",
+      "expected": "After a favourited file is renamed, the Favourites list should show the file under its new name (the mark follows the file), and the renamed file should still show as a favourite in the notebook list.",
+      "observed": "Favourite Indent3.md (star filled), then renamed it to Indent2.md. Favourites list is empty and shows the empty placeholder. In the notebook list the renamed file shows the normal grey icon, not the favourite icon. Reproduced twice (Indent2.md -> Indent3.md, then Indent3.md -> Indent2.md).",
+      "observed_quote": "\u00af\\_(\u30c4)_/\u00af",
+      "steps": [
+        "Open Notebook folder (Files tab, Documents). Long-press Indent2.md to select it.",
+        "Tap the Favourite (star) action in the top bar. The star fills and Go to > Favourites lists Indent2.md.",
+        "With Indent2.md still selected, tap Rename, enter Indent3.md, tap OK.",
+        "Open Go to > Favourites: list is empty (shows the empty placeholder). Notebook list shows Indent3.md with grey file icon, not the favourite icon.",
+        "Repeat with Indent3.md: favourite, rename to Indent2.md, check Go to > Favourites: still empty."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/empty_hint",
+        "text": "\u00af\\_(\u30c4)_/\u00af",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          992,
+          1080,
+          1344
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Single.md, edit mode)",
+      "element": "action_save / action_undo toolbar buttons",
+      "element_ref": 40,
+      "symptom_type": "no_effect",
+      "field": "Undo / Save state after rotation",
+      "expected": "After rotating the screen with unsaved edits, the text stays and Undo is still enabled (to revert the edit), Save stays enabled (the document is still modified), and the change tracker keeps its history.",
+      "observed": "Before rotation: typed X into Single.md, Undo and Save enabled. After rotating to landscape and back to portrait, the text 'gammaX' is kept, but Undo, Redo and Save are all disabled, so the unsaved edit can no longer be undone and is not offered for saving.",
+      "observed_quote": "gammaX",
+      "steps": [
+        "Open the Notebook folder and tap Single.md (one line, 'gamma').",
+        "Tap the pencil (Edit Mode) in the top bar, then tap at the end of the text and type X. Undo and Save become enabled. The text reads 'gammaX'.",
+        "Rotate the device to landscape. Wait 2 seconds.",
+        "Rotate back to portrait. Observe: text is still 'gammaX', but Undo, Redo and Save are disabled.",
+        "Repeat if needed; the toolbar state is the same each time."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/action_save",
+        "desc": "Save",
+        "class": "android.widget.Button",
+        "bounds": [
+          660,
+          73,
+          765,
+          199
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Single.md, edit mode)",
+      "element": "action_undo / action_save toolbar buttons",
+      "element_ref": 40,
+      "symptom_type": "no_effect",
+      "field": "Undo / Save state after rotation (reproduced a second time)",
+      "expected": "After a rotation with unsaved edits, Undo stays enabled and Save stays enabled; the change tracker keeps its history.",
+      "observed": "Before rotation: Undo and Save enabled after typing X (text 'gammaX'). After rotating landscape and back to portrait, text 'gammaX' remains but Undo, Redo and Save are all disabled. Reproduced twice in a row with the same steps.",
+      "observed_quote": "gammaX",
+      "steps": [
+        "Notebook > tap Single.md (opens in edit mode here; if it opens in view mode, tap the pencil first).",
+        "Tap at the end of the text on the 'gamma' line and type X. Keyboard is up. Undo and Save are enabled; text reads 'gammaX'.",
+        "Rotate the device to landscape, wait 2 seconds, rotate back to portrait, wait 2 seconds.",
+        "Observe: text still reads 'gammaX' but Undo, Redo and Save are disabled.",
+        "Note: the same thing happens if the rotation is done with the keyboard hidden? Not checked; both runs had the keyboard open."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/action_save",
+        "desc": "Save",
+        "class": "android.widget.Button",
+        "bounds": [
+          660,
+          73,
+          765,
+          199
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0002",
+        "markor-0009"
+      ],
+      "present": [
+        "markor-0002",
+        "markor-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/markor-E03/f2a50a5eb9dd/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0002": "reported",
+    "markor-0009": "missed_unreached"
+  },
+  "elapsed_s": 440.064,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "found": [
+    "markor-0002"
+  ],
+  "required": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "missed": [
+    "markor-0009"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "bug_meta": {
+    "markor-0002": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0009": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

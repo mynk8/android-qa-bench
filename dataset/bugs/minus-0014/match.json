@@ -1,0 +1,98 @@
+{
+  "screens": [
+    "main screen"
+  ],
+  "elements": [
+    "category tag"
+  ],
+  "fields": [
+    "auto-save"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "confirming the comment only closes the tag editor and nothing is saved yet",
+    "expense not saved until the save button"
+  ],
+  "observed_contains_any": [
+    "the expense is saved immediately when the check is tapped",
+    "tag check auto-saves the expense"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "wrong_navigation",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "not saved",
+      "only close*",
+      "close*",
+      "nothing saved",
+      "until",
+      "save button",
+      "wait*",
+      "not yet",
+      "stay*",
+      "still open",
+      "editor",
+      "draft",
+      "no snacks",
+      "no expense",
+      "yet",
+      "isn't saved",
+      "should not be saved",
+      "shouldn't be saved",
+      "no 12",
+      "saved only",
+      "only when",
+      "only saved",
+      "no new expense",
+      "should not exist",
+      "not exist",
+      "immediately",
+      "record*",
+      "confirming",
+      "dismiss*",
+      "commit*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "saved",
+      "immediately",
+      "auto*",
+      "right away",
+      "instantly",
+      "created",
+      "added",
+      "commit*",
+      "without",
+      "before",
+      "twice",
+      "two",
+      "duplicat*",
+      "double*",
+      "copies",
+      "both",
+      "two expenses"
+    ]
+  ],
+  "location_concepts": [
+    "tag*",
+    "comment*",
+    "check*",
+    "expense*"
+  ],
+  "anchors": {
+    "elements": [
+      "Snacks",
+      "Editor action",
+      "tag",
+      "check"
+    ],
+    "observed": [
+      "snacks"
+    ]
+  }
+}

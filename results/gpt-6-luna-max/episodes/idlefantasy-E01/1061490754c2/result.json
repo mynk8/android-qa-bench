@@ -1,0 +1,218 @@
+{
+  "run_id": "1061490754c2",
+  "item_id": "idlefantasy-E01",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Skills overview (landscape)",
+      "element": "Mining skill row and Woodcutting skill row",
+      "element_ref": 3,
+      "field": "layout in landscape",
+      "symptom_type": "cut_off",
+      "expected": "Skill levels and XP totals should fit within the usable app area after rotation, with the full text and tile badges unobstructed.",
+      "observed": "Right-aligned XP totals extend beneath the Android navigation strip at the right edge; the Woodcutting row is also partly covered by the app bottom navigation, hiding its level badge.",
+      "observed_quote": "101,333 / 111,945 XP",
+      "steps": [
+        "Open the Skills overview in portrait.",
+        "Rotate the device to landscape.",
+        "Inspect the Mining XP total at the right edge and the Woodcutting row at the bottom of the visible list."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "50",
+          "Mining",
+          "101,333 / 111,945 XP",
+          "0.0"
+        ],
+        "bounds": [
+          0,
+          436,
+          2400,
+          604
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Skills overview (portrait, bottom of list)",
+      "element": "Mercantile skill tile",
+      "element_ref": 12,
+      "field": "level badge visibility",
+      "symptom_type": "cut_off",
+      "expected": "At the bottom of the skills list, the Mercantile tile's level badge should be fully visible and unobstructed.",
+      "observed": "At the end of the list, the bottom navigation bar covers the lower part of the Mercantile tile, including its level badge. Opening the tile confirms the character is level 99 in Mercantile, but that level cannot be read from the overview.",
+      "observed_quote": "Mercantile",
+      "steps": [
+        "Open the Skills overview in portrait.",
+        "Swipe upward through the list until the SUPPORT section and Mercantile tile are at the bottom.",
+        "Swipe upward again at the bottom of the list; the content does not move far enough to clear the fixed bottom navigation bar.",
+        "Observe that the Mercantile tile's level badge is covered. Tap the tile to confirm its detail shows Level 99 Mercantile."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Mercantile",
+          "13.0M XP",
+          "1.0"
+        ],
+        "bounds": [
+          0,
+          1966,
+          1080,
+          2064
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Iron Sword quantity sheet",
+      "element": "You'll receive payout",
+      "element_ref": 16,
+      "field": "quantity",
+      "symptom_type": "wrong_value",
+      "expected": "An empty quantity should not show a payout based on the previous quantity; require a valid quantity or disable the Sell action.",
+      "observed": "After clearing the quantity field, it is blank but the sheet still shows a 124 coin payout and leaves Sell enabled.",
+      "observed_quote": "124 coins",
+      "steps": [
+        "Open Shop and select Sell.",
+        "Open the Iron Sword row, which has two unequipped swords available.",
+        "Clear the quantity field completely.",
+        "Dismiss the numeric keyboard without changing the field.",
+        "Observe that the quantity field is empty while the payout remains 124 coins and Sell is enabled."
+      ],
+      "anchor_node": {
+        "text": "124 coins",
+        "class": "android.widget.TextView",
+        "bounds": [
+          853,
+          1947,
+          1017,
+          1990
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear confirmation",
+      "element": "Sell Old Gear item breakdown near its bottom",
+      "element_ref": 30,
+      "field": "item breakdown visibility",
+      "symptom_type": "cut_off",
+      "expected": "Every item included in the bulk sale total should have a visible breakdown row, including Steel Full Helmet at 218 coins, with the whole list reachable before confirming.",
+      "observed": "The breakdown is cut off after Slayer Platebody, with no Steel Full Helmet row, while the displayed total is 5,416. The Steel Full Helmet is present in inventory and its individual sell row shows 218 coins, which accounts for the difference between the visible breakdown rows and the total.",
+      "steps": [
+        "Open Shop > Sell and tap Sell Old Gear.",
+        "Inspect the item breakdown; it ends at Slayer Platebody and shows a total of 5,416.",
+        "Cancel, search for Steel Full Helmet in the sell list, and confirm it is in inventory for 218 coins each.",
+        "Reopen Sell Old Gear and swipe upward within the breakdown; the list remains cut off and the Steel Full Helmet line cannot be viewed."
+      ],
+      "anchor_node": {
+        "text": "Slayer Platebody",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          1936,
+          872,
+          1963
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ],
+      "present": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/idlefantasy-E01/1061490754c2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0001": "missed_unreached",
+    "idlefantasy-0002": "missed_unreached"
+  },
+  "elapsed_s": 850.122,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept Shop (buy/sell, coin short format, Keep one toggle persistence and reversal, trade-in rows, bulk previews, filters/search/sorting, quantity bounds) and Skills overview (gathering/crafting/support levels plus combat skills, navigation and rotation). Canceled sale previews; inventory/coins remain unchanged, Keep one of each is off, and the app is back on Home. Submitted three suspected UI reports; the developer response to each was \u201ccould not reproduce with the steps given.\u201d"
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "found": [],
+  "required": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "missed": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 133,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "bug_meta": {
+    "idlefantasy-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0002": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

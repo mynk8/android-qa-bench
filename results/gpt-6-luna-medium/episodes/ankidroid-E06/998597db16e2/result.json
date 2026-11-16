@@ -1,0 +1,107 @@
+{
+  "run_id": "998597db16e2",
+  "item_id": "ankidroid-E06",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ],
+      "present": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/ankidroid-E06/998597db16e2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0021": "missed_unreached",
+    "ankidroid-0022": "missed_unreached",
+    "ankidroid-0030": "missed_unreached"
+  },
+  "elapsed_s": 168.872,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.8,
+    "notes": "Swept deck management (including create/delete subdeck), note editor/model picker and existing tagged note, due date day/range including invalid reversed range and undo, and statistics screen with rotation. No reproducible defects found; original supplied notes and card order remain intact."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "missed": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 54,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "bug_meta": {
+    "ankidroid-0021": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0022": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0030": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

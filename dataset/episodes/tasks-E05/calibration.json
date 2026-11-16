@@ -1,0 +1,142 @@
+{
+  "episode_id": "tasks-E05",
+  "start_build": "tasks-E05-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "idx": [
+          9,
+          15,
+          17,
+          6
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Zucchini",
+          "2 litres",
+          "Mon",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Pay rent",
+          "Dec 1",
+          "Read docs",
+          "See https://example.com/guide",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 31.2,
+      "screenshot_sha256": "af17f0390995c3d2ec408b4a03a93e2c2a3d72895809f3849b0b32d846a31370",
+      "bug": "tasks-0018",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "idx": [
+          7,
+          10,
+          16,
+          18
+        ],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Monday",
+          "Zucchini",
+          "2 litres",
+          "Due Saturday, November 21",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Charge phone",
+          "Print tickets",
+          "Due Tuesday, December 1",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 20.9,
+      "screenshot_sha256": "f4f10a8324f0080d9566f1b349b7b1de1362f5ba866988f9e0cd31fc0245df00",
+      "bug": "tasks-0018",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Ascending"
+          ],
+          "Subtasks": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 17.0,
+      "screenshot_sha256": "ce61953a04f0ea7fb7ba1e7ff30568ed161e7c61a7fa9def255054f48077b594",
+      "bug": "tasks-0019",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Ascending"
+          ],
+          "Subtasks": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 16.8,
+      "screenshot_sha256": "e7923fa768c5345b832bd69fcb1ebd0516619ea6a38ac01b0ea924032380bbc6",
+      "bug": "tasks-0019",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

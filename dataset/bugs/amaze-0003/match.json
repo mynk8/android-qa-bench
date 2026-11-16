@@ -1,0 +1,102 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "report+final.txt"
+  ],
+  "fields": [
+    "rename"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the file is renamed to report-final.txt",
+    "rename succeeds"
+  ],
+  "observed_contains_any": [
+    "the old name is still listed next to the new one",
+    "rename fails for the file with a plus sign"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "not_persisted",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "renam*",
+      "report-final*",
+      "new name"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "name*",
+      "renam*",
+      "report+final*",
+      "plus",
+      "file"
+    ],
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*",
+      "error",
+      "fail*",
+      "both",
+      "twice",
+      "two",
+      "duplicat*",
+      "copy",
+      "extra",
+      "listed"
+    ]
+  ],
+  "location_concepts": [
+    "report+final*",
+    "report-final*",
+    "plus sign",
+    "plus-sign"
+  ],
+  "anchors": {
+    "elements": [
+      "report+final.txt",
+      "report-final.txt",
+      "rename"
+    ],
+    "observed": [
+      "report+final.txt"
+    ]
+  }
+}

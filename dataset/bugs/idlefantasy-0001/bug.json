@@ -1,0 +1,72 @@
+{
+  "bug_id": "idlefantasy-0001",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-19",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "shop": [
+        {
+          "text": "Shop"
+        }
+      ],
+      "sell_tab": [
+        {
+          "text": "Sell"
+        }
+      ],
+      "nav_profile": [
+        {
+          "desc": "Profile"
+        },
+        {
+          "text": "Profile"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0001-buggy",
+    "fixed": "idlefantasy-0001-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0001.patch",
+    "confidence": "high",
+    "lines_changed": 11,
+    "approach": "formatCoins and formatCoinsBrief round the millions value to one decimal instead of flooring it, so 2,567,890 coins shows as 2.6M."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

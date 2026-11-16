@@ -1,0 +1,88 @@
+{
+  "screens": [
+    "deck picker",
+    "create subdeck dialog",
+    "new child deck prompt",
+    "child deck"
+  ],
+  "elements": [
+    "subdeck name",
+    "create button"
+  ],
+  "fields": [
+    "subdeck name"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "a blank subdeck name is rejected and no subdeck is created",
+    "the Create button does not create a deck for a name of spaces"
+  ],
+  "observed_contains_any": [
+    "a subdeck named blank was created",
+    "a blank name was accepted and a deck appeared"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "reject*",
+      "not created",
+      "no subdeck",
+      "disabled",
+      "invalid",
+      "no deck",
+      "nothing",
+      "refus*",
+      "not allowed",
+      "blocked",
+      "error",
+      "validation",
+      "whitespace-only",
+      "whitespace only",
+      "prevent*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "blank",
+      "empty",
+      "spaces",
+      "whitespace",
+      "space*",
+      "no validation",
+      "validation",
+      "without a name",
+      "no name"
+    ],
+    [
+      "created",
+      "creates",
+      "accepted",
+      "added",
+      "appears",
+      "subdeck",
+      "deck*",
+      "made",
+      "child"
+    ]
+  ],
+  "location_concepts": [
+    "subdeck",
+    "create subdeck",
+    "child deck",
+    "sub deck",
+    "sub-deck"
+  ],
+  "anchors": {
+    "elements": [
+      "subdeck name",
+      "create",
+      "deck"
+    ],
+    "observed": [
+      "expand"
+    ]
+  }
+}

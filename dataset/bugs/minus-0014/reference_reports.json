@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "main screen",
+    "element": "category tag",
+    "field": "auto-save",
+    "symptom_type": "no_effect",
+    "expected": "confirming the comment only closes the tag editor and nothing is saved yet",
+    "observed": "the expense is saved immediately when the check is tapped",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "main screen",
+    "element": "something",
+    "field": "auto-save",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

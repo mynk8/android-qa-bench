@@ -1,0 +1,72 @@
+{
+  "episode_id": "minus-E01",
+  "start_build": "minus-E01-1",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          },
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          }
+        ]
+      },
+      "seconds": 37.9,
+      "screenshot_sha256": "26ff4cd33e62976d8070ad30d067964fb079c169157c207bac9209dad47e8a61",
+      "bug": "minus-0014",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          "Daily Amount exceeded",
+          "For tomorrow ",
+          "$",
+          "1",
+          ".",
+          "4",
+          "Recurrent payment",
+          "$12",
+          "Transport",
+          "Food",
+          "Category",
+          "7",
+          "8",
+          "9"
+        ],
+        "after": [
+          "$",
+          "0",
+          ".",
+          "9",
+          "Recurrent payment",
+          "$1",
+          "Transport",
+          "Food",
+          "Category",
+          "7",
+          "8",
+          "9",
+          "4",
+          "5"
+        ]
+      },
+      "seconds": 26.3,
+      "screenshot_sha256": "8706f8a79267759ad50d060814ba863c5a2e09aa65464a842d6799abad6f8c36",
+      "bug": "minus-0014",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "media tab",
+    "element": "filter",
+    "field": "media filter",
+    "symptom_type": "not_persisted",
+    "expected": "the Photos filter is still active after restarting the app",
+    "observed": "after restarting the app the filter is back to Media",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "media tab",
+    "element": "something",
+    "field": "media filter",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

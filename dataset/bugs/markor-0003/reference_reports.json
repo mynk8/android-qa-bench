@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor",
+    "element": "duplicate line",
+    "field": "last line",
+    "symptom_type": "no_effect",
+    "expected": "the line is duplicated so the file reads gamma, gamma",
+    "observed": "nothing is duplicated",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor",
+    "element": "something",
+    "field": "last line",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{"event": "install", "build": {"n": 1, "build_id": "idlefantasy-E03-11", "mask": "11", "unfixed": ["idlefantasy-0004", "idlefantasy-0006"], "present": ["idlefantasy-0004", "idlefantasy-0006"]}}
+{"event": "brief", "item_id": "idlefantasy-E03"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 516}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.3, "x": 540, "y": 1600}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 516}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1558}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1000, "y": 1100}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 743, "y": 1083}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1412}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 516}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 2149}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 935}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "type", "args": {"text": "a", "clear": true, "submit": false}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "key", "args": {"key": "ESCAPE"}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 106, "y": 1083}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "key", "args": {"key": "DEL"}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 965, "y": 1083}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.9}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 780}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 585}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 902}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2149}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 964}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 970}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 502}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1257}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 818}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 294}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 1244}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.5, "x": 540, "y": 1300}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 1500}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7, "x": 700, "y": 1700}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 580, "y": 825}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 388, "y": 825}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 883, "y": 558}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 111, "message": {"type": "bug_report", "screen": "Shop > Sell > Sell Old Gear sheet and per-item sell panel", "element": "Iron Sword row (Sell Old Gear sheet) and Sell: Iron Sword quantity control", "element_ref": 20, "field": "Quantity offered for multi-copy gear", "symptom_type": "wrong_value", "expected": "With \"Keep one of each item\" OFF, all unequipped copies are offered: Iron Sword ×3 (186 coins) and Bronze Axe ×2 (50 coins) in Sell Old Gear; the per-item panel's Max is 3. Only the toggle ON should reserve one copy.", "observed": "With the toggle OFF, Sell Old Gear lists \"Iron Sword ×2 124\" and \"Bronze Axe ×1 25\", total 5,416. The per-item panel for Iron Sword opens at 2 with Max and + disabled, and Bronze Axe offers no quantity control (max 1). The same rows appear with the toggle ON, so the toggle makes no difference to multi-copy gear. Sell Junk does honour the toggle (Cowhide ×14 → ×13 when ON).", "observed_quote": "Iron Sword ×2 124", "steps": ["Open Shop, tap Sell tab. Confirm Keep one of each item is OFF.", "Inventory has Iron Sword ×3 in inventory (plus one equipped) and Bronze Axe ×2 in inventory (plus one equipped).", "Tap Sell Old Gear. Observe Iron Sword ×2 (124) and Bronze Axe ×1 (25), Total 5,416.", "Tap the Iron Sword row. The sell panel opens at quantity 2; Increase and Max are disabled.", "Turn Keep one of each item ON. Tap Sell Old Gear again: the same Iron Sword ×2 and Bronze Axe ×1 rows appear, total 149 only if the gear list is filtered, with no change from OFF for these two items."], "anchor_node": {"class": "android.view.View", "contains": ["Enemies"], "bounds": [292, 495, 686, 621]}}}
+{"event": "scored", "report_n": 1, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0004": "unverified_quote", "idlefantasy-0006": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 112, "message": {"type": "bug_report", "screen": "Profile > Bestiary > Bosses tab", "element": "progress header on Bosses tab", "element_ref": 22, "field": "encounter progress counter", "symptom_type": "wrong_value", "expected": "The Bosses tab counts only bosses, so its total matches the number of boss entries listed (about 7-8 here), e.g. \"0 / 8 encountered\".", "observed": "After switching from Enemies to Bosses, the header still reads \"0 / 100 encountered\" (0%), the same total as the Enemies tab, while the Bosses list shows only about 8 entries (Brood Empress, Demon Lord, Gothic Ember, King Black Dragon, Kraken, Obsidian Colossus, Sol Invictus...).", "observed_quote": "0 / 100 encountered", "steps": ["Open Profile, tap Bestiary.", "Note the Enemies tab header: \"0 / 100 encountered\", 0%.", "Tap the Bosses tab.", "Observe the header still reads \"0 / 100 encountered\" and 0%, while the list shows about 8 bosses."], "anchor_node": {"text": "0 / 100 encountered", "class": "android.widget.TextView", "bounds": [334, 653, 613, 672]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0004": "location", "idlefantasy-0006": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1558}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 304, "y": 1726}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 763, "y": 1726}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 304, "y": 1726}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 2107}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 664}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 132, "message": {"type": "bug_report", "screen": "Shop > Sell tab (All filter)", "element": "Bronze Boots row (Armor section)", "element_ref": 24, "field": "inventory count on equipped item", "symptom_type": "wrong_value", "expected": "Bronze Boots row shows \"×1 in inventory\" (Profile > Inventory lists Bronze Boots ×1 besides the equipped copy), like the other equipped rows (Bronze Axe ×2, Bronze Pickaxe ×1, Iron Sword ×3 in inventory).", "observed": "In the Sell tab Armor section, the Bronze Boots row reads \"(equipped)\" and \"10 coins ea.\" with no inventory count. Earlier in the same session the row read \"Bronze Boots | (equipped) | ×1 in inventory | 10 coins ea.\", and the Profile > Inventory screen lists Bronze Boots ×1.", "observed_quote": "Bronze Boots | (equipped) | 10 coins ea.", "steps": ["Open Home > Shop, then the Sell tab.", "Look at the Armor section: Bronze Boots shows \"(equipped)\" and \"10 coins ea.\" with no \"×1 in inventory\".", "Open Profile > Inventory > Armour: Bronze Boots ×1 is listed.", "Note: after a Sell Junk sale the same row briefly showed \"×1 in inventory\"; the count then disappeared again on re-entering the Sell tab."], "anchor_node": {"class": "android.view.View", "contains": ["All"], "bounds": [335, 969, 461, 1095]}}}
+{"event": "scored", "report_n": 3, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0004": "unverified_quote", "idlefantasy-0006": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 760, "y": 2169}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 590, "y": 294}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 807, "y": 294}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 270, "y": 293}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1106}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 763, "y": 1726}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 149, "message": {"type": "bug_report", "screen": "Shop > Buy > Buy: Logs quantity panel", "element": "Max button and quantity field (EditText \"366919\")", "element_ref": 5, "field": "Max quantity", "symptom_type": "wrong_value", "expected": "Max is the most Logs the coins can buy: floor(2,567,890 / 7) = 366,841 (cost 2,567,887). Buy must not offer a total above the coins held.", "observed": "Pressing Max fills the quantity with 366919, and the panel shows \"Total cost 2.5M coins\". 366,919 × 7 = 2,568,433, which is 543 coins more than the 2,567,890 held. The Buy button stays enabled.", "observed_quote": "366919", "steps": ["Starting data: 2,567,890 coins (shown as 2.5M), Logs cost 7 coins each.", "Shop > Buy tab. Tap the Logs row (7 coins each).", "In the Buy: Logs panel, tap Max.", "Observe quantity 366919 and Total cost 2.5M coins. 366,919 × 7 = 2,568,433 > 2,567,890 held.", "Do not tap Buy (cancelled to avoid driving coins negative)."], "anchor_node": {"text": "366919", "class": "android.widget.EditText", "bounds": [370, 1474, 711, 1642]}}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0004": "observed_value", "idlefantasy-0006": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1558}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 2149}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 197, "y": 789}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 767, "y": 1463}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 594, "y": 1209}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 143, "y": 1209}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 794, "y": 516}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "tap_xy", "args": {"x": 285, "y": 2149}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1412}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "tap_xy", "args": {"x": 293, "y": 2107}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 183, "message": {"type": "bug_report", "screen": "Shop > Sell > Sell Old Gear sheet and per-item sell panel (Keep one of each item OFF)", "element": "Iron Sword row (equipped, ×1 in inventory)", "element_ref": 20, "field": "sellable quantity of a single spare copy", "symptom_type": "wrong_value", "expected": "Two items with the same inventory count (×1) and the same toggle state (OFF) should offer the same sellable quantity. Bronze Dagger ×1 (not equipped) is offered: 1 sellable, 25 coins. Iron Sword ×1 in inventory (equipped copy also owned) should be offered the same way, 1 sellable, 62 coins, and appear in Sell Old Gear.", "observed": "With the toggle OFF, Sell Old Gear lists Bronze Dagger ×1 (25) but omits Iron Sword (its only inventory copy is ×1 \"in inventory\", plus an equipped copy). The Iron Sword row still shows \"×1 in inventory\" and \"62 coins ea.\". The total is 5,267 with nine rows; Iron Sword contributes nothing. Earlier, Iron Sword ×3 and ×2 were also reduced by one, so the spare is held back regardless of the toggle.", "observed_quote": "Iron Sword | (equipped) | ×1 in inventory | 62 coins ea.", "steps": ["Starting data: Iron Sword equipped; inventory Iron Sword ×1 after earlier sales. Keep one of each item is OFF.", "Shop > Sell. Confirm Bronze Dagger shows \"×1 in inventory\" and Iron Sword shows \"(equipped)\" and \"×1 in inventory\".", "Tap Bronze Dagger row: panel \"Sell: Bronze Dagger\" offers 1 (25 coins).", "Tap Sell Old Gear: list has nine rows including Bronze Dagger ×1 (25); Iron Sword is absent. Total 5,267.", "Tap the Iron Sword row: no quantity control is offered (0 sellable)."], "anchor_node": {"class": "android.view.View", "contains": ["Iron Sword", "(equipped)", "×1 in inventory", "62 coins ea."], "bounds": [0, 1487, 1080, 1630]}}}
+{"event": "scored", "report_n": 5, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0004": "unverified_quote", "idlefantasy-0006": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 780}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 585}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1621}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1485}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1115}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 973}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 1360}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 643, "y": 846}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "tap_xy", "args": {"x": 872, "y": 846}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1022, "y": 699}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 1244}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 638, "y": 972}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.4, "x": 686, "y": 1700}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 686, "y": 1968}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8, "x": 900, "y": 1900}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 1360}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 686, "y": 1700}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "tap_xy", "args": {"x": 760, "y": 2169}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 540, "y": 1500}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 270, "y": 293}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6, "x": 540, "y": 1500}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 240, "message": null}

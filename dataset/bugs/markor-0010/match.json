@@ -1,0 +1,70 @@
+{
+  "screens": [
+    "search and replace"
+  ],
+  "elements": [
+    "replace"
+  ],
+  "fields": [
+    "regex capture"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the match is replaced by the captured text, giving cat",
+    "$1 expands to the group"
+  ],
+  "observed_contains_any": [
+    "the literal text $1 is inserted",
+    "capture group not expanded on single replace"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "cat",
+      "captur*",
+      "group",
+      "expand*",
+      "replac*",
+      "substitut*",
+      "reference*",
+      "backreference*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "$1",
+      "literal*",
+      "dollar-one",
+      "dollar one",
+      "token",
+      "as characters",
+      "as text",
+      "raw",
+      "not substitut*",
+      "not replaced",
+      "not expand*",
+      "unexpanded",
+      "placeholder",
+      "not captured",
+      "backreference*"
+    ]
+  ],
+  "location_concepts": [
+    "search and replace",
+    "replace*",
+    "regex*",
+    "captur*"
+  ],
+  "anchors": {
+    "elements": [
+      "Replace",
+      "highlighting_editor",
+      "$1"
+    ],
+    "observed": [
+      "$1"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif">
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="32.0" y="44.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="600" >Episode Score vs. Cost per Episode</text>
+<text x="32.0" y="70.0" font-size="14" fill="#52514e" text-anchor="start" font-weight="400" >API-list-price cost of one 51-episode run divided by 51; log scale. Up and to the left is better.</text>
+<text x="32.0" y="522.0" font-size="11" fill="#898781" text-anchor="start" font-weight="400" >Source: AQB episode suite, 51 episodes per model (9 Android apps, 91 planted regressions). Codex runs priced at API list prices; they ran on a subscription.</text>
+<rect x="674.2" y="90" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="692.2" y="100.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >OpenAI</text>
+<rect x="755.8000000000001" y="90" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="773.8" y="100.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >Anthropic</text>
+<rect x="857.2" y="90" width="12" height="12" rx="3" fill="#1baf7a"/>
+<text x="875.2" y="100.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400" >DeepSeek</text>
+<rect x="84.0" y="128.0" width="603.7" height="175.1" fill="#f0efec"/>
+<text x="94.0" y="148.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="500" >Most attractive quadrant</text>
+<line x1="84.0" y1="444.0" x2="912.0" y2="444.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="74.0" y="448.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.0</text>
+<line x1="84.0" y1="380.8" x2="912.0" y2="380.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="74.0" y="384.8" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.1</text>
+<line x1="84.0" y1="317.6" x2="912.0" y2="317.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="74.0" y="321.6" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.2</text>
+<line x1="84.0" y1="254.4" x2="912.0" y2="254.4" stroke="#e1e0d9" stroke-width="1"/>
+<text x="74.0" y="258.4" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.3</text>
+<line x1="84.0" y1="191.2" x2="912.0" y2="191.2" stroke="#e1e0d9" stroke-width="1"/>
+<text x="74.0" y="195.2" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.4</text>
+<line x1="84.0" y1="128.0" x2="912.0" y2="128.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="74.0" y="132.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400" >0.5</text>
+<line x1="84.0" y1="128.0" x2="84.0" y2="444.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="84.0" y="464.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >$0.01</text>
+<line x1="281.5" y1="128.0" x2="281.5" y2="444.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="281.5" y="464.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >$0.03</text>
+<line x1="498.0" y1="128.0" x2="498.0" y2="444.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="498.0" y="464.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >$0.1</text>
+<line x1="695.5" y1="128.0" x2="695.5" y2="444.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="695.5" y="464.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >$0.3</text>
+<line x1="912.0" y1="128.0" x2="912.0" y2="444.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="912.0" y="464.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="400" >$1</text>
+<text x="498.0" y="488.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="500" >Cost per episode (USD, log scale)</text>
+<text x="0.0" y="0.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="500" transform="translate(30,286.0) rotate(-90)">Episode Score</text>
+<circle cx="800.8" cy="197.5" r="8" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Claude Sonnet 5.5 (medium): Cost per episode (USD, log scale) $0.538824, Episode Score 0.4</title></circle>
+<text x="787.8" y="202.5" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >Claude Sonnet 5.5 (medium)</text>
+<circle cx="834.3" cy="261.4" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>GPT-6.1 Sol (low): Cost per episode (USD, log scale) $0.64902, Episode Score 0.3</title></circle>
+<text x="821.3" y="255.4" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >GPT-6.1 Sol (low)</text>
+<circle cx="831.0" cy="294.2" r="8" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Claude Haiku 5.5: Cost per episode (USD, log scale) $0.637255, Episode Score 0.2</title></circle>
+<text x="818.0" y="312.2" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="500" >Claude Haiku 5.5</text>
+<circle cx="574.6" cy="311.9" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>GPT-6 Luna (max): Cost per episode (USD, log scale) $0.153137, Episode Score 0.2</title></circle>
+<text x="587.6" y="316.9" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="500" >GPT-6 Luna (max)</text>
+<circle cx="410.2" cy="328.3" r="8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>DeepSeek V4.1 Flash (high): Cost per episode (USD, log scale) $0.0613725, Episode Score 0.2</title></circle>
+<text x="423.2" y="333.3" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="500" >DeepSeek V4.1 Flash (high)</text>
+<circle cx="160.4" cy="353.0" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>GPT-6 Luna (medium): Cost per episode (USD, log scale) $0.0152941, Episode Score 0.1</title></circle>
+<text x="173.4" y="358.0" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="500" >GPT-6 Luna (medium)</text>
+</svg>

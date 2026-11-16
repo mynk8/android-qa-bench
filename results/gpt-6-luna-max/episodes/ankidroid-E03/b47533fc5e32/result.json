@@ -1,0 +1,165 @@
+{
+  "run_id": "b47533fc5e32",
+  "item_id": "ankidroid-E03",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Undo action in the deletion snackbar",
+      "element_ref": 1,
+      "field": "Undo",
+      "symptom_type": "no_effect",
+      "expected": "Tapping Undo should restore the deleted note and its two cards, returning the Spanish browser to 6 cards shown.",
+      "observed": "After tapping the snackbar Undo button, the snackbar disappears but the Spanish browser remains at 4 cards shown and the deleted note stays absent. The separate More options > Undo Delete Note command restores it.",
+      "observed_quote": "4 cards shown",
+      "steps": [
+        "Create and save a Basic (and reversed card) note in Spanish with Front QA_FRONT_42 and Back QA_BACK_99.",
+        "Open Card browser filtered to Spanish.",
+        "Long-press the note's Card 1 row, open More options, and choose Delete note.",
+        "When the snackbar displays 2 cards deleted and Undo, tap Undo.",
+        "Observe that the browser still shows 4 cards and the QA_FRONT_42 note is absent."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish",
+          "4 cards shown"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Undo button in the delete snackbar",
+      "element_ref": 1,
+      "field": "Undo",
+      "symptom_type": "no_effect",
+      "expected": "Undo should restore the deleted QA_FRONT_42 note and its two cards; the browser should return to 6 cards shown.",
+      "observed": "The snackbar disappears after its Undo button is tapped, but the list stays at 4 cards shown and QA_FRONT_42 remains absent. I reproduced this with both the accessibility element tap and a direct tap at the visible Undo button; More options > Undo Delete Note restores the note.",
+      "observed_quote": "4 cards shown",
+      "steps": [
+        "In the Spanish deck, save a Basic (and reversed card) note with Front QA_FRONT_42 and Back QA_BACK_99.",
+        "Open Card browser filtered to Spanish and verify 6 cards shown.",
+        "Long-press QA_FRONT_42 Card 1, open More options, and tap Delete note.",
+        "While the snackbar reads 2 cards deleted and shows Undo at the lower right, tap Undo.",
+        "The snackbar disappears; the browser still reads 4 cards shown and has no QA_FRONT_42 rows.",
+        "Open More options > Undo Delete Note; this restores the note and returns the browser to 6 cards shown."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish",
+          "6 cards shown"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ],
+      "present": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/ankidroid-E03/b47533fc5e32/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0006": "missed_unreached",
+    "ankidroid-0017": "missed_unreached"
+  },
+  "elapsed_s": 790.842,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Completed Add note and populated preview checks, including reversed Basic cards and a sparse Cloze c3 preview; inspected card template menus across Basic, reversed Basic, type-in-answer, Cloze, and Image Occlusion; verified note counts; exercised deck expand/collapse repeatedly, across navigation and rotation. Deleted all temporary QA notes and the temporary child deck; final deck list shows French 3 and Spanish 4. The browser snackbar Undo behavior was reported twice, but the developer could not reproduce it."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "missed": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 171,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "bug_meta": {
+    "ankidroid-0006": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0017": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

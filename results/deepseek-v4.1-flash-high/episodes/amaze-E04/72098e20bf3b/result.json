@@ -1,0 +1,269 @@
+{
+  "run_id": "72098e20bf3b",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "File properties dialog (folder properties) \u2013 opened for empty folder Audiobooks/Alarms in /storage/emulated/0",
+      "element": "Size line (t7) in the Properties dialog",
+      "field": "Size",
+      "symptom_type": "wrong_value",
+      "expected": "Size should read \"0 items; 0 B\" for an empty folder.",
+      "observed": "Size reads \"items; 0 B\" \u2013 the item count \"0\" is missing from the string.",
+      "steps": [
+        "Open Amaze File Manager at /storage/emulated/0.",
+        "Tap the three-dot button on the empty folder Alarms (or Audiobooks).",
+        "Tap Properties.",
+        "Look at the Size line: it shows \"items; 0 B\" with no item count."
+      ],
+      "element_ref": 6,
+      "observed_quote": "items; 0 B",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/t7",
+        "text": "items; 0 B",
+        "class": "android.widget.TextView",
+        "bounds": [
+          137,
+          1018,
+          278,
+          1061
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main file list at /storage/emulated/0 after leaving the \"Images\" category view via the toolbar Home button",
+      "element": "Pink \"+\" floating action button (sd_main_fab) that should be in the bottom-right of the file list",
+      "field": "On-screen file-list controls / FAB",
+      "symptom_type": "missing",
+      "expected": "After leaving the Images category view the file list should switch back to normal folder controls and show the pink \"+\" FAB again (as it does when leaving the category with the system Back key).",
+      "observed": "The root folder list is shown (path /storage/emulated/0, \"14 folders and 0 files\") but the pink \"+\" FAB is gone; only the folder rows are present. Entering Images and pressing system Back brings the FAB back, so leaving via the Home toolbar button leaves the list in the category-view control state.",
+      "steps": [
+        "From /storage/emulated/0, open the navigation drawer and tap the Images category.",
+        "In the Images view (path shows \"Images\"), tap the Home button in the toolbar (house icon, top right).",
+        "The file list returns to /storage/emulated/0 (\"14 folders and 0 files\") but the pink + FAB is no longer displayed in the bottom-right corner.",
+        "Repeat by entering Images and pressing system Back: the FAB is displayed again, confirming the Home-button route is what leaves the control hidden."
+      ],
+      "element_ref": 35,
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "bounds": [
+          0,
+          2256,
+          1080,
+          2274
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File list /storage/emulated/0/AndroidQA/Amaze \u2013 multi-select action bar after rotating the device",
+      "element": "Multi-select action bar selection counter (\"0\" / \"Amaze Debug\" | \"0\")",
+      "field": "Selected item count / selection state",
+      "symptom_type": "not_persisted",
+      "expected": "The 3 selected items (notes.txt, keep.jpg, photo.jpg) should stay selected with the counter showing 3 after rotation. If selection cannot survive rotation, multi-select mode should close instead of staying active.",
+      "observed": "After rotating with 3 files selected, the files are no longer highlighted and the multi-select action bar remains open showing a count of \"0\". Rotating back to portrait keeps this broken state (action bar visible, counter 0, no items selected).",
+      "steps": [
+        "Go to /storage/emulated/0/AndroidQA/Amaze.",
+        "Long-press notes.txt, then tap keep.jpg and photo.jpg so the action bar shows 3 selected.",
+        "Rotate the device to landscape.",
+        "Observe the multi-select action bar now shows \"0\" and no item is highlighted.",
+        "Rotate back to portrait: the action bar is still present with \"0\" and no selection."
+      ],
+      "element_ref": 27,
+      "observed_quote": "0",
+      "anchor_node": {
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Amaze Debug",
+          "0"
+        ],
+        "bounds": [
+          189,
+          63,
+          597,
+          210
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main file list at /storage/emulated/0 after returning from the \"Images\" category view",
+      "element": "Header folder/file count under the path (/storage/emulated/0)",
+      "field": "Folder count / show-hidden-files state",
+      "symptom_type": "not_persisted",
+      "expected": "Returning from the Images category view should restore the normal folder list exactly as it was, with its existing show-hidden-files setting. Before entering Images the root showed \"28 folders and 0 files\"; it should still show 28 folders after Back.",
+      "observed": "After tapping the Images category in the navigation drawer and pressing system Back, the root file list shows \"14 folders and 0 files\" \u2013 hidden folders are no longer listed, so the file list's show-hidden-files state was reset by entering/leaving the category view.",
+      "steps": [
+        "Launch Amaze File Manager fresh; it opens /storage/emulated/0 and the header reads \"28 folders and 0 files\".",
+        "Open the navigation drawer and tap the Images category.",
+        "In the Images view (\"0 folders and 2 files\"), press the system Back key.",
+        "The app returns to /storage/emulated/0 but the header now reads \"14 folders and 0 files\" and the hidden folders are gone. Relaunching the app restores 28 again, confirming the category visit changed the setting."
+      ],
+      "element_ref": 6,
+      "observed_quote": "14 folders and 0 files",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "14 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          488,
+          381
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main file list at /storage/emulated/0 immediately after launching Amaze File Manager",
+      "element": "Header summary line under the path (/storage/emulated/0)",
+      "field": "Folder count",
+      "symptom_type": "wrong_value",
+      "expected": "The header should report the actual number of folders in the list: \"14 folders and 0 files\" (the list contains exactly Alarms, Android, AndroidQA, Audiobooks, DCIM, Documents, Download, Movies, Music, Notifications, Pictures, Podcasts, Recordings, Ringtones).",
+      "observed": "The header reports \"28 folders and 0 files\" although the scrolled list ends at Ringtones and contains only 14 folders. After entering a drawer category view and returning, the same list correctly reports \"14 folders and 0 files\", confirming the initial count is doubled.",
+      "steps": [
+        "Exit Amaze (overflow > Exit) and launch it again from the launcher.",
+        "It opens /storage/emulated/0 and the header shows \"28 folders and 0 files\".",
+        "Scroll to the bottom of the list: it ends at Ringtones, with only 14 folder rows total.",
+        "Open the drawer, tap Images, then press Back: the same root list now shows \"14 folders and 0 files\"."
+      ],
+      "element_ref": 1,
+      "observed_quote": "28 folders and 0 files",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "28 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          157,
+          488,
+          234
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Properties dialog opened from the navigation drawer's Internal Storage row (storage usage graph icon)",
+      "element": "Size line in the storage volume Properties dialog",
+      "field": "Size",
+      "symptom_type": "wrong_value",
+      "expected": "The Size value should agree with the storage breakdown shown in the same dialog: Total 452 GB with 82.54 GB used and 369 GB free. It should show the content/volume size (e.g. 82.54 GB used or 452 GB total), not repeat the free-space figure.",
+      "observed": "The Size line reads \"16 items; 369 GB\" \u2013 the 369 GB is precisely the free-space value from the chart below (Total: 452 GB, used space 82.54 GB, free space 369 GB), so the volume/folder size is reported as free space instead of its actual size.",
+      "steps": [
+        "Open the navigation drawer in Amaze (Internal Storage is listed as \"369 GB free of 452 GB\").",
+        "Tap the storage usage graph icon on the right side of the Internal Storage row.",
+        "The Properties dialog opens showing Name \"0\", Location \"/storage/emulated\", Size \"16 items; 369 GB\", Date \"Nov 14 | 6:56 AM\".",
+        "Compare the Size line with the same dialog's chart: Total 452 GB, used space 82.54 GB, free space 369 GB \u2013 Size repeats the free-space figure, not the volume/folder content size."
+      ],
+      "element_ref": 6,
+      "observed_quote": "16 items; 369 GB",
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/t7",
+        "text": "16 items; 369 GB",
+        "class": "android.widget.TextView",
+        "bounds": [
+          137,
+          1018,
+          380,
+          1061
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash/episodes/amaze-E04/72098e20bf3b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "reported",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 1439.345,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [
+    "amaze-0013"
+  ],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0015"
+  ],
+  "true_positives": 1,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 300,
+  "precision": 0.16666666666666666,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

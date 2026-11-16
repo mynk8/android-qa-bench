@@ -1,0 +1,85 @@
+{
+  "screens": [
+    "transaction editor",
+    "analytics"
+  ],
+  "elements": [
+    "category",
+    "maximum spent card",
+    "maximum spent"
+  ],
+  "fields": [
+    "categoryId"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "after Groceries is recategorised to Transport, its category id is Transport",
+    "the transaction is no longer in Food"
+  ],
+  "observed_contains_any": [
+    "editing a transaction's category does not update the category id",
+    "Groceries stays under Food"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "transport",
+      "another",
+      "other",
+      "different",
+      "switch*",
+      "chang*",
+      "re-tag*",
+      "relabel*",
+      "reflected"
+    ],
+    [
+      "categor*",
+      "maximum spent",
+      "max spent",
+      "analytics",
+      "tag",
+      "card",
+      "label*",
+      "stat*",
+      "spending"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "food",
+      "not chang*",
+      "unchanged",
+      "still",
+      "same",
+      "not updat*",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*"
+    ]
+  ],
+  "location_concepts": [
+    "categor*",
+    "transaction*",
+    "expense*",
+    "groceries",
+    "history"
+  ],
+  "anchors": {
+    "elements": [
+      "Transport",
+      "Food",
+      "category"
+    ],
+    "observed": []
+  }
+}

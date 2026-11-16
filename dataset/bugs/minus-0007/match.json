@@ -1,0 +1,139 @@
+{
+  "screens": [
+    "budget sheet",
+    "main screen",
+    "main",
+    "home",
+    "budget split",
+    "sheet"
+  ],
+  "elements": [
+    "split option",
+    "weekly option",
+    "selected option",
+    "budget split option",
+    "period selector",
+    "split selection"
+  ],
+  "fields": [
+    "selected option",
+    "split selection",
+    "selected period",
+    "split view"
+  ],
+  "symptom_type": "not_persisted",
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_contains_any": [
+    "Weekly is still selected after the app is opened again"
+  ],
+  "observed_contains_any": [
+    "the selection is back to Daily after the app is opened again"
+  ],
+  "expected_concepts": [
+    [
+      "weekly",
+      "still selected",
+      "remain*",
+      "persist*",
+      "kept",
+      "saved",
+      "selected",
+      "this week",
+      "week*",
+      "remember*",
+      "division",
+      "preference*",
+      "forgot*",
+      "lost",
+      "choice",
+      "pick*"
+    ],
+    [
+      "restart*",
+      "relaunch*",
+      "re-launch*",
+      "reopen* the app",
+      "reopening the app",
+      "re-open* the app",
+      "close the app",
+      "closed the app",
+      "closing the app",
+      "app is closed",
+      "app closed",
+      "app again",
+      "open it again",
+      "opened again",
+      "opened it again",
+      "opening it again",
+      "killed",
+      "force stop*",
+      "force-stop*",
+      "force clos*",
+      "app is reopened",
+      "after reopening",
+      "kill*",
+      "exit*",
+      "reboot*",
+      "cold start",
+      "fresh start"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "lost",
+      "back",
+      "default",
+      "daily",
+      "reset*",
+      "revert*",
+      "forgot*",
+      "reverted",
+      "instead",
+      "again",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "unselected",
+      "different",
+      "changed"
+    ]
+  ],
+  "location_concepts": [
+    "budget*",
+    "split*",
+    "sheet",
+    "weekly",
+    "week*",
+    "period*",
+    "option*",
+    "main",
+    "pill"
+  ],
+  "anchors": {
+    "elements": [
+      "Calculated amount",
+      "$1.9",
+      "Weekly",
+      "Daily"
+    ],
+    "observed": [
+      "$1.9"
+    ]
+  }
+}

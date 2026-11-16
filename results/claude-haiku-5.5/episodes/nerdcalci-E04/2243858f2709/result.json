@@ -1,0 +1,174 @@
+{
+  "run_id": "2243858f2709",
+  "item_id": "nerdcalci-E04",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Remainders calculation file",
+      "element_ref": 1,
+      "field": "line 1 \"100 % 13\"",
+      "symptom_type": "wrong_value",
+      "expected": "Remainder lines evaluate: 100 % 13 = 9, 47 % 20 = 7, 19.5 % 4 = 3.5, and a % 14 = 8 (with a = 50).",
+      "observed": "Lines \"100 % 13\", \"47 % 20\", \"19.5 % 4\" and \"a % 14\" each show an error (\"Err\" with the message \"Unexpected number\"). Only \"250 + 20%\" evaluates (to 300).",
+      "observed_quote": "Unexpected number",
+      "steps": [
+        "Open the Remainders file from the home list (scroll down).",
+        "Observe lines 1-4 (100 % 13, 47 % 20, 19.5 % 4, a % 14). Each result column shows 'Err' instead of a number.",
+        "Tap the Err indicator on line 1 to see 'Unexpected number'."
+      ],
+      "anchor_node": {
+        "text": "100 % 13",
+        "class": "android.widget.EditText",
+        "bounds": [
+          91,
+          231,
+          739,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home (file list)",
+      "element_ref": 0,
+      "field": "file list (pinned section)",
+      "symptom_type": "wrong_navigation",
+      "expected": "After pinning \"Percentages\" from its More options menu, it appears at the top of the home list (above Expenses), labelled as pinned, and the list shows all 9 files from the top.",
+      "observed": "After tapping Pin, the home list starts at \"Monthly budget\" with the header and the top rows hidden. Swiping down does not reveal them. \"Expenses\" and the pinned \"Percentages\" are not visible on the home list. Search still shows Percentages as pinned at the top.",
+      "observed_quote": "Monthly budget",
+      "steps": [
+        "On the home screen, scroll to the bottom and tap the More options (three dots) for 'Percentages'.",
+        "Tap 'Pin'.",
+        "Observe the home list: it opens at 'Monthly budget'. 'Expenses' and 'Percentages' are not visible, and swiping down does not show them.",
+        "Tap the Search icon: 'Percentages' is listed first with the pin icon, followed by 'Expenses'.",
+        "Relaunch the app: the same list appears, with the top rows still hidden."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Monthly budget",
+          "MODIFIED: JAN 09, 2026 \u2022 CREATED: JAN 09, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          231,
+          1080,
+          363
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Scratchpad (temporary file)",
+      "element_ref": 50,
+      "field": "line 2 (100 - 10%)",
+      "symptom_type": "wrong_value",
+      "expected": "Typing \"100 - 10%\" gives 90, and \"1000 * 5%\" gives 50 (as they do with a single % after deleting one).",
+      "observed": "Typing \"100 - 10%\" leaves the line showing \"100 - 10%%\", with the result \"99.90\". \"1000 * 5%\" typed the same way shows \"1000 * 5%%\" with the result \"0.50\". Deleting one % gives the correct 90 and 50.",
+      "observed_quote": "99.90",
+      "steps": [
+        "Open the temporary scratchpad (Open temporary scratchpad button on the home screen).",
+        "Tap the first empty line and type: 1000 * 5%",
+        "Observe the line now reads '1000 * 5%%' and the result is 0.50 (not 50).",
+        "On a new line type: 100 - 10%",
+        "Observe the line reads '100 - 10%%' with result 99.90 (expected 90).",
+        "Press Delete once on that line: it reads '100 - 10%' and the result becomes 90."
+      ],
+      "anchor_node": {
+        "text": "100 - 10%",
+        "class": "android.widget.EditText",
+        "bounds": [
+          91,
+          651,
+          739,
+          758
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "nerdcalci-0007"
+      ],
+      "present": [
+        "nerdcalci-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/nerdcalci-E04/2243858f2709/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0007": "reported"
+  },
+  "elapsed_s": 404.259,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Filed bugs (both logged): (1) Remainders: \"100 % 13\", \"47 % 20\", \"19.5 % 4\", \"a % 14\" show Err \"Unexpected number\" (only \"250 + 20%\" evaluates). (2) Home list after pinning Percentages: list stays scrolled, so Expenses and the pinned Percentages are not visible above Monthly budget. Developer could not reproduce my steps; my earlier scroll may have contributed. Also: typing \"%\" in the scratchpad produced \"%%\" and wrong results (1000 * 5% -> 0.50, 100 - 10% -> 99.90); a single % gives 50 and 90. The developer could not reproduce this either, which suggests my input harness doubled the character. Verified correct: Expenses sums/avg, Monthly budget totals (2,800.50 / 49.50 / 2,850), Temperatures conversions, Temperature sums, Number bases, Date gaps (incl. day borrow), Time differences (incl. negative), Percentages (15% of 240=36, 240-36=204, 8.5% of 1200=102, 10% of 80=8). Variables in scratchpad: a=5, b=a*2, c=b+a gave 10 and 15; editing a to 7 updated b=14, c=21; rotation kept values. Lock: Lock File shows \"Locked file \u2022 Cannot be modified\", edits were not saved, Unlock restored editing. Not fully covered: Percentages is still pinned (I did not find a usable unpin path because of the scroll issue), and the pin ordering was not verified with two pinned files or after restart."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "found": [
+    "nerdcalci-0007"
+  ],
+  "required": [
+    "nerdcalci-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 145,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0007"
+  ],
+  "bug_meta": {
+    "nerdcalci-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

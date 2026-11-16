@@ -1,0 +1,71 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "section headers"
+  ],
+  "fields": [
+    "sort"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "folders and files are mixed with no Folders or Files headers",
+    "no section headers"
+  ],
+  "observed_contains_any": [
+    "Folders and Files headers are still shown",
+    "headers still split the list"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "mix*",
+      "no header*",
+      "without header*",
+      "no section*",
+      "together",
+      "interleav*",
+      "no folders",
+      "no files",
+      "not label*",
+      "mislabel*",
+      "none on top"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "header*",
+      "section*",
+      "split*",
+      "separat*",
+      "grouped",
+      "divid*",
+      "folders"
+    ]
+  ],
+  "location_concepts": [
+    "file*",
+    "folder*",
+    "androidqa*",
+    "director*",
+    "list*",
+    "browser",
+    "header*",
+    "section*",
+    "sort*"
+  ],
+  "anchors": {
+    "elements": [
+      "Folders",
+      "Files",
+      "section header"
+    ],
+    "observed": [
+      "/^(folders|files)(\\s|$)/"
+    ]
+  }
+}

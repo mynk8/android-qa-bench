@@ -1,0 +1,219 @@
+{
+  "run_id": "1c5802e4ab7d",
+  "item_id": "amaze-E05",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Files list > New Folder dialog",
+      "element": "CREATE button",
+      "symptom_type": "no_effect",
+      "expected": "Typing an existing folder name (\"Alpha\") shows a validation error and keeps CREATE disabled",
+      "observed": "No error shown and CREATE is enabled for \"Alpha\". Tapping it clears the field, leaves the dialog open and creates nothing.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Tap + then Folder",
+        "Type Alpha",
+        "CREATE is enabled with no error",
+        "Tap CREATE: field clears, dialog stays, no folder made"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Files list > New Folder dialog",
+      "element": "CREATE button",
+      "symptom_type": "wrong_value",
+      "expected": "Typing a name that already exists (Beta) shows a validation error and CREATE stays disabled",
+      "observed": "CREATE becomes enabled with no error. Tapping it clears the field, leaves the dialog open and creates no folder. Reproduced with both Alpha and Beta, twice.",
+      "steps": [
+        "Open AndroidQA/Amaze",
+        "Tap + then Folder",
+        "Type Beta",
+        "Observe CREATE enabled, no error",
+        "Tap CREATE: the field resets and the dialog stays open"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer > Images category page",
+      "element": "keep.jpg row overflow menu > Rename",
+      "symptom_type": "no_effect",
+      "expected": "keep.jpg is renamed to keep2.jpg in the category list and in AndroidQA/Amaze",
+      "observed": "A \"Renaming\" toast appears, but the file stays keep.jpg in the Images list and in the real folder. Reproduced twice.",
+      "steps": [
+        "Open drawer > Images",
+        "Tap the three-dot menu on keep.jpg > Rename",
+        "Type keep2.jpg, tap SAVE",
+        "The name is unchanged",
+        "Open AndroidQA/Amaze: it still shows keep.jpg"
+      ],
+      "observed_quote": "keep.jpg",
+      "element_ref": 8,
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/second",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "keep.jpg",
+          "Nov 13 | 10:37\u202fPM",
+          "21.00 kB"
+        ],
+        "bounds": [
+          0,
+          528,
+          1080,
+          717
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Text editor > More options > Details",
+      "element": "Date value in Properties dialog",
+      "symptom_type": "wrong_value",
+      "expected": "Date matches the file list: Nov 13 | 10:37 PM",
+      "observed": "Date shows Jan 1, 1970 | 12:00 AM, while the list shows Nov 13 | 10:37 PM for the same file",
+      "steps": [
+        "Open Documents category (or AndroidQA/Amaze/Beta)",
+        "Open readme.txt (12 B) in Amaze Text Editor",
+        "Tap More options > Details",
+        "Date reads Jan 1, 1970"
+      ],
+      "observed_quote": "Jan 1, 1970 | 12:00 AM",
+      "element_ref": 8,
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/t8",
+        "text": "Jan 1, 1970 | 12:00\u202fAM",
+        "class": "android.widget.TextView",
+        "bounds": [
+          137,
+          1186,
+          463,
+          1229
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Navigation drawer > Recent files",
+      "element": "Item count subtitle",
+      "symptom_type": "wrong_value",
+      "expected": "Subtitle counts the 6 listed files (\"0 folders and 6 files\"), as Images and Documents do",
+      "observed": "Subtitle says 0 folders and 0 files while 6 files are listed",
+      "steps": [
+        "Open drawer",
+        "Tap Recent files",
+        "Compare the subtitle with the listed files"
+      ],
+      "observed_quote": "0 folders and 0 files",
+      "element_ref": 6,
+      "anchor_node": {
+        "id": "com.amaze.filemanager:id/pathname",
+        "text": "0 folders and 0 files",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          304,
+          470,
+          381
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0014",
+        "amaze-0016"
+      ],
+      "present": [
+        "amaze-0014",
+        "amaze-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E05/1c5802e4ab7d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0014": "reported",
+    "amaze-0016": "missed_unreached"
+  },
+  "elapsed_s": 268.827,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Covered the drawer categories, folder file management, text viewer open, edit, save and rotate, select all/deselect all, and the new-folder dialog. One bug was confirmed and logged: Rename from the Images category page does nothing. Three reports were rejected as not reproducible by the developer: duplicate folder name in the New Folder dialog, the Jan 1, 1970 date in the editor Details dialog, and the \"0 folders and 0 files\" count on Recent files. I saw all three twice or more. Not tested: large text files (chunked reading), the batch invert-selection entry, which I couldn't find in the overflow menu, and the other categories' per-item actions."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "found": [
+    "amaze-0014"
+  ],
+  "required": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "missed": [
+    "amaze-0016"
+  ],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 95,
+  "precision": 0.2,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "amaze-0014",
+    "amaze-0016"
+  ],
+  "bug_meta": {
+    "amaze-0014": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "amaze-0016": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

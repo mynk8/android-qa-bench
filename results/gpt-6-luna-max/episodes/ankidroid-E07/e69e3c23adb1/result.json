@@ -1,0 +1,130 @@
+{
+  "run_id": "e69e3c23adb1",
+  "item_id": "ankidroid-E07",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Header subtitle showing the number of cards",
+      "element_ref": 1,
+      "field": "cards shown subtitle",
+      "symptom_type": "missing",
+      "expected": "With Spanish selected and four matching rows visible, the header subtitle should say \u201c4 cards shown.\u201d",
+      "observed": "After navigating from Card browser to Settings and back, the four Spanish rows remain visible but the header shows only \u201cSpanish\u201d; the card count subtitle is absent.",
+      "steps": [
+        "Open Card browser from the navigation drawer and select Spanish; verify the header says \u201cSpanish\u201d and \u201c4 cards shown.\u201d",
+        "Open Settings from the navigation drawer.",
+        "Navigate back to Card browser.",
+        "Observe that all four Spanish rows remain visible while the header shows only \u201cSpanish\u201d with no card count subtitle.",
+        "Repeat the Settings navigation; the subtitle remains absent."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E07-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ],
+      "present": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/ankidroid-E07/e69e3c23adb1/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0023": "missed_unreached",
+    "ankidroid-0024": "reported"
+  },
+  "elapsed_s": 681.577,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.93,
+    "notes": "Swept timebox settings, study answer intervals, theme changes, browser deck filtering/search, and preference persistence/reversal. Filed one confirmed bug: Card browser count subtitle disappears after returning from Settings. No study cards were rated; temporary theme, timebox, and new study screen settings were restored."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "found": [
+    "ankidroid-0024"
+  ],
+  "required": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "missed": [
+    "ankidroid-0023"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 134,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "bug_meta": {
+    "ankidroid-0023": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0024": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

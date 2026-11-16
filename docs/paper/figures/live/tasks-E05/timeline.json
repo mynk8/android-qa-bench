@@ -1,0 +1,537 @@
+[
+ {
+  "kind": "act",
+  "n": 1,
+  "tool": "observe",
+  "input": {
+   "screenshot": true
+  },
+  "result": "Foreground: org.tasks\nElements (29):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Due Thursday\" id=header_row [clickable] @(540,893)\n[7] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,1077)\n[8] ImageView id=completeBox [clickable] @(73,1040)\n[9] TextView id=due_date [clickable] @(1038,1039)\n[10] RelativeLayout contains \"Due Tuesday, November 24\" id=header_row [clickable] @(540,1260)\n[11] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1444)\n[12] ImageView id=completeBox [clickable] @(73,1407)\n[13] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1493)\n[14] TextView id=due_date [clickable] @(1038,1406)\n[15] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1631)\n[16] ImageView id=completeBox [clickable] @(126,1628)\n[17] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1783)\n[18] ImageView id=completeBox [clickable] @(126,1780)\n[19] RelativeLayout contains \"Due Friday, December 4\" id=header_row [clickable] @(540,1932)\n[20] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,2082)\n[21] ImageView id=completeBox [clickable] @(73,2079)\n[22] TextView id=due_date [clickable] @(1038,2078)\n[23] RelativeLayout contains \"No due date\" id=header_row [clickable] @(540,2231)\n[24] ImageButton [clickable] @(84,2169)\n[25] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[26] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[27] ImageView desc=\"More options\" [clickable] @(464,2169)\n[28] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)",
+  "image": "step001.png"
+ },
+ {
+  "kind": "act",
+  "n": 2,
+  "tool": "tap",
+  "input": {
+   "element": 26
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Ascending\" [clickable] @(540,1061)\n[3] View contains \"Ascending\" [clickable] @(907,1061)\n[4] View contains \"Sorting\" | \"By due date\" | \"Ascending\" [clickable] @(540,1261)\n[5] View contains \"Ascending\" [clickable] @(907,1261)\n[6] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[7] View contains \"Descending\" [clickable] @(897,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "say",
+  "after": 2,
+  "text": "Open Sorting options."
+ },
+ {
+  "kind": "act",
+  "n": 3,
+  "tool": "tap",
+  "input": {
+   "element": 4
+  },
+  "result": "Foreground: org.tasks\nElements (10):\n[0] View desc=\"Close sheet\" [clickable] @(540,583)\n[1] View contains \"Drag handle\" [clickable] @(540,1227)\n[2] View contains \"By due date\" [clickable] @(540,1346)\n[3] View contains \"By start date\" [clickable] @(540,1462)\n[4] View contains \"By priority\" [clickable] @(540,1578)\n[5] View contains \"By title\" [clickable] @(540,1694)\n[6] View contains \"By last modified\" [clickable] @(540,1810)\n[7] View contains \"Smart sort\" [clickable] @(540,1926)\n[8] View contains \"Created\" [clickable] @(540,2044)\n[9] View contains \"My order\" | \"Not available for tags, filters, or places\" [clickable,disabled] @(540,2189)"
+ },
+ {
+  "kind": "act",
+  "n": 4,
+  "tool": "tap",
+  "input": {
+   "element": 5
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Ascending\" [clickable] @(540,1061)\n[3] View contains \"Ascending\" [clickable] @(907,1061)\n[4] View contains \"Sorting\" | \"By title\" | \"Ascending\" [clickable] @(540,1261)\n[5] View contains \"Ascending\" [clickable] @(907,1261)\n[6] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[7] View contains \"Descending\" [clickable] @(897,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 5,
+  "tool": "observe",
+  "input": {
+   "screenshot": true
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Ascending\" [clickable] @(540,1061)\n[3] View contains \"Ascending\" [clickable] @(907,1061)\n[4] View contains \"Sorting\" | \"By title\" | \"Ascending\" [clickable] @(540,1261)\n[5] View contains \"Ascending\" [clickable] @(907,1261)\n[6] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[7] View contains \"Descending\" [clickable] @(897,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)",
+  "image": "step005.png"
+ },
+ {
+  "kind": "say",
+  "after": 5,
+  "text": "Close the sheet and view the list."
+ },
+ {
+  "kind": "act",
+  "n": 6,
+  "tool": "tap",
+  "input": {
+   "element": 0
+  },
+  "result": "Foreground: org.tasks\nElements (29):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Due Thursday\" id=header_row [clickable] @(540,893)\n[7] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,1077)\n[8] ImageView id=completeBox [clickable] @(73,1040)\n[9] TextView id=due_date [clickable] @(1038,1039)\n[10] RelativeLayout contains \"Due Tuesday, November 24\" id=header_row [clickable] @(540,1260)\n[11] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1444)\n[12] ImageView id=completeBox [clickable] @(73,1407)\n[13] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1493)\n[14] TextView id=due_date [clickable] @(1038,1406)\n[15] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1631)\n[16] ImageView id=completeBox [clickable] @(126,1628)\n[17] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1783)\n[18] ImageView id=completeBox [clickable] @(126,1780)\n[19] RelativeLayout contains \"Due Friday, December 4\" id=header_row [clickable] @(540,1932)\n[20] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,2082)\n[21] ImageView id=completeBox [clickable] @(73,2079)\n[22] TextView id=due_date [clickable] @(1038,2078)\n[23] RelativeLayout contains \"No due date\" id=header_row [clickable] @(540,2231)\n[24] ImageButton [clickable] @(84,2169)\n[25] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[26] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[27] ImageView desc=\"More options\" [clickable] @(464,2169)\n[28] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 7,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step007.png"
+ },
+ {
+  "kind": "act",
+  "n": 8,
+  "tool": "tap",
+  "input": {
+   "element": 26
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Ascending\" [clickable] @(540,1061)\n[3] View contains \"Ascending\" [clickable] @(907,1061)\n[4] View contains \"Sorting\" | \"By title\" | \"Ascending\" [clickable] @(540,1261)\n[5] View contains \"Ascending\" [clickable] @(907,1261)\n[6] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[7] View contains \"Descending\" [clickable] @(897,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 9,
+  "tool": "tap",
+  "input": {
+   "x": 400,
+   "y": 1061
+  },
+  "result": "Foreground: org.tasks\nElements (9):\n[0] View desc=\"Close sheet\" [clickable] @(540,667)\n[1] View contains \"Drag handle\" [clickable] @(540,1396)\n[2] View contains \"None\" [clickable] @(540,1515)\n[3] View contains \"By due date\" [clickable] @(540,1631)\n[4] View contains \"By start date\" [clickable] @(540,1747)\n[5] View contains \"By priority\" [clickable] @(540,1863)\n[6] View contains \"By last modified\" [clickable] @(540,1979)\n[7] View contains \"Created\" [clickable] @(540,2095)\n[8] View contains \"List\" [clickable] @(540,2216)"
+ },
+ {
+  "kind": "act",
+  "n": 10,
+  "tool": "tap",
+  "input": {
+   "element": 2
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Ascending\" [clickable] @(540,1261)\n[4] View contains \"Ascending\" [clickable] @(907,1261)\n[5] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[6] View contains \"Descending\" [clickable] @(897,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 11,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step011.png"
+ },
+ {
+  "kind": "act",
+  "n": 12,
+  "tool": "tap",
+  "input": {
+   "element": 0
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[25] ImageView desc=\"More options\" [clickable] @(464,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 13,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step013.png"
+ },
+ {
+  "kind": "act",
+  "n": 14,
+  "tool": "tap",
+  "input": {
+   "element": 24
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Ascending\" [clickable] @(540,1261)\n[4] View contains \"Ascending\" [clickable] @(907,1261)\n[5] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[6] View contains \"Descending\" [clickable] @(897,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 15,
+  "tool": "tap",
+  "input": {
+   "x": 907,
+   "y": 1261
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[6] View contains \"Descending\" [clickable] @(897,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 16,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step016.png"
+ },
+ {
+  "kind": "act",
+  "n": 17,
+  "tool": "tap",
+  "input": {
+   "element": 0
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[25] ImageView desc=\"More options\" [clickable] @(464,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 18,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step018.png"
+ },
+ {
+  "kind": "say",
+  "after": 18,
+  "text": "Checking the sort sheet: setting title sorting to Descending did not reorder the list, so I'm re-checking that."
+ },
+ {
+  "kind": "act",
+  "n": 19,
+  "tool": "swipe",
+  "input": {
+   "direction": "down",
+   "distance": 0.3,
+   "x": 540,
+   "y": 1200
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[25] ImageView desc=\"More options\" [clickable] @(464,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 20,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step020.png"
+ },
+ {
+  "kind": "act",
+  "n": 21,
+  "tool": "file_report",
+  "input": {
+   "screen": "My Tasks list / Sort sheet",
+   "element": "Sorting direction toggle (title)",
+   "symptom_type": "no_effect",
+   "expected": "With Grouping None, Sorting By title Descending, order is Read docs, Pay rent, Pack for trip, Buy milk",
+   "observed": "Sheet shows \"By title\" \"Descending\" but the list stays in ascending order: Buy milk, Pack for trip, Pay rent, Read docs",
+   "observed_quote": "Descending",
+   "steps": [
+    "Open Sort sheet",
+    "Grouping > None",
+    "Sorting > By title (Ascending)",
+    "Tap the Ascending toggle so it reads Descending",
+    "Close sheet and refresh; order unchanged"
+   ]
+  },
+  "result": "Developer: could not reproduce with the steps given."
+ },
+ {
+  "kind": "act",
+  "n": 22,
+  "tool": "tap",
+  "input": {
+   "element": 24
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"My order\" | \"Descending\" [clickable] @(540,1461)\n[6] View contains \"Descending\" [clickable] @(897,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 23,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step023.png"
+ },
+ {
+  "kind": "act",
+  "n": 24,
+  "tool": "tap",
+  "input": {
+   "element": 5
+  },
+  "result": "Foreground: org.tasks\nElements (10):\n[0] View desc=\"Close sheet\" [clickable] @(540,609)\n[1] View contains \"Drag handle\" [clickable] @(540,1280)\n[2] View contains \"My order\" [clickable] @(540,1399)\n[3] View contains \"By due date\" [clickable] @(540,1515)\n[4] View contains \"By start date\" [clickable] @(540,1631)\n[5] View contains \"By priority\" [clickable] @(540,1747)\n[6] View contains \"By title\" [clickable] @(540,1863)\n[7] View contains \"By last modified\" [clickable] @(540,1979)\n[8] View contains \"Smart sort\" [clickable] @(540,2095)\n[9] View contains \"Created\" [clickable] @(540,2216)"
+ },
+ {
+  "kind": "act",
+  "n": 25,
+  "tool": "tap",
+  "input": {
+   "element": 6
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[6] View contains \"Ascending\" [clickable] @(907,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 26,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step026.png"
+ },
+ {
+  "kind": "act",
+  "n": 27,
+  "tool": "file_report",
+  "input": {
+   "screen": "Sort sheet",
+   "element": "Subtasks direction toggle",
+   "symptom_type": "wrong_value",
+   "expected": "With Subtasks set to \"My order\" (manual order), no ascending/descending toggle is shown, as for Grouping None",
+   "observed": "Subtasks \"My order\" shows a \"Descending\" direction toggle, which has no meaning for manual order",
+   "observed_quote": "Descending",
+   "steps": [
+    "Open Sort sheet",
+    "Look at Subtasks row (My order)",
+    "A Descending toggle is shown beside it"
+   ]
+  },
+  "result": "Developer: thanks, confirmed and logged. Keep testing the current build."
+ },
+ {
+  "kind": "say",
+  "after": 27,
+  "text": "Bug confirmed. Next I'm checking the title descending sort again, with subtasks sorted by title."
+ },
+ {
+  "kind": "act",
+  "n": 28,
+  "tool": "tap",
+  "input": {
+   "element": 0
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(348,2169)\n[25] ImageView desc=\"More options\" [clickable] @(464,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 29,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step029.png"
+ },
+ {
+  "kind": "act",
+  "n": 30,
+  "tool": "tap",
+  "input": {
+   "element": 20
+  },
+  "result": "Foreground: org.tasks\nElements (25):\n[0] View [clickable,disabled] @(540,305)\n[1] Button [clickable] @(75,295)\n[2] EditText \"Read docs\" id=task_title [clickable] @(614,295)\n[3] View contains \"No start date\" [clickable] @(540,467)\n[4] View contains \"No due date\" id=due_date_row [clickable] @(540,639)\n[5] View contains \"Does not repeat\" [clickable] @(540,811)\n[6] View contains \"Priority\" [clickable,disabled] @(540,983)\n[7] RadioButton [checked] @(460,984)\n[8] RadioButton [clickable] @(625,984)\n[9] RadioButton [clickable] @(790,984)\n[10] RadioButton [clickable] @(955,984)\n[11] View contains \"list\" | \"Default list\" [clickable] @(540,1158)\n[12] View contains \"list\" | \"Default list\" [clickable] @(322,1159)\n[13] View contains \"Add tags\" [clickable] @(540,1333)\n[14] View [clickable,disabled] @(540,1505)\n[15] TextView \"Add subtask\" [clickable] @(336,1505)\n[16] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable,disabled] @(540,1698)\n[17] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable] @(508,1698)\n[18] View [clickable,disabled] @(540,1892)\n[19] EditText \"See https://example.com/guide\" [clickable] @(614,1892)\n[20] View contains \"Add location\" [clickable] @(540,2064)\n[21] View [clickable,disabled] @(540,2236)\n[22] TextView \"Add attachment\" [clickable] @(635,2236)\n[23] View contains \"Save\" id=save_task [clickable] @(75,148)\n[24] View contains \"Delete task\" [clickable] @(1007,148)"
+ },
+ {
+  "kind": "act",
+  "n": 31,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step031.png"
+ },
+ {
+  "kind": "act",
+  "n": 32,
+  "tool": "tap",
+  "input": {
+   "x": 520,
+   "y": 1892
+  },
+  "result": "Foreground: org.tasks\nElements (55):\n[0] View id=due_date_row [clickable] @(540,221)\n[1] View contains \"Does not repeat\" [clickable] @(540,362)\n[2] View contains \"Priority\" [clickable,disabled] @(540,534)\n[3] RadioButton [checked] @(460,535)\n[4] RadioButton [clickable] @(625,535)\n[5] RadioButton [clickable] @(790,535)\n[6] RadioButton [clickable] @(955,535)\n[7] View contains \"list\" | \"Default list\" [clickable] @(540,709)\n[8] View contains \"list\" | \"Default list\" [clickable] @(322,710)\n[9] View contains \"Add tags\" [clickable] @(540,884)\n[10] View [clickable,disabled] @(540,1056)\n[11] TextView \"Add subtask\" [clickable] @(336,1056)\n[12] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable,disabled] @(540,1249)\n[13] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable] @(508,1249)\n[14] View [clickable,disabled] @(540,1428)\n[15] EditText \"See https://example.com/guide\" [clickable,focused] @(614,1443)\n[16] View contains \"Save\" id=save_task [clickable] @(75,148)\n[17] View contains \"Delete task\" [clickable] @(1007,148)\n[18] TextView \"examples\" [clickable] @(236,1553)\n[19] TextView \"example\" [clickable] @(539,1553)\n[20] TextView \"exampled\" [clickable] @(843,1553)\n[21] ImageButton desc=\"Voice input\" id=suggestions_strip_voice_key [clickable] @(1032,1552)\n[22] Key desc=\"q\" @(54,1701)\n[23] Key desc=\"w\" @(162,1701)\n[24] Key desc=\"e\" @(270,1701)\n[25] Key desc=\"r\" @(378,1701)\n[26] Key desc=\"t\" @(486,1701)\n[27] Key desc=\"y\" @(594,1701)\n[28] Key desc=\"u\" @(702,1701)\n[29] Key desc=\"i\" @(810,1701)\n[30] Key desc=\"o\" @(918,1701)\n[31] Key desc=\"p\" @(1026,1701)\n[32] Key desc=\"a\" @(81,1866)\n[33] Key desc=\"s\" @(216,1866)\n[34] Key desc=\"d\" @(324,1866)\n[35] Key desc=\"f\" @(432,1866)\n[36] Key desc=\"g\" @(540,1866)\n[37] Key desc=\"h\" @(648,1866)\n[38] Key desc=\"j\" @(756,1866)\n[39] Key desc=\"k\" @(864,1866)\n[40] Key desc=\"l\" @(999,1866)\n[41] Key desc=\"Shift\" @(81,2031)\n[42] Key desc=\"z\" @(216,2031)\n[43] Key desc=\"x\" @(324,2031)\n[44] Key desc=\"c\" @(432,2031)\n[45] Key desc=\"v\" @(540,2031)\n[46] Key desc=\"b\" @(648,2031)\n[47] Key desc=\"n\" @(756,2031)\n[48] Key desc=\"m\" @(864,2031)\n[49] Key desc=\"Delete\" @(999,2031)\n[50] Key desc=\"Symbols\" @(81,2194)\n[51] Key desc=\",\" @(216,2194)\n[52] Key desc=\"Space\" @(540,2194)\n[53] Key desc=\".\" @(864,2194)\n[54] Key desc=\"Return\" @(999,2194)"
+ },
+ {
+  "kind": "act",
+  "n": 33,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step033.png"
+ },
+ {
+  "kind": "act",
+  "n": 34,
+  "tool": "press_key",
+  "input": {
+   "key": "BACK"
+  },
+  "result": "Foreground: org.tasks\nElements (25):\n[0] View id=due_date_row [clickable] @(540,221)\n[1] View contains \"Does not repeat\" [clickable] @(540,362)\n[2] View contains \"Priority\" [clickable,disabled] @(540,534)\n[3] RadioButton [checked] @(460,535)\n[4] RadioButton [clickable] @(625,535)\n[5] RadioButton [clickable] @(790,535)\n[6] RadioButton [clickable] @(955,535)\n[7] View contains \"list\" | \"Default list\" [clickable] @(540,709)\n[8] View contains \"list\" | \"Default list\" [clickable] @(322,710)\n[9] View contains \"Add tags\" [clickable] @(540,884)\n[10] View [clickable,disabled] @(540,1056)\n[11] TextView \"Add subtask\" [clickable] @(336,1056)\n[12] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable,disabled] @(540,1249)\n[13] View contains \"Enable reminders\" | \"Reminders are disabled in Android Settings\" [clickable] @(508,1249)\n[14] View [clickable,disabled] @(540,1443)\n[15] EditText \"See https://example.com/guide\" [clickable,focused] @(614,1443)\n[16] View contains \"Add location\" [clickable] @(540,1615)\n[17] View [clickable,disabled] @(540,1787)\n[18] TextView \"Add attachment\" [clickable] @(635,1787)\n[19] View contains \"Don't add to calendar\" [clickable] @(540,1959)\n[20] View contains \"Timer\" [clickable] @(540,2131)\n[21] View [clickable] @(1017,2132)\n[22] View contains \"Created 1970-01-01 00:00\" [clickable,disabled] @(540,2246)\n[23] View contains \"Save\" id=save_task [clickable] @(75,148)\n[24] View contains \"Delete task\" [clickable] @(1007,148)"
+ },
+ {
+  "kind": "act",
+  "n": 35,
+  "tool": "press_key",
+  "input": {
+   "key": "BACK"
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(347,2169)\n[25] ImageView desc=\"More options\" [clickable] @(462,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 36,
+  "tool": "observe",
+  "input": {},
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] TextView \"Thu\" id=due_date [clickable] @(1007,892)\n[9] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1150)\n[10] ImageView id=completeBox [clickable] @(73,1113)\n[11] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1199)\n[12] TextView \"Nov 24\" id=due_date [clickable] @(981,1112)\n[13] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1337)\n[14] ImageView id=completeBox [clickable] @(126,1334)\n[15] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1641)\n[18] ImageView id=completeBox [clickable] @(73,1638)\n[19] TextView \"Dec 4\" id=due_date [clickable] @(992,1637)\n[20] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1827)\n[21] ImageView id=completeBox [clickable] @(73,1790)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(347,2169)\n[25] ImageView desc=\"More options\" [clickable] @(462,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 37,
+  "tool": "tap",
+  "input": {
+   "element": 24
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By title\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[6] View contains \"Ascending\" [clickable] @(907,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 38,
+  "tool": "tap",
+  "input": {
+   "x": 400,
+   "y": 1261
+  },
+  "result": "Foreground: org.tasks\nElements (10):\n[0] View desc=\"Close sheet\" [clickable] @(540,583)\n[1] View contains \"Drag handle\" [clickable] @(540,1227)\n[2] View contains \"By due date\" [clickable] @(540,1346)\n[3] View contains \"By start date\" [clickable] @(540,1462)\n[4] View contains \"By priority\" [clickable] @(540,1578)\n[5] View contains \"By title\" [clickable] @(540,1694)\n[6] View contains \"By last modified\" [clickable] @(540,1810)\n[7] View contains \"Smart sort\" [clickable] @(540,1926)\n[8] View contains \"Created\" [clickable] @(540,2044)\n[9] View contains \"My order\" | \"Not available for tags, filters, or places\" [clickable,disabled] @(540,2189)"
+ },
+ {
+  "kind": "act",
+  "n": 39,
+  "tool": "tap",
+  "input": {
+   "x": 540,
+   "y": 1346
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By due date\" | \"Ascending\" [clickable] @(540,1261)\n[4] View contains \"Ascending\" [clickable] @(907,1261)\n[5] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[6] View contains \"Ascending\" [clickable] @(907,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "say",
+  "after": 39,
+  "text": "Now toggle to Descending and look."
+ },
+ {
+  "kind": "act",
+  "n": 40,
+  "tool": "tap",
+  "input": {
+   "x": 907,
+   "y": 1261
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By due date\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[6] View contains \"Ascending\" [clickable] @(907,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 41,
+  "tool": "tap",
+  "input": {
+   "x": 540,
+   "y": 417
+  },
+  "result": "Foreground: org.tasks\nElements (27):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,930)\n[7] ImageView id=completeBox [clickable] @(73,893)\n[8] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1116)\n[9] ImageView id=completeBox [clickable] @(73,1113)\n[10] TextView \"Dec 4\" id=due_date [clickable] @(992,1112)\n[11] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1302)\n[12] ImageView id=completeBox [clickable] @(73,1265)\n[13] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1351)\n[14] TextView \"Nov 24\" id=due_date [clickable] @(981,1264)\n[15] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1489)\n[16] ImageView id=completeBox [clickable] @(126,1486)\n[17] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,1641)\n[18] ImageView id=completeBox [clickable] @(126,1638)\n[19] RelativeLayout contains \"Buy milk\" | \"2 litres\" id=rowBody [clickable] @(540,1827)\n[20] ImageView id=completeBox [clickable] @(73,1790)\n[21] TextView \"Thu\" id=due_date [clickable] @(1007,1789)\n[22] ImageButton [clickable] @(84,2169)\n[23] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[24] Button desc=\"Sort\" id=menu_sort [clickable] @(347,2169)\n[25] ImageView desc=\"More options\" [clickable] @(462,2169)\n[26] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 42,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step042.png"
+ },
+ {
+  "kind": "act",
+  "n": 43,
+  "tool": "file_report",
+  "input": {
+   "screen": "My Tasks list",
+   "element": "Task list order with Sorting By title Descending",
+   "symptom_type": "wrong_value",
+   "expected": "Descending title order: Read docs, Pay rent, Pack for trip, Buy milk. By due date Descending does reverse correctly, so title should too.",
+   "observed": "Sorting sheet reads \"By title\" \"Descending\" but the list is identical to Ascending: Buy milk, Pack for trip (Charge phone, Print tickets), Pay rent, Read docs. Seen twice (also after subtasks set to By title).",
+   "observed_quote": "By title",
+   "steps": [
+    "Sort sheet > Grouping: None",
+    "Sorting: By title, Ascending -> order Buy milk, Pack for trip, Pay rent, Read docs",
+    "Tap the direction toggle so it reads Descending",
+    "Close sheet, pull to refresh: order unchanged",
+    "Switch Sorting to By due date and Descending: list reverses correctly"
+   ]
+  },
+  "result": "Developer: could not reproduce with the steps given."
+ },
+ {
+  "kind": "act",
+  "n": 44,
+  "tool": "tap",
+  "input": {
+   "element": 24
+  },
+  "result": "Foreground: org.tasks\nElements (17):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"None\" [clickable] @(540,1061)\n[3] View contains \"Sorting\" | \"By due date\" | \"Descending\" [clickable] @(540,1261)\n[4] View contains \"Descending\" [clickable] @(897,1261)\n[5] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[6] View contains \"Ascending\" [clickable] @(907,1461)\n[7] View contains \"Show unstarted\" [clickable] @(540,1627)\n[8] View [clickable,checked] @(969,1627)\n[9] View contains \"Show completed\" [clickable] @(540,1753)\n[10] View [clickable,checked] @(969,1753)\n[11] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[12] View [clickable,checked] @(969,1882)\n[13] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[14] View [clickable,checked] @(969,2008)\n[15] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[16] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 45,
+  "tool": "tap",
+  "input": {
+   "x": 400,
+   "y": 1061
+  },
+  "result": "Foreground: org.tasks\nElements (9):\n[0] View desc=\"Close sheet\" [clickable] @(540,667)\n[1] View contains \"Drag handle\" [clickable] @(540,1396)\n[2] View contains \"None\" [clickable] @(540,1515)\n[3] View contains \"By due date\" [clickable] @(540,1631)\n[4] View contains \"By start date\" [clickable] @(540,1747)\n[5] View contains \"By priority\" [clickable] @(540,1863)\n[6] View contains \"By last modified\" [clickable] @(540,1979)\n[7] View contains \"Created\" [clickable] @(540,2095)\n[8] View contains \"List\" [clickable] @(540,2216)"
+ },
+ {
+  "kind": "act",
+  "n": 46,
+  "tool": "tap",
+  "input": {
+   "x": 540,
+   "y": 1631
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Ascending\" [clickable] @(540,1061)\n[3] View contains \"Ascending\" [clickable] @(907,1061)\n[4] View contains \"Sorting\" | \"By due date\" | \"Descending\" [clickable] @(540,1261)\n[5] View contains \"Descending\" [clickable] @(897,1261)\n[6] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[7] View contains \"Ascending\" [clickable] @(907,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 47,
+  "tool": "tap",
+  "input": {
+   "x": 907,
+   "y": 1061
+  },
+  "result": "Foreground: org.tasks\nElements (18):\n[0] View desc=\"Close sheet\" [clickable] @(540,417)\n[1] View contains \"Drag handle\" [clickable] @(540,897)\n[2] View contains \"Grouping\" | \"By due date\" | \"Descending\" [clickable] @(540,1061)\n[3] View contains \"Descending\" [clickable] @(897,1061)\n[4] View contains \"Sorting\" | \"By due date\" | \"Descending\" [clickable] @(540,1261)\n[5] View contains \"Descending\" [clickable] @(897,1261)\n[6] View contains \"Subtasks\" | \"By title\" | \"Ascending\" [clickable] @(540,1461)\n[7] View contains \"Ascending\" [clickable] @(907,1461)\n[8] View contains \"Show unstarted\" [clickable] @(540,1627)\n[9] View [clickable,checked] @(969,1627)\n[10] View contains \"Show completed\" [clickable] @(540,1753)\n[11] View [clickable,checked] @(969,1753)\n[12] View contains \"Show completed subtasks\" [clickable] @(540,1882)\n[13] View [clickable,checked] @(969,1882)\n[14] View contains \"Move completed tasks to bottom\" [clickable] @(540,2008)\n[15] View [clickable,checked] @(969,2008)\n[16] View contains \"Completed\" | \"By completion time\" | \"Descending\" [clickable] @(540,2174)\n[17] View contains \"Descending\" [clickable] @(897,2174)"
+ },
+ {
+  "kind": "act",
+  "n": 48,
+  "tool": "tap",
+  "input": {
+   "x": 540,
+   "y": 417
+  },
+  "result": "Foreground: org.tasks\nElements (28):\n[0] TextView \"My Tasks\" @(176,136)\n[1] ImageView desc=\"More options\" [clickable] @(1027,146)\n[2] TextView \"Get notified at the right time\" @(496,357)\n[3] TextView \"To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings\" @(540,494)\n[4] View contains \"Dismiss\" [clickable] @(593,653)\n[5] View contains \"Settings\" [clickable] @(844,653)\n[6] RelativeLayout contains \"No due date\" id=header_row [clickable] @(540,893)\n[7] RelativeLayout contains \"Read docs\" | \"See https://example.com/guide\" id=rowBody [clickable] @(540,1077)\n[8] ImageView id=completeBox [clickable] @(73,1040)\n[9] RelativeLayout contains \"Due Friday, December 4\" id=header_row [clickable] @(540,1260)\n[10] RelativeLayout contains \"Pay rent\" id=rowBody [clickable] @(540,1410)\n[11] ImageView id=completeBox [clickable] @(73,1407)\n[12] TextView id=due_date [clickable] @(1038,1406)\n[13] RelativeLayout contains \"Due Tuesday, November 24\" id=header_row [clickable] @(540,1559)\n[14] RelativeLayout contains \"Pack for trip\" | \"keyboard_arrow_up\" | \"2\" id=rowBody [clickable] @(540,1743)\n[15] ImageView id=completeBox [clickable] @(73,1706)\n[16] View contains \"keyboard_arrow_up\" | \"2\" [clickable] @(208,1792)\n[17] TextView id=due_date [clickable] @(1038,1705)\n[18] RelativeLayout contains \"Charge phone\" id=rowBody [clickable] @(566,1930)\n[19] ImageView id=completeBox [clickable] @(126,1927)\n[20] RelativeLayout contains \"Print tickets\" id=rowBody [clickable] @(566,2082)\n[21] ImageView id=completeBox [clickable] @(126,2079)\n[22] RelativeLayout contains \"Due Thursday\" id=header_row [clickable] @(540,2231)\n[23] ImageButton [clickable] @(84,2169)\n[24] Button desc=\"Search\" id=menu_search [clickable] @(221,2169)\n[25] Button desc=\"Sort\" id=menu_sort [clickable] @(347,2169)\n[26] ImageView desc=\"More options\" [clickable] @(462,2169)\n[27] ImageButton desc=\"Create new task\" id=fab [clickable] @(965,2169)"
+ },
+ {
+  "kind": "act",
+  "n": 49,
+  "tool": "screenshot",
+  "input": {},
+  "result": "",
+  "image": "step049.png"
+ },
+ {
+  "kind": "act",
+  "n": 50,
+  "tool": "file_report",
+  "input": {
+   "screen": "Task edit - Read docs",
+   "element": "Notes field",
+   "symptom_type": "missing",
+   "expected": "URL in the note is detected and shown as a tappable link (styled/underlined), opening the browser",
+   "observed": "\"See https://example.com/guide\" is plain text, no link styling; tapping just places the cursor",
+   "observed_quote": "See https://example.com/guide",
+   "steps": [
+    "Open Read docs",
+    "Look at the notes field",
+    "Tap on the URL"
+   ]
+  },
+  "result": "Developer: could not reproduce with the steps given."
+ },
+ {
+  "kind": "act",
+  "n": 51,
+  "tool": "sign_off",
+  "input": {
+   "confidence": 0.4,
+   "notes": "Filed 4 reports. One was confirmed: the Subtasks \"My order\" row shows a Descending toggle. Three were not reproduced by the developer: title Descending sort leaving the list in ascending order, and the note URL not shown or behaving as a link. I saw the Descending title sort twice, while due date Descending reversed correctly. Grouping headings and due-date sorting looked right."
+  },
+  "result": "Signed off. The session has ended."
+ },
+ {
+  "kind": "say",
+  "after": 51,
+  "text": "I signed off with low confidence (0.4). Of the four bugs I reported, the developer confirmed one and said they could not reproduce the other three.\n\n- **Confirmed:** the Subtasks row in the sort sheet shows a \"Descending\" toggle even when it is set to \"My order\", where a direction makes no sense.\n- **Title sort Descending:** this was reported twice and not reproduced either time. With Grouping set to None, Sorting By title Descending left the list in ascending order: Buy milk, Pack for trip, Pay rent, Read docs. I saw it twice, and By due date Descending did reverse the list correctly.\n- **Note link:** \"See https://example.com/guide\" in the Read docs notes looks like plain text. It has no link styling, and tapping it just put the cursor in the field. I never saw a browser open, and I did not check whether the link works in the task list.\n\nGrouping by due date looked right: headings were \"Due Thursday\", \"Due Tuesday, November 24\", \"Due Friday, December 4\" and \"No due date\", and reversing the grouping direction worked. I did not test rotating the screen, a different date format, or the other sort options beyond title and due date."
+ }
+]

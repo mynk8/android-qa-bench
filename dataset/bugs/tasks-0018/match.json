@@ -1,0 +1,66 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "sort order"
+  ],
+  "fields": [
+    "order by title"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "tasks are in alphabetical order by title",
+    "Zucchini is last"
+  ],
+  "observed_contains_any": [
+    "tasks are not sorted by title",
+    "Zucchini is first"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "alphabetic*",
+      "a to z",
+      "by title",
+      "title",
+      "last",
+      "sorted",
+      "order*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "first",
+      "not sorted",
+      "unsorted",
+      "unchanged",
+      "same",
+      "wrong",
+      "not alphabetic*",
+      "top",
+      "ignored",
+      "no effect",
+      "stays*",
+      "identical",
+      "not reversed",
+      "ascending order"
+    ]
+  ],
+  "location_concepts": [
+    "sort*",
+    "order*",
+    "title*"
+  ],
+  "anchors": {
+    "elements": [
+      "Zucchini",
+      "Buy milk",
+      "Sort"
+    ],
+    "observed": []
+  }
+}

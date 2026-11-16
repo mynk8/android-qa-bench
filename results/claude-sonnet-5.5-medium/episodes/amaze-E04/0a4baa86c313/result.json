@@ -1,0 +1,96 @@
+{
+  "run_id": "0a4baa86c313",
+  "item_id": "amaze-E04",
+  "kind": "episode",
+  "app_id": "amaze",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "amaze-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "amaze-0013",
+        "amaze-0015"
+      ],
+      "present": [
+        "amaze-0013",
+        "amaze-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/amaze-E04/0a4baa86c313/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "amaze-0013": "missed_unreached",
+    "amaze-0015": "missed_unreached"
+  },
+  "elapsed_s": 177.403,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "I found no defects in the three areas, so I filed no reports. Navigation drawer: storage, bookmarks and category views (Images, Quick access, Audio) all worked. A bookmark added for Alpha showed up in the drawer and opened the right folder. The add-folder button hid in category views and came back on return to a folder. Multi-file overflow: the Select All / Deselect All toggle worked for no, partial and full selection, in a normal folder and in the Images view. Properties dialogs: file and folder sizes were correct, e.g. AndroidQA showed 41.05 kB, matching the file sizes. I did not test the Hide action, because it changes data. The debug build raised a LeakCanary notice, \"Found 3 retained objects grouped as 2 distinct leaks (2 new)\", which I did not investigate."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "found": [],
+  "required": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "missed": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 71,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "amaze-0013",
+    "amaze-0015"
+  ],
+  "bug_meta": {
+    "amaze-0013": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "amaze-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

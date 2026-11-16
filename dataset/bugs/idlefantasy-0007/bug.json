@@ -1,0 +1,67 @@
+{
+  "bug_id": "idlefantasy-0007",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "missing",
+  "fix_date": "2026-07-22",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_profile": [
+        {
+          "desc": "Profile"
+        },
+        {
+          "text": "Profile"
+        }
+      ],
+      "bonuses_tab": [
+        {
+          "text": "Bonuses"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0007-buggy",
+    "fixed": "idlefantasy-0007-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0007.patch",
+    "confidence": "high",
+    "lines_changed": 27,
+    "approach": "BonusesTab no longer renders the three Infinite Tower rows (XP, coin drops, HP) for a character with tower bonuses."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

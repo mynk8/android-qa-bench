@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "file list",
+    "element": "Alpha (1)",
+    "field": "folder contents",
+    "symptom_type": "duplicated",
+    "expected": "Alpha (1) contains only readme.txt",
+    "observed": "Alpha (1) contains another folder named Alpha (1)",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "file list",
+    "element": "something",
+    "field": "folder contents",
+    "symptom_type": "duplicated",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

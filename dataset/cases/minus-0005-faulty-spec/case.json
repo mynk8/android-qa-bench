@@ -1,0 +1,14 @@
+{
+  "case_id": "minus-0005-faulty-spec",
+  "bug_id": "minus-0005",
+  "_build_id": "minus-0005-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "budget_basic",
+  "agent_input": "agent_input.md"
+}

@@ -1,0 +1,116 @@
+{
+  "run_id": "769d3506e164",
+  "item_id": "minus-E05",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expense history",
+      "element": "date section heading",
+      "symptom_type": "wrong_value",
+      "expected": "Heading includes weekday name, e.g. \"Friday, 13 November\"",
+      "observed": "Heading shows only the date without weekday",
+      "observed_quote": "13 November",
+      "element_ref": 9,
+      "steps": [
+        "Open app",
+        "Swipe down history handle",
+        "Look at section heading"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Collapse",
+          "13 November"
+        ],
+        "bounds": [
+          42,
+          426,
+          1038,
+          541
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0001"
+      ],
+      "present": [
+        "minus-0001"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/minus-E05/769d3506e164/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0001": "missed_unreached"
+  },
+  "elapsed_s": 77.248,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "I filed one report: the history date heading reads \"13 November\" with no weekday name. The developer replied that they could not reproduce it. The history list, upcoming recurring payments and analytics otherwise looked consistent: totals of $60, $40 and $20, available 40%, and monthly commitment 20%. The analytics daily average of $2.61 looked odd, but I couldn't tell how it is meant to be calculated, so I didn't report it. I did not test rotation, adding or deleting expenses, or the Categories tab."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0001"
+  ],
+  "found": [],
+  "required": [
+    "minus-0001"
+  ],
+  "missed": [
+    "minus-0001"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 20,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0001"
+  ],
+  "bug_meta": {
+    "minus-0001": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "file browser",
+    "element": "Zeta",
+    "field": "sort order",
+    "symptom_type": "no_effect",
+    "expected": "with Folder first off, Zeta sorts after todo.txt by name",
+    "observed": "Zeta still sorts at the top",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "file browser",
+    "element": "something",
+    "field": "sort order",
+    "symptom_type": "no_effect",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

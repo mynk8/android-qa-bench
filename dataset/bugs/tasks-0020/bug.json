@@ -1,0 +1,48 @@
+{
+  "bug_id": "tasks-0020",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2025-03-30",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {}
+  },
+  "builds": {
+    "buggy": "tasks-0020-buggy",
+    "fixed": "tasks-0020-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0020.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "The default for the group order preference is descending, so the first launch lists the latest due date group first."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

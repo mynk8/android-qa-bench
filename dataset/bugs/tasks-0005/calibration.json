@@ -1,0 +1,215 @@
+{
+  "bug_id": "tasks-0005",
+  "runs": 1,
+  "started": "2026-11-11T01:23:03+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "row": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=DAILY;COUNT=1",
+            "parent": 0
+          }
+        ]
+      },
+      "seconds": 64.6,
+      "screenshot_sha256": "b7755a70ccd2226ce0bc197648099bfe9d916095780601b195c1e0424aae0210",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0005-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "7:55",
+          "7:55\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Thursday, December 10",
+          "Final dose",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 51.8,
+      "screenshot_sha256": "dff52028e5806e02ad508a27208fe499b0f8236a301203fcea7d0cf5f44bf887",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0005-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "after": [
+          {
+            "_id": 1,
+            "dueDate": 1798113600000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "texts": [
+          "7:56",
+          "7:56\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Thursday, December 24",
+          "Weekly review",
+          "Search",
+          "Sort",
+          "More options",
+          "Weekly review rescheduled for December 24",
+          "Undo",
+          "Create new task"
+        ]
+      },
+      "seconds": 42.8,
+      "screenshot_sha256": "0ce69e59ea69410dc6ad3efd38c07a06dd8623d7b0c9e4e93416428a624703ae",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0005-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "row": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 1794340683944,
+            "recurrence": "FREQ=DAILY;COUNT=1",
+            "parent": 0
+          }
+        ]
+      },
+      "seconds": 25.5,
+      "screenshot_sha256": "6d08236baff34b3053155fa6cee21163b39bf6c9ef08efbc2b52477643598c05",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0005-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "7:58",
+          "7:58\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Completed",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 34.2,
+      "screenshot_sha256": "7d20d0613cf0a36a3b67a425e4a3d968ec6cc16f8af3eed920964f2b7b3a607c",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0005-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "after": [
+          {
+            "_id": 1,
+            "dueDate": 1798113600000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "texts": [
+          "7:59",
+          "7:59\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Thursday, December 24",
+          "Weekly review",
+          "Search",
+          "Sort",
+          "More options",
+          "Weekly review rescheduled for December 24",
+          "Undo",
+          "Create new task"
+        ]
+      },
+      "seconds": 67.4,
+      "screenshot_sha256": "be80f7800eb2170893ff51971eb5476507cc35a70654be11104fe849c4f7717c",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0005-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T01:30:20+0530"
+}

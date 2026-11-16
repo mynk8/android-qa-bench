@@ -1,0 +1,35 @@
+{
+  "delete_external": [
+    "AndroidQA/Amaze"
+  ],
+  "files": [
+    {
+      "path": "AndroidQA/Amaze/Alpha/readme.txt",
+      "text": "alpha readme\n"
+    },
+    {
+      "path": "AndroidQA/Amaze/Beta/readme.txt",
+      "text": "beta readme\n"
+    },
+    {
+      "path": "AndroidQA/Amaze/report+final.txt",
+      "text": "final report\n"
+    },
+    {
+      "path": "AndroidQA/Amaze/notes.txt",
+      "text": "shopping notes\n"
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "AndroidQA/Amaze/photo.jpg",
+      "fixture": "fixtures/photo.jpg"
+    },
+    {
+      "path": "AndroidQA/Amaze/keep.jpg",
+      "fixture": "fixtures/keep.jpg"
+    }
+  ],
+  "id": "files_basic",
+  "preconditions": "Internal storage has a folder AndroidQA/Amaze containing: folder Alpha (with readme.txt), folder Beta (with its own readme.txt), files report+final.txt and notes.txt, and two photos, photo.jpg and keep.jpg. No bookmarks have been added."
+}

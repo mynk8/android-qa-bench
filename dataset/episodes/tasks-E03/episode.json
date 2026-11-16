@@ -1,0 +1,50 @@
+{
+  "episode_id": "tasks-E03",
+  "app_id": "tasks",
+  "bugs": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "seed_id": "inbox_basic",
+  "builds": {
+    "00": "tasks-E03-00",
+    "01": "tasks-E03-01",
+    "10": "tasks-E03-10",
+    "11": "tasks-E03-11"
+  },
+  "observable": {
+    "00": {
+      "tasks-0008": false,
+      "tasks-0012": false
+    },
+    "01": {
+      "tasks-0008": false,
+      "tasks-0012": true
+    },
+    "10": {
+      "tasks-0008": true,
+      "tasks-0012": false
+    },
+    "11": {
+      "tasks-0008": true,
+      "tasks-0012": true
+    }
+  },
+  "interactions": [
+    {
+      "a": "tasks-0008",
+      "b": "tasks-0012",
+      "type": "independent"
+    }
+  ],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

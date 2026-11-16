@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task list",
+    "element": "subtasks",
+    "field": "sort order",
+    "symptom_type": "wrong_value",
+    "expected": "subtasks keep their order Charge phone then Print tickets",
+    "observed": "Print tickets is listed before Charge phone",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task list",
+    "element": "something",
+    "field": "sort order",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

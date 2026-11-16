@@ -1,0 +1,243 @@
+{
+  "run_id": "528179bfcdf7",
+  "item_id": "ankidroid-E06",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note",
+      "element": "42",
+      "element_ref": 42,
+      "field": "Type (note_type_spinner)",
+      "symptom_type": "not_persisted",
+      "expected": "Note type switched in the Add note picker is stored to the collection straight away, so reopening Add shows the chosen type.",
+      "observed": "After switching Type to \"Basic (type in the answer)\" and leaving Add with Back, reopening Add from the card browser shows Type \"Basic\" again. Reproduced twice.",
+      "observed_quote": "Spinner contains \"Basic\"",
+      "steps": [
+        "Open Card browser (deck Spanish, 4 cards shown).",
+        "Tap the Add button in the toolbar.",
+        "Tap the Type spinner and choose 'Basic (and reversed card)' (or 'Basic (type in the answer)').",
+        "Press Back without saving to leave Add.",
+        "Tap the Add button in the Card browser again.",
+        "Observe Type shows 'Basic', not the type chosen before."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/note_type_spinner",
+        "class": "android.widget.Spinner",
+        "contains": [
+          "Basic"
+        ],
+        "bounds": [
+          147,
+          244,
+          1067,
+          370
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Create deck dialog (opened from Change deck, Move card)",
+      "element": "39",
+      "element_ref": 39,
+      "field": "Name (dialog_text_input)",
+      "symptom_type": "wrong_value",
+      "expected": "A deck name made only of '::' separators is not a valid deck name, so Create stays disabled, as it does for an empty name.",
+      "observed": "With the name field containing \"::\", the Create button is enabled. An empty name disables Create.",
+      "observed_quote": "Create",
+      "steps": [
+        "Open Card browser (deck Spanish). Long-press card 'comer' to select it.",
+        "Tap More options, then 'Change deck'.",
+        "Tap the Add button in the deck picker to open 'Create deck'.",
+        "Observe the Create button is disabled with an empty Name field.",
+        "Type '::' into the Name field.",
+        "Observe Create becomes enabled."
+      ],
+      "anchor_node": {
+        "id": "android:id/button1",
+        "text": "Create",
+        "class": "android.widget.Button",
+        "bounds": [
+          752,
+          918,
+          926,
+          1044
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Create deck dialog (from deck list FAB menu)",
+      "element": "7",
+      "element_ref": 7,
+      "field": "Name (dialog_text_input)",
+      "symptom_type": "wrong_value",
+      "expected": "A name made only of '::' separators is invalid: Create stays disabled, as for an empty or blank name, and no deck is created.",
+      "observed": "Name '::' leaves Create enabled. Tapping Create shows 'Deck created' and a new deck named \"blank\" appears in the deck list.",
+      "observed_quote": "blank",
+      "steps": [
+        "On the deck list, tap the Add (FAB) button, then 'Create deck'.",
+        "Type '::' into the Name field. Create is enabled (for comparison, a blank or spaces-only Name keeps Create disabled).",
+        "Tap Create.",
+        "Observe the snackbar 'Deck created' and a new deck named 'blank' in the deck list."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/deck_layout",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "blank",
+          "0",
+          "0",
+          "0"
+        ],
+        "bounds": [
+          0,
+          231,
+          1080,
+          358
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Add note",
+      "element": "42",
+      "element_ref": 42,
+      "field": "Type (note_type_spinner) and Deck (note_deck_name)",
+      "symptom_type": "not_persisted",
+      "expected": "The note type picked in Add is stored straight away: the next time Add is opened it shows the most recent choice. The Deck shown in Add is the real deck the note goes to.",
+      "observed": "Type choices are not reliably kept. Sequence: (1) choose 'Basic (type in the answer)', Back, reopen Add: shows 'Basic'. (2) reopen Add again: shows 'Basic (type in the answer)', i.e. the earlier choice. (3) choose 'Cloze', Back, reopen: shows 'Cloze'. Also Add shows Deck 'blank::blank' after a deck named 'blank' was created from the '::' input.",
+      "observed_quote": "Spinner contains \"Cloze\"",
+      "steps": [
+        "Open Card browser with deck 'All decks'. Tap the Add button in the toolbar.",
+        "Tap Type and choose 'Basic (type in the answer)'. Press Back without saving.",
+        "Tap the Add button in the Card browser again. Observe Type is 'Basic'.",
+        "Tap Add again (without changing anything). Observe Type is now 'Basic (type in the answer)'.",
+        "Tap Type, choose 'Cloze', press Back, then tap Add again. Observe Type shows 'Cloze'."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/note_type_spinner",
+        "class": "android.widget.Spinner",
+        "contains": [
+          "Cloze"
+        ],
+        "bounds": [
+          147,
+          244,
+          1067,
+          370
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ],
+      "present": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/ankidroid-E06/528179bfcdf7/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0021": "reported",
+    "ankidroid-0022": "missed_unreached",
+    "ankidroid-0030": "missed_unreached"
+  },
+  "elapsed_s": 340.346,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "missed": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "true_positives": 0,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 140,
+  "precision": 0.25,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "bug_meta": {
+    "ankidroid-0021": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0022": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0030": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match"
+    ]
+  }
+}

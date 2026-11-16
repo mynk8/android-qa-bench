@@ -1,0 +1,162 @@
+{
+  "episode_id": "tasks-E04",
+  "start_build": "tasks-E04-111",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 26.5,
+      "screenshot_sha256": "9d3a97c8d9f069b3394b63b0ab72b4f52dd46122a0d848673aac82e2921a61cb",
+      "bug": "tasks-0016",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 15.5,
+      "screenshot_sha256": "cfb8d6592efd09609d3c00edcbab938697910d6695f643d709d52b689a50bd3f",
+      "bug": "tasks-0016",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "no_start": 6,
+        "item": 17,
+        "headers": [],
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "No start date",
+          "Read docs",
+          "See https://example.com/guide",
+          "Pay rent",
+          "Dec 1",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Buy milk",
+          "2 litres",
+          "Mon",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 28.8,
+      "screenshot_sha256": "7d49f456e0c5ce3451cb88ba7f004d217da903cafe49813ae6fefcaa9096bb01",
+      "bug": "tasks-0017",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "start_header": [
+          6
+        ],
+        "no_start": 10,
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Start today",
+          "Buy milk",
+          "2 litres",
+          "Mon",
+          "No start date",
+          "Read docs",
+          "See https://example.com/guide",
+          "Pay rent",
+          "Dec 1",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Nov 21",
+          "Charge phone",
+          "Print tickets",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task"
+        ]
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "67833c4a868a8af1b158a8d1ba9bf29986fe31473bdfbc1879d25d418b6bffdd",
+      "bug": "tasks-0017",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 16.4,
+      "screenshot_sha256": "a898deb07479866588bb9978cd58813fd149e9c2c20e0ff33324a05bfd5d185e",
+      "bug": "tasks-0021",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": {
+          "Grouping": [
+            "Ascending"
+          ],
+          "Sorting": [
+            "Descending"
+          ],
+          "Completed": [
+            "Descending"
+          ]
+        }
+      },
+      "seconds": 16.7,
+      "screenshot_sha256": "9cf5567ed6152a9831060c62e2d7bce65313d8b773b9bb75687718e703d252d5",
+      "bug": "tasks-0021",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

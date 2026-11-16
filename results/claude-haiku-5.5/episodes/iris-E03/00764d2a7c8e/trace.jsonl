@@ -1,0 +1,189 @@
+{"event": "install", "build": {"n": 1, "build_id": "iris-E03-1", "mask": "1", "unfixed": ["iris-0012"], "present": ["iris-0012"]}}
+{"event": "brief", "item_id": "iris-E03"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 278, "y": 740}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 2169}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 541, "y": 564}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 2169}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1290}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 422}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 629, "y": 148}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 2169}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 541, "y": 422}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 629, "y": 148}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 2169}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 956, "y": 148}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 619, "y": 1317}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 422}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 422}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 75, "y": 148}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 422}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 422}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 629, "y": 148}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 420}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 856, "y": 546}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 116, "message": {"type": "bug_report", "screen": "Media tab, Videos filter (blank state)", "element": "0", "field": "blank-state caption", "symptom_type": "wrong_value", "expected": "With the Videos filter active and no videos, the blank state should say something about videos (e.g. \"No videos found\"), matching the active filter badge \"Videos\".", "observed": "The blank state under the Videos filter shows \"No photos found\", while the filter badge reads \"Videos\" and the filter menu shows \"Videos (0)\".", "observed_quote": "No photos found", "steps": ["Open the Media tab (library holds 2 photos, big.jpg and huge.jpg).", "Tap the Filter icon at top right; the menu shows Media (2), Photos (2), Videos (0).", "Tap Videos (0).", "Observe the blank state in the middle of the screen reads 'No photos found' and the header badge reads 'Videos'."]}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["iris-0012"], "per_bug": {"iris-0012": "ok"}}
+{"event": "hit", "bugs": ["iris-0012"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 854, "y": 294}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 803, "y": 740}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 278, "y": 740}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 564}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 564}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 881, "y": 148}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 953, "y": 2169}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 184, "y": 422}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 541, "y": 422}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 629, "y": 148}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 582, "y": 1982}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 165, "message": {"type": "bug_report", "screen": "Albums tab (All)", "element": "5", "field": "album list / item count", "symptom_type": "duplicated", "expected": "One album \"IrisSeed\" with 2 items (big.jpg and huge.jpg) after both photos are restored from Trash.", "observed": "Two separate \"IrisSeed\" album tiles appear, each with 1 item, one with cover huge.jpg and one with big.jpg.", "observed_quote": "big.jpg | IrisSeed | 1 items", "steps": ["Start with IrisSeed holding big.jpg and huge.jpg (Albums shows one IrisSeed tile, '2 items').", "Media tab: long-press huge.jpg, tap big.jpg, tap Delete; confirm the 'moved to Trash' snackbar.", "Library > Trash: long-press one item, tap the other, tap 'Restore selected'. Snackbar says '2 items restored to gallery'.", "Open the Albums tab (All).", "Observe two IrisSeed tiles, each reading '1 items' (one with huge.jpg cover, one with big.jpg cover). Reproduced twice."]}}
+{"event": "scored", "report_n": 2, "quote_seen": false, "kind": "no_match", "bugs": null, "per_bug": {"iris-0012": "unverified_quote"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "tap_xy", "args": {"x": 127, "y": 2169}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 678, "y": 2169}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 2169}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 177, "message": {"type": "bug_report", "screen": "Albums tab (All), landscape", "element": "5", "field": "album tile caption", "symptom_type": "overlap", "expected": "In landscape, the album captions (name and item count) sit clear of the bottom navigation bar and can be read in full.", "observed": "In landscape the floating bottom navigation bar covers the second album's caption: the name \"IrisSeed\" is cut through and the \"1 items\" line is overdrawn by the bar.", "observed_quote": "1 items", "steps": ["Make sure the Albums tab shows two IrisSeed tiles (one cover huge.jpg, one cover big.jpg).", "Rotate the device to landscape.", "Observe the bottom navigation bar overlaps the captions of the second album tile (the right-hand IrisSeed tile)."]}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"iris-0012": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 181, "message": null}

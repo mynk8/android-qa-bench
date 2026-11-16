@@ -1,0 +1,144 @@
+{
+  "run_id": "d2b6bdd5d384",
+  "item_id": "minus-E02",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Analytics \u2014 savings recommendation in landscape",
+      "element": "One-time expenses row",
+      "element_ref": 10,
+      "field": "savings breakdown",
+      "symptom_type": "cut_off",
+      "expected": "The recurring and one-time expense breakdown rows should remain visible or reachable by scrolling after rotating the analytics screen to landscape.",
+      "observed": "In landscape at the bottom of the analytics page, the savings card content reaches below the screen: the One-time expenses row is clipped at the bottom, and the recurring expenses row is not visible. Swiping up does not reveal more content.",
+      "observed_quote": "One-time expenses",
+      "steps": [
+        "Open Analytics in portrait.",
+        "Scroll down to the Savings recommendation card.",
+        "Rotate the device to landscape.",
+        "Swipe up over the savings card to try to reveal the remaining breakdown."
+      ],
+      "anchor_node": {
+        "text": "One-time expenses",
+        "class": "android.widget.TextView",
+        "bounds": [
+          137,
+          1057,
+          460,
+          1080
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics in landscape, opened from Home",
+      "element": "New budget period button obscuring the lower analytics content",
+      "element_ref": 6,
+      "field": "trend chart and period controls",
+      "symptom_type": "cut_off",
+      "expected": "The chart axes, Days/Week/Biweek/Total controls, and date calendar should be reachable in landscape by scrolling or by fitting the layout to the screen.",
+      "observed": "After opening Analytics in landscape, only the top part of the trend chart is visible. The fixed New budget period button covers its lower area, and the chart axes and period controls are below the screen. Swiping up over the chart does not move the page.",
+      "observed_quote": "New budget period",
+      "steps": [
+        "From the Home screen, rotate the device to landscape.",
+        "Tap Analytics.",
+        "Swipe up over the trend chart to reach its axes and period controls."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "New budget period"
+        ],
+        "bounds": [
+          42,
+          880,
+          2232,
+          1038
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0008"
+      ],
+      "present": [
+        "minus-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/minus-E02/d2b6bdd5d384/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0008": "missed_unreached"
+  },
+  "elapsed_s": 2383.294,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.97,
+    "notes": "QA sweep complete for history expense editing, analytics, and budget settings. Starting data and settings were restored: Groceries $40 (Food, Nov 14), recurring Rent $20, $100 USD budget for Nov 12\u2013Dec 5, Daily split. Two Analytics landscape clipping reports were filed; the developer could not reproduce either with the steps provided."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0008"
+  ],
+  "found": [],
+  "required": [
+    "minus-0008"
+  ],
+  "missed": [
+    "minus-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 233,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0008"
+  ],
+  "bug_meta": {
+    "minus-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

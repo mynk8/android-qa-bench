@@ -1,0 +1,198 @@
+{
+  "run_id": "524415c02f38",
+  "item_id": "minus-E06",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main screen (expense entry + history sheet)",
+      "element": "Expense history bottom sheet (above the number pad)",
+      "element_ref": 0,
+      "symptom_type": "missing",
+      "expected": "After saving a $10.05 Food expense from the main screen, today's expense appears in the history sheet above the keypad, and the \"Today\" total pill shows the day's total.",
+      "observed": "The history sheet above the keypad is empty (no rows, no date header) both before and after saving. The \"Today $0.95\" pill that was shown at launch disappeared after saving. Analytics meanwhile reports Total Spent $70.05 with Food $10.05 today, so the entry was stored but is not shown in the history sheet.",
+      "observed_quote": "Daily Amount exceeded",
+      "steps": [
+        "Launch app; main screen shows 'Today $0.95' pill and a blank history sheet above the keypad",
+        "Enter 10.05 on keypad (keys 1, 0, ., 0, 5)",
+        "Tap the Food category chip",
+        "Tap the green check button",
+        "Observe: history sheet still blank; 'Today $0.95' pill replaced by 'Daily Amount exceeded' banner",
+        "Open Analytics: Total Spent shows $70.05 and Categories shows Food for Nov 14"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Daily Amount exceeded",
+          "For tomorrow ",
+          "$",
+          "0"
+        ],
+        "bounds": [
+          0,
+          63,
+          1080,
+          903
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet (Total budget)",
+      "element": "Spent amount in the Total budget card",
+      "element_ref": 4,
+      "symptom_type": "wrong_value",
+      "expected": "Spent should equal the sum of this period's expenses shown in Analytics: $70.05 (Groceries 40.00 + Rent 20.00 once + today's 10.05). The recurring Rent template should be counted once.",
+      "observed": "Budget sheet shows Spent $90.05 and Available 10%. Analytics for the same period shows Total Spent $70.05. The \"How it's calculated\" dialog then shows $100 - $80 = $20 in the first block and $100 - $90.05 = $9.95 in the second, so the budget sheet's spent total is inconsistent with itself and with Analytics.",
+      "observed_quote": "$90.05",
+      "steps": [
+        "Precondition data: Groceries 40.00 yesterday, Rent 20.00 recurring monthly, budget 100.00 for period 11 Nov - 04 Dec",
+        "On main screen enter 10.05, choose Food, tap check to save",
+        "Open Analytics: Total Spent shows $70.05",
+        "Open budget sheet by tapping the orange budget banner: Spent shows $90.05 and Available 10%",
+        "Tap 'Calculated amount' ($0.95): breakdown shows $100 - $80 = $20 at top and $100 - $90.05 = $9.95 lower down"
+      ],
+      "anchor_error": "no element 4 in the latest observation"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet > How it's calculated dialog",
+      "element": "Calculated amount card ($0.95) and its breakdown dialog",
+      "element_ref": 19,
+      "symptom_type": "wrong_value",
+      "expected": "The daily calculation uses the same spent figure the sheet shows ($90.05), so the top line should read $100 - $90.05 = $9.95 and the daily amount should be $9.95 / 20 days = $0.50, matching the \"For tomorrow\" line.",
+      "observed": "Calculated amount is $0.95, and the dialog's first block reads \"$100 - $80 = $20\" then \"$20 / 21 days = $0.95\". The next block reads \"$100 - $90.05 = $9.95\" and \"For tomorrow $9.95 / 20 days = $0.5\". The same dialog therefore uses two different spent totals ($80 and $90.05), and the headline daily amount is based on the stale $80.",
+      "observed_quote": "$100 - $80 = $20",
+      "steps": [
+        "Enter 10.05 on main keypad, choose Food, tap check (budget spent becomes $90.05)",
+        "Tap the orange budget banner to open the budget sheet: Spent $90.05, Calculated amount $0.95",
+        "Tap 'Calculated amount' to open 'How it's calculated'",
+        "Read the first block: $100 - $80 = $20, / 21 days = $0.95",
+        "Read the third block: $100 - $90.05 = $9.95, For tomorrow $9.95 / 20 days = $0.5"
+      ],
+      "anchor_error": "no element 19 in the latest observation"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen expense history sheet (portrait)",
+      "element": "Expense history sheet above the keypad",
+      "element_ref": 0,
+      "symptom_type": "missing",
+      "expected": "In portrait the history sheet shows the same content as in landscape: a \"Today\" section with the Food $10.05 row and its \"Total: $10.05\", plus the \"13 November $60\" section.",
+      "observed": "In portrait the sheet above the keypad is empty: no \"Today\" header, no Food row, no date sections. After rotating to landscape the same sheet shows \"Today\", \"Food 01:52 AM $10.05\", \"Total: $10.05\" and \"13 November $60\". Rotating back to portrait empties it again.",
+      "observed_quote": "Total: $10.05",
+      "steps": [
+        "With one Food expense of 10.05 saved today, portrait main screen shows an empty history sheet",
+        "Rotate device to landscape: sheet shows 'Today', 'Food 01:52 AM $10.05', 'Total: $10.05' and '13 November $60'",
+        "Rotate back to portrait: sheet is empty again",
+        "Relaunch app in portrait: sheet still empty"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Daily Amount exceeded",
+          "For tomorrow ",
+          "$",
+          "0"
+        ],
+        "bounds": [
+          0,
+          63,
+          1080,
+          903
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0018",
+        "minus-0019"
+      ],
+      "present": [
+        "minus-0018",
+        "minus-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/minus-E06/524415c02f38/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0018": "missed_unreached",
+    "minus-0019": "reported"
+  },
+  "elapsed_s": 400.439,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "found": [
+    "minus-0019"
+  ],
+  "required": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "missed": [
+    "minus-0018"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 293,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "minus-0018",
+    "minus-0019"
+  ],
+  "bug_meta": {
+    "minus-0018": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0019": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

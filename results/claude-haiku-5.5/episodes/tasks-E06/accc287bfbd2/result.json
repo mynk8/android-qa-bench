@@ -1,0 +1,150 @@
+{
+  "run_id": "accc287bfbd2",
+  "item_id": "tasks-E06",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Sort sheet (Grouping row)",
+      "element": "Grouping row (By due date)",
+      "element_ref": 2,
+      "field": "Grouping direction",
+      "symptom_type": "not_persisted",
+      "expected": "After setting Grouping direction to Descending for \"By due date\" and choosing another group, then choosing \"By due date\" again, the grouping direction should still be Descending.",
+      "observed": "Grouping direction reverts to Ascending when the group is switched away and back: \"Grouping | By due date | Ascending\". Reproduced twice (once via \"By start date\", once via \"By priority\"). Earlier, \"By priority\" kept Descending on return, so direction is not reliably kept per group.",
+      "observed_quote": "Ascending",
+      "steps": [
+        "Open the app (Tasks.org), tap the Sort button in the bottom toolbar.",
+        "In the sort sheet, the Grouping row shows 'By due date' 'Descending'. Tap the Grouping direction toggle ('Descending') so it reads 'Ascending'.",
+        "Tap the Grouping row, choose 'By start date'. Row reads 'By start date' 'Ascending'.",
+        "Tap the Grouping row, choose 'By due date' again. Row shows 'Ascending'.",
+        "Tap the direction toggle so 'By due date' reads 'Descending'.",
+        "Tap the Grouping row, choose 'By priority' (shows Descending), then tap the Grouping row and choose 'By due date'.",
+        "Observe: 'By due date' shows 'Ascending', not the 'Descending' that was set in step 5."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Grouping",
+          "By due date",
+          "Ascending"
+        ],
+        "bounds": [
+          0,
+          961,
+          1080,
+          1161
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Sort sheet (Grouping row)",
+      "element": "Grouping row showing 'By due date'",
+      "element_ref": 2,
+      "field": "Grouping direction",
+      "symptom_type": "wrong_value",
+      "expected": "Grouping 'By due date' keeps the direction the user saved (Descending). Choosing another group and then 'By due date' again should show Descending.",
+      "observed": "Saved direction is ignored on re-selecting the group. 'By due date' was set to Descending, the sheet was closed and reopened (still shows 'By due date' 'Descending'). Then 'By start date' was chosen and 'By due date' chosen again, and the row showed 'Grouping | By due date | Ascending'. Same result after switching via 'By priority'. Reproduced twice. Groups never changed before (By priority, By start date, List, Created) start at a fixed direction regardless of the saved value.",
+      "observed_quote": "Ascending",
+      "steps": [
+        "Open Tasks.org. Tap Sort in the bottom toolbar. Grouping row reads 'By due date' 'Ascending' (or 'Descending'). Tap the Grouping direction toggle until it reads 'Descending'.",
+        "Close the sheet and reopen Sort: Grouping still reads 'By due date' 'Descending' (persisted).",
+        "Tap the Grouping row, choose 'By start date'. Row reads 'By start date' 'Ascending'.",
+        "Tap the Grouping row, choose 'By due date' again.",
+        "Observe: Grouping row reads 'By due date' 'Ascending' instead of the saved 'Descending'."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Grouping",
+          "By due date",
+          "Ascending"
+        ],
+        "bounds": [
+          0,
+          961,
+          1080,
+          1161
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E06-1",
+      "mask": "1",
+      "unfixed": [
+        "tasks-0020"
+      ],
+      "present": [
+        "tasks-0020"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/tasks-E06/accc287bfbd2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0020": "missed_unreached"
+  },
+  "elapsed_s": 367.502,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "tasks-0020"
+  ],
+  "found": [],
+  "required": [
+    "tasks-0020"
+  ],
+  "missed": [
+    "tasks-0020"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 268,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "tasks-0020"
+  ],
+  "bug_meta": {
+    "tasks-0020": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

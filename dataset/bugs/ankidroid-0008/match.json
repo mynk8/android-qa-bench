@@ -1,0 +1,100 @@
+{
+  "screens": [
+    "card browser"
+  ],
+  "elements": [
+    "sort",
+    "change display order",
+    "display order",
+    "sort order",
+    "order",
+    "column"
+  ],
+  "fields": [
+    "notes mode",
+    "display order",
+    "sort field",
+    "created",
+    "column"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "notes mode keeps the display order chosen in notes mode",
+    "the column chosen for notes mode is still selected"
+  ],
+  "observed_contains_any": [
+    "notes mode shows the cards sort order",
+    "sort field is selected instead of the chosen column"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "sort*",
+      "order*",
+      "created",
+      "selected",
+      "column",
+      "chosen",
+      "remember*",
+      "persist*",
+      "kept",
+      "keep*",
+      "still",
+      "same",
+      "sort field",
+      "notes mode"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "sort*",
+      "order*",
+      "selected",
+      "column",
+      "created",
+      "reset*",
+      "sort field",
+      "revert*",
+      "default"
+    ],
+    [
+      "card*",
+      "wrong",
+      "incorrect*",
+      "different",
+      "not",
+      "same as",
+      "ignor*",
+      "instead of",
+      "instead",
+      "reset*",
+      "revert*",
+      "back to",
+      "default",
+      "lost",
+      "forgot*",
+      "changed",
+      "reverts"
+    ]
+  ],
+  "location_concepts": [
+    "card browser",
+    "browser",
+    "notes mode",
+    "sort*",
+    "order*",
+    "column*"
+  ],
+  "anchors": {
+    "elements": [
+      "display order",
+      "sort",
+      "order"
+    ],
+    "observed": []
+  }
+}

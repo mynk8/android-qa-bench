@@ -1,0 +1,162 @@
+{
+  "run_id": "d514a3e2f4aa",
+  "item_id": "ankidroid-E07",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "Header subtitle",
+      "element_ref": 1,
+      "field": "cards shown",
+      "symptom_type": "missing",
+      "expected": "The header retains '4 cards shown' after rotation, matching the four Spanish cards.",
+      "observed": "Rotating removes the card-count subtitle while all four Spanish rows remain. Reproduced for All decks and Spanish, in both orientations.",
+      "steps": [
+        "Open Card browser and select Spanish.",
+        "Verify header shows '4 cards shown' and agua, comer, hola, mesa.",
+        "Rotate to landscape; subtitle disappears.",
+        "Rotate back to portrait; subtitle remains missing.",
+        "Reproduced after selecting another deck to refresh the count."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "toolbar_content subtitle",
+      "element_ref": 1,
+      "field": "subtitle",
+      "symptom_type": "missing",
+      "expected": "After rotating, the browser should still display '3 cards shown' below French.",
+      "observed": "The toolbar now shows only 'French', with no subtitle, although bonjour, chat and pain remain visible. This also occurs for Spanish and All decks. Screenshot confirmed the subtitle is visually absent.",
+      "observed_quote": "French",
+      "steps": [
+        "In portrait, open Card browser.",
+        "Tap deck selector and select French; wait until '3 cards shown' appears.",
+        "Rotate device to landscape.",
+        "Wait for the screen to settle: French remains the title, all three rows remain, but the subtitle is gone.",
+        "Rotate back to portrait: subtitle is still absent. Select a different deck to make the count appear again, then rotate to reproduce."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "French"
+        ],
+        "bounds": [
+          147,
+          90,
+          1788,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E07-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ],
+      "present": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E07/d514a3e2f4aa/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0023": "missed_unreached",
+    "ankidroid-0024": "reported"
+  },
+  "elapsed_s": 397.378,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept study settings (timebox toggle, persistence/reopen, +/- minimum, empty/zero/unusual input, rotation, settings search route), studying (answer intervals on both decks, rotation, Good/Easy and undo), browser (Spanish/French/all-deck counts, tag:verb, nonexistent tag, deck search, clear/collapse, tag dialog and Search all decks, edit/back, selection/reversal, rotation), and appearance preferences (Night/Day live application to existing browser, cancel, persistence, Show button time off/on). Confirmed/logged bug: browser card-count subtitle disappears after rotation; initial report could not be reproduced, refined report confirmed. Restored Follow system theme, Show button time enabled, timeboxing disabled; undone all study answers, leaving original seven new cards and note content/tags unchanged."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "found": [
+    "ankidroid-0024"
+  ],
+  "required": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "missed": [
+    "ankidroid-0023"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 171,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "bug_meta": {
+    "ankidroid-0023": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0024": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

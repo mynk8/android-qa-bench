@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "calculator",
+    "element": "duration result",
+    "field": "duration",
+    "symptom_type": "wrong_value",
+    "expected": "a negative duration shows a single minus sign, -3 h 30 min",
+    "observed": "the duration shows -3 h -30 min, a minus sign on both parts",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "calculator",
+    "element": "something",
+    "field": "duration",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

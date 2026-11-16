@@ -1,0 +1,69 @@
+{
+  "bug_id": "iris-0012",
+  "app_id": "iris",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-11-01",
+  "seed_id": "album_basic",
+  "params": {
+    "nav": {
+      "filter_btn": [
+        {
+          "desc": "Filter"
+        }
+      ],
+      "opt_media": [
+        {
+          "text": "Media ("
+        }
+      ],
+      "opt_photos": [
+        {
+          "text": "Photos ("
+        }
+      ],
+      "opt_videos": [
+        {
+          "text": "Videos ("
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "iris-0012-buggy",
+    "fixed": "iris-0012-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/iris-0012.patch",
+    "confidence": "medium",
+    "lines_changed": 10,
+    "approach": "The empty-state message of the Media tab no longer depends on the filter: it always reads 'No photos found', even when the Videos filter is active."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

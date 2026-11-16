@@ -1,0 +1,251 @@
+{
+  "bug_id": "markor-0010",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-24",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "sort": [
+        {
+          "desc": "Sort by"
+        },
+        {
+          "text": "Sort by"
+        },
+        {
+          "desc": "Sort"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "folder_first": [
+        {
+          "text": "Folder first"
+        },
+        {
+          "text": "Folders first"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "duplicate_line": [
+        {
+          "text": "Duplicate lines"
+        },
+        {
+          "desc": "Duplicate lines"
+        },
+        {
+          "desc": "Duplicate line(s)"
+        },
+        {
+          "desc": "Duplicate line"
+        }
+      ],
+      "search_replace": [
+        {
+          "text": "Search / Replace"
+        },
+        {
+          "text": "Search and replace"
+        },
+        {
+          "text": "Search & replace"
+        },
+        {
+          "desc": "Search and replace"
+        }
+      ],
+      "find_field": [
+        {
+          "id": "net.gsantner.markor:id/searchEditText"
+        }
+      ],
+      "replace_field": [
+        {
+          "id": "net.gsantner.markor:id/replaceEditText"
+        }
+      ],
+      "regex_toggle": [
+        {
+          "desc": "Use Regular Expression"
+        }
+      ],
+      "replace_one": [
+        {
+          "id": "net.gsantner.markor:id/replaceImageButton"
+        },
+        {
+          "desc": "Replace once"
+        }
+      ],
+      "replace_all": [
+        {
+          "id": "net.gsantner.markor:id/replaceAllImageButton"
+        },
+        {
+          "desc": "Replace all"
+        }
+      ],
+      "view_mode": [
+        {
+          "desc": "View"
+        },
+        {
+          "id": "net.gsantner.markor:id/action_preview"
+        }
+      ],
+      "file_info": [
+        {
+          "text": "Info"
+        },
+        {
+          "text": "More info"
+        },
+        {
+          "text": "File info"
+        }
+      ],
+      "favourite_box": [
+        {
+          "text": "Favourite"
+        },
+        {
+          "text": "Favorite"
+        }
+      ],
+      "favourites_view": [
+        {
+          "text": "Favourites"
+        },
+        {
+          "text": "Favorites"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        }
+      ],
+      "cursor_line_start": [
+        {
+          "desc": "Line Start (Home)"
+        },
+        {
+          "desc": "Home"
+        },
+        {
+          "desc": "Move to line start"
+        }
+      ],
+      "enter_key": [
+        {
+          "desc": "New line"
+        },
+        {
+          "desc": "Enter"
+        }
+      ],
+      "folders_first": [
+        {
+          "text": "Folder first"
+        },
+        {
+          "text": "Folders first"
+        }
+      ],
+      "use_regex": [
+        {
+          "text": "Regex"
+        },
+        {
+          "text": "Regex search"
+        }
+      ],
+      "new_file": [
+        {
+          "text": "Create a new file or folder"
+        },
+        {
+          "desc": "New file"
+        },
+        {
+          "text": "New file"
+        },
+        {
+          "desc": "Create"
+        },
+        {
+          "id": "fab"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0010-buggy",
+    "fixed": "markor-0010-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "hardness": {
+    "steps_to_trigger": 5,
+    "needs_state_persistence": true,
+    "symptom_distance": "same_screen",
+    "visual_salience": "medium"
+  },
+  "hard_slice": true,
+  "head_port": {
+    "patch": "private/forwardport/markor-0010.patch",
+    "confidence": "high",
+    "lines_changed": 8,
+    "approach": "Remove regex group expansion from single replace so $1 is inserted literally."
+  }
+}

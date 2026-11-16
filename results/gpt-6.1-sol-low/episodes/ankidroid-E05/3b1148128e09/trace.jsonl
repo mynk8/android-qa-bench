@@ -1,0 +1,242 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E05-1", "mask": "1", "unfixed": ["ankidroid-0008"], "present": ["ankidroid-0008"]}}
+{"event": "brief", "item_id": "ankidroid-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 777}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 738}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1510}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 1684}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1016, "y": 146}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1000}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 777}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 762, "y": 146}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1029}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 612}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 525}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 931, "y": 340}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 2132}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 30, "message": {"type": "bug_report", "screen": "Card browser — Cards mode", "element": "Tags column for comer", "element_ref": 45, "field": "Tags", "symptom_type": "missing", "expected": "The comer card displays verb in Tags, matching its note and tag filter.", "observed": "Tags header is present but comer has no tag text. Notes mode displays verb, and tag:verb finds this card. Reproduced after filtering and rotating.", "steps": ["Open browser, select All decks.", "Options > Notes; observe comer shows verb.", "Switch to Cards with Tags column enabled.", "Observe comer Tags blank.", "Filter by tag verb; rotate; Tags remains blank."], "anchor_node": {"id": "com.ichi2.anki:id/card_item_browser", "class": "android.widget.LinearLayout", "contains": ["comer", "Card 1", "New #⁨1⁩", "Spanish"], "bounds": [0, 362, 1080, 419]}}}
+{"event": "scored", "report_n": 1, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0008": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 805, "y": 1912}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "type", "args": {"text": "Spanish::Zulu", "clear": true, "submit": false}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 641, "y": 981}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 805, "y": 1912}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "type", "args": {"text": "Spanish::Zulu", "clear": true, "submit": false}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 1368}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 420}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 805, "y": 1912}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "type", "args": {"text": "French::Alpha", "clear": true, "submit": false}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 839, "y": 1368}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 433}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 157, "y": 1075}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 157, "y": 1300}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 767}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "type", "args": {"text": "::", "clear": true, "submit": false}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 836, "y": 1402}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "type", "args": {"text": "QA café 日本語 <&>", "clear": true, "submit": false}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "type", "args": {"text": "QA test <&> 123", "clear": true, "submit": false}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 841}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "type", "args": {"text": "line one\nline two\nline three\nline four", "clear": true, "submit": false}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1170}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 346}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "tap_xy", "args": {"x": 826, "y": 2132}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 846}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "type", "args": {"text": "QA revised", "clear": true, "submit": false}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 830, "y": 1231}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 846}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "type", "args": {"text": "QA revised", "clear": true, "submit": false}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 846}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1029}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 294}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 957}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 738}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 957}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 612}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 133, "message": {"type": "bug_report", "screen": "Browser options", "element": "Truncate content and cards/notes toggle", "element_ref": 5, "observed_quote": "Truncate content", "field": "mode-specific display settings", "symptom_type": "not_persisted", "expected": "Cards and Notes retain their own display settings when switching modes.", "observed": "Enabled truncation and saved in Cards. Switching to Notes inherited checked truncation; disabling and saving in Notes then switching to Cards shows unchecked truncation, losing the Cards setting. Column change made while Notes was selected also appeared in Cards.", "steps": ["In Cards open Options, enable Truncate content, Save.", "Reopen Options, choose Notes; Truncate content remains checked.", "Uncheck Truncate content and Save Notes.", "Reopen Options and choose Cards; Truncate content is unchecked instead of its saved checked value.", "Repeat toggling modes; settings track the last mode instead of retaining independent settings."], "anchor_node": {"id": "com.ichi2.anki:id/truncate_check_box", "text": "Truncate content", "class": "android.widget.CheckBox", "bounds": [154, 894, 926, 1020]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"ankidroid-0008": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 738}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "tap_xy", "args": {"x": 647, "y": 1913}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 147}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "tap_xy", "args": {"x": 945, "y": 294}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 552}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 638}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 612}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "tap_xy", "args": {"x": 647, "y": 1913}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1029}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 294}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 1389}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 399}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 147}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1729}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 790}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "tap_xy", "args": {"x": 786, "y": 412}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "type", "args": {"text": "QA revised", "clear": true, "submit": true}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "tap_xy", "args": {"x": 911, "y": 146}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "type", "args": {"text": "QA revised", "clear": true, "submit": true}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1281}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1911}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 421}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 294}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "tap_xy", "args": {"x": 978, "y": 421}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 612}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1510}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 1003}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 870, "y": 1684}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1016, "y": 146}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 738}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 925}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 612}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1510}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 133, "y": 977}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1016, "y": 146}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1913}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 235, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.75, "notes": "Swept browser cards/notes modes, columns, tag filter with verb, search, preview, selection, suspend/undo; deck counts and nested expand/collapse with rotation and revisit; add validation for empty Front, save, multiline/punctuation input, tags, edit persistence and discard. Filed two browser anomalies; both developer replies were could not reproduce. Original seven notes remain; temporary QA note deleted. Empty test decks French::Alpha and Spanish::Zulu remain. Unicode input was blocked by device typing tool, so not validated. No confirmed reports."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0008"], "unfixed": ["ankidroid-0008"], "outcome": "wrong_pass"}

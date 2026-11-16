@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "filtered deck",
+    "create filtered deck"
+  ],
+  "elements": [
+    "order dropdown",
+    "order spinner"
+  ],
+  "fields": [
+    "order options"
+  ],
+  "symptom_type": "duplicated",
+  "expected_contains_any": [
+    "the order list has no retrievability options while FSRS is off",
+    "only the ordinary orders are offered"
+  ],
+  "observed_contains_any": [
+    "retrievability ascending and descending are offered",
+    "extra FSRS orders appear in the order list"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "no retrievability",
+      "not offered",
+      "hidden",
+      "only",
+      "ordinary",
+      "fsrs off",
+      "disabled",
+      "not listed",
+      "single",
+      "once",
+      "no duplicate*",
+      "unique",
+      "one each",
+      "each once",
+      "apply"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "retrievab*",
+      "fsrs",
+      "memory*",
+      "retention",
+      "retrievability"
+    ],
+    [
+      "offer*",
+      "listed",
+      "shown",
+      "appear*",
+      "present",
+      "extra",
+      "options",
+      "order*"
+    ]
+  ],
+  "location_concepts": [
+    "filtered deck",
+    "order",
+    "create filtered deck",
+    "dropdown",
+    "sort*",
+    "sorting"
+  ],
+  "anchors": {
+    "elements": [
+      "order",
+      "order dropdown",
+      "spinner"
+    ],
+    "observed": [
+      "ascending retrievability",
+      "descending retrievability"
+    ]
+  }
+}

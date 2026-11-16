@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "editor",
+    "element": "ordered list",
+    "field": "line content",
+    "symptom_type": "wrong_value",
+    "expected": "the line becomes '1. gamma'",
+    "observed": "the line also gets bold markers, so it reads '1. gamma****'",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "editor",
+    "element": "something",
+    "field": "line content",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

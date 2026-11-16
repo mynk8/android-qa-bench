@@ -1,0 +1,411 @@
+{
+  "bug_id": "ankidroid-0021",
+  "app_id": "ankidroid",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-09-23",
+  "seed_id": "decks_basic",
+  "params": {
+    "nav": {
+      "intro_skip": [
+        {
+          "text": "Get started"
+        },
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "drawer": [
+        {
+          "desc": "Open drawer"
+        },
+        {
+          "desc": "Navigate up"
+        },
+        {
+          "desc": "Open navigation drawer"
+        }
+      ],
+      "browser": [
+        {
+          "text": "Card browser"
+        },
+        {
+          "text": "Browse"
+        },
+        {
+          "desc": "Browse"
+        }
+      ],
+      "deck_spinner": [
+        {
+          "id": "com.ichi2.anki:id/toolbar_spinner"
+        },
+        {
+          "text": "All decks"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "edit_tags": [
+        {
+          "text": "Edit tags"
+        },
+        {
+          "desc": "Edit tags"
+        },
+        {
+          "text": "Tags"
+        }
+      ],
+      "ok": [
+        {
+          "text": "OK"
+        },
+        {
+          "text": "Save"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        }
+      ],
+      "search": [
+        {
+          "desc": "Search"
+        },
+        {
+          "id": "com.ichi2.anki:id/search"
+        }
+      ],
+      "search_field": [
+        {
+          "id": "com.ichi2.anki:id/search"
+        },
+        {
+          "text": "Search\u2026"
+        },
+        {
+          "text": "Search"
+        }
+      ],
+      "browse_cards": [
+        {
+          "text": "Browse cards"
+        },
+        {
+          "text": "Browse"
+        }
+      ],
+      "deck_spanish": [
+        {
+          "text": "Spanish"
+        }
+      ],
+      "fab": [
+        {
+          "desc": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "filtered_deck": [
+        {
+          "text": "Create filtered deck"
+        }
+      ],
+      "filter_search": [
+        {
+          "text": "Search"
+        },
+        {
+          "id": "com.ichi2.anki:id/search"
+        }
+      ],
+      "notes_mode": [
+        {
+          "text": "Notes"
+        },
+        {
+          "text": "Toggle cards/notes"
+        }
+      ],
+      "expander": [
+        {
+          "desc": "Expand"
+        },
+        {
+          "desc": "Collapse"
+        }
+      ],
+      "expand": [
+        {
+          "desc": "Expand"
+        }
+      ],
+      "collapse": [
+        {
+          "desc": "Collapse"
+        }
+      ],
+      "add_note": [
+        {
+          "desc": "Add note"
+        },
+        {
+          "text": "Add note"
+        },
+        {
+          "desc": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_expand_menu_button"
+        },
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "note_type": [
+        {
+          "id": "com.ichi2.anki:id/note_type_spinner"
+        },
+        {
+          "text": "Select note type"
+        },
+        {
+          "text": "Note type"
+        },
+        {
+          "desc": "Note type"
+        },
+        {
+          "text": "Type"
+        }
+      ],
+      "type_cloze": [
+        {
+          "text": "Cloze"
+        }
+      ],
+      "type_basic": [
+        {
+          "text": "Basic"
+        }
+      ],
+      "deck_french": [
+        {
+          "text": "French"
+        }
+      ],
+      "front_field": [
+        {
+          "desc": "Front"
+        },
+        {
+          "text": "Front"
+        },
+        {
+          "id": "com.ichi2.anki:id/id_note_editText"
+        }
+      ],
+      "text_field": [
+        {
+          "desc": "Text"
+        },
+        {
+          "text": "Text"
+        },
+        {
+          "id": "com.ichi2.anki:id/id_note_editText"
+        }
+      ],
+      "save_note": [
+        {
+          "desc": "Save"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Close"
+        },
+        {
+          "id": "com.ichi2.anki:id/action_save"
+        }
+      ],
+      "manage_note_types": [
+        {
+          "text": "Manage note types"
+        },
+        {
+          "text": "Note types"
+        }
+      ],
+      "card_template": [
+        {
+          "text": "Cards"
+        },
+        {
+          "text": "Card"
+        },
+        {
+          "desc": "Cards"
+        }
+      ],
+      "add_template": [
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Add"
+        },
+        {
+          "id": "com.ichi2.anki:id/action_add"
+        },
+        {
+          "text": "Add template"
+        },
+        {
+          "text": "Add card type"
+        }
+      ],
+      "columns": [
+        {
+          "text": "Manage columns"
+        },
+        {
+          "text": "Columns"
+        },
+        {
+          "desc": "Columns"
+        }
+      ],
+      "due_column": [
+        {
+          "text": "Due"
+        }
+      ],
+      "export": [
+        {
+          "text": "Export deck"
+        },
+        {
+          "text": "Export"
+        },
+        {
+          "desc": "Export"
+        }
+      ],
+      "study": [
+        {
+          "text": "Study"
+        },
+        {
+          "desc": "Study"
+        },
+        {
+          "text": "Review"
+        }
+      ],
+      "edit_note": [
+        {
+          "text": "Edit note"
+        },
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "com.ichi2.anki:id/action_edit_note"
+        }
+      ],
+      "preview": [
+        {
+          "desc": "Preview"
+        },
+        {
+          "text": "Preview"
+        }
+      ],
+      "fab_main": [
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "picker_fab": [
+        {
+          "id": "com.ichi2.anki:id/fab_main"
+        }
+      ],
+      "deck_row": [
+        {
+          "id": "com.ichi2.anki:id/note_deck_name"
+        }
+      ],
+      "subdeck_menu": [
+        {
+          "text": "Create subdeck"
+        }
+      ],
+      "subdeck_name": [
+        {
+          "id": "com.ichi2.anki:id/dialog_text_input"
+        }
+      ],
+      "create_confirm": [
+        {
+          "text": "Create"
+        }
+      ],
+      "cancel": [
+        {
+          "text": "Cancel"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "ankidroid-0021-buggy",
+    "fixed": "ankidroid-0021-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/ankidroid-0021.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "getSubdeckName only rejects an empty name, so a name of spaces passes the blank check; the dialog enables Create and the backend renames the empty part to 'blank', creating Spanish::blank."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

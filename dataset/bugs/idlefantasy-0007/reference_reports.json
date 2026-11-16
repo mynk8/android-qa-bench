@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "profile bonuses tab",
+    "element": "infinite tower rows",
+    "field": "tower bonuses",
+    "symptom_type": "missing",
+    "expected": "the bonuses tab should list infinite tower rows: +7% XP, +12% coin drops, +150 HP",
+    "observed": "there are no infinite tower rows in the bonuses tab, the tower bonuses are missing",
+    "steps": [
+      "Opened Profile, Bonuses tab.",
+      "Scrolled the whole list."
+    ]
+  },
+  "vague": {
+    "screen": "profile bonuses tab",
+    "element": "something",
+    "field": "tower bonuses",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

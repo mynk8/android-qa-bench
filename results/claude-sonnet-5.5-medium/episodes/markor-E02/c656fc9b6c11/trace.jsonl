@@ -1,0 +1,73 @@
+{"event": "install", "build": {"n": 1, "build_id": "markor-E02-11", "mask": "11", "unfixed": ["markor-0007", "markor-0010"], "present": ["markor-0007", "markor-0010"]}}
+{"event": "brief", "item_id": "markor-E02"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1063}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 769}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1432}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 13, "message": {"type": "bug_report", "screen": "View mode of Money.md", "element": "Rendered text", "symptom_type": "wrong_value", "expected": "Costs $5 and $10", "observed": "Dollar signs are dropped in view mode", "observed_quote": "Costs 5 and 10", "element_ref": 4, "steps": ["Open Money.md (Costs $5 and $10)", "Tap View Mode"], "anchor_node": {"text": "Costs 5 and 10", "class": "android.widget.TextView", "bounds": [57, 270, 1026, 320]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["markor-0007"], "per_bug": {"markor-0010": "location", "markor-0007": "anchored"}}
+{"event": "hit", "bugs": ["markor-0007"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1144}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 136}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1020, "y": 377}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 340, "y": 378}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "type", "args": {"text": "(\\w+)@home", "clear": true, "submit": false}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 59, "y": 262}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 393, "y": 504}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "type", "args": {"text": "$1-X", "clear": true, "submit": false}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 915, "y": 503}}}
+{"event": "agent", "step": 24, "message": {"type": "bug_report", "screen": "Editor search and replace", "element": "Replace (1) button", "symptom_type": "wrong_value", "expected": "With regex on, $1 expands to the captured group: \"cat@home dog-X\"", "observed": "Replacement inserted literally with $1 not expanded", "observed_quote": "cat@home $1-X", "element_ref": 26, "steps": ["Open Regex2.md (cat@home dog@home)", "Search, enable regex, search (\\w+)@home", "Toggle replace, enter $1-X", "Tap Replace (1)"], "anchor_node": {"id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor", "text": "cat@home $1-X\n", "class": "android.widget.EditText", "bounds": [1, 567, 1080, 793]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["markor-0010"], "per_bug": {"markor-0010": "anchored", "markor-0007": "location"}}
+{"event": "hit", "bugs": ["markor-0010"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1720}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 136}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 2216}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1651}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 300, "y": 300}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 2216}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1651}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 1441}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1651}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 400, "y": 328}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 1441}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1561}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 712}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 2216}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1414}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 402, "y": 2216}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1561}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1576}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1000}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 66, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.6, "notes": "Filed 2 confirmed bugs: view mode drops \"$\" characters (Money.md), and regex Replace (1) inserts \"$1\" literally instead of expanding the capture group. Sort with reverse (Size and Name), move line up/down with undo, and duplicate line behaved correctly. I did not test Date or MIME sort, rotation, or the Zeta folder."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["markor-0007", "markor-0010"], "unfixed": ["markor-0007", "markor-0010"], "outcome": "success"}

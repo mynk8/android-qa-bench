@@ -1,0 +1,64 @@
+{
+  "bug_id": "amaze-0016",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "UI state lost",
+  "symptom_type": "wrong_value",
+  "fix_date": "2025-01-12",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "count": [
+        {
+          "id": "com.amaze.filemanager:id/item_count"
+        }
+      ],
+      "select_all": [
+        {
+          "text": "Select All"
+        }
+      ],
+      "select_inverse": [
+        {
+          "text": "Select Inverse"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0016-buggy",
+    "fixed": "amaze-0016-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0016.patch",
+    "confidence": "medium",
+    "lines_changed": 2,
+    "approach": "Removed the invalidateSelection()/invalidateActionMode() calls at the end of RecyclerAdapter.toggleInverse so the action mode is not refreshed after inverting the selection."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

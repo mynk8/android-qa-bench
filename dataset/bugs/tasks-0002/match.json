@@ -1,0 +1,68 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "subtasks"
+  ],
+  "fields": [
+    "sort order"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "subtasks keep their order Charge phone then Print tickets",
+    "subtasks in the set order"
+  ],
+  "observed_contains_any": [
+    "Print tickets is listed before Charge phone",
+    "subtasks shown in the wrong order"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "charge phone",
+      "order*",
+      "first",
+      "then",
+      "before",
+      "above",
+      "sequence",
+      "original"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "subtask*",
+      "sub-task*",
+      "child*",
+      "charge phone",
+      "print tickets"
+    ],
+    [
+      "print tickets",
+      "revers*",
+      "swap*",
+      "flip*",
+      "before",
+      "above",
+      "first",
+      "out of order",
+      "order*"
+    ]
+  ],
+  "location_concepts": [
+    "subtask*",
+    "sub-task*",
+    "order*"
+  ],
+  "anchors": {
+    "elements": [
+      "Subtasks",
+      "Charge phone",
+      "Print tickets"
+    ],
+    "observed": []
+  }
+}

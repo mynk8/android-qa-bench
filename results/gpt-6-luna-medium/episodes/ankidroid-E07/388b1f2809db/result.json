@@ -1,0 +1,96 @@
+{
+  "run_id": "388b1f2809db",
+  "item_id": "ankidroid-E07",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E07-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ],
+      "present": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med/episodes/ankidroid-E07/388b1f2809db/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0023": "missed_unreached",
+    "ankidroid-0024": "missed_unreached"
+  },
+  "elapsed_s": 136.853,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.91,
+    "notes": "Completed study session settings, browser/search, and app preference sweep. Verified timebox enable state resolves to 20 mins; answer button intervals displayed; search for comer returned one result with matching subtitle; theme switched immediately on open screens and persisted through rotation/navigation. Restored theme to Follow system; no reproducible bugs found."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "missed": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 49,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "bug_meta": {
+    "ankidroid-0023": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0024": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

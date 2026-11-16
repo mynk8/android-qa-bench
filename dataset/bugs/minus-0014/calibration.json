@@ -1,0 +1,168 @@
+{
+  "bug_id": "minus-0014",
+  "runs": 1,
+  "started": "2026-11-11T03:05:10+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          },
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          }
+        ]
+      },
+      "seconds": 35.3,
+      "screenshot_sha256": "5aa6405f8131c5ec4862b2fa2c3d59fe95e373cdbefa53424fe9b0ce35c12968",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0014-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "rows": [
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          },
+          {
+            "amount": "12",
+            "comment": "Snacks"
+          }
+        ]
+      },
+      "seconds": 45.9,
+      "screenshot_sha256": "993643bc38ec26a8465f15dd71b26dd1791e1e2073e2b0da8b034618d096d248",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0014-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          "9:38",
+          "9:38\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Daily Amount exceeded",
+          "For tomorrow ",
+          "$",
+          "1",
+          ".",
+          "4",
+          "Recurrent payment",
+          "$12",
+          "Transport"
+        ],
+        "after": [
+          "9:38",
+          "9:38\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "$",
+          "0",
+          ".",
+          "9",
+          "Recurrent payment",
+          "$1",
+          "Transport",
+          "Food",
+          "Category"
+        ]
+      },
+      "seconds": 37.9,
+      "screenshot_sha256": "64f8222ea8dc9c112f23db91b39b41e32896161929b02d5a0b3b3beb6f6f2ee9",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0014-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": []
+      },
+      "seconds": 36.2,
+      "screenshot_sha256": "eae51c8784cc36e82013b633b7d6436cc4e63b721a1ddf4536060327f880d22a",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0014-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "rows": []
+      },
+      "seconds": 39.0,
+      "screenshot_sha256": "0a9b6dc67b5c384726503ae51282202c3bcb91471ec56873fb7d4e549b8548cc",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0014-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          "Daily Amount exceeded",
+          "For tomorrow ",
+          "$",
+          "1",
+          ".",
+          "4",
+          "Recurrent payment",
+          "$12",
+          "Transport",
+          "Food",
+          "Category",
+          "7",
+          "8",
+          "9"
+        ],
+        "after": [
+          "$",
+          "0",
+          ".",
+          "9",
+          "Recurrent payment",
+          "$1",
+          "Transport",
+          "Food",
+          "Category",
+          "7",
+          "8",
+          "9",
+          "4",
+          "5"
+        ]
+      },
+      "seconds": 26.1,
+      "screenshot_sha256": "dc8a121d703178a9c6f10344d8542b251c7d24fc300927eeeab2a7cb18c3b37b",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0014-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:10:53+0530"
+}

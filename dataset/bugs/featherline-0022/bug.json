@@ -1,0 +1,369 @@
+{
+  "bug_id": "featherline-0022",
+  "app_id": "featherline",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong display",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-10-17",
+  "seed_id": "plan_empty",
+  "params": {
+    "nav": {
+      "onboarding_skip": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Get started"
+        },
+        {
+          "text": "Continue"
+        }
+      ],
+      "add_medication": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "Add medication"
+        },
+        {
+          "desc": "Add medication"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "new_medicine": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "route_gel": [
+        {
+          "text": "Gel"
+        }
+      ],
+      "route_oral": [
+        {
+          "text": "Oral"
+        }
+      ],
+      "prep_tablet": [
+        {
+          "text": "Tablet"
+        }
+      ],
+      "name_field": [
+        {
+          "text": "Name"
+        },
+        {
+          "text": "Medicine name"
+        }
+      ],
+      "strength_field": [
+        {
+          "text": "Tablet strength (mg)"
+        },
+        {
+          "text": "Tablet strength"
+        }
+      ],
+      "per_dose_field": [
+        {
+          "text": "Tablets per dose"
+        }
+      ],
+      "save": [
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Save"
+        }
+      ],
+      "calibration": [
+        {
+          "text": "Calibration"
+        },
+        {
+          "desc": "Calibration"
+        }
+      ],
+      "e2_field": [
+        {
+          "text": "E2"
+        }
+      ],
+      "ime_next": [
+        {
+          "desc": "Next"
+        }
+      ],
+      "focused_field": [
+        {
+          "text": ""
+        }
+      ],
+      "stock_field": [
+        {
+          "text": "Stock"
+        },
+        {
+          "desc": "Stock"
+        }
+      ],
+      "add_stock": [
+        {
+          "text": "Add"
+        },
+        {
+          "text": "Add stock"
+        }
+      ],
+      "log_dose": [
+        {
+          "text": "Log now"
+        },
+        {
+          "text": "Quick log"
+        },
+        {
+          "text": "Logged"
+        }
+      ],
+      "backfill": [
+        {
+          "text": "Past schedule"
+        },
+        {
+          "text": "Past due"
+        }
+      ],
+      "labs": [
+        {
+          "text": "Labs"
+        },
+        {
+          "text": "Test results"
+        },
+        {
+          "text": "Add result"
+        }
+      ],
+      "add_result": [
+        {
+          "text": "Add result"
+        },
+        {
+          "text": "Add"
+        }
+      ],
+      "result_name": [
+        {
+          "text": "Name"
+        }
+      ],
+      "result_value": [
+        {
+          "text": "Value"
+        },
+        {
+          "text": "Result"
+        }
+      ],
+      "medicine_list": [
+        {
+          "text": "Medications"
+        },
+        {
+          "text": "Plan"
+        }
+      ],
+      "prep_patch": [
+        {
+          "text": "Patch"
+        },
+        {
+          "text": "Patch release rate"
+        }
+      ],
+      "onb_start": [
+        {
+          "text": "Get started"
+        }
+      ],
+      "onb_agree": [
+        {
+          "text": "I have read and agree"
+        }
+      ],
+      "onb_skip": [
+        {
+          "text": "Skip"
+        }
+      ],
+      "onb_continue": [
+        {
+          "text": "Continue"
+        }
+      ],
+      "onb_open": [
+        {
+          "text": "Open Featherline"
+        }
+      ],
+      "tab_plan": [
+        {
+          "text": "Plan"
+        },
+        {
+          "desc": "Plan"
+        }
+      ],
+      "tab_home": [
+        {
+          "text": "Home"
+        },
+        {
+          "desc": "Home"
+        }
+      ],
+      "add_group": [
+        {
+          "text": "Add"
+        }
+      ],
+      "group_add_medication": [
+        {
+          "text": "Add"
+        }
+      ],
+      "add_medicine_btn": [
+        {
+          "text": "Add medicine"
+        }
+      ],
+      "display_name_field": [
+        {
+          "text": "Display name"
+        }
+      ],
+      "tab_settings": [
+        {
+          "text": "Settings"
+        },
+        {
+          "desc": "Settings"
+        }
+      ],
+      "tab_history": [
+        {
+          "text": "History"
+        },
+        {
+          "desc": "History"
+        }
+      ],
+      "weight_row": [
+        {
+          "text": "Body weight"
+        }
+      ],
+      "weight_field": [
+        {
+          "text": "Weight"
+        }
+      ],
+      "weight_save": [
+        {
+          "text": "Save"
+        }
+      ],
+      "weight_clear": [
+        {
+          "text": "Clear"
+        }
+      ],
+      "daily_choice": [
+        {
+          "text": "Daily"
+        }
+      ],
+      "weekly_choice": [
+        {
+          "text": "Weekly"
+        }
+      ],
+      "start_date_row": [
+        {
+          "text": "Start date"
+        }
+      ],
+      "dialog_ok": [
+        {
+          "text": "OK"
+        }
+      ],
+      "dialog_cancel": [
+        {
+          "text": "Cancel"
+        }
+      ],
+      "custom_category": [
+        {
+          "text": "Custom"
+        }
+      ],
+      "custom_name_field": [
+        {
+          "text": "Medication name"
+        }
+      ],
+      "language_row": [
+        {
+          "text": "App language"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "featherline-0022-buggy",
+    "fixed": "featherline-0022-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/featherline-0022.patch",
+    "confidence": "high",
+    "lines_changed": 4,
+    "approach": "personalization_weight_clear_title / _confirmation hold the old wording again ('Clear body weight?' and 'Estimates will stop using your weight.')."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

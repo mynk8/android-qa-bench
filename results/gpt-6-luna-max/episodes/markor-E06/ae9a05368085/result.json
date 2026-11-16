@@ -1,0 +1,159 @@
+{
+  "run_id": "ae9a05368085",
+  "item_id": "markor-E06",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Regex.md editor \u2014 Search/Replace after rotation",
+      "element": "Search input and Find/Replace panel",
+      "element_ref": 14,
+      "field": "Search and Replace fields",
+      "symptom_type": "not_persisted",
+      "expected": "After rotating the device, the active Find/Replace panel should remain open with the entered search and replacement values so the replacement can be continued.",
+      "observed": "Rotating while Search and Replace contained cat@home and dog@work closed the panel. Reopening Search showed an empty Search field and no Replace field; the previous query, replacement, and Find/Replace mode were lost.",
+      "observed_quote": "Search",
+      "steps": [
+        "Open Regex.md, which contains cat@home.",
+        "Open Search and enable Find/Replace.",
+        "Enter cat@home in Search and dog@work in Replace.",
+        "Rotate to landscape while the search field is focused.",
+        "Reopen Search and observe that the query and replacement are gone and the Replace field is not shown."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/searchEditText",
+        "text": "Search",
+        "class": "android.widget.EditText",
+        "bounds": [
+          28,
+          294,
+          812,
+          420
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Regex.md editor \u2014 Search/Replace after landscape-to-portrait rotation",
+      "element": "Search input; Find/Replace toggle and Replace input",
+      "element_ref": 14,
+      "field": "Search/Replace panel state",
+      "symptom_type": "not_persisted",
+      "expected": "Rotating the editor with Find/Replace open should preserve the mode and both entered values, or restore them when Search is reopened.",
+      "observed": "With cat@home in Search and dog@work in Replace and the keyboard dismissed, rotating from landscape to portrait closed Search. Reopening Search showed an empty Search field, Find/Replace was off, and the Replace field was absent.",
+      "observed_quote": "Search",
+      "steps": [
+        "Open Regex.md containing cat@home.",
+        "Rotate to landscape, tap the toolbar Search button, and enable Find/Replace.",
+        "Enter cat@home in Search and dog@work in Replace.",
+        "Press Back to dismiss the keyboard; verify both values remain in their fields.",
+        "Rotate to portrait.",
+        "Tap the toolbar Search button; the Search field is empty and the Replace row is gone."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/searchEditText",
+        "text": "Search",
+        "class": "android.widget.EditText",
+        "bounds": [
+          28,
+          315,
+          653,
+          441
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0017",
+        "markor-0018"
+      ],
+      "present": [
+        "markor-0017",
+        "markor-0018"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/markor-E06/ae9a05368085/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0017": "missed_unreached",
+    "markor-0018": "missed_unreached"
+  },
+  "elapsed_s": 1480.624,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Completed the todo.txt, editor settings/font preview, and search/replace sweep. The rotation-related search/replace state reports were filed; the developer could not reproduce them. Auto-format on/off behavior was checked on both indentation samples, and Indent.md and Indent2.md were reopened with their original content intact. No additional bug found."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "found": [],
+  "required": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "missed": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 240,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "markor-0017",
+    "markor-0018"
+  ],
+  "bug_meta": {
+    "markor-0017": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0018": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

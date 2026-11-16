@@ -1,0 +1,24 @@
+{"event": "install", "build": {"n": 1, "build_id": "minus-E05-1", "mask": "1", "unfixed": ["minus-0001"], "present": ["minus-0001"]}}
+{"event": "brief", "item_id": "minus-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 259}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 849, "y": 150}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.65}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 618}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 403, "y": 149}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 259}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 975, "y": 150}}}
+{"event": "agent", "step": 15, "message": {"type": "bug_report", "screen": "Expense history list", "element": "Date section heading", "element_ref": 7, "field": "section date heading", "symptom_type": "wrong_value", "expected": "Date section heading includes the weekday name, such as Sunday, 15 November.", "observed": "The section heading shows only the date, without a weekday.", "observed_quote": "15 November", "steps": ["Open the app's expense history list from the current budget view.", "Inspect the date section containing Groceries and recurring Rent."], "anchor_node": {"text": "Savings", "class": "android.widget.TextView", "bounds": [53, 1710, 232, 1763]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"minus-0001": "expected_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 194, "y": 425}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.75, "notes": "Inspected analytics totals and category/expense summaries; history showed Groceries $40 and recurring Rent $20 totaling $60, and settings/rotation navigation was exercised. Attempted a date-heading report for “15 November”, but developer could not reproduce it; no confirmed bugs remain logged."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["minus-0001"], "unfixed": ["minus-0001"], "outcome": "wrong_pass"}

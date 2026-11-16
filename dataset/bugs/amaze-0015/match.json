@@ -1,0 +1,80 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "selection counter"
+  ],
+  "fields": [
+    "select all"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "all items stay selected",
+    "counter still shows 6"
+  ],
+  "observed_contains_any": [
+    "selecting all again deselects everything",
+    "selection is cleared"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "select*",
+      "stay*",
+      "remain*",
+      "still",
+      "pick*",
+      "choos*",
+      "chosen",
+      "twice",
+      "repeat*"
+    ],
+    [
+      "all",
+      "6",
+      "six",
+      "whole",
+      "every*",
+      "entire"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "deselect*",
+      "unselect*",
+      "cleared",
+      "clears",
+      "unchecked",
+      "none selected",
+      "0",
+      "closed",
+      "closes",
+      "disappear*",
+      "gone",
+      "empt*",
+      "highlight*",
+      "untick*",
+      "toolbar",
+      "strip"
+    ]
+  ],
+  "location_concepts": [
+    "selection counter",
+    "counter",
+    "select all",
+    "dropdown"
+  ],
+  "anchors": {
+    "elements": [
+      "selection counter",
+      "select all",
+      "6"
+    ],
+    "observed": []
+  }
+}

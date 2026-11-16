@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "budget sheet",
+    "element": "split option",
+    "field": "selected option",
+    "symptom_type": "not_persisted",
+    "expected": "Weekly is still the selected option after the app is closed and opened again",
+    "observed": "after closing and reopening the app the selection is back to Daily",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "budget editor",
+    "element": "something",
+    "field": "splitMode",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

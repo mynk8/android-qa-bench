@@ -1,0 +1,24 @@
+{"event": "install", "build": {"n": 1, "build_id": "idlefantasy-E01-11", "mask": "11", "unfixed": ["idlefantasy-0001", "idlefantasy-0002"], "present": ["idlefantasy-0001", "idlefantasy-0002"]}}
+{"event": "brief", "item_id": "idlefantasy-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.65}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 270, "y": 280}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 2169}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 900, "y": 294}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 222, "y": 933}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 810, "y": 294}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1412}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 662}}}
+{"event": "agent", "step": 21, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.9, "notes": "Swept Shop Buy/Sell, short coin header (2.6M), Keep one toggle persistence across navigation and restored it to initial off state, sell-row keep behavior without selling, and Skills/Combat skill levels against provided character state. Rotated portrait to landscape and back; values remained intact. No reproducible defects found."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["idlefantasy-0001", "idlefantasy-0002"], "unfixed": ["idlefantasy-0001", "idlefantasy-0002"], "outcome": "wrong_pass"}

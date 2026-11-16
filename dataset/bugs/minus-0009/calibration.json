@@ -1,0 +1,130 @@
+{
+  "bug_id": "minus-0009",
+  "runs": 1,
+  "started": "2026-11-13T20:12:15+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "recurring": "20.00",
+        "seen": [
+          "Recurring expenses",
+          "$20 (20%)",
+          "One-time expenses"
+        ]
+      },
+      "seconds": 38.0,
+      "screenshot_sha256": "7caa993db7f0a72390c84982b4c708f6cdf980a7f669602013b211b50c3fce26",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0009-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "recurring": "20.00",
+        "seen": [
+          "Recurring expenses",
+          "$20 (20%)",
+          "One-time expenses"
+        ]
+      },
+      "seconds": 35.5,
+      "screenshot_sha256": "7caa993db7f0a72390c84982b4c708f6cdf980a7f669602013b211b50c3fce26",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0009-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "recurring": "20.00",
+        "one_time": "40.00",
+        "seen": [
+          "Recurring expenses",
+          "$20 (20%)",
+          "One-time expenses"
+        ],
+        "seen2": [
+          "One-time expenses",
+          "$40 (40%)",
+          "New budget period"
+        ]
+      },
+      "seconds": 21.5,
+      "screenshot_sha256": "92c924aae05f5450b31ca8378283c1e1e0918960e1123f0bd1d01d3c9b723bc7",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0009-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "recurring": "40.00",
+        "seen": [
+          "Recurring expenses",
+          "$40 (40%)",
+          "One-time expenses"
+        ]
+      },
+      "seconds": 32.4,
+      "screenshot_sha256": "c6d143a659962bcb9a610a69c9d412226876b66e8952fbcccbe3a604e0c4ad26",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0009-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "recurring": "40.00",
+        "seen": [
+          "Recurring expenses",
+          "$40 (40%)",
+          "One-time expenses"
+        ]
+      },
+      "seconds": 37.1,
+      "screenshot_sha256": "c6d143a659962bcb9a610a69c9d412226876b66e8952fbcccbe3a604e0c4ad26",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0009-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "recurring": "20.00",
+        "one_time": "40.00",
+        "seen": [
+          "Recurring expenses",
+          "$20 (20%)",
+          "One-time expenses"
+        ],
+        "seen2": [
+          "One-time expenses",
+          "$40 (40%)",
+          "New budget period"
+        ]
+      },
+      "seconds": 21.1,
+      "screenshot_sha256": "256cf6086d2bc61e1ba3f06a98b630393722e0d7a6cf281f3ac8c7b954ae98b8",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0009-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-13T20:16:05+0530"
+}

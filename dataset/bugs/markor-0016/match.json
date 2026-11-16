@@ -1,0 +1,93 @@
+{
+  "screens": [
+    "editor",
+    "settings"
+  ],
+  "elements": [
+    "unordered list",
+    "unordered list character"
+  ],
+  "fields": [
+    "list marker"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the line becomes '* gamma' using the chosen asterisk",
+    "the chosen list character is used"
+  ],
+  "observed_contains_any": [
+    "the line becomes '- gamma' with a dash",
+    "the setting is ignored"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "*",
+      "asterisk*",
+      "star*",
+      "chosen",
+      "selected",
+      "setting*",
+      "configured",
+      "gamma"
+    ],
+    [
+      "gamma",
+      "line",
+      "bullet*",
+      "entry",
+      "item",
+      "editor",
+      "list item",
+      "toggle",
+      "unordered"
+    ],
+    [
+      "gamma",
+      "line",
+      "bullet*",
+      "entry",
+      "item",
+      "editor",
+      "list item",
+      "toggle",
+      "unordered"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "-",
+      "dash*",
+      "hyphen*",
+      "minus",
+      "ignor*",
+      "default",
+      "still",
+      "instead",
+      "not",
+      "no effect",
+      "same",
+      "unchanged"
+    ]
+  ],
+  "location_concepts": [
+    "unordered list",
+    "setting*",
+    "list character",
+    "marker*",
+    "gamma"
+  ],
+  "anchors": {
+    "elements": [
+      "Unordered list",
+      "gamma",
+      "highlighting_editor"
+    ],
+    "observed": [
+      "- gamma"
+    ]
+  }
+}

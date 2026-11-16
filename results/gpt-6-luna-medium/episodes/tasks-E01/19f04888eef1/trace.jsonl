@@ -1,0 +1,33 @@
+{"event": "install", "build": {"n": 1, "build_id": "tasks-E01-111", "mask": "111", "unfixed": ["tasks-0005", "tasks-0007", "tasks-0009"], "present": ["tasks-0005", "tasks-0007", "tasks-0009"]}}
+{"event": "brief", "item_id": "tasks-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 593, "y": 653}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 221, "y": 2169}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 561, "y": 145}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "type", "args": {"text": "milk", "clear": true, "submit": false}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 467}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 347, "y": 2169}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 969, "y": 1627}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 417}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 168}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 84, "y": 2169}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 472, "y": 273}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 862, "y": 274}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1365}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 768, "y": 1232}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1469}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1923}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 1920}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 962, "y": 1970}}}
+{"event": "agent", "step": 30, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.55, "notes": "Checked list visibility and task details, search for Buy milk and system Back dismissal, editor fields for Buy milk and recurrence configuration for Final dose, and completion/undo behavior for repeating tasks (Pay rent and Final dose were immediately restored with Undo). No confirmed defects reproduced. Could not establish an active custom filter without creating persistent filter data, so the editor filter reapplication path remains unverified."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["tasks-0005", "tasks-0007", "tasks-0009"], "unfixed": ["tasks-0005", "tasks-0007", "tasks-0009"], "outcome": "wrong_pass"}

@@ -1,0 +1,51 @@
+{
+  "episode_id": "amaze-E01",
+  "app_id": "amaze",
+  "bugs": [
+    "amaze-0004",
+    "amaze-0005"
+  ],
+  "seed_id": "files_basic",
+  "builds": {
+    "00": "amaze-E01-00",
+    "01": "amaze-E01-01",
+    "10": "amaze-E01-10",
+    "11": "amaze-E01-11"
+  },
+  "observable": {
+    "00": {
+      "amaze-0004": false,
+      "amaze-0005": false
+    },
+    "01": {
+      "amaze-0004": false,
+      "amaze-0005": true
+    },
+    "10": {
+      "amaze-0004": true,
+      "amaze-0005": false
+    },
+    "11": {
+      "amaze-0004": true,
+      "amaze-0005": false
+    }
+  },
+  "interactions": [
+    {
+      "a": "amaze-0004",
+      "b": "amaze-0005",
+      "type": "masking",
+      "evidence": "predicted from diffs; calibration must confirm on subset builds"
+    }
+  ],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

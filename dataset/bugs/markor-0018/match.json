@@ -1,0 +1,80 @@
+{
+  "screens": [
+    "editor",
+    "editor menu"
+  ],
+  "elements": [
+    "auto-format"
+  ],
+  "fields": [
+    "auto-format state"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "auto-format stays off after reopening the file, so Enter adds no list marker",
+    "the setting is remembered for the file"
+  ],
+  "observed_contains_any": [
+    "auto-format is on again after reopening, Enter adds a list marker",
+    "the setting is forgotten"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "off",
+      "disabled",
+      "unchecked",
+      "remember*",
+      "persist*",
+      "stay*",
+      "kept",
+      "keeps",
+      "plain",
+      "no marker",
+      "no dash",
+      "empty line",
+      "blank"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "on again",
+      "reset",
+      "back on",
+      "forgot*",
+      "lost",
+      "not remembered",
+      "not kept",
+      "not saved",
+      "re-enabled",
+      "enabled again",
+      "checked again",
+      "marker",
+      "dash",
+      "'- '",
+      "prefix*",
+      "continu*",
+      "still"
+    ]
+  ],
+  "location_concepts": [
+    "auto-format",
+    "auto format",
+    "autoformat",
+    "reopen*",
+    "auto-format state"
+  ],
+  "anchors": {
+    "elements": [
+      "child",
+      "highlighting_editor",
+      "Auto-format"
+    ],
+    "observed": [
+      "- child -"
+    ]
+  }
+}

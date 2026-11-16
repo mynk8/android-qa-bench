@@ -1,0 +1,88 @@
+{
+  "bug_id": "ankidroid-0030",
+  "runs": 1,
+  "started": "2026-11-11T11:16:08+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "field": "1234567"
+      },
+      "seconds": 41.1,
+      "screenshot_sha256": "8c00a25e2810537610b9616779deed6d5d57dc4cce721468e1f8f910536d107c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0030-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "field": "99999999"
+      },
+      "seconds": 37.3,
+      "screenshot_sha256": "369bad10164492373df9109fc455c936593c248b2f9d43b994e621836e0b0aa1",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0030-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "field": "30"
+      },
+      "seconds": 37.9,
+      "screenshot_sha256": "f0ce61a75b0931547a7064fda67373828b1f3b3ee8d616920275ac3a044eb835",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0030-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "field": "12345"
+      },
+      "seconds": 41.9,
+      "screenshot_sha256": "bb6d2dea8431d9b0adef0dbde8a653aa3c0560835dcaad30e5b7245946965229",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0030-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "field": "99999"
+      },
+      "seconds": 43.0,
+      "screenshot_sha256": "e2c11f7daa586e61a623a48ccd9c01e38062438586247adbd460411ebff9bd65",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0030-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "field": "30"
+      },
+      "seconds": 41.5,
+      "screenshot_sha256": "d57ca5543a54382c99e28bf3f1883c7483bcf2452d9dab843ed83c40632e93f2",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0030-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T11:20:50+0530"
+}

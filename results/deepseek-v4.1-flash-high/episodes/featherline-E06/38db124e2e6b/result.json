@@ -1,0 +1,172 @@
+{
+  "run_id": "38db124e2e6b",
+  "item_id": "featherline-E06",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Plan (Nov 14 SAT today card)",
+      "element": "Today's medication/dose card \"Estradiol valerate 7:30 AM\"",
+      "field": "Medication card secondary caption (form/strength subtitle)",
+      "symptom_type": "wrong_value",
+      "expected": "The secondary caption should match the shared caption used on the Medicines list and Medicine details for the same medicine: \"Tablet \u00b7 3 mg\".",
+      "observed": "Same medicine shows \"Oral \u00b7 3 mg\" on the Plan today card (and on the Home today card) but \"Tablet \u00b7 3 mg\" on the Medicines list card and Medicine details card. The Plan card also shows an \"Oral\" badge, so the caption repeats the route and omits the form.",
+      "steps": [
+        "Create a Group 1 with Estradiol valerate tablet 3 mg at 7:30 AM.",
+        "On the Plan tab, look at the today (Nov 14 SAT) medication card: caption reads \"Oral \u00b7 3 mg\".",
+        "Open Medicines (top-right) and the medicine details: the same medicine's card caption reads \"Tablet \u00b7 3 mg\".",
+        "On Medicine details, the Active group chip for the same medicine also reads \"Estradiol valerate \u00b7 Oral \u00b7 3 mg\" while the medicine card above it reads \"Tablet \u00b7 3 mg\"."
+      ],
+      "element_ref": 15,
+      "observed_quote": "Oral \u00b7 3 mg",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Oral",
+          "Estradiol valerate",
+          "7:30 AM",
+          "Oral \u00b7 3 mg"
+        ],
+        "bounds": [
+          42,
+          711,
+          1038,
+          868
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Medicine details \u2192 Edit medicine bottom sheet",
+      "element": "Save button in Edit medicine sheet",
+      "field": "Tablet strength",
+      "symptom_type": "no_effect",
+      "expected": "Tapping Save with an empty tablet strength should show a validation message (as the Add medicine flow does: \"Enter a valid tablet strength.\") and keep the sheet open.",
+      "observed": "With the Tablet strength field empty, tapping Save does nothing at all and no validation message appears; the sheet just stays as-is with no feedback.",
+      "steps": [
+        "Open Medicines and tap the Estradiol valerate card.",
+        "Tap Edit medicine (pencil) to open the Edit medicine bottom sheet.",
+        "Clear the Tablet strength field.",
+        "Hide the keyboard and tap Save.",
+        "Nothing happens: no error message is shown, the sheet stays open; re-tapping Save also does nothing. (Entering a value such as 3 and tapping Save works.)"
+      ],
+      "element_ref": 6,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Save"
+        ],
+        "bounds": [
+          63,
+          2086,
+          1017,
+          2212
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Estradiol estimate card (value unit and target pill)",
+      "element_ref": 9,
+      "expected": "After choosing pmol/L for Estradiol in Settings, the Home estimate card should display Estradiol and its target range in pmol/L (consistent with the Calibration screen, which shows 367\u2013734 pmol/L).",
+      "observed": "Home still shows the Estradiol value unit as \"pg/mL\" and the target pill as \"Target 100\u2013200 pg/mL\", even after leaving and returning to Home; the Calibration screen already shows the converted target \"Estradiol: 367\u2013734 pmol/L\".",
+      "screen": "Home",
+      "steps": [
+        "Open Settings and tap Calibration.",
+        "Tap Calibration settings and select pmol/L for Estradiol (the Calibration screen then shows target 367\u2013734 pmol/L).",
+        "Return to Settings via Cancel, then open Home.",
+        "Home still shows \"pg/mL\" and \"Target 100\u2013200 pg/mL\"; switching to Plan and back to Home does not update it."
+      ],
+      "observed_quote": "Target 100\u2013200 pg/mL",
+      "symptom_type": "wrong_value",
+      "anchor_node": {
+        "text": "Target 100\u2013200 pg/mL",
+        "class": "android.widget.TextView",
+        "bounds": [
+          660,
+          767,
+          975,
+          809
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E06-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0020"
+      ],
+      "present": [
+        "featherline-0020"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/featherline-E06/38db124e2e6b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0020": "reported"
+  },
+  "elapsed_s": 1010.946,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0020"
+  ],
+  "found": [
+    "featherline-0020"
+  ],
+  "required": [
+    "featherline-0020"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "featherline-0020"
+  ],
+  "bug_meta": {
+    "featherline-0020": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "episode_id": "amaze-E01",
+  "start_build": "amaze-E01-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ],
+        "dup": null,
+        "inner": []
+      },
+      "seconds": 26.0,
+      "screenshot_sha256": "11a08dc2283a43cba14e3222e353edbd56487c9c38c2567f0cd5bd50a5dd9f66",
+      "bug": "amaze-0004",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Beta",
+          "keep.jpg",
+          "notes (1).txt",
+          "notes.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ],
+        "dup": "notes (1).txt"
+      },
+      "seconds": 27.8,
+      "screenshot_sha256": "c84fb1a4d83287aa7bec964b97084c2543c235d55cf0033b78797a2a5efec848",
+      "bug": "amaze-0004",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "alpha": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 28.0,
+      "screenshot_sha256": "31da4d5e0c1f968cf522531faf8c9d25cbc40b74d244604deacfd3fcb145536c",
+      "bug": "amaze-0005",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

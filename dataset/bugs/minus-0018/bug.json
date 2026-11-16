@@ -1,0 +1,70 @@
+{
+  "bug_id": "minus-0018",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "no_effect",
+  "fix_date": "2026-09-07",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "collapse": [
+        {
+          "desc": "Collapse"
+        }
+      ],
+      "expand": [
+        {
+          "desc": "Expand"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0018-buggy",
+    "fixed": "minus-0018-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/minus-0018.patch",
+    "confidence": "high",
+    "lines_changed": 2,
+    "approach": "HistoryViewModel.toUiState treats an empty set of expanded dates like 'nothing chosen yet' and auto-expands the newest day again, so the only expanded day group cannot be collapsed."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

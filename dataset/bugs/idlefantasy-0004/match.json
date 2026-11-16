@@ -1,0 +1,72 @@
+{
+  "screens": [
+    "shop",
+    "sell tab",
+    "sell sheet"
+  ],
+  "elements": [
+    "iron sword",
+    "sell quantity",
+    "quantity",
+    "you'll receive",
+    "total"
+  ],
+  "fields": [
+    "quantity",
+    "sell quantity",
+    "total",
+    "you'll receive",
+    "amount"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "sell sheet offers 2 iron swords totalling 124 coins",
+    "the equipped copy counts as the kept one"
+  ],
+  "observed_contains_any": [
+    "sell sheet offers only 1 iron sword for 62 coins",
+    "an extra copy is held back"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "2",
+      "two",
+      "124"
+    ],
+    [
+      "124",
+      "kept copy",
+      "kept one",
+      "as the kept",
+      "counts as kept",
+      "count as kept",
+      "equipped one counts",
+      "equipped copy counts",
+      "equipped one is kept",
+      "equipped copy is kept"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "1",
+      "one",
+      "62"
+    ]
+  ],
+  "location_concepts": [
+    "iron sword",
+    "quantity",
+    "keep one*"
+  ],
+  "anchors": {
+    "elements": [
+      "Sell: Iron Sword",
+      "Iron Sword",
+      "You'll receive"
+    ],
+    "observed": []
+  }
+}

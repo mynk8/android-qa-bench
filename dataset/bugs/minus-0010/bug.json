@@ -1,0 +1,300 @@
+{
+  "bug_id": "minus-0010",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-07-19",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "key_1": [
+        {
+          "text": "1"
+        }
+      ],
+      "key_2": [
+        {
+          "text": "2"
+        }
+      ],
+      "comment_tag": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": "Category"
+        },
+        {
+          "desc": "Edit category"
+        }
+      ],
+      "comment_field": [
+        {
+          "text": "Add comment"
+        },
+        {
+          "text": "Comment"
+        },
+        {
+          "text": ""
+        }
+      ],
+      "comment_check": [
+        {
+          "desc": "Done"
+        },
+        {
+          "desc": "Apply"
+        },
+        {
+          "desc": "Confirm"
+        }
+      ],
+      "save_expense": [
+        {
+          "desc": "Save"
+        },
+        {
+          "desc": "Add"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Apply"
+        }
+      ],
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "analytics": [
+        {
+          "desc": "Analytics"
+        },
+        {
+          "text": "Analytics"
+        }
+      ],
+      "income_toggle": [
+        {
+          "desc": "Income"
+        },
+        {
+          "text": "+"
+        }
+      ],
+      "key_3": [
+        {
+          "text": "3"
+        }
+      ],
+      "key_0": [
+        {
+          "text": "0"
+        }
+      ],
+      "split": [
+        {
+          "text": "Budget split"
+        },
+        {
+          "text": "Daily amount"
+        },
+        {
+          "text": "Split"
+        }
+      ],
+      "split_equal": [
+        {
+          "text": "Split equally"
+        },
+        {
+          "text": "Equal"
+        }
+      ],
+      "split_dynamic": [
+        {
+          "text": "Rebalanced daily"
+        },
+        {
+          "text": "Dynamic"
+        }
+      ],
+      "currency": [
+        {
+          "text": "Currency"
+        }
+      ],
+      "currency_eur": [
+        {
+          "text": "EUR"
+        }
+      ],
+      "currency_usd": [
+        {
+          "text": "USD"
+        }
+      ],
+      "period": [
+        {
+          "text": "Period"
+        }
+      ],
+      "period_weekly": [
+        {
+          "text": "Weekly"
+        },
+        {
+          "text": "This week"
+        }
+      ],
+      "period_monthly": [
+        {
+          "text": "Monthly"
+        },
+        {
+          "text": "This month"
+        }
+      ],
+      "history": [
+        {
+          "text": "History"
+        },
+        {
+          "desc": "History"
+        }
+      ],
+      "settings": [
+        {
+          "text": "Settings"
+        },
+        {
+          "desc": "Settings"
+        }
+      ],
+      "budget_pill": [
+        {
+          "text": "Today"
+        },
+        {
+          "text": "This week"
+        },
+        {
+          "text": "This biweekly"
+        },
+        {
+          "text": "This month"
+        },
+        {
+          "text": "Budget amount exceeded"
+        }
+      ],
+      "edit_budget": [
+        {
+          "desc": "Edit Budget"
+        },
+        {
+          "text": "Edit Budget"
+        }
+      ],
+      "next": [
+        {
+          "text": "Next"
+        },
+        {
+          "desc": "Next"
+        }
+      ],
+      "apply": [
+        {
+          "text": "Apply"
+        },
+        {
+          "desc": "Apply"
+        }
+      ],
+      "split_saved_later": [
+        {
+          "text": "Saved for later"
+        }
+      ],
+      "split_same": [
+        {
+          "text": "Same every day"
+        }
+      ],
+      "chip_weekly": [
+        {
+          "text": "Weekly"
+        }
+      ],
+      "chip_biweekly": [
+        {
+          "text": "Biweekly"
+        }
+      ],
+      "show_out_of_period": [
+        {
+          "text": "Show subscriptions outside of the period"
+        }
+      ],
+      "numpad_apply": [
+        {
+          "desc": "Editor action"
+        }
+      ],
+      "dialog_exit": [
+        {
+          "text": "Tap to exit"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0010-buggy",
+    "fixed": "minus-0010-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/minus-0010.patch",
+    "confidence": "low",
+    "lines_changed": 2,
+    "approach": "Current-period analytics spends/incomes/chart use the raw period transaction rows instead of the expanded one-time + paid recurring charges, so recurring charges paid via occurrences are not totalled the way the screen expects (original bug: totals from raw transactions)."
+  }
+}

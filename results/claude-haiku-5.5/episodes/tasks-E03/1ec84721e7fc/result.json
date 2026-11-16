@@ -1,0 +1,146 @@
+{
+  "run_id": "1ec84721e7fc",
+  "item_id": "tasks-E03",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Task list (grouped by due date)",
+      "element": "Deep sub row (element 27) and the Charge phone row (element 10)",
+      "element_ref": 27,
+      "symptom_type": "not_persisted",
+      "field": "subtask parent link",
+      "expected": "\"Deep sub\" stays nested under \"Charge phone\" (level 2 under \"Pack for trip\") in the due-date list, with the parent count badges \"Pack for trip\" = 3 and \"Charge phone\" = 1, and Charge phone's editor lists Deep sub.",
+      "observed": "After I added a new top-level task \"Probe Nov20\" (due Friday, Nov 20) and saved, \"Deep sub\" is no longer nested under \"Charge phone\". It appears as a top-level row under the \"No due date\" header, the \"Charge phone\" row lost its subtask count badge, and \"Pack for trip\" badge dropped from 3 to 2. Opening Charge phone shows only \"Add subtask\" and no child rows.",
+      "observed_quote": "No due date",
+      "steps": [
+        "Start: Pack for trip (due Nov 24/15) has subtasks Charge phone and Print tickets; Pay rent repeating; Read docs no due date.",
+        "Open Charge phone, tap 'Add subtask', type 'Deep sub' and press Enter, then Done, then BACK, then Save. List now shows Pack for trip with badge 3, Charge phone with badge 1, and 'Deep sub' nested at the third level under Charge phone.",
+        "Tap the + button, type 'Probe Nov20', set due date to Friday November 20 (calendar tap then OK), and Save.",
+        "Observe the list: 'Deep sub' is now a top-level row under 'No due date'. Pack for trip badge shows 2, Charge phone has no badge.",
+        "Open Charge phone: the editor lists no subtasks, only 'Add subtask'."
+      ],
+      "anchor_error": "no element 27 in the latest observation"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Subtask editor (Charge phone > Deep sub)",
+      "element": "Deep sub subtask title field (list row element 27 shows \"Deep sub\")",
+      "element_ref": 27,
+      "symptom_type": "wrong_value",
+      "field": "subtask title",
+      "expected": "A subtask created by typing \"Deep sub\" and pressing Enter is saved with the title \"Deep sub\" (no trailing newline), and the title field shows \"Deep sub\" only.",
+      "observed": "Pressing Enter in the add-subtask field does not submit the title; a line break is inserted. The saved subtask's title field reads \"Deep sub\" followed by a newline (accessibility text \"Deep sub\\n\") when reopened from the editor. The row label in the list is \"Deep sub \" with trailing whitespace.",
+      "observed_quote": "Deep sub",
+      "steps": [
+        "Open the 'Charge phone' task (a subtask of Pack for trip) and tap 'Add subtask'.",
+        "Type 'Deep sub' into the new subtask field and press Enter (type_text with submit).",
+        "Observe the field now reads 'Deep sub' plus a second line, and a new empty row appears instead of committing the title.",
+        "Tap Done on the keyboard, then press BACK to close the keyboard, then Save.",
+        "Reopen the 'Deep sub' subtask from the list: its title field reads 'Deep sub' followed by a newline (text 'Deep sub\\n')."
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Deep sub "
+        ],
+        "bounds": [
+          0,
+          2149,
+          1080,
+          2301
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "tasks-0008",
+        "tasks-0012"
+      ],
+      "present": [
+        "tasks-0008",
+        "tasks-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/tasks-E03/1ec84721e7fc/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0008": "missed_unreached",
+    "tasks-0012": "reported"
+  },
+  "elapsed_s": 443.915,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "found": [
+    "tasks-0012"
+  ],
+  "required": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "missed": [
+    "tasks-0008"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 300,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "tasks-0008",
+    "tasks-0012"
+  ],
+  "bug_meta": {
+    "tasks-0008": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "bug_id": "amaze-0005",
+  "runs": 1,
+  "started": "2026-11-11T03:41:52+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "Alpha (1)",
+          "readme.txt"
+        ]
+      },
+      "seconds": 28.2,
+      "screenshot_sha256": "9f1d937f39226dcbc894d6c634022bb9cdcde233cbeb390ba9863a02b3eb07d1",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0005-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Alpha (1)",
+          "Beta",
+          "keep.jpg",
+          "notes.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ],
+        "inner": [
+          "Alpha (1)",
+          "readme.txt"
+        ],
+        "nested": []
+      },
+      "seconds": 30.3,
+      "screenshot_sha256": "f7f24a43cfb3f03d8d90dbf2d3e6809ce0e541a64347e96d7cfc7132d68fba2f",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0005-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "alpha": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 27.1,
+      "screenshot_sha256": "5ad68809f0134245331ac742b5817c94844cc5dfb053e2378834f71ac7794323",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0005-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 29.9,
+      "screenshot_sha256": "3a4db105d41f55526425ff6b6ab508ac70d108a37f0f64eb81b552757fe136d3",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0005-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "names": [
+          "Alpha",
+          "Alpha (1)",
+          "Beta",
+          "keep.jpg",
+          "notes.txt",
+          "photo.jpg",
+          "report+final.txt"
+        ],
+        "inner": [
+          "readme.txt"
+        ],
+        "nested": []
+      },
+      "seconds": 29.7,
+      "screenshot_sha256": "6042206d29afdedf584282f3b2388d8b0ed6081dbe30cb71ec50fc68d2a04bc4",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0005-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "alpha": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 27.5,
+      "screenshot_sha256": "3ff722b0cdd52ceb9333980664940b966d2cfeabda4d29016e1c1f425d7ec510",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0005-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:45:07+0530"
+}

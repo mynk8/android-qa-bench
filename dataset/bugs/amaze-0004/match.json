@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "Alpha"
+  ],
+  "fields": [
+    "copy name"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "a new folder Alpha(1) is created with readme.txt inside",
+    "folder copy named Alpha(1)"
+  ],
+  "observed_contains_any": [
+    "no Alpha(1) folder is created",
+    "the copy fails or renames the files inside"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "missing",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "alpha(1)*",
+      "alpha (1)",
+      "copy",
+      "copied",
+      "duplicate*",
+      "folder"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "alpha*",
+      "copy*",
+      "folder*",
+      "readme*",
+      "files",
+      "director*",
+      "paste*",
+      "pasting",
+      "keep-both",
+      "keep both"
+    ],
+    [
+      "no alpha(1)*",
+      "not created",
+      "not copied",
+      "missing",
+      "renam*",
+      "child*",
+      "error",
+      "fail*",
+      "nothing",
+      "instead",
+      "doesn't",
+      "does not",
+      "didn't",
+      "never",
+      "not appear*",
+      "no copy",
+      "no new",
+      "no alpha (1)"
+    ]
+  ],
+  "location_concepts": [
+    "alpha*",
+    "copy*",
+    "paste*",
+    "duplicat*"
+  ],
+  "anchors": {
+    "elements": [
+      "Alpha",
+      "Paste",
+      "Copy"
+    ],
+    "observed": []
+  }
+}

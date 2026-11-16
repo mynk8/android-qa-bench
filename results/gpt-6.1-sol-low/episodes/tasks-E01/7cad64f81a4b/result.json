@@ -1,0 +1,256 @@
+{
+  "run_id": "7cad64f81a4b",
+  "item_id": "tasks-E01",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Task list search",
+      "element": "System Back",
+      "symptom_type": "wrong_navigation",
+      "expected": "Back exits search and restores task list.",
+      "observed": "After hiding keyboard, Back exits Tasks to Android launcher instead of closing search.",
+      "steps": [
+        "Open Search in My Tasks",
+        "Enter milk",
+        "Press Back to hide keyboard",
+        "Press Back again",
+        "Reproduced twice"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list",
+      "element": "Final dose completion",
+      "element_ref": 33,
+      "observed_quote": "Final dose rescheduled for December 15",
+      "symptom_type": "wrong_value",
+      "expected": "The daily task limited to one occurrence remains completed with no next occurrence.",
+      "observed": "It reopens on the same due date and says it was rescheduled. Reproduced after Undo.",
+      "steps": [
+        "Complete Final dose (daily, one occurrence)",
+        "Observe it remains active and rescheduled for December 15",
+        "Undo",
+        "Complete again"
+      ],
+      "anchor_node": {
+        "desc": "More options",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          410,
+          2106,
+          515,
+          2232
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list / repeating task",
+      "element": "Final dose checkbox",
+      "element_ref": 6,
+      "symptom_type": "wrong_value",
+      "expected": "Completing an exhausted COUNT=1 daily recurrence leaves Final dose completed.",
+      "observed": "Final dose stays active with a repeat icon and unchanged December 15 due date; repeated completion again shows rescheduled for same date.",
+      "observed_quote": "Final dose rescheduled for December 15",
+      "steps": [
+        "Search Final dose",
+        "Open editor, set custom daily recurrence Ends After 1 occurrence and save",
+        "Tap repeat/completion icon to left of Final dose",
+        "It stays active due December 15 and shows rescheduled snackbar",
+        "Tap completion icon again; same result"
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/completeBox",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          0,
+          357,
+          147,
+          504
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Search results",
+      "element": "Charge phone task row parent badge",
+      "element_ref": 5,
+      "symptom_type": "missing",
+      "expected": "A matching subtask shown outside its parent's tree identifies its parent Pack for trip and provides parent navigation.",
+      "observed": "Charge phone and Print tickets show only their own titles, with no parent badge or way to navigate to Pack for trip.",
+      "steps": [
+        "Search Charge phone from My Tasks",
+        "Observe standalone subtask row without parent indicator",
+        "Search Print tickets; same missing parent badge",
+        "Search Charge phone again to reproduce"
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Charge phone"
+        ],
+        "bounds": [
+          0,
+          357,
+          1080,
+          509
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task editor",
+      "element": "Editor after rotation",
+      "symptom_type": "wrong_navigation",
+      "expected": "Rotating keeps the task editor visible with current edits.",
+      "observed": "Rotating from editor shows Today task list; must tap task again to recover editor and draft.",
+      "steps": [
+        "Open Buy milk editor from Today",
+        "Change title to Buy milk QA without saving",
+        "Rotate landscape then portrait",
+        "Task list shown instead of editor",
+        "Tap Buy milk to recover draft, rotate again; list shown again"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Task list",
+      "element": "Read docs link badge",
+      "element_ref": 5,
+      "symptom_type": "missing",
+      "expected": "Read docs exposes a tappable link badge for https://example.com/guide even though it has no subtasks.",
+      "observed": "Only the note text is displayed; there is no actionable link badge. Tapping the URL opens task editor instead. Reproduced twice.",
+      "observed_quote": "See https://example.com/guide",
+      "steps": [
+        "Search Read docs",
+        "Look for link badge on row containing URL in notes",
+        "Tap displayed URL; editor opens",
+        "Back, repeat tap; same result"
+      ],
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Read docs",
+          "See https://example.com/guide"
+        ],
+        "bounds": [
+          0,
+          357,
+          1080,
+          577
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ],
+      "present": [
+        "tasks-0005",
+        "tasks-0007",
+        "tasks-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/tasks-E01/7cad64f81a4b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0005": "reported",
+    "tasks-0007": "reported",
+    "tasks-0009": "reported"
+  },
+  "elapsed_s": 506.53,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Exercised task list, search (title, notes URL, empty/no-match/unusual queries, clear, Back, rotation), editor save/reopen/discard/empty creation/filter entry and rotation, subtask expand/collapse/completion/Undo/editor cancellation, monthly/hourly/biweekly/one-occurrence repeats and Undo. Confirmed reports: search Back exits to launcher; exhausted one-occurrence task reopens on same date; rotation hides editor but draft recoverable. Parent badge and link badge reports filed but developer could not reproduce. Restored Buy milk title/notes/due date, Pay rent due date, hourly/biweekly dates, Final dose daily one occurrence from due date; removed temporary QA filter."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "found": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "required": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 254,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "tasks-0005",
+    "tasks-0007",
+    "tasks-0009"
+  ],
+  "bug_meta": {
+    "tasks-0005": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "tasks-0007": {
+      "family": "interaction",
+      "hard_slice": true
+    },
+    "tasks-0009": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

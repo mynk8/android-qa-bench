@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "date interval result"
+  ],
+  "fields": [
+    "interval"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the first interval shows 45 y 2 mo 18 d 20 h 17 min 9 s",
+    "the day count is 18 days, one less because the last day is incomplete"
+  ],
+  "observed_contains_any": [
+    "the interval shows 19 d instead of 18 d",
+    "the interval has one day too many"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "18",
+      "14",
+      "45 y",
+      "interval*",
+      "day*",
+      "incomplete",
+      "date*",
+      "duration*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "interval*",
+      "date*",
+      "duration*",
+      "day*",
+      "19",
+      "15",
+      "difference*",
+      "gap*"
+    ],
+    [
+      "one",
+      "extra",
+      "more",
+      "too many",
+      "off by",
+      "wrong",
+      "incorrect",
+      "19",
+      "15",
+      "larger",
+      "higher",
+      "greater",
+      "instead"
+    ]
+  ],
+  "location_concepts": [
+    "date*",
+    "gap*",
+    "interval*",
+    "calculator",
+    "result",
+    "editor",
+    "line",
+    "datetime*"
+  ],
+  "anchors": {
+    "elements": [
+      "datetime(1981",
+      "datetime(2020",
+      "to datetime"
+    ],
+    "observed": [
+      "45 y 2 mo 19 d",
+      "4 y 5 mo 15 d"
+    ]
+  }
+}

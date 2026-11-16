@@ -1,0 +1,183 @@
+{
+  "run_id": "4259e2a977b0",
+  "item_id": "featherline-E02",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Calibration > Add test result",
+      "element": "Progesterone row (value 1.2, ng/mL); result card shows +1 record",
+      "element_ref": 8,
+      "symptom_type": "not_persisted",
+      "field": "Progesterone test result",
+      "expected": "Saving a test result with Progesterone 1.2 ng/mL keeps the Progesterone value; it appears on the saved result card and in Edit test result.",
+      "observed": "After Save, the result card for Nov 13 shows Estradiol 120 pg/mL plus \"+1 record\" (only Testosterone 20 ng/dL). Progesterone is not shown on the card or in Edit test result, and Calibration reports \"2 results \u00b7 low confidence\". The Progesterone value was silently dropped. Reproduced twice.",
+      "observed_quote": "+1 record",
+      "steps": [
+        "Settings > Calibration (fresh data, no prior results)",
+        "Tap + Add test result",
+        "Tap Add result and choose Progesterone (PROG - ng/mL \u00b7 nmol/L)",
+        "Enter 120 for Estradiol, 20 for Testosterone, 1.2 for Progesterone (unit ng/mL)",
+        "Tap Save",
+        "Observe the Nov 13 result card: shows 120 pg/mL Estradiol with +1 record, Progesterone missing",
+        "Tap the card, then observe Edit test result: only Estradiol and Testosterone rows are present"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "NOV",
+          "13",
+          "11:53 PM",
+          "120"
+        ],
+        "bounds": [
+          42,
+          1368,
+          1038,
+          1685
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Calibration > Add test result (Progesterone row)",
+      "element": "Progesterone row added via Add result; saved result card shows only Estradiol + Testosterone",
+      "element_ref": 8,
+      "symptom_type": "not_persisted",
+      "field": "Progesterone value (ng/mL)",
+      "expected": "A Progesterone value entered in Add test result is saved with the collection and appears on the result card and in Edit test result (or the app says it is not supported).",
+      "observed": "Progesterone is offered by Add result and accepts a value, Save is enabled, but after Save the card shows only the Estradiol value and \"+1 record\" (Testosterone). Progesterone is absent from the card and from Edit test result. Reproduced 3 times, with decimal (1.2) and whole (3) values; the Progesterone entry is lost every time.",
+      "observed_quote": "+1 record",
+      "steps": [
+        "Settings > Calibration (screen shows 'No test results yet.' on fresh data)",
+        "Tap + Add test result",
+        "Tap Add result, then tap Progesterone (PROG - ng/mL \u00b7 nmol/L)",
+        "Enter Estradiol 130, Testosterone 25, Progesterone 3 (ng/mL chip selected by default)",
+        "Tap Save",
+        "Observe the Nov 13 card: 130 pg/mL Estradiol, +1 record, 25 ng/dL Testosterone; no Progesterone",
+        "Tap the card and open Edit test result: only Estradiol and Testosterone rows exist"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "NOV",
+          "13",
+          "11:53 PM",
+          "130"
+        ],
+        "bounds": [
+          42,
+          1368,
+          1038,
+          1685
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home",
+      "element": "Estradiol calibrated estimate value (21 pg/mL)",
+      "element_ref": 2,
+      "symptom_type": "wrong_value",
+      "field": "Estradiol estimate after calibration",
+      "expected": "After lab results of 120, 130 and 150 pg/mL drawn at 11:52-11:53 PM Nov 13 (about 23h53m after the 1 mg oral dose), the calibrated Estradiol estimate on Home for the same time should be close to those lab values, not 21 pg/mL.",
+      "observed": "Home shows \"Estradiol \u00b7 calibrated\" with the value 21 pg/mL, \"Below\" target, and \"Last dose 23h ago\". The same day, Calibration lists lab results 130, 120 and 150 pg/mL at about 23h53m after the dose, and Calibration says \"Calibrated to lab results\".",
+      "observed_quote": "Estradiol \u00b7 calibrated",
+      "steps": [
+        "Plan: Medicines > Add medicine: Estradiol, 1 mg tablet (Save). Plan > Add group: Oral E2, start Nov 14 (default), Daily 12:00 AM, add Estradiol valerate 1 mg Oral, Save",
+        "Edit the group: start date Nov 10 with 'Mark as completed' past schedule, Save (history now has Nov 10-13 doses)",
+        "Settings > Calibration > + Add test result: Collection date Nov 13 11:52 PM. Estradiol 150 pg/mL, Testosterone 30 ng/dL, Save",
+        "Repeat with Estradiol 120 and Testosterone 20 at 11:53 PM, and Estradiol 130 with Testosterone 25, Save",
+        "Home tab: Estradiol card shows 21 pg/mL with label 'Estradiol \u00b7 calibrated' and 'Below' target"
+      ],
+      "anchor_node": {
+        "text": "21",
+        "class": "android.widget.TextView",
+        "bounds": [
+          84,
+          394,
+          255,
+          562
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "featherline-0011"
+      ],
+      "present": [
+        "featherline-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/featherline-E02/4259e2a977b0/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0011": "missed_unreached"
+  },
+  "elapsed_s": 391.908,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "featherline-0011"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0011"
+  ],
+  "missed": [
+    "featherline-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0011"
+  ],
+  "bug_meta": {
+    "featherline-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "duplicate line"
+  ],
+  "fields": [
+    "last line"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the line is duplicated so the file reads gamma, gamma",
+    "last line duplicated"
+  ],
+  "observed_contains_any": [
+    "nothing is duplicated",
+    "duplicate line does nothing on the last line"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "missing",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "gamma",
+      "duplicat*",
+      "twice",
+      "copy",
+      "two",
+      "second",
+      "repeat*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "no effect",
+      "once",
+      "one",
+      "single",
+      "crash*",
+      "clos*",
+      "exit*",
+      "stopp*",
+      "force clos*",
+      "freez*",
+      "froze"
+    ]
+  ],
+  "location_concepts": [
+    "duplicat*",
+    "copy line",
+    "copy-line",
+    "copy lines",
+    "last line"
+  ],
+  "anchors": {
+    "elements": [
+      "Duplicate line",
+      "gamma",
+      "highlighting_editor"
+    ],
+    "observed": []
+  }
+}

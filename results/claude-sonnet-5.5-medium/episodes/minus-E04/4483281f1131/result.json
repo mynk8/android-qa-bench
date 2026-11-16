@@ -1,0 +1,173 @@
+{
+  "run_id": "4483281f1131",
+  "item_id": "minus-E04",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main screen number pad",
+      "element": "Amount display (EditText)",
+      "symptom_type": "wrong_value",
+      "expected": "After entering 155.55, a further digit (5) is ignored (2-decimal limit) and the amount stays $155.55",
+      "observed": "Pressing 5 a third time after the decimal changes the amount to 155.56 (rounded). Pressing 9 afterwards is ignored. Reproduced twice.",
+      "observed_quote": "$155.56",
+      "steps": [
+        "On main screen tap 1,5,5,'.',5,5 -> shows $155.55",
+        "Tap 5 again",
+        "Amount shows $155.56 instead of staying $155.55"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet - split view (Weekly/Biweekly) and breakdown",
+      "element": "Calculated amount card",
+      "symptom_type": "wrong_value",
+      "expected": "Weekly/Biweekly amounts based on what is left ($40 of $100 spent 60 over remaining days), e.g. Weekly about $14, and never exceeding the $40 left; consistent with Daily breakdown which deducts the $60 spent",
+      "observed": "Weekly shows $29.17 and Biweekly $58.33 (more than the $40 left). Breakdown for Biweekly shows 'Left of the total budget $100 - $0 = $100' and '$100/24 days x 14 days = $58.33', ignoring the $60 already spent, while Daily deducts $60.",
+      "observed_quote": "$58.33",
+      "steps": [
+        "Tap the budget pill on main screen to open sheet",
+        "Tap Biweekly chip (or Weekly)",
+        "Read Calculated amount: $58.33 (Weekly $29.17)",
+        "Tap card for breakdown: first line shows $100 - $0 = $100"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet - split view selector",
+      "element": "Weekly chip / split selector",
+      "symptom_type": "not_persisted",
+      "expected": "Selected split view (Weekly) is kept after closing and reopening the sheet",
+      "observed": "After selecting Weekly (shows $29.17), closing the sheet and reopening it, the selector is back on Daily with $1.9.",
+      "observed_quote": "Calculated amount $1.9",
+      "steps": [
+        "Tap budget pill to open sheet",
+        "Tap Weekly chip (amount $29.17)",
+        "Tap Close sheet",
+        "Tap budget pill again",
+        "Daily is selected again"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet - split view selector",
+      "element": "Split view chips (Daily/Weekly/Biweekly)",
+      "symptom_type": "not_persisted",
+      "expected": "The chosen split view stays selected when the sheet is closed and reopened (view-model memory)",
+      "observed": "Select Biweekly ($58.33 shown), wait, close sheet via Close, reopen via budget pill: Daily is selected and amount is $1.9. Reproduced twice (Weekly and Biweekly), with waits between steps.",
+      "observed_quote": "$1.9",
+      "steps": [
+        "Tap budget pill",
+        "Tap Biweekly; confirm it is checked, $58.33",
+        "Wait 2s, tap Close sheet",
+        "Wait 2s, tap budget pill",
+        "Daily is checked, amount $1.9"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0005",
+        "minus-0007"
+      ],
+      "present": [
+        "minus-0005",
+        "minus-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/minus-E04/4483281f1131/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0007": "missed_unreached",
+    "minus-0005": "reported"
+  },
+  "elapsed_s": 168.447,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Covered: pill value, sheet stats, split chips, breakdown dialog, number pad entry, expense submit and pill/sheet update. Not covered: rotation, editing the budget (to avoid data changes), analytics/settings. Filed 2 bugs: weekly/biweekly amounts ignore spent amount; split selection resets on sheet reopen. One report (a third decimal digit rounding 155.55 to 155.56) was not reproduced by the developer."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0007",
+    "minus-0005"
+  ],
+  "found": [
+    "minus-0005"
+  ],
+  "required": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "missed": [
+    "minus-0007"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 4,
+  "steps": 85,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "bug_meta": {
+    "minus-0007": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "no_match",
+      "hit",
+      "duplicate",
+      "duplicate"
+    ]
+  }
+}

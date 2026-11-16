@@ -1,0 +1,368 @@
+{
+  "run_id": "61b2ad6f58a1",
+  "item_id": "nerdcalci-E01",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Expenses editor",
+      "element": "avg result",
+      "element_ref": 14,
+      "field": "avg",
+      "symptom_type": "wrong_value",
+      "expected": "541.92, the mean of 1200, 340.5 and 85.25; summary results must not be counted again.",
+      "observed": "812.88; includes the preceding total as a fourth value.",
+      "observed_quote": "812.88",
+      "steps": [
+        "Open Expenses",
+        "Observe total and avg",
+        "Return home and reopen Expenses; avg remains 812.88"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "812.88"
+        ],
+        "bounds": [
+          797,
+          651,
+          1048,
+          777
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Monthly budget editor",
+      "element": "grand_total result",
+      "element_ref": 20,
+      "symptom_type": "wrong_value",
+      "expected": "2,850: salary + bonus + gift counted once.",
+      "observed": "5,700, double counting values and subtotals.",
+      "observed_quote": "5,700",
+      "steps": [
+        "Open Monthly budget",
+        "Observe grand_total",
+        "Return home and reopen; result remains 5,700"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "5,700"
+        ],
+        "bounds": [
+          797,
+          865,
+          1048,
+          991
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Temperatures",
+      "element": "negative temperature results",
+      "element_ref": 2,
+      "symptom_type": "wrong_value",
+      "expected": "-5 \u00b0C; 14 \u00b0F; -40 \u00b0C; -53.89 \u00b0C respectively.",
+      "observed": "Negative literals invert kelvin instead of the entered temperature. First result is -551.30 \u00b0C.",
+      "observed_quote": "-551.30 \u00b0C",
+      "steps": [
+        "Open seeded Temperatures file",
+        "Read all four negative temperature results",
+        "Leave and reopen Temperatures; the same incorrect results persist"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "-551.30 \u00b0C"
+        ],
+        "bounds": [
+          797,
+          252,
+          1048,
+          378
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Percentages",
+      "element": "variable percentage results",
+      "element_ref": 8,
+      "symptom_type": "wrong_value",
+      "expected": "disc% of price = 36; disc% off price = 204; tax% of 1200 = 102.",
+      "observed": "All variable-based percentage expressions show Err while numeric 10% of 80 gives 8.",
+      "observed_quote": "Err",
+      "steps": [
+        "Open Percentages with price=240, disc=15, tax=8.5",
+        "Observe errors on lines 3,4,6",
+        "Leave and reopen; errors repeat"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          437,
+          1048,
+          544
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File dialog",
+      "element": "name input",
+      "element_ref": 38,
+      "symptom_type": "wrong_value",
+      "expected": "Opening rename preselects Untitled; typing QA checks replaces it.",
+      "observed": "Typing appends to the old name. Reproduced after canceling and reopening without tapping the field.",
+      "observed_quote": "UntitledQA checks",
+      "steps": [
+        "Create a new calculation",
+        "Tap Untitled title to open Rename File",
+        "Type QA checks without clearing or tapping the input",
+        "Cancel, reopen, type QA checks again; input becomes UntitledQA checks"
+      ],
+      "anchor_node": {
+        "text": "UntitledQA checks",
+        "class": "android.widget.EditText",
+        "bounds": [
+          183,
+          652,
+          897,
+          799
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home / Rename File dialog",
+      "element": "Rename File dialog",
+      "element_ref": 1,
+      "field": "file name draft",
+      "symptom_type": "not_persisted",
+      "expected": "Rename dialog and draft name survive rotation.",
+      "observed": "Dialog disappears on rotation, returning to home and losing the draft. File remains QA checks.",
+      "observed_quote": "QA checks",
+      "steps": [
+        "Open file overflow menu and choose Rename",
+        "Enter a draft change without saving",
+        "Rotate to landscape and portrait; dialog disappears",
+        "Repeat opening rename, entering X, and rotating; draft is lost again"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "QA checks",
+          "MODIFIED: 02:54 AM \u2022 CREATED: 02:53 AM",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Monthly budget",
+      "element": "grand_total",
+      "element_ref": 20,
+      "field": "grand_total",
+      "symptom_type": "wrong_value",
+      "expected": "2,850 (2500 + 300.5 + 49.5), excluding summary lines.",
+      "observed": "5,700; grand_total counts both original values and total results. Reproduced by reopening the seeded file.",
+      "observed_quote": "5,700",
+      "steps": [
+        "From home open Monthly budget",
+        "Keep salary = 2500; bonus = 300.5; total; blank; gift = 49.5; total; grand_total",
+        "Read line 7 result 5,700",
+        "Leave and reopen, verify 5,700 again"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "5,700"
+        ],
+        "bounds": [
+          797,
+          865,
+          1048,
+          991
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Rename File",
+      "element": "file name text field",
+      "element_ref": 38,
+      "field": "name selection",
+      "symptom_type": "missing",
+      "expected": "Current file name is preselected when rename opens; pressing q replaces it with q.",
+      "observed": "No selection: pressing the onscreen q key appends q to Untitled. This reproduces the earlier typing issue using only a keyboard tap.",
+      "observed_quote": "Untitledq",
+      "steps": [
+        "On home open Untitled file overflow > Rename",
+        "Without touching name field tap onscreen keyboard q",
+        "Observe Untitledq rather than q; cancel and repeat (also reproduced on earlier test file)"
+      ],
+      "anchor_node": {
+        "text": "Untitledq",
+        "class": "android.widget.EditText",
+        "bounds": [
+          183,
+          652,
+          897,
+          799
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Calculation editor",
+      "element": "second total result",
+      "element_ref": 11,
+      "field": "total",
+      "symptom_type": "wrong_value",
+      "expected": "Repeated total remains 30, excluding prior summary output.",
+      "observed": "Second total is 60 after 10,20,total,total. Undo removes final line; redo reproduces 60.",
+      "observed_quote": "60",
+      "steps": [
+        "Create calculation with lines 10,20,total,total",
+        "Observe first total 30 and second 60",
+        "Undo then redo; second total is 60 again"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "60"
+        ],
+        "bounds": [
+          797,
+          544,
+          1048,
+          670
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E01-111",
+      "mask": "111",
+      "unfixed": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ],
+      "present": [
+        "nerdcalci-0001",
+        "nerdcalci-0002",
+        "nerdcalci-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/nerdcalci-E01/61b2ad6f58a1/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0001": "reported",
+    "nerdcalci-0002": "reported",
+    "nerdcalci-0008": "reported"
+  },
+  "elapsed_s": 327.642,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.84,
+    "notes": "Exercised totals/avg/grand_total with seeded Expenses and Monthly budget, repeated summaries and undo/redo; negative and mixed temperatures plus zero conversion and length units; seeded percentages/remainders and numeric percentage boundaries; file creation, rename from title and home menu, cancel, empty name validation, persistence and device rotation. Confirmed reports: avg double-counts prior total, negative temperature literals invert kelvin base, variable percentages Err. Also filed observed grand_total/repeated total double counting, rename preselection failure and rotation draft loss; developer could not reproduce those. Removed all three temporary test files; seeded data unchanged."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "found": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "required": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "missed": [],
+  "true_positives": 3,
+  "false_positives": 6,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 9,
+  "steps": 175,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0001",
+    "nerdcalci-0002",
+    "nerdcalci-0008"
+  ],
+  "bug_meta": {
+    "nerdcalci-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0002": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

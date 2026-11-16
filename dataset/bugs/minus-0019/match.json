@@ -1,0 +1,73 @@
+{
+  "screens": [
+    "budget sheet",
+    "main",
+    "main screen",
+    "budget"
+  ],
+  "elements": [
+    "calculated amount",
+    "daily amount"
+  ],
+  "fields": [
+    "amount"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the calculated daily amount is 1.90",
+    "rent is counted once in the spent total"
+  ],
+  "observed_contains_any": [
+    "the calculated daily amount is 0.95",
+    "rent is counted twice in the spent total"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "1.9",
+      "1.90",
+      "$1.9",
+      "once",
+      "half",
+      "allowance",
+      "per-day",
+      "per day",
+      "right figure",
+      "correct figure",
+      "double*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "0.95",
+      ".95",
+      "twice",
+      "double*",
+      "lower",
+      "less",
+      "too low",
+      "too small",
+      "wrong*",
+      "incorrect*"
+    ]
+  ],
+  "location_concepts": [
+    "budget",
+    "calculated",
+    "daily",
+    "sheet",
+    "amount"
+  ],
+  "anchors": {
+    "elements": [
+      "Calculated amount",
+      "$0.95",
+      "Tap for the full breakdown"
+    ],
+    "observed": [
+      "$0.95"
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "bug_id": "featherline-0005",
+  "app_id": "featherline",
+  "source": "greenfield_pr",
+  "family": "interaction",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "not_persisted",
+  "fix_date": "2026-05-10",
+  "seed_id": "plan_empty",
+  "params": {
+    "nav": {
+      "onboarding_skip": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Get started"
+        },
+        {
+          "text": "Continue"
+        }
+      ],
+      "add_medication": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "Add medication"
+        },
+        {
+          "desc": "Add medication"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "new_medicine": [
+        {
+          "text": "Add medicine"
+        },
+        {
+          "text": "+ New medicine"
+        }
+      ],
+      "route_gel": [
+        {
+          "text": "Gel"
+        }
+      ],
+      "route_oral": [
+        {
+          "text": "Oral"
+        }
+      ],
+      "prep_tablet": [
+        {
+          "text": "Tablet"
+        }
+      ],
+      "name_field": [
+        {
+          "text": "Name"
+        },
+        {
+          "text": "Medicine name"
+        }
+      ],
+      "strength_field": [
+        {
+          "text": "Tablet strength"
+        }
+      ],
+      "per_dose_field": [
+        {
+          "text": "Tablets per dose"
+        }
+      ],
+      "save": [
+        {
+          "text": "Save"
+        },
+        {
+          "desc": "Save"
+        }
+      ],
+      "calibration": [
+        {
+          "text": "Calibration"
+        },
+        {
+          "desc": "Calibration"
+        }
+      ],
+      "e2_field": [
+        {
+          "text": "E2"
+        }
+      ],
+      "ime_next": [
+        {
+          "desc": "Next"
+        }
+      ],
+      "focused_field": [
+        {
+          "text": ""
+        }
+      ],
+      "stock_field": [
+        {
+          "text": "Stock"
+        },
+        {
+          "desc": "Stock"
+        }
+      ],
+      "add_stock": [
+        {
+          "text": "Add"
+        },
+        {
+          "text": "Add stock"
+        }
+      ],
+      "log_dose": [
+        {
+          "text": "Log now"
+        },
+        {
+          "text": "Quick log"
+        },
+        {
+          "text": "Logged"
+        }
+      ],
+      "backfill": [
+        {
+          "text": "Past schedule"
+        },
+        {
+          "text": "Past due"
+        }
+      ],
+      "labs": [
+        {
+          "text": "Labs"
+        },
+        {
+          "text": "Test results"
+        },
+        {
+          "text": "Add result"
+        }
+      ],
+      "add_result": [
+        {
+          "text": "Add result"
+        },
+        {
+          "text": "Add"
+        }
+      ],
+      "result_name": [
+        {
+          "text": "Name"
+        }
+      ],
+      "result_value": [
+        {
+          "text": "Value"
+        },
+        {
+          "text": "Result"
+        }
+      ],
+      "medicine_list": [
+        {
+          "text": "Medications"
+        },
+        {
+          "text": "Plan"
+        }
+      ],
+      "prep_patch": [
+        {
+          "text": "Patch"
+        },
+        {
+          "text": "Patch release rate"
+        },
+        {
+          "desc": "Patch"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "featherline-0005-buggy",
+    "fixed": "featherline-0005-fixed"
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/featherline-0005.patch",
+    "confidence": "high",
+    "lines_changed": 13,
+    "approach": "changeForm now carries all dose-value fields (pill strength, vial, gel, patch) across a form switch instead of resetting them, so a typed strength reappears after Tablet->Patch->Tablet."
+  }
+}

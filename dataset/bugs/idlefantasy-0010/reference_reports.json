@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "profile",
+    "element": "tab strip",
+    "field": "selected tab",
+    "symptom_type": "not_persisted",
+    "expected": "after going to Home and back to Profile the Bonuses tab should still be selected",
+    "observed": "the profile tab resets to the Skills tab, the selected Bonuses tab is lost",
+    "steps": [
+      "Selected the Bonuses tab on Profile.",
+      "Went to Home and back to Profile."
+    ]
+  },
+  "vague": {
+    "screen": "profile",
+    "element": "something",
+    "field": "selected tab",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

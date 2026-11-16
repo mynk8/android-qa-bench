@@ -1,0 +1,154 @@
+{
+  "run_id": "b5f60a3f8c84",
+  "item_id": "ankidroid-E01",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser > Edit tags dialog",
+      "element": "verb tag checkbox",
+      "symptom_type": "wrong_value",
+      "expected": "With comer (tagged verb) and hola (untagged) selected, the verb checkbox should be indeterminate/partial, since only some selected notes have it",
+      "observed": "The verb checkbox is fully checked, as if both selected notes had the tag",
+      "steps": [
+        "Open Card browser from drawer, choose deck Spanish",
+        "Long-press comer, tap hola to select both",
+        "Menu > Edit tags",
+        "Look at the verb checkbox"
+      ],
+      "element_ref": 5,
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/check_box_view",
+        "class": "android.widget.CheckBox",
+        "bounds": [
+          874,
+          277,
+          989,
+          403
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Card browser",
+      "element": "deck dropdown in toolbar",
+      "symptom_type": "wrong_value",
+      "expected": "Browse cards from French opens the browser on deck French (3 cards)",
+      "observed": "Browser opens on previously used deck Spanish with 4 cards",
+      "steps": [
+        "Open Card browser, select Spanish, go back to deck list",
+        "Long-press French > Browse cards",
+        "Observe deck dropdown"
+      ],
+      "observed_quote": "Spanish",
+      "element_ref": 1,
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/toolbar_content",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Spanish",
+          "4 cards shown"
+        ],
+        "bounds": [
+          147,
+          90,
+          721,
+          204
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ],
+      "present": [
+        "ankidroid-0001",
+        "ankidroid-0019"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/ankidroid-E01/b5f60a3f8c84/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0019": "reported",
+    "ankidroid-0001": "reported"
+  },
+  "elapsed_s": 69.983,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Filed 2 bugs: the tag dialog showed verb fully checked for a mixed selection, and Browse cards from French opened on Spanish. Not covered: the deck list search (no search control appeared with two decks) and the expand/collapse arrows (no parent decks exist). Tag edits were not applied or checked for persistence, and rotation was not tested."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "ankidroid-0019",
+    "ankidroid-0001"
+  ],
+  "found": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "required": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 27,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "ankidroid-0001",
+    "ankidroid-0019"
+  ],
+  "bug_meta": {
+    "ankidroid-0019": {
+      "family": "state",
+      "hard_slice": true
+    },
+    "ankidroid-0001": {
+      "family": "display",
+      "hard_slice": true
+    }
+  }
+}

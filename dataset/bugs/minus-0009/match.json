@@ -1,0 +1,94 @@
+{
+  "screens": [
+    "analytics"
+  ],
+  "elements": [
+    "savings card",
+    "recurring expenses",
+    "recurring expenses amount",
+    "savings recommendation card"
+  ],
+  "fields": [
+    "next recurring",
+    "recurring expenses"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the savings card for the current period lists the next recurring payment (Rent)",
+    "Rent appears as an upcoming recurring item"
+  ],
+  "observed_contains_any": [
+    "next recurring payments are not shown on the savings card for the current period",
+    "Rent is missing from that card"
+  ],
+  "symptom_types": [
+    "missing",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "rent",
+      "recurr*",
+      "upcoming",
+      "next",
+      "scheduled",
+      "40",
+      "40.00",
+      "weekly"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "absent",
+      "empty",
+      "not shown",
+      "not listed",
+      "no upcoming",
+      "no recurring",
+      "instead",
+      "only",
+      "20",
+      "20.00",
+      "lower",
+      "less",
+      "half",
+      "omit*",
+      "exclud*",
+      "left out",
+      "not includ*",
+      "upcoming",
+      "next"
+    ]
+  ],
+  "location_concepts": [
+    "saving*",
+    "recurr*",
+    "upcoming",
+    "next recurring"
+  ],
+  "anchors": {
+    "elements": [
+      "Recurring expenses",
+      "$20 (20%)",
+      "savings"
+    ],
+    "observed": [
+      "$20 (20%)"
+    ]
+  }
+}

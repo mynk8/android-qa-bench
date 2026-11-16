@@ -1,0 +1,255 @@
+{
+  "run_id": "fdcd53525cca",
+  "item_id": "featherline-E01",
+  "kind": "episode",
+  "app_id": "featherline",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add medicine editor",
+      "element": "Preparation type",
+      "element_ref": 22,
+      "field": "Injection subtype",
+      "symptom_type": "wrong_value",
+      "expected": "Changing the preparation form to Injection should leave the subtype unset until I explicitly choose Ampule or Vial.",
+      "observed": "Ampule is already selected as soon as Injection is selected, before I pick a subtype.",
+      "observed_quote": "Ampule",
+      "steps": [
+        "Open Plan > Medicines > Add medicine.",
+        "With the default Estradiol category, tap Tablet, then tap Injection.",
+        "Observe the Preparation type options without tapping Ampule or Vial."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Ampule"
+        ],
+        "bounds": [
+          63,
+          1760,
+          273,
+          1886
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Medicines list",
+      "element": "Custom medicine card strength",
+      "element_ref": 12,
+      "field": "Capsule strength",
+      "symptom_type": "wrong_value",
+      "expected": "The medicine card should preserve the entered capsule strength of 0.125 mg, or display enough precision to avoid changing it.",
+      "observed": "The editor retains 0.125 mg, but the Medicines list rounds the card to 0.13 mg.",
+      "observed_quote": "Capsule \u00b7 0.13 mg",
+      "steps": [
+        "Open Plan > Medicines > Add medicine.",
+        "Choose Custom, keep Tablet, enter the name QA Custom and strength 0.125 mg.",
+        "Save the medicine, return to the Medicines list, and compare the card with Edit medicine, where the strength remains 0.125."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Custom",
+          "QA Custom",
+          "Capsule \u00b7 0.13 mg"
+        ],
+        "bounds": [
+          42,
+          2029,
+          1038,
+          2186
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Medicines list",
+      "element": "QA Custom medicine card",
+      "element_ref": 12,
+      "field": "Capsule strength",
+      "symptom_type": "wrong_value",
+      "expected": "The card should display the saved strength 0.125 mg, or enough precision to preserve the entered value.",
+      "observed": "Edit medicine retains 0.125 mg, while the list card rounds it to 0.13 mg.",
+      "observed_quote": "Capsule \u00b7 0.13 mg",
+      "steps": [
+        "Open Plan > Medicines > Add medicine.",
+        "Choose Custom, select Capsule, enter the name QA Custom and capsule strength 0.125 mg.",
+        "Save the medicine and return to the Medicines list.",
+        "Open QA Custom > Edit medicine to confirm the field still contains 0.125 mg, then return to the list."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Custom",
+          "QA Custom",
+          "Capsule \u00b7 0.13 mg"
+        ],
+        "bounds": [
+          42,
+          2029,
+          1038,
+          2186
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Medicines list in landscape",
+      "element": "Last visible medicine card at bottom of the list",
+      "element_ref": 5,
+      "field": "List scrolling and access to lower entries",
+      "symptom_type": "cut_off",
+      "expected": "After rotation, the Medicines list should scroll or reflow so cards below the viewport and Add medicine remain reachable.",
+      "observed": "The list remains fixed at the top after repeated upward swipes; the last visible card is clipped at the bottom, and later entries and Add medicine cannot be reached.",
+      "observed_quote": "Patch | Remove patch",
+      "steps": [
+        "Starting from a fresh install, add enough medicines to exceed five list rows across categories (for example Estradiol tablet, injection, gel and patch, plus Antiandrogen and SERM medicines).",
+        "Open Plan > Medicines in portrait and confirm the lower entries are present.",
+        "Rotate to landscape.",
+        "Swipe up over the list several times; the visible rows do not move and entries below the clipped patch row, including Add medicine, stay unreachable."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Patch",
+          "Remove patch"
+        ],
+        "bounds": [
+          402,
+          1000,
+          1998,
+          1080
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Medicines list in landscape",
+      "element": "Clipped Remove patch row",
+      "element_ref": 5,
+      "field": "Vertical list access",
+      "symptom_type": "cut_off",
+      "expected": "The list should scroll in landscape or arrange the remaining medicine rows and Add medicine within the visible area.",
+      "observed": "The list does not move when swiped upward; the visible Remove patch row is clipped at the bottom and all following cards and Add medicine remain off-screen.",
+      "observed_quote": "Patch | Remove patch",
+      "steps": [
+        "On a fresh install, open Plan > Medicines and add an Estradiol Tablet with strength 1 mg.",
+        "Add an Estradiol Injection, choose Vial, set concentration 20 mg/mL and vial volume 5 mL.",
+        "Add an Estradiol Gel Container at 0.06% and 80 g.",
+        "Add an Estradiol Patch with Release rate 50 \u03bcg/day.",
+        "Add a second Estradiol Gel as Sachet at 0.1% and 1 g.",
+        "Add an Antiandrogen Tablet (Spironolactone 50 mg) and a SERM Tablet (Raloxifene 60 mg).",
+        "Return to Medicines, rotate to landscape, then swipe upward over the visible cards repeatedly. The list remains at the top and the remaining rows and Add medicine are unreachable."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Patch",
+          "Remove patch"
+        ],
+        "bounds": [
+          402,
+          1000,
+          1998,
+          1080
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "featherline-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "featherline-0014",
+        "featherline-0015"
+      ],
+      "present": [
+        "featherline-0014",
+        "featherline-0015"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/featherline-E01/fdcd53525cca/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "featherline-0014": "missed_unreached",
+    "featherline-0015": "missed_unreached"
+  },
+  "elapsed_s": 886.404,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept medicine categories and preparation forms (tablet, capsule, injection Vial, gel Container/Sachet, patch Release rate), validation and cancel flows, save/edit persistence, Medicines list headers across categories, plan cards with 1/4, 1/3 and 1/2 tablet doses, navigation, and rotation. No report was confirmed: the initial Injection subtype and 0.125-to-0.13 display candidates, plus the landscape list scroll candidate, were all declined as unreproducible."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "found": [],
+  "required": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "missed": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "true_positives": 0,
+  "false_positives": 5,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 5,
+  "steps": 160,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "featherline-0014",
+    "featherline-0015"
+  ],
+  "bug_meta": {
+    "featherline-0014": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "featherline-0015": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

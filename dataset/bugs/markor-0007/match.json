@@ -1,0 +1,96 @@
+{
+  "screens": [
+    "view mode"
+  ],
+  "elements": [
+    "dollar text",
+    "money.md",
+    "money.md text",
+    "dollar signs",
+    "price",
+    "prices",
+    "currency",
+    "math"
+  ],
+  "fields": [
+    "rendering"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the text Costs $5 and $10 is shown literally",
+    "dollar signs shown as text"
+  ],
+  "observed_contains_any": [
+    "part of the text between dollar signs is rendered as math or disappears",
+    "dollar text mangled"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "literal*",
+      "as text",
+      "plain",
+      "$5",
+      "$10",
+      "dollar*",
+      "normal*",
+      "as typed",
+      "as-is",
+      "as is",
+      "unchanged",
+      "verbatim",
+      "price*",
+      "currency*",
+      "both prices",
+      "exact*",
+      "as written",
+      "displayed as written",
+      "intact"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "math*",
+      "latex",
+      "formula",
+      "katex",
+      "mathjax",
+      "disappear*",
+      "missing",
+      "italic*",
+      "render*",
+      "mangl*",
+      "gone",
+      "eaten",
+      "hidden",
+      "garbl*",
+      "swallow*",
+      "weird",
+      "broken",
+      "equation"
+    ]
+  ],
+  "location_concepts": [
+    "render*",
+    "money*",
+    "dollar*",
+    "currency*",
+    "price*",
+    "math*",
+    "formula*",
+    "latex"
+  ],
+  "anchors": {
+    "elements": [
+      "Costs",
+      "Money",
+      "Costs 5 and 10"
+    ],
+    "observed": [
+      "costs 5 and 10"
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "run_id": "e93ae04b46cb",
+  "item_id": "ankidroid-E03",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note card preview",
+      "element": "Card 3 preview",
+      "element_ref": 6,
+      "symptom_type": "wrong_value",
+      "expected": "Card 3 hides tres and displays QA uno and [...].",
+      "observed": "Selecting Card 3 renders nonexistent cloze 2 instead of cloze 3; repeated switching reproduces.",
+      "observed_quote": "No cloze \u20682\u2069 found on card. Please either add a cloze deletion, or use the Empty Cards tool.",
+      "steps": [
+        "Add a Cloze note with Text QA {{c1::uno}} and {{c3::tres}}.",
+        "Open Preview.",
+        "Select Card 3.",
+        "Switch to Card 1 and back to Card 3."
+      ],
+      "anchor_node": {
+        "text": "No cloze \u20682\u2069 found on card. Please either add a cloze deletion, or use the Empty Cards tool.",
+        "class": "android.widget.TextView",
+        "bounds": [
+          84,
+          280,
+          1000,
+          472
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Cloze card template editor",
+      "element": "Add card type menu entry",
+      "element_ref": 0,
+      "symptom_type": "wrong_value",
+      "expected": "Cloze models must not offer adding ordinary card templates; cloze numbers generate cards from the single cloze template.",
+      "observed": "Cloze toolbar offers Add card type and opens a creation confirmation. Canceling and reopening reproduces.",
+      "observed_quote": "Add card type",
+      "steps": [
+        "In Add note select Cloze.",
+        "Open Cards: Cloze.",
+        "Open More options and select Add card type.",
+        "Observe creation confirmation, cancel, and reopen menu."
+      ],
+      "anchor_node": {
+        "desc": "Navigate up",
+        "class": "android.widget.ImageButton",
+        "bounds": [
+          0,
+          73,
+          147,
+          220
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ],
+      "present": [
+        "ankidroid-0006",
+        "ankidroid-0017"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E03/e93ae04b46cb/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0006": "reported",
+    "ankidroid-0017": "reported"
+  },
+  "elapsed_s": 435.349,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept Add note empty validation, HTML fields, reversed-card previews and answers, sparse Cloze c1/c3 preview, tags, save/reopen, cancellation and rotation; templates via Add and Manage routes, menus for Basic/Cloze/multi-template models, tabs, position boundary 0, saved reorder and undo; manage counts baseline 7 Basic, one reversed note vs two cards, search, rename/reopen/undo and rotation; deck list nested child expansion/collapse, repetition, navigation, rotation, aggregate counts after card move and undo. Two reproduced issues confirmed: sparse cloze preview uses wrong ordinal; Cloze toolbar offers Add card type. Test note/decks removed through undo; original seven-note counts and template order restored."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "found": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "required": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 196,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "ankidroid-0006",
+    "ankidroid-0017"
+  ],
+  "bug_meta": {
+    "ankidroid-0006": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0017": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

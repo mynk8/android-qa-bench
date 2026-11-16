@@ -1,0 +1,207 @@
+{
+  "run_id": "eac860f1929f",
+  "item_id": "minus-E04",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Budget sheet (opened from main screen budget pill)",
+      "element": "Split view selector - Daily/Weekly/Biweekly segmented control",
+      "symptom_type": "not_persisted",
+      "expected": "Selecting Biweekly (or Weekly) should be kept in view-model memory, so after closing the budget sheet and reopening it from the main screen pill, the previously chosen split view is still active.",
+      "observed": "After choosing Biweekly ($58.33 shown) and closing the sheet, reopening the budget sheet resets the selector to Daily ($1.9 shown); the chosen view is not retained.",
+      "steps": [
+        "Open the budget sheet by tapping the 'Today $1.9' pill on the main screen.",
+        "Tap 'Biweekly' in the split selector and note the calculated amount becomes $58.33.",
+        "Close the sheet by tapping above it.",
+        "Reopen the budget sheet by tapping the pill again.",
+        "Observe the selector is back on 'Daily' with calculated amount $1.9."
+      ],
+      "element_ref": 15,
+      "observed_quote": "Daily",
+      "anchor_node": {
+        "class": "android.view.View",
+        "bounds": [
+          42,
+          1612,
+          370,
+          1738
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen - expense entry (number pad)",
+      "element": "Amount/expression display above the keypad",
+      "symptom_type": "wrong_value",
+      "expected": "After entering 5 and tapping the + operator, the expression should read \"$5+\".",
+      "observed": "After entering 5 and tapping the + operator, the expression displays a spurious leading zero: \"$05+\". The preview result (= $8) is correct, but the displayed expression is wrong.",
+      "steps": [
+        "On the main screen keypad, tap 5 (amount shows $5).",
+        "Tap the + operator key.",
+        "Observe the amount/expression display now reads '$05+' instead of '$5+'."
+      ],
+      "element_ref": 3,
+      "observed_quote": "$05+",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Settings"
+        ],
+        "bounds": [
+          912,
+          87,
+          1038,
+          213
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen - expense entry (number pad, calculator mode)",
+      "element": "Amount/expression display above the keypad",
+      "symptom_type": "wrong_value",
+      "expected": "The expression display should show \"$5+\" (no leading zero).",
+      "observed": "After tapping 0, then 5, then the + operator, the expression shows \"$05+\" - an extra leading zero is kept in the expression once an operator is appended. With a plain amount the display trims it to \"$5\", so the expression and result disagree.",
+      "steps": [
+        "On the main-screen expense entry, make sure the amount is empty so the display shows the initial state.",
+        "Tap the '0' key (amount becomes $0), then tap '5' (amount becomes $5).",
+        "Expand the keypad to calculator mode (swipe up over the keypad) so the operator keys are visible.",
+        "Tap the '+' operator key.",
+        "Observe the amount/expression display reads '$05+' instead of '$5+'."
+      ],
+      "element_ref": 3,
+      "observed_quote": "$05+",
+      "anchor_node": {
+        "text": "$05+",
+        "class": "android.widget.EditText",
+        "bounds": [
+          42,
+          320,
+          1038,
+          635
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen - expense list (Today section)",
+      "element": "UNDO action in the 'Food deleted' snackbar",
+      "symptom_type": "no_effect",
+      "expected": "Tapping UNDO on the 'Food deleted' snackbar should restore the deleted expense and its total (the Today group with the expense should reappear).",
+      "observed": "Deleting a just-added expense shows 'Food deleted' with an UNDO button, but tapping UNDO only dismisses the snackbar: the expense is not restored and the list keeps only '13 November' with 'Total: $60'. Reproduced twice (deleted $8 and $3/$2 expenses); the expense stays gone after UNDO and after navigating away and back.",
+      "steps": [
+        "On the main screen, add a small expense (e.g. 2, Food) and save it with the check button.",
+        "Collapse the keypad, tap the new 'Food ... $2' expense in the Today group, then tap 'Delete'.",
+        "The snackbar 'Food deleted' with 'UNDO' appears and the Today group disappears.",
+        "Tap 'UNDO' immediately.",
+        "Observe the snackbar closes but the deleted expense is not restored; the list still shows only 13 November with Total: $60 (confirmed in Analytics: Total Spent $60)."
+      ],
+      "element_ref": 15,
+      "observed_quote": "UNDO",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "UNDO"
+        ],
+        "bounds": [
+          815,
+          2063,
+          985,
+          2189
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "minus-0005",
+        "minus-0007"
+      ],
+      "present": [
+        "minus-0005",
+        "minus-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/minus-E04/eac860f1929f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0007": "missed_unreached",
+    "minus-0005": "reported"
+  },
+  "elapsed_s": 1303.342,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "minus-0007",
+    "minus-0005"
+  ],
+  "found": [
+    "minus-0005"
+  ],
+  "required": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "missed": [
+    "minus-0007"
+  ],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.25,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "minus-0005",
+    "minus-0007"
+  ],
+  "bug_meta": {
+    "minus-0007": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "minus-0005": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

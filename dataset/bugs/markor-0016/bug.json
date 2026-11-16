@@ -1,0 +1,78 @@
+{
+  "bug_id": "markor-0016",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "no_effect",
+  "fix_date": "2020-02-29",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "unordered_list": [
+        {
+          "desc": "Unordered list"
+        },
+        {
+          "text": "Unordered list"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0016-buggy",
+    "fixed": "markor-0016-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0016.patch",
+    "confidence": "high",
+    "lines_changed": 3,
+    "approach": "Markdown unordered-list action passes a literal dash instead of reading the configured list character."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

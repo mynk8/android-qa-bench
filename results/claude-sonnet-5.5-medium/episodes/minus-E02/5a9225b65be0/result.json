@@ -1,0 +1,135 @@
+{
+  "run_id": "5a9225b65be0",
+  "item_id": "minus-E02",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Main screen (spending history panel)",
+      "element": "Empty panel above keypad",
+      "symptom_type": "missing",
+      "expected": "History panel lists yesterday's expenses (Groceries 40.00 and recurring Rent 20.00) so they can be tapped and edited",
+      "observed": "The panel above the keypad is blank, with a scrollbar showing. No expenses are listed, though Analytics shows Total Spent $60 with 2 expenses. Swiping the panel in either direction and reopening the app didn't help, so no expense can be opened for editing.",
+      "steps": [
+        "Open the app on the main screen",
+        "Look at the panel above the keypad",
+        "Swipe up and down in the panel",
+        "Open Analytics and see Total Spent $60 and Maximum spent $40"
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics",
+      "element": "Bottom stat cards (2, $2.61, $60)",
+      "symptom_type": "overlap",
+      "expected": "All stat cards are fully readable when scrolled to the bottom, including the savings card",
+      "observed": "The \"New budget period\" button sits over the bottom cards. The page can't scroll any further, so the cards that show \"2\" and \"$2.61\" are cut off and the \"$60\" card's label isn't readable. The savings figure can't be read.",
+      "steps": [
+        "Open Analytics",
+        "Scroll to the bottom",
+        "Look at the cards under Maximum spent"
+      ],
+      "observed_quote": "$2.61"
+    },
+    {
+      "type": "bug_report",
+      "screen": "Main screen > spending history > expanded Rent (recurrent expense)",
+      "element": "Charge day row",
+      "field": "Charge day",
+      "symptom_type": "wrong_value",
+      "expected": "After the date is changed to 12 November, Charge day follows the new date and shows Day 12",
+      "observed": "The date changed to 12 November, but Charge day still shows Day 13, and the recurrence end is unchanged. The linked field was not updated by the edit.",
+      "observed_quote": "Charge day",
+      "steps": [
+        "Pull the history panel down on the main screen",
+        "Expand Rent (Recurrent expense, 13 November) and note Charge day is Day 13",
+        "Tap Edit, tap the date chip, choose 12 November, Accept",
+        "Tap the confirm check",
+        "Expand Rent under 12 November and read the details: Date is 12 November but Charge day is Day 13"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0008"
+      ],
+      "present": [
+        "minus-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/minus-E02/5a9225b65be0/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0008": "missed_unreached"
+  },
+  "elapsed_s": 282.564,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Not fully covered. I could not read the analytics savings card, which is hidden behind the \"New budget period\" button. I did not exercise the budget settings beyond opening the sheet. In history editing I checked amount and date edits on Groceries and Rent. Two of my three reports got \"could not reproduce\" from the developer: the empty history panel (before I found the pull-down gesture) and the analytics bottom-card overlap. The third report is the Charge day staying at Day 13 after Rent's date changed to 12 November. It was reproduced once on this device, and the developer's reply to that one was also \"could not reproduce\". Treat that one as a real open issue."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "minus-0008"
+  ],
+  "found": [],
+  "required": [
+    "minus-0008"
+  ],
+  "missed": [
+    "minus-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 94,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0008"
+  ],
+  "bug_meta": {
+    "minus-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

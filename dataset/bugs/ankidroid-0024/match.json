@@ -1,0 +1,71 @@
+{
+  "screens": [
+    "card browser"
+  ],
+  "elements": [
+    "subtitle",
+    "card count"
+  ],
+  "fields": [
+    "card count"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the subtitle still shows how many cards are shown after rotating",
+    "the card count stays visible"
+  ],
+  "observed_contains_any": [
+    "the card count subtitle is blank after rotating",
+    "the cards shown count disappeared"
+  ],
+  "symptom_types": [
+    "missing",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "count",
+      "cards shown",
+      "subtitle",
+      "number of cards",
+      "still"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "blank",
+      "empty",
+      "missing",
+      "gone",
+      "disappear*",
+      "not shown",
+      "no count",
+      "lost",
+      "nothing",
+      "no longer",
+      "vanish*",
+      "hidden",
+      "removed",
+      "absent",
+      "not displayed",
+      "nothing shown"
+    ]
+  ],
+  "location_concepts": [
+    "card browser",
+    "browser",
+    "toolbar",
+    "subtitle",
+    "header",
+    "title line",
+    "secondary title"
+  ],
+  "anchors": {
+    "elements": [
+      "cards shown",
+      "subtitle",
+      "card count"
+    ],
+    "observed": []
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "bug_id": "markor-0014",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "interaction",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "no_effect",
+  "fix_date": "2024-09-20",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "bold": [
+        {
+          "desc": "Bold"
+        },
+        {
+          "text": "Bold"
+        }
+      ],
+      "quote": [
+        {
+          "desc": "Quote"
+        },
+        {
+          "text": "Quote"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0014-buggy",
+    "fixed": "markor-0014-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0014.patch",
+    "confidence": "high",
+    "lines_changed": 3,
+    "approach": "getSelectedLines reads sel[1] unconditionally again, so a single-position call throws and the long-press Bold line action never completes."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

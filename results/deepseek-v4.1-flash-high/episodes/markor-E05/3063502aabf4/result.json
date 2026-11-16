@@ -1,0 +1,207 @@
+{
+  "run_id": "3063502aabf4",
+  "item_id": "markor-E05",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Editor (Indent.md)",
+      "element": "Unordered list toolbar button",
+      "field": "document text after Unordered list action",
+      "symptom_type": "wrong_value",
+      "expected": "With all lines of Indent.md ('- item' then '  - child') selected, the Unordered list action should detect the existing list markers on every selected line and toggle them off, leaving 'item' and '  child' (no duplicated marker).",
+      "observed": "Tapping Unordered list with all text selected produced 'item\\n  - - child\\n- ': the non-indented '- item' marker was removed, but the indented '  - child' line was not detected as an existing list item and got a second marker ('  - - child').",
+      "steps": [
+        "Open Files and tap Indent.md",
+        "Long-press the text and choose Select all",
+        "Tap the Unordered list action button in the bottom formatting toolbar",
+        "Observe the resulting text"
+      ],
+      "observed_quote": "item\n  - - child\n- ",
+      "element_ref": 47,
+      "anchor_node": {
+        "desc": "Unordered list",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          254,
+          1389,
+          381,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Editor (Notes.md) with Settings > Edit Mode > Unordered list character set to Plus (+)",
+      "element": "Unordered list toolbar button",
+      "field": "inserted list marker",
+      "symptom_type": "wrong_value",
+      "expected": "With \"Unordered list character\" set to \"Plus (+)\" (verified checked in the setting dialog), tapping Unordered list on an empty line should insert \"+ \".",
+      "observed": "Tapping Unordered list always inserts a dash: the editor line became \"- \" even though the configured unordered list character is \"+\". Earlier, with \"Asterisk (*)\" selected, the action also inserted \"- \", so the preference is not used by the action at all.",
+      "steps": [
+        "Go to More > Settings > Edit Mode > scroll to Unordered list character",
+        "Choose 'Plus (+)' (dialog reopens showing Plus checked)",
+        "Open Notes.md from Files and place the cursor on the empty last line",
+        "Tap the Unordered list action in the bottom formatting toolbar",
+        "Observe that '- ' is inserted instead of '+ '"
+      ],
+      "observed_quote": "- ",
+      "element_ref": 47,
+      "anchor_node": {
+        "desc": "Unordered list",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          254,
+          1389,
+          381,
+          1494
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Edit Mode > Unordered list character dialog",
+      "element": "Dialog title",
+      "field": "dialog title text",
+      "symptom_type": "wrong_value",
+      "expected": "The dialog opened from the \"Unordered list character\" setting should be titled \"Unordered list character\" (matching the setting being edited).",
+      "observed": "The unordered-list-character chooser dialog is titled \"Theme\", which is the title of the unrelated Appearance > Theme setting. The options inside are Dash (-), Asterisk (*) and Plus (+), confirming it is the list-character dialog.",
+      "steps": [
+        "Go to More > Settings > Edit Mode",
+        "Scroll down to Miscellaneous and tap 'Unordered list character'",
+        "Observe the dialog title"
+      ],
+      "observed_quote": "Theme",
+      "element_ref": 0,
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/alertTitle",
+        "text": "Theme",
+        "class": "android.widget.TextView",
+        "bounds": [
+          225,
+          875,
+          855,
+          946
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "File browser > Create a new file or folder dialog",
+      "element": "Extension field after choosing Type 'todo.txt'",
+      "field": "extension",
+      "symptom_type": "wrong_value",
+      "expected": "Choosing the 'todo.txt' type should set the extension to '.txt' (the supported todo.txt format's file extension, as used by the existing todo.txt file), so the new file has a single '.txt' extension.",
+      "observed": "Choosing Type 'todo.txt' sets the extension field to '.todo.txt', duplicating the format name into the extension. Other types produce single extensions (.md, .txt, .adoc, .org, .csv).",
+      "steps": [
+        "Open Files and tap the + new file FAB",
+        "Open the Type spinner and choose 'todo.txt'",
+        "Observe the extension field next to the Name field"
+      ],
+      "observed_quote": ".todo.txt",
+      "element_ref": 38,
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/new_file_dialog__ext",
+        "text": ".todo.txt",
+        "class": "android.widget.EditText",
+        "bounds": [
+          744,
+          354,
+          970,
+          462
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E05-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0015",
+        "markor-0016"
+      ],
+      "present": [
+        "markor-0015",
+        "markor-0016"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/markor-E05/3063502aabf4/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0015": "missed_unreached",
+    "markor-0016": "reported"
+  },
+  "elapsed_s": 1237.876,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "found": [
+    "markor-0016"
+  ],
+  "required": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "missed": [
+    "markor-0015"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 2,
+  "reports": 4,
+  "steps": 300,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "markor-0015",
+    "markor-0016"
+  ],
+  "bug_meta": {
+    "markor-0015": {
+      "family": "interaction",
+      "hard_slice": false
+    },
+    "markor-0016": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

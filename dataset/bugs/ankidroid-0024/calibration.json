@@ -1,0 +1,130 @@
+{
+  "bug_id": "ankidroid-0024",
+  "runs": 1,
+  "started": "2026-11-11T11:01:44+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "before": [
+          "0 cards shown"
+        ],
+        "after": []
+      },
+      "seconds": 41.3,
+      "screenshot_sha256": "e2d712b112f7f06c914ecebbcc0d93b456c1a683dda69f0229338cee4159180f",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0024-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "after": []
+      },
+      "seconds": 38.5,
+      "screenshot_sha256": "ff2b0acb0e46a2933032883aa7616e6c24bc9d7067e0f7a10aa149e71144708a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0024-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:33",
+          "5:33\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "Default",
+          "0 cards shown",
+          "Add",
+          "Search",
+          "More options",
+          "Sort Field",
+          "Card Type",
+          "Due",
+          "Deck"
+        ]
+      },
+      "seconds": 21.8,
+      "screenshot_sha256": "3b69514d5dff857c926d01b3a927f5a94d424ceaabb500b72905c8e11078daa9",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "ankidroid-0024-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "before": [
+          "0 cards shown"
+        ],
+        "after": [
+          "0 cards shown"
+        ]
+      },
+      "seconds": 29.8,
+      "screenshot_sha256": "ff234d52d0da88533e47e4b776216b282cf098e957ee3f9306f9ab076d22aaef",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0024-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "after": [
+          "0 cards shown"
+        ]
+      },
+      "seconds": 33.2,
+      "screenshot_sha256": "ffe53ab82d8fa7f7c72fe644c347397f334e8f48fd2652ec3d059a695757e8fa",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0024-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "5:35",
+          "5:35\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Open drawer",
+          "Default",
+          "0 cards shown",
+          "Add",
+          "Search",
+          "More options",
+          "Sort Field",
+          "Card Type",
+          "Due",
+          "Deck"
+        ]
+      },
+      "seconds": 25.2,
+      "screenshot_sha256": "1858c1b8026396a11303df29c54247c45deeb5c2e6eaa1910327a963c49e832c",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "ankidroid-0024-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T11:05:45+0530"
+}

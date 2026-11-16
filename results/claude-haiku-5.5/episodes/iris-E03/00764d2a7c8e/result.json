@@ -1,0 +1,133 @@
+{
+  "run_id": "00764d2a7c8e",
+  "item_id": "iris-E03",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Media tab, Videos filter (blank state)",
+      "element": "0",
+      "field": "blank-state caption",
+      "symptom_type": "wrong_value",
+      "expected": "With the Videos filter active and no videos, the blank state should say something about videos (e.g. \"No videos found\"), matching the active filter badge \"Videos\".",
+      "observed": "The blank state under the Videos filter shows \"No photos found\", while the filter badge reads \"Videos\" and the filter menu shows \"Videos (0)\".",
+      "observed_quote": "No photos found",
+      "steps": [
+        "Open the Media tab (library holds 2 photos, big.jpg and huge.jpg).",
+        "Tap the Filter icon at top right; the menu shows Media (2), Photos (2), Videos (0).",
+        "Tap Videos (0).",
+        "Observe the blank state in the middle of the screen reads 'No photos found' and the header badge reads 'Videos'."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab (All)",
+      "element": "5",
+      "field": "album list / item count",
+      "symptom_type": "duplicated",
+      "expected": "One album \"IrisSeed\" with 2 items (big.jpg and huge.jpg) after both photos are restored from Trash.",
+      "observed": "Two separate \"IrisSeed\" album tiles appear, each with 1 item, one with cover huge.jpg and one with big.jpg.",
+      "observed_quote": "big.jpg | IrisSeed | 1 items",
+      "steps": [
+        "Start with IrisSeed holding big.jpg and huge.jpg (Albums shows one IrisSeed tile, '2 items').",
+        "Media tab: long-press huge.jpg, tap big.jpg, tap Delete; confirm the 'moved to Trash' snackbar.",
+        "Library > Trash: long-press one item, tap the other, tap 'Restore selected'. Snackbar says '2 items restored to gallery'.",
+        "Open the Albums tab (All).",
+        "Observe two IrisSeed tiles, each reading '1 items' (one with huge.jpg cover, one with big.jpg cover). Reproduced twice."
+      ]
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab (All), landscape",
+      "element": "5",
+      "field": "album tile caption",
+      "symptom_type": "overlap",
+      "expected": "In landscape, the album captions (name and item count) sit clear of the bottom navigation bar and can be read in full.",
+      "observed": "In landscape the floating bottom navigation bar covers the second album's caption: the name \"IrisSeed\" is cut through and the \"1 items\" line is overdrawn by the bar.",
+      "observed_quote": "1 items",
+      "steps": [
+        "Make sure the Albums tab shows two IrisSeed tiles (one cover huge.jpg, one cover big.jpg).",
+        "Rotate the device to landscape.",
+        "Observe the bottom navigation bar overlaps the captions of the second album tile (the right-hand IrisSeed tile)."
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0012"
+      ],
+      "present": [
+        "iris-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/iris-E03/00764d2a7c8e/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0012": "reported"
+  },
+  "elapsed_s": 220.771,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "iris-0012"
+  ],
+  "found": [
+    "iris-0012"
+  ],
+  "required": [
+    "iris-0012"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 181,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "iris-0012"
+  ],
+  "bug_meta": {
+    "iris-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

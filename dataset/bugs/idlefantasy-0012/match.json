@@ -1,0 +1,83 @@
+{
+  "screens": [
+    "profile",
+    "combat",
+    "gear tab",
+    "combat screen"
+  ],
+  "elements": [
+    "view combat gear",
+    "combat tab",
+    "gear tab",
+    "dungeons tab",
+    "button"
+  ],
+  "fields": [
+    "tab",
+    "combat tab",
+    "destination",
+    "gear tab",
+    "dungeons"
+  ],
+  "symptom_type": "wrong_navigation",
+  "expected_contains_any": [
+    "view combat gear opens the combat gear tab",
+    "the combat gear tab shows the equipment slots"
+  ],
+  "observed_contains_any": [
+    "view combat gear opens the dungeons tab instead",
+    "the combat gear tab is not selected"
+  ],
+  "symptom_types": [
+    "wrong_navigation",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "view combat gear",
+      "combat gear",
+      "gear tab",
+      "equipment",
+      "slots",
+      "head",
+      "body",
+      "legs",
+      "combat > gear",
+      "> gear",
+      "gear",
+      "equip*",
+      "shortcut to equipment"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "dungeon*",
+      "first tab",
+      "default tab",
+      "wrong tab",
+      "wrong page",
+      "wrong screen",
+      "no equipment",
+      "no slots",
+      "not the gear",
+      "instead",
+      "other tab",
+      "different tab"
+    ]
+  ],
+  "location_concepts": [
+    "profile",
+    "combat",
+    "gear",
+    "view combat gear",
+    "tab*"
+  ],
+  "anchors": {
+    "elements": [
+      "View Combat Gear",
+      "Gear",
+      "Dungeons"
+    ],
+    "observed": []
+  }
+}

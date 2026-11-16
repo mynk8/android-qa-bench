@@ -1,0 +1,33 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E01-11", "mask": "11", "unfixed": ["ankidroid-0001", "ankidroid-0019"], "present": ["ankidroid-0001", "ankidroid-0019"]}}
+{"event": "brief", "item_id": "ankidroid-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1000}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 1155}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 616, "y": 2132}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 63, "y": 949}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 812, "y": 903}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 616, "y": 2132}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 576}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 434, "y": 147}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1300}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 30, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.72, "notes": "Covered deck list contents and rotation; browser deck selection for Spanish and All decks; verified the verb checkbox remains checked when selecting both tagged comer and untagged hola, then canceled to preserve data. No reproducible defect observed. The provided data has only top-level decks, so no nested parent deck was available to exercise collapse persistence."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0001", "ankidroid-0019"], "unfixed": ["ankidroid-0001", "ankidroid-0019"], "outcome": "wrong_pass"}

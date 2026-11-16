@@ -1,0 +1,151 @@
+{"event": "install", "build": {"n": 1, "build_id": "idlefantasy-E06-11", "mask": "11", "unfixed": ["idlefantasy-0011", "idlefantasy-0012"], "present": ["idlefantasy-0011", "idlefantasy-0012"]}}
+{"event": "brief", "item_id": "idlefantasy-E06"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1439}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 838}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 304, "y": 1484}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1316}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "type", "args": {"text": "0", "clear": true, "submit": false}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 657}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "type", "args": {"text": "12", "clear": true, "submit": false}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 304, "y": 1484}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 18, "message": {"type": "bug_report", "screen": "Smithing > Bronze Bar batch", "element": "Quantity input", "element_ref": 11, "field": "quantity", "symptom_type": "not_persisted", "expected": "Selected batch quantity survives rotation.", "observed": "Quantity resets to maximum 25 on rotation; reproduced with 12 and 1.", "observed_quote": "25", "steps": ["Skills > Smithing > Bronze Bar", "Set quantity 12", "Rotate landscape and portrait: quantity resets to 25", "Set quantity 1 and repeat rotation: resets to 25 again"], "anchor_node": {"text": "25", "class": "android.widget.EditText", "bounds": [370, 1232, 711, 1400]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0011": "expected_value", "idlefantasy-0012": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 159, "y": 849}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 520}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.65}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.85}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.85}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1390}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 776, "y": 1792}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 778, "y": 1285}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 780}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 585}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 585}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 43, "message": {"type": "bug_report", "screen": "Profile > Gear > View Combat Gear", "element": "View Combat Gear destination", "element_ref": 0, "field": "destination section", "symptom_type": "wrong_navigation", "expected": "Opens Combat with Gear tab selected.", "observed": "Opens Dungeons tab instead; reproduced by returning to Profile Gear and using link again.", "observed_quote": "Dungeons", "steps": ["Profile > Gear", "Tap View Combat Gear", "Observe Dungeons selected", "Return to Profile > Gear and tap View Combat Gear again"], "anchor_node": {"text": "Dungeons", "class": "android.widget.TextView", "bounds": [98, 267, 263, 320]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["idlefantasy-0012"], "per_bug": {"idlefantasy-0011": "location", "idlefantasy-0012": "ok"}}
+{"event": "hit", "bugs": ["idlefantasy-0012"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 970}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2109}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 917}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1951}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 742}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2109}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1340}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1951}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1402}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1032}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 1016}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1017}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 961}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2109}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 686, "y": 1467}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1439}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 838}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2107}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "tap_xy", "args": {"x": 776, "y": 1792}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 778, "y": 1285}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1439}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 838}}}
+{"event": "agent", "step": 84, "message": {"type": "bug_report", "screen": "Smithing > Bronze Bar batch", "element": "XP preview", "element_ref": 23, "field": "projected level", "symptom_type": "missing", "expected": "XP preview includes projected level and progress; 4400 +155 =4555 XP reaches level 20 (+1, 15%).", "observed": "Only total XP shown, with no projected level or progress, although Home shows '+155 XP  →  Lv 20 (+1, 15%)' for the same batch. Reopening reproduces.", "observed_quote": "+155 XP total", "steps": ["Start at Smithing 19, 4400 XP", "Open Smithing > Bronze Bar, quantity 25", "Observe XP preview lacks level projection", "Craft batch and compare Home projection", "Abandon (ingredients refunded), reopen same batch and observe omission again"], "anchor_node": {"text": "+155 XP total", "class": "android.widget.TextView", "bounds": [63, 1905, 282, 1948]}}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["idlefantasy-0011"], "per_bug": {"idlefantasy-0011": "anchored", "idlefantasy-0012": "location"}}
+{"event": "hit", "bugs": ["idlefantasy-0011"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1316}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "type", "args": {"text": "", "clear": true, "submit": false}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1316}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "type", "args": {"text": "999999999999999999999", "clear": true, "submit": false}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 304, "y": 1484}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "tap_xy", "args": {"x": 785, "y": 1621}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "tap_xy", "args": {"x": 291, "y": 1621}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 159, "y": 849}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 520}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.8, "x": 1500, "y": 850}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7, "x": 550, "y": 1900}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 2045}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5, "x": 540, "y": 2219}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 520}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.5}}}
+{"event": "agent", "step": 107, "message": {"type": "bug_report", "screen": "Mining > Choose Activity", "element": "Ore list below Gold Ore", "element_ref": 14, "field": "ore list completeness", "symptom_type": "missing", "expected": "Mining list includes higher-level ores, including Mithril at level 50, and permits scrolling to later locked ores.", "observed": "List ends at Gold Ore (level 40). Repeated upward swipes cannot reveal Mithril or higher-level ores; reopening reproduces.", "steps": ["At Mining level 50 open Skills > Mining", "Swipe upward repeatedly", "Last accessible entry is Gold Ore, no Mithril or later ores", "Close and reopen Mining and repeat swipes"], "anchor_node": {"class": "android.view.View", "contains": ["Gold Ore", "Lv. 40 • 65 XP/ore", "Owned: 0", "+3,900 XP"], "bounds": [0, 1977, 1080, 2208]}}}
+{"event": "scored", "report_n": 4, "quote_seen": null, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0011": "location", "idlefantasy-0012": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 2169}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 970}}}
+{"event": "agent", "step": 113, "message": {"type": "bug_report", "screen": "Combat > Gear > Choose Body", "element": "Candidate order", "element_ref": 3, "field": "sorting", "symptom_type": "wrong_value", "expected": "Equipment candidates ranked strongest first so Gilded Platebody (+95 Defense) precedes weaker body items.", "observed": "Candidates run weakest first: Mithril +48, Runite Chainbody +60, Adamantite +66, Slayer +80, Runite Platebody +90, Gilded +95. Reopening preserves reversed strength ordering; weapon chooser similarly puts Bronze Dagger before Iron Sword.", "observed_quote": "Def +48  •  Req lv. 30 Defense", "steps": ["Combat > Gear > Body", "Inspect candidate order with six precondition body items", "Dismiss and reopen Body: same weakest-first order", "Compare Weapon (Atk): Bronze Dagger precedes Iron Sword"], "anchor_node": {"class": "android.view.View", "contains": ["Mithril Platebody", "Def +48  •  Req lv. 30 Defense", "Equip"], "bounds": [0, 1242, 1080, 1397]}}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0011": "location", "idlefantasy-0012": "observed_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 100, "y": 2169}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1943}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "tap_xy", "args": {"x": 980, "y": 2169}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "tap_xy", "args": {"x": 144, "y": 664}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "tap_xy", "args": {"x": 429, "y": 1579}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "tap_xy", "args": {"x": 320, "y": 2169}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 293}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1257}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1951}}}
+{"event": "agent", "step": 128, "message": {"type": "bug_report", "screen": "Combat > Gear > Cape", "element": "Agility Cape equipped", "element_ref": 18, "field": "skill cape eligibility", "symptom_type": "wrong_value", "expected": "Agility Cape requires level 99 Agility; at level 20 it should not be an eligible equippable cape merely because it is in inventory.", "observed": "At Agility 20 the chooser lists Agility Cape and equips it successfully, applying +5 Defense and +10% XP. Reproduced after unequipping and selecting again.", "observed_quote": "Agility Cape", "steps": ["With precondition Agility Cape owned and Agility 20 open Combat > Gear > Cape", "Select Agility Cape; equipped successfully", "Unequip cape", "Reopen chooser and select Agility Cape again: equipped successfully"], "anchor_node": {"class": "android.view.View", "contains": ["Unequip"], "bounds": [944, 1265, 1070, 1374]}}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"idlefantasy-0011": "location", "idlefantasy-0012": "observed_value"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 1319}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "tap_xy", "args": {"x": 699, "y": 510}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 701}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "tap_xy", "args": {"x": 148, "y": 510}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2169}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 136, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.86, "notes": "Swept smithing/crafting batch selection, quantity boundaries, cancel/abandon and refunds, XP consistency; gear/tools choices, swaps, unequip, empty slots, style filtering, persistence and rotation; mining displayed level order, selection and abandon, reopening and rotation. Confirmed/logged: crafting XP preview omits projected level/progress; Profile View Combat Gear opens Dungeons. Also filed observed rotation reset, list completeness, candidate ordering and cape eligibility concerns; developer could not reproduce those. Restored original equipped items/style; abandoned test sessions, crafting ingredients refunded, no active session."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["idlefantasy-0011", "idlefantasy-0012"], "unfixed": ["idlefantasy-0011", "idlefantasy-0012"], "outcome": "success"}

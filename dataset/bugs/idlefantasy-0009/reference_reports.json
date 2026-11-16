@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "combat skills tab",
+    "element": "attack row",
+    "field": "prestige bonus",
+    "symptom_type": "missing",
+    "expected": "the attack row should show +9 prestige and hitpoints +4 prestige",
+    "observed": "no prestige bonus is shown, only the gear bonus is displayed",
+    "steps": [
+      "Opened Combat, Skills tab.",
+      "Read Attack and Hitpoints rows."
+    ]
+  },
+  "vague": {
+    "screen": "combat skills tab",
+    "element": "something",
+    "field": "prestige bonus",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

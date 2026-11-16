@@ -1,0 +1,157 @@
+{
+  "run_id": "02dd61f2df4e",
+  "item_id": "markor-E01",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Files (file browser, /storage/emulated/0/Documents)",
+      "element": "Zeta folder row (opoc_filesystem_item__root) / \"Folder first\" sort option",
+      "element_ref": 8,
+      "field": "Sort by \u2192 Folder first",
+      "symptom_type": "no_effect",
+      "expected": "With \"Folder first\" unchecked, folders should be sorted together with files by the selected criterion (Name ascending would place Zeta after todo.txt), so Zeta should not be pinned at the top.",
+      "observed": "Zeta is still listed first even though \"Folder first\" is unchecked and sort is Name ascending; the folder grouping is applied on every sort regardless of the \"Folder first\" setting.",
+      "observed_quote": "Zeta",
+      "steps": [
+        "Open Files tab in Markor's Documents folder",
+        "Tap the Sort by toolbar button",
+        "Select Name, uncheck 'Folder first', tap OK",
+        "Observe the list: Zeta is still the first row, above Indent2.md/Indent.md",
+        "Reopen Sort by: 'Folder first' is confirmed unchecked, yet the folder remains pinned first"
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/opoc_filesystem_item__root",
+        "desc": "Folder Zeta 11/14/2026, 12:26\u202fPM",
+        "class": "android.widget.LinearLayout",
+        "bounds": [
+          0,
+          354,
+          1080,
+          495
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Editor line-actions toolbar: \"Duplicate lines\" (current line in Single.md)",
+      "element_ref": 23,
+      "expected": "Tapping \"Duplicate lines\" with the cursor on the single line 'gamma' (file has no trailing newline) should duplicate the line, giving 'gamma\\ngamma' (the copy inserted after a line break).",
+      "observed": "Tapping \"Duplicate lines\" has no effect when the line has no trailing line break: the editor still contains only 'gamma' and Undo stays disabled. Line actions that do not depend on the line break (e.g. Indent, Delete lines) work on the same line, so the tap is registered and the failure is specific to the cloning action.",
+      "observed_quote": "gamma",
+      "screen": "Single.md editor (line actions visible in landscape format bar)",
+      "steps": [
+        "Open Single.md (content 'gamma', no newline at end)",
+        "Rotate to landscape so the full line-actions bar (Duplicate lines, Indent, De-indent, Delete lines) is visible",
+        "Tap on 'gamma' to put the cursor in the line",
+        "Tap 'Duplicate lines' and observe the editor text",
+        "Tap 'Duplicate lines' again: still no change; Undo remains disabled",
+        "Control: tapping 'Indent' on the same line does indent it, and 'Delete lines' removes the line, so the toolbar taps register"
+      ],
+      "symptom_type": "no_effect",
+      "anchor_node": {
+        "desc": "Duplicate lines",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          1610,
+          386,
+          1725,
+          491
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0001",
+        "markor-0003"
+      ],
+      "present": [
+        "markor-0001",
+        "markor-0003"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/markor-E01/02dd61f2df4e/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0001": "reported",
+    "markor-0003": "reported"
+  },
+  "elapsed_s": 1221.856,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.8,
+    "notes": "Swept all three areas on the current build.\n\nFile browser & sort: exercised Name/Date/Size/MIME, Reverse order, Folder first on/off, Folder local, folder navigation, and exit/re-enter. Confirmed and reported: with \"Folder first\" unchecked the folder Zeta is still grouped/pinned above the files (Name ascending should put it last); reproduced twice, including after reapplying the sort.\n\nEditing actions & search/replace: line actions Duplicate/Indent/De-indent/Delete, Bold, selection and Select-all, undo/redo, auto-save and persistence after leaving/reopening. Confirmed and reported: \"Duplicate lines\" is a no-op for the single line 'gamma' in Single.md (no trailing newline at EOF) \u2014 indent/delete on the same line work, so the tap registers; also observed no-op when the whole trailing-newline text is selected. Search/replace: literal, regex with capture groups ($2@$1), Replace (1), Replace all, match-case/regex toggles, show/hide replace row, portrait & landscape. Replace field is correctly built below the search field and replacement results are correct (including '$' text). Only a minor cosmetic quirk: clearing the search query leaves the old \"1/2\" counter until the next search/next-match action (not reported).\n\nView mode: headings/link (Notes), nested bullet lists (Indent/Shopping), Money '$' text, Regex/Regex2/Single/todo/inside, edit\u2194view toggling, rotation, view-mode search, and content consistency after saving an edit. Styling (heading border, link color/underline, bullets, sizes) is applied and persists across rotation and repeated switching; no defect found.\n\nAll test edits were reverted and files/settings restored to their starting state."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "markor-0001",
+    "markor-0003"
+  ],
+  "found": [
+    "markor-0001",
+    "markor-0003"
+  ],
+  "required": [
+    "markor-0001",
+    "markor-0003"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 296,
+  "precision": 1.0,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "markor-0001",
+    "markor-0003"
+  ],
+  "bug_meta": {
+    "markor-0001": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0003": {
+      "family": "interaction",
+      "hard_slice": true
+    }
+  }
+}

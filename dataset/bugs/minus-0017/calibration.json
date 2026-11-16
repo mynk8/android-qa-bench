@@ -1,0 +1,124 @@
+{
+  "bug_id": "minus-0017",
+  "runs": 1,
+  "started": "2026-11-11T10:11:41+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "result_amounts": [
+          "20"
+        ],
+        "seen": [
+          "= $20",
+          "="
+        ]
+      },
+      "seconds": 39.7,
+      "screenshot_sha256": "1e70bfe2d5d517298d989d1a89d721e966a620ad8265111a9bea483910a5b9a6",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0017-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "result_amounts": [
+          "7"
+        ],
+        "seen": [
+          "= $7",
+          "="
+        ]
+      },
+      "seconds": 39.3,
+      "screenshot_sha256": "7e9c47438efd0cf540738f48edd7dfcc2778c34cca539aac7189b6f6770afc49",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0017-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "result_amounts": [
+          "15"
+        ],
+        "seen": [
+          "= $15",
+          "="
+        ]
+      },
+      "seconds": 31.4,
+      "screenshot_sha256": "47e16aba4d239d306e18b2274316b6238ed15d3a6e61389dd94d6a1954b0741e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0017-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "result_amounts": [
+          "14"
+        ],
+        "seen": [
+          "= $14",
+          "="
+        ]
+      },
+      "seconds": 35.9,
+      "screenshot_sha256": "d8496d2d7988cada59bccb10649e4dbe0c5983bbb319d8c0e99d717b853e8fe9",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0017-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "result_amounts": [
+          "10"
+        ],
+        "seen": [
+          "= $10",
+          "="
+        ]
+      },
+      "seconds": 36.3,
+      "screenshot_sha256": "048be17ef82f96dfaf37b957b841810336912a71b9a3a2bab0248070cda909d2",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0017-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "result_amounts": [
+          "15"
+        ],
+        "seen": [
+          "= $15",
+          "="
+        ]
+      },
+      "seconds": 35.9,
+      "screenshot_sha256": "1057cfb04a6883561a26fead7207ef4cf0d033fca4f52ca5e5ca290021b8aa4b",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0017-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:16:08+0530"
+}

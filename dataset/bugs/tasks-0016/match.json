@@ -1,0 +1,68 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "subtask chip"
+  ],
+  "fields": [
+    "subtask count"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the chip shows 1 remaining subtask",
+    "completed subtasks are not counted"
+  ],
+  "observed_contains_any": [
+    "the chip still shows 2",
+    "completed subtask is still counted"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "1",
+      "one",
+      "remaining",
+      "left",
+      "uncompleted",
+      "incomplete",
+      "unfinished",
+      "still to do",
+      "to do"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "2",
+      "two",
+      "still",
+      "total",
+      "both",
+      "all",
+      "unchanged",
+      "same",
+      "counted",
+      "includes",
+      "include*"
+    ]
+  ],
+  "location_concepts": [
+    "subtask*",
+    "chip*",
+    "count*",
+    "pack for trip"
+  ],
+  "anchors": {
+    "elements": [
+      "Pack for trip",
+      "subtask",
+      "keyboard_arrow_up"
+    ],
+    "observed": [
+      "/^2$/"
+    ]
+  }
+}

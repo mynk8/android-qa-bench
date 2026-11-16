@@ -1,0 +1,44 @@
+{
+  "episode_id": "idlefantasy-E05",
+  "app_id": "idlefantasy",
+  "bugs": [
+    "idlefantasy-0009",
+    "idlefantasy-0010"
+  ],
+  "seed_id": "idle_basic",
+  "builds": {
+    "00": "idlefantasy-E05-00",
+    "01": "idlefantasy-E05-01",
+    "10": "idlefantasy-E05-10",
+    "11": "idlefantasy-E05-11"
+  },
+  "observable": {
+    "00": {
+      "idlefantasy-0009": false,
+      "idlefantasy-0010": false
+    },
+    "01": {
+      "idlefantasy-0009": false,
+      "idlefantasy-0010": true
+    },
+    "10": {
+      "idlefantasy-0009": true,
+      "idlefantasy-0010": false
+    },
+    "11": {
+      "idlefantasy-0009": true,
+      "idlefantasy-0010": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "note editor",
+    "element": "deck spinner",
+    "field": "deck",
+    "symptom_type": "not_persisted",
+    "expected": "the deck chosen for a new note is remembered the next time the editor opens",
+    "observed": "the deck for new cards is not saved",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "note editor",
+    "element": "something",
+    "field": "deck",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

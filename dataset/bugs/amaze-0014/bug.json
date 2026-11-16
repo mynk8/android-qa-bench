@@ -1,0 +1,91 @@
+{
+  "bug_id": "amaze-0014",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "functionality does not take effect",
+  "symptom_type": "no_effect",
+  "fix_date": "2026-03-12",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "drawer": [
+        {
+          "desc": "Navigate up"
+        },
+        {
+          "desc": "Open navigation drawer"
+        },
+        {
+          "desc": "Open drawer"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "images": [
+        {
+          "text": "Images"
+        }
+      ],
+      "rename": [
+        {
+          "text": "Rename"
+        }
+      ],
+      "rename_field": [
+        {
+          "id": "com.amaze.filemanager:id/singleedittext_input"
+        }
+      ],
+      "ok": [
+        {
+          "text": "Save"
+        },
+        {
+          "text": "SAVE"
+        },
+        {
+          "text": "OK"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0014-buggy",
+    "fixed": "amaze-0014-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0014.patch",
+    "confidence": "medium",
+    "lines_changed": 6,
+    "approach": "MainFragment.rename again passes the fragment open mode and current path to MainActivityHelper.rename instead of the file's own mode and parent, so in drawer category views the rename targets a bogus path."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

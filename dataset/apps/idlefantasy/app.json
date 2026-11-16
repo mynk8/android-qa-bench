@@ -1,0 +1,27 @@
+{
+  "app_id": "idlefantasy",
+  "display_name": "Idle Fantasy",
+  "repo": "https://github.com/tristinbaker/IdleFantasy",
+  "licence": "GPL-3.0",
+  "package": "com.tristinbaker.idlefantasy",
+  "pinned_commit": "df1e743f3a9641267a5ab4070ab0eaf55794dc8a",
+  "source_type": "greenfield",
+  "ui": "compose",
+  "local_data": "room",
+  "needs_network_or_login": false,
+  "first_run": [
+    [
+      {
+        "text": "Don't allow"
+      },
+      {
+        "text": "Don\u2019t allow"
+      }
+    ],
+    [
+      {
+        "text": "Got it"
+      }
+    ]
+  ]
+}

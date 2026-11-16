@@ -1,0 +1,91 @@
+{
+  "screens": [
+    "encrypt dialog"
+  ],
+  "elements": [
+    "password field"
+  ],
+  "fields": [
+    "password"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "no error while the confirmation field is empty",
+    "no mismatch message"
+  ],
+  "observed_contains_any": [
+    "password doesn't match error shown after typing the first password",
+    "mismatch error with empty confirmation"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "wrong_state",
+    "spurious_error"
+  ],
+  "expected_concepts": [
+    [
+      "no error",
+      "no message",
+      "no warning",
+      "not shown",
+      "without error",
+      "no mismatch",
+      "clean",
+      "fine",
+      "prematur*",
+      "too early",
+      "early",
+      "complain*",
+      "shouldn't",
+      "should not",
+      "before",
+      "while",
+      "yet"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "match*",
+      "mismatch*",
+      "error*",
+      "doesn't match",
+      "does not match",
+      "warning*",
+      "red",
+      "complain*",
+      "pops up",
+      "popup"
+    ],
+    [
+      "password*",
+      "field*",
+      "confirm*",
+      "empty",
+      "first",
+      "entry",
+      "top",
+      "box*",
+      "second",
+      "repeat*",
+      "retyp*"
+    ]
+  ],
+  "location_concepts": [
+    "encrypt*",
+    "dialog",
+    "password*",
+    "notes.txt",
+    "field*",
+    "confirm*"
+  ],
+  "anchors": {
+    "elements": [
+      "password",
+      "Password doesn't match",
+      "Repeat password"
+    ],
+    "observed": [
+      "/password doesn.t match/"
+    ]
+  }
+}

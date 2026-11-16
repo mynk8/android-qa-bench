@@ -1,0 +1,98 @@
+{
+  "screens": [
+    "images list"
+  ],
+  "elements": [
+    "photo.jpg"
+  ],
+  "fields": [
+    "rename"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "photo.jpg is renamed to photo-renamed.jpg",
+    "rename succeeds in the images view"
+  ],
+  "observed_contains_any": [
+    "the file keeps its old name",
+    "rename has no effect in the images view"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "renam*",
+      "photo-renamed*",
+      "new name",
+      "retitl*",
+      "title*",
+      "label*",
+      "picture*",
+      "chang*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "name*",
+      "renam*",
+      "photo*",
+      "file",
+      "picture*",
+      "label*",
+      "title*"
+    ],
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*",
+      "error"
+    ]
+  ],
+  "location_concepts": [
+    "image*",
+    "photo*",
+    "picture*",
+    "gallery",
+    "drawer"
+  ],
+  "anchors": {
+    "elements": [
+      "photo.jpg",
+      "photo"
+    ],
+    "observed": []
+  }
+}

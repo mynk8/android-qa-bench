@@ -1,0 +1,74 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "start date groups",
+    "section header"
+  ],
+  "fields": [
+    "group header"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "Buy milk has its own Start header",
+    "Buy milk is not under No start date"
+  ],
+  "observed_contains_any": [
+    "Buy milk is listed under the No start date header",
+    "no Start header is shown"
+  ],
+  "symptom_types": [
+    "missing",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "own",
+      "separate",
+      "dated",
+      "buy milk",
+      "start header",
+      "start today",
+      "start yesterday",
+      "its own",
+      "new header",
+      "new section",
+      "dedicated"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "no start date",
+      "undated",
+      "lumped",
+      "together",
+      "same",
+      "not listed",
+      "no header",
+      "without",
+      "no start header",
+      "missing",
+      "no section",
+      "merged",
+      "combined",
+      "grouped with",
+      "mixed"
+    ]
+  ],
+  "location_concepts": [
+    "group*",
+    "start*",
+    "section*",
+    "header*",
+    "sort*"
+  ],
+  "anchors": {
+    "elements": [
+      "Buy milk",
+      "No start date",
+      "Start"
+    ],
+    "observed": []
+  }
+}

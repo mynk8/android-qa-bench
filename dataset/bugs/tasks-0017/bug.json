@@ -1,0 +1,72 @@
+{
+  "bug_id": "tasks-0017",
+  "app_id": "tasks",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "redundant or missing UI",
+  "symptom_type": "missing",
+  "fix_date": "2025-03-30",
+  "seed_id": "inbox_basic",
+  "params": {
+    "nav": {
+      "sort_icon": [
+        {
+          "desc": "Sort"
+        },
+        {
+          "text": "Sort"
+        }
+      ],
+      "group_row": [
+        {
+          "text": "Grouping"
+        }
+      ],
+      "group_start": [
+        {
+          "text": "By start date"
+        }
+      ],
+      "group_toggle": [
+        {
+          "text": "Ascending"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "tasks-0017-buggy",
+    "fixed": "tasks-0017-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/tasks-0017.patch",
+    "confidence": "high",
+    "lines_changed": 8,
+    "approach": "Removed the start-date branch of the header logic so a dated task following an undated one gets no header of its own."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

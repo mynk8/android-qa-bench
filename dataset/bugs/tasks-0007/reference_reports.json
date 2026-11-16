@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "task edit",
+    "element": "edit screen",
+    "field": "visibility",
+    "symptom_type": "missing",
+    "expected": "the edit screen for Buy milk stays open after rotating",
+    "observed": "the edit screen disappears and the task list shows instead",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "task edit",
+    "element": "something",
+    "field": "visibility",
+    "symptom_type": "missing",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

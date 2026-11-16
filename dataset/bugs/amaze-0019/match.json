@@ -1,0 +1,113 @@
+{
+  "screens": [
+    "rename dialog"
+  ],
+  "elements": [
+    "name field"
+  ],
+  "fields": [
+    "rename"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "a notice says the new name matches the old name",
+    "no changes notice is shown"
+  ],
+  "observed_contains_any": [
+    "no notice is shown when the name is unchanged",
+    "dialog gives no warning for the same name"
+  ],
+  "symptom_types": [
+    "missing",
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "no changes",
+      "same name",
+      "matches",
+      "unchanged",
+      "identical",
+      "same",
+      "nothing will change",
+      "will change",
+      "already",
+      "equal*",
+      "same as",
+      "hint"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "notice",
+      "warning",
+      "message",
+      "no changes",
+      "hint",
+      "feedback",
+      "indication",
+      "silent*",
+      "hint*",
+      "nothing at all",
+      "tell*"
+    ],
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*",
+      "error",
+      "gone",
+      "hidden",
+      "absent",
+      "disappear*"
+    ]
+  ],
+  "location_concepts": [
+    "renam*",
+    "dialog",
+    "name*",
+    "notes.txt",
+    "file*",
+    "field*"
+  ],
+  "anchors": {
+    "elements": [
+      "notes.txt",
+      "Rename",
+      "name field",
+      "SAVE"
+    ],
+    "observed": []
+  }
+}

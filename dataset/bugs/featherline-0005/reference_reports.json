@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "medicine editor",
+    "element": "dose value",
+    "field": "preparation type switch",
+    "symptom_type": "not_persisted",
+    "expected": "switching preparation type and back clears the previous dose value",
+    "observed": "switching back resurrects the previously typed dose value",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "medicine editor",
+    "element": "something",
+    "field": "preparation type switch",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

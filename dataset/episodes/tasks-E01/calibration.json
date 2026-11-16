@@ -1,0 +1,215 @@
+{
+  "episode_id": "tasks-E01",
+  "start_build": "tasks-E01-111",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "row": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=DAILY;COUNT=1",
+            "parent": 0
+          }
+        ]
+      },
+      "seconds": 23.6,
+      "screenshot_sha256": "be2b74c30919e6c30a1c37d0498f40682c5093501d901d614495311d938bf2ce",
+      "bug": "tasks-0005",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "before": [
+          {
+            "_id": 1,
+            "dueDate": 1796904000000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "after": [
+          {
+            "_id": 1,
+            "dueDate": 1798113600000,
+            "completed": 0,
+            "recurrence": "FREQ=WEEKLY;INTERVAL=2",
+            "parent": 0
+          }
+        ],
+        "texts": [
+          "8:37",
+          "8:37\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Thursday, December 24",
+          "Weekly review",
+          "Search",
+          "Sort",
+          "More options",
+          "Weekly review rescheduled for December 24",
+          "Undo",
+          "Create new task"
+        ]
+      },
+      "seconds": 25.3,
+      "screenshot_sha256": "cc57c933becd9402e2ebf6ecd9c575feb781b3ee04d70e7d17e3111fdcfe7d6e",
+      "bug": "tasks-0005",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "My Tasks",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Sunday",
+          "Buy milk",
+          "2 litres",
+          "Due Friday, November 20",
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2",
+          "Charge phone",
+          "Print tickets",
+          "Due Monday, November 30",
+          "Pay rent",
+          "No due date",
+          "Read docs",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task",
+          "8:37",
+          "8:37\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 26.9,
+      "screenshot_sha256": "1ca2daa4f4d745b94b48908c3307a4111150b6c7becd599ee581b1882d0c5bba",
+      "bug": "tasks-0007",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "8:38",
+          "8:38\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Buy milk",
+          "No start date",
+          "Sunday",
+          "Does not repeat",
+          "Priority",
+          "list",
+          "Default list",
+          "Add tags",
+          "Add subtask",
+          "Enable reminders",
+          "Reminders are disabled in Android Settings",
+          "2 litres",
+          "Add location",
+          "Add attachment",
+          "Save",
+          "Delete task"
+        ]
+      },
+      "seconds": 18.7,
+      "screenshot_sha256": "88d895c6a27b9e0dbd26799129648f1cb359b6da6e87e9e1664e667fe8b61108",
+      "bug": "tasks-0007",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "8:38",
+          "8:38\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Tap to set up",
+          "Tap to set up",
+          "Page 1 of 3",
+          "Home",
+          "Phone",
+          "Phone",
+          "Contacts",
+          "Contacts",
+          "Files",
+          "Files",
+          "Chrome",
+          "Chrome",
+          "Search"
+        ]
+      },
+      "seconds": 27.9,
+      "screenshot_sha256": "c2da075a3d19d5b4e92ede566e8290b31542004bf5566479ff5f47117cc81b9b",
+      "bug": "tasks-0009",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "Matching 'milk'",
+          "More options",
+          "Get notified at the right time",
+          "To make sure you're notified at the right time, grant permission to set alarms and reminders in Settings",
+          "Dismiss",
+          "Settings",
+          "Due Sunday",
+          "Buy milk",
+          "2 litres",
+          "Search",
+          "Sort",
+          "More options",
+          "Create new task",
+          "8:39",
+          "8:39\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 24.4,
+      "screenshot_sha256": "34d8fa475600769fe8204f0f2fe48eb1dd6e225c99c4424654e67777253d7800",
+      "bug": "tasks-0009",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

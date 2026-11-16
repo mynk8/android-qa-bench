@@ -1,0 +1,85 @@
+{
+  "run_id": "f47204cc7a6c",
+  "item_id": "ankidroid-E05",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "ankidroid-0008"
+      ],
+      "present": [
+        "ankidroid-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max/episodes/ankidroid-E05/f47204cc7a6c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0008": "missed_unreached"
+  },
+  "elapsed_s": 783.695,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.96,
+    "notes": "Swept card and note browser modes/options, tag filtering, deck list expansion/collapse including persistence across navigation and rotation, nested deck sorting in the add-note picker, and add/edit validation, persistence, cancellation, and rotation. No reproducible bugs found. Removed all temporary notes and QA decks; French and Spanish retain their original 3 and 4 notes."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0008"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0008"
+  ],
+  "missed": [
+    "ankidroid-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 178,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0008"
+  ],
+  "bug_meta": {
+    "ankidroid-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

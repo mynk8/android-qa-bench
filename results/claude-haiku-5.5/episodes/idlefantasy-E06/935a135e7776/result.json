@@ -1,0 +1,158 @@
+{
+  "run_id": "935a135e7776",
+  "item_id": "idlefantasy-E06",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Skills > Smithing > Bronze Bar craft dialog",
+      "element_ref": 23,
+      "field": "XP total readout",
+      "symptom_type": "wrong_value",
+      "expected": "XP total = quantity \u00d7 6 XP per Bronze Bar (the list row shows 6 XP; quantity 1 shows +6 XP): 11 bars = +66 XP, 21 bars = +126 XP, 25 bars = +150 XP.",
+      "observed": "Quantity 11 shows \"+68 XP total\", 21 shows \"+130 XP total\", 25 shows \"+155 XP total\". Each total is about 6.2 XP per bar, while the single-bar readout is \"+6 XP total\" and the Smithing list row shows \"6 XP\". The extra XP grows with quantity.",
+      "observed_quote": "+155 XP total",
+      "steps": [
+        "Open Home > Skills, tap Smithing (level 19).",
+        "Tap the Bronze Bar row (list shows '6 XP' per bar, Owned: 0).",
+        "With quantity 1 the dialog shows '+6 XP total'.",
+        "Tap +10 so quantity is 11: dialog shows '+68 XP total' (expected +66).",
+        "Tap +10 so quantity is 21: '+130 XP total' (expected +126).",
+        "Tap +100 / Max so quantity is 25: '+155 XP total' (expected +150)."
+      ],
+      "anchor_node": {
+        "text": "+130 XP total",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1905,
+          282,
+          1948
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > View Combat Gear (opens Combat screen)",
+      "element_ref": 20,
+      "field": "Combat screen initial tab",
+      "symptom_type": "wrong_navigation",
+      "expected": "Tapping \"View Combat Gear\" on the Profile screen opens Combat on the Gear tab (the Gear section, showing COMBAT STYLE / COMBAT GEAR).",
+      "observed": "It opens Combat on the Dungeons tab: the \"Dungeons\" tab is underlined and the list shows the \"DUNGEONS\" section (Infinite Tower, Farm, Imp Cavern...). The Gear section is not shown. Reproduced twice.",
+      "observed_quote": "DUNGEONS",
+      "steps": [
+        "Launch the app and open the Profile tab (bottom right).",
+        "Tap 'View Combat Gear' in the COMBAT GEAR / gear section (Profile shows 'View Combat Gear').",
+        "Observe the Combat screen: the Dungeons tab is selected and the list shows 'DUNGEONS' (Infinite Tower, Farm, ...), not the Gear tab.",
+        "Tap the 'Gear' tab on the Combat screen: the COMBAT STYLE / COMBAT GEAR section appears. The link did not land there.",
+        "Repeat from Profile: same result (Dungeons tab)."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Quests"
+        ],
+        "bounds": [
+          661,
+          2064,
+          860,
+          2274
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ],
+      "present": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/idlefantasy-E06/935a135e7776/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0011": "missed_unreached",
+    "idlefantasy-0012": "reported"
+  },
+  "elapsed_s": 196.989,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Filed 2 reports; only 1 confirmed as a bug and logged.\n1) Profile > View Combat Gear opens Combat on the Dungeons tab instead of the Gear tab (reproduced twice; developer confirmed and logged).\n2) Bronze Bar craft dialog XP total (qty 11 -> +68, 21 -> +130, 25 -> +155 vs 6 XP/bar) was reported; the developer could not reproduce it with my steps, so it is not logged as a bug. Confidence is low on this area.\nChecked and found OK: smithing list and Tool filter, owned counts vs inventory, Mining ore list (sorted by level 1,1,1,10,15,20,30,40, XP values = rate x 60), gear slot choosers (Head, Body, Cape) reload from inventory, equip/unequip updates stats (DEF 70+5+95=170, +16 helmet=186, unequip=91), gear state persists after rotation and tab changes.\nNot covered: Crafting batch dialog (no craftable crafting recipe was affordable, so the Crafting XP readout was not exercised), starting a Mining session, Legs/Ring/Necklace/Shield choosers, Equip Best Gear. Debug 'Modify Item Count' button is visible on the Profile inventory (out of scope; I opened it and cancelled without changing anything)."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "found": [
+    "idlefantasy-0012"
+  ],
+  "required": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "missed": [
+    "idlefantasy-0011"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 152,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "bug_meta": {
+    "idlefantasy-0011": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0012": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

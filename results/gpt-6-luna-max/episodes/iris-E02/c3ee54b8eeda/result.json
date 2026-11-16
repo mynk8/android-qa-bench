@@ -1,0 +1,85 @@
+{
+  "run_id": "c3ee54b8eeda",
+  "item_id": "iris-E02",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0011"
+      ],
+      "present": [
+        "iris-0011"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-b/episodes/iris-E02/c3ee54b8eeda/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0011": "missed_unreached"
+  },
+  "elapsed_s": 384.384,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.94,
+    "notes": "Swept Media content-type chips (Media/Photos/Videos), verified counts and empty-video state, chip selection across navigation and rotation, search match/no-match/clear, IrisSeed album row count and its two items, category filters and sort reset, and Favorites with one and two photos, removal, persistence across navigation/rotation, and empty-state reversal. Restored both seed photos to unfavorited, Media chip to Media, album sorting to Newest first, and portrait orientation. No reproducible bugs found; no reports filed."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "iris-0011"
+  ],
+  "found": [],
+  "required": [
+    "iris-0011"
+  ],
+  "missed": [
+    "iris-0011"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 98,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "iris-0011"
+  ],
+  "bug_meta": {
+    "iris-0011": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

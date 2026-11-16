@@ -1,0 +1,137 @@
+{
+  "bug_id": "minus-0017",
+  "app_id": "minus",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-08-28",
+  "seed_id": "budget_basic",
+  "params": {
+    "nav": {
+      "dismiss_tutorial": [
+        {
+          "text": "Skip"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "OK"
+        }
+      ],
+      "key_1": [
+        {
+          "text": "1"
+        }
+      ],
+      "key_2": [
+        {
+          "text": "2"
+        }
+      ],
+      "key_3": [
+        {
+          "text": "3"
+        }
+      ],
+      "key_4": [
+        {
+          "text": "4"
+        }
+      ],
+      "key_5": [
+        {
+          "text": "5"
+        }
+      ],
+      "key_6": [
+        {
+          "text": "6"
+        }
+      ],
+      "key_7": [
+        {
+          "text": "7"
+        }
+      ],
+      "key_8": [
+        {
+          "text": "8"
+        }
+      ],
+      "key_9": [
+        {
+          "text": "9"
+        }
+      ],
+      "op_plus": [
+        {
+          "text": "+"
+        },
+        {
+          "desc": "+"
+        }
+      ],
+      "op_minus": [
+        {
+          "text": "-"
+        },
+        {
+          "desc": "-"
+        }
+      ],
+      "op_times": [
+        {
+          "text": "\u00d7"
+        },
+        {
+          "desc": "\u00d7"
+        }
+      ],
+      "op_div": [
+        {
+          "text": "\u00f7"
+        },
+        {
+          "desc": "\u00f7"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "minus-0017-buggy",
+    "fixed": "minus-0017-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/minus-0017.patch",
+    "confidence": "high",
+    "lines_changed": 27,
+    "approach": "ExpressionEvaluator.evaluateExpression folds the operators strictly left to right instead of applying multiplication and division before addition and subtraction, so 2+3x4 gives 20 instead of 14."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

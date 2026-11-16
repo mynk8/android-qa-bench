@@ -1,0 +1,62 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "search"
+  ],
+  "fields": [
+    "back"
+  ],
+  "symptom_type": "wrong_navigation",
+  "expected_contains_any": [
+    "back clears the search and shows the full list",
+    "returns to the task list"
+  ],
+  "observed_contains_any": [
+    "back closes the app",
+    "the app exits instead of leaving search"
+  ],
+  "symptom_types": [
+    "wrong_navigation"
+  ],
+  "expected_concepts": [
+    [
+      "clear*",
+      "full list",
+      "task list",
+      "leave*",
+      "exit*",
+      "return*",
+      "back to",
+      "list"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "clos*",
+      "exit*",
+      "quit*",
+      "home screen",
+      "launcher",
+      "leaves the app",
+      "out of the app",
+      "app",
+      "minimi*"
+    ]
+  ],
+  "location_concepts": [
+    "search*",
+    "back*"
+  ],
+  "anchors": {
+    "elements": [
+      "Search",
+      "My Tasks",
+      "Buy milk"
+    ],
+    "observed": [
+      "page 1 of 3"
+    ]
+  }
+}

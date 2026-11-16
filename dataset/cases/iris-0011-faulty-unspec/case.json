@@ -1,0 +1,14 @@
+{
+  "case_id": "iris-0011-faulty-unspec",
+  "bug_id": "iris-0011",
+  "_build_id": "iris-0011-buggy",
+  "_true_verdict": "FAIL",
+  "_variant": "faulty",
+  "_conditions": {
+    "instruction": "unspecified",
+    "success_signal": "n/a",
+    "claim": "none"
+  },
+  "seed_id": "album_basic",
+  "agent_input": "agent_input.md"
+}

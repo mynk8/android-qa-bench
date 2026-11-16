@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "transaction editor",
+    "element": "category",
+    "field": "categoryId",
+    "symptom_type": "not_persisted",
+    "expected": "after Groceries is recategorised to Transport, its category id is Transport",
+    "observed": "editing a transaction's category does not update the category id",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "transaction editor",
+    "element": "something",
+    "field": "categoryId",
+    "symptom_type": "not_persisted",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

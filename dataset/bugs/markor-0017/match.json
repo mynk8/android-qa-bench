@@ -1,0 +1,76 @@
+{
+  "screens": [
+    "editor",
+    "settings"
+  ],
+  "elements": [
+    "toggle done",
+    "add completion date"
+  ],
+  "fields": [
+    "completion date"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the task reads 'x Pay rent pri:A' with no date",
+    "no completion date is added when the setting is off"
+  ],
+  "observed_contains_any": [
+    "a date is inserted after the x",
+    "the completion date is added anyway"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "no date",
+      "without",
+      "setting",
+      "off",
+      "disabled",
+      "unchecked",
+      "x pay rent",
+      "plain",
+      "not add*",
+      "timestamp*",
+      "stamp*",
+      "no timestamp"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "date",
+      "dated",
+      "2026*",
+      "today*",
+      "added",
+      "inserted",
+      "still",
+      "anyway",
+      "ignor*",
+      "despite",
+      "regardless",
+      "timestamp*"
+    ]
+  ],
+  "location_concepts": [
+    "toggle done",
+    "todo*",
+    "pay rent",
+    "completion*",
+    "setting*",
+    "task*"
+  ],
+  "anchors": {
+    "elements": [
+      "Pay rent",
+      "highlighting_editor",
+      "Toggle done"
+    ],
+    "observed": [
+      "x 2026-11-11 pay rent"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "nested list"
+  ],
+  "fields": [
+    "indentation"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the new line keeps two spaces before - child",
+    "indent preserved"
+  ],
+  "observed_contains_any": [
+    "the child line gets four spaces",
+    "indentation doubled"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "two spaces",
+      "2 spaces",
+      "same indent*",
+      "keep*",
+      "preserv*",
+      "same level",
+      "indent*",
+      "aligned"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "four",
+      "4",
+      "doubl*",
+      "extra",
+      "more",
+      "twice",
+      "too much",
+      "deeper",
+      "increas*",
+      "too far",
+      "too many",
+      "wider",
+      "additional"
+    ]
+  ],
+  "location_concepts": [
+    "nested*",
+    "list indent*",
+    "indentation",
+    "nested*",
+    "list indent*",
+    "indentation",
+    "nested*",
+    "list indent*",
+    "indentation"
+  ],
+  "anchors": {
+    "elements": [
+      "child",
+      "highlighting_editor",
+      "Nested list"
+    ],
+    "observed": []
+  }
+}

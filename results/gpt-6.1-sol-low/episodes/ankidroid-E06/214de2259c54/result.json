@@ -1,0 +1,176 @@
+{
+  "run_id": "214de2259c54",
+  "item_id": "ankidroid-E06",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note",
+      "element": "Type picker",
+      "element_ref": 42,
+      "field": "note type",
+      "symptom_type": "not_persisted",
+      "expected": "The selected note model is stored immediately and remains selected on reopening Add.",
+      "observed": "Selecting Basic (and reversed card), leaving without adding a note, and reopening resets Type to Basic. Reproduced twice.",
+      "observed_quote": "Basic",
+      "steps": [
+        "Open Spanish card browser and tap Add.",
+        "Choose Basic (and reversed card) in Type.",
+        "Press Back to leave the blank editor.",
+        "Tap Add again; Type is Basic.",
+        "Repeat with the same result."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/note_type_spinner",
+        "class": "android.widget.Spinner",
+        "contains": [
+          "Basic"
+        ],
+        "bounds": [
+          147,
+          244,
+          1067,
+          370
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Create subdeck",
+      "element": "Name validation",
+      "element_ref": 13,
+      "field": "Name",
+      "symptom_type": "wrong_value",
+      "expected": "Whitespace-only inner deck names must be rejected with Create disabled.",
+      "observed": "Three spaces enable Create and create a child named blank. Reproduced under both Spanish and French.",
+      "observed_quote": "blank",
+      "steps": [
+        "Long-press Spanish on Decks, select Create subdeck.",
+        "Enter three spaces and tap Create.",
+        "Expand Spanish: child blank exists.",
+        "Repeat under French: Deck created appears."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/deck_layout",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "blank",
+          "0",
+          "0",
+          "0"
+        ],
+        "bounds": [
+          0,
+          485,
+          1080,
+          611
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ],
+      "present": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E06/214de2259c54/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0021": "reported",
+    "ankidroid-0022": "missed_unreached",
+    "ankidroid-0030": "missed_unreached"
+  },
+  "elapsed_s": 429.427,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Exercised deck management, add/edit notes, model/deck/tag pickers, day/range scheduling with empty/reversed/equal/boundary inputs, persistence, cancellation/undo, rotation, and statistics for Spanish/French/collection/tag:verb plus populated review data. Confirmed/logged whitespace-only subdeck validation bug. Filed model-picker persistence observation; developer could not reproduce. Temporary QA note and both blank subdecks deleted; due-date changes undone. Two French cards reviewed for populated statistics testing."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "found": [
+    "ankidroid-0021"
+  ],
+  "required": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "missed": [
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 185,
+  "precision": 0.5,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "bug_meta": {
+    "ankidroid-0021": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0022": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0030": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

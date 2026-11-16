@@ -1,0 +1,177 @@
+{
+  "bug_id": "featherline-0017",
+  "runs": 1,
+  "started": "2026-11-11T10:15:02+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Discard changes?",
+          "Your unsaved changes will be lost.",
+          "Discard",
+          "Keep editing",
+          "4:45",
+          "4:45\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 21.4,
+      "screenshot_sha256": "e810d326e82d264b941ad313a9978467fc2ef4a0de0ca5342ab67d6062075d75",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0017-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Change group color",
+          "Group name",
+          "Group 1",
+          "MEDICATIONS",
+          "No medications in this group yet.",
+          "Add",
+          "START",
+          "START DATE",
+          "Nov 11 Wed",
+          "START TIME",
+          "Now",
+          "SCHEDULE",
+          "Daily",
+          "Weekly",
+          "REPEAT EVERY",
+          "1",
+          "week",
+          "Decrease schedule interval",
+          "Increase schedule interval",
+          "DAYS OF WEEK",
+          "Reset",
+          "S",
+          "M",
+          "T",
+          "W",
+          "T",
+          "F",
+          "S",
+          "TIME",
+          "5:00 AM",
+          "Cancel",
+          "Add group",
+          "Save",
+          "4:45",
+          "4:45\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 21.4,
+      "screenshot_sha256": "fb7c166da0f521ab09893ef616692b49224ff25cfaa740d8f8f547529f4a95ff",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0017-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Discard changes?",
+          "Your unsaved changes will be lost.",
+          "Discard",
+          "Keep editing",
+          "4:46",
+          "4:46\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 20.2,
+      "screenshot_sha256": "f87b9c6d7a002f141ce9ca255e467624c4d7708b726cb057c477171da9e4418e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0017-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Discard changes",
+          "Discard your unsaved changes?",
+          "Discard",
+          "Cancel",
+          "4:46",
+          "4:46\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 20.8,
+      "screenshot_sha256": "3ff85402077e8a1beac91192a9c7a31e8d93e5eba98f2a3be4749b1e40fa2152",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0017-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Discard changes",
+          "Discard your unsaved changes?",
+          "Discard",
+          "Cancel",
+          "4:47",
+          "4:47\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 22.8,
+      "screenshot_sha256": "363ae2623c5d2ab855d4c7a94ae276e65f21aa60927a15d5cfe0ea8a8c7ae56a",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0017-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Discard changes",
+          "Discard your unsaved changes?",
+          "Discard",
+          "Cancel",
+          "4:47",
+          "4:47\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 19.4,
+      "screenshot_sha256": "363ae2623c5d2ab855d4c7a94ae276e65f21aa60927a15d5cfe0ea8a8c7ae56a",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0017-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:17:27+0530"
+}

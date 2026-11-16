@@ -1,0 +1,176 @@
+{"event": "install", "build": {"n": 1, "build_id": "nerdcalci-E01-111", "mask": "111", "unfixed": ["nerdcalci-0001", "nerdcalci-0002", "nerdcalci-0008"], "present": ["nerdcalci-0001", "nerdcalci-0002", "nerdcalci-0008"]}}
+{"event": "brief", "item_id": "nerdcalci-E01"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 446}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 719}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 10, "message": {"type": "bug_report", "screen": "Expenses calculation file", "element": "14", "symptom_type": "wrong_value", "expected": "avg of the three expense lines (1200, 340.5, 85.25) = 1625.75 / 3 = 541.92", "observed": "avg shows 812.88, which is the mean of the four values above it including the total line (1625.75 / 2)", "observed_quote": "812.88", "steps": ["Open the Expenses file (rent = 1200, food = 340.5, fuel = 85.25, total, avg)", "Read the value shown for the avg line"]}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0001"], "per_bug": {"nerdcalci-0001": "ok", "nerdcalci-0002": "location", "nerdcalci-0008": "location"}}
+{"event": "hit", "bugs": ["nerdcalci-0001"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 11, "message": {"type": "bug_report", "screen": "Monthly budget calculation file", "element": "20", "symptom_type": "wrong_value", "expected": "grand_total = 2800.50 (first total) + 49.50 (second total) = 2,850.00", "observed": "grand_total shows 5,700, which is the sum of every line above including the two total lines (double-counting the totals)", "observed_quote": "5,700", "steps": ["Open the Monthly budget file (salary = 2500, bonus = 300.5, total, blank line, gift = 49.5, total, grand_total)", "Read the value shown for grand_total"]}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0001"], "per_bug": {"nerdcalci-0001": "ok", "nerdcalci-0002": "location", "nerdcalci-0008": "location"}}
+{"event": "duplicate", "bugs": ["nerdcalci-0001"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 992}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 17, "message": {"type": "bug_report", "screen": "Temperatures calculation file", "element": "2", "symptom_type": "wrong_value", "expected": "-5 celsius displays as -5 °C", "observed": "the result for -5 celsius shows -551.30 °C; other lines are also wrong (-10 celsius in fahrenheit = -969.34 °F, expected 14 °F; -40 fahrenheit in celsius = -550.74 °C, expected -40 °C)", "observed_quote": "-551.30 °C", "steps": ["Open the Temperatures file (-5 celsius; -10 celsius in fahrenheit; -40 fahrenheit in celsius; -65 fahrenheit in celsius)", "Read the result shown for each line"]}}
+{"event": "scored", "report_n": 3, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0002"], "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "ok", "nerdcalci-0008": "location"}}
+{"event": "hit", "bugs": ["nerdcalci-0002"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 18, "message": {"type": "bug_report", "screen": "Temperatures calculation file", "element": "8", "symptom_type": "wrong_value", "expected": "-40 fahrenheit in celsius = -40 °C", "observed": "-40 fahrenheit in celsius shows -550.74 °C", "observed_quote": "-550.74 °C", "steps": ["Open the Temperatures file", "Read the result on the line '-40 fahrenheit in celsius'"]}}
+{"event": "scored", "report_n": 4, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0002"], "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "ok", "nerdcalci-0008": "location"}}
+{"event": "duplicate", "bugs": ["nerdcalci-0002"], "text": "Developer: that one is already logged."}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1265}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1538}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1811}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2084}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.6}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1612}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1885}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 490}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 56, "message": {"type": "bug_report", "screen": "Percentages calculation file", "element": "9", "symptom_type": "wrong_value", "expected": "'disc% of price' evaluates to 36 (15% of 240); 'disc% off price' to 204; 'tax% of 1200' to 102; '10% of 80' to 8 (already correct)", "observed": "'disc% of price', 'disc% off price' and 'tax% of 1200' show an error (Err) instead of a result; tapping the error shows 'Unexpected %'", "observed_quote": "Unexpected %", "steps": ["Open the Percentages file (price = 240; disc = 15; disc% of price; disc% off price; tax = 8.5; tax% of 1200; 10% of 80)", "Read the result column for 'disc% of price'; it shows Err", "Tap the Err indicator; the message reads 'Unexpected %'", "Note 'disc% off price' and 'tax% of 1200' also show Err"]}}
+{"event": "scored", "report_n": 5, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0008"], "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "location", "nerdcalci-0008": "ok"}}
+{"event": "hit", "bugs": ["nerdcalci-0008"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 1614}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 962}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "type", "args": {"text": "Rx", "clear": false, "submit": false}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 69, "message": {"type": "bug_report", "screen": "Rename File dialog (opened from Remainders file's More options menu)", "element": "38", "symptom_type": "wrong_value", "expected": "The current name 'Remainders' is preselected when the dialog opens, so typing replaces it (text becomes 'Rx')", "observed": "The name is not selected; typing 'Rx' appended to it, giving 'RemaindersRx' (counter 12/50)", "observed_quote": "RemaindersRx", "steps": ["On the home screen, tap the More options (three dots) on the Remainders file", "Tap Rename", "Without touching the text field, type 'Rx'", "Observe the field shows 'RemaindersRx' instead of 'Rx'"]}}
+{"event": "scored", "report_n": 6, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "location", "nerdcalci-0008": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "tap_xy", "args": {"x": 589, "y": 974}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 1614}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 962}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "type", "args": {"text": "Rx", "clear": false, "submit": false}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "key", "args": {"key": "ESCAPE"}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 589, "y": 974}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 87, "message": {"type": "bug_report", "screen": "Rename File dialog (Remainders file)", "element": "38", "symptom_type": "wrong_value", "expected": "When the Rename dialog opens, the current name 'Remainders' is preselected (highlighted), so the first keystroke replaces it and the field would read 'Rx'", "observed": "The dialog opens with 'Remainders' shown but not highlighted, caret at end. Typing 'Rx' without tapping the field appends: the field reads 'RemaindersRx' (counter 12/50). Reproduced 2 of 2 times (once in each open of the dialog)", "observed_quote": "RemaindersRx", "steps": ["Scroll the home list so the 'Remainders' file row is visible (its More options is at the right of the row)", "Tap More options on the 'Remainders' row", "Tap 'Rename' in the menu. The Rename File dialog opens showing 'Remainders' with counter 10/50", "Do not tap the text field. Type 'Rx' (no clearing)", "The field reads 'RemaindersRx' (12/50), not 'Rx'", "Tap Cancel; repeat from step 2 and get the same result"]}}
+{"event": "scored", "report_n": 7, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "location", "nerdcalci-0008": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2158}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 290}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "type", "args": {"text": "10 * 3", "clear": true, "submit": false}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "tap_xy", "args": {"x": 770, "y": 1284}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 725}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "type", "args": {"text": "QA Test Calc", "clear": true, "submit": false}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 798, "y": 974}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1007, "y": 148}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "tap_xy", "args": {"x": 770, "y": 1284}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 725}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "type", "args": {"text": "QA Test Calc", "clear": true, "submit": false}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "tap_xy", "args": {"x": 589, "y": 974}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.9}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.9, "x": 540, "y": 1000}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 500, "y": 700}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.3, "x": 540, "y": 900}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "tap_xy", "args": {"x": 755, "y": 148}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "tap_xy", "args": {"x": 64, "y": 164}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 146, "message": {"type": "bug_report", "screen": "Home (Files list)", "element": "0", "symptom_type": "missing", "expected": "A newly created file that was renamed (now 'QA Test CalcUntitled', modified 02:07 AM) appears in the FILES list on the home screen, at the top since it is the newest", "observed": "The home FILES list still shows only the 9 original files (Expenses first, Percentages last); 'QA Test CalcUntitled' is absent. Search for files does list it under Recent files with 'MODIFIED: 02:07 AM'", "observed_quote": "QA Test CalcUntitled", "steps": ["On the home screen tap the + (New Calculation) button, then New Calculation", "Type '10 * 3' in the first line; result shows 30", "Open More options (top right) > Rename File", "Enter a new name (the field gets 'QA Test CalcUntitled' because the text was appended to 'Untitled'), tap Rename", "Press Back to return to home", "Scroll the FILES list to the top and bottom: the new file is not listed", "Tap Search, the file is listed under Recent files"]}}
+{"event": "scored", "report_n": 8, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0001": "location", "nerdcalci-0002": "location", "nerdcalci-0008": "location"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 375}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 1.0}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 158, "message": null}

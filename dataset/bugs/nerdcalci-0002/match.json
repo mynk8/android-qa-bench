@@ -1,0 +1,98 @@
+{
+  "screens": [
+    "calculator"
+  ],
+  "elements": [
+    "temperature result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "-5 celsius shows -5 °C and -10 celsius in fahrenheit shows 14 °F",
+    "negative temperatures convert correctly"
+  ],
+  "observed_contains_any": [
+    "negative temperatures show a wrong value",
+    "-5 celsius shows -551.3 °C"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "-5",
+      "14",
+      "-40",
+      "-53.89",
+      "negative",
+      "minus",
+      "below zero",
+      "below-zero",
+      "sub-zero",
+      "subzero",
+      "freezing",
+      "below freezing",
+      "convert* properly",
+      "echo*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "negative",
+      "minus",
+      "-5",
+      "-10",
+      "-40",
+      "-65",
+      "°c",
+      "°f",
+      "below zero",
+      "below-zero",
+      "sub-zero",
+      "subzero",
+      "reading*",
+      "temp*"
+    ],
+    [
+      "wrong",
+      "incorrect",
+      "different",
+      "unexpected",
+      "large",
+      "huge",
+      "far",
+      "off",
+      "nonsens*",
+      "impossible",
+      "-551*",
+      "-5*",
+      "enormous",
+      "absurd"
+    ]
+  ],
+  "location_concepts": [
+    "temperature*",
+    "calculator",
+    "result",
+    "editor",
+    "celsius",
+    "fahrenheit",
+    "line"
+  ],
+  "anchors": {
+    "elements": [
+      "-5 celsius",
+      "-10 celsius in fahrenheit",
+      "-40 fahrenheit in celsius",
+      "celsius"
+    ],
+    "observed": [
+      "-551.3",
+      "-969.34",
+      "-550.74",
+      "-564.63"
+    ]
+  }
+}

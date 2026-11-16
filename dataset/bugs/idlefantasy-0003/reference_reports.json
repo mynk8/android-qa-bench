@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "shop sell old gear",
+    "element": "sell old gear list",
+    "field": "agility cape",
+    "symptom_type": "wrong_value",
+    "expected": "the agility cape should not be listed in sell old gear because skill capes are never sold",
+    "observed": "sell old gear lists the agility cape as gear to sell",
+    "steps": [
+      "Opened Shop, Sell tab, Sell Old Gear.",
+      "Read the list."
+    ]
+  },
+  "vague": {
+    "screen": "shop sell old gear",
+    "element": "something",
+    "field": "agility cape",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

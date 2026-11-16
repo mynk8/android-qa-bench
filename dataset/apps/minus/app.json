@@ -1,0 +1,12 @@
+{
+  "app_id": "minus",
+  "display_name": "Minus",
+  "repo": "https://github.com/isaacsa51/Minus",
+  "licence": "Apache-2.0",
+  "package": "com.serranoie.app.minus",
+  "pinned_commit": "79d31e5b788776cdb914aadfdfb32f1cfa7ab10a",
+  "source_type": "greenfield",
+  "ui": "compose",
+  "local_data": "room",
+  "needs_network_or_login": false
+}

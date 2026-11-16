@@ -1,0 +1,78 @@
+{
+  "screens": [
+    "shop",
+    "sell tab",
+    "sell list"
+  ],
+  "elements": [
+    "sell price",
+    "price",
+    "copper ore",
+    "coins ea"
+  ],
+  "fields": [
+    "sell price",
+    "price",
+    "copper ore",
+    "coins ea"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "copper ore sells for 2 coins, below its 3 coin discounted buy price",
+    "selling pays less than buying"
+  ],
+  "observed_contains_any": [
+    "copper ore sells for 4 coins, above its discounted buy price",
+    "selling pays more than the discounted buy price"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "copper ore",
+      "sell*",
+      "buy price",
+      "2 coins",
+      "below",
+      "less",
+      "lower",
+      "under",
+      "than the buy",
+      "loss",
+      "cheaper"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "4",
+      "four",
+      "above",
+      "too high",
+      "not less",
+      "equal",
+      "profit",
+      "same as",
+      "more than the",
+      "higher than the buy",
+      "arbitrage"
+    ]
+  ],
+  "location_concepts": [
+    "sell*",
+    "copper*",
+    "ore",
+    "price*",
+    "coins ea"
+  ],
+  "anchors": {
+    "elements": [
+      "Copper Ore",
+      "Tin Ore",
+      "coins ea"
+    ],
+    "observed": [
+      "4 coins ea"
+    ]
+  }
+}

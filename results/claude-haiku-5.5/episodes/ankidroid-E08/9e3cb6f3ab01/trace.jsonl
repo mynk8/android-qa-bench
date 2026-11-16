@@ -1,0 +1,279 @@
+{"event": "install", "build": {"n": 1, "build_id": "ankidroid-E08-11", "mask": "11", "unfixed": ["ankidroid-0025", "ankidroid-0026"], "present": ["ankidroid-0025", "ankidroid-0026"]}}
+{"event": "brief", "item_id": "ankidroid-E08"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "tap_xy", "args": {"x": 1027, "y": 146}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 478}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 741, "y": 1723}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 936}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 877}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 578}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "type", "args": {"text": "deck:Spanish", "clear": true, "submit": false}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 837, "y": 147}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 2101}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "type", "args": {"text": "zebra", "clear": true, "submit": false}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 433}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 2101}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "type", "args": {"text": "yak", "clear": true, "submit": false}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 53, "message": {"type": "bug_report", "screen": "Add note (Add screen)", "element": "37", "field": "Front / note type", "symptom_type": "no_effect", "expected": "After typing in Front and changing the note type, pressing Back (navigate up) should show the \"Discard current input?\" prompt, the same as when no note type was changed, so typed text is not lost silently.", "observed": "After changing the note type from Basic to \"Basic (and reversed card)\", pressing Back closed the Add screen immediately with no \"Discard current input?\" prompt; the typed text \"zebra\" was lost. Without the model swap, the same Back press shows \"Discard current input?\".", "observed_quote": "Discard current input?", "steps": ["From deck list, tap Add (FAB) then Add note.", "In Front field type 'zebra'.", "Tap the note type spinner and choose 'Basic (and reversed card)'.", "Tap Navigate up (back arrow) at top left.", "Observe: screen closes with no discard prompt; zebra is lost.", "Control: tap Add, type 'yak' in Front without changing type, tap Navigate up: 'Discard current input?' appears."], "expected_dummy": "x"}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["ankidroid-0026"], "per_bug": {"ankidroid-0025": "location", "ankidroid-0026": "ok"}}
+{"event": "hit", "bugs": ["ankidroid-0026"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "tap_xy", "args": {"x": 830, "y": 1231}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 498, "y": 658}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "type", "args": {"text": "15", "clear": true, "submit": false}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 282}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 69, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 70, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 71, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 72, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 73, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 74, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 75, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 76, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 77, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 546}}}
+{"event": "agent", "step": 78, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 79, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 80, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 81, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 82, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 83, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 84, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 85, "message": {"type": "action", "name": "type", "args": {"text": "25", "clear": true, "submit": false}}}
+{"event": "agent", "step": 86, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 282}}}
+{"event": "agent", "step": 87, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 88, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 89, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 90, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 91, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 92, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 93, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 94, "message": {"type": "action", "name": "tap_xy", "args": {"x": 135, "y": 658}}}
+{"event": "agent", "step": 95, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 96, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 97, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 98, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 99, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 100, "message": {"type": "action", "name": "tap_xy", "args": {"x": 647, "y": 1231}}}
+{"event": "agent", "step": 101, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 102, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 103, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 104, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 105, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1231}}}
+{"event": "agent", "step": 106, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 107, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 108, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 546}}}
+{"event": "agent", "step": 109, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 110, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 111, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 112, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 113, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 114, "message": {"type": "action", "name": "type", "args": {"text": "12", "clear": true, "submit": false}}}
+{"event": "agent", "step": 115, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 116, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 117, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 118, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 119, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 120, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 121, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 122, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 123, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 124, "message": {"type": "action", "name": "tap_xy", "args": {"x": 700, "y": 486}}}
+{"event": "agent", "step": 125, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 126, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 127, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 282}}}
+{"event": "agent", "step": 128, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 129, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 130, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 131, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 132, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 133, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 134, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 135, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 136, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 137, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 138, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 139, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 140, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 141, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 142, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 143, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 144, "message": {"type": "action", "name": "tap_xy", "args": {"x": 367, "y": 604}}}
+{"event": "agent", "step": 145, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 146, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 147, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 581}}}
+{"event": "agent", "step": 148, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 149, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 150, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1005}}}
+{"event": "agent", "step": 151, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 152, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 153, "message": {"type": "action", "name": "tap_xy", "args": {"x": 931, "y": 340}}}
+{"event": "agent", "step": 154, "message": {"type": "action", "name": "tap_xy", "args": {"x": 826, "y": 2132}}}
+{"event": "agent", "step": 155, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 156, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 157, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 158, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 159, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 160, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 581}}}
+{"event": "agent", "step": 161, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 162, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 163, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 164, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 165, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 166, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 167, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 168, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 169, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 170, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1371}}}
+{"event": "agent", "step": 171, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 172, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 173, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 936}}}
+{"event": "agent", "step": 174, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 175, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 2200}}}
+{"event": "agent", "step": 176, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 177, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 178, "message": {"type": "action", "name": "tap_xy", "args": {"x": 827, "y": 147}}}
+{"event": "agent", "step": 179, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 180, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 181, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 294}}}
+{"event": "agent", "step": 182, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 183, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1371}}}
+{"event": "agent", "step": 184, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 185, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 186, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 728}}}
+{"event": "agent", "step": 187, "message": {"type": "action", "name": "type", "args": {"text": "0", "clear": true, "submit": false}}}
+{"event": "agent", "step": 188, "message": {"type": "action", "name": "tap_xy", "args": {"x": 720, "y": 1701}}}
+{"event": "agent", "step": 189, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 190, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 191, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 729}}}
+{"event": "agent", "step": 192, "message": {"type": "action", "name": "type", "args": {"text": "0", "clear": true, "submit": false}}}
+{"event": "agent", "step": 193, "message": {"type": "action", "name": "tap_xy", "args": {"x": 827, "y": 147}}}
+{"event": "agent", "step": 194, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 195, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 196, "message": {"type": "action", "name": "tap_xy", "args": {"x": 842, "y": 1360}}}
+{"event": "agent", "step": 197, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 198, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 199, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 200, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 201, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 202, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 203, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 204, "message": {"type": "action", "name": "tap_xy", "args": {"x": 830, "y": 1231}}}
+{"event": "agent", "step": 205, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 206, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 207, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 208, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 209, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 210, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 211, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 212, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 213, "message": {"type": "action", "name": "type", "args": {"text": "2", "clear": true, "submit": false}}}
+{"event": "agent", "step": 214, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 215, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 282}}}
+{"event": "agent", "step": 216, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 217, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 218, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 219, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 220, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2311}}}
+{"event": "agent", "step": 221, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 222, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 223, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 224, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 225, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 226, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 2101}}}
+{"event": "agent", "step": 227, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 228, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 229, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 230, "message": {"type": "action", "name": "type", "args": {"text": "uva", "clear": true, "submit": false}}}
+{"event": "agent", "step": 231, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 841}}}
+{"event": "agent", "step": 232, "message": {"type": "action", "name": "type", "args": {"text": "grape", "clear": true, "submit": false}}}
+{"event": "agent", "step": 233, "message": {"type": "action", "name": "tap_xy", "args": {"x": 784, "y": 146}}}
+{"event": "agent", "step": 234, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 235, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 236, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 237, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 238, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 239, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 540, "y": 420}}}
+{"event": "agent", "step": 240, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 241, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1182}}}
+{"event": "agent", "step": 242, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 243, "message": {"type": "action", "name": "tap_xy", "args": {"x": 895, "y": 658}}}
+{"event": "agent", "step": 244, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 245, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 246, "message": {"type": "action", "name": "tap_xy", "args": {"x": 531, "y": 749}}}
+{"event": "agent", "step": 247, "message": {"type": "action", "name": "type", "args": {"text": "1", "clear": true, "submit": false}}}
+{"event": "agent", "step": 248, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 249, "message": {"type": "action", "name": "tap_xy", "args": {"x": 954, "y": 282}}}
+{"event": "agent", "step": 250, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 251, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 252, "message": {"type": "action", "name": "tap_xy", "args": {"x": 932, "y": 2101}}}
+{"event": "agent", "step": 253, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 254, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 255, "message": {"type": "action", "name": "tap_xy", "args": {"x": 848, "y": 2101}}}
+{"event": "agent", "step": 256, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 257, "message": {"type": "action", "name": "tap_xy", "args": {"x": 607, "y": 307}}}
+{"event": "agent", "step": 258, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 259, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 260, "message": {"type": "action", "name": "tap_xy", "args": {"x": 544, "y": 685}}}
+{"event": "agent", "step": 261, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 262, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 263, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 660}}}
+{"event": "agent", "step": 264, "message": {"type": "action", "name": "type", "args": {"text": "pera", "clear": true, "submit": false}}}
+{"event": "agent", "step": 265, "message": {"type": "action", "name": "tap_xy", "args": {"x": 236, "y": 1553}}}
+{"event": "agent", "step": 266, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 267, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 268, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 146}}}
+{"event": "agent", "step": 269, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 270, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 271, "message": {"type": "action", "name": "tap_xy", "args": {"x": 830, "y": 1231}}}
+{"event": "agent", "step": 272, "message": {"type": "action", "name": "wait_idle", "args": {"timeout_s": 2.0}}}
+{"event": "agent", "step": 273, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 274, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.55, "notes": "Filed 1 bug (confirmed and logged): Add note, changing the note type after typing into Front and then pressing Back closes the screen with no \"Discard current input?\" prompt and the typed text is lost. A control without the swap does prompt. Typing after the swap does prompt, so the baseline appears to be reset on swap. Checked and found no defects: filtered deck creation from Spanish (4 cards pulled, Spanish shows 0), criteria dropdown (11 entries, \"Relative overdueness\" persists after rebuild and reopen), limit 0 shows the upstream no-match error, deck options New cards: This deck / Preset / Today only values persist after save and reopen, Cancel and Discard behave, rotation keeps unsaved input, the preset change reaches Spanish, a deck override (This deck 2, Today only 1) shows in the deck list counts, and a note save clears the editor with no false prompt. Note edit: removing a tag persists. Not covered: Edit-note note-type swap, the second filter in the filtered deck builder, and exhaustive verification that the criteria list matches the scheduler."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["ankidroid-0025", "ankidroid-0026"], "unfixed": ["ankidroid-0025", "ankidroid-0026"], "outcome": "wrong_pass"}

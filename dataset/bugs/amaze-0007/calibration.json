@@ -1,0 +1,153 @@
+{
+  "bug_id": "amaze-0007",
+  "runs": 1,
+  "started": "2026-11-11T03:31:50+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 47.6,
+      "screenshot_sha256": "722322453ef780f278d639269ca6fe8afb9435a6e186565b16a8e41b08ed9a7d",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0007-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "10:03",
+          "10:03\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "ANDROIDQA",
+          "AMAZE",
+          "BETA",
+          "Files",
+          "readme (1).txt",
+          "Nov 10 | 10:03\u202fPM",
+          "13 B",
+          "Properties",
+          "readme.txt",
+          "Nov 10 | 10:03\u202fPM",
+          "12 B",
+          "Properties"
+        ]
+      },
+      "seconds": 58.2,
+      "screenshot_sha256": "2aff0be407b8ca3ef3949abf9c775ad3c335e3b338f07851a99022a7d6e16ec7",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0007-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 35.4,
+      "screenshot_sha256": "85ea3171abd9bd15c01a5321c7499db9788eb769395b6c96bac40d97bda2e366",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0007-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme (2).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 52.5,
+      "screenshot_sha256": "354ff7126572def1eca21a0f0202184f1fa60c8ca38cd4b3c3ffad265c56caa2",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0007-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "texts": [
+          "10:06",
+          "10:06\u202fPM",
+          "Amaze Debug notification: ",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Navigate up",
+          "Amaze Debug",
+          "Search",
+          "Home",
+          "More options",
+          "ANDROIDQA",
+          "AMAZE",
+          "BETA",
+          "Files",
+          "readme (1).txt",
+          "Nov 10 | 10:05\u202fPM",
+          "13 B",
+          "Properties",
+          "readme (2).txt",
+          "Nov 10 | 10:05\u202fPM",
+          "13 B",
+          "Properties",
+          "readme.txt",
+          "Nov 10 | 10:05\u202fPM",
+          "12 B",
+          "Properties"
+        ]
+      },
+      "seconds": 56.7,
+      "screenshot_sha256": "14ffa240a3e5c3b4823a13dce69a3b2b0fc67f7b45c28888cef69129caed34ad",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0007-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "beta": [
+          "readme (1).txt",
+          "readme.txt"
+        ]
+      },
+      "seconds": 34.8,
+      "screenshot_sha256": "25133e59116b2cf0cacb278b50e056e7e0fc16241a32371af41332bdfb1f2ac6",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0007-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T03:37:04+0530"
+}

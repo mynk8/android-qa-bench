@@ -1,0 +1,102 @@
+{
+  "bug_id": "amaze-0017",
+  "runs": 1,
+  "started": "2026-11-11T10:21:53+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "Alpha",
+          "readme.txt"
+        ]
+      },
+      "seconds": 28.2,
+      "screenshot_sha256": "e28ea164cf0a128ff3bdc7abf02bcb1248ce3c80a6b7085e174a955d21f3f6d5",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0017-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "Beta",
+          "readme.txt"
+        ]
+      },
+      "seconds": 29.0,
+      "screenshot_sha256": "a00731845b2e42d4788bbfb5168541e0589fb5753efebd19b58c1072eec8f615",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0017-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "inner": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 28.4,
+      "screenshot_sha256": "3a7a1a3dc0a281886d538f78f591d9d676cc740e287b11dafdf662db52ba184a",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "amaze-0017-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 38.4,
+      "screenshot_sha256": "ec595ce90aa0d3a6b3addc5bec0033f5f566bf1369747873c88cc91a39ad5108",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0017-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "inner": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 36.6,
+      "screenshot_sha256": "48fea1b20baeca0431ae3a0df7b6cd596dfd61d046e6798753ab84b52651071d",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0017-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "inner": [
+          "readme.txt"
+        ]
+      },
+      "seconds": 28.1,
+      "screenshot_sha256": "0e7cf42de2ff30f39ec315784acf12b626b1fb199ea531519f10324e07880f75",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "amaze-0017-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:25:15+0530"
+}

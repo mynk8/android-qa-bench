@@ -1,0 +1,113 @@
+{
+  "run_id": "e61cc602c46d",
+  "item_id": "idlefantasy-E04",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bonuses",
+      "element": "Bonuses list",
+      "symptom_type": "missing",
+      "expected": "Bonuses lists all active sources: Infinite Tower (+7% XP, +12% coin drops, +150 HP), Mercantile 99, guild quests (3), plus prestige",
+      "observed": "Only Attack/Hitpoints prestige and Construction entries are shown; tower bonuses, Mercantile and guild quest bonuses are absent",
+      "steps": [
+        "Open Profile tab",
+        "Tap Bonuses",
+        "Observe the SKILL BONUSES list; it has no tower, Mercantile or guild entries"
+      ]
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ],
+      "present": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/idlefantasy-E04/e61cc602c46d/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0007": "reported",
+    "idlefantasy-0008": "missed_unreached"
+  },
+  "elapsed_s": 79.112,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.4,
+    "notes": "Filed one bug: Profile > Bonuses omits the Infinite Tower, Mercantile and guild quest bonuses. Smithing XP bar math was correct (0.859 at 4,400 XP). Mining, Fishing and Woodcutting actions were in level order. Achievements were consistent with the character data. Not checked: the profile milestones section, which I could not find. Also not checked: action order for Cooking and Crafting, and the lower part of the Smithing list, because scrolling was unreliable."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "found": [
+    "idlefantasy-0007"
+  ],
+  "required": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "missed": [
+    "idlefantasy-0008"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 30,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "bug_meta": {
+    "idlefantasy-0007": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

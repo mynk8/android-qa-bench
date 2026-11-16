@@ -1,0 +1,80 @@
+{
+  "run_id": "e86467e00177",
+  "item_id": "minus-E07",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [],
+  "harness_replies": [],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E07-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0017"
+      ],
+      "present": [
+        "minus-0017"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-c/episodes/minus-E07/e86467e00177/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0017": "missed_unreached"
+  },
+  "elapsed_s": 84.509,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "no_signoff",
+  "bugs": [
+    "minus-0017"
+  ],
+  "found": [],
+  "required": [
+    "minus-0017"
+  ],
+  "missed": [
+    "minus-0017"
+  ],
+  "true_positives": 0,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 0,
+  "steps": 21,
+  "precision": 1.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "minus-0017"
+  ],
+  "bug_meta": {
+    "minus-0017": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

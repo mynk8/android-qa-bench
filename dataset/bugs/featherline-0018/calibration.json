@@ -1,0 +1,172 @@
+{
+  "bug_id": "featherline-0018",
+  "runs": 1,
+  "started": "2026-11-11T10:17:27+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "summary": "Doses before 04:00 count as the previous day.",
+        "twelve_hour_elsewhere": [
+          "5:00 AM",
+          "4:47\u202fAM"
+        ]
+      },
+      "seconds": 17.8,
+      "screenshot_sha256": "c370fdbf08f8a18e8d7721892a0c1afc1da55fdb2fa07434e8692dd3062f4013",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0018-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "summary": "Doses before 04:00 count as the previous day.",
+        "twelve_hour_elsewhere": [
+          "4:48\u202fAM",
+          "5:00 AM",
+          "5:00 AM"
+        ]
+      },
+      "seconds": 20.2,
+      "screenshot_sha256": "be10708402217a9c0823baf11f22e31497872cc08081e4d56dd34b5b5f88fd94",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0018-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Change group color",
+          "Group name",
+          "Group 1",
+          "MEDICATIONS",
+          "No medications in this group yet.",
+          "Add",
+          "START",
+          "START DATE",
+          "Nov 11 Wed",
+          "START TIME",
+          "Now",
+          "SCHEDULE",
+          "Daily",
+          "Weekly",
+          "REPEAT EVERY",
+          "1",
+          "day",
+          "Decrease schedule interval",
+          "Increase schedule interval",
+          "TIMES OF DAY \u00b7 1",
+          "Add",
+          "5:00 AM",
+          "Night owl mode",
+          "Doses before 04:00 count as the previous day.",
+          "Cancel",
+          "Add group",
+          "Save",
+          "4:48",
+          "4:48\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 18.3,
+      "screenshot_sha256": "a5d671630ebec48c82494736efa7fb783de28b7d9b75f981e55a710b3977cb82",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "featherline-0018-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "summary": "Doses before 4:00 AM count as the previous day.",
+        "twelve_hour_elsewhere": [
+          "5:00 AM",
+          "4:48\u202fAM"
+        ]
+      },
+      "seconds": 18.7,
+      "screenshot_sha256": "967c859a7f0f5935e132f7b6cab793b967d8f28712554880d1e08b14396b7525",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0018-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "summary": "Doses before 4:00 AM count as the previous day.",
+        "twelve_hour_elsewhere": [
+          "5:00 AM",
+          "5:00 AM",
+          "5:00 AM"
+        ]
+      },
+      "seconds": 22.0,
+      "screenshot_sha256": "be90e40cb0c8e3b696720d0527b6d17e78bd0093811ae9fb546582e83510c287",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0018-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "4:49",
+          "4:49\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Change group color",
+          "Group name",
+          "Group 1",
+          "MEDICATIONS",
+          "No medications in this group yet.",
+          "Add",
+          "START",
+          "START DATE",
+          "Nov 11 Wed",
+          "START TIME",
+          "Now",
+          "SCHEDULE",
+          "Daily",
+          "Weekly",
+          "REPEAT EVERY",
+          "1",
+          "day",
+          "Decrease schedule interval",
+          "Increase schedule interval",
+          "TIMES OF DAY \u00b7 1",
+          "Add",
+          "5:00 AM",
+          "Night owl mode",
+          "Doses before 4:00 AM count as the previous day.",
+          "Cancel",
+          "Add group",
+          "Save"
+        ]
+      },
+      "seconds": 17.4,
+      "screenshot_sha256": "c7e66ab5a9fb3ba0ddfbec4fcdf4992023502af0774ec257a306d18d6736f7f2",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "featherline-0018-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T10:19:41+0530"
+}

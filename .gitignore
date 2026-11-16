@@ -1,0 +1,21 @@
+# Built APKs are produced by the human team and are large; hashes live in builds/index.json
+dataset/apps/*/builds/*.apk
+# Cloned app sources (private)
+private/apps/*/src/
+__pycache__/
+*.pyc
+.venv/
+# Build workspace (clones, worktrees, logs)
+work/
+# Local secrets (E2B_API_KEY etc.), never committed
+.env
+# Run outputs and calibration screenshots (regenerated; evidence hashes live in calibration.json)
+runs/
+artifacts/calibration/
+# Not part of the benchmark
+xiaomi-debloat/
+node_modules/
+aqb/probe/out/
+
+# Local run logs and run supervisors
+logs/

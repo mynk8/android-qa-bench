@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "file browser",
+    "element": "favourite star",
+    "field": "star",
+    "symptom_type": "wrong_value",
+    "expected": "after favouriting Notes.md in the details dialog, the toolbar star is in sync and tapping it removes the favourite, so Favourites does not list Notes.md",
+    "observed": "the toolbar star was not updated after the dialog, tapping it added the favourite again and Notes.md is still listed under Favourites",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "file browser",
+    "element": "something",
+    "field": "star",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

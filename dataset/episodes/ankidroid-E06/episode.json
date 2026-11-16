@@ -1,0 +1,73 @@
+{
+  "episode_id": "ankidroid-E06",
+  "app_id": "ankidroid",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "seed_id": "decks_basic",
+  "builds": {
+    "000": "ankidroid-E06-000",
+    "001": "ankidroid-E06-001",
+    "010": "ankidroid-E06-010",
+    "011": "ankidroid-E06-011",
+    "100": "ankidroid-E06-100",
+    "101": "ankidroid-E06-101",
+    "110": "ankidroid-E06-110",
+    "111": "ankidroid-E06-111"
+  },
+  "observable": {
+    "000": {
+      "ankidroid-0021": false,
+      "ankidroid-0022": false,
+      "ankidroid-0030": false
+    },
+    "001": {
+      "ankidroid-0021": false,
+      "ankidroid-0022": false,
+      "ankidroid-0030": true
+    },
+    "010": {
+      "ankidroid-0021": false,
+      "ankidroid-0022": true,
+      "ankidroid-0030": false
+    },
+    "011": {
+      "ankidroid-0021": false,
+      "ankidroid-0022": true,
+      "ankidroid-0030": true
+    },
+    "100": {
+      "ankidroid-0021": true,
+      "ankidroid-0022": false,
+      "ankidroid-0030": false
+    },
+    "101": {
+      "ankidroid-0021": true,
+      "ankidroid-0022": false,
+      "ankidroid-0030": true
+    },
+    "110": {
+      "ankidroid-0021": true,
+      "ankidroid-0022": true,
+      "ankidroid-0030": false
+    },
+    "111": {
+      "ankidroid-0021": true,
+      "ankidroid-0022": true,
+      "ankidroid-0030": true
+    }
+  },
+  "interactions": [],
+  "known_leftover": [],
+  "leftover_reply": "known issue",
+  "partial_fix_builds": {},
+  "status": "verified",
+  "build_base": "app head + forward-ported patches",
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json"
+  }
+}

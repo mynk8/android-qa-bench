@@ -1,0 +1,36 @@
+{
+  "correct": {
+    "screen": "shop sell tab",
+    "element": "copper ore price",
+    "field": "sell price",
+    "symptom_type": "wrong_value",
+    "expected": "copper ore should sell for 2 coins, less than the 3 coin discounted buy price",
+    "observed": "copper ore sells for 4 coins, more than the 3 coin buy price",
+    "steps": [
+      "Checked the Buy tab price of Copper Ore.",
+      "Opened the Sell tab and read the Copper Ore price."
+    ]
+  },
+  "vague": {
+    "screen": "shop sell tab",
+    "element": "something",
+    "field": "sell price",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "settings screen",
+    "element": "language label",
+    "field": "language",
+    "symptom_type": "cut_off",
+    "expected": "the language name is fully visible",
+    "observed": "the language name is cut off",
+    "steps": [
+      "Opened Settings."
+    ]
+  }
+}

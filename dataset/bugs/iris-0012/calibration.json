@@ -1,0 +1,196 @@
+{
+  "bug_id": "iris-0012",
+  "runs": 1,
+  "started": "2026-11-13T19:52:45+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "no_videos_message": false,
+        "no_photos_message": true,
+        "texts": [
+          "2:23",
+          "2:23\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "No photos found",
+          "Videos",
+          "Search",
+          "Filter",
+          "Videos",
+          "Settings",
+          "Videos",
+          "Albums",
+          "Favorites",
+          "Library"
+        ]
+      },
+      "seconds": 15.7,
+      "screenshot_sha256": "fbc0b3972baf0a09962ca3211b60ded0528c2345a9ba4af6dba36fdf4cd0b0ac",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "iris-0012-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "no_videos_message": false,
+        "no_photos_message": true,
+        "texts": [
+          "No photos found",
+          "Videos",
+          "Search",
+          "Filter",
+          "Videos",
+          "Settings",
+          "Videos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:23",
+          "2:23\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 18.9,
+      "screenshot_sha256": "fbc0b3972baf0a09962ca3211b60ded0528c2345a9ba4af6dba36fdf4cd0b0ac",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "iris-0012-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "listed": true,
+        "grid_has_photos": false,
+        "texts": [
+          "No photos found",
+          "Photos",
+          "Search",
+          "Filter",
+          "Photos",
+          "Settings",
+          "Photos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:24",
+          "2:24\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 23.0,
+      "screenshot_sha256": "341e30f4f3aa9cc9e220ac910790d59aa2264403a6a45b4df66919e4c980ac74",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "iris-0012-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "no_videos_message": true,
+        "no_photos_message": false,
+        "texts": [
+          "2:24",
+          "2:24\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "No videos found",
+          "Videos",
+          "Search",
+          "Filter",
+          "Videos",
+          "Settings",
+          "Videos",
+          "Albums",
+          "Favorites",
+          "Library"
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "f212a60d2d00df05fab848e825ce4da4297cc2f3100176051416ba4502dd8fbf",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "iris-0012-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "no_videos_message": true,
+        "no_photos_message": false,
+        "texts": [
+          "No videos found",
+          "Videos",
+          "Search",
+          "Filter",
+          "Videos",
+          "Settings",
+          "Videos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:24",
+          "2:24\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 18.8,
+      "screenshot_sha256": "f212a60d2d00df05fab848e825ce4da4297cc2f3100176051416ba4502dd8fbf",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "iris-0012-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "listed": true,
+        "grid_has_photos": false,
+        "texts": [
+          "No photos found",
+          "Photos",
+          "Search",
+          "Filter",
+          "Photos",
+          "Settings",
+          "Photos",
+          "Albums",
+          "Favorites",
+          "Library",
+          "2:25",
+          "2:25\u202fPM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 22.1,
+      "screenshot_sha256": "3223272835253d3538e153ab4caca673f8bb22ef91d2e7a045cc9d768c91a411",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "iris-0012-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-13T19:55:01+0530"
+}

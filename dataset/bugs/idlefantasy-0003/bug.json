@@ -1,0 +1,69 @@
+{
+  "bug_id": "idlefantasy-0003",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "state",
+  "issta_class": "action has unintended effect",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-07-05",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "shop": [
+        {
+          "text": "Shop"
+        }
+      ],
+      "sell_tab": [
+        {
+          "text": "Sell"
+        }
+      ],
+      "sell_old": [
+        {
+          "text": "Sell Old Gear"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0003-buggy",
+    "fixed": "idlefantasy-0003-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0003.patch",
+    "confidence": "high",
+    "lines_changed": 3,
+    "approach": "computeOldEquipmentToSell no longer skips items with a capeSkill, so skill capes in the inventory are included in the Sell Old Gear preview."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

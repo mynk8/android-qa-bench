@@ -1,0 +1,167 @@
+{
+  "run_id": "e16f135d1f1b",
+  "item_id": "tasks-E04",
+  "kind": "episode",
+  "app_id": "tasks",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Subtask badge on \"Pack for trip\" row / detached subtask row",
+      "field": "subtask parent relationship and subtask badge count",
+      "symptom_type": "not_persisted",
+      "expected": "After adding a subtask (e.g. \"TT child\") under Charge phone and saving, it should stay nested under Charge phone; after creating an unrelated new task the hierarchy and badge counts should be unchanged (Pack for trip badge stays 3, Charge phone badge stays 1).",
+      "observed": "After \"TT child\" was added under Charge phone it showed nested with Pack for trip badge 3 and Charge phone badge 1. Then creating and saving a new top-level task \"QA plain4\" made \"TT child\" appear as a top-level row under \"No due date\"; Charge phone's subtask badge disappeared and \"Pack for trip\" badge dropped from 3 to 2. Same reproduction with three other subtasks (Buy charger, ZZ sub, QQ child, RR child, SS child).",
+      "steps": [
+        "In My Tasks expand Pack for trip, open Charge phone, tap Add subtask, type 'TT child', hide keyboard and tap Save.",
+        "Verify TT child is nested under Charge phone (Pack for trip badge 3, Charge phone badge 1).",
+        "Tap the + FAB, type 'QA plain4', then tap Save (no dates set).",
+        "Observe TT child is now a top-level task, Charge phone has no badge, and Pack for trip badge is 2."
+      ],
+      "element_ref": 0,
+      "observed_quote": "Pack for trip",
+      "anchor_node": {
+        "id": "org.tasks:id/rowBody",
+        "class": "android.widget.RelativeLayout",
+        "contains": [
+          "Pack for trip",
+          "keyboard_arrow_up",
+          "2"
+        ],
+        "bounds": [
+          0,
+          0,
+          1080,
+          219
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "My Tasks",
+      "element": "Snackbar shown after bulk-deleting a selected task",
+      "field": "deletion confirmation count",
+      "symptom_type": "wrong_value",
+      "expected": "After selecting one task and deleting it, the snackbar should report the number actually deleted, e.g. \"1 deleted\".",
+      "observed": "Selecting one task (QA plain, then QA plain2) via long-press, choosing More options > Delete > OK removes the task from the list, but the snackbar says \"0 deleted\".",
+      "steps": [
+        "In My Tasks long-press a task row (e.g. a test task) to enter selection mode; header shows '1'.",
+        "Tap the action-bar More options icon and choose Delete.",
+        "Confirm with OK.",
+        "The selected task disappears from the list, but the snackbar at the bottom reads '0 deleted'."
+      ],
+      "element_ref": 33,
+      "observed_quote": "0 deleted",
+      "anchor_node": {
+        "id": "org.tasks:id/snackbar_text",
+        "text": "0 deleted",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1908,
+          1017,
+          2033
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "tasks-E04-111",
+      "mask": "111",
+      "unfixed": [
+        "tasks-0016",
+        "tasks-0017",
+        "tasks-0021"
+      ],
+      "present": [
+        "tasks-0016",
+        "tasks-0017",
+        "tasks-0021"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-c/episodes/tasks-E04/e16f135d1f1b/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "tasks-0016": "reported",
+    "tasks-0017": "missed_unreached",
+    "tasks-0021": "missed_unreached"
+  },
+  "elapsed_s": 1173.567,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "found": [
+    "tasks-0016"
+  ],
+  "required": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "missed": [
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 300,
+  "precision": 0.5,
+  "recall": 0.3333333333333333,
+  "unfixed_at_end": [
+    "tasks-0016",
+    "tasks-0017",
+    "tasks-0021"
+  ],
+  "bug_meta": {
+    "tasks-0016": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0017": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "tasks-0021": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

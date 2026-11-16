@@ -1,0 +1,238 @@
+{
+  "run_id": "61eb55e53c3f",
+  "item_id": "nerdcalci-E02",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Number bases calculation file",
+      "element": "15 dec in hex result",
+      "element_ref": 2,
+      "field": "15 dec in hex",
+      "symptom_type": "wrong_value",
+      "expected": "15 decimal converts to 0xF. The other supplied radix cases should likewise convert to 0b1010, 0o100, and 0xFF.",
+      "observed": "The result is 0x96, and the other supplied conversions are also scaled incorrectly (0b1100100, 0o1200, 0x9F6). Reopened the file and the same values appeared again.",
+      "observed_quote": "0x96",
+      "steps": [
+        "From the home screen, tap the Number bases file.",
+        "Read the result for \u201c15 dec in hex\u201d.",
+        "Go back to the home screen and reopen Number bases; the result still reads 0x96."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "0x96"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Date gaps calculation file",
+      "element": "Timestamp range result",
+      "element_ref": 3,
+      "field": "datetime(1981, 2, 14, 18, 32, 0) to datetime(2026, 5, 3, 14, 49, 9)",
+      "symptom_type": "wrong_value",
+      "expected": "45 y 2 mo 18 d 20 h 17 min 9 s. The second timestamp range also should be 4 y 5 mo 14 d 11 h 25 min 30 s.",
+      "observed": "The first result is one day too large; the second timestamp result is also one day too large. Reopening Date gaps showed the same values.",
+      "observed_quote": "45 y 2 mo 19 d 20 h 17 min 9 s",
+      "steps": [
+        "From the home screen, open Date gaps.",
+        "Read the result for the first datetime range.",
+        "Go back to the home screen and reopen Date gaps; it still reads \u201c45 y 2 mo 19 d 20 h 17 min 9 s\u201d.",
+        "Check the second datetime range; it also shows 15 d where the elapsed calendar period is 14 d because its end time is earlier in the day."
+      ],
+      "anchor_node": {
+        "text": "45 y 2 mo 19 d 20 h 17 min 9 s",
+        "class": "android.widget.TextView",
+        "bounds": [
+          797,
+          260,
+          1048,
+          483
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home screen file list",
+      "element": "Date gaps row More options",
+      "element_ref": 11,
+      "field": "Date gaps and Time differences row overflow menus",
+      "symptom_type": "wrong_navigation",
+      "expected": "Tapping a file row\u2019s More options control should open that file\u2019s options menu.",
+      "observed": "The Date gaps row\u2019s overflow tap opens Scratchpad, while the Time differences row\u2019s overflow tap opens a new Untitled calculation. The row hit areas are covered by the floating action buttons; both misroutes reproduced after returning home.",
+      "observed_quote": "Open temporary scratchpad",
+      "steps": [
+        "On the portrait home screen, scroll to the top of the file list.",
+        "Tap the three dot More options control aligned with Date gaps (at about x=976, y=1813). Scratchpad opens instead of a file options menu.",
+        "Return to the home screen and tap the three dot More options control aligned with Time differences (at about x=976, y=2086). A new Untitled calculation opens instead of a file options menu."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Date gaps",
+          "MODIFIED: JAN 05, 2026 \u2022 CREATED: JAN 05, 2026",
+          "Open temporary scratchpad"
+        ],
+        "bounds": [
+          0,
+          1696,
+          1080,
+          1927
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home screen file list",
+      "element": "Scratchpad title reached from Date gaps More options",
+      "element_ref": 4,
+      "field": "Date gaps row More options control",
+      "symptom_type": "wrong_navigation",
+      "expected": "Tapping the More options control beside Date gaps opens that file\u2019s options menu.",
+      "observed": "The tap opens the Scratchpad screen instead. I repeated the same tap from the home screen and it opened Scratchpad again.",
+      "observed_quote": "Scratchpad",
+      "steps": [
+        "On the portrait home screen, leave the file list at the top so the Date gaps row is visible.",
+        "Tap the three-dot More options control on the Date gaps row (the clickable view at x=976, y=1813; it is element 12 in the home screen observation).",
+        "Instead of a file options menu, the Scratchpad screen opens. Return home and repeat the same tap; Scratchpad opens again."
+      ],
+      "anchor_node": {
+        "text": "Scratchpad",
+        "class": "android.widget.TextView",
+        "bounds": [
+          148,
+          95,
+          441,
+          169
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home screen",
+      "element": "Date gaps row More options control",
+      "element_ref": 12,
+      "field": "Date gaps",
+      "symptom_type": "wrong_navigation",
+      "expected": "The Date gaps More options control should open the file options menu.",
+      "observed": "Tapping the Date gaps row\u2019s More options control opens Scratchpad.",
+      "observed_quote": "Open temporary scratchpad",
+      "steps": [
+        "On the portrait home screen at the top of the list, tap element 12, the clickable view at x=976, y=1813 beside the Date gaps card.",
+        "The app opens Scratchpad instead of the Date gaps options menu."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "bounds": [
+          913,
+          1750,
+          1039,
+          1876
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: that one is already logged."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E02-11",
+      "mask": "11",
+      "unfixed": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ],
+      "present": [
+        "nerdcalci-0003",
+        "nerdcalci-0004"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-max-c/episodes/nerdcalci-E02/61eb55e53c3f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0003": "reported",
+    "nerdcalci-0004": "reported"
+  },
+  "elapsed_s": 353.315,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.9,
+    "notes": "Swept all supplied calculation files and the home file list. Confirmed and logged incorrect radix conversions and date range day counts. Reproduced the home row overflow misnavigation; the report tool replied that this issue is already logged. Verified temperature conversions, arithmetic, remainders, percentages, budget totals, UTC time differences, home ordering/sort restoration, rotation, and list loading after reopening."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "found": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "required": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 5,
+  "steps": 60,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0003",
+    "nerdcalci-0004"
+  ],
+  "bug_meta": {
+    "nerdcalci-0003": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "nerdcalci-0004": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

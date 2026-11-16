@@ -1,0 +1,14 @@
+{
+  "case_id": "idlefantasy-0001-clean-spec",
+  "bug_id": "idlefantasy-0001",
+  "_build_id": "idlefantasy-0001-fixed",
+  "_true_verdict": "PASS",
+  "_variant": "clean",
+  "_conditions": {
+    "instruction": "specified",
+    "success_signal": "shown",
+    "claim": "none"
+  },
+  "seed_id": "idle_basic",
+  "agent_input": "agent_input.md"
+}

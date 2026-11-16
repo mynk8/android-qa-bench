@@ -1,0 +1,84 @@
+{
+  "screens": [
+    "medicine editor"
+  ],
+  "elements": [
+    "dose value",
+    "strength",
+    "new medicine"
+  ],
+  "fields": [
+    "preparation type switch"
+  ],
+  "symptom_type": "not_persisted",
+  "expected_contains_any": [
+    "switching preparation type and back clears the previous dose value",
+    "the old number does not return"
+  ],
+  "observed_contains_any": [
+    "switching back resurrects the previously typed dose value",
+    "100 reappears after a Tablet to Patch to Tablet switch"
+  ],
+  "symptom_types": [
+    "not_persisted",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "clear*",
+      "empty",
+      "blank",
+      "reset*",
+      "not return",
+      "doesn't return",
+      "no value",
+      "removed",
+      "gone",
+      "default",
+      "wipe*",
+      "erase*",
+      "fresh",
+      "not kept",
+      "not retain*",
+      "cleared",
+      "start* empty"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "previous",
+      "old",
+      "again",
+      "reappear*",
+      "return*",
+      "back",
+      "restor*",
+      "earlier",
+      "retain*",
+      "kept",
+      "sticks",
+      "persist*",
+      "typed"
+    ]
+  ],
+  "location_concepts": [
+    "medicine*",
+    "medication*",
+    "dose*",
+    "strength",
+    "preparation*",
+    "tablet*",
+    "patch*"
+  ],
+  "anchors": {
+    "elements": [
+      "dose",
+      "strength",
+      "medication",
+      "preparation form"
+    ],
+    "observed": [
+      "/\\b(100|250)\\b/"
+    ]
+  }
+}

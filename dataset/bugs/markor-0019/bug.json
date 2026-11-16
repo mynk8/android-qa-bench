@@ -1,0 +1,88 @@
+{
+  "bug_id": "markor-0019",
+  "app_id": "markor",
+  "source": "mature_pr",
+  "family": "state",
+  "issta_class": "UI state lost",
+  "symptom_type": "not_persisted",
+  "fix_date": "2020-12-05",
+  "seed_id": "notebook_basic",
+  "params": {
+    "nav": {
+      "files_tab": [
+        {
+          "text": "Files"
+        },
+        {
+          "desc": "Files"
+        }
+      ],
+      "edit_mode": [
+        {
+          "desc": "Edit"
+        },
+        {
+          "id": "net.gsantner.markor:id/fab_edit"
+        }
+      ],
+      "editor": [
+        {
+          "id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor"
+        }
+      ],
+      "indent": [
+        {
+          "desc": "Indent"
+        },
+        {
+          "text": "Indent"
+        }
+      ],
+      "indent_two": [
+        {
+          "text": "2"
+        }
+      ],
+      "indent_eight": [
+        {
+          "text": "8"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "markor-0019-buggy",
+    "fixed": "markor-0019-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/markor-0019.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "The indent-size dialog callback only updates the in-memory value and no longer saves it for the document."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

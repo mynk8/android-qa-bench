@@ -1,0 +1,116 @@
+{
+  "screens": [
+    "main",
+    "home",
+    "main screen",
+    "dashboard",
+    "budget sheet",
+    "budget split",
+    "sheet"
+  ],
+  "elements": [
+    "period selector",
+    "split option",
+    "weekly option",
+    "budget split option"
+  ],
+  "fields": [
+    "selected period",
+    "selected option",
+    "split selection"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "Weekly is still selected after the sheet is reopened"
+  ],
+  "observed_contains_any": [
+    "the selection goes back to Daily after the sheet is reopened"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "not_persisted"
+  ],
+  "expected_concepts": [
+    [
+      "still selected",
+      "remain*",
+      "persist*",
+      "kept",
+      "saved",
+      "remember*",
+      "lost",
+      "forgot*",
+      "pick*",
+      "choice",
+      "choos*",
+      "chosen",
+      "reopen*",
+      "shown again",
+      "dismiss*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "old",
+      "previous",
+      "stale",
+      "original",
+      "earlier",
+      "outdated",
+      "revert*",
+      "reset*",
+      "monthly",
+      "month",
+      "daily",
+      "default",
+      "instead",
+      "selected",
+      "lost"
+    ]
+  ],
+  "location_concepts": [
+    "budget*",
+    "split*",
+    "sheet",
+    "weekly",
+    "week*",
+    "period*"
+  ],
+  "anchors": {
+    "elements": [
+      "Calculated amount",
+      "$1.9",
+      "Weekly",
+      "Daily"
+    ],
+    "observed": [
+      "$1.9"
+    ]
+  }
+}

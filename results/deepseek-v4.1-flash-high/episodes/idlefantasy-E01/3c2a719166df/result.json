@@ -1,0 +1,221 @@
+{
+  "run_id": "3c2a719166df",
+  "item_id": "idlefantasy-E01",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Materials",
+      "element": "Copper Ore row in the Sell list",
+      "field": "payout per item",
+      "element_ref": 19,
+      "observed_quote": "4 coins ea.",
+      "symptom_type": "wrong_value",
+      "expected": "Sell payout should be capped at the item's shop catalogue price, so Copper Ore should pay no more than the 3 coins the Buy tab charges; selling should not beat buying.",
+      "observed": "Copper Ore sells for \"4 coins ea.\" even though the Buy tab lists Copper Ore at 3 coins. Verified by selling 1 Copper Ore (+4 coins, snackbar \"Sold 1\u00d7 Copper Ore for 4 coins\") and buying 1 back (-3 coins), a repeatable +1 coin profit. Tin Ore shows the same 4 coins ea. vs 3 coins buy price.",
+      "steps": [
+        "Open Shop > Sell and select the Materials filter.",
+        "Note Copper Ore's payout is 4 coins ea. and Tin Ore's is 4 coins ea.",
+        "Open Shop > Buy and scroll to Ores & Materials; Copper Ore and Tin Ore both cost 3 coins.",
+        "Sell 1 Copper Ore (receive 4 coins), then buy 1 Copper Ore back (pay 3 coins); repeat for guaranteed profit."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Copper Ore",
+          "\u00d740 in inventory",
+          "4 coins ea."
+        ],
+        "bounds": [
+          0,
+          1341,
+          1080,
+          1484
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Sell > Sell Old Gear preview",
+      "element": "Sell Old Gear item list (Slayer Platebody / Steel Full Helmet rows)",
+      "field": "Sell Old Gear preview list",
+      "element_ref": 30,
+      "observed_quote": "Slayer Platebody",
+      "symptom_type": "cut_off",
+      "expected": "Every item included in the Sell All total should be listed and readable, or the list should scroll / the sheet should open expanded enough to show all rows.",
+      "observed": "The sheet opens partially expanded: the Slayer Platebody row is cut off behind the Total row and the Steel Full Helmet row (218 coins) is not shown at all, yet the Total is 5,416, which includes the missing 218 (the listed rows only sum to 5,198). Tapping Sell All would sell an item the player cannot see.",
+      "steps": [
+        "Open Shop > Sell with 'Keep one of each item' off.",
+        "Tap Sell Old Gear.",
+        "In the preview sheet, note the Slayer Platebody row is clipped by the Total row and no Steel Full Helmet row is shown.",
+        "Add the visible row amounts: they total 5,198, while the Total shown is 5,416 (the extra 218 is the hidden Steel Full Helmet)."
+      ],
+      "anchor_node": {
+        "text": "Slayer Platebody",
+        "class": "android.widget.TextView",
+        "bounds": [
+          42,
+          1936,
+          872,
+          1963
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Skills (landscape)",
+      "element": "Skills overview grid",
+      "field": "grid visibility / scrolling",
+      "element_ref": 14,
+      "observed_quote": "Mining",
+      "symptom_type": "cut_off",
+      "expected": "In landscape the skills grid should scroll (or otherwise remain reachable) so all skill tiles and levels can be viewed above the bottom navigation bar.",
+      "observed": "After rotating to landscape on Profile > Skills, only the top GATHERING row (Mining, Fishing, Woodcutting) is visible; the tiles are cut off by the bottom navigation bar, the left rail is cut after Gear, and swiping the grid does not scroll. The remaining skill tiles/levels cannot be reached until rotating back to portrait.",
+      "steps": [
+        "Open Profile > Skills in portrait.",
+        "Rotate the device to landscape.",
+        "Observe only the first row of skill tiles and the grid running under the bottom nav bar.",
+        "Attempt to swipe up inside the grid; the content does not scroll."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Mining"
+        ],
+        "bounds": [
+          313,
+          585,
+          987,
+          870
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Shop > Buy > 2\u00d7 XP Boost (48h)",
+      "element": "2\u00d7 XP Boost (48h) price / purchase dialog total",
+      "field": "price and Total cost",
+      "element_ref": 5,
+      "observed_quote": "1.9M coins",
+      "symptom_type": "wrong_value",
+      "expected": "The price and the purchase dialog's Total cost should equal the amount actually deducted (the exact discounted price is 1,875,000 coins); the abbreviated total should not round the payable amount.",
+      "observed": "The XP Boost row and the Buy dialog show \"1.9M coins each\" / \"Total cost 1.9M coins\", but buying it deducted only 1,875,000 coins: the coin balance went from 2,567,890 to 692,890 after purchase. The displayed total is 25,000 coins higher than the amount charged because the million short format rounds 1,875,000 up to 1.9M.",
+      "steps": [
+        "Start with 2,567,890 coins (Coins header shows 2.6M).",
+        "Open Shop > Buy and tap 2\u00d7 XP Boost (48h): the row shows 1.9M coins and the confirm dialog shows Total cost 1.9M coins.",
+        "Tap Buy and return to the shop header: the balance is now 692,890 coins.",
+        "2,567,890 - 692,890 = 1,875,000 coins actually charged, not the displayed 1,900,000."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "2\u00d7 XP Boost (48h)",
+          "ACTIVE",
+          "Double all XP gained for 48 hours. Limit one purchase per week.",
+          "1.9M coins"
+        ],
+        "bounds": [
+          0,
+          497,
+          1080,
+          682
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E01-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ],
+      "present": [
+        "idlefantasy-0001",
+        "idlefantasy-0002"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/idlefantasy-E01/3c2a719166df/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0001": "reported",
+    "idlefantasy-0002": "reported"
+  },
+  "elapsed_s": 1405.924,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.85,
+    "notes": "Completed a sweep of the Shop and the Skills overview.\n\nConfirmed and logged two bugs:\n1) Shop > Sell: Copper Ore and Tin Ore pay 4 coins each while the Buy tab sells them for 3 coins, so selling beats buying (reproduced by selling 1 Copper Ore for 4 and buying it back for 3), despite the new catalogue cap.\n2) Shop > Buy: 2\u00d7 XP Boost (48h) shows \"1.9M coins\" in the row and \"Total cost 1.9M coins\" in the confirm dialog, but buying it deducted exactly 1,875,000 coins (balance 2,567,890 -> 692,890), so the abbreviated checkout total is 25,000 higher than the charged amount.\n\nVerified working: Keep one of each item persisted both ON and OFF across leaving the shop screen and relaunching the app, and it was enforced for single-item sells (last-item snackbar), Sell Junk (kept 1 cowhide/feather/wool) and Sell Old Gear stacks; the bulk sale recorded correctly in Recent bulk sales; search and Quantity/Price sorting worked; Buy/Sell headers were consistent for million and sub-million balances. Skills overview: all 23 tiles matched the Skills list, Combat Skills page, XP thresholds and Total Level; changing XP through the skill debug control updated the Profile grid and the list/Combat page consistently (Mining 50<->51, Attack 70<->71, Hitpoints 70<->71), so the shared-state level reads work. Prestige trees/bonuses matched the supplied state.\n\nTest side effects left in the build: 2\u00d7 XP boost purchased (coins now 693,358), junk stack sold with Keep-one ON, toggle restored OFF, all skill XP restored, inventory counts otherwise restored. Two further observations (partially clipped Sell Old Gear preview and landscape clipping) could not be reproduced by the developer and are not counted as confirmed bugs."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "found": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "required": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 299,
+  "precision": 0.5,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "idlefantasy-0001",
+    "idlefantasy-0002"
+  ],
+  "bug_meta": {
+    "idlefantasy-0001": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0002": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

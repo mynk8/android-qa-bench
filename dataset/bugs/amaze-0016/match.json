@@ -1,0 +1,79 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "selection action bar"
+  ],
+  "fields": [
+    "select inverse"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the action bar closes when nothing is selected",
+    "normal toolbar returns"
+  ],
+  "observed_contains_any": [
+    "the selection action bar stays open with nothing selected",
+    "counter stays visible with zero selected"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "no_effect",
+    "wrong_navigation"
+  ],
+  "expected_concepts": [
+    [
+      "clos*",
+      "dismiss*",
+      "normal",
+      "toolbar",
+      "no selection",
+      "nothing selected",
+      "none selected"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "action bar",
+      "selection*",
+      "counter",
+      "bar",
+      "toolbar",
+      "0",
+      "zero",
+      "strip",
+      "contextual",
+      "chosen",
+      "top bar",
+      "action mode"
+    ],
+    [
+      "still",
+      "stays",
+      "stay",
+      "remain*",
+      "open",
+      "visible",
+      "shown",
+      "left"
+    ]
+  ],
+  "location_concepts": [
+    "selection action bar",
+    "action bar",
+    "inverse",
+    "invert*",
+    "contextual",
+    "toolbar",
+    "strip"
+  ],
+  "anchors": {
+    "elements": [
+      "selection counter",
+      "selection action bar",
+      "Select inverse"
+    ],
+    "observed": []
+  }
+}

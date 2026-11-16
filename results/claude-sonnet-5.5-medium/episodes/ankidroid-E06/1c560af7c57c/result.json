@@ -1,0 +1,158 @@
+{
+  "run_id": "1c560af7c57c",
+  "item_id": "ankidroid-E06",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 9,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Add note (opened from Card browser)",
+      "element": "Note type spinner",
+      "symptom_type": "not_persisted",
+      "expected": "After switching the note type in Add note (e.g. to \"Basic (type in the answer)\") and leaving, reopening Add note should show the last chosen note type, since the switch is now stored to the collection straight away.",
+      "observed": "Reopening Add note always shows \"Basic\" again. The selected type is not kept. Reproduced twice, with \"Basic (and reversed card)\" and with \"Basic (type in the answer)\".",
+      "steps": [
+        "Open Card browser, tap Add",
+        "Tap Type spinner, choose 'Basic (type in the answer)'",
+        "Press Back to return to the browser",
+        "Tap Add again",
+        "Type spinner shows 'Basic' instead of the chosen type"
+      ],
+      "element_ref": 6,
+      "observed_quote": "Basic",
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/note_type_spinner",
+        "class": "android.widget.Spinner",
+        "contains": [
+          "Basic"
+        ],
+        "bounds": [
+          147,
+          244,
+          1067,
+          370
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Create subdeck dialog (deck list, long-press deck > Create subdeck)",
+      "element": "Create button",
+      "symptom_type": "wrong_value",
+      "expected": "A whitespace-only subdeck name should keep Create disabled, as the top-level Create deck dialog does, and no deck should be created.",
+      "observed": "Typing three spaces in the Create subdeck dialog enables Create. Tapping it creates a junk subdeck named 'blank' (Spanish::Nouns::blank). The top-level Create deck dialog keeps Create disabled for the same input.",
+      "steps": [
+        "Deck list: long-press 'Spanish::Nouns' > Create subdeck",
+        "Type three spaces in Name",
+        "Create becomes enabled; tap it",
+        "A new subdeck 'blank' appears under Nouns",
+        "Compare: FAB > Create deck, type three spaces: Create stays disabled"
+      ],
+      "observed_quote": "Spanish::Nouns::blank"
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E06-111",
+      "mask": "111",
+      "unfixed": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ],
+      "present": [
+        "ankidroid-0021",
+        "ankidroid-0022",
+        "ankidroid-0030"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/ankidroid-E06/1c560af7c57c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0021": "reported",
+    "ankidroid-0022": "reported",
+    "ankidroid-0030": "missed_unreached"
+  },
+  "elapsed_s": 302.707,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.6,
+    "notes": "Filed 2 bugs: Add-note type switch not kept on reopen, and the subdeck dialog accepting a whitespace-only name. Set due date (day and range), scheduling and counts, note add/edit persistence, and the stats screen (collection scope, rotation, counts) agreed with the data. Not covered: deck rename and delete, filtered decks, undo of scheduling, tag editing. I left the stats \"Average: 0 reviews/day\" value unchecked, as I'm unsure what stock Anki shows for it."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "found": [
+    "ankidroid-0021",
+    "ankidroid-0022"
+  ],
+  "required": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "missed": [
+    "ankidroid-0030"
+  ],
+  "true_positives": 2,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 113,
+  "precision": 1.0,
+  "recall": 0.6666666666666666,
+  "unfixed_at_end": [
+    "ankidroid-0021",
+    "ankidroid-0022",
+    "ankidroid-0030"
+  ],
+  "bug_meta": {
+    "ankidroid-0021": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0022": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0030": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

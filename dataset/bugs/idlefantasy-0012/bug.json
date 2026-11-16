@@ -1,0 +1,80 @@
+{
+  "bug_id": "idlefantasy-0012",
+  "app_id": "idlefantasy",
+  "source": "greenfield_pr",
+  "family": "interaction",
+  "issta_class": "wrong navigation",
+  "symptom_type": "wrong_navigation",
+  "fix_date": "2026-09-27",
+  "seed_id": "idle_basic",
+  "params": {
+    "nav": {
+      "nav_profile": [
+        {
+          "desc": "Profile"
+        },
+        {
+          "text": "Profile"
+        }
+      ],
+      "gear_tab": [
+        {
+          "text": "Gear"
+        }
+      ],
+      "view_combat_gear": [
+        {
+          "text": "View Combat Gear"
+        }
+      ],
+      "nav_combat": [
+        {
+          "desc": "Combat"
+        },
+        {
+          "text": "Combat"
+        }
+      ],
+      "dismiss": [
+        {
+          "text": "Got it"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "idlefantasy-0012-buggy",
+    "fixed": "idlefantasy-0012-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/idlefantasy-0012.patch",
+    "confidence": "medium",
+    "lines_changed": 4,
+    "approach": "The tab navigation argument is read with getString on an enum-typed argument again, which yields null, so the Combat screen opens on its default Dungeons tab."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

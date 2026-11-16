@@ -1,0 +1,206 @@
+{
+  "run_id": "14e69ddfa06c",
+  "item_id": "iris-E01",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Photo details",
+      "element": "Size",
+      "element_ref": 21,
+      "field": "size unit",
+      "symptom_type": "wrong_value",
+      "expected": "Power-of-two values should use MiB: 1.4 MiB and 2.4 MiB (or decimal MB: 1.5 and 2.5).",
+      "observed": "1500000 bytes displays 1.4 MB; 2500000 bytes displays 2.4 MB. Binary calculation retains decimal unit.",
+      "observed_quote": "1.4 MB",
+      "steps": [
+        "Open IrisSeed > big.jpg > Details; read Size.",
+        "Use Previous to huge.jpg: 2.4 MB.",
+        "Use Next to big.jpg: 1.4 MB repeats."
+      ],
+      "anchor_node": {
+        "text": "1.4 MB",
+        "class": "android.widget.TextView",
+        "bounds": [
+          870,
+          1701,
+          990,
+          1754
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "EXIF & Metadata Editor / Origin",
+      "element": "Captured",
+      "element_ref": 8,
+      "field": "capture date",
+      "symptom_type": "not_persisted",
+      "expected": "Saved capture date 2020-02-29 12:34 persists on reopening and appears in details.",
+      "observed": "After Save and reopening Origin, Captured is empty; details has no capture date. Repeated twice.",
+      "observed_quote": "Captured \u00b7 yyyy-MM-dd HH:mm",
+      "steps": [
+        "Open big.jpg Details > Edit metadata & EXIF > Origin.",
+        "Enter 2020-02-29 12:34 in Captured, dismiss keyboard and Save.",
+        "Reopen editor > Origin: field empty.",
+        "Repeat same save and reopen: still empty."
+      ],
+      "anchor_node": {
+        "class": "android.widget.EditText",
+        "contains": [
+          "Captured \u00b7 yyyy-MM-dd HH:mm",
+          "Set Current Time"
+        ],
+        "bounds": [
+          63,
+          627,
+          1017,
+          858
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Photo details",
+      "element": "Capture date row",
+      "element_ref": 14,
+      "field": "capture date",
+      "symptom_type": "missing",
+      "expected": "After saving Captured with Set Current Time, details should show that capture date from EXIF and reopening Origin should retain it.",
+      "observed": "Details shows Added and Modified but no capture date after saving; reopening Origin shows an empty Captured field. Reproduced using Set Current Time twice, as well as typed dates.",
+      "steps": [
+        "Open original big.jpg (now renamed huge (1big.jpg) in ZebraQA).",
+        "Details > Edit metadata & EXIF > Origin > Set Current Time > Save.",
+        "Details lacks capture date.",
+        "Reopen Origin: Captured empty.",
+        "Repeat Set Current Time > Save: capture date still absent."
+      ],
+      "anchor_node": {
+        "text": "File Information",
+        "class": "android.widget.TextView",
+        "bounds": [
+          164,
+          1181,
+          471,
+          1244
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums",
+      "element": "IrisSeed album cards",
+      "element_ref": 4,
+      "field": "album grouping",
+      "symptom_type": "duplicated",
+      "expected": "After moving both originals back to /Pictures/IrisSeed, one IrisSeed album with 2 items.",
+      "observed": "Two IrisSeed albums, each 1 items: big.jpg and huge.jpg. Persists leaving and returning. Same duplicate destinations also in Copy to Album.",
+      "observed_quote": "IrisSeed",
+      "steps": [
+        "From IrisSeed move big.jpg to new ZebraQA and huge.jpg to new AlphaQA.",
+        "Move huge.jpg back to IrisSeed using New album (empty albums are not listed).",
+        "Move big.jpg back with Move to Album > existing IrisSeed.",
+        "Open Albums: two IrisSeed cards each 1 items.",
+        "Switch Media then Albums: duplicates remain."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          436,
+          525,
+          1045
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E01-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0007"
+      ],
+      "present": [
+        "iris-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/iris-E01/14e69ddfa06c/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0007": "reported"
+  },
+  "elapsed_s": 487.53,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept albums/photo details via Albums and Media; both seeded sizes, previous/next boundaries; metadata save/reopen, empty title, cancel/Revert, capture-date inputs and Set Current Time; rename unusual name, duplicate collision, empty disabled, reversal; move new/existing albums, alphabetical destinations, cancel/repetition/persistence; portrait/landscape. Confirmed/logged binary size values mislabeled MB. Filed capture-date persistence/details absence (including button-only reproduction) and duplicate IrisSeed album grouping after reverse moves; developer could not reproduce those. Original filenames and /Pictures/IrisSeed paths verified for both photos; temporary copy deleted and test title cleared. Two IrisSeed cards remain as reported; capture-date testing changed big.jpg's displayed date."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "iris-0007"
+  ],
+  "found": [
+    "iris-0007"
+  ],
+  "required": [
+    "iris-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 3,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 4,
+  "steps": 238,
+  "precision": 0.25,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "iris-0007"
+  ],
+  "bug_meta": {
+    "iris-0007": {
+      "family": "display",
+      "hard_slice": true
+    }
+  }
+}

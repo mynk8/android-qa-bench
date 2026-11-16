@@ -1,0 +1,404 @@
+{
+  "idlefantasy-0001-buggy": {
+    "sha256": "3e5666844c79bce1bc6ea9c9eeae86d032bfe0524d97641cdd1c8aff196a0fb9",
+    "bugs_present": [
+      "idlefantasy-0001"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0001-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0002-buggy": {
+    "sha256": "e45aceb7bf682e0e4eda8ae5249f1b33b7ac84d84113a78218f378135585be8e",
+    "bugs_present": [
+      "idlefantasy-0002"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0002-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0003-buggy": {
+    "sha256": "b1aa7d62d187969bd7f4a90d5baed8b9c529b03ac86988f4802c1274af2c72e5",
+    "bugs_present": [
+      "idlefantasy-0003"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0003-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0004-buggy": {
+    "sha256": "6396ab230feb7a1dfb256b4cf747e5c6b68cf78f4a7baa8b85b2fe3bf37e7ef2",
+    "bugs_present": [
+      "idlefantasy-0004"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0004-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0005-buggy": {
+    "sha256": "7a6e1e4344543298938c0bbe81d2afe8e7e25a07233ba9492454ea0e2c280b46",
+    "bugs_present": [
+      "idlefantasy-0005"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0005-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0006-buggy": {
+    "sha256": "4731cd08a7fb17599a02ae801f817aeae1db87ac9a2424118f31c8dd96a18771",
+    "bugs_present": [
+      "idlefantasy-0006"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0006-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0007-buggy": {
+    "sha256": "965173a80722971e037e01189c633d0c3136a3e26327996060f7a2cf13372abd",
+    "bugs_present": [
+      "idlefantasy-0007"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0007-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0008-buggy": {
+    "sha256": "4e4bf98d0e19a66536fb7123570ad60f833863d59406aebecd9940d0e53269af",
+    "bugs_present": [
+      "idlefantasy-0008"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0008-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0009-buggy": {
+    "sha256": "f8c4cd68a3fd343766c365e54d4a26eb7dffbb21d6623828be32669906b067ba",
+    "bugs_present": [
+      "idlefantasy-0009"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0009-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0010-buggy": {
+    "sha256": "610218902b264e5a9814ee2deba6f610d43585b7c51414175c69e09dcd500224",
+    "bugs_present": [
+      "idlefantasy-0010"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0010-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0011-buggy": {
+    "sha256": "6ffee54e5c916fe7dd74d20a2dfcf34a2ec5146084bdbd633d8fca59f10ba0e0",
+    "bugs_present": [
+      "idlefantasy-0011"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0011-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0012-buggy": {
+    "sha256": "a29fecc4224042c873514f2d5ece2e387eb4a1583ba506d88f08c6a1f418c6f5",
+    "bugs_present": [
+      "idlefantasy-0012"
+    ],
+    "kind": "buggy",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-0012-fixed": {
+    "sha256": "89cb5ce8955e3bad0dd76f2a40d9802ff81cd31dec27797e04bbaee96abc127c",
+    "bugs_present": [],
+    "kind": "fixed",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E01-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E01-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E01-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0001"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E01-11": {
+    "sha256": "cd71b8ab8950adb604caacb148337652950eb83e897771543c8ee657fa7bcf8f",
+    "bugs_present": [
+      "idlefantasy-0001",
+      "idlefantasy-0002"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E02-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E02-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E02-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0003"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E02-11": {
+    "sha256": "a379125e925ac9dc9f7742d73a515e4801f2ced3d4795cd5b319f2e2d83ea4fa",
+    "bugs_present": [
+      "idlefantasy-0003",
+      "idlefantasy-0005"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E03-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E03-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0006"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E03-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0004"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E03-11": {
+    "sha256": "3277e9e2a27af8cb52b472f620db8cea944986a5b2af4107ab9d84045be901c1",
+    "bugs_present": [
+      "idlefantasy-0004",
+      "idlefantasy-0006"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E04-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E04-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E04-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0007"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E04-11": {
+    "sha256": "60b15e95a5a9779de9a977d4c435079d6245417280b651d5592efadfabf4d122",
+    "bugs_present": [
+      "idlefantasy-0007",
+      "idlefantasy-0008"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E05-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E05-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0010"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E05-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0009"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E05-11": {
+    "sha256": "c7dba32fed48fddcca98ab68edb44031cd2909f4b84c8d0664e6550623e7f04b",
+    "bugs_present": [
+      "idlefantasy-0009",
+      "idlefantasy-0010"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  },
+  "idlefantasy-E06-00": {
+    "sha256": "UNBUILT",
+    "bugs_present": [],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E06-01": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0012"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E06-10": {
+    "sha256": "UNBUILT",
+    "bugs_present": [
+      "idlefantasy-0011"
+    ],
+    "kind": "episode_subset",
+    "status": "pending_build",
+    "tier": "full"
+  },
+  "idlefantasy-E06-11": {
+    "sha256": "87d3ce3cef519505e6fc5b146d2e651f9b70dfa8ad3afb89d2473274f1f01fe6",
+    "bugs_present": [
+      "idlefantasy-0011",
+      "idlefantasy-0012"
+    ],
+    "kind": "episode_subset",
+    "status": "built",
+    "tier": "core"
+  }
+}

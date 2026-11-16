@@ -1,0 +1,103 @@
+{
+  "screens": [
+    "profile",
+    "bonuses",
+    "bonuses tab"
+  ],
+  "elements": [
+    "infinite tower",
+    "tower bonus*",
+    "tower row*",
+    "bonus rows",
+    "tower"
+  ],
+  "fields": [
+    "tower",
+    "xp",
+    "coin drops",
+    "hp",
+    "infinite tower"
+  ],
+  "symptom_type": "missing",
+  "expected_contains_any": [
+    "the bonuses tab lists the infinite tower rows +7% xp +12% coin drops +150 hp",
+    "tower bonuses are listed"
+  ],
+  "observed_contains_any": [
+    "no infinite tower rows in the bonuses tab",
+    "the tower bonuses are missing"
+  ],
+  "symptom_types": [
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "tower",
+      "infinite tower",
+      "+12%",
+      "+7%",
+      "+150",
+      "coin drops",
+      "tower*"
+    ],
+    [
+      "list*",
+      "shown",
+      "show*",
+      "present",
+      "display*",
+      "row*",
+      "nowhere",
+      "perk*",
+      "page",
+      "tab",
+      "appear*",
+      "visible",
+      "see",
+      "there",
+      "include*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "missing",
+      "not",
+      "no",
+      "absent",
+      "isn't",
+      "doesn't",
+      "don't",
+      "without",
+      "nowhere",
+      "never",
+      "can't",
+      "cannot",
+      "not listed",
+      "not shown",
+      "does not",
+      "nothing*",
+      "none"
+    ],
+    [
+      "tower",
+      "infinite",
+      "+7%",
+      "+12%",
+      "+150",
+      "coin drops"
+    ]
+  ],
+  "location_concepts": [
+    "bonus*",
+    "profile",
+    "tower"
+  ],
+  "anchors": {
+    "elements": [
+      "Bonuses",
+      "Infinite Tower",
+      "SKILL BONUSES"
+    ],
+    "observed": []
+  }
+}

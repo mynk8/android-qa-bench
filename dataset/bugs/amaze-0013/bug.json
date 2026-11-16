@@ -1,0 +1,91 @@
+{
+  "bug_id": "amaze-0013",
+  "app_id": "amaze",
+  "source": "mature_pr",
+  "family": "display",
+  "issta_class": "redundant or missing UI",
+  "symptom_type": "missing",
+  "fix_date": "2026-11-08",
+  "seed_id": "files_basic",
+  "params": {
+    "nav": {
+      "drawer": [
+        {
+          "desc": "Navigate up"
+        },
+        {
+          "desc": "Open navigation drawer"
+        },
+        {
+          "desc": "Open drawer"
+        }
+      ],
+      "overflow": [
+        {
+          "desc": "More options"
+        }
+      ],
+      "images": [
+        {
+          "text": "Images"
+        }
+      ],
+      "documents": [
+        {
+          "text": "Documents"
+        }
+      ],
+      "home_btn": [
+        {
+          "desc": "Home"
+        },
+        {
+          "text": "Home"
+        }
+      ],
+      "fab": [
+        {
+          "id": "com.amaze.filemanager:id/fabs_menu"
+        },
+        {
+          "id": "com.amaze.filemanager:id/sd_main_fab"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "amaze-0013-buggy",
+    "fixed": "amaze-0013-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/amaze-0013.patch",
+    "confidence": "high",
+    "lines_changed": 1,
+    "approach": "Dropped the setHideFab(false) reset in MainFragment.home() so the FAB hidden flag set by drawer category views survives navigating Home."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

@@ -1,0 +1,67 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "group order"
+  ],
+  "fields": [
+    "group order"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "Buy milk is at the top and Read docs last",
+    "earliest due date first"
+  ],
+  "observed_contains_any": [
+    "order is reversed",
+    "Read docs is first"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "earliest",
+      "soonest",
+      "buy milk first",
+      "ascending",
+      "oldest",
+      "due date order",
+      "nearest",
+      "upcoming",
+      "sooner",
+      "soon*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "revers*",
+      "last",
+      "bottom",
+      "read docs",
+      "opposite",
+      "upside",
+      "backwards",
+      "wrong order",
+      "latest first",
+      "descending",
+      "furthest*",
+      "latest"
+    ]
+  ],
+  "location_concepts": [
+    "group*",
+    "due*",
+    "section*",
+    "header*"
+  ],
+  "anchors": {
+    "elements": [
+      "Read docs",
+      "Buy milk",
+      "Due"
+    ],
+    "observed": []
+  }
+}

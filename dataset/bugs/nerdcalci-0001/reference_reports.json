@@ -1,0 +1,35 @@
+{
+  "correct": {
+    "screen": "calculator",
+    "element": "avg result",
+    "field": "avg",
+    "symptom_type": "wrong_value",
+    "expected": "avg is 541.92, the average of the three amounts above, without the total line",
+    "observed": "the avg line also counts the total line and shows 812.88",
+    "steps": [
+      "Followed the case steps."
+    ]
+  },
+  "vague": {
+    "screen": "calculator",
+    "element": "something",
+    "field": "avg",
+    "symptom_type": "wrong_value",
+    "expected": "it should work",
+    "observed": "it looks wrong",
+    "steps": [
+      "I opened the app."
+    ]
+  },
+  "wrong_bug": {
+    "screen": "about screen",
+    "element": "version label",
+    "field": "version",
+    "symptom_type": "cut_off",
+    "expected": "the version label is fully visible",
+    "observed": "the version label is cut off",
+    "steps": [
+      "Opened About."
+    ]
+  }
+}

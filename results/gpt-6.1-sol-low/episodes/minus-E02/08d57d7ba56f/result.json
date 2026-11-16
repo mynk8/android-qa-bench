@@ -1,0 +1,173 @@
+{
+  "run_id": "08d57d7ba56f",
+  "item_id": "minus-E02",
+  "kind": "episode",
+  "app_id": "minus",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Analytics / history expense editor",
+      "element": "Categories chart",
+      "element_ref": 5,
+      "field": "Expense category",
+      "symptom_type": "wrong_value",
+      "expected": "Selecting Transport for the former Groceries expense should move its $40 from Food to Transport in analytics.",
+      "observed": "After selecting Transport and saving in the history editor, history shows Transport but the Categories/Total chart still only shows Food. The $40 maximum-spent card also remains Food. Reproduced by restoring Groceries and selecting Transport again.",
+      "observed_quote": "Food",
+      "steps": [
+        "Open history by swiping down on the main screen.",
+        "Expand Groceries ($40, Food), tap Edit, select Transport, and save with the checkmark.",
+        "Return to Analytics, choose Categories then Total. Only Food is shown.",
+        "Reopen history, restore Groceries, save, then repeat the Transport edit and revisit Analytics; Food remains the only category."
+      ],
+      "anchor_node": {
+        "text": "Food",
+        "class": "android.widget.TextView",
+        "bounds": [
+          523,
+          604,
+          594,
+          640
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Analytics",
+      "element": "Current savings percentage",
+      "element_ref": 7,
+      "field": "Current savings",
+      "symptom_type": "wrong_value",
+      "expected": "For $39.97 remaining of $100, show 40% at whole-percent precision, consistent with Available: 40% elsewhere on the same screen.",
+      "observed": "Savings shows 39% while available budget shows 40%, for the same $39.97/$100. Reproduced on reopening Analytics and across rotation.",
+      "observed_quote": "39%",
+      "steps": [
+        "Edit Rent amount from $20 to $20.03 and save; leave the other expense at $40 and budget at $100.",
+        "Open Analytics: Spent is $60.03 and Available is 40%.",
+        "Scroll to savings: Available: $39.97 but Current savings is 39%.",
+        "Leave and reopen Analytics, then rotate landscape and portrait; the discrepancy persists."
+      ],
+      "anchor_node": {
+        "text": "39%",
+        "class": "android.widget.TextView",
+        "bounds": [
+          95,
+          1435,
+          300,
+          1527
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "History expense editor",
+      "element": "Expense edit sheet",
+      "element_ref": 15,
+      "field": "Unsaved expense edits",
+      "symptom_type": "missing",
+      "expected": "Keep the editor open and preserve the selected date and other draft edits across rotation.",
+      "observed": "Rotating to landscape closes the editor and discards unsaved edits. Returning to portrait shows history with the original date and reason. Reproduced twice.",
+      "steps": [
+        "Open history and edit the $40 expense.",
+        "Change date from November 12 to November 13 and accept the date, without saving the expense.",
+        "Rotate to landscape then portrait.",
+        "The expense editor disappears and the expense remains under November 12.",
+        "Repeat the date change and rotation; it is discarded again."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Edit"
+        ],
+        "bounds": [
+          84,
+          1250,
+          529,
+          1376
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "minus-E02-1",
+      "mask": "1",
+      "unfixed": [
+        "minus-0008"
+      ],
+      "present": [
+        "minus-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-c/episodes/minus-E02/08d57d7ba56f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "minus-0008": "reported"
+  },
+  "elapsed_s": 569.038,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.84,
+    "notes": "Swept history edits (reason/category, date, amount, recurrence, cancel, repeat, zero, rotation), analytics (trend/categories, time ranges, drilldowns, empty past periods, savings baseline and overspend, reopening/rotation), and budget settings (start date persistence/change/reversal, zero validation, cancel/apply). Confirmed and logged: history category change leaves analytics category stale. Also filed observed savings percentage rounding inconsistency and editor draft loss on rotation; developer could not reproduce those. Restored starting budget $100, Nov 11\u2013Dec 4, Groceries $40 Nov 13 Food, monthly Rent $20 Nov 13 Food. Final analytics shows $40 available, 40% savings, recurring $20 and one-time $40."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "minus-0008"
+  ],
+  "found": [
+    "minus-0008"
+  ],
+  "required": [
+    "minus-0008"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 277,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "minus-0008"
+  ],
+  "bug_meta": {
+    "minus-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

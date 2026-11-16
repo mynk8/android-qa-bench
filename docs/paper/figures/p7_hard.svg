@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="165mm" height="85.9mm" font-family="'Nimbus Sans', Helvetica, Arial, 'Liberation Sans', sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444444"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="4.0" y="44.0" font-size="14.5" fill="#111111" text-anchor="start" font-weight="700" >Idle Fantasy</text>
+<text x="4.0" y="60.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >release note: “Shop header: large gold amounts now use a</text>
+<text x="4.0" y="73.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >new short format for millions.”</text>
+<text x="4.0" y="91.0" font-size="11.5" fill="#111111" text-anchor="start" font-weight="400" >2,567,890 coins shown as 2.6M; the format floors to 2.5M</text>
+<text x="4.0" y="108.0" font-size="10.5" fill="#444444" text-anchor="start" font-weight="400" >caught by 1 of 6 configurations; up to 111 actions on this screen</text>
+<rect x="347" y="40" width="296" height="55.2" rx="5" fill="#fff" stroke="#d03b3b" stroke-width="1.8"/>
+<image x="350.0" y="43.0" width="290.0" height="49.2" href="assets/idlefantasy-0001-buggy.png" preserveAspectRatio="none"/>
+<rect x="500.8" y="48.9" width="136.3" height="39.4" rx="5" fill="none" stroke="#d03b3b" stroke-width="2.2"/>
+<text x="495.0" y="14.0" font-size="11.5" fill="#d03b3b" text-anchor="middle" font-weight="700" >buggy</text>
+<rect x="661" y="40" width="296" height="55.2" rx="5" fill="#fff" stroke="#1f9a40" stroke-width="1.8"/>
+<image x="664.0" y="43.0" width="290.0" height="49.2" href="assets/idlefantasy-0001-fixed.png" preserveAspectRatio="none"/>
+<text x="809.0" y="14.0" font-size="11.5" fill="#1f9a40" text-anchor="middle" font-weight="700" >fixed</text>
+<text x="4.0" y="153.0" font-size="14.5" fill="#111111" text-anchor="start" font-weight="700" >Iris Gallery</text>
+<text x="4.0" y="169.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >release note: “Media tab blank-state illustration: its</text>
+<text x="4.0" y="182.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >caption is now built from one constant string resource.”</text>
+<text x="4.0" y="200.0" font-size="11.5" fill="#111111" text-anchor="start" font-weight="400" >the Videos filter says “No photos found”</text>
+<text x="4.0" y="217.0" font-size="10.5" fill="#444444" text-anchor="start" font-weight="400" >caught by 2 of 6 configurations; up to 12 actions on this screen</text>
+<rect x="347" y="149" width="296" height="68.1" rx="5" fill="#fff" stroke="#d03b3b" stroke-width="1.8"/>
+<image x="350.0" y="152.0" width="290.0" height="62.1" href="assets/iris-0012-buggy.png" preserveAspectRatio="none"/>
+<rect x="384.8" y="164.4" width="220.4" height="37.3" rx="5" fill="none" stroke="#d03b3b" stroke-width="2.2"/>
+<rect x="661" y="149" width="296" height="68.1" rx="5" fill="#fff" stroke="#1f9a40" stroke-width="1.8"/>
+<image x="664.0" y="152.0" width="290.0" height="62.1" href="assets/iris-0012-fixed.png" preserveAspectRatio="none"/>
+<text x="4.0" y="262.0" font-size="14.5" fill="#111111" text-anchor="start" font-weight="700" >Tasks.org</text>
+<text x="4.0" y="278.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >release note: “Date badges on task rows: the badge for</text>
+<text x="4.0" y="291.0" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >each date field is now built independently of the…</text>
+<text x="4.0" y="309.0" font-size="11.5" fill="#111111" text-anchor="start" font-weight="400" >a start-date chip repeats the due date</text>
+<text x="4.0" y="326.0" font-size="10.5" fill="#444444" text-anchor="start" font-weight="400" >caught by 1 of 6 configurations; up to 123 actions on this screen</text>
+<rect x="347" y="258" width="296" height="82.5" rx="5" fill="#fff" stroke="#d03b3b" stroke-width="1.8"/>
+<image x="350.0" y="261.0" width="290.0" height="76.5" href="assets/tasks-0012-buggy.png" preserveAspectRatio="none"/>
+<rect x="390.6" y="303.9" width="92.8" height="19.9" rx="5" fill="none" stroke="#d03b3b" stroke-width="2.2"/>
+<rect x="661" y="258" width="296" height="82.5" rx="5" fill="#fff" stroke="#1f9a40" stroke-width="1.8"/>
+<image x="664.0" y="261.0" width="290.0" height="76.5" href="assets/tasks-0012-fixed.png" preserveAspectRatio="none"/>
+<text x="4.0" y="374.5" font-size="14.5" fill="#111111" text-anchor="start" font-weight="700" >Featherline</text>
+<text x="4.0" y="390.5" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >release note: “Night owl mode in the group editor: the</text>
+<text x="4.0" y="403.5" font-size="10.0" fill="#444444" text-anchor="start" font-weight="400" >explanatory caption now builds its cut-off text…</text>
+<text x="4.0" y="421.5" font-size="11.5" fill="#111111" text-anchor="start" font-weight="400" >“04:00” among times written as AM/PM</text>
+<text x="4.0" y="438.5" font-size="10.5" fill="#d03b3b" text-anchor="start" font-weight="700" >caught by 0 of 6 configurations; up to 47 actions on this screen</text>
+<rect x="347" y="370.52777777777777" width="296" height="50.3" rx="5" fill="#fff" stroke="#d03b3b" stroke-width="1.8"/>
+<image x="350.0" y="373.5" width="290.0" height="44.3" href="assets/featherline-0018-buggy.png" preserveAspectRatio="none"/>
+<rect x="457.3" y="386.8" width="37.7" height="15.9" rx="5" fill="none" stroke="#d03b3b" stroke-width="2.2"/>
+<rect x="661" y="370.52777777777777" width="296" height="50.3" rx="5" fill="#fff" stroke="#1f9a40" stroke-width="1.8"/>
+<image x="664.0" y="373.5" width="290.0" height="44.3" href="assets/featherline-0018-fixed.png" preserveAspectRatio="none"/>
+</svg>

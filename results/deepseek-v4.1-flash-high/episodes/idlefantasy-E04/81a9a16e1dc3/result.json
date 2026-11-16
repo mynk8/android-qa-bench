@@ -1,0 +1,175 @@
+{
+  "run_id": "81a9a16e1dc3",
+  "item_id": "idlefantasy-E04",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile \u2192 Bonuses",
+      "element": "Bonus list (last row: Construction / Builder's Workshop)",
+      "field": "Bonuses list",
+      "symptom_type": "missing",
+      "expected": "The earned Infinite Tower bonuses (+7% XP, +12% coin drops, +150 HP) should be listed in the profile bonuses section alongside the prestige/skill-tree/construction bonuses.",
+      "observed": "The Bonuses section only lists 5 entries: Attack - Prestige +5% (+5% XP), Attack - Boosts combat stats (+9), Hitpoints - Prestige +5% (+5% XP), Hitpoints - Boosts combat stats (+4) and Construction - -7% (Builder's Workshop). The Infinite Tower bonuses the character has earned (+7% XP, +12% coin drops, +150 HP) are absent.",
+      "steps": [
+        "Open the Profile tab",
+        "Select Bonuses in the sidebar",
+        "Read the full bonuses list",
+        "Compare it with the earned Infinite Tower bonuses (+7% XP, +12% coin drops, +150 HP) shown by the character's tower progress"
+      ],
+      "element_ref": 36,
+      "anchor_node": {
+        "text": "Builder's Workshop",
+        "class": "android.widget.TextView",
+        "bounds": [
+          773,
+          1193,
+          1038,
+          1227
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Infinite Tower floor indicator / Milestones list",
+      "element_ref": 0,
+      "expected": "Progress toward the tower milestones should be computed from the finished tower progress records: the character has earned the +7% XP, +12% coin drops and +150 HP tower bonuses, so the matching floor milestones (e.g. three \"+50 max HP\" floors) should be reached/claimed, and the tower should show a floor above 1.",
+      "observed": "The Infinite Tower shows \"Floor 1\" and every milestone row in the Milestones section (Floor 10 Tower Ring, Floor 20 +1% tower XP, Floor 30 5,000 coins, Floor 40 Tower Shield, Floor 50 Tower Amulet, Floor 60 +50 max HP, \u2026) is locked/disabled with no claimed state, as if no tower floors had ever been completed.",
+      "screen": "Infinite Tower (Combat \u2192 Dungeons \u2192 Infinite Tower) \u2013 Milestones",
+      "steps": [
+        "Open the Combat tab and switch to Dungeons",
+        "Open Infinite Tower",
+        "Read the floor indicator and the Milestones list",
+        "Compare with the earned Infinite Tower bonuses (+7% XP, +12% coin drops, +150 HP)"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "Floor 1",
+      "anchor_node": {
+        "text": "Floor 1",
+        "class": "android.widget.TextView",
+        "bounds": [
+          84,
+          315,
+          283,
+          399
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "element": "Construction bonus row (value on the right)",
+      "element_ref": 35,
+      "expected": "The Construction bonus should read -7.5%: Construction is level 15 (seen on the Profile \u2192 Skills Construction tile) and the bonus is 0.5% off building upgrade costs per level, so 15 \u00d7 0.5% = 7.5%.",
+      "observed": "The Construction bonus row says \"0.5% off building upgrade costs per level\" but the listed value is \"-7%\".",
+      "screen": "Profile \u2192 Bonuses",
+      "steps": [
+        "Open Profile \u2192 Skills and note the Construction skill level (15)",
+        "Open Profile \u2192 Bonuses in the sidebar",
+        "Read the Construction row: 0.5% off building upgrade costs per level, -7%",
+        "15 levels \u00d7 0.5% = 7.5%, so -7% is the wrong value"
+      ],
+      "symptom_type": "wrong_value",
+      "observed_quote": "-7%",
+      "anchor_node": {
+        "text": "-7%",
+        "class": "android.widget.TextView",
+        "bounds": [
+          977,
+          1140,
+          1038,
+          1193
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: that one is already logged.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ],
+      "present": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/idlefantasy-E04/81a9a16e1dc3/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0007": "reported",
+    "idlefantasy-0008": "missed_unreached"
+  },
+  "elapsed_s": 1523.004,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "found": [
+    "idlefantasy-0007"
+  ],
+  "required": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "missed": [
+    "idlefantasy-0008"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 1,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "bug_meta": {
+    "idlefantasy-0007": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

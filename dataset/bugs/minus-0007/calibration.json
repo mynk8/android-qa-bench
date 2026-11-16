@@ -1,0 +1,118 @@
+{
+  "bug_id": "minus-0007",
+  "runs": 1,
+  "started": "2026-11-13T20:07:38+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "29.17",
+        "after_restart": "1.90",
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 43.8,
+      "screenshot_sha256": "c44d383760d349d89e804e6afe06cdc20f30c9ab9435288babcbfc717cde115d",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0007-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "58.33",
+        "after_restart": "1.90",
+        "seen": [
+          "Calculated amount",
+          "$1.9",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 30.1,
+      "screenshot_sha256": "ad5586a8212cfb197633a80ceac78bb73562540d4dbb5c2d01a74a738b024b4c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0007-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "weekly": "29.17"
+      },
+      "seconds": 25.8,
+      "screenshot_sha256": "eabf9d04084e8ebec850727acda1c231ec6ecf045c78ac75a99d442b14d7839c",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "minus-0007-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "29.17",
+        "after_restart": "29.17",
+        "seen": [
+          "Calculated amount",
+          "$29.17",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 39.9,
+      "screenshot_sha256": "ae27ec36fbfbb55e2c00e886fcab869144acc9493c807c7be83e58d67b8c3370",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0007-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "after_pick": "58.33",
+        "after_restart": "58.33",
+        "seen": [
+          "Calculated amount",
+          "$58.33",
+          "Tap for the full breakdown"
+        ]
+      },
+      "seconds": 38.4,
+      "screenshot_sha256": "ddf27988cda92f910e07126175a1bb0a834d19580080d3af09b9ceeb5264d924",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0007-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "daily": "1.90",
+        "weekly": "29.17"
+      },
+      "seconds": 24.2,
+      "screenshot_sha256": "058b6aa4cca8366dd2f74e0ee079490bf212cf05b09edb8a1f2459b9a01d8696",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "minus-0007-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-13T20:12:07+0530"
+}

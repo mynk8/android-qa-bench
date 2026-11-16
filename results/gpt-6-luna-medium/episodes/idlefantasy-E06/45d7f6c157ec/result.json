@@ -1,0 +1,162 @@
+{
+  "run_id": "45d7f6c157ec",
+  "item_id": "idlefantasy-E06",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile > Gear > View Combat Gear",
+      "element": "View Combat Gear navigation",
+      "element_ref": 20,
+      "field": "destination section",
+      "symptom_type": "wrong_navigation",
+      "expected": "Open the Combat Gear section directly.",
+      "observed": "Opens Combat on the Dungeons section; Gear must be selected manually.",
+      "observed_quote": "DUNGEONS",
+      "steps": [
+        "Open Profile and select Gear.",
+        "Tap View Combat Gear.",
+        "Repeat the navigation from Profile > Gear.",
+        "Observe that the Combat screen opens with Dungeons selected both times."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Quests"
+        ],
+        "bounds": [
+          661,
+          2064,
+          860,
+          2274
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Smithing",
+      "element": "Bronze Bar recipe row",
+      "element_ref": 19,
+      "field": "craft result",
+      "symptom_type": "wrong_value",
+      "expected": "After one Bronze Bar craft completes, inventory shows one Bronze Bar and Smithing XP increases by the dialog's +6 XP total.",
+      "observed": "The completed craft consumed one Copper Ore and one Tin Ore but produced no Bronze Bar; the Smithing list still shows Owned: 0. Smithing remained at 4,400 XP.",
+      "observed_quote": "Bronze Bar | .. | Copper Ore 39/1 Tin Ore 24/1 | Owned: 0",
+      "steps": [
+        "Open Skills > Smithing > Bronze Bar.",
+        "Set the batch quantity to 1; verify the dialog shows +6 XP total and one of each ore required.",
+        "Tap Craft and allow the session to complete; Home showed \u201cSession Complete! Smithing \u2014 Bronze Bar\u201d.",
+        "Reopen Smithing and inspect Bronze Bar; it still shows Owned: 0 and the ingredient counts have each decreased by one."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Bronze Bar",
+          " ..",
+          "Copper Ore 39/1  Tin Ore 24/1",
+          "Owned: 0"
+        ],
+        "bounds": [
+          0,
+          750,
+          1080,
+          927
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ],
+      "present": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-b/episodes/idlefantasy-E06/45d7f6c157ec/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0011": "missed_unreached",
+    "idlefantasy-0012": "reported"
+  },
+  "elapsed_s": 214.896,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.8,
+    "notes": "Swept Crafting and Smithing dialogs, a one-bar batch, cancellation and return navigation; checked Profile gear candidates, equip/unequip, persistence across opening the chooser, and Combat Gear rotation; inspected mining ore levels/order through Gold Ore. The Profile > Gear > View Combat Gear wrong-navigation report was confirmed and logged. A separate suspected Bronze Bar output issue was reported but the developer could not reproduce it."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "found": [
+    "idlefantasy-0012"
+  ],
+  "required": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "missed": [
+    "idlefantasy-0011"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 54,
+  "precision": 0.5,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "bug_meta": {
+    "idlefantasy-0011": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0012": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

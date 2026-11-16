@@ -1,0 +1,81 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "bold long-press",
+    "bold long press",
+    "long-press bold",
+    "long press bold",
+    "long-press",
+    "long press",
+    "hold bold",
+    "bold hold",
+    "bold held"
+  ],
+  "fields": [
+    "line content"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "the line is wrapped in bold markers, giving **gamma**",
+    "long-press Bold bolds the whole line"
+  ],
+  "observed_contains_any": [
+    "nothing happens to the line",
+    "the app closes and the line stays gamma"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "bold*",
+      "double asterisk*",
+      "asterisks",
+      "gamma",
+      "markers",
+      "surround*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "not",
+      "no",
+      "nothing",
+      "unchanged",
+      "same",
+      "still",
+      "plain",
+      "without",
+      "doesn't",
+      "didn't",
+      "does not",
+      "no effect",
+      "crash*",
+      "clos*",
+      "stopp*",
+      "exit*",
+      "fail*",
+      "missing"
+    ]
+  ],
+  "location_concepts": [
+    "bold long*",
+    "long-press",
+    "long press",
+    "long*press",
+    "hold*",
+    "held"
+  ],
+  "anchors": {
+    "elements": [
+      "Bold",
+      "gamma",
+      "highlighting_editor"
+    ],
+    "observed": []
+  }
+}

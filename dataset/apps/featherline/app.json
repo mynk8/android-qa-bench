@@ -1,0 +1,12 @@
+{
+  "app_id": "featherline",
+  "display_name": "Featherline",
+  "repo": "https://github.com/mkx173/Featherline",
+  "licence": "GPL-3.0",
+  "package": "com.mkx.hrttracker",
+  "pinned_commit": "da6f9ea3fb57db2f9397deedb357307ff82e17cc",
+  "source_type": "greenfield",
+  "ui": "compose",
+  "local_data": "room",
+  "needs_network_or_login": false
+}

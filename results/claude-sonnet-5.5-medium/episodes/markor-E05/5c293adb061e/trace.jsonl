@@ -1,0 +1,71 @@
+{"event": "install", "build": {"n": 1, "build_id": "markor-E05-11", "mask": "11", "unfixed": ["markor-0015", "markor-0016"], "present": ["markor-0015", "markor-0016"]}}
+{"event": "brief", "item_id": "markor-E05"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1063}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 769}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 964, "y": 2011}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 717}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "tap_xy", "args": {"x": 477, "y": 843}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "tap_xy", "args": {"x": 737, "y": 1181}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 712}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 2216}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 2216}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "tap_xy", "args": {"x": 400, "y": 328}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 1441}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "tap_xy", "args": {"x": 287, "y": 1441}}}
+{"event": "agent", "step": 24, "message": {"type": "bug_report", "screen": "Editor - Indent.md", "element": "Unordered list toolbar button", "symptom_type": "wrong_value", "expected": "On an indented list line '  - child', the unordered list action removes the existing marker (or at least doesn't add another)", "observed": "An additional '- ' is added each tap; the marker is not detected for indented items. Unindented '- item' toggles correctly.", "observed_quote": "  - - - child", "steps": ["Open Indent.md", "Place cursor on line '  - child'", "Tap Unordered list in toolbar", "Text becomes '  - - child'; tap again gives '  - - - child'"]}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "hit", "bugs": ["markor-0015"], "per_bug": {"markor-0015": "ok", "markor-0016": "expected_value"}}
+{"event": "hit", "bugs": ["markor-0015"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 27, "message": {"type": "action", "name": "tap_xy", "args": {"x": 945, "y": 2200}}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 754}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1344}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 31, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 882}}}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2178}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1156}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 2178}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "tap_xy", "args": {"x": 73, "y": 136}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 135, "y": 2200}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1576}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "tap_xy", "args": {"x": 317, "y": 2216}}}
+{"event": "agent", "step": 44, "message": {"type": "bug_report", "screen": "Editor - Single.md / Settings > Edit Mode > Unordered list character", "element": "Unordered list toolbar button", "symptom_type": "wrong_value", "expected": "With 'Asterisk (*)' chosen as unordered list character, the toolbar inserts '* ' ", "observed": "Inserts '- ' regardless of the saved preference (dialog still shows Asterisk checked). Also the dialog title reads 'Theme' instead of the setting name.", "observed_quote": "- gamma", "steps": ["Settings > Edit Mode > Unordered list character > Asterisk (*)", "Open Single.md", "Tap Unordered list in toolbar", "Line becomes '- gamma' instead of '* gamma'"]}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["markor-0016"], "per_bug": {"markor-0015": "expected_value", "markor-0016": "ok"}}
+{"event": "hit", "bugs": ["markor-0016"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 698, "y": 2216}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 190, "y": 2216}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 952, "y": 2216}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 825, "y": 2216}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 502, "y": 136}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "open_app", "args": {}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1357}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 817, "y": 136}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1357}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1504}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "tap_xy", "args": {"x": 802, "y": 1796}}}
+{"event": "agent", "step": 64, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.6, "notes": "Filed 2 bugs: (1) the unordered list action doesn't detect markers on indented lines, so it adds extra '- ' each tap; (2) the unordered list character setting (Asterisk) is ignored by the toolbar, and its dialog title reads 'Theme'. Checked and found OK: sort menu options and persistence (Size, Reverse, Folder first), new-file dialog type list and extensions, ordered list, bold, heading, inline code and undo. Not tested: Regex.md and Money.md actions, rotation, other settings toggles."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["markor-0015", "markor-0016"], "unfixed": ["markor-0015", "markor-0016"], "outcome": "success"}

@@ -1,0 +1,124 @@
+{
+  "screens": [
+    "main screen",
+    "home",
+    "home tab"
+  ],
+  "elements": [
+    "due pill",
+    "due line",
+    "due",
+    "antiandrogen card",
+    "card"
+  ],
+  "fields": [
+    "due state",
+    "due line",
+    "due"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "after the dose is logged, the Due line names the next dose (tomorrow)",
+    "the Due line moves on to tomorrow's dose"
+  ],
+  "observed_contains_any": [
+    "the Due line still names the dose that was just logged",
+    "Due still shows today's dose after logging"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "not_persisted",
+    "no_effect"
+  ],
+  "expected_concepts": [
+    [
+      "tomorrow",
+      "next*",
+      "upcoming",
+      "following",
+      "later",
+      "clear*",
+      "gone",
+      "disappear*",
+      "remov*",
+      "no longer",
+      "not due",
+      "hidden",
+      "updat*",
+      "logged",
+      "taken",
+      "move*",
+      "advance*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "due",
+      "label",
+      "pill",
+      "next dose",
+      "next-dose",
+      "intake",
+      "dose"
+    ],
+    [
+      "still",
+      "stays",
+      "stayed",
+      "remain*",
+      "same",
+      "unchanged",
+      "keeps",
+      "kept",
+      "again",
+      "back",
+      "not",
+      "no",
+      "never",
+      "doesn't",
+      "didn't",
+      "don't",
+      "isn't",
+      "wasn't",
+      "won't",
+      "can't",
+      "cannot",
+      "nothing",
+      "without",
+      "fail*",
+      "missing",
+      "stale",
+      "shows",
+      "shown",
+      "visible",
+      "display*",
+      "today",
+      "today's",
+      "already",
+      "previous",
+      "just logged",
+      "just taken",
+      "old",
+      "logged"
+    ]
+  ],
+  "location_concepts": [
+    "due",
+    "pill",
+    "reminder*",
+    "card",
+    "main",
+    "home",
+    "plan"
+  ],
+  "anchors": {
+    "elements": [
+      "due",
+      "antiandrogen",
+      "card"
+    ],
+    "observed": [
+      "/due \\d{1,2}:\\d{2}/"
+    ]
+  }
+}

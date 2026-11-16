@@ -1,0 +1,128 @@
+{
+  "run_id": "05e2786992b5",
+  "item_id": "idlefantasy-E06",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Profile > Gear tab",
+      "element": "View Combat Gear button",
+      "symptom_type": "wrong_navigation",
+      "expected": "Opens the Combat screen on its Gear section (combat equipment slots)",
+      "observed": "Opens the Combat screen on the Dungeons section; Gear section is not selected",
+      "steps": [
+        "Open Profile tab",
+        "Tap Gear in side menu",
+        "Tap View Combat Gear",
+        "Combat screen shows Dungeons list, not Gear"
+      ],
+      "observed_quote": "DUNGEONS",
+      "element_ref": 20,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Quests"
+        ],
+        "bounds": [
+          661,
+          2064,
+          860,
+          2274
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ],
+      "present": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/idlefantasy-E06/05e2786992b5/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0011": "missed_unreached",
+    "idlefantasy-0012": "reported"
+  },
+  "elapsed_s": 97.369,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.6,
+    "notes": "Filed one bug: Profile > Gear > View Combat Gear opens Combat on Dungeons instead of Gear. Mining ore list order, crafting dialog XP (1/11/25 bars, clamping), and gear slot choosers/stat totals looked correct. I did not test rotation, the Inventory screen contents, or crafting an item to completion."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "found": [
+    "idlefantasy-0012"
+  ],
+  "required": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "missed": [
+    "idlefantasy-0011"
+  ],
+  "true_positives": 1,
+  "false_positives": 0,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 46,
+  "precision": 1.0,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "bug_meta": {
+    "idlefantasy-0011": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0012": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

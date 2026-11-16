@@ -1,0 +1,64 @@
+{
+  "screens": [
+    "task list"
+  ],
+  "elements": [
+    "date chip"
+  ],
+  "fields": [
+    "start date"
+  ],
+  "symptom_type": "duplicated",
+  "expected_contains_any": [
+    "only one date chip is shown when start and due are the same day",
+    "single due chip"
+  ],
+  "observed_contains_any": [
+    "a start-date chip duplicates the due date",
+    "two identical date chips"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "one",
+      "single",
+      "only",
+      "1",
+      "once"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "two",
+      "2",
+      "twice",
+      "duplicat*",
+      "both",
+      "double*",
+      "extra",
+      "second",
+      "again",
+      "separate"
+    ]
+  ],
+  "location_concepts": [
+    "date*",
+    "start*",
+    "due*",
+    "date chip",
+    "date label"
+  ],
+  "anchors": {
+    "elements": [
+      "Buy milk",
+      "Sun 3 PM",
+      "pending_actions"
+    ],
+    "observed": [
+      "sun 3 pm"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "screens": [
+    "file browser"
+  ],
+  "elements": [
+    "Zeta"
+  ],
+  "fields": [
+    "sort order"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "with Folder first off, Zeta sorts after todo.txt by name",
+    "folders mixed alphabetically"
+  ],
+  "observed_contains_any": [
+    "Zeta still sorts at the top",
+    "folder first option ignored"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "alphabet*",
+      "by name",
+      "mixed",
+      "after",
+      "among",
+      "name order",
+      "sorted",
+      "todo*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "top",
+      "first",
+      "above",
+      "before",
+      "still",
+      "ignor*",
+      "no effect",
+      "nothing"
+    ]
+  ],
+  "location_concepts": [
+    "file browser",
+    "file list",
+    "notebook",
+    "browser",
+    "sort*",
+    "folder*",
+    "zeta"
+  ],
+  "anchors": {
+    "elements": [
+      "Zeta",
+      "todo.txt",
+      "Sort by"
+    ],
+    "observed": []
+  }
+}

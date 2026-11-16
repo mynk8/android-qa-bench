@@ -1,0 +1,79 @@
+{
+  "screens": [
+    "body weight sheet",
+    "settings"
+  ],
+  "elements": [
+    "save button",
+    "weight field",
+    "body weight row"
+  ],
+  "fields": [
+    "weight"
+  ],
+  "symptom_type": "no_effect",
+  "expected_contains_any": [
+    "saving the empty field clears the weight and closes the sheet",
+    "the body weight row reads not set"
+  ],
+  "observed_contains_any": [
+    "an error asks for a valid weight and the weight stays",
+    "the weight is not cleared"
+  ],
+  "symptom_types": [
+    "no_effect",
+    "wrong_value",
+    "missing"
+  ],
+  "expected_concepts": [
+    [
+      "clear*",
+      "remov*",
+      "not set",
+      "empty",
+      "reset",
+      "close*",
+      "dismiss*"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "valid",
+      "error",
+      "invalid",
+      "enter a",
+      "stays",
+      "still",
+      "remain*",
+      "not clear*",
+      "kept",
+      "didn't",
+      "doesn't",
+      "did not",
+      "does not",
+      "won't",
+      "not "
+    ]
+  ],
+  "location_concepts": [
+    "body weight",
+    "settings",
+    "save",
+    "weight sheet",
+    "weight field",
+    "weight popup",
+    "weight prompt",
+    "weight entry",
+    "weight box"
+  ],
+  "anchors": {
+    "elements": [
+      "weight",
+      "body weight",
+      "save"
+    ],
+    "observed": [
+      "enter a valid weight"
+    ]
+  }
+}

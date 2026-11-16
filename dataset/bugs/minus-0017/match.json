@@ -1,0 +1,74 @@
+{
+  "screens": [
+    "main",
+    "main screen",
+    "editor",
+    "amount editor"
+  ],
+  "elements": [
+    "result line",
+    "calculation result"
+  ],
+  "fields": [
+    "result"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "typing 2 + 3 x 4 shows a result of 14",
+    "multiplication is applied before addition"
+  ],
+  "observed_contains_any": [
+    "typing 2 + 3 x 4 shows a result of 20",
+    "the expression is evaluated left to right"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "14",
+      "14.00",
+      "multipl*",
+      "precedence",
+      "before",
+      "times",
+      "order*",
+      "operations",
+      "too high",
+      "mixed",
+      "product*",
+      "fourteen"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "20",
+      "20.00",
+      "left to right",
+      "left-to-right",
+      "order",
+      "wrong*",
+      "incorrect*",
+      "instead",
+      "ignor*"
+    ]
+  ],
+  "location_concepts": [
+    "main",
+    "editor",
+    "result",
+    "calculat*",
+    "numpad"
+  ],
+  "anchors": {
+    "elements": [
+      "Editor action",
+      "=",
+      "result"
+    ],
+    "observed": [
+      "= $20",
+      "= $7"
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "run_id": "399e331041d2",
+  "item_id": "nerdcalci-E04",
+  "kind": "episode",
+  "app_id": "nerdcalci",
+  "model": "claude-sonnet-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "claude-sonnet-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Remainders file",
+      "element": "result of line 1 \"100 % 13\"",
+      "symptom_type": "wrong_value",
+      "expected": "100 % 13 = 9, 47 % 20 = 27\u21927, 19.5 % 4 = 3.5, a % 14 = 8",
+      "observed": "Binary modulo lines all show \"Err\" (lines 1,2,3,5); only 250 + 20% works",
+      "observed_quote": "Err",
+      "element_ref": 2,
+      "steps": [
+        "Open Remainders file",
+        "See results of 100 % 13, 47 % 20, 19.5 % 4, a % 14"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Error Info",
+          "Err"
+        ],
+        "bounds": [
+          797,
+          231,
+          1048,
+          330
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home screen file list",
+      "element": "Date gaps row modified date",
+      "symptom_type": "wrong_value",
+      "expected": "Pinning leaves the modified date unchanged (JAN 05, 2026 for Date gaps, JAN 08, 2026 for Temperatures)",
+      "observed": "After pinning, the modified timestamp changed to the current time",
+      "observed_quote": "MODIFIED: 12:24 AM \u2022 CREATED: JAN 05, 2026",
+      "steps": [
+        "Home screen: Date gaps shows MODIFIED: JAN 05, 2026",
+        "Tap its More options > Pin",
+        "Row now shows MODIFIED: 12:24 AM"
+      ],
+      "element_ref": 1,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Date gaps",
+          "Pinned",
+          "MODIFIED: 12:24 AM \u2022 CREATED: JAN 05, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Home screen file list",
+      "element": "Number bases row modified date",
+      "symptom_type": "wrong_value",
+      "expected": "Pinning a file does not change its modified date (Number bases should stay JAN 06, 2026)",
+      "observed": "Right after tapping Pin, the Number bases row shows MODIFIED as the current time. Reproduced on Temperatures, Date gaps and Number bases. None of them had been opened or edited.",
+      "observed_quote": "MODIFIED: 12:24 AM \u2022 CREATED: JAN 06, 2026",
+      "element_ref": 1,
+      "steps": [
+        "On home screen note that Number bases shows MODIFIED: JAN 06, 2026",
+        "Tap its More options (three dots)",
+        "Tap Pin",
+        "Row moves to PINNED and shows MODIFIED: 12:24 AM instead of JAN 06, 2026"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Number bases",
+          "Pinned",
+          "MODIFIED: 12:24 AM \u2022 CREATED: JAN 06, 2026",
+          "More options"
+        ],
+        "bounds": [
+          0,
+          331,
+          1080,
+          562
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "nerdcalci-E04-1",
+      "mask": "1",
+      "unfixed": [
+        "nerdcalci-0007"
+      ],
+      "present": [
+        "nerdcalci-0007"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-sonnet/episodes/nerdcalci-E04/399e331041d2/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "nerdcalci-0007": "reported"
+  },
+  "elapsed_s": 118.426,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.5,
+    "notes": "Reported: the % modulo operator returns Err in Remainders (confirmed). Also reported that Pin sets the modified date to the current time on Temperatures, Date gaps and Number bases. The developer could not reproduce that one. Percentages, Monthly budget, the Expenses initial values, Temperature sums, pin ordering and lock all looked right. I didn't test Date gaps, Time differences, Number bases results, Temperatures values, or editing and rotation. Editing Expenses with text entry garbled the rent line, so that file's data is now altered."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "nerdcalci-0007"
+  ],
+  "found": [
+    "nerdcalci-0007"
+  ],
+  "required": [
+    "nerdcalci-0007"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 37,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "nerdcalci-0007"
+  ],
+  "bug_meta": {
+    "nerdcalci-0007": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

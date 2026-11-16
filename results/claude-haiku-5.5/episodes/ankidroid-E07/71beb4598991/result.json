@@ -1,0 +1,195 @@
+{
+  "run_id": "71beb4598991",
+  "item_id": "ankidroid-E07",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "claude-haiku-5-5",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "claude-haiku-5-5",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Settings > Reviewing > Scheduling > Timeboxing",
+      "element": "Timebox time limit row",
+      "element_ref": 5,
+      "field": "Timebox minutes (EditText)",
+      "symptom_type": "not_persisted",
+      "expected": "Entering 0 minutes with Timebox on is either rejected up front (the field stays on the previous valid value and shows it) or saved and shown as 0. In both cases the field and the summary row should agree after leaving the screen.",
+      "observed": "The minutes field showed \"0\" with the \"-\" button disabled. After leaving the screen (BACK), the Scheduling row still reads \"3 mins\", and reopening Timeboxing shows \"3\".",
+      "observed_quote": "Timebox time limit | 3 mins",
+      "steps": [
+        "Open Settings > Reviewing > Timebox time limit with Timebox on (minutes were 3).",
+        "Tap the minutes field, clear it with DEL, and type 0.",
+        "Observe: field shows \"0\", \"-\" button is disabled.",
+        "Press BACK twice to dismiss the keyboard and leave the screen.",
+        "Observe Scheduling row: \"Timebox time limit | 3 mins\". Reopen Timeboxing: field shows \"3\"."
+      ],
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "Timebox time limit",
+          "3 mins"
+        ],
+        "bounds": [
+          0,
+          971,
+          1080,
+          1163
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Reviewing > Scheduling > Timeboxing",
+      "element": "Time limit minutes field",
+      "element_ref": 3,
+      "field": "Timebox minutes (EditText)",
+      "symptom_type": "wrong_value",
+      "expected": "Timebox minutes keeps the saved value (7) after Timebox is turned off, the screen is left and reopened, and turned on again. The Scheduling row should still read \"7 mins\".",
+      "observed": "After turning Timebox back on, the minutes field shows \"20\" and the Scheduling row reads \"Timebox time limit | 20 mins\" instead of the saved 7.",
+      "observed_quote": "20",
+      "steps": [
+        "Settings > Reviewing > Timebox time limit. Timebox is on. Set minutes to 7 (clear the field, type 7, tap Done). Back: Scheduling row shows \"Timebox time limit | 7 mins\".",
+        "Reopen Timeboxing, turn the \"Use timebox\" switch off (minutes field hides).",
+        "Press BACK to Scheduling, then reopen Timeboxing.",
+        "Turn \"Use timebox\" switch on.",
+        "Observe: minutes field shows \"20\" (not 7). Going back shows \"Timebox time limit | 20 mins\".",
+        "Repeated with saved value 3: same result, 20 shown after re-enable."
+      ],
+      "anchor_node": {
+        "text": "20",
+        "class": "android.widget.EditText",
+        "bounds": [
+          378,
+          611,
+          703,
+          758
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Settings > Reviewing > Scheduling",
+      "element": "Timebox time limit row",
+      "element_ref": 5,
+      "field": "Timebox time limit (saved value)",
+      "symptom_type": "not_persisted",
+      "expected": "The saved timebox length (7 mins, set before the off/on cycle) is kept. Re-enabling Timebox should restore 7 and not overwrite the stored value.",
+      "observed": "The saved value was replaced by the default. After the off/leave/reopen/on cycle, the Scheduling row shows \"Timebox time limit | 20 mins\" and it stays 20 after leaving and reopening the screen. Earlier the same cycle with 3 gave 20 too. The earlier 45 test passed only because the screen was not reopened while Timebox was off.",
+      "observed_quote": "Timebox time limit | 20 mins",
+      "steps": [
+        "Settings > Reviewing > Timebox time limit (Timebox on). Set minutes to 7, tap Done, press BACK. Row shows \"7 mins\".",
+        "Reopen Timeboxing and turn \"Use timebox\" off. The minutes field hides.",
+        "Press BACK to Scheduling. Reopen Timeboxing. Turn \"Use timebox\" on.",
+        "Observe the minutes field shows \"20\". Press BACK. The row shows \"Timebox time limit | 20 mins\" and it still reads 20 after leaving and reopening the screen."
+      ],
+      "anchor_node": {
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "General",
+          "Language \u2022 Studying \u2022 System-wide"
+        ],
+        "bounds": [
+          0,
+          525,
+          1080,
+          717
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E07-11",
+      "mask": "11",
+      "unfixed": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ],
+      "present": [
+        "ankidroid-0023",
+        "ankidroid-0024"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-haiku/episodes/ankidroid-E07/71beb4598991/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0023": "missed_unreached",
+    "ankidroid-0024": "missed_unreached"
+  },
+  "elapsed_s": 361.203,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "timeout",
+  "bugs": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "found": [
+    "ankidroid-0023"
+  ],
+  "required": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "missed": [
+    "ankidroid-0024"
+  ],
+  "true_positives": 1,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 300,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0023",
+    "ankidroid-0024"
+  ],
+  "bug_meta": {
+    "ankidroid-0023": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "ankidroid-0024": {
+      "family": "state",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "no_match",
+      "hit",
+      "duplicate"
+    ]
+  }
+}

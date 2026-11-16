@@ -1,0 +1,99 @@
+{
+  "bug_id": "nerdcalci-0006",
+  "app_id": "nerdcalci",
+  "source": "greenfield_pr",
+  "family": "display",
+  "issta_class": "wrong or missing data",
+  "symptom_type": "wrong_value",
+  "fix_date": "2026-03-30",
+  "seed_id": "calci_basic",
+  "params": {
+    "nav": {
+      "file_expenses": [
+        {
+          "text": "Expenses"
+        }
+      ],
+      "file_budget": [
+        {
+          "text": "Monthly budget"
+        }
+      ],
+      "file_temps": [
+        {
+          "text": "Temperatures"
+        }
+      ],
+      "file_sums": [
+        {
+          "text": "Temperature sums"
+        }
+      ],
+      "file_bases": [
+        {
+          "text": "Number bases"
+        }
+      ],
+      "file_dates": [
+        {
+          "text": "Date gaps"
+        }
+      ],
+      "file_times": [
+        {
+          "text": "Time differences"
+        }
+      ],
+      "file_rem": [
+        {
+          "text": "Remainders"
+        }
+      ],
+      "file_pct": [
+        {
+          "text": "Percentages"
+        }
+      ],
+      "back": [
+        {
+          "desc": "Back"
+        }
+      ]
+    }
+  },
+  "builds": {
+    "buggy": "nerdcalci-0006-buggy",
+    "fixed": "nerdcalci-0006-fixed"
+  },
+  "status": "verified",
+  "head_port": {
+    "patch": "private/forwardport/nerdcalci-0006.patch",
+    "confidence": "medium",
+    "lines_changed": 19,
+    "approach": "Addition and subtraction of temperature quantities operate on the Kelvin base values instead of normalising to celsius first, so 25 celsius + 5 celsius shows about 303 \u00b0C."
+  },
+  "calibration": {
+    "runs": 1,
+    "status": "verified",
+    "evidence": "calibration.json",
+    "buggy": {
+      "target": false,
+      "held_out": [
+        false
+      ],
+      "preservation": [
+        true
+      ]
+    },
+    "fixed": {
+      "target": true,
+      "held_out": [
+        true
+      ],
+      "preservation": [
+        true
+      ]
+    }
+  },
+  "round": "r2"
+}

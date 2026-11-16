@@ -1,0 +1,100 @@
+{
+  "bug_id": "tasks-0016",
+  "runs": 1,
+  "started": "2026-11-11T11:26:57+0530",
+  "device": "AdbDevice",
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 38.0,
+      "screenshot_sha256": "1dfbb52349893184a0daa2937a2b5629769af2dc2387ee421878ad64def483d1",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0016-buggy"
+    },
+    {
+      "check": "held_out_0",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 37.3,
+      "screenshot_sha256": "235d9fd77144668e777edde4154b4b5c4efb61707aa685bb0c8f375b048e817b",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0016-buggy"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 32.9,
+      "screenshot_sha256": "334a6ab5323b99a41d6504a6287744e0e24da74de63b26d83525fd22ca0cb76e",
+      "role": "buggy",
+      "run": 1,
+      "build_id": "tasks-0016-buggy"
+    },
+    {
+      "check": "target",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "chips": [
+          "1"
+        ]
+      },
+      "seconds": 40.0,
+      "screenshot_sha256": "94d3b838a298af2d15ad595ebd16d75a30e9c52a01282ea901e34a874e1a5b13",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0016-fixed"
+    },
+    {
+      "check": "held_out_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "chips": [
+          "1"
+        ]
+      },
+      "seconds": 43.0,
+      "screenshot_sha256": "1b5294bf8d9b0d0edfb04eaaa845aa9b00e3b656805a54a9cc3b0bd44df55692",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0016-fixed"
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "A",
+      "observed": {
+        "chips": [
+          "2"
+        ]
+      },
+      "seconds": 25.5,
+      "screenshot_sha256": "cf9ac777b10f54851cbb7e8a10c8ff1f50d5e7f7bac2025f2a16d540965bd2cc",
+      "role": "fixed",
+      "run": 1,
+      "build_id": "tasks-0016-fixed"
+    }
+  ],
+  "status": "verified",
+  "finished": "2026-11-11T11:31:53+0530"
+}

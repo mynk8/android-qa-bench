@@ -1,0 +1,151 @@
+{
+  "run_id": "3b1148128e09",
+  "item_id": "ankidroid-E05",
+  "kind": "episode",
+  "app_id": "ankidroid",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Card browser \u2014 Cards mode",
+      "element": "Tags column for comer",
+      "element_ref": 45,
+      "field": "Tags",
+      "symptom_type": "missing",
+      "expected": "The comer card displays verb in Tags, matching its note and tag filter.",
+      "observed": "Tags header is present but comer has no tag text. Notes mode displays verb, and tag:verb finds this card. Reproduced after filtering and rotating.",
+      "steps": [
+        "Open browser, select All decks.",
+        "Options > Notes; observe comer shows verb.",
+        "Switch to Cards with Tags column enabled.",
+        "Observe comer Tags blank.",
+        "Filter by tag verb; rotate; Tags remains blank."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/card_item_browser",
+        "class": "android.widget.LinearLayout",
+        "contains": [
+          "comer",
+          "Card 1",
+          "New #\u20681\u2069",
+          "Spanish"
+        ],
+        "bounds": [
+          0,
+          362,
+          1080,
+          419
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Browser options",
+      "element": "Truncate content and cards/notes toggle",
+      "element_ref": 5,
+      "observed_quote": "Truncate content",
+      "field": "mode-specific display settings",
+      "symptom_type": "not_persisted",
+      "expected": "Cards and Notes retain their own display settings when switching modes.",
+      "observed": "Enabled truncation and saved in Cards. Switching to Notes inherited checked truncation; disabling and saving in Notes then switching to Cards shows unchecked truncation, losing the Cards setting. Column change made while Notes was selected also appeared in Cards.",
+      "steps": [
+        "In Cards open Options, enable Truncate content, Save.",
+        "Reopen Options, choose Notes; Truncate content remains checked.",
+        "Uncheck Truncate content and Save Notes.",
+        "Reopen Options and choose Cards; Truncate content is unchecked instead of its saved checked value.",
+        "Repeat toggling modes; settings track the last mode instead of retaining independent settings."
+      ],
+      "anchor_node": {
+        "id": "com.ichi2.anki:id/truncate_check_box",
+        "text": "Truncate content",
+        "class": "android.widget.CheckBox",
+        "bounds": [
+          154,
+          894,
+          926,
+          1020
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "ankidroid-E05-1",
+      "mask": "1",
+      "unfixed": [
+        "ankidroid-0008"
+      ],
+      "present": [
+        "ankidroid-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low/episodes/ankidroid-E05/3b1148128e09/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "ankidroid-0008": "missed_unreached"
+  },
+  "elapsed_s": 494.951,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.75,
+    "notes": "Swept browser cards/notes modes, columns, tag filter with verb, search, preview, selection, suspend/undo; deck counts and nested expand/collapse with rotation and revisit; add validation for empty Front, save, multiline/punctuation input, tags, edit persistence and discard. Filed two browser anomalies; both developer replies were could not reproduce. Original seven notes remain; temporary QA note deleted. Empty test decks French::Alpha and Spanish::Zulu remain. Unicode input was blocked by device typing tool, so not validated. No confirmed reports."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "ankidroid-0008"
+  ],
+  "found": [],
+  "required": [
+    "ankidroid-0008"
+  ],
+  "missed": [
+    "ankidroid-0008"
+  ],
+  "true_positives": 0,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 2,
+  "steps": 235,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "ankidroid-0008"
+  ],
+  "bug_meta": {
+    "ankidroid-0008": {
+      "family": "display",
+      "hard_slice": false
+    }
+  }
+}

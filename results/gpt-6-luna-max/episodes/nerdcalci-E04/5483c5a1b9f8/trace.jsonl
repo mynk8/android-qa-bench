@@ -1,0 +1,76 @@
+{"event": "install", "build": {"n": 1, "build_id": "nerdcalci-E04-1", "mask": "1", "unfixed": ["nerdcalci-0007"], "present": ["nerdcalci-0007"]}}
+{"event": "brief", "item_id": "nerdcalci-E04"}
+{"event": "agent", "step": 1, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 2, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 3, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 446}}}
+{"event": "agent", "step": 4, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 5, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 719}}}
+{"event": "agent", "step": 6, "message": {"type": "action", "name": "tap_xy", "args": {"x": 415, "y": 280}}}
+{"event": "agent", "step": 7, "message": {"type": "action", "name": "type", "args": {"text": "salary = 2600", "clear": true, "submit": false}}}
+{"event": "agent", "step": 8, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 9, "message": {"type": "action", "name": "tap_xy", "args": {"x": 226, "y": 230}}}
+{"event": "agent", "step": 10, "message": {"type": "action", "name": "type", "args": {"text": "salary = 2500", "clear": false, "submit": false}}}
+{"event": "agent", "step": 11, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 280}}}
+{"event": "agent", "step": 12, "message": {"type": "action", "name": "tap_xy", "args": {"x": 216, "y": 176}}}
+{"event": "agent", "step": 13, "message": {"type": "action", "name": "type", "args": {"text": "salary = 2600", "clear": false, "submit": false}}}
+{"event": "agent", "step": 14, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 315}}}
+{"event": "agent", "step": 15, "message": {"type": "action", "name": "tap_xy", "args": {"x": 318, "y": 230}}}
+{"event": "agent", "step": 16, "message": {"type": "action", "name": "type", "args": {"text": "salary = 2600", "clear": false, "submit": false}}}
+{"event": "agent", "step": 17, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 280}}}
+{"event": "agent", "step": 18, "message": {"type": "action", "name": "tap_xy", "args": {"x": 606, "y": 176}}}
+{"event": "agent", "step": 19, "message": {"type": "action", "name": "type", "args": {"text": "salary = 2500", "clear": false, "submit": false}}}
+{"event": "agent", "step": 20, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 21, "message": {"type": "action", "name": "rotate", "args": {"landscape": true}}}
+{"event": "agent", "step": 22, "message": {"type": "action", "name": "rotate", "args": {"landscape": false}}}
+{"event": "agent", "step": 23, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 24, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7, "x": 540, "y": 446}}}
+{"event": "agent", "step": 25, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1612}}}
+{"event": "agent", "step": 26, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 280}}}
+{"event": "agent", "step": 27, "message": {"type": "bug_report", "screen": "Remainders calculation file", "element": "The result for `100 % 13` (and the other remainder expressions)", "element_ref": 23, "field": "percent/remainder operator", "symptom_type": "wrong_value", "expected": "`100 % 13`, `47 % 20`, `19.5 % 4`, and `a % 14` with `a = 50` should evaluate to 9, 7, 3.5, and 8 respectively, using the default two-decimal precision.", "observed": "Each remainder expression displays an error instead of a numeric result. Opening the first error shows `Unexpected number`.", "observed_quote": "Unexpected number", "steps": ["Open the existing Remainders file from the home screen.", "Observe the results for `100 % 13`, `47 % 20`, `19.5 % 4`, and `a % 14`.", "Tap the first `Err` result to reproduce the parser message."], "anchor_node": {"text": "Unexpected number", "class": "android.widget.TextView", "bounds": [596, 376, 995, 428]}}}
+{"event": "scored", "report_n": 1, "quote_seen": true, "kind": "no_match", "bugs": null, "per_bug": {"nerdcalci-0007": "generic"}}
+{"event": "no_match", "text": "Developer: could not reproduce with the steps given.", "matcher": {"kind": "no_match", "reply": "Developer: could not reproduce with the steps given."}}
+{"event": "agent", "step": 28, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 29, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1612}}}
+{"event": "agent", "step": 30, "message": {"type": "action", "name": "tap_xy", "args": {"x": 922, "y": 280}}}
+{"event": "agent", "step": 31, "message": {"type": "bug_report", "screen": "Remainders file", "element": "Result cell for the first remainder expression, `100 % 13`", "element_ref": 2, "field": "remainder expressions using %", "symptom_type": "wrong_value", "expected": "`100 % 13` should show 9.00 (with the default two-decimal precision). The other supplied remainder rows should show 7.00, 3.50, and 8.00.", "observed": "The result cell shows `Err`; the same happens for `47 % 20`, `19.5 % 4`, and `a % 14` after `a = 50`. Tapping the first Err displays `Unexpected number`.", "observed_quote": "Err", "steps": ["From the home screen, open the existing file named Remainders.", "Read the result in the row whose expression is `100 % 13`; it shows Err.", "Tap that row's Err result; the app displays `Unexpected number`.", "Back out of Remainders, reopen it, and repeat the check; the same Err result is present."], "anchor_node": {"class": "android.view.View", "contains": ["Error Info", "Err"], "bounds": [797, 231, 1048, 330]}}}
+{"event": "scored", "report_n": 2, "quote_seen": true, "kind": "hit", "bugs": ["nerdcalci-0007"], "per_bug": {"nerdcalci-0007": "anchored"}}
+{"event": "hit", "bugs": ["nerdcalci-0007"], "text": "Developer: thanks, confirmed and logged. Keep testing the current build."}
+{"event": "agent", "step": 32, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 33, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 1885}}}
+{"event": "agent", "step": 34, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 928}}}
+{"event": "agent", "step": 35, "message": {"type": "action", "name": "tap_xy", "args": {"x": 418, "y": 818}}}
+{"event": "agent", "step": 36, "message": {"type": "action", "name": "type", "args": {"text": "0% of 80", "clear": false, "submit": false}}}
+{"event": "agent", "step": 37, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 928}}}
+{"event": "agent", "step": 38, "message": {"type": "action", "name": "tap_xy", "args": {"x": 391, "y": 818}}}
+{"event": "agent", "step": 39, "message": {"type": "action", "name": "type", "args": {"text": "100% of 80", "clear": false, "submit": false}}}
+{"event": "agent", "step": 40, "message": {"type": "action", "name": "long_press_xy", "args": {"x": 415, "y": 928}}}
+{"event": "agent", "step": 41, "message": {"type": "action", "name": "tap_xy", "args": {"x": 445, "y": 818}}}
+{"event": "agent", "step": 42, "message": {"type": "action", "name": "type", "args": {"text": "10% of 80", "clear": false, "submit": false}}}
+{"event": "agent", "step": 43, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 44, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 45, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 271}}}
+{"event": "agent", "step": 46, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 395}}}
+{"event": "agent", "step": 47, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 297}}}
+{"event": "agent", "step": 48, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 49, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 271}}}
+{"event": "agent", "step": 50, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 395}}}
+{"event": "agent", "step": 51, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 271}}}
+{"event": "agent", "step": 52, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 521}}}
+{"event": "agent", "step": 53, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 297}}}
+{"event": "agent", "step": 54, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 55, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 271}}}
+{"event": "agent", "step": 56, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 521}}}
+{"event": "agent", "step": 57, "message": {"type": "action", "name": "tap_xy", "args": {"x": 540, "y": 793}}}
+{"event": "agent", "step": 58, "message": {"type": "action", "name": "key", "args": {"key": "BACK"}}}
+{"event": "agent", "step": 59, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "up", "distance": 0.7, "x": 540, "y": 297}}}
+{"event": "agent", "step": 60, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 1887}}}
+{"event": "agent", "step": 61, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 983}}}
+{"event": "agent", "step": 62, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.85, "x": 540, "y": 297}}}
+{"event": "agent", "step": 63, "message": {"type": "action", "name": "observe", "args": {}}}
+{"event": "agent", "step": 64, "message": {"type": "action", "name": "screenshot", "args": {}}}
+{"event": "agent", "step": 65, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.8, "x": 540, "y": 800}}}
+{"event": "agent", "step": 66, "message": {"type": "action", "name": "swipe_screen", "args": {"direction": "down", "distance": 0.7, "x": 500, "y": 1500}}}
+{"event": "agent", "step": 67, "message": {"type": "action", "name": "tap_xy", "args": {"x": 976, "y": 448}}}
+{"event": "agent", "step": 68, "message": {"type": "action", "name": "tap_xy", "args": {"x": 874, "y": 594}}}
+{"event": "agent", "step": 69, "message": {"type": "sign_off", "verdict": "PASS", "confidence": 0.92, "notes": "Swept percentages and variable recalculation, rotated and reopened Monthly budget, and exercised pin/unpin plus lock/unlock persistence. One confirmed report is logged: remainder expressions using % show Err/Unexpected number. Restored temporary edits; no files remain pinned or locked."}}
+{"event": "sign_off", "verdict": "PASS", "remaining": ["nerdcalci-0007"], "unfixed": ["nerdcalci-0007"], "outcome": "success"}

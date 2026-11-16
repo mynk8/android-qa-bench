@@ -1,0 +1,118 @@
+{
+  "episode_id": "idlefantasy-E03",
+  "start_build": "idlefantasy-E03-11",
+  "runs": 1,
+  "results": [
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:37",
+          "7:37\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Close sheet",
+          "Drag handle",
+          "Sell: Iron Sword",
+          "62 coins each",
+          "You'll receive",
+          "62 coins",
+          "Cancel",
+          "Sell"
+        ]
+      },
+      "seconds": 17.0,
+      "screenshot_sha256": "feb6e5e50aff861e18831e645fe753542189fcedbacc1e0688b4489fa550be09",
+      "bug": "idlefantasy-0004",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "Close sheet",
+          "Drag handle",
+          "Sell: Iron Sword",
+          "62 coins each",
+          "Decrease",
+          "2",
+          "Increase",
+          "1",
+          "60",
+          "180",
+          "Max",
+          "-100",
+          "-10",
+          "+10",
+          "+100",
+          "You'll receive",
+          "124 coins",
+          "Cancel",
+          "Sell",
+          "7:37",
+          "7:37\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown."
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "94b505b725ec27925f46005ba8d5fd8c880c6e623dc2912329ccb17d99b3f6cb",
+      "bug": "idlefantasy-0004",
+      "run": 1
+    },
+    {
+      "check": "target",
+      "passed": false,
+      "tier": "B",
+      "observed": {
+        "order": [
+          "Choose Body",
+          "Mithril Platebody",
+          "Adamantite Platebody",
+          "Slayer Platebody",
+          "Runite Chainbody",
+          "Runite Platebody",
+          "Gilded Platebody"
+        ]
+      },
+      "seconds": 17.6,
+      "screenshot_sha256": "75302a714ef8d3dc719abe7bc1014be268c72b9b0fefd0bea07003e98ad6ff7a",
+      "bug": "idlefantasy-0006",
+      "run": 1
+    },
+    {
+      "check": "preservation_0",
+      "passed": true,
+      "tier": "B",
+      "observed": {
+        "texts": [
+          "7:38",
+          "7:38\u202fAM",
+          "Android System notification: ",
+          "Wifi signal full.",
+          "Battery percentage unknown.",
+          "Close sheet",
+          "Drag handle",
+          "Choose Weapon (Atk)",
+          "Bronze Dagger (Atk)",
+          "Atk +5  \u2022  Str +4",
+          "Equip",
+          "Iron Sword (Atk)",
+          "Atk +10  \u2022  Str +9  \u2022  Req lv. 10 Attack",
+          "Equip"
+        ]
+      },
+      "seconds": 16.6,
+      "screenshot_sha256": "4e2f976c322a2ee5303bc9adee57e7512e0cc75b8c3e750bd91b8d979919558a",
+      "bug": "idlefantasy-0006",
+      "run": 1
+    }
+  ],
+  "status": "verified"
+}

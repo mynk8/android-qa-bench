@@ -1,0 +1,187 @@
+{
+  "run_id": "635db1027873",
+  "item_id": "idlefantasy-E04",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Smithing training",
+      "element": "Smithing action list",
+      "element_ref": 20,
+      "field": "Action ordering by required level",
+      "symptom_type": "wrong_value",
+      "expected": "Actions should be ordered by their required level, lowest first. Bronze Dagger (Smithing level 1) should appear before Bronze Arrow Tips (Smithing level 5).",
+      "observed": "Bronze Arrow Tips appears above Bronze Dagger in the action list, even though its required Smithing level is higher.",
+      "observed_quote": "Bronze Arrow Tips",
+      "steps": [
+        "Open Skills and select Smithing.",
+        "View the All actions list with the Bronze filter selected.",
+        "Observe Bronze Arrow Tips above Bronze Dagger.",
+        "Leave the screen, reopen Smithing, and confirm the same order."
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Bronze Arrow Tips",
+          "\u00d715 per craft",
+          "Bronze Bar 0/1",
+          "Owned: 0"
+        ],
+        "bounds": [
+          0,
+          930,
+          1080,
+          1141
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bonuses",
+      "element": "Bonuses list",
+      "element_ref": 20,
+      "field": "Infinite Tower bonuses",
+      "symptom_type": "missing",
+      "expected": "The profile bonuses section should include Aldric's earned Infinite Tower bonuses: +7% XP, +12% coin drops, and +150 HP.",
+      "observed": "After navigating to Profile > Bonuses again, the list contains Attack and Hitpoints prestige bonuses and a Construction discount, but none of the three earned Infinite Tower bonuses are listed.",
+      "steps": [
+        "Open Profile from the bottom navigation.",
+        "Select Bonuses in the profile section list.",
+        "Review the full bonuses panel; it ends after the Construction bonus.",
+        "Navigate away, return to Profile > Bonuses, and confirm the Tower bonuses are still absent."
+      ],
+      "anchor_node": {
+        "text": "SKILL BONUSES",
+        "class": "android.widget.TextView",
+        "bounds": [
+          334,
+          519,
+          556,
+          553
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Bonuses (landscape)",
+      "element": "Right side of profile content",
+      "element_ref": 16,
+      "field": "Landscape layout",
+      "symptom_type": "cut_off",
+      "expected": "Profile content and bonus values should remain fully visible after rotating the device.",
+      "observed": "In landscape, the bonus values and coin total extend beneath the system navigation area at the right edge, cutting off the profile content.",
+      "observed_quote": "+5% XP",
+      "steps": [
+        "Open Profile > Bonuses in portrait.",
+        "Rotate the device to landscape.",
+        "Observe the +5% XP value and 2.5M coin total at the right edge; both are partly obscured by the system navigation area.",
+        "Rotate back to portrait and reproduce."
+      ],
+      "anchor_node": {
+        "text": "+5% XP",
+        "class": "android.widget.TextView",
+        "bounds": [
+          2233,
+          612,
+          2358,
+          665
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E04-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ],
+      "present": [
+        "idlefantasy-0007",
+        "idlefantasy-0008"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-b/episodes/idlefantasy-E04/635db1027873/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0007": "reported",
+    "idlefantasy-0008": "missed_unreached"
+  },
+  "elapsed_s": 158.996,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.88,
+    "notes": "Swept Profile milestones and bonuses plus Smithing training XP display and action list; navigated away and back, repeated checks, and rotated. Confirmed report logged: Profile > Bonuses omits earned Infinite Tower bonuses. Two attempted reports (Smithing action order and landscape clipping) were rejected as unreproducible and were not included."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "found": [
+    "idlefantasy-0007"
+  ],
+  "required": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "missed": [
+    "idlefantasy-0008"
+  ],
+  "true_positives": 1,
+  "false_positives": 2,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 3,
+  "steps": 29,
+  "precision": 0.3333333333333333,
+  "recall": 0.5,
+  "unfixed_at_end": [
+    "idlefantasy-0007",
+    "idlefantasy-0008"
+  ],
+  "bug_meta": {
+    "idlefantasy-0007": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0008": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}

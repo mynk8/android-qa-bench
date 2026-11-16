@@ -1,0 +1,95 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "Alpha folder"
+  ],
+  "fields": [
+    "paste"
+  ],
+  "symptom_type": "duplicated",
+  "expected_contains_any": [
+    "alpha still contains only readme.txt",
+    "no folder is created inside itself"
+  ],
+  "observed_contains_any": [
+    "a new empty alpha folder appears inside alpha",
+    "pasting a folder into itself creates a nested folder"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value",
+    "unexpected_content"
+  ],
+  "expected_concepts": [
+    [
+      "only",
+      "just",
+      "still",
+      "no new",
+      "nothing",
+      "not created",
+      "no folder",
+      "unchanged",
+      "inside itself",
+      "into itself",
+      "itself",
+      "extra",
+      "blank",
+      "empty",
+      "shouldn't",
+      "should not",
+      "can't",
+      "cannot",
+      "unexpected"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "alpha",
+      "folder*",
+      "nested",
+      "inside",
+      "empty",
+      "subfolder*",
+      "itself"
+    ],
+    [
+      "new",
+      "extra",
+      "created",
+      "appears",
+      "duplicat*",
+      "another",
+      "inside",
+      "contains",
+      "now has",
+      "now shows",
+      "subfolder*",
+      "nested",
+      "copied",
+      "pasted",
+      "succeeded",
+      "recursive*",
+      "itself"
+    ]
+  ],
+  "location_concepts": [
+    "alpha folder",
+    "alpha directory",
+    "paste*",
+    "pasting",
+    "itself"
+  ],
+  "anchors": {
+    "elements": [
+      "Alpha",
+      "Beta",
+      "readme.txt"
+    ],
+    "observed": [
+      "alpha"
+    ]
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "run_id": "756a073c4c8f",
+  "item_id": "iris-E03",
+  "kind": "episode",
+  "app_id": "iris",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 5,
+    "claim": "none",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "timeout",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Media tab \u2013 Videos filter (blank state)",
+      "element": "Blank-state caption text",
+      "field": "Empty-state caption",
+      "symptom_type": "wrong_value",
+      "expected": "The blank-state caption for the Videos filter should say \\\"No videos found\\\" (and the blank-state illustration should be shown with it).",
+      "observed": "With the Media tab filtered to Videos (0 items), the blank state shows the caption \\\"No photos found\\\".",
+      "steps": [
+        "Open the Media tab",
+        "Tap the Filter control in the top bar",
+        "Choose Videos (0)",
+        "Observe the blank-state caption at the centre of the screen"
+      ],
+      "element_ref": 0,
+      "observed_quote": "No photos found",
+      "anchor_node": {
+        "text": "No photos found",
+        "class": "android.widget.TextView",
+        "bounds": [
+          379,
+          1116,
+          701,
+          1179
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab \u2013 album grid",
+      "element": "Second IrisSeed album card",
+      "field": "Album list / item count",
+      "symptom_type": "duplicated",
+      "expected": "A single IrisSeed album containing both of its photos (big.jpg and huge.jpg), shown as \\\"2 items\\\".",
+      "observed": "The album grid shows two separate cards both named \\\"IrisSeed\\\", each labelled \\\"1 items\\\": the first (blue cover) contains only huge.jpg and the second (orange cover) contains only big.jpg. The album is split into duplicates after huge.jpg was restored from Trash.",
+      "steps": [
+        "Open Albums and tap IrisSeed (big.jpg + huge.jpg, 2 items)",
+        "Open huge.jpg and tap Delete (moves it to Trash)",
+        "Go to Library > Trash, open huge.jpg and tap Restore selected",
+        "Return to Albums: two identical IrisSeed cards, each with 1 item"
+      ],
+      "element_ref": 5,
+      "observed_quote": "IrisSeed",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          436,
+          1049,
+          1044
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab \u2013 album grid",
+      "element": "Second IrisSeed album card (and second Beta card)",
+      "field": "Album grouping / album list",
+      "symptom_type": "duplicated",
+      "expected": "Each album appears once and keeps all its photos: one IrisSeed card with 2 items (big.jpg and huge.jpg) and one Beta card with 2 items (big (1).jpg and hughugeQ.jpg).",
+      "observed": "The album grid contains duplicate cards with identical names: two \\\"IrisSeed\\\" cards (each \\\"1 items\\\", one holding huge.jpg and one holding big.jpg) and two \\\"Beta\\\" cards (each \\\"1 items\\\", one holding big (1).jpg and one holding hughugeQ.jpg). Restored photos are placed in a different storage volume (content://media/external_primary/... vs content://media/external/...) and the album gets split instead of merged.",
+      "steps": [
+        "Open Albums: IrisSeed (big.jpg + huge.jpg) and Beta (big (1).jpg + hughugeQ.jpg) each have 2 items",
+        "Open a photo from IrisSeed and tap Delete; do the same for a photo from Beta",
+        "Library > Trash: open one trashed photo and tap Restore selected",
+        "Restore the remaining trashed photos the same way",
+        "Return to Albums: the grid now shows two separate 'IrisSeed' cards and two separate 'Beta' cards, each with 1 item"
+      ],
+      "element_ref": 1,
+      "observed_quote": "IrisSeed",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "big.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          557,
+          231,
+          1049,
+          740
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab \u2013 album grid",
+      "element": "Item count label under each album cover",
+      "field": "Album item count",
+      "symptom_type": "wrong_value",
+      "expected": "A single-photo album should be labelled \\\"1 item\\\".",
+      "observed": "Every album containing exactly one photo is labelled \\\"1 items\\\" (and the Library Trash row also shows \\\"1 items\\\" for a single trashed photo).",
+      "steps": [
+        "Open the Albums tab",
+        "Look at the count under any album that contains one photo, e.g. Zulu or apple"
+      ],
+      "element_ref": 0,
+      "observed_quote": "1 items",
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "huge.jpg",
+          "IrisSeed",
+          "1 items"
+        ],
+        "bounds": [
+          32,
+          231,
+          525,
+          741
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Albums tab \u2013 album grid (landscape)",
+      "element": "Second-row album tile overlapped by the bottom navigation bar",
+      "field": "Album tile / label visibility in landscape",
+      "symptom_type": "cut_off",
+      "expected": "All album tiles and their names/counts should remain fully visible (or be reachable by scrolling) above the bottom navigation bar in landscape.",
+      "observed": "In landscape, the album grid wraps to a second row and the tile there is overlapped by the floating bottom navigation bar: only the top of its cover is visible and its album name and item count are completely hidden. Swiping does not scroll the grid to reveal it.",
+      "steps": [
+        "Open the Albums tab with enough albums to wrap (e.g. 6 albums)",
+        "Rotate the device to landscape",
+        "Look at the second row of the album grid at the bottom of the screen",
+        "Try swiping up to scroll the grid"
+      ],
+      "element_ref": 5,
+      "anchor_node": {
+        "class": "android.view.View",
+        "bounds": [
+          32,
+          707,
+          449,
+          1080
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Media tab \u2013 Today grid",
+      "element": "Today photo grid (missing tile)",
+      "field": "Media grid contents after deleting a photo",
+      "symptom_type": "missing",
+      "expected": "After deleting one of six photos, the Media grid should still show the other five photos (including big (1).jpg), and the Beta album containing big (1).jpg should remain in Albums.",
+      "observed": "After deleting huge.jpg, the viewer's filmstrip still lists 5 photos including big (1).jpg, but the Media grid shows only 4 photos and big (1).jpg is missing. The Albums tab also drops the Beta album that contained big (1).jpg. big (1).jpg is not in Trash (Trash contains only huge.jpg), so it is present in the library data but omitted from the Media and Albums lists until another operation triggers a refresh.",
+      "steps": [
+        "Open the Media tab with six photos present (huge.jpg, big.jpg, big (1).jpg, hughugeQ.jpg, big.jpg, hughugeQ.jpg)",
+        "Open the first photo (huge.jpg) and tap Delete",
+        "In the viewer filmstrip, five photos remain and big (1).jpg is still listed",
+        "Press Back to the Media grid: only four photos are shown and big (1).jpg is absent",
+        "Open Albums: the Beta album with big (1).jpg is also absent; Library > Trash shows only huge.jpg"
+      ],
+      "element_ref": 0,
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Today"
+        ],
+        "bounds": [
+          11,
+          249,
+          1070,
+          380
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "iris-E03-1",
+      "mask": "1",
+      "unfixed": [
+        "iris-0012"
+      ],
+      "present": [
+        "iris-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4-dsh-deepseek-v4.1-flash-b/episodes/iris-E03/756a073c4c8f/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "iris-0012": "reported"
+  },
+  "elapsed_s": 1348.874,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": null,
+  "success": false,
+  "outcome": "report_cap",
+  "bugs": [
+    "iris-0012"
+  ],
+  "found": [
+    "iris-0012"
+  ],
+  "required": [
+    "iris-0012"
+  ],
+  "missed": [],
+  "true_positives": 1,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 290,
+  "precision": 0.2,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "iris-0012"
+  ],
+  "bug_meta": {
+    "iris-0012": {
+      "family": "display",
+      "hard_slice": false
+    }
+  },
+  "rescored": {
+    "tool": "tools/rescore_episodes.py",
+    "report_kinds": [
+      "hit",
+      "no_match",
+      "no_match",
+      "no_match",
+      "no_match"
+    ]
+  }
+}

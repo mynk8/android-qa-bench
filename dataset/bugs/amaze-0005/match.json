@@ -1,0 +1,90 @@
+{
+  "screens": [
+    "file list"
+  ],
+  "elements": [
+    "Alpha(1)",
+    "Alpha (1)"
+  ],
+  "fields": [
+    "folder contents"
+  ],
+  "symptom_type": "duplicated",
+  "expected_contains_any": [
+    "Alpha(1) contains only readme.txt",
+    "no nested folder inside the copy"
+  ],
+  "observed_contains_any": [
+    "Alpha(1) contains another folder named Alpha(1)",
+    "a duplicate nested folder is created"
+  ],
+  "symptom_types": [
+    "duplicated",
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "only",
+      "just",
+      "no nested",
+      "no other",
+      "no extra",
+      "no subfolder*",
+      "no sub-folder*",
+      "single",
+      "unexpected",
+      "nested",
+      "own name",
+      "same name",
+      "mirror",
+      "identical",
+      "shouldn't",
+      "should not"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "alpha*",
+      "folder*",
+      "subfolder*",
+      "sub-folder*",
+      "director*"
+    ],
+    [
+      "another",
+      "nested",
+      "inside",
+      "duplicat*",
+      "extra",
+      "itself",
+      "within",
+      "subfolder*",
+      "sub-folder*",
+      "also",
+      "holds",
+      "contains",
+      "has",
+      "second",
+      "same label",
+      "same name",
+      "bearing",
+      "besides",
+      "plus"
+    ]
+  ],
+  "location_concepts": [
+    "alpha (1)",
+    "alpha(1)",
+    "copy*",
+    "new copy",
+    "numbered"
+  ],
+  "anchors": {
+    "elements": [
+      "Alpha (1)",
+      "Alpha(1)",
+      "readme.txt"
+    ],
+    "observed": []
+  }
+}

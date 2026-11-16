@@ -1,0 +1,277 @@
+{
+  "run_id": "b8c41bd61114",
+  "item_id": "idlefantasy-E06",
+  "kind": "episode",
+  "app_id": "idlefantasy",
+  "model": "gpt-6.1-sol",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6.1-sol",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Smithing > Bronze Bar batch",
+      "element": "Quantity input",
+      "element_ref": 11,
+      "field": "quantity",
+      "symptom_type": "not_persisted",
+      "expected": "Selected batch quantity survives rotation.",
+      "observed": "Quantity resets to maximum 25 on rotation; reproduced with 12 and 1.",
+      "observed_quote": "25",
+      "steps": [
+        "Skills > Smithing > Bronze Bar",
+        "Set quantity 12",
+        "Rotate landscape and portrait: quantity resets to 25",
+        "Set quantity 1 and repeat rotation: resets to 25 again"
+      ],
+      "anchor_node": {
+        "text": "25",
+        "class": "android.widget.EditText",
+        "bounds": [
+          370,
+          1232,
+          711,
+          1400
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Profile > Gear > View Combat Gear",
+      "element": "View Combat Gear destination",
+      "element_ref": 0,
+      "field": "destination section",
+      "symptom_type": "wrong_navigation",
+      "expected": "Opens Combat with Gear tab selected.",
+      "observed": "Opens Dungeons tab instead; reproduced by returning to Profile Gear and using link again.",
+      "observed_quote": "Dungeons",
+      "steps": [
+        "Profile > Gear",
+        "Tap View Combat Gear",
+        "Observe Dungeons selected",
+        "Return to Profile > Gear and tap View Combat Gear again"
+      ],
+      "anchor_node": {
+        "text": "Dungeons",
+        "class": "android.widget.TextView",
+        "bounds": [
+          98,
+          267,
+          263,
+          320
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Smithing > Bronze Bar batch",
+      "element": "XP preview",
+      "element_ref": 23,
+      "field": "projected level",
+      "symptom_type": "missing",
+      "expected": "XP preview includes projected level and progress; 4400 +155 =4555 XP reaches level 20 (+1, 15%).",
+      "observed": "Only total XP shown, with no projected level or progress, although Home shows '+155 XP  \u2192  Lv 20 (+1, 15%)' for the same batch. Reopening reproduces.",
+      "observed_quote": "+155 XP total",
+      "steps": [
+        "Start at Smithing 19, 4400 XP",
+        "Open Smithing > Bronze Bar, quantity 25",
+        "Observe XP preview lacks level projection",
+        "Craft batch and compare Home projection",
+        "Abandon (ingredients refunded), reopen same batch and observe omission again"
+      ],
+      "anchor_node": {
+        "text": "+155 XP total",
+        "class": "android.widget.TextView",
+        "bounds": [
+          63,
+          1905,
+          282,
+          1948
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Mining > Choose Activity",
+      "element": "Ore list below Gold Ore",
+      "element_ref": 14,
+      "field": "ore list completeness",
+      "symptom_type": "missing",
+      "expected": "Mining list includes higher-level ores, including Mithril at level 50, and permits scrolling to later locked ores.",
+      "observed": "List ends at Gold Ore (level 40). Repeated upward swipes cannot reveal Mithril or higher-level ores; reopening reproduces.",
+      "steps": [
+        "At Mining level 50 open Skills > Mining",
+        "Swipe upward repeatedly",
+        "Last accessible entry is Gold Ore, no Mithril or later ores",
+        "Close and reopen Mining and repeat swipes"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Gold Ore",
+          "Lv. 40 \u2022 65 XP/ore",
+          "Owned: 0",
+          "+3,900 XP"
+        ],
+        "bounds": [
+          0,
+          1977,
+          1080,
+          2208
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Combat > Gear > Choose Body",
+      "element": "Candidate order",
+      "element_ref": 3,
+      "field": "sorting",
+      "symptom_type": "wrong_value",
+      "expected": "Equipment candidates ranked strongest first so Gilded Platebody (+95 Defense) precedes weaker body items.",
+      "observed": "Candidates run weakest first: Mithril +48, Runite Chainbody +60, Adamantite +66, Slayer +80, Runite Platebody +90, Gilded +95. Reopening preserves reversed strength ordering; weapon chooser similarly puts Bronze Dagger before Iron Sword.",
+      "observed_quote": "Def +48  \u2022  Req lv. 30 Defense",
+      "steps": [
+        "Combat > Gear > Body",
+        "Inspect candidate order with six precondition body items",
+        "Dismiss and reopen Body: same weakest-first order",
+        "Compare Weapon (Atk): Bronze Dagger precedes Iron Sword"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Mithril Platebody",
+          "Def +48  \u2022  Req lv. 30 Defense",
+          "Equip"
+        ],
+        "bounds": [
+          0,
+          1242,
+          1080,
+          1397
+        ]
+      }
+    },
+    {
+      "type": "bug_report",
+      "screen": "Combat > Gear > Cape",
+      "element": "Agility Cape equipped",
+      "element_ref": 18,
+      "field": "skill cape eligibility",
+      "symptom_type": "wrong_value",
+      "expected": "Agility Cape requires level 99 Agility; at level 20 it should not be an eligible equippable cape merely because it is in inventory.",
+      "observed": "At Agility 20 the chooser lists Agility Cape and equips it successfully, applying +5 Defense and +10% XP. Reproduced after unequipping and selecting again.",
+      "observed_quote": "Agility Cape",
+      "steps": [
+        "With precondition Agility Cape owned and Agility 20 open Combat > Gear > Cape",
+        "Select Agility Cape; equipped successfully",
+        "Unequip cape",
+        "Reopen chooser and select Agility Cape again: equipped successfully"
+      ],
+      "anchor_node": {
+        "class": "android.view.View",
+        "contains": [
+          "Unequip"
+        ],
+        "bounds": [
+          944,
+          1265,
+          1070,
+          1374
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: thanks, confirmed and logged. Keep testing the current build.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given.",
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "idlefantasy-E06-11",
+      "mask": "11",
+      "unfixed": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ],
+      "present": [
+        "idlefantasy-0011",
+        "idlefantasy-0012"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6.1-sol-low-b/episodes/idlefantasy-E06/b8c41bd61114/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "idlefantasy-0011": "reported",
+    "idlefantasy-0012": "reported"
+  },
+  "elapsed_s": 283.742,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.86,
+    "notes": "Swept smithing/crafting batch selection, quantity boundaries, cancel/abandon and refunds, XP consistency; gear/tools choices, swaps, unequip, empty slots, style filtering, persistence and rotation; mining displayed level order, selection and abandon, reopening and rotation. Confirmed/logged: crafting XP preview omits projected level/progress; Profile View Combat Gear opens Dungeons. Also filed observed rotation reset, list completeness, candidate ordering and cape eligibility concerns; developer could not reproduce those. Restored original equipped items/style; abandoned test sessions, crafting ingredients refunded, no active session."
+  },
+  "success": true,
+  "outcome": "success",
+  "bugs": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "found": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "required": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "missed": [],
+  "true_positives": 2,
+  "false_positives": 4,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 6,
+  "steps": 136,
+  "precision": 0.3333333333333333,
+  "recall": 1.0,
+  "unfixed_at_end": [
+    "idlefantasy-0011",
+    "idlefantasy-0012"
+  ],
+  "bug_meta": {
+    "idlefantasy-0011": {
+      "family": "display",
+      "hard_slice": false
+    },
+    "idlefantasy-0012": {
+      "family": "interaction",
+      "hard_slice": false
+    }
+  }
+}

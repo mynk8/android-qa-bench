@@ -1,0 +1,67 @@
+{
+  "screens": [
+    "card browser"
+  ],
+  "elements": [
+    "tags dialog"
+  ],
+  "fields": [
+    "verb"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "verb stays only on comer",
+    "tag shown as partly checked and not added to mesa"
+  ],
+  "observed_contains_any": [
+    "verb is shown fully checked and gets added to mesa",
+    "tag added to every selected note"
+  ],
+  "symptom_types": [
+    "wrong_value"
+  ],
+  "expected_concepts": [
+    [
+      "part*",
+      "indeterminate",
+      "half",
+      "mixed",
+      "some",
+      "only",
+      "tri-state",
+      "dash*",
+      "comer",
+      "untagged",
+      "stays",
+      "not",
+      "no tag",
+      "unchanged"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "full*",
+      "all",
+      "every",
+      "checked",
+      "both",
+      "mesa",
+      "added"
+    ]
+  ],
+  "location_concepts": [
+    "tag*",
+    "tags dialog",
+    "tag editor",
+    "edit tags"
+  ],
+  "anchors": {
+    "elements": [
+      "verb",
+      "tags",
+      "comer",
+      "mesa"
+    ],
+    "observed": []
+  }
+}

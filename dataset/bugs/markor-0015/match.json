@@ -1,0 +1,75 @@
+{
+  "screens": [
+    "editor"
+  ],
+  "elements": [
+    "unordered list"
+  ],
+  "fields": [
+    "indented line"
+  ],
+  "symptom_type": "wrong_value",
+  "expected_contains_any": [
+    "the list marker is removed, leaving '  child'",
+    "toggle removes the marker of the indented item"
+  ],
+  "observed_contains_any": [
+    "a second marker is added, giving '  - - child'",
+    "the line gets a doubled dash"
+  ],
+  "symptom_types": [
+    "wrong_value",
+    "duplicated"
+  ],
+  "expected_concepts": [
+    [
+      "remov*",
+      "toggle*",
+      "off",
+      "child",
+      "plain",
+      "without",
+      "no marker",
+      "no dash",
+      "no bullet",
+      "strip*",
+      "bullet*",
+      "marker*",
+      "hyphen*",
+      "dash*",
+      "indented word"
+    ]
+  ],
+  "observed_concepts": [
+    [
+      "- -",
+      "two",
+      "double*",
+      "doubled",
+      "second",
+      "another",
+      "extra",
+      "twice",
+      "duplicat*",
+      "added",
+      "still",
+      "both",
+      "nested"
+    ]
+  ],
+  "location_concepts": [
+    "unordered list",
+    "child",
+    "bullet*"
+  ],
+  "anchors": {
+    "elements": [
+      "Unordered list",
+      "child",
+      "highlighting_editor"
+    ],
+    "observed": [
+      "- - child"
+    ]
+  }
+}

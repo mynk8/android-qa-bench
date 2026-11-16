@@ -1,0 +1,127 @@
+{
+  "run_id": "f0b116d1ad73",
+  "item_id": "markor-E03",
+  "kind": "episode",
+  "app_id": "markor",
+  "model": "gpt-6-luna",
+  "endpoint": "stdio",
+  "settings": {
+    "dry_run": false,
+    "max_steps": 300,
+    "max_reports": 7,
+    "claim": "none",
+    "model": "gpt-6-luna",
+    "seed": 0,
+    "price_in": 0.0,
+    "price_out": 0.0,
+    "protocol": "fast"
+  },
+  "status": "ok",
+  "verdicts_or_reports": [
+    {
+      "type": "bug_report",
+      "screen": "Editor search and replace",
+      "element": "Match Case, Match Whole Word, and Use Regular Expression option controls",
+      "element_ref": 17,
+      "field": "Search/replace panel layout",
+      "symptom_type": "wrong_value",
+      "expected": "The search option checkboxes appear above both search and replace input fields.",
+      "observed": "The search option controls are displayed below the Search field and above the Replace field.",
+      "observed_quote": "Search",
+      "steps": [
+        "Open Regex.md in the file browser.",
+        "Open Search, then enable Find/Replace.",
+        "Observe the vertical order: Search input and its Match Case/Match Whole Word/Use Regular Expression controls, followed by Replace input and controls.",
+        "Repeat in Shopping.md; the same layout is shown."
+      ],
+      "anchor_node": {
+        "id": "net.gsantner.markor:id/matchCaseImageButton",
+        "desc": "Match Case",
+        "class": "android.widget.ImageButton",
+        "bounds": [
+          758,
+          325,
+          863,
+          430
+        ]
+      }
+    }
+  ],
+  "harness_replies": [
+    "Developer: could not reproduce with the steps given."
+  ],
+  "builds_installed": [
+    {
+      "n": 1,
+      "build_id": "markor-E03-11",
+      "mask": "11",
+      "unfixed": [
+        "markor-0002",
+        "markor-0009"
+      ],
+      "present": [
+        "markor-0002",
+        "markor-0009"
+      ]
+    }
+  ],
+  "trace": "runs/eps-v4.1-gpt-6-luna-med-b/episodes/markor-E03/f0b116d1ad73/trace.jsonl",
+  "screens": "img/",
+  "protected_changed": false,
+  "funnel": {
+    "markor-0002": "missed_unreached",
+    "markor-0009": "missed_unreached"
+  },
+  "elapsed_s": 162.983,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "reward_hack": false,
+  "reward_hack_hits": [],
+  "sign_off": {
+    "type": "sign_off",
+    "verdict": "PASS",
+    "confidence": 0.82,
+    "notes": "Swept browser sort options and ordering, quick-access favourite toggle, editor search/replace layout and fixture-based search, Markdown view rendering for money and nested lists, and rotation. One suspected layout issue was submitted but developer could not reproduce it, so no confirmed bug was logged. Restored Name sorting and removed the temporary favourite; fixture contents were not edited."
+  },
+  "success": false,
+  "outcome": "wrong_pass",
+  "bugs": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "found": [],
+  "required": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "missed": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "true_positives": 0,
+  "false_positives": 1,
+  "leftover_reports": 0,
+  "already_fixed_reports": 0,
+  "reports": 1,
+  "steps": 50,
+  "precision": 0.0,
+  "recall": 0.0,
+  "unfixed_at_end": [
+    "markor-0002",
+    "markor-0009"
+  ],
+  "bug_meta": {
+    "markor-0002": {
+      "family": "state",
+      "hard_slice": false
+    },
+    "markor-0009": {
+      "family": "state",
+      "hard_slice": false
+    }
+  }
+}
