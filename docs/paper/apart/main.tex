@@ -41,7 +41,7 @@
 \end{center}
 \vspace{2pt}\noindent\rule{\textwidth}{0.5pt}\par\vspace{8pt}
 \begin{center}
-Mayank Singh\\[5pt]
+Mayank Singh\\ Independent researcher\\[5pt]
 {\bfseries With}\\Apart Research
 \end{center}
 \vspace{2pt}
@@ -453,5 +453,34 @@ scripts that check every reported number. The agents under test are LLMs.
 \bibliographystyle{plainnat}
 \bibliography{refs}
 }
+
+\appendix
+\section{Limitations and Dual-Use / Ethical Considerations}
+\paragraph{What the results establish}
+Six configurations, run once each on 51 episodes, fail to hold a release gate on planted, device-verified
+regressions in 9 open-source Android apps on one emulated device. They reach most changed features and
+skip the checks that expose the regressions, and their stated sign-off confidence does not separate
+correct from incorrect sign-offs.
+
+\paragraph{What they do not establish}
+They do not rank the models: the four strongest configurations do not differ significantly in recall,
+each ran once, and harness, model and effort are not separated. The sign-off metrics depend on the prompt
+version (Section~\ref{sec:threats}). There is no human-tester baseline and no automated-testing baseline, so
+the results do not say how agents compare with either. Regressions are planted in a pinned head, not
+observed as they arise in development, and the release notes were written by the author, so real
+release gates may differ. The matcher credits 84\% of correct reports, so recall is a lower bound.
+
+\paragraph{Dual use and manipulation}
+Training agents directly on the planted regressions would make the scores meaningless, so the original
+fixes, forward-port patches and the release-note key are withheld from the public release. The matcher
+is deterministic with fixed concept lists, so a report written to those lists could be credited without
+describing a real defect; we did not test for this. The scores measure performance on \aqb and are not a
+safety certification of a model or harness. The results do not support replacing a human release gate
+with an LLM agent.
+
+\paragraph{Data and personal information}
+All apps are open source and used under their licences (GPL-3.0 or Apache-2.0); modified builds are
+distributed only with their source. No human participants were involved. The seeded data in the apps is
+synthetic, and the stored agent transcripts contain only that data and the agents' own actions.
 
 \end{document}
