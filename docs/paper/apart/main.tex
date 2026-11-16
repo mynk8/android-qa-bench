@@ -414,14 +414,13 @@ the larger models were not affected by it. Harness and model effects are not sep
 configuration ran each episode once, so part of the difference in which regressions are caught is
 run-to-run variance. The matcher credits 84\% of correct reports, so recall is a lower bound. The release
 notes were written by the authors.
-\textbf{External.} 9 apps on one emulated device, no human-tester baseline and no non-LLM baseline
-such as an automated GUI test generator; maximum effort was evaluated only for GPT-6 Luna and the
+\textbf{External.} 9 apps on one emulated device; maximum effort was evaluated only for GPT-6 Luna and the
 largest model of each provider was not evaluated. With 51 episodes most pairwise differences among the
 stronger configurations are not significant after correction, and all cross-configuration
 correlations have $n\le6$.
 
 \paragraph{Future work}
-A human baseline on a subset of episodes, repeated runs, more apps and devices, an independently
+Repeated runs, more apps and devices, an independently
 written second set of release notes, and testing whether scaffolding that enforces round trips and
 boundary inputs closes the gap.
 
@@ -465,8 +464,7 @@ correct from incorrect sign-offs.
 \paragraph{What they do not establish}
 They do not rank the models: the four strongest configurations do not differ significantly in recall,
 each ran once, and harness, model and effort are not separated. The sign-off metrics depend on the prompt
-version (Section~\ref{sec:threats}). There is no human-tester baseline and no automated-testing baseline, so
-the results do not say how agents compare with either. Regressions are planted in a pinned head, not
+version (Section~\ref{sec:threats}). Regressions are planted in a pinned head, not
 observed as they arise in development, and the release notes were written by the author, so real
 release gates may differ. The matcher credits 84\% of correct reports, so recall is a lower bound.
 
